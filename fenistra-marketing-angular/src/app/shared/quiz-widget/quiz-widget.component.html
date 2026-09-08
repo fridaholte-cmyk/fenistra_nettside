@@ -1,0 +1,33 @@
+<div class="quiz-backdrop" [class.open]="quiz.isOpen" (click)="close()"></div>
+<div class="quiz-modal" role="dialog" aria-label="Passer Fenistra for deg?" [class.open]="quiz.isOpen">
+  <div class="quiz-head">
+    <span class="quiz-head-title">Spørsmål {{ currentIndex + 1 }} av {{ questions.length }}</span>
+    <button class="quiz-close" aria-label="Lukk test" (click)="close()">✕</button>
+  </div>
+  <div class="quiz-progress-track">
+    <div class="quiz-progress-bar" [style.width.%]="((currentIndex + 1) / questions.length) * 100"></div>
+  </div>
+  <div class="quiz-body">
+    <div class="quiz-question">{{ currentQuestion.question }}</div>
+    <div class="quiz-options">
+      @for (option of currentQuestion.options; track $index) {
+        <button
+          type="button"
+          class="quiz-option"
+          [class.selected]="answers[currentQuestion.id] === $index"
+          (click)="selectOption($index)"
+        >{{ option.label }}</button>
+      }
+    </div>
+  </div>
+  <div class="quiz-nav">
+    <button class="btn btn-ghost" type="button" (click)="back()" [disabled]="currentIndex === 0">Tilbake</button>
+    <span class="spacer"></span>
+    <button
+      class="btn btn-primary"
+      type="button"
+      (click)="next()"
+      [disabled]="answers[currentQuestion.id] === undefined"
+    >{{ isLastQuestion ? 'Se resultat' : 'Neste' }}</button>
+  </div>
+</div>

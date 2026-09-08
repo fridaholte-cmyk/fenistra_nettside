@@ -1,0 +1,27 @@
+@if (unlocked) {
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+  <app-chat-widget></app-chat-widget>
+  <app-quiz-widget></app-quiz-widget>
+} @else {
+  <div class="gate">
+    <form class="gate-card" (ngSubmit)="submitPassword()">
+      <div class="gate-brand">FENISTRA</div>
+      <h1>Forhåndsvisning</h1>
+      <p>Denne siden er ikke offentlig ennå. Skriv inn passordet du har fått for å fortsette.</p>
+      <input
+        type="password"
+        name="password"
+        placeholder="Passord"
+        [(ngModel)]="passwordInput"
+        autocomplete="off"
+        autofocus
+      >
+      @if (passwordError) {
+        <p class="gate-error">Feil passord. Prøv igjen.</p>
+      }
+      <button type="submit">Fortsett</button>
+    </form>
+  </div>
+}

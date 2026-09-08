@@ -1,0 +1,29 @@
+<div class="chat-backdrop" id="chatBackdrop" [class.open]="open" (click)="closeChat()"></div>
+<button class="chat-trigger" id="chatTrigger" aria-label="Åpne chat" [class.chat-open-hide]="open" (click)="openChat()">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5.5C4 4.67 4.67 4 5.5 4h13c.83 0 1.5.67 1.5 1.5v10c0 .83-.67 1.5-1.5 1.5H9l-4 3.5v-3.5H5.5C4.67 17 4 16.33 4 15.5v-10Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+</button>
+<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Chat med Fenistra" [class.open]="open">
+  <div class="chat-header">
+    <div>
+      <h4>Fenistra-assistenten</h4>
+      <p>Spør om løsninger, integrasjoner og pakker</p>
+    </div>
+    <button class="chat-close" id="chatClose" aria-label="Lukk chat" (click)="closeChat()">✕</button>
+  </div>
+  <div class="chat-messages" id="chatMessages" #messagesEl (click)="onMessagesClick($event)">
+    @for (msg of messages; track $index) {
+      <div class="chat-msg chat-msg-{{ msg.who }}" [innerHTML]="msg.html"></div>
+      @if (msg.suggestions) {
+        <div class="chat-suggestions">
+          @for (s of msg.suggestions; track s) {
+            <button type="button" class="chat-suggestion" (click)="handleSend(s)">{{ s }}</button>
+          }
+        </div>
+      }
+    }
+  </div>
+  <form class="chat-form" id="chatForm" (ngSubmit)="submitForm()">
+    <input type="text" id="chatInput" #chatInputEl placeholder="Skriv en melding …" autocomplete="off" [(ngModel)]="draft" name="draft">
+    <button type="submit" aria-label="Send"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </form>
+</div>
