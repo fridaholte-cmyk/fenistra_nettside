@@ -59,6 +59,7 @@ const FENISTRA_SEARCH_INDEX = [
   { title: "Jobber Fenistra med kunstig intelligens (KI)?", url: "sporsmal.html", category: "Spørsmål", desc: "Ja, blant annet gjennom Felix." },
   { title: "Hvordan kommer vi i gang med Fenistra?", url: "sporsmal.html", category: "Spørsmål", desc: "Book en demo, eller ta testen for å finne riktig pakke." },
   { title: "Ansatte", url: "ansatte.html", category: "Side", desc: "Menneskene bak Fenistra - kundeteamet og produktteamet som utvikler og drifter systemet." },
+  { title: "Kontakt oss", url: "kontakt-oss.html", category: "Side", desc: "Kontaktinfo for brukerstøtte og salg, samt besøksadresse og lenke til teamet bak Fenistra." },
   { title: "Redegjørelse etter åpenhetsloven", url: "apenhetsloven.html", category: "Side", desc: "Aktsomhetsvurderinger for grunnleggende menneskerettigheter og anstendige arbeidsforhold hos Visma Property Solutions." },
   { title: "Når kontroll over leiekontrakten blir viktigere enn noensinne", url: "blogg-matrix-samarbeid.html", category: "Blogg", desc: "Fenistra samarbeider med Matrix Insurance om depositum og garantier i næringsleie." },
   { title: "Cookie policy", url: "cookies.html", category: "Side", desc: "Retningslinjer for bruk av cookies (informasjonskapsler) hos Visma Property Solutions." },

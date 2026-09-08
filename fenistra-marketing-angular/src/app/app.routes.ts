@@ -20,6 +20,7 @@ export const routes: Routes = [
   { path: 'integrasjoner', loadComponent: () => import('./pages/integrasjoner/integrasjoner.component').then(m => m.IntegrasjonerComponent) },
   { path: 'integrasjoner-alle-systemer', loadComponent: () => import('./pages/integrasjoner-alle-systemer/integrasjoner-alle-systemer.component').then(m => m.IntegrasjonerAlleSystemerComponent) },
   { path: 'ki', loadComponent: () => import('./pages/ki/ki.component').then(m => m.KiComponent) },
+  { path: 'kontakt-oss', loadComponent: () => import('./pages/kontakt-oss/kontakt-oss.component').then(m => m.KontaktOssComponent) },
   { path: 'kunder', loadComponent: () => import('./pages/kunder/kunder.component').then(m => m.KunderComponent) },
   { path: 'kundeteam', loadComponent: () => import('./pages/kundeteam/kundeteam.component').then(m => m.KundeteamComponent) },
   { path: 'losning-arealberegning', loadComponent: () => import('./pages/losning-arealberegning/losning-arealberegning.component').then(m => m.LosningArealberegningComponent) },
