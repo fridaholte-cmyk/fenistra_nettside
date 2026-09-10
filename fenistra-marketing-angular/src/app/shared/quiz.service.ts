@@ -31,8 +31,10 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     id: 'portfolio-size',
     question: 'Hvor stor er eiendomsporteføljen deres?',
     options: [
-      { label: 'Under 20 000 kvm', premiumWeight: 0 },
-      { label: '20 000–100 000 kvm', premiumWeight: 0 },
+      { label: 'Under 5 000 kvm', premiumWeight: 0 },
+      { label: '5 000–15 000 kvm', premiumWeight: 0 },
+      { label: '15 000–50 000 kvm', premiumWeight: 0 },
+      { label: '50 000–100 000 kvm', premiumWeight: 1 },
       { label: 'Over 100 000 kvm', premiumWeight: 1 },
     ],
   },
@@ -53,11 +55,43 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     ],
   },
   {
-    id: 'radgiver',
-    question: 'Ønsker dere en dedikert kunderådgiver og prioritert oppfølging?',
+    id: 'areal',
+    question: 'Ønsker dere god kontroll over arealer, med tegninger koblet direkte til kontrakt og leietaker?',
     options: [
-      { label: 'Ikke nødvendig', premiumWeight: 0 },
-      { label: 'Ja, det er viktig for oss', premiumWeight: 1 },
+      { label: 'Ikke nødvendig for oss', premiumWeight: 0 },
+      { label: 'Ja, det er viktig', premiumWeight: 1 },
+    ],
+  },
+  {
+    id: 'ki',
+    question: 'Ønsker dere å ta i bruk KI-teknologi for bedre innsikt i porteføljen deres?',
+    options: [
+      { label: 'Ikke nå', premiumWeight: 0 },
+      { label: 'Ja, det er interessant', premiumWeight: 0 },
+    ],
+  },
+  {
+    id: 'regulering',
+    question: 'Ønsker dere automatisk varsling og håndtering av KPI-regulering, oppsigelsesfrister og utsendelse av reguleringsbrev?',
+    options: [
+      { label: 'Vi klarer oss med dagens rutiner', premiumWeight: 0 },
+      { label: 'Ja, det vil spare oss for mye tid', premiumWeight: 0 },
+    ],
+  },
+  {
+    id: 'felleskost-mva',
+    question: 'Ønsker dere automatisert felleskostnadsavregning og innhenting av MVA-status og erklæringer fra leietakerne?',
+    options: [
+      { label: 'Nei, det gjør vi manuelt i dag', premiumWeight: 0 },
+      { label: 'Ja, dette vil vi automatisere', premiumWeight: 0 },
+    ],
+  },
+  {
+    id: 'fakturering',
+    question: 'Ønsker dere løpende fakturering med automatisk håndtering av avvik?',
+    options: [
+      { label: 'Nei', premiumWeight: 0 },
+      { label: 'Ja', premiumWeight: 0 },
     ],
   },
 ];
@@ -108,7 +142,7 @@ export class QuizService {
     const relatedChips: { label: string; route: string }[] = [];
 
     const sizeAnswer = byId.get('portfolio-size');
-    if (sizeAnswer?.optionIndex === 2) {
+    if (sizeAnswer && sizeAnswer.optionIndex >= 3) {
       reasons.push('Porteføljen deres er stor nok til at en dedikert kunderådgiver og prioritert oppfølging gir mest verdi.');
     } else {
       reasons.push('Fenistra Standard dekker kjerneløsningene deres — kontrakt, fakturering, regnskap og rapportering — uten behov for tilleggsprodukter.');
@@ -126,10 +160,31 @@ export class QuizService {
       relatedChips.push({ label: 'Innleie', route: '/losning-innleie' });
     }
 
-    const radgiverAnswer = byId.get('radgiver');
-    if (radgiverAnswer?.optionIndex === 1) {
-      reasons.push('Dere får en egen dedikert kunderådgiver, som alltid er inkludert i Premium.');
-      relatedChips.push({ label: 'Kundeteamet', route: '/kundeteam' });
+    const arealAnswer = byId.get('areal');
+    if (arealAnswer?.optionIndex === 1) {
+      reasons.push('Arealberegning og Tegning er tilleggsprodukter som gir full kontroll på areal, koblet direkte til kontrakt og tegning, og er inkludert i Premium.');
+      relatedChips.push({ label: 'Arealberegning', route: '/losning-arealberegning' }, { label: 'Tegning', route: '/losning-tegning' });
+    }
+
+    const kiAnswer = byId.get('ki');
+    if (kiAnswer?.optionIndex === 1) {
+      relatedChips.push({ label: 'KI hos Fenistra', route: '/ki' });
+    }
+
+    const reguleringAnswer = byId.get('regulering');
+    if (reguleringAnswer?.optionIndex === 1) {
+      reasons.push('Fenistra varsler dere automatisk før KPI-reguleringer, oppsigelsesfrister og opsjoner utløper, og hjelper med reguleringsbrev.');
+    }
+
+    const felleskostMvaAnswer = byId.get('felleskost-mva');
+    if (felleskostMvaAnswer?.optionIndex === 1) {
+      reasons.push('Felleskostnadsavregning og innhenting av MVA-erklæringer er automatisert i Fenistra, fra fordelingsnøkler til ferdig avregning.');
+      relatedChips.push({ label: 'Felleskostnader', route: '/losning-felleskostnader' }, { label: 'MVA-erklæring', route: '/losning-mva-erklaring' });
+    }
+
+    const faktureringAnswer = byId.get('fakturering');
+    if (faktureringAnswer?.optionIndex === 1) {
+      reasons.push('Løpende fakturering med automatisk håndtering av avvik er en av kjernefunksjonene i Fenistra, uansett pakke.');
     }
 
     reasons.push('Alle transaksjonsprodukter (MVA-erklæring, RBO, Protokoller, Digital signering) er inkludert i begge pakker, betalt per bruk.');

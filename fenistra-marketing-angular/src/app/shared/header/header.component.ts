@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 
-declare const FENISTRA_SEARCH_INDEX: { title: string; url: string; category: string; desc: string }[];
+import { FENISTRA_SEARCH_INDEX, SearchEntry } from '../data/search-index';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +14,7 @@ export class HeaderComponent {
   mobileDrawerOpen = false;
   searchOpen = false;
   searchQuery = '';
-  searchResults: { title: string; url: string; category: string; desc: string }[] = [];
+  searchResults: SearchEntry[] = [];
 
   constructor(private router: Router) {}
 
@@ -35,7 +35,7 @@ export class HeaderComponent {
   onSearchInput(value: string) {
     this.searchQuery = value;
     const q = value.trim().toLowerCase();
-    if (!q || typeof FENISTRA_SEARCH_INDEX === 'undefined') {
+    if (!q) {
       this.searchResults = [];
       return;
     }

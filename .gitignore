@@ -1,0 +1,16 @@
+# Avhengigheter og byggeartefakter
+node_modules/
+dist/
+.angular/
+
+# Lokalt verktøyoppsett (inneholder absolutte stier til denne maskinen)
+.claude/
+
+# Systemfiler
+.DS_Store
+Thumbs.db
+*.log
+
+# Store videoer - over GitHubs 100 MB-grense, distribueres utenfor git
+images/fenistradagene-2026.mp4
+fenistra-marketing-angular/public/images/fenistradagene-2026.mp4

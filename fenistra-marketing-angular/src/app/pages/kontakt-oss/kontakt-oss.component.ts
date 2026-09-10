@@ -1,5 +1,6 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, ViewEncapsulation } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { createHubspotForm } from '../../shared/hubspot-form';
 
 @Component({
   selector: 'app-kontakt-oss',
@@ -8,4 +9,8 @@ import { RouterLink } from '@angular/router';
   templateUrl: './kontakt-oss.component.html',
   encapsulation: ViewEncapsulation.None
 })
-export class KontaktOssComponent {}
+export class KontaktOssComponent implements AfterViewInit {
+  ngAfterViewInit() {
+    createHubspotForm('#hubspotContactForm');
+  }
+}

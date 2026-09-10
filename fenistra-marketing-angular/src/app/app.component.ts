@@ -7,6 +7,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ChatWidgetComponent } from './shared/chat-widget/chat-widget.component';
 import { QuizWidgetComponent } from './shared/quiz-widget/quiz-widget.component';
 import { PageEffectsService } from './shared/page-effects.service';
+import { SeoService } from './shared/seo.service';
 
 const GATE_KEY = 'fenistra_preview_unlocked';
 const GATE_PASSWORD = 'fenistra-preview-2026';
@@ -24,7 +25,7 @@ export class AppComponent {
   passwordInput = '';
   passwordError = false;
 
-  constructor(router: Router, effects: PageEffectsService) {
+  constructor(router: Router, effects: PageEffectsService, seo: SeoService) {
     try {
       this.unlocked = localStorage.getItem(GATE_KEY) === 'true';
     } catch {
@@ -37,6 +38,7 @@ export class AppComponent {
       .subscribe((e) => {
         const fragment = e.urlAfterRedirects.split('#')[1];
         effects.run();
+        setTimeout(() => seo.update(router, e.urlAfterRedirects), 0);
         if (fragment) {
           setTimeout(() => document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth' }), 0);
         } else {

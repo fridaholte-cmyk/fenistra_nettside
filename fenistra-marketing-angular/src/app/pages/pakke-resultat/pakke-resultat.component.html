@@ -397,28 +397,9 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Kontakt</div>
-      <h2>Send oss en henvendelse</h2>
-      <p>Vi fyller ut det meste for deg basert på resultatet over, bare legg til kontaktinfo, så tar vi kontakt.</p>
+      <h2>Book et møte</h2>
+      <p>Fyll ut skjemaet under, så tar en av rådgiverne våre kontakt for å avtale tid.</p>
     </div>
-    <form id="contactForm" style="max-width:480px; display:flex; flex-direction:column; gap:18px;">
-      <div class="form-field">
-        <label for="navnInput">Navn</label>
-        <input type="text" id="navnInput" autocomplete="name">
-      </div>
-      <div class="form-field">
-        <label for="epostInput">E-post *</label>
-        <input type="email" id="epostInput" required autocomplete="email">
-      </div>
-      <div class="form-field">
-        <label for="telefonInput">Telefon *</label>
-        <input type="tel" id="telefonInput" required autocomplete="tel">
-      </div>
-      <div class="form-field">
-        <label for="firmaInput">Firma (valgfritt)</label>
-        <input type="text" id="firmaInput" autocomplete="organization">
-      </div>
-      <button type="submit" class="btn btn-primary" style="justify-content:center; margin-top:4px;">Send forespørsel til salg</button>
-    </form>
-    <p style="margin-top:24px; font-size:14px; color:var(--ink-soft);">Eller ta direkte kontakt: <a href="mailto:salg&#64;fenistra.no" style="color:var(--berry-deep); font-weight:600;">salg&#64;fenistra.no</a> / <a href="tel:+4722229049" style="color:var(--berry-deep); font-weight:600;">22 22 90 49</a></p>
+    <div id="hubspotMeetingForm" style="max-width:480px;"></div>
   </div>
 </section>

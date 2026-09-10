@@ -2,7 +2,7 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-declare const FENISTRA_CHAT_KB: { keywords: string[]; answer: string }[];
+import { FENISTRA_CHAT_KB, ChatKbEntry } from '../data/chat-knowledge';
 
 interface ChatMessage {
   html: string;
@@ -66,9 +66,7 @@ export class ChatWidgetComponent {
       } else {
         this.addMessage(
           'Jeg fant dessverre ikke et godt svar på det her. Ta gjerne kontakt med oss, så hjelper vi deg videre:' +
-          '<br><br>Brukerstøtte: <a href="mailto:support.fenistra@visma.com">support.fenistra@visma.com</a>' +
-          '<br>Salg: <a href="/pakke-resultat" data-internal>book en demo</a>' +
-          '<br>Telefon: <a href="tel:+4722229049">22 22 90 49</a>' +
+          '<br><br>Se kontaktinfo til <a href="/kundeteam" data-internal>kundeteamet</a>, eller <a href="/pakke-resultat" data-internal>book en demo</a>.' +
           '<br><br>Du finner også svar på flere vanlige spørsmål på <a href="/sporsmal" data-internal>spørsmål-siden</a>.',
           'bot'
         );
@@ -97,9 +95,8 @@ export class ChatWidgetComponent {
 
   private findAnswer(query: string): string | null {
     const q = ' ' + query.toLowerCase() + ' ';
-    let best: { keywords: string[]; answer: string } | null = null;
+    let best: ChatKbEntry | null = null;
     let bestScore = 0;
-    if (typeof FENISTRA_CHAT_KB === 'undefined') return null;
     FENISTRA_CHAT_KB.forEach((entry) => {
       let score = 0;
       entry.keywords.forEach((kw) => {
@@ -110,7 +107,7 @@ export class ChatWidgetComponent {
         best = entry;
       }
     });
-    return bestScore > 0 && best ? (best as { answer: string }).answer : null;
+    return bestScore > 0 && best ? (best as ChatKbEntry).answer : null;
   }
 
   private escapeHtml(str: string): string {

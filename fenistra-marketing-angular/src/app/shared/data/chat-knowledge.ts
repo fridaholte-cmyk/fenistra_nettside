@@ -2,7 +2,12 @@
 // Dekker: sporsmal.html (FAQ), alle løsningssider, integrasjonssider, priser, kundehistorier,
 // nøkkeltall, team/kontaktinfo, datasikkerhet, blogg- og media-artikler, samt personvern/cookies/åpenhetsloven.
 // Hver post lenker videre til kildesiden for mer informasjon.
-const FENISTRA_CHAT_KB = [
+export interface ChatKbEntry {
+  keywords: string[];
+  answer: string;
+}
+
+export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   {
     keywords: ["passer fenistra", "passer det for", "passer fenistra for", "er fenistra noe for", "fenistra for meg", "fenistra for oss", "passer dette for", "egner fenistra seg", "kan fenistra brukes av", "passer for min bedrift", "passer for oss"],
     answer: "Ja, sannsynligvis! Fenistra passer for de fleste eiendomsforvaltere og eiendomsselskaper i Norge, uansett størrelse på porteføljen. Ta testen, så viser vi hvilke løsninger og hvilken pakke som passer akkurat for dere, på under to minutter. <a href=\"pakke-resultat.html\">Ta testen →</a>"

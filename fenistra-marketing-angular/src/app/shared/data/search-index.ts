@@ -1,5 +1,12 @@
 // Delt søkeindeks for Fenistra-nettsiden. Lastes av alle sider.
-const FENISTRA_SEARCH_INDEX = [
+export interface SearchEntry {
+  title: string;
+  url: string;
+  category: string;
+  desc: string;
+}
+
+export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
   { title: "Løsninger", url: "losninger.html", category: "Side", desc: "Se alle 18 løsninger i Fenistra forvaltningssystem, fra kontrakter og felleskostnader til rapportering og kjøpesenterdrift." },
   { title: "Kundehistorier", url: "kunder.html", category: "Side", desc: "Se hvordan Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm og Backer AS bruker Fenistra i sin daglige eiendomsforvaltning." },
   { title: "Om oss", url: "om-oss.html", category: "Side", desc: "Fenistra er en markedsledende leverandør av forvaltningssystemer for eiendomsbransjen, en del av Visma Property Solutions siden 2020." },
@@ -37,6 +44,7 @@ const FENISTRA_SEARCH_INDEX = [
   { title: "Drift og vedlikehold", url: "integrasjon-drift-vedlikehold.html", category: "Integrasjon", desc: "Koble Fenistra sammen med Properly og FAMAC for drift og vedlikehold av eiendommene." },
 
   { title: "Hva er et forvaltningssystem?", url: "sporsmal.html", category: "Spørsmål", desc: "Svar på det du lurer på om Fenistra." },
+  { title: "Er Fenistra skybasert?", url: "sporsmal.html", category: "Spørsmål", desc: "Ja, Fenistra.net er et skybasert kontrakts- og faktureringssystem du får tilgang til direkte i nettleseren." },
   { title: "Hva inneholder Fenistra Standard?", url: "sporsmal.html", category: "Spørsmål", desc: "Kontrakt, fakturering, regnskap, rapportering, dokument, felleskostnader, omsetningsavregning, formuesverdsettelse og inntektsbudsjett." },
   { title: "Hva inneholder Fenistra Premium?", url: "sporsmal.html", category: "Spørsmål", desc: "Svar på det du lurer på om Fenistra Premium." },
   { title: "Hva er Fenistra Kjøpesenter?", url: "sporsmal.html", category: "Spørsmål", desc: "Svar på det du lurer på om Fenistra Kjøpesenter." },
@@ -59,7 +67,7 @@ const FENISTRA_SEARCH_INDEX = [
   { title: "Jobber Fenistra med kunstig intelligens (KI)?", url: "sporsmal.html", category: "Spørsmål", desc: "Ja, blant annet gjennom Felix." },
   { title: "Hvordan kommer vi i gang med Fenistra?", url: "sporsmal.html", category: "Spørsmål", desc: "Book en demo, eller ta testen for å finne riktig pakke." },
   { title: "Ansatte", url: "ansatte.html", category: "Side", desc: "Menneskene bak Fenistra - kundeteamet og produktteamet som utvikler og drifter systemet." },
-  { title: "Kontakt oss", url: "kontakt-oss.html", category: "Side", desc: "Kontaktinfo for brukerstøtte og salg, samt besøksadresse og lenke til teamet bak Fenistra." },
+  { title: "Kontakt oss", url: "kontakt-oss.html", category: "Side", desc: "Kontaktinfo til brukerstøtte, besøksadresse og skjema for å booke et møte." },
   { title: "Redegjørelse etter åpenhetsloven", url: "apenhetsloven.html", category: "Side", desc: "Aktsomhetsvurderinger for grunnleggende menneskerettigheter og anstendige arbeidsforhold hos Visma Property Solutions." },
   { title: "Når kontroll over leiekontrakten blir viktigere enn noensinne", url: "blogg-matrix-samarbeid.html", category: "Blogg", desc: "Fenistra samarbeider med Matrix Insurance om depositum og garantier i næringsleie." },
   { title: "Cookie policy", url: "cookies.html", category: "Side", desc: "Retningslinjer for bruk av cookies (informasjonskapsler) hos Visma Property Solutions." },
