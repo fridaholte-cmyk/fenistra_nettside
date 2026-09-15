@@ -64,7 +64,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     id: 'ki',
-    question: 'Ønsker dere å ta i bruk KI-teknologi for bedre innsikt i porteføljen deres?',
+    question: 'Ønsker dere å ta i bruk AI-teknologi for bedre innsikt i porteføljen deres?',
     options: [
       { label: 'Ikke nå', premiumWeight: 0 },
       { label: 'Ja, det er interessant', premiumWeight: 0 },
@@ -156,19 +156,20 @@ export class QuizService {
 
     const innleieAnswer = byId.get('innleie');
     if (innleieAnswer?.optionIndex === 1) {
-      reasons.push('Innleiehåndtering er et tilleggsprodukt som alltid er inkludert i Premium.');
-      relatedChips.push({ label: 'Innleie', route: '/losning-innleie' });
+      // Innleie er skjult fra nettsiden foreløpig.
+      // reasons.push('Innleiehåndtering er et tilleggsprodukt som alltid er inkludert i Premium.');
+      // relatedChips.push({ label: 'Innleie', route: '/losning-innleie' });
     }
 
     const arealAnswer = byId.get('areal');
     if (arealAnswer?.optionIndex === 1) {
-      reasons.push('Arealberegning og Tegning er tilleggsprodukter som gir full kontroll på areal, koblet direkte til kontrakt og tegning, og er inkludert i Premium.');
-      relatedChips.push({ label: 'Arealberegning', route: '/losning-arealberegning' }, { label: 'Tegning', route: '/losning-tegning' });
+      reasons.push('Arealberegning er et tilleggsprodukt som gir full kontroll på areal, koblet direkte til kontrakt og tegning, og er inkludert i Premium.');
+      relatedChips.push({ label: 'Arealberegning', route: '/losning-arealberegning' });
     }
 
     const kiAnswer = byId.get('ki');
     if (kiAnswer?.optionIndex === 1) {
-      relatedChips.push({ label: 'KI hos Fenistra', route: '/ki' });
+      relatedChips.push({ label: 'AI hos Fenistra', route: '/ki' });
     }
 
     const reguleringAnswer = byId.get('regulering');

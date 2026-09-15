@@ -34,19 +34,21 @@ export class HeaderComponent {
 
   onSearchInput(value: string) {
     this.searchQuery = value;
-    const q = value.trim().toLowerCase();
+    // "KI" og "kunstig intelligens" er synonymer for AI i søket
+    const q = value.trim().toLowerCase()
+      .replace(/kunstig intelligens|\bk\.?i\b/g, 'ai');
     if (!q) {
       this.searchResults = [];
       return;
     }
     this.searchResults = FENISTRA_SEARCH_INDEX
       .map((item) => {
-        const title = item.title.toLowerCase();
+        const title = item.title.toLowerCase().replace(/kunstig intelligens/g, 'ai');
         let score = -1;
         if (title === q) score = 4;
         else if (title.startsWith(q)) score = 3;
         else if (title.includes(q)) score = 2;
-        else if (item.category.toLowerCase().includes(q) || item.desc.toLowerCase().includes(q)) score = 1;
+        else if (item.category.toLowerCase().includes(q) || item.desc.toLowerCase().replace(/kunstig intelligens/g, 'ai').includes(q)) score = 1;
         return { item, score };
       })
       .filter((r) => r.score >= 0)

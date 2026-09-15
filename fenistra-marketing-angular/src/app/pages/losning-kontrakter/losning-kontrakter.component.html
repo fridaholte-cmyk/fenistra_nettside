@@ -177,6 +177,9 @@
   .feature-row.reverse .feature-visual{order:1;}
   .feature-visual{border-radius:16px;overflow:hidden;box-shadow:0 24px 48px -30px rgba(21,10,24,.25);min-height:280px;}
   .feature-visual img{width:100%;height:100%;object-fit:cover;display:block;}
+  .module-shot{margin:36px 0 8px;}
+  .module-shot img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:0 20px 40px -28px rgba(21,10,24,.3);}
+  .module-shot figcaption{margin-top:10px;font-size:13.5px;color:var(--ink-soft);}
   @media (max-width:980px){
     .feature-row{grid-template-columns:1fr;gap:32px;padding:44px 0;}
     .feature-row.reverse .feature-copy{order:1;}
@@ -379,39 +382,17 @@
 <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Direkte kobling mot leietaker, areal og fakturering</li>
 <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Moderne og intuitivt brukergrensesnitt, med rask tilgang til kontraktsdata og dokumenter</li>
 <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Støtter trappetrinnsleie, leierabatter, omsetningsbasert leie og kontrakter med spesielle vilkår</li>
-<li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Automatisk innlesing og import av kontrakter med KI, minimal tid brukt på registrering av porteføljen</li>
+<li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Automatisk innlesing og import av kontrakter med AI, minimal tid brukt på registrering av porteføljen</li>
         </ul>
         <div class="body-copy">
           <p>Fenistra Kontrakter er kjernen i forvaltningen, og gir deg samlet oversikt over leietakere, kontrakter og eiendommer på tvers av porteføljen. Alle ansatte i selskapet kan få tilgang til kontraktsdata og dokumenter, slik at ingen trenger å lete seg fram i regneark eller mapper.</p>
 <p>Uansett hvor komplisert leieforholdet er gir kontraktsløsningen deg alt du trenger for å sikre god kontroll under hele leieforholdet. Trappetrinnsleie, leierabatter, omsetningsbasert leie og egne faktureringsvilkår settes opp direkte i systemet, slik at det ikke krever manuelle unntak eller regneark ved siden av.</p>
         </div>
-        <div class="module-visual">
-          <div class="mock-window">
-            <div class="mock-topbar"><span></span><span></span><span></span></div>
-            <div class="mock-card-head">
-              <div class="title"><span class="mock-badge">7</span>Kontrakter med utløp nærmeste 90 dager</div>
-              <span class="mock-filter">Eiendom ▾</span>
-            </div>
-            <div class="mock-list">
-              <div class="row contract">
-                <span class="left"><span class="cname">Kontor Nord AS</span><span class="cprop">Solsiden 4</span></span>
-                <span class="expiry expiry-red"><span class="dot dot-red"></span>3 mnd siden utløp</span>
-              </div>
-              <div class="row contract">
-                <span class="left"><span class="cname">Symra Interiør</span><span class="cprop">Brygga 12</span></span>
-                <span class="expiry expiry-amber"><span class="dot dot-amber"></span>12 dager til utløp</span>
-              </div>
-              <div class="row contract">
-                <span class="left"><span class="cname">Nordvik Regnskap</span><span class="cprop">Nedre Torg 2</span></span>
-                <span class="expiry expiry-amber"><span class="dot dot-amber"></span>28 dager til utløp</span>
-              </div>
-              <div class="row contract">
-                <span class="left"><span class="cname">Kaia Design Studio</span><span class="cprop">Havneparken</span></span>
-                <span class="expiry expiry-ok"><span class="dot dot-ok"></span>Reforhandlet</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <figure class="module-shot">
+          <img src="images/kontrakter-oversikt.png" width="1200" height="977" loading="lazy" decoding="async"
+               alt="Kontraktsoversikten i Fenistra: søkbar liste over alle kontrakter med kontraktsnummer, leietaker, selskap, eiendom og startdato, med summerte nøkkeltall øverst.">
+          <figcaption>Alle kontrakter samlet i én søkbar oversikt, med summerte nøkkeltall på tvers av porteføljen og filtrering per selskap og eiendom.</figcaption>
+        </figure>
         <h2 style="margin-top:48px;">Alt om leieforholdet, samlet på ett sted</h2>
         <div class="body-copy">
           <p>En leiekontrakt er sjelden bare én ting. Fenistra samler alt forretningskritisk innhold i samme bilde, slik at ingenting blir liggende i mapper, e-poster eller hodet til én enkelt person.</p>
@@ -424,42 +405,11 @@
 <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Dokumentarkiv og full historikk på kontrakten</li>
 <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Kommentarer og merknader som hele bedriften kan få tilgang til</li>
         </ul>
-        <div class="module-visual" style="margin-top:8px;">
-          <div class="mock-window">
-            <div class="mock-topbar"><span></span><span></span><span></span></div>
-            <div class="mock-card-head">
-              <div class="title">Kontor Nord AS · Solsiden 4</div>
-              <span class="mock-filter">Aktivt leieforhold</span>
-            </div>
-            <div class="mock-terms">
-              <span class="tag tag-info">Trappetrinnsleie</span>
-              <span class="tag tag-info">Omsetningsleie</span>
-              <span class="tag tag-muted">KPI-regulert</span>
-            </div>
-            <div class="mock-stats">
-              <div class="mstat"><div class="mlbl">Sikkerhet stilt</div><div class="mnum">450 000 kr</div></div>
-              <div class="mstat"><div class="mlbl">Neste regulering</div><div class="mnum">01.01.2027</div></div>
-              <div class="mstat"><div class="mlbl">Opsjon</div><div class="mnum">3 år</div></div>
-            </div>
-            <div class="mock-card-head">
-              <div class="title">Siste hendelser</div>
-            </div>
-            <div class="mock-list">
-              <div class="row">
-                <span class="left"><span class="cname">Reguleringsbrev sendt automatisk</span><span class="cnote">Basert på KPI fra SSB</span></span>
-                <span class="tag tag-ok">Sendt</span>
-              </div>
-              <div class="row">
-                <span class="left"><span class="cname">Bankgaranti fornyet</span><span class="cnote">Utløper 14.03.2027</span></span>
-                <span class="tag tag-ok">Aktiv</span>
-              </div>
-              <div class="row">
-                <span class="left"><span class="cname">Leietaker ønsker å utvide areal</span><span class="cnote">Kommentar · Ola, utleieansvarlig</span></span>
-                <span class="tag tag-muted">Merknad</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <figure class="module-shot" style="margin-top:8px;">
+          <img src="images/kontrakt-detalj.png" width="1200" height="977" loading="lazy" decoding="async"
+               alt="Kontraktsbildet i Fenistra: nøkkeltall som kontraktnummer, kontraktstype, portefølje, bransje og totalt årsbeløp øverst, med faner for kontraktsobjekter, sikkerhet, opsjoner, fakturahistorikk, reguleringshistorikk, dokumenter og merknader.">
+          <figcaption>Hele leieforholdet i ett bilde: nøkkeltall, utleier og leietaker øverst, og egne faner for sikkerhet, opsjoner, fakturahistorikk, reguleringer, dokumenter og merknader.</figcaption>
+        </figure>
       </div>
       <aside class="side-card reveal">
         <div class="field">
@@ -475,7 +425,7 @@
           <div class="related-chips">
             <a routerLink="/losning-fakturering">Fakturering</a>
 <a routerLink="/losning-felleskostnader">Felleskostnader</a>
-<a routerLink="/losning-arealberegning">Tegning</a>
+<a routerLink="/losning-arealberegning">Arealberegning</a>
           </div>
         </div>
       </aside>

@@ -94,7 +94,9 @@ export class ChatWidgetComponent {
   }
 
   private findAnswer(query: string): string | null {
-    const q = ' ' + query.toLowerCase() + ' ';
+    // Fjern tegnsetting, og la "KI"/"kunstig intelligens" treffe det samme som "AI"
+    let q = ' ' + query.toLowerCase().replace(/[?!.,;:()«»"]/g, ' ') + ' ';
+    if (/ (ki|ai)[ -]|kunstig intelligens/.test(q)) q += ' ki ai kunstig intelligens ';
     let best: ChatKbEntry | null = null;
     let bestScore = 0;
     FENISTRA_CHAT_KB.forEach((entry) => {

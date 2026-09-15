@@ -54,7 +54,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kunder"],
-    answer: "Fenistra brukes i dag av over 180 eiendomsforvaltere i Norge, blant andre Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm og Backer AS. Se kundehistoriene våre. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
+    answer: "Fenistra brukes i dag av over 170 eiendomsforvaltere i Norge, blant andre Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm og Backer AS. Se kundehistoriene våre. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
   },
   {
     keywords: ["felleskostnadsavregning", "hjelper"],
@@ -88,17 +88,19 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
     keywords: ["arealberegning"],
     answer: "Fenistra Arealberegning kobler areal direkte til tegning og kontrakt, og gir nøyaktige arealberegninger som reduserer risikoen for feil i leiekostnader og kvadratmeterpriser. <a href=\"losning-arealberegning.html\">Les mer om Fenistra Arealberegning →</a>"
   },
+  /* Skjult fra nettsiden:
   {
     keywords: ["lokaler", "leier"],
     answer: "Ja. Fenistra Innleie er en egen løsning for dere som leier inn eiendommer, med håndtering av alle leiekontrakter og aktiviteter på innleiesiden, i tillegg til den vanlige utleiesiden. <a href=\"losning-innleie.html\">Les mer om Fenistra Innleie →</a>"
   },
+  */
   {
     keywords: ["fenistradagene"],
     answer: "Fenistradagene er vårt årlige arrangement for Fenistra-kunder, med faglig påfyll, nettverksbygging og sosialt samvær. Arrangementet het tidligere Fenistra Brukerforum, og har gått av stabelen i over 25 år. Se mer om Fenistradagene. <a href=\"fenistradagene.html\">Les mer om Fenistradagene →</a>"
   },
   {
     keywords: ["intelligens", "kunstig", "jobber"],
-    answer: "Ja. Fenistra og Visma Property Solutions jobber aktivt med KI i eiendomsforvaltningen, blant annet gjennom innovasjonsprosjektet Felix, et KI-native verktøy for kontraktsforvaltning som gir varsler, anbefalinger og svar basert på opplastede kontrakter. Les mer om KI hos Fenistra. <a href=\"ki.html\">Les mer om KI hos Fenistra →</a>"
+    answer: "Ja. Fenistra og Visma Property Solutions jobber aktivt med AI i eiendomsforvaltningen, blant annet gjennom innovasjonsprosjektet Felix, et AI-native verktøy for kontraktsforvaltning som gir varsler, anbefalinger og svar basert på opplastede kontrakter. Les mer om AI hos Fenistra. <a href=\"ki.html\">Les mer om AI hos Fenistra →</a>"
   },
   {
     keywords: ["kommer", "gang"],
@@ -128,10 +130,12 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
     keywords: ["formuesverdsettelse", "formuesverdi", "rf-1098", "skattemelding", "fenistra formuesverdsettelse"],
     answer: "Fenistra Formuesverdsettelse: Beregning og dokumentasjon av formuesverdi for næringseiendom, som underlag til RF-1098. Inkludert i Fenistra Standard. Blant annet: Beregner formuesverdi for næringseiendom; Underlag direkte til myndighetenes skjema RF-1098; Samler grunnlagsdata fra eiendom og leieforhold. <a href=\"losning-formuesverdsettelse.html\">Les mer om Fenistra Formuesverdsettelse →</a>"
   },
+  /* Skjult fra nettsiden:
   {
     keywords: ["innleie", "leier inn", "innleiesiden", "fenistra innleie", "leier"],
     answer: "Fenistra Innleie: En løsning for deg som leier inn eiendommer, med håndtering av alle leiekontrakter og aktiviteter knyttet til hvert leieforhold. Tilleggsprodukt i Fenistra Premium. Blant annet: Oversikt over leieforpliktelser, varighet og kostnader; Overvåkning av felleskostnader mot kontraktens betingelser; Matcher inngående husleiefakturaer mot kontrakt. <a href=\"losning-innleie.html\">Les mer om Fenistra Innleie →</a>"
   },
+  */
   {
     keywords: ["inntektsbudsjett", "budsjett", "budsjettering", "fenistra inntektsbudsjett"],
     answer: "Fenistra Inntektsbudsjett: Bygg inntektsbudsjett direkte fra de faktiske leieforholdene i porteføljen, ikke fra separate regneark. Inkludert i Fenistra Standard. Blant annet: Budsjettering basert på faktiske kontraktsdata; Oppdateres automatisk ved endringer i leieforhold; Avstemming mot faktisk fakturert leie. <a href=\"losning-inntektsbudsjett.html\">Les mer om Fenistra Inntektsbudsjett →</a>"
@@ -176,17 +180,15 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
     keywords: ["sikkerhetsstyring", "bankgaranti", "depositum", "sikkerhet", "fenistra sikkerhetsstyring"],
     answer: "Fenistra Sikkerhetsstyring: Full oversikt over bankgaranti og depositum i porteføljen, med varsel når sikkerhet mangler eller utløper. Inkludert i Fenistra Standard. Blant annet: Bankgaranti og depositum samlet per kontrakt og på tvers av porteføljen; Varsel når sikkerhet mangler, er for lav eller nærmer seg utløp; Aggregert risikooversikt for hele porteføljen, ikke bare kontrakt for kontrakt. <a href=\"losning-sikkerhetsstyring.html\">Les mer om Fenistra Sikkerhetsstyring →</a>"
   },
+  /* Skjult fra nettsiden:
   {
     keywords: ["tegning", "tegninger", "plantegning", "npoint", "fenistra tegning"],
     answer: "Fenistra Tegning: Ett sentralt arkiv for alle plantegninger, koblet direkte til kontrakt, leietaker og areal, uten AutoCAD eller andre spesialprogrammer. Tilleggsprodukt i Fenistra Premium. Blant annet: Sentralt arkiv for alle plantegninger, tilgjengelig for hele organisasjonen; Se tegninger direkte i nettleseren, ingen spesialprogramvare nødvendig; Full versjonshistorikk når tegninger oppdateres eller erstattes. <a href=\"losning-tegning.html\">Les mer om Fenistra Tegning →</a>"
   },
-  {
-    keywords: ["utleie", "leieinntekter", "fenistra utleie"],
-    answer: "Fenistra Utleie: Holder orden på inntektssiden av den økonomiske forvaltningen i forbindelse med utleie av eiendom og driftstjenester. Tilleggsprodukt i Fenistra Premium. Blant annet: Skalerbar løsning for deg som eier eller forvalter eiendom; Registrerte inntekter faktureres og avstemmes mot regnskap; Grunnlag for budsjettering av leieinntekter. <a href=\"losning-utleie.html\">Les mer om Fenistra Utleie →</a>"
-  },
+  */
   {
     keywords: ["løsninger", "alle løsninger", "hva kan fenistra", "moduler"],
-    answer: "Fenistra har 18 løsninger, fra kontrakter og felleskostnader til rapportering og kjøpesenterdrift, samlet i ett system. Se hele oversikten på Løsninger-siden. <a href=\"losninger.html\">Les mer om Løsninger →</a>"
+    answer: "Fenistra har 17 løsninger, fra kontrakter og felleskostnader til rapportering og kjøpesenterdrift, samlet i ett system. Se hele oversikten på Løsninger-siden. <a href=\"losninger.html\">Les mer om Løsninger →</a>"
   },
   {
     keywords: ["regnskap integrasjon", "erp", "tripletex", "xledger", "poweroffice", "visma business nxt", "visma.net", "sap", "24sevenoffice", "unimicro", "microsoft dynamics", "regnskap", "integrasjon", "visma", "business", "microsoft", "dynamics"],
@@ -214,7 +216,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kundehistorier", "referansekunder", "kundecase"],
-    answer: "Fenistra brukes av over 180 eiendomsforvaltere i Norge. Se kundehistoriene fra blant andre Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm og Backer AS på Kunder-siden. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
+    answer: "Fenistra brukes av over 170 eiendomsforvaltere i Norge. Se kundehistoriene fra blant andre Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm og Backer AS på Kunder-siden. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
   },
   {
     keywords: ["fenistradagene", "arrangement", "konferanse"],
@@ -222,7 +224,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["felix", "kunstig intelligens ki", "ai-satsing", "ki i eiendomsforvaltning", "kunstig", "intelligens", "eiendomsforvaltning"],
-    answer: "Eiendomsforvaltning handler om store mengder data på tvers av kontrakter, arealer og økonomi. Det er nettopp den typen data KI er godt egnet til å strukturere, tolke og varsle på, når det gjøres riktig. <a href=\"ki.html\">Les mer om KI hos Fenistra →</a>"
+    answer: "Eiendomsforvaltning handler om store mengder data på tvers av kontrakter, arealer og økonomi. Det er nettopp den typen data AI er godt egnet til å strukturere, tolke og varsle på, når det gjøres riktig. <a href=\"ki.html\">Les mer om AI hos Fenistra →</a>"
   },
   {
     keywords: ["om fenistra historie", "hvem er fenistra", "selskapet fenistra", "historie", "selskapet"],
@@ -235,10 +237,6 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   {
     keywords: ["felleskostnadsavregning", "feil"],
     answer: "Hva er felleskostnadsavregning, og hvorfor blir den ofte feil? Manuell fordeling av felleskostnader er en av de vanligste feilkildene i eiendomsforvaltning. Her er hva som går galt, og hvordan automatisering løser det. <a href=\"blogg-felleskostnadsavregning.html\">Les mer om Hva er felleskostnadsavregning, og hvorfor blir den ofte feil? →</a>"
-  },
-  {
-    keywords: ["leiekontrakten"],
-    answer: "Når kontroll over leiekontrakten blir viktigere enn noensinne For gårdeiere og forvaltere handler god eiendomsdrift i stadig større grad om oversikt: å vite hvor kapital er bundet, hvilke forpliktelser som løper, og hvilke valg som faktisk finnes. Depositum er ett av områdene hvor denne oversikten historisk har vært mangelfull, ofte håndtert manuelt og med lite oppmerksomhet fra bransjen for øvrig. <a href=\"blogg-matrix-samarbeid.html\">Les mer om Når kontroll over leiekontrakten blir viktigere enn noensinne →</a>"
   },
   {
     keywords: ["mva", "utleie", "næringsdrivende", "vite"],
@@ -322,11 +320,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["nøkkeltall", "hvor mange bruker", "statistikk fenistra", "60 000 kontrakter"],
-    answer: "Noen nøkkeltall om Fenistra: 180+ eiendomsforvaltere i Norge bruker Fenistra, 20+ regnskapsintegrasjoner er i produksjon hos kunder, 17-18 løsninger dekker hele forvaltningen, og over 60 000 kontrakter forvaltes gjennom Fenistra-plattformen. <a href=\"index.html\">Les mer om Forsiden →</a>"
+    answer: "Noen nøkkeltall om Fenistra: 170+ eiendomsforvaltere i Norge bruker Fenistra, 20+ integrasjoner mot andre systemer er i produksjon hos kunder, rundt 60 milliarder kroner i årlig leieomsetning er registrert i Fenistra, og over 60 000 kontrakter forvaltes gjennom Fenistra-plattformen. <a href=\"index.html\">Les mer om Forsiden →</a>"
   },
   {
     keywords: ["tilleggsprodukter", "selvstendige produkter", "hva er inkludert"],
-    answer: "Fenistra er delt i tre: kjerneløsninger (Kontrakter, Felleskostnader, Fakturering, Regnskap, Rapportering, Dokument, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett), transaksjonsprodukter som er inkludert i begge pakker men betales per bruk (MVA-erklæring, RBO, Protokoller, Digital signering), og tilleggsprodukter som er selvstendige eller kombinert med Standard, og alltid inkludert i Premium (Justering, Arealberegning, Kjøpesenter, Utleie, Innleie)."
+    answer: "Fenistra er delt i tre: kjerneløsninger (Kontrakter, Felleskostnader, Fakturering, Regnskap, Rapportering, Dokument, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett), transaksjonsprodukter som er inkludert i begge pakker men betales per bruk (MVA-erklæring, RBO, Protokoller, Digital signering), og tilleggsprodukter som er selvstendige eller kombinert med Standard, og alltid inkludert i Premium (Justering, Arealberegning, Kjøpesenter)."
   },
   {
     keywords: ["kundeteamet kontakt", "hvem kan jeg kontakte kunde", "brukerstøtte kontakt person", "head of customer success"],
@@ -370,7 +368,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["løsning", "løsninger", "hva kan fenistra"],
-    answer: "Fenistra har 17-18 løsninger, fra kontrakter og felleskostnader til rapportering og kjøpesenterdrift. <a href=\"losninger.html\">Les mer om Løsninger →</a>"
+    answer: "Fenistra har 17 løsninger, fra kontrakter og felleskostnader til rapportering og kjøpesenterdrift. <a href=\"losninger.html\">Les mer om Løsninger →</a>"
   },
   {
     keywords: ["digital signering", "signering", "signere"],
@@ -398,11 +396,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kunstig intelligens", "felix", " ai ", "ai-", " ki ", "ki-"],
-    answer: "Fenistra og Visma Property Solutions jobber aktivt med KI i eiendomsforvaltningen, blant annet gjennom innovasjonsprosjektet Felix for KI-drevet kontraktsforvaltning. <a href=\"ki.html\">Les mer om KI hos Fenistra →</a>"
+    answer: "Fenistra og Visma Property Solutions jobber aktivt med AI i eiendomsforvaltningen, blant annet gjennom innovasjonsprosjektet Felix for AI-drevet kontraktsforvaltning. <a href=\"ki.html\">Les mer om AI hos Fenistra →</a>"
   },
   {
     keywords: ["kunder", "referanse", "case", "hvem bruker"],
-    answer: "Fenistra brukes av 180+ eiendomsforvaltere i Norge, blant andre Thon Gruppen, Coop, Aspelin Reitan, Frydenbø Eiendom, Höegh Eiendom, Spabo Eiendom, Selvaag Eiendom, Backer AS, Norgesgruppen, Ragde, Avantor og Møller. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
+    answer: "Fenistra brukes av 170+ eiendomsforvaltere i Norge, blant andre Thon Gruppen, Coop, Aspelin Reitan, Frydenbø Eiendom, Höegh Eiendom, Spabo Eiendom, Selvaag Eiendom, Backer AS, Norgesgruppen, Ragde, Avantor og Møller. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
   },
   {
     keywords: ["blogg", "artikkel", "artikler", "fagstoff"],

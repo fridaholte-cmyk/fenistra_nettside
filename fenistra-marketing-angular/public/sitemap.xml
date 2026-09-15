@@ -25,12 +25,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.fenistra.no/blogg-matrix-samarbeid</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://www.fenistra.no/blogg-mva-utleie-naringseiendom</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -169,12 +163,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-innleie</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.fenistra.no/losning-inntektsbudsjett</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -236,18 +224,6 @@
   </url>
   <url>
     <loc>https://www.fenistra.no/losning-sikkerhetsstyring</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.fenistra.no/losning-tegning</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.fenistra.no/losning-utleie</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

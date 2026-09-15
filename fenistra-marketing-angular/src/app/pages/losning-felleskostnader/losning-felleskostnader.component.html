@@ -146,6 +146,9 @@
   .feature-row.reverse .feature-visual{order:1;}
   .feature-visual{border-radius:16px;overflow:hidden;box-shadow:0 24px 48px -30px rgba(21,10,24,.25);min-height:280px;}
   .feature-visual img{width:100%;height:100%;object-fit:cover;display:block;}
+  .module-shot{margin:32px 0 0;}
+  .module-shot img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:0 20px 40px -28px rgba(21,10,24,.3);}
+  .module-shot figcaption{margin-top:10px;font-size:13.5px;color:var(--ink-soft);}
   @media (max-width:980px){
     .feature-row{grid-template-columns:1fr;gap:32px;padding:44px 0;}
     .feature-row.reverse .feature-copy{order:1;}
@@ -365,6 +368,11 @@
 <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Hente kostnader automatisk fra regnskapssystemet via API-integrasjon, alltid oppdatert per kostnadskonto, uten manuell registrering</li>
 <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Kjøre en rask avregning på lagret oppsett, når som helst dere trenger en oppdatert oversikt</li>
         </ul>
+        <figure class="module-shot reveal">
+          <img src="images/felleskost-skjevfordeling.png" width="1200" height="977" loading="lazy" decoding="async"
+               alt="Skjevfordeling i Fenistra Felleskost: kostnadskontoer som kolonner og leietakere som rader, der enkeltceller kan overstyres med faste beløp eller fordeles på øvrige.">
+          <figcaption>Skjevfordeling: overstyr enkeltceller med faste beløp eller fordel på øvrige leietakere, uten å endre oppsettet for resten av eiendommen.</figcaption>
+        </figure>
       </div>
       <aside class="side-card reveal">
         <div class="field">
