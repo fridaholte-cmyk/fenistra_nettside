@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { ConsentService } from '../consent/consent.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,4 +8,6 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
   templateUrl: './footer.component.html'
 })
-export class FooterComponent {}
+export class FooterComponent {
+  readonly consent = inject(ConsentService);
+}

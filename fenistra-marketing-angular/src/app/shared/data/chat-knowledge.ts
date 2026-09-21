@@ -70,7 +70,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["formuesverdsettelse", "trenger"],
-    answer: "Formuesverdsettelse er beregning og dokumentasjon av formuesverdi for næringseiendom, som underlag til skattemeldingen (RF-1098). Fenistra Formuesverdsettelse beregner og dokumenterer dette direkte fra porteføljedataene deres. <a href=\"losning-formuesverdsettelse.html\">Les mer om Fenistra Formuesverdsettelse →</a>"
+    answer: "Formuesverdsettelse er beregning og dokumentasjon av formuesverdi for næringseiendom, som underlag til skattemeldingen (RF-1098). Fenistra Formuesverdsettelse beregner og dokumenterer dette direkte fra porteføljedataene deres."
   },
   {
     keywords: ["mva-erklæring"],
@@ -128,7 +128,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["formuesverdsettelse", "formuesverdi", "rf-1098", "skattemelding", "fenistra formuesverdsettelse"],
-    answer: "Fenistra Formuesverdsettelse: Beregning og dokumentasjon av formuesverdi for næringseiendom, som underlag til RF-1098. Inkludert i Fenistra Standard. Blant annet: Beregner formuesverdi for næringseiendom; Underlag direkte til myndighetenes skjema RF-1098; Samler grunnlagsdata fra eiendom og leieforhold. <a href=\"losning-formuesverdsettelse.html\">Les mer om Fenistra Formuesverdsettelse →</a>"
+    answer: "Fenistra Formuesverdsettelse: Beregning og dokumentasjon av formuesverdi for næringseiendom, som underlag til RF-1098. Inkludert i Fenistra Standard. Blant annet: Beregner formuesverdi for næringseiendom; Underlag direkte til myndighetenes skjema RF-1098; Samler grunnlagsdata fra eiendom og leieforhold."
   },
   /* Skjult fra nettsiden:
   {

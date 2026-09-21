@@ -1,8 +1,9 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { FENISTRA_CHAT_KB, ChatKbEntry } from '../data/chat-knowledge';
+import { ChatLoggerService } from '../chat-logger.service';
 
 interface ChatMessage {
   html: string;
@@ -19,7 +20,7 @@ const DEFAULT_SUGGESTIONS = [
 @Component({
   selector: 'app-chat-widget',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './chat-widget.component.html'
 })
 export class ChatWidgetComponent {
@@ -31,7 +32,7 @@ export class ChatWidgetComponent {
   @ViewChild('messagesEl') messagesEl?: ElementRef<HTMLElement>;
   @ViewChild('chatInputEl') chatInputEl?: ElementRef<HTMLInputElement>;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, readonly logger: ChatLoggerService) {}
 
   openChat() {
     this.open = true;
@@ -61,6 +62,7 @@ export class ChatWidgetComponent {
     this.addMessage(this.escapeHtml(trimmed), 'user');
     setTimeout(() => {
       const answer = this.findAnswer(trimmed);
+      this.logger.log(trimmed, !!answer);
       if (answer) {
         this.addMessage(this.fixLinks(answer), 'bot');
       } else {

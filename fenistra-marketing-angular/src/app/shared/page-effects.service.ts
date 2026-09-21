@@ -5,6 +5,7 @@ export class PageEffectsService {
   private observer?: IntersectionObserver;
 
   run() {
+    if (typeof document === 'undefined') return; // prerendering
     // let Angular finish rendering the new route's DOM first
     setTimeout(() => this.setup(), 0);
   }
@@ -21,7 +22,7 @@ export class PageEffectsService {
           this.observer?.unobserve(e.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0, rootMargin: '0px 0px -10% 0px' }); // threshold 0 so elements taller than the viewport still reveal
     revealEls.forEach((el) => this.observer!.observe(el));
 
     // faq accordion

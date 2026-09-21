@@ -1,11 +1,14 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { QuizService } from '../../shared/quiz.service';
 
 @Component({
-  selector: 'app-losning-innleie',
+  selector: 'app-priser',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './losning-innleie.component.html',
+  templateUrl: './priser.component.html',
   encapsulation: ViewEncapsulation.None
 })
-export class LosningInnleieComponent {}
+export class PriserComponent {
+  constructor(public quiz: QuizService) {}
+}

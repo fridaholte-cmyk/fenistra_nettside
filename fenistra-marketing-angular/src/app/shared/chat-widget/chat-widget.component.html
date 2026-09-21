@@ -26,4 +26,7 @@
     <input type="text" id="chatInput" #chatInputEl placeholder="Skriv en melding …" autocomplete="off" [(ngModel)]="draft" name="draft">
     <button type="submit" aria-label="Send"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
   </form>
+  @if (logger.active) {
+    <p class="chat-notice">Spørsmålene lagres for å forbedre svarene våre. Ikke skriv personopplysninger. <a routerLink="/personvern" (click)="closeChat()">Les mer</a></p>
+  }
 </div>

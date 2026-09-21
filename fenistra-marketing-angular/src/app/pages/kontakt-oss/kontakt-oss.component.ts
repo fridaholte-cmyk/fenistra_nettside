@@ -11,6 +11,6 @@ import { createHubspotForm } from '../../shared/hubspot-form';
 })
 export class KontaktOssComponent implements AfterViewInit {
   ngAfterViewInit() {
-    createHubspotForm('#hubspotContactForm');
+    createHubspotForm('#hubspotContactForm', 'kontakt_oss');
   }
 }

@@ -1,12 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/staticwebapp.config.json",
-  "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": [
-      "/images/*",
-      "/*.{js,css,map,ico,svg,png,jpg,jpeg,webp,gif,woff,woff2,ttf,xml,txt,json,docx,pdf,mp4}"
-    ]
-  },
+  "trailingSlash": "never",
   "routes": [
     {
       "route": "/index.html",
@@ -49,5 +43,11 @@
     ".json": "application/json",
     ".webp": "image/webp",
     ".woff2": "font/woff2"
+  },
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404/index.html",
+      "statusCode": 404
+    }
   }
 }

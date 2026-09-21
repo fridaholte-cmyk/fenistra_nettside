@@ -316,61 +316,110 @@
     .chat-panel{width:calc(100vw - 24px);height:min(70vh, 560px);right:12px;bottom:12px;}
     .chat-trigger{right:16px;bottom:16px;}
   }
-</style>
-<div class="wrap">
-  <div class="breadcrumb">
-    <a routerLink="/">Forside</a><span class="sep">/</span>
-    <a routerLink="/losninger">Løsninger</a><span class="sep">/</span>
-    <span class="current">Innleie</span>
-  </div>
-</div>
 
-<section class="module-hero">
+  /* ================= FIT QUIZ ================= */
+  .quiz-callout{background:var(--berry);background-image:radial-gradient(circle at 15% 20%, rgba(255,255,255,0.14), transparent 40%), radial-gradient(circle at 85% 80%, rgba(0,0,0,0.12), transparent 45%);border-radius:20px;padding:36px 40px;display:flex;align-items:center;justify-content:space-between;gap:28px;color:#fff;flex-wrap:wrap;}
+  .quiz-callout h3{font-family:var(--font-display);font-weight:300;font-size:clamp(20px,2.2vw,26px);letter-spacing:-0.02em;margin-bottom:8px;}
+  .quiz-callout p{font-size:14.5px;color:rgba(255,255,255,.85);max-width:480px;}
+  .quiz-callout .btn{flex-shrink:0;}
+
+  .quiz-backdrop{position:fixed;inset:0;background:rgba(21,10,24,.5);z-index:399;opacity:0;pointer-events:none;transition:opacity .25s ease;}
+  .quiz-backdrop.open{opacity:1;pointer-events:auto;}
+  .quiz-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-48%);width:min(600px, calc(100% - 32px));max-height:min(680px, calc(100vh - 48px));z-index:400;background:#fff;border-radius:20px;box-shadow:0 40px 80px -20px rgba(21,10,24,.45);display:flex;flex-direction:column;overflow:hidden;opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;}
+  .quiz-modal.open{opacity:1;transform:translate(-50%,-50%);pointer-events:auto;}
+  .quiz-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--line);flex-shrink:0;}
+  .quiz-head-title{font-family:var(--font-mono);font-size:12px;color:var(--ink-soft);}
+  .quiz-close{border:none;background:none;cursor:pointer;color:var(--ink-soft);font-size:16px;padding:4px;}
+  .quiz-close:hover{color:var(--ink);}
+  .quiz-progress-track{height:3px;background:var(--line);flex-shrink:0;}
+  .quiz-progress-bar{height:100%;background:var(--berry);transition:width .3s ease;}
+  .quiz-body{padding:32px 28px;overflow-y:auto;flex:1;}
+  .quiz-question{font-family:var(--font-display);font-weight:400;font-size:20px;letter-spacing:-0.01em;color:var(--ink);margin-bottom:22px;line-height:1.35;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-option{text-align:left;padding:14px 18px;border:1.5px solid var(--line);border-radius:12px;font-size:15px;color:var(--ink);cursor:pointer;transition:border-color .15s ease, background .15s ease;background:#fff;}
+  .quiz-option:hover{border-color:var(--plum);background:var(--paper-2);}
+  .quiz-option.selected{border-color:var(--berry);background:var(--berry-light);color:var(--berry-deep);font-weight:600;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-top:1px solid var(--line);flex-shrink:0;}
+  .quiz-nav .spacer{flex:1;}
+  .quiz-result h3{font-family:var(--font-display);font-weight:300;font-size:clamp(22px,2.4vw,28px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:14px;}
+  .quiz-result .reasons{display:flex;flex-direction:column;gap:10px;margin-bottom:24px;}
+  .quiz-result .reasons li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;color:var(--ink-soft);line-height:1.5;}
+  .quiz-result .reasons li svg{flex-shrink:0;margin-top:3px;color:var(--berry);}
+  .quiz-result .pkg-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.04em;padding:5px 12px;border-radius:20px;background:var(--berry-light);color:var(--berry-deep);margin-bottom:14px;}
+  .quiz-result .related-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+  @media (max-width:600px){
+    .quiz-callout{padding:28px 24px;text-align:center;justify-content:center;}
+    .quiz-callout p{max-width:none;}
+  }
+
+  /* ================= PRISER ================= */
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;}
+  @media (max-width:760px){.price-grid{grid-template-columns:1fr;} .price-grid > div{padding:28px !important;}}
+</style>
+<section class="index-hero">
   <div class="wrap">
-    <span class="badge badge-tillegg">Tilleggsprodukt / Premium</span>
-    <h1>Fenistra Innleie</h1>
-    <p class="lead">En løsning for deg som leier inn eiendommer, med håndtering av alle leiekontrakter og aktiviteter knyttet til hvert leieforhold.</p>
-    <div class="hero-actions">
-      <a routerLink="/pakke-resultat" class="btn btn-primary">Book en demo</a>
-      <a routerLink="/losninger" class="btn btn-ghost">Se alle løsninger</a>
+    <div class="eyebrow">Priser</div>
+    <h1>Velg løsningen som passer din bedrift</h1>
+    <p>Fenistra prises etter porteføljens leieomsetning, ikke antall brukere, alle pakker har ubegrenset antall brukere. Hvilken pakke som passer avhenger av hvilke løsninger dere trenger.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;padding-bottom:12px;">
+  <div class="wrap">
+    <div class="quiz-callout">
+      <div>
+        <h3>Klar for å finne riktig pakke?</h3>
+        <p>Lurer du på om Fenistra er noe for deg eller din bedrift? Svar på noen få spørsmål om porteføljen deres, så viser vi hvilke løsninger som passer, på under to minutter.</p>
+      </div>
+      <button type="button" class="btn btn-on-dark" (click)="quiz.open()" style="background:#fff;color:var(--berry-deep);flex-shrink:0;">Ta testen →</button>
     </div>
   </div>
 </section>
 
-<section class="module-body">
+<section style="padding-top:10px;">
   <div class="wrap">
-    <div class="module-grid-layout">
-      <div class="module-main reveal">
-        <h2>Dette får du</h2>
-        <ul class="feature-list">
-          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Oversikt over leieforpliktelser, varighet og kostnader</li>
-<li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Overvåkning av felleskostnader mot kontraktens betingelser</li>
-<li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Matcher inngående husleiefakturaer mot kontrakt</li>
-<li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Varsling på viktige datoer som utløp og opsjonsfrister</li>
+    <div class="price-grid">
+
+      <div id="standard" class="reveal" style="background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:40px;scroll-margin-top:100px;">
+        <span class="badge badge-standard">Standard</span>
+        <h2 style="font-family:var(--font-display); font-weight:300; font-size:28px; letter-spacing:-0.02em; margin:16px 0 8px; color:var(--ink);">Fenistra Standard</h2>
+        <p style="color:var(--ink-soft); font-size:15.5px; margin-bottom:20px;">Passer for små og mellomstore eiendomsselskaper, og kan kombineres med tilleggsprodukter.</p>
+        <ul class="feature-list" style="margin-bottom:24px;">
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Ubegrenset antall brukere</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Pris basert på leieomsetning</li>
         </ul>
-        <div class="body-copy">
-          <p>Fenistra Innleie holder rede på leieforpliktelsene med hensyn til varighet og kostnader, for dere som leier inn eiendom fremfor å leie ut. Det er mulighet til å overvåke felleskostnadene og matche inngående husleiefakturaer mot betingelsene i kontrakten.</p>
-<p>Løsningen varsler brukeren på viktige datoer, som utløp og opsjonens varslingsfrist, slik at ingen frister forsvinner i innboksen.</p>
-        </div>
+        <p style="font-family:var(--font-mono); font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); margin-bottom:12px;">Inkluderer</p>
+        <ul class="feature-list" style="margin-bottom:28px;">
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Kontrakter</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Felleskostnader</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Fakturering</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Regnskap</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Rapportering</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Dokument</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Omsetningsavregning</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Formuesverdsettelse</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Inntektsbudsjett</li>
+        </ul>
+        <a routerLink="/pakke-resultat" class="btn btn-primary" style="width:100%;justify-content:center;">Book en demo</a>
       </div>
-      <aside class="side-card reveal">
-        <div class="field">
-          <h4>Pakke</h4>
-          <p>Tilleggsprodukt (inkludert i Premium)</p>
-        </div>
-        <div class="field">
-          <h4>Passer for</h4>
-          <p>Eiendomsforvaltere med innleide lokaler</p>
-        </div>
-        <div class="field">
-          <h4>Fungerer sammen med</h4>
-          <div class="related-chips">
-            <a routerLink="/losning-kontrakter">Kontrakter</a>
-<a routerLink="/losning-dokument">Dokument</a>
-<a routerLink="/losning-justering">Justering</a>
-          </div>
-        </div>
-      </aside>
+
+      <div id="premium" class="reveal" style="background:var(--berry-deep);background-image:radial-gradient(circle at 15% 20%, rgba(255,255,255,0.10), transparent 40%);border-radius:20px;padding:40px;color:#fff;scroll-margin-top:100px;">
+        <span class="badge" style="background:rgba(255,255,255,.14);color:#fff;">Premium</span>
+        <h2 style="font-family:var(--font-display); font-weight:300; font-size:28px; letter-spacing:-0.02em; margin:16px 0 8px; color:#fff;">Fenistra Premium</h2>
+        <p style="color:rgba(255,255,255,.75); font-size:15.5px; margin-bottom:20px;">Passer for store eiendomsselskaper.</p>
+        <ul class="feature-list" style="margin-bottom:24px;">
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="rgba(255,255,255,.18)"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="color:#fff;">Ubegrenset antall brukere</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="rgba(255,255,255,.18)"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="color:#fff;">Pris basert på leieomsetning</span></li>
+        </ul>
+        <p style="font-family:var(--font-mono); font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:rgba(255,255,255,.6); margin-bottom:12px;">Inkluderer</p>
+        <ul class="feature-list" style="margin-bottom:28px;">
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="rgba(255,255,255,.18)"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="color:#fff;">Alt fra Standard</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="rgba(255,255,255,.18)"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="color:#fff;">Alle tilleggsprodukter</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="rgba(255,255,255,.18)"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="color:#fff;">Egen kunderådgiver</span></li>
+        </ul>
+        <a routerLink="/pakke-resultat" class="btn btn-on-dark" style="width:100%;justify-content:center;background:#fff;color:var(--berry-deep);">Book en demo</a>
+      </div>
+
     </div>
   </div>
 </section>
@@ -378,36 +427,54 @@
 <section class="related-section">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Se også</div>
-      <h2>Løsninger som ofte brukes sammen med Innleie</h2>
-      <p>Fenistra er bygget som ett system. Bruk løsningene sammen, eller sett sammen kombinasjonen som passer deres portefølje.</p>
+      <div class="eyebrow">Transaksjonsprodukter</div>
+      <h2>Inkludert i både Standard og Premium</h2>
+      <p>Disse løsningene er inkludert i begge pakker, men belastes med basis i antall transaksjoner hver måned.</p>
     </div>
     <div class="mini-grid">
-      <a routerLink="/losning-kontrakter" class="mini-card">
-        <span class="badge badge-standard">Inkludert i Fenistra Standard</span>
-        <h3>Kontrakter</h3>
-        <p>Full oversikt over hvert leieforhold, fra signering til utløp.</p>
+      <a routerLink="/losning-mva-erklaring" class="mini-card">
+        <h3>MVA-erklæring</h3>
       </a>
-<a routerLink="/losning-dokument" class="mini-card">
-        <span class="badge badge-standard">Inkludert i Fenistra Standard</span>
-        <h3>Dokument</h3>
-        <p>All dokumentasjon der resten av forvaltningen skjer.</p>
+      <a routerLink="/losning-rbo" class="mini-card">
+        <h3>Revisorbekreftet omsetning (RBO)</h3>
       </a>
-<a routerLink="/losning-justering" class="mini-card">
-        <span class="badge badge-tillegg">Tilleggsprodukt / Premium</span>
-        <h3>Justering</h3>
-        <p>MVA og justeringsforpliktelser i tråd med regelverket.</p>
+      <a routerLink="/losning-protokoller" class="mini-card">
+        <h3>Protokoller</h3>
+      </a>
+      <a routerLink="/losning-digital-signering" class="mini-card">
+        <h3>Digital signering</h3>
       </a>
     </div>
   </div>
 </section>
 
-<section class="cta-wrap">
-  <div class="cta-band reveal">
-    <h2>Klar for å se Innleie i praksis?</h2>
-    <div class="actions">
-      <a routerLink="/pakke-resultat" class="btn btn-on-dark">Book en demo</a>
-      <a routerLink="/losninger" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Utforsk flere løsninger</a>
+<section class="related-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Tilleggsprodukter</div>
+      <h2>Selvstendige, eller kombinert med Standard</h2>
+      <p>Følgende løsninger kan benyttes som selvstendige produkter, eller kombineres med Fenistra Standard. Alle er inkludert i Premium.</p>
+    </div>
+    <div class="mini-grid">
+      <a routerLink="/losning-justering" class="mini-card">
+        <h3>Justering</h3>
+      </a>
+      <a routerLink="/losning-arealberegning" class="mini-card">
+        <h3>Arealberegning</h3>
+      </a>
+      <a routerLink="/losning-kjopesenter" class="mini-card">
+        <h3>Kjøpesenter</h3>
+      </a>
     </div>
   </div>
 </section>
+
+<section class="related-section">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:0;max-width:none;">
+      <div class="eyebrow">Priser</div>
+      <p style="font-size:15.5px;color:var(--ink-soft);">Vi har ikke faste priser liggende åpent på siden, siden det varierer med portefølje og behov. Book en demo, så finner vi ut hva som passer for dere.</p>
+    </div>
+  </div>
+</section>
+

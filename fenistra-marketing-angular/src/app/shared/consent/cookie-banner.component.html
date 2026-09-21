@@ -1,0 +1,47 @@
+@if (consent.settingsOpen()) {
+  <div class="cc-backdrop" (click)="close()"></div>
+  <section class="cc-panel cc-settings" role="dialog" aria-modal="true" aria-labelledby="cc-settings-title">
+    <h2 id="cc-settings-title">Cookie-innstillinger</h2>
+    <p>Velg hvilke cookies vi kan bruke. Nødvendige cookies kan ikke skrus av, fordi nettsiden ikke fungerer uten dem. Du kan endre valget ditt når som helst via «Cookie-innstillinger» nederst på siden.</p>
+
+    <div class="cc-cat">
+      <div class="cc-cat-head">
+        <h3>Nødvendige</h3>
+        <span class="cc-always">Alltid på</span>
+      </div>
+      <p>Sørger for at nettsiden fungerer, blant annet at ditt cookie-valg huskes og at kontaktskjemaet kan sendes.</p>
+    </div>
+
+    <label class="cc-cat">
+      <div class="cc-cat-head">
+        <h3>Statistikk</h3>
+        <input type="checkbox" role="switch" class="cc-switch" [checked]="statistikk" (change)="statistikk = $any($event.target).checked" aria-label="Statistikk-cookies">
+      </div>
+      <p>Hjelper oss å forstå hvordan nettsiden brukes, slik at vi kan forbedre den. Omfatter også lagring av spørsmålene du stiller i chatten (i HubSpot), slik at vi kan forbedre svarene.</p>
+    </label>
+
+    <label class="cc-cat">
+      <div class="cc-cat-head">
+        <h3>Markedsføring</h3>
+        <input type="checkbox" role="switch" class="cc-switch" [checked]="markedsforing" (change)="markedsforing = $any($event.target).checked" aria-label="Markedsføringscookies">
+      </div>
+      <p>Brukes til å vise relevant innhold og markedsføring, også på andre nettsteder.</p>
+    </label>
+
+    <div class="cc-actions">
+      <button type="button" class="cc-btn cc-btn-primary" (click)="consent.rejectAll()">Avvis alle</button>
+      <button type="button" class="cc-btn" (click)="saveChoice()">Lagre valg</button>
+      <button type="button" class="cc-btn cc-btn-primary" (click)="consent.acceptAll()">Godta alle</button>
+    </div>
+  </section>
+} @else if (consent.needsChoice()) {
+  <section class="cc-panel cc-banner" role="region" aria-labelledby="cc-title">
+    <h2 id="cc-title">Vi bruker cookies</h2>
+    <p>Vi bruker nødvendige cookies for at nettsiden skal fungere. Med ditt samtykke bruker vi også cookies og lignende teknologi til statistikk, blant annet for å lagre spørsmål stilt i chatten, og til markedsføring. Du velger selv, og kan endre valget når som helst. Les mer i vår <a routerLink="/cookies">cookie policy</a> og <a routerLink="/personvern">personvernerklæring</a>.</p>
+    <div class="cc-actions">
+      <button type="button" class="cc-btn cc-btn-link" (click)="consent.openSettings()">Tilpass</button>
+      <button type="button" class="cc-btn cc-btn-primary" (click)="consent.rejectAll()">Avvis alle</button>
+      <button type="button" class="cc-btn cc-btn-primary" (click)="consent.acceptAll()">Godta alle</button>
+    </div>
+  </section>
+}

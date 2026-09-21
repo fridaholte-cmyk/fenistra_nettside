@@ -157,12 +157,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-formuesverdsettelse</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.fenistra.no/losning-inntektsbudsjett</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -329,6 +323,12 @@
     <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.fenistra.no/priser</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.fenistra.no/produktteam</loc>

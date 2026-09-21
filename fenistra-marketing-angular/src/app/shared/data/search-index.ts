@@ -30,10 +30,10 @@ export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
   { title: "Regnskap", url: "losning-regnskap.html", category: "Løsning", desc: "Hold eiendomsøkonomien avstemt og oppdatert, med integrasjon mot regnskapssystemene dere allerede har på plass." },
   { title: "Rapportering", url: "losning-rapportering.html", category: "Løsning", desc: "Standardiserte rapporter og interaktive visualiseringer av porteføljens data og nøkkeltall." },
   { title: "Omsetningsavregning", url: "losning-omsetningsavregning.html", category: "Løsning", desc: "Forenkler og effektiviserer avregningen av omsetningsbasert leie, basert på revisorbekreftet omsetning." },
-  { title: "Formuesverdsettelse", url: "losning-formuesverdsettelse.html", category: "Løsning", desc: "Beregning og dokumentasjon av formuesverdi for næringseiendom, som underlag til RF-1098." },
   { title: "Inntektsbudsjett", url: "losning-inntektsbudsjett.html", category: "Løsning", desc: "Bygg inntektsbudsjett direkte fra de faktiske leieforholdene i porteføljen, ikke fra separate regneark." },
   // Skjult fra nettsiden: { title: "Innleie", url: "losning-innleie.html", category: "Løsning", desc: "En løsning for deg som leier inn eiendommer, med håndtering av alle leiekontrakter og aktiviteter." },
   { title: "Protokoller", url: "losning-protokoller.html", category: "Løsning", desc: "Verktøy for overtakelse og tilbakelevering av lokaler, med protokoller koblet direkte til riktig kontrakt." },
+  { title: "Priser og pakker", url: "priser.html", category: "Side", desc: "Fenistra Standard og Premium, prises etter leieomsetning med ubegrenset antall brukere." },
   { title: "RBO", url: "losning-rbo.html", category: "Løsning", desc: "Enkel innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata." },
   { title: "Digital signering", url: "losning-digital-signering.html", category: "Løsning", desc: "Signer kontrakter og dokumenter digitalt, direkte i Fenistra. Transaksjonsprodukt inkludert i Fenistra Standard." },
 

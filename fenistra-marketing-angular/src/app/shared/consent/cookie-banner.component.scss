@@ -1,0 +1,113 @@
+:host { font-family: var(--font-body, 'Inter', sans-serif); }
+
+.cc-panel {
+  position: fixed;
+  z-index: 400;
+  background: #fff;
+  color: var(--ink, #150A18);
+  border: 1px solid var(--line, #E4DEE1);
+  border-radius: 16px;
+  box-shadow: 0 30px 60px -20px rgba(21, 10, 24, .35);
+  padding: 24px;
+}
+
+.cc-banner {
+  left: 24px;
+  bottom: 24px;
+  width: min(560px, calc(100vw - 48px));
+}
+
+.cc-settings {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(520px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+}
+
+.cc-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 399;
+  background: rgba(21, 10, 24, .32);
+}
+
+h2 { font-size: 18px; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.01em; }
+h3 { font-size: 15px; font-weight: 600; }
+p { font-size: 14px; line-height: 1.55; color: var(--ink-soft, #4A3B4E); }
+a { color: var(--berry-deep, #7B173E); font-weight: 600; text-decoration: underline; }
+
+.cc-cat {
+  display: block;
+  border: 1px solid var(--line, #E4DEE1);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-top: 12px;
+  cursor: pointer;
+  p { font-size: 13.5px; margin-top: 4px; }
+}
+.cc-cat:first-of-type { cursor: default; margin-top: 16px; }
+.cc-cat-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.cc-always { font-family: var(--font-mono, monospace); font-size: 11.5px; color: var(--plum, #634967); }
+
+.cc-switch {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 40px;
+  height: 22px;
+  border-radius: 11px;
+  background: var(--mist, #EBE8EC);
+  border: 1px solid var(--line, #E4DEE1);
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background .2s ease;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(21, 10, 24, .3);
+    transition: transform .2s ease;
+  }
+  &:checked { background: var(--berry, #AB3164); border-color: var(--berry, #AB3164); }
+  &:checked::after { transform: translateX(18px); }
+  &:focus-visible { outline: 2px solid var(--berry, #AB3164); outline-offset: 3px; }
+}
+
+.cc-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; margin-top: 18px; }
+
+.cc-btn {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 9px;
+  border: 1.5px solid var(--line, #E4DEE1);
+  background: #fff;
+  color: var(--ink, #150A18);
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease;
+  &:hover { border-color: var(--plum, #634967); background: var(--paper-2, #F6F3F5); }
+  &:focus-visible { outline: 2px solid var(--berry, #AB3164); outline-offset: 3px; }
+}
+// "Avvis alle" and "Godta alle" deliberately share the same style: rejecting must be as easy as accepting.
+.cc-btn-primary {
+  background: var(--berry, #AB3164);
+  border-color: var(--berry, #AB3164);
+  color: #fff;
+  &:hover { background: var(--berry-deep, #7B173E); border-color: var(--berry-deep, #7B173E); }
+}
+.cc-btn-link { border-color: transparent; margin-right: auto; padding-left: 4px; text-decoration: underline; }
+
+@media (max-width: 560px) {
+  .cc-banner { left: 12px; right: 12px; bottom: 12px; width: auto; padding: 20px; }
+  .cc-actions { justify-content: stretch; }
+  .cc-actions .cc-btn { flex: 1 1 auto; }
+  .cc-btn-link { flex-basis: 100% !important; order: 3; margin-right: 0; }
+}
