@@ -130,7 +130,7 @@
   .error-hero .hero-actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
 </style>
 
-<section class="error-hero">
+<section class="error-hero" [attr.data-error-code]="code">
   <div class="wrap">
     <div class="error-glyph">{{ code }}</div>
     <div class="error-code">Feil {{ code }}</div>

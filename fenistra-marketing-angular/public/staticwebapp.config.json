@@ -45,6 +45,14 @@
     ".woff2": "font/woff2"
   },
   "responseOverrides": {
+    "400": {
+      "rewrite": "/400/index.html",
+      "statusCode": 400
+    },
+    "403": {
+      "rewrite": "/403/index.html",
+      "statusCode": 403
+    },
     "404": {
       "rewrite": "/404/index.html",
       "statusCode": 404
