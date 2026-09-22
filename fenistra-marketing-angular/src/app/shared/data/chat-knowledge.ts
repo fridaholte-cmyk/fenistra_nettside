@@ -18,11 +18,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["datasikkerhet", "sikker data", "dataene trygge", "sikrer dere dataene", "sikkerhet program", "visma security program", "kryptering", "hosting", "trust centre", "informasjonssikkerhet", "trygge data", "sikre data", "lagrer dere dataene", "hvor lagres dataene", "databeskyttelse", "cybersikkerhet", "dataene", "trygge"],
-    answer: "Fenistra er en del av Visma-konsernet, og dataene deres beskyttes gjennom Visma Security Program - de samme sikkerhetsstandardene som gjelder på tvers av hele Visma. For full teknisk og compliance-dokumentasjon, se Visma Trust Centre. <a href=\"datasikkerhet.html\">Les mer om Datasikkerhet →</a>"
+    answer: "Fenistra er en del av Visma-konsernet, og dataene deres beskyttes gjennom Visma Security Program – de samme sikkerhetsstandardene som gjelder på tvers av hele Visma. For full teknisk og compliance-dokumentasjon, se Visma Trust Centre. <a href=\"datasikkerhet.html\">Les mer om Datasikkerhet →</a>"
   },
   {
     keywords: ["forvaltningssystem"],
-    answer: "Et forvaltningssystem er et samlet sett med verktøy og arbeidsprosesser som hjelper eiendomsbesittere, gårdeiere og forvaltere med å organisere drift, vedlikehold, økonomi og administrasjon av eiendommer, alt fra leietakeradministrasjon til regnskap og rapportering, på ett sted. Fenistra er ikke bare et kontraktshåndteringssystem, men også et faktureringssystem — en komplett løsning for økonomisk forvaltning av næringseiendom, fra kontrakt og budsjettering til fakturering, felleskostnadsavregning, mva-håndtering og rapportering i én sammenhengende flyt. <a href=\"om-oss.html\">Les mer om Om oss →</a>"
+    answer: "Et forvaltningssystem er et samlet sett med verktøy og arbeidsprosesser som hjelper eiendomsbesittere, gårdeiere og forvaltere med å organisere drift, vedlikehold, økonomi og administrasjon av eiendommer, alt fra leietakeradministrasjon til regnskap og rapportering, på ett sted. Fenistra er ikke bare et kontraktshåndteringssystem, men også et faktureringssystem – en komplett løsning for økonomisk forvaltning av næringseiendom, fra kontrakt og budsjettering til fakturering, felleskostnadsavregning, MVA-håndtering og rapportering i én sammenhengende flyt. <a href=\"om-oss.html\">Les mer om Om oss →</a>"
   },
   {
     keywords: ["standard"],
@@ -34,7 +34,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kjøpesenter"],
-    answer: "Fenistra Kjøpesenter er senterleders verktøy, og gir full oversikt over status på senteret og oppgavene som hører til rollen. Fokuset ligger på butikk, aktiviteter og løpende omsetningsrapportering. Les mer her. <a href=\"losning-kjopesenter.html\">Les mer om Fenistra Kjøpesenter →</a>"
+    answer: "Fenistra Kjøpesenter er senterleders verktøy, og gir full oversikt over status på senteret og oppgavene som hører til rollen. Fokuset ligger på butikk, aktiviteter og løpende omsetningsrapportering. <a href=\"losning-kjopesenter.html\">Les mer om Fenistra Kjøpesenter →</a>"
   },
   {
     keywords: ["regnskapssystem", "integreres"],
@@ -42,7 +42,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["koster", "kostnad", "abonnement"],
-    answer: "Fenistra prises etter porteføljens leieomsetning, ikke antall brukere, alle pakker har ubegrenset antall brukere. Vi har ikke faste priser liggende åpent på siden, siden det varierer med portefølje og behov. Book en demo, så finner vi ut hva som passer for dere."
+    answer: "Fenistra prises etter porteføljens leieomsetning, ikke antall brukere – alle pakker har ubegrenset antall brukere. Vi har ikke faste priser liggende åpent på siden, siden det varierer med portefølje og behov. Book en demo, så finner vi ut hva som passer for dere."
   },
   {
     keywords: ["forskjellen", "standard", "premium"],
@@ -140,7 +140,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["intelligens", "kunstig", "jobber"],
-    answer: "Ja. Fenistra og Visma Property Solutions jobber aktivt med AI i eiendomsforvaltningen, blant annet gjennom innovasjonsprosjektet Felix, et AI-native verktøy for kontraktsforvaltning som gir varsler, anbefalinger og svar basert på opplastede kontrakter. Les mer om AI hos Fenistra. <a href=\"ki.html\">Les mer om AI hos Fenistra →</a>"
+    answer: "Ja. Fenistra og Visma Property Solutions jobber aktivt med AI i eiendomsforvaltningen, blant annet gjennom innovasjonsprosjektet Felix, et AI-basert verktøy for kontraktsforvaltning som gir varsler, anbefalinger og svar basert på opplastede kontrakter. <a href=\"ki.html\">Les mer om AI hos Fenistra →</a>"
   },
   {
     keywords: ["kommer", "gang"],
@@ -206,7 +206,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["rapportering", "rapport", "rapporter", "nøkkeltall", "fenistra rapportering"],
-    answer: "Fenistra Rapportering: Fenistra rapporter gir deg innsikten du trenger, når du trenger den. Inkludert i Fenistra Standard. Blant annet: Enkle rapporter som gir deg og teamet et godt beslutningsgrunnlag; Hent ut per selskap, eiendom, portefølje eller egendefinerte tags og bransje; Alle rapporter kan hentes ut og lastes ned direkte fra løsningen. <a href=\"losning-rapportering.html\">Les mer om Fenistra Rapportering →</a>"
+    answer: "Fenistra Rapportering: Fenistras rapporter gir deg innsikten du trenger, når du trenger den. Inkludert i Fenistra Standard. Blant annet: Enkle rapporter som gir deg og teamet et godt beslutningsgrunnlag; Hent ut per selskap, eiendom, portefølje eller egendefinerte tags og bransje; Alle rapporter kan hentes ut og lastes ned direkte fra løsningen. <a href=\"losning-rapportering.html\">Les mer om Fenistra Rapportering →</a>"
   },
   {
     keywords: ["rbo", "revisorbekreftet omsetning", "fenistra rbo", "revisorbekreftet", "omsetning"],
@@ -214,7 +214,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["regnskap", "regnskapssystem", "kundereskontro", "fenistra regnskap"],
-    answer: "Fenistra Regnskap: Hold eiendomsøkonomien avstemt og oppdatert, med integrasjon mot regnskapssystemene dere allerede bruker i dag. Inkludert i Fenistra Standard. Blant annet: Integrasjon mot rundt 20+ ulike regnskapssystemer i produksjon; Avstemming av fakturering og felleskostnader; Grunnlag for budsjettering og oppfølging. <a href=\"losning-regnskap.html\">Les mer om Fenistra Regnskap →</a>"
+    answer: "Fenistra Regnskap: Hold eiendomsøkonomien avstemt og oppdatert, med integrasjon mot regnskapssystemene dere allerede bruker i dag. Inkludert i Fenistra Standard. Blant annet: Integrasjon mot over 20 ulike regnskapssystemer i produksjon; Avstemming av fakturering og felleskostnader; Grunnlag for budsjettering og oppfølging. <a href=\"losning-regnskap.html\">Les mer om Fenistra Regnskap →</a>"
   },
   {
     keywords: ["sikkerhetsstyring", "bankgaranti", "depositum", "sikkerhet", "fenistra sikkerhetsstyring"],
@@ -232,7 +232,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["regnskap integrasjon", "erp", "tripletex", "xledger", "poweroffice", "visma business nxt", "visma.net", "sap", "24sevenoffice", "unimicro", "microsoft dynamics", "regnskap", "integrasjon", "visma", "business", "microsoft", "dynamics"],
-    answer: "Fenistra har direkte API-integrasjon mot fem regnskapssystemer: Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net, med automatisk dataflyt begge veier. I tillegg har vi integrasjoner mot en rekke andre ERP-systemer som 24SevenOffice, UniMicro, Microsoft Dynamics, Visma Business, Visma Global, SAP, PowerOffice, Unit4 ERP, Infor M3 og flere. Bruker dere noe annet, ta kontakt så ser vi på løsningen. <a href=\"integrasjon-regnskap-erp.html\">Les mer om Regnskap og ERP-integrasjoner →</a>"
+    answer: "Fenistra har direkte API-integrasjon mot fem regnskapssystemer: Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net, med automatisk dataflyt begge veier. I tillegg har vi integrasjoner mot en rekke andre ERP-systemer som 24SevenOffice, UniMicro, Microsoft Dynamics, Visma Business, Visma Global, SAP, PowerOffice, Unit4 ERP, Infor M3 og flere. Bruker dere noe annet, ta kontakt, så ser vi på løsningen. <a href=\"integrasjon-regnskap-erp.html\">Les mer om Regnskap og ERP-integrasjoner →</a>"
   },
   {
     keywords: ["årsoppgjør", "finale"],
@@ -276,7 +276,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["høegh eiendom", "høegh"],
-    answer: "Derfor har Höegh Eiendom brukt Fenistra i over to tiår Maren Elise Dalene Torp, som Senior Controller Eiendomsforvaltning i Høegh Eiendom setter stor pris på tryggheten det gir å jobbe med en partner som har bransjekunnskapen. <a href=\"media-hoegh-eiendom.html\">Les mer om Derfor har Höegh Eiendom brukt Fenistra i over to tiår →</a>"
+    answer: "Derfor har Höegh Eiendom brukt Fenistra i over to tiår Maren Elise Dalene Torp, som Senior Controller Eiendomsforvaltning i Höegh Eiendom, setter stor pris på tryggheten det gir å jobbe med en partner som har bransjekunnskapen. <a href=\"media-hoegh-eiendom.html\">Les mer om Derfor har Höegh Eiendom brukt Fenistra i over to tiår →</a>"
   },
   {
     keywords: ["backer", "rigger", "fremtiden", "velger"],
@@ -284,7 +284,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["mest", "komplette", "løsningen", "eiendomsforvaltning"],
-    answer: "Fenistra: Mest komplette løsningen for eiendomsforvaltning Eiendomsselskaper benytter et økende antall spesialiserte IT-løsninger for å håndtere sine behov. Med kundens tilbakemeldinger i sentrum, har vi derfor tatt grep og fornyet Fenistra. <a href=\"media-mest-komplette-losningen.html\">Les mer om Fenistra: Mest komplette løsningen for eiendomsforvaltning →</a>"
+    answer: "Fenistra: mest komplette løsningen for eiendomsforvaltning Eiendomsselskaper benytter et økende antall spesialiserte IT-løsninger for å håndtere sine behov. Med kundens tilbakemeldinger i sentrum har vi derfor tatt grep og fornyet Fenistra. <a href=\"media-mest-komplette-losningen.html\">Les mer om Fenistra: mest komplette løsningen for eiendomsforvaltning →</a>"
   },
   {
     keywords: ["business", "nxt", "full", "business nxt"],
@@ -292,7 +292,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["budsjett", "faktura", "presis", "transparent", "fordeling", "felleskost budsjett", "felleskost"],
-    answer: "Fra budsjett til faktura – En presis og transparent fordeling Få en slutt på leietakerklager, store likviditetshull og timer med feilsøking i Excel. Fenistra Felleskost budsjett tar seg av en av de vanskeligste delene av eiendomsforvaltningen: Den presise, avtalemessige fordelingen av felleskostnader. <a href=\"media-budsjett-til-faktura.html\">Les mer om Fra budsjett til faktura – En presis og transparent fordeling →</a>"
+    answer: "Fra budsjett til faktura – en presis og transparent fordeling Få en slutt på leietakerklager, store likviditetshull og timer med feilsøking i Excel. Fenistra Felleskost-budsjett tar seg av en av de vanskeligste delene av eiendomsforvaltningen: den presise, avtalemessige fordelingen av felleskostnader. <a href=\"media-budsjett-til-faktura.html\">Les mer om Fra budsjett til faktura – en presis og transparent fordeling →</a>"
   },
   {
     keywords: ["forenkler", "felleskostnadene"],
@@ -300,7 +300,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["rapport", "kjøpesenter", "kjøpesenterrapport"],
-    answer: "Ny rapport i Fenistra kjøpesenter Ny rapport for innsikt og vekst: Månedsoversikt for Fenistra kjøpesenter. <a href=\"media-ny-rapport-kjopesenter.html\">Les mer om Ny rapport i Fenistra kjøpesenter →</a>"
+    answer: "Ny rapport i Fenistra Kjøpesenter Ny rapport for innsikt og vekst: Månedsoversikt for Fenistra Kjøpesenter. <a href=\"media-ny-rapport-kjopesenter.html\">Les mer om Ny rapport i Fenistra Kjøpesenter →</a>"
   },
   {
     keywords: ["oppsummering", "brukerforum", "2024", "innsikt", "brukerforum 2024"],
@@ -312,7 +312,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["effektiv", "innhenting", "mva-erklæringer", "leietakere", "mva-erklæringer innhenting"],
-    answer: "Slik sikrer du effektiv innhenting av MVA-erklæringer fra leietakere Som eier av utleieeiendom eller -lokaler er det viktig å ha full kontroll på Merverdiavgift (MVA). For deg som leier ut til MVA-registrerte virksomheter, er det å samle inn MVA-erklæringer fra leietakerne en viktig del av skattehåndteringen. Denne prosessen er ikke bare avgjørende for å oppfylle dine egne forpliktelser, men den hjelper også leietakerne med å holde seg innenfor lovens krav. Her ser vi på hvorfor dette er viktig, og hvordan du kan gjøre innsamlingen så enkel som mulig. <a href=\"media-mva-erklaringer.html\">Les mer om Slik sikrer du effektiv innhenting av MVA-erklæringer fra leietakere →</a>"
+    answer: "Slik sikrer du effektiv innhenting av MVA-erklæringer fra leietakere Som eier av utleieeiendom eller -lokaler er det viktig å ha full kontroll på merverdiavgift (MVA). For deg som leier ut til MVA-registrerte virksomheter, er det å samle inn MVA-erklæringer fra leietakerne en viktig del av skattehåndteringen. Denne prosessen er ikke bare avgjørende for å oppfylle dine egne forpliktelser, men den hjelper også leietakerne med å holde seg innenfor lovens krav. Her ser vi på hvorfor dette er viktig, og hvordan du kan gjøre innsamlingen så enkel som mulig. <a href=\"media-mva-erklaringer.html\">Les mer om Slik sikrer du effektiv innhenting av MVA-erklæringer fra leietakere →</a>"
   },
   {
     keywords: ["brukeropplevelsen", "neste", "nivå", "ny brukeropplevelse", "nytt grensesnitt", "brukeropplevelse", "nytt", "grensesnitt"],
@@ -332,7 +332,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["høegh eiendom", "20 år som kunde", "maren elise"],
-    answer: "Höegh Eiendom er et familieeid eiendomsselskap som eier, utvikler og forvalter eiendommer i Oslo og østlandsområdet, kunde av Fenistra siden 2004. Etter overgangen til ny Fenistra-plattform har faktureringsprosesser gått ned 50-60 % i tidsbruk. «Det er en trygghet i å møte en samarbeidspartner som forstår vår særbransje,» sier Maren Elise Dalene Torp, Senior Controller Eiendomsforvaltning. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
+    answer: "Höegh Eiendom er et familieeid eiendomsselskap som eier, utvikler og forvalter eiendommer i Oslo og østlandsområdet, kunde av Fenistra siden 2004. Etter overgangen til ny Fenistra-plattform har faktureringsprosesser gått ned 50–60 % i tidsbruk. «Det er en trygghet i å møte en samarbeidspartner som forstår vår særbransje,» sier Maren Elise Dalene Torp, Senior Controller Eiendomsforvaltning. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
   },
   {
     keywords: ["frydenbø eiendom", "bente haugsdal", "markedets mest brukte"],
@@ -356,7 +356,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kundeteamet kontakt", "hvem kan jeg kontakte kunde", "brukerstøtte kontakt person", "head of customer success"],
-    answer: "Kundeteamet ledes av Trygve Vardenær, Head of Customer Success (trygve.vardenar@visma.com). I teamet finner du også kundekontakter som Kristian Lien, Frida Holte, Beate Paulsen og Patrick Eriksen, brukerstøtte ved Henning Aas, og konsulenter som Marius Sømme, Kristin Falch og Rokshar Zendehbizadeh. <a href=\"kundeteam.html\">Les mer om Kundeteamet →</a>"
+    answer: "Kundeteamet ledes av Trygve Vardenær, Head of Customer Success (trygve.vardenar@visma.com). I teamet finner du også kundekontakter som Kristian Lien, Frida Holte, Beate Paulsen og Patrick Eriksen, brukerstøtte ved Henning Aas, og konsulenter som Marius Sømme, Kristin Falch og Rokhsar Zendehbizadeh. <a href=\"kundeteam.html\">Les mer om Kundeteamet →</a>"
   },
   {
     keywords: ["produktteamet kontakt", "hvem lager fenistra", "joakim howlid", "daglig leder fenistra"],
@@ -376,7 +376,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["forvaltningssystem", "hva er fenistra", "hva er dette", "hva gjør fenistra"],
-    answer: "Et forvaltningssystem er et samlet sett med verktøy og arbeidsprosesser som hjelper eiendomsbesittere, gårdeiere og forvaltere med å organisere drift, vedlikehold, økonomi og administrasjon av eiendommer - fra leietakeradministrasjon til regnskap og rapportering, på ett sted. Fenistra er nettopp et slikt system, bygget for næringseiendom. <a href=\"om-oss.html\">Les mer om Om oss →</a>"
+    answer: "Et forvaltningssystem er et samlet sett med verktøy og arbeidsprosesser som hjelper eiendomsbesittere, gårdeiere og forvaltere med å organisere drift, vedlikehold, økonomi og administrasjon av eiendommer – fra leietakeradministrasjon til regnskap og rapportering, på ett sted. Fenistra er nettopp et slikt system, bygget for næringseiendom. <a href=\"om-oss.html\">Les mer om Om oss →</a>"
   },
   {
     keywords: ["fenistra standard", "hva inneholder standard"],
@@ -388,11 +388,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kjøpesenter", "senterdrift", "senterleder"],
-    answer: "Fenistra Kjøpesenter er senterleders viktigste verktøy - dashboard for omsetning og utvikling, automatisk purring på manglende omsetningsrapportering, bransjetilpassede rapporter (inkl. Kvarud Analyse) og besøksregistrering. <a href=\"losning-kjopesenter.html\">Les mer om Fenistra Kjøpesenter →</a>"
+    answer: "Fenistra Kjøpesenter er senterleders viktigste verktøy: dashboard for omsetning og utvikling, automatisk purring på manglende omsetningsrapportering, bransjetilpassede rapporter (inkl. Kvarud Analyse) og besøksregistrering. <a href=\"losning-kjopesenter.html\">Les mer om Fenistra Kjøpesenter →</a>"
   },
   {
     keywords: ["integrer", "integrasjon", "regnskapssystem", "tripletex", "visma", "xledger", "poweroffice", "sap", "erp", "24sevenoffice"],
-    answer: "Sannsynligvis ja! Fenistra er i dag integrert mot rundt 20 ulike regnskapssystemer i produksjon hos kunder - blant annet Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net via direkte API-integrasjon. <a href=\"integrasjon-regnskap-erp.html\">Les mer om Regnskap og ERP-integrasjoner →</a>"
+    answer: "Sannsynligvis ja! Fenistra er i dag integrert mot rundt 20 ulike regnskapssystemer i produksjon hos kunder – blant annet Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net via direkte API-integrasjon. <a href=\"integrasjon-regnskap-erp.html\">Les mer om Regnskap og ERP-integrasjoner →</a>"
   },
   {
     keywords: ["løsning", "løsninger", "hva kan fenistra"],
@@ -400,15 +400,15 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["digital signering", "signering", "signere"],
-    answer: "Fenistra Digital signering lar dere signere kontrakter og dokumenter digitalt, direkte i Fenistra - uten å måtte gå via e-post eller eksterne verktøy. Det er et transaksjonsprodukt inkludert i Fenistra Standard, så dere betaler kun for signeringene dere faktisk bruker. <a href=\"losning-digital-signering.html\">Les mer om Fenistra Digital signering →</a>"
+    answer: "Fenistra Digital signering lar dere signere kontrakter og dokumenter digitalt, direkte i Fenistra – uten å måtte gå via e-post eller eksterne verktøy. Det er et transaksjonsprodukt inkludert i Fenistra Standard, så dere betaler kun for signeringene dere faktisk bruker. <a href=\"losning-digital-signering.html\">Les mer om Fenistra Digital signering →</a>"
   },
   {
     keywords: ["transaksjonsprodukt", "transaksjon"],
-    answer: "MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering er transaksjonsprodukter - de er inkludert i Fenistra Standard, men betales per transaksjon/bruk fremfor en fast pris."
+    answer: "MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering er transaksjonsprodukter – de er inkludert i Fenistra Standard, men betales per transaksjon/bruk fremfor en fast pris."
   },
   {
     keywords: ["pris", "koster", "kostnad", "abonnement"],
-    answer: "Fenistra prises etter porteføljens leieomsetning, ikke antall brukere - alle pakker har ubegrenset antall brukere. Book en demo, så finner vi ut hva som passer for dere."
+    answer: "Fenistra prises etter porteføljens leieomsetning, ikke antall brukere – alle pakker har ubegrenset antall brukere. Book en demo, så finner vi ut hva som passer for dere."
   },
   {
     keywords: ["demo", "book demo", "prøve"],
@@ -416,7 +416,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["hei", "hallo", "yo", "morn"],
-    answer: "Hei! Jeg kan svare på enkle spørsmål om Fenistra - løsninger, integrasjoner og pakker. Hva lurer du på?"
+    answer: "Hei! Jeg kan svare på enkle spørsmål om Fenistra – løsninger, integrasjoner og pakker. Hva lurer du på?"
   },
   {
     keywords: ["fenistradagene", "brukerforum"],
@@ -428,7 +428,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kunder", "referanse", "case", "hvem bruker"],
-    answer: "Fenistra brukes av 170+ eiendomsforvaltere i Norge, blant andre Thon Gruppen, Coop, Aspelin Reitan, Frydenbø Eiendom, Höegh Eiendom, Spabo Eiendom, Selvaag Eiendom, Backer AS, Norgesgruppen, Ragde, Avantor og Møller. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
+    answer: "Fenistra brukes av 170+ eiendomsforvaltere i Norge, blant andre Thon Gruppen, Coop, Aspelin Reitan, Frydenbø Eiendom, Höegh Eiendom, Spabo Eiendom, Selvaag Eiendom, Backer AS, NorgesGruppen, Ragde, Avantor og Møller. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
   },
   {
     keywords: ["blogg", "artikkel", "artikler", "fagstoff"],

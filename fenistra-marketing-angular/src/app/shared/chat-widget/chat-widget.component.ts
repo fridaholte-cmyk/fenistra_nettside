@@ -43,7 +43,7 @@ export class ChatWidgetComponent {
     this.open = true;
     if (!this.greeted) {
       this.addMessage(
-        'Hei! Jeg er Fenistra-assistenten. Spør meg om løsninger, integrasjoner eller pakker - finner jeg ikke svaret, henviser jeg deg videre til support/salg.',
+        'Hei! Jeg er Fenistra-assistenten. Spør meg om løsninger, integrasjoner eller pakker – finner jeg ikke svaret, henviser jeg deg videre til support/salg.',
         'bot',
         DEFAULT_SUGGESTIONS
       );
@@ -76,7 +76,7 @@ export class ChatWidgetComponent {
         this.addMessage(
           'Jeg fant dessverre ikke et godt svar på det her. Ta gjerne kontakt med oss, så hjelper vi deg videre:' +
           '<br><br>Se kontaktinfo til <a href="/kundeteam" data-internal>kundeteamet</a>, eller <a href="/pakke-resultat" data-internal>book en demo</a>.' +
-          '<br><br>Du finner også svar på flere vanlige spørsmål på <a href="/sporsmal" data-internal>spørsmål-siden</a>.',
+          '<br><br>Du finner også svar på flere vanlige spørsmål på <a href="/sporsmal" data-internal>Spørsmål og svar-siden</a>.',
           'bot'
         );
       }
