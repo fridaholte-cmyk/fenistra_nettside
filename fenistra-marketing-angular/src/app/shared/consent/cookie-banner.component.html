@@ -37,7 +37,9 @@
 } @else if (consent.needsChoice()) {
   <section class="cc-panel cc-banner" role="region" aria-labelledby="cc-title">
     <h2 id="cc-title">Vi bruker cookies</h2>
-    <p>Vi bruker nødvendige cookies for at nettsiden skal fungere. Med ditt samtykke bruker vi også cookies og lignende teknologi til statistikk, blant annet for å lagre spørsmål stilt i chatten, og til markedsføring. Du velger selv, og kan endre valget når som helst. Les mer i vår <a routerLink="/cookies">cookie policy</a> og <a routerLink="/personvern">personvernerklæring</a>.</p>
+    <p class="cc-long">Vi bruker nødvendige cookies for at nettsiden skal fungere. Med ditt samtykke bruker vi også cookies og lignende teknologi til statistikk, blant annet for å lagre spørsmål stilt i chatten, og til markedsføring. Du velger selv, og kan endre valget når som helst. Les mer i vår <a routerLink="/cookies">cookie policy</a> og <a routerLink="/personvern">personvernerklæring</a>.</p>
+    <!-- shorter text on phones; same information, details behind the links and «Tilpass» -->
+    <p class="cc-short">Nødvendige cookies er alltid på. Med ditt samtykke bruker vi også cookies til statistikk (inkl. lagring av chat-spørsmål) og markedsføring. Les mer i <a routerLink="/cookies">cookie policy</a> og <a routerLink="/personvern">personvern</a>.</p>
     <div class="cc-actions">
       <button type="button" class="cc-btn cc-btn-link" (click)="consent.openSettings()">Tilpass</button>
       <button type="button" class="cc-btn cc-btn-primary" (click)="consent.rejectAll()">Avvis alle</button>

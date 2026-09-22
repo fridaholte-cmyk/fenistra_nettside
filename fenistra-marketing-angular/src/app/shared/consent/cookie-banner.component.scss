@@ -105,9 +105,18 @@ a { color: var(--berry-deep, #7B173E); font-weight: 600; text-decoration: underl
 }
 .cc-btn-link { border-color: transparent; margin-right: auto; padding-left: 4px; text-decoration: underline; }
 
+.cc-short { display: none; }
+
 @media (max-width: 560px) {
-  .cc-banner { left: 12px; right: 12px; bottom: 12px; width: auto; padding: 20px; }
-  .cc-actions { justify-content: stretch; }
-  .cc-actions .cc-btn { flex: 1 1 auto; }
-  .cc-btn-link { flex-basis: 100% !important; order: 3; margin-right: 0; }
+  // compact: roughly a quarter of the screen instead of half
+  .cc-banner { left: 8px; right: 8px; bottom: calc(8px + env(safe-area-inset-bottom)); width: auto; padding: 14px 16px; border-radius: 14px; }
+  .cc-banner h2 { font-size: 15px; margin-bottom: 4px; }
+  .cc-long { display: none; }
+  .cc-short { display: block; font-size: 12.5px; line-height: 1.45; }
+  .cc-banner .cc-actions { flex-wrap: nowrap; gap: 6px; margin-top: 10px; }
+  .cc-banner .cc-btn { flex: 1 1 0; min-height: 40px; padding: 8px 6px; font-size: 13px; }
+  .cc-banner .cc-btn-link { flex: 0 0 auto; margin-right: 0; padding: 8px 4px; }
+  .cc-settings { padding: 18px; }
+  .cc-settings .cc-actions { flex-wrap: wrap; }
+  .cc-settings .cc-btn { flex: 1 1 auto; }
 }

@@ -779,3 +779,47 @@
   .quiz-nav{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-top:1px solid var(--line);flex-shrink:0;}
   .quiz-nav .spacer{flex:1;}
   .quiz-nav button:disabled{opacity:.4;cursor:default;}
+
+  /* ================= MOBILE MENU =================
+     Scoped to app-header so it wins over the copies of the old drawer CSS in the page components.
+     Only visible below 1080px (the hamburger is hidden on desktop). */
+  body.drawer-open{overflow:hidden;}
+  app-header .mobile-drawer{
+    inset:0; bottom:0; height:100vh; height:100dvh; max-height:none;
+    padding:0 20px calc(24px + env(safe-area-inset-bottom));
+    overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch;
+    z-index:450; /* above the cookie banner (400), which is back once the menu closes */
+    box-shadow:none; border-bottom:none;
+    visibility:hidden; transition:transform .3s cubic-bezier(.2,.8,.2,1), visibility 0s linear .3s;
+  }
+  app-header .mobile-drawer.open{visibility:visible; transition:transform .3s cubic-bezier(.2,.8,.2,1), visibility 0s;}
+  app-header .mobile-drawer-backdrop{z-index:449;}
+  app-header .mobile-drawer .top{
+    position:sticky; top:0; z-index:1; background:var(--paper);
+    margin:0 -20px 8px; padding:16px 20px; border-bottom:1px solid var(--line);
+  }
+  app-header .mobile-drawer .close{width:44px; height:44px; background:#fff; color:var(--ink); cursor:pointer;}
+  app-header .mobile-drawer > a,
+  app-header .m-acc-trigger{
+    display:flex; align-items:center; justify-content:space-between; width:100%; min-height:56px;
+    padding:0; font-family:var(--font-display); font-size:20px; font-weight:500; color:var(--ink);
+    background:none; border:none; border-bottom:1px solid var(--line); text-align:left; cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+  }
+  app-header .m-acc-trigger svg{width:16px; height:16px; color:var(--ink-soft); transition:transform .25s ease; flex-shrink:0;}
+  app-header .m-acc-trigger.open{color:var(--berry-deep); border-bottom-color:transparent;}
+  app-header .m-acc-trigger.open svg{transform:rotate(180deg); color:var(--berry-deep);}
+  /* grid-rows trick: animates to the real content height, so every item is always visible */
+  app-header .m-acc-panel{display:grid; grid-template-rows:0fr; transition:grid-template-rows .25s ease;}
+  app-header .m-acc-panel.open{grid-template-rows:1fr; border-bottom:1px solid var(--line);}
+  app-header .m-acc-inner{overflow:hidden; display:flex; flex-direction:column;}
+  app-header .m-acc-panel.open .m-acc-inner{padding-bottom:8px;}
+  app-header .m-acc-inner a{
+    display:flex; align-items:center; min-height:48px; padding:0 0 0 16px; margin:0;
+    font-family:var(--font-body); font-size:17px; font-weight:400; color:var(--ink-soft);
+    border:none; border-left:2px solid var(--line);
+  }
+  app-header .m-acc-inner a:active{color:var(--berry-deep); border-left-color:var(--berry);}
+  app-header .mobile-drawer > a.m-login{font-family:var(--font-body); font-size:16px; color:var(--ink-soft); border-bottom:none; min-height:52px;}
+  app-header .mobile-drawer > a.m-cta{justify-content:center; margin-top:12px; min-height:52px; font-family:var(--font-body); font-size:16px; font-weight:600; color:#fff; background:var(--berry); border-bottom:none; border-radius:9px;}
+  @media (prefers-reduced-motion: reduce){ app-header .m-acc-panel{transition:none;} }

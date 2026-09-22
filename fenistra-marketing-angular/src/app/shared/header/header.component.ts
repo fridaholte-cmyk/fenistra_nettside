@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 
 import { FENISTRA_SEARCH_INDEX, SearchEntry } from '../data/search-index';
@@ -12,19 +13,31 @@ import { FENISTRA_SEARCH_INDEX, SearchEntry } from '../data/search-index';
 export class HeaderComponent {
   scrolled = false;
   mobileDrawerOpen = false;
+  /** which mobile-menu section is expanded (only one at a time) */
+  openSection: string | null = null;
   searchOpen = false;
   searchQuery = '';
   searchResults: SearchEntry[] = [];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, @Inject(DOCUMENT) private doc: Document) {}
 
   @HostListener('window:scroll')
   onScroll() {
     this.scrolled = (window.scrollY || document.documentElement.scrollTop) > 8;
   }
 
-  openMobileDrawer() { this.mobileDrawerOpen = true; }
-  closeMobileDrawer() { this.mobileDrawerOpen = false; }
+  openMobileDrawer() {
+    this.mobileDrawerOpen = true;
+    this.doc.body.classList.add('drawer-open'); // stop the page behind from scrolling
+  }
+  closeMobileDrawer() {
+    this.mobileDrawerOpen = false;
+    this.openSection = null;
+    this.doc.body.classList.remove('drawer-open');
+  }
+  toggleSection(section: string) {
+    this.openSection = this.openSection === section ? null : section;
+  }
 
   openSearch() {
     this.searchOpen = true;
@@ -64,7 +77,7 @@ export class HeaderComponent {
 
   @HostListener('document:keydown.escape')
   onEscape() {
-    this.mobileDrawerOpen = false;
+    this.closeMobileDrawer();
     this.searchOpen = false;
   }
 
