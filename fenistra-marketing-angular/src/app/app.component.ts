@@ -79,8 +79,18 @@ export class AppComponent {
           setTimeout(() => document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth' }), 0);
         } else {
           window.scrollTo(0, 0);
+          // let screen readers know the page changed: focus the new page content (not on the first load)
+          if (e.id > 1) setTimeout(() => document.getElementById('hovedinnhold')?.focus({ preventScroll: true }), 0);
         }
       });
+  }
+
+  /** Skip link: move focus to the main content (a plain #hash link would go through the router). */
+  skipToMain(event: Event) {
+    event.preventDefault();
+    const main = document.getElementById('hovedinnhold');
+    main?.focus();
+    main?.scrollIntoView();
   }
 
   submitPassword() {

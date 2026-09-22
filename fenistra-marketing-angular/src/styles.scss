@@ -828,3 +828,41 @@
   .form-loading{display:flex;justify-content:center;align-items:center;max-width:480px;min-height:240px;}
   .form-failed{max-width:480px;font-size:15px;color:var(--ink-soft);background:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:18px 20px;}
   .form-failed a{color:var(--berry-deep);font-weight:600;}
+
+/* ================= UNIVERSELL UTFORMING (WCAG 2.1 AA) =================
+   Global fixes that must win over the per-page <style> blocks, hence `body` in the selectors. */
+
+/* Skip link: first thing a keyboard user reaches, visible only when focused */
+.skip-link{position:absolute;left:16px;top:-60px;z-index:1000;background:var(--ink);color:#fff;padding:12px 18px;border-radius:9px;font-weight:600;font-size:14.5px;text-decoration:none;transition:top .15s ease;}
+.skip-link:focus{top:12px;outline:2px solid var(--berry);outline-offset:2px;}
+/* main gets programmatic focus (skip link, route changes); no outline box around the whole page */
+main:focus{outline:none;}
+
+/* Closed panels are only faded out, so their links and fields could still be reached with Tab.
+   visibility:hidden takes them out of the tab order and away from screen readers (after the fade). */
+body .chat-panel:not(.open),
+body .search-panel:not(.open),
+body .quiz-modal:not(.open){visibility:hidden;transition:opacity .22s ease, transform .22s ease, visibility 0s linear .22s;}
+body .chat-panel.open,
+body .search-panel.open,
+body .quiz-modal.open{visibility:visible;}
+
+/* Contrast (1.4.3): small pink labels on dark backgrounds were 3.2:1, now 5.3:1 */
+body .eyebrow-on-dark{color:#D98AAC;}
+
+/* Reflow (1.4.10): nothing may need horizontal scrolling at 320 px */
+body .module-main, body .module-grid-layout > *, body .timeline-main{min-width:0;}
+@media (max-width:480px){
+  body .cta-band .actions, body .actions{flex-wrap:wrap;justify-content:center;}
+  body .cta-band .actions .btn{flex:1 1 auto;}
+}
+
+/* Mega menu dismissed with Esc or a second click: hide it even while hovered/focused (WCAG 1.4.13) */
+body .nav-item-dropdown.dismissed .nav-panel{opacity:0;pointer-events:none;visibility:hidden;}
+body .nav-item-dropdown.dismissed .nav-trigger svg{transform:none;}
+
+/* Reflow (1.4.10): long Norwegian compound words and e-mail addresses must wrap instead of widening the page */
+body h1, body h2, body h3{overflow-wrap:break-word;}
+@media (max-width:480px){ body h1, body h2, body h3{hyphens:auto;} }
+body .team-grid > *{min-width:0;}
+body .team-grid a[href^="mailto:"], body .team-card{overflow-wrap:anywhere;}

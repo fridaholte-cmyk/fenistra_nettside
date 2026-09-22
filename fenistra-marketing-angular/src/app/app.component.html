@@ -1,6 +1,9 @@
 @if (unlocked) {
+  <a class="skip-link" href="#hovedinnhold" (click)="skipToMain($event)">Hopp til hovedinnhold</a>
   <app-header></app-header>
-  <router-outlet></router-outlet>
+  <main id="hovedinnhold" tabindex="-1">
+    <router-outlet></router-outlet>
+  </main>
   @if (pageLoading) {
     <div class="page-loader"><app-loader></app-loader></div>
   }

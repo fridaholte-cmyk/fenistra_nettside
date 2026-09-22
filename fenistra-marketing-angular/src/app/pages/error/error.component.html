@@ -132,7 +132,7 @@
 
 <section class="error-hero" [attr.data-error-code]="code">
   <div class="wrap">
-    <div class="error-glyph">{{ code }}</div>
+    <div class="error-glyph" aria-hidden="true">{{ code }}</div>
     <div class="error-code">Feil {{ code }}</div>
     <h1>{{ info.title }}</h1>
     <p>{{ info.message }}</p>

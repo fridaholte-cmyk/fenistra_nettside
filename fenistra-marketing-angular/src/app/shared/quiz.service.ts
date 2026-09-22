@@ -1,3 +1,4 @@
+import { rememberFocus } from './focus-return';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
@@ -93,12 +94,20 @@ export class QuizService {
   isOpen = false;
   resultChanged$ = new Subject<QuizResult | null>();
 
+  private restoreFocus: () => void = () => {};
+
   open() {
+    if (this.isOpen) return;
+    this.restoreFocus = rememberFocus();
     this.isOpen = true;
+    // move focus into the dialog so keyboard and screen reader users land in it
+    setTimeout(() => document.querySelector<HTMLElement>('.quiz-modal .quiz-close')?.focus(), 50);
   }
 
   close() {
+    if (!this.isOpen) return;
     this.isOpen = false;
+    this.restoreFocus();
   }
 
   getResult(): QuizResult | null {

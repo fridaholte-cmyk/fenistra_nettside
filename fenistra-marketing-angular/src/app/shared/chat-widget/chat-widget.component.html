@@ -10,7 +10,7 @@
     </div>
     <button class="chat-close" id="chatClose" aria-label="Lukk chat" (click)="closeChat()">✕</button>
   </div>
-  <div class="chat-messages" id="chatMessages" #messagesEl (click)="onMessagesClick($event)">
+  <div class="chat-messages" id="chatMessages" #messagesEl role="log" aria-live="polite" aria-label="Samtale" (click)="onMessagesClick($event)">
     @for (msg of messages; track $index) {
       <div class="chat-msg chat-msg-{{ msg.who }}" [innerHTML]="msg.html"></div>
       @if (msg.suggestions) {

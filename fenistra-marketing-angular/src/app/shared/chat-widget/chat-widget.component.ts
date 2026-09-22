@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { rememberFocus } from '../focus-return';
 import { Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
@@ -35,7 +36,10 @@ export class ChatWidgetComponent {
 
   constructor(private router: Router, readonly logger: ChatLoggerService) {}
 
+  private restoreFocus: () => void = () => {};
+
   openChat() {
+    this.restoreFocus = rememberFocus();
     this.open = true;
     if (!this.greeted) {
       this.addMessage(
@@ -49,7 +53,9 @@ export class ChatWidgetComponent {
   }
 
   closeChat() {
+    if (!this.open) return;
     this.open = false;
+    this.restoreFocus();
   }
 
   submitForm() {
@@ -128,6 +134,6 @@ export class ChatWidgetComponent {
 
   @HostListener('document:keydown.escape')
   onEscape() {
-    this.open = false;
+    this.closeChat();
   }
 }
