@@ -5,7 +5,7 @@ import { ActivatedRouteSnapshot, Router } from '@angular/router';
 
 const SITE_ORIGIN = 'https://www.fenistra.no';
 const DEFAULT_DESCRIPTION =
-  'Fenistra samler kontrakter, arealer, felleskostnader og fakturering i én plattform for effektiv eiendomsforvaltning.';
+  'Markedsledende forvaltningssystem for næringseiendom. Full kontroll på kontrakter, arealer, fakturering, avregning og regulering i én helhetlig løsning.';
 
 interface ArticleData {
   published: string;

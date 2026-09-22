@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable({ providedIn: 'root' })
 export class PageEffectsService {
   private observer?: IntersectionObserver;
+  private domWatcher?: MutationObserver;
+  private faqWired = false;
   private resizeHandler?: () => void;
 
   run() {
@@ -26,13 +28,27 @@ export class PageEffectsService {
     }, { threshold: 0, rootMargin: '0px 0px -10% 0px' }); // threshold 0 so elements taller than the viewport still reveal
     revealEls.forEach((el) => this.observer!.observe(el));
 
-    // faq accordion
-    document.querySelectorAll('.faq-item').forEach((item) => {
-      if ((item as HTMLElement).dataset['wired']) return;
-      (item as HTMLElement).dataset['wired'] = '1';
-      const q = item.querySelector('.faq-q');
-      const a = item.querySelector<HTMLElement>('.faq-a');
-      q?.addEventListener('click', () => {
+    // .reveal elements rendered later (e.g. an @if that turns true, or a template swapped by the
+    // dev server's hot reload) would otherwise stay invisible, so observe those too
+    this.domWatcher ??= new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        m.addedNodes.forEach((n) => {
+          if (!(n instanceof Element)) return;
+          if (n.matches('.reveal:not(.in)')) this.observer?.observe(n);
+          n.querySelectorAll('.reveal:not(.in)').forEach((el) => this.observer?.observe(el));
+        });
+      }
+    });
+    this.domWatcher.observe(document.body, { childList: true, subtree: true });
+
+    // faq accordion: one delegated listener, so items that are re-rendered or added later also work
+    if (!this.faqWired) {
+      this.faqWired = true;
+      document.addEventListener('click', (e) => {
+        const q = (e.target as Element | null)?.closest?.('.faq-q');
+        const item = q?.closest('.faq-item');
+        if (!item) return;
+        const a = item.querySelector<HTMLElement>('.faq-a');
         const isOpen = item.classList.contains('open');
         document.querySelectorAll('.faq-item.open').forEach((other) => {
           other.classList.remove('open');
@@ -44,7 +60,7 @@ export class PageEffectsService {
           a.style.maxHeight = a.scrollHeight + 'px';
         }
       });
-    });
+    }
 
     // marquee duplicate (guard against double-run)
     document.querySelectorAll<HTMLElement>('[id="marqueeTrack"], .marquee-track').forEach((track) => {

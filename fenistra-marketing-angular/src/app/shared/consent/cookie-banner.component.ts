@@ -11,22 +11,19 @@ import { ConsentService } from './consent.service';
 })
 export class CookieBannerComponent {
   readonly consent = inject(ConsentService);
-  statistikk = false;
-  markedsforing = false;
+  optional = false;
 
   constructor() {
-    // prefill the toggles with the stored choice whenever the settings open
+    // prefill the toggle with the stored choice whenever the settings open
     effect(() => {
       if (this.consent.settingsOpen()) {
-        const s = this.consent.state();
-        this.statistikk = s?.statistikk ?? false;
-        this.markedsforing = s?.markedsforing ?? false;
+        this.optional = this.consent.state()?.granted ?? false;
       }
     });
   }
 
   saveChoice(): void {
-    this.consent.save({ statistikk: this.statistikk, markedsforing: this.markedsforing });
+    this.consent.save(this.optional);
   }
 
   close(): void {

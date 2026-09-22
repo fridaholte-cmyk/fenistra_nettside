@@ -3,38 +3,37 @@ import { Injectable, computed, signal } from '@angular/core';
 /**
  * Cookie consent.
  *
- * "Nødvendige" is always on and is not a category here. Every script that sets
- * non-essential cookies (analytics, marketing pixels, HubSpot tracking code etc.)
- * MUST be loaded through `whenGranted()`, never directly in index.html:
+ * One single choice: the visitor either accepts or rejects all optional cookies
+ * (statistics and marketing together). "Nødvendige" is always on and is not part of
+ * the choice. Every script that sets non-essential cookies (analytics, marketing pixels,
+ * HubSpot tracking code etc.) MUST be loaded through `whenGranted()`, never directly in
+ * index.html:
  *
- *   consent.whenGranted('statistikk', () => loadScript('https://…'));
+ *   consent.whenGranted(() => loadScript('https://…'));
  *
- * Withdrawing consent deletes the category's known cookies and reloads the page,
+ * Withdrawing consent deletes the known optional cookies and reloads the page,
  * which is the only reliable way to stop third-party scripts that are already running.
  */
-export type ConsentCategory = 'statistikk' | 'markedsforing';
-
 export interface ConsentState {
-  statistikk: boolean;
-  markedsforing: boolean;
+  /** consent to all optional cookies (statistics + marketing) */
+  granted: boolean;
   version: number;
   updatedAt: string;
 }
 
 const STORAGE_KEY = 'fenistra_cookie_consent';
-// Bump when categories or vendors change materially, so everyone is asked again.
-const CONSENT_VERSION = 1;
+// Bump when purposes or vendors change materially, so everyone is asked again.
+// v2: the two categories (statistikk/markedsforing) were merged into one choice.
+const CONSENT_VERSION = 2;
 const MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000;
 
-// Cookie name prefixes set by the vendors we may use, per category.
-const COOKIE_PREFIXES: Record<ConsentCategory, string[]> = {
-  statistikk: ['_ga', '_gid', '_gat', '_hj', '_clck', '_clsk', 'CLID', 'MUID'],
-  markedsforing: [
-    '__hstc', '__hssc', '__hssrc', 'hubspotutk', 'messagesUtk', '__hs',
-    '_fbp', '_fbc', '_gcl', 'li_', 'lidc', 'bcookie', 'AnalyticsSyncHistory', 'UserMatchHistory',
-    'ELOQUA', 'ELQSTATUS',
-  ],
-};
+// Cookie name prefixes set by the vendors we may use for optional purposes.
+const OPTIONAL_COOKIE_PREFIXES = [
+  '_ga', '_gid', '_gat', '_hj', '_clck', '_clsk', 'CLID', 'MUID',
+  '__hstc', '__hssc', '__hssrc', 'hubspotutk', 'messagesUtk', '__hs',
+  '_fbp', '_fbc', '_gcl', 'li_', 'lidc', 'bcookie', 'AnalyticsSyncHistory', 'UserMatchHistory',
+  'ELOQUA', 'ELQSTATUS',
+];
 
 @Injectable({ providedIn: 'root' })
 export class ConsentService {
@@ -44,7 +43,7 @@ export class ConsentService {
   readonly settingsOpen = signal(false);
   readonly needsChoice = computed(() => this.ready() && this.state() === null);
 
-  private pending: { category: ConsentCategory; run: () => void }[] = [];
+  private pending: (() => void)[] = [];
 
   /** Called once in the browser after the first render. */
   init(): void {
@@ -55,27 +54,27 @@ export class ConsentService {
     if (stored) this.flushPending(stored);
   }
 
-  has(category: ConsentCategory): boolean {
-    return this.state()?.[category] === true;
+  granted(): boolean {
+    return this.state()?.granted === true;
   }
 
   /** Runs `run` now if consent is given, otherwise as soon as it is given (never if it isn't). */
-  whenGranted(category: ConsentCategory, run: () => void): void {
-    if (this.has(category)) run();
-    else this.pending.push({ category, run });
+  whenGranted(run: () => void): void {
+    if (this.granted()) run();
+    else this.pending.push(run);
   }
 
   acceptAll(): void {
-    this.save({ statistikk: true, markedsforing: true });
+    this.save(true);
   }
 
   rejectAll(): void {
-    this.save({ statistikk: false, markedsforing: false });
+    this.save(false);
   }
 
-  save(choice: Pick<ConsentState, ConsentCategory>): void {
+  save(granted: boolean): void {
     const prev = this.state();
-    const next: ConsentState = { ...choice, version: CONSENT_VERSION, updatedAt: new Date().toISOString() };
+    const next: ConsentState = { granted, version: CONSENT_VERSION, updatedAt: new Date().toISOString() };
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
     } catch {
@@ -84,9 +83,8 @@ export class ConsentService {
     this.state.set(next);
     this.settingsOpen.set(false);
 
-    const revoked = (Object.keys(COOKIE_PREFIXES) as ConsentCategory[]).filter((c) => prev?.[c] && !next[c]);
-    if (revoked.length) {
-      revoked.forEach((c) => deleteCookies(COOKIE_PREFIXES[c]));
+    if (prev?.granted && !granted) {
+      deleteCookies(OPTIONAL_COOKIE_PREFIXES);
       location.reload();
       return;
     }
@@ -95,9 +93,10 @@ export class ConsentService {
   }
 
   private flushPending(s: ConsentState): void {
-    const ready = this.pending.filter((p) => s[p.category]);
-    this.pending = this.pending.filter((p) => !s[p.category]);
-    ready.forEach((p) => p.run());
+    if (!s.granted) return;
+    const ready = this.pending;
+    this.pending = [];
+    ready.forEach((run) => run());
   }
 
   openSettings(): void {
@@ -110,7 +109,7 @@ export class ConsentService {
       if (!raw) return null;
       const s = JSON.parse(raw) as ConsentState;
       const expired = Date.now() - new Date(s.updatedAt).getTime() > MAX_AGE_MS;
-      if (s.version !== CONSENT_VERSION || expired || typeof s.statistikk !== 'boolean' || typeof s.markedsforing !== 'boolean') {
+      if (s.version !== CONSENT_VERSION || expired || typeof s.granted !== 'boolean') {
         return null;
       }
       return s;

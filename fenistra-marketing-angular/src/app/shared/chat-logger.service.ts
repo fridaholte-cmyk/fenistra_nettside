@@ -10,7 +10,7 @@ const MAX_QUESTION_LENGTH = 1000;
 
 /**
  * Logs what visitors ask the chat, so we can see which questions lack an answer.
- * Only runs with consent for "statistikk". No HubSpot cookie (hutk) or IP address is sent.
+ * Only runs with consent to optional cookies. No HubSpot cookie (hutk) or IP address is sent.
  */
 @Injectable({ providedIn: 'root' })
 export class ChatLoggerService {
@@ -18,7 +18,7 @@ export class ChatLoggerService {
   private readonly tags = inject(GoogleTagsService);
 
   get active(): boolean {
-    return this.consent.has('statistikk');
+    return this.consent.granted();
   }
 
   log(question: string, answered: boolean): void {

@@ -103,6 +103,38 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
     answer: "Fenistradagene er vårt årlige arrangement for Fenistra-kunder, med faglig påfyll, nettverksbygging og sosialt samvær. Arrangementet het tidligere Fenistra Brukerforum, og har gått av stabelen i over 25 år. Se mer om Fenistradagene. <a href=\"fenistradagene.html\">Les mer om Fenistradagene →</a>"
   },
   {
+    keywords: ["markedsledende", "kompromiss", "hvorfor fenistra", "hvorfor velge", "konkurrent", "sammenlign", "forskjell på fenistra og", "fordelene med fenistra", "bedre enn", "alternativ til"],
+    answer: "Fenistra er markedsledende av en grunn: hos oss får du alt, uten kompromiss. Du får full kontroll på all økonomisk forvaltning, med alt som er viktig for daglig leder, økonomisjef, regnskapsfører og forvalter, i én helhetlig løsning. Har dere spesielle kontrakter eller behov, finner vi en løsning i Fenistra. Et system som tilpasser seg dere, ikke omvendt. I tillegg: moderne grensesnitt, rask oppstart uten skjulte kostnader og en sterk integrasjonsmotor mot regnskapet. <a href=\"sporsmal.html\">Les mer i Spørsmål og svar →</a>"
+  },
+  {
+    keywords: ["hva får vi", "hva får man", "helhetlig", "alt i ett", "bredde", "hva inneholder fenistra"],
+    answer: "Hos oss får du alt, i én helhetlig løsning: kontrakter og arealer, fakturering, avregning og regulering, felleskostnader, omsetning og kjøpesenter, innhenting av MVA-erklæringer og revisorbekreftet omsetning, digital signering, inn- og utflyttingsprotokoller og rapporter med full oversikt over porteføljen. <a href=\"losninger.html\">Se alle løsninger →</a>"
+  },
+  {
+    keywords: ["spesielle kontrakter", "spesielle behov", "spesiell", "særskilt", "skreddersy", "tilpasse seg", "kompleks", "uvanlig", "våre behov"],
+    answer: "Fenistra gir et hav av muligheter. Har dere spesielle kontrakter eller spesielle behov, finner vi en løsning i Fenistra. De største aktørene i bransjen får dekket behovene sine hos oss. Fenistra tilpasser seg dere, ikke omvendt. <a href=\"kontakt-oss.html\">Snakk med oss om deres behov →</a>"
+  },
+  {
+    keywords: ["avregningsbrev", "reguleringsbrev", "regulering", "avregning", "avstemme", "avstemming"],
+    answer: "Fakturering skjer fra Fenistra, med full kontroll og avstemming mot regnskapet. Avregningen skjer på deres premisser, og avregningsbrevet følger med faktureringen til leietaker. Reguleringen kan tilpasses etter deres behov, og leietaker får reguleringsbrev. <a href=\"losning-fakturering.html\">Se Fakturering →</a>"
+  },
+  {
+    keywords: ["konsulenttimer", "skjulte kostnader", "skjult", "oppstart", "oppstartskostnad", "implementering", "komme raskt i gang", "hvor lang tid tar"],
+    answer: "Det er enkelt og raskt å komme i gang med Fenistra, uten betalte konsulenttimer og uten skjulte kostnader. Med AI-opplasting drar du kontraktene rett inn, og AI fyller ut feltene for deg. <a href=\"sporsmal.html\">Les mer i Spørsmål og svar →</a>"
+  },
+  {
+    keywords: ["integrasjonsmotor", "fenistra hub", "dobbeltregistrering", " api", "leieregulering"],
+    answer: "Integrasjonsmotoren (Hub) i Fenistra er et bindeledd mot regnskapssystemene dere bruker, som Tripletex, PowerOffice GO, Xledger og Visma.net, via API. Det eliminerer dobbeltregistrering, og leiereguleringer og fakturagrunnlag flyter automatisk over til regnskapet. <a href=\"integrasjoner.html\">Se alle integrasjoner →</a>"
+  },
+  {
+    keywords: ["skalerbar", "fleksibel", "vokser", "tilleggsfunksjonalitet", "tilleggsprodukt"],
+    answer: "Fenistra er fleksibelt og skalerbart. Velg pakken som passer i dag, Standard eller Premium, og legg til tilleggsfunksjonalitet etter hvert som porteføljen vokser. Alle pakker har ubegrenset antall brukere. <a href=\"priser.html\">Se pakkene →</a>"
+  },
+  {
+    keywords: ["ki-assistent", "ai-assistent", "ai-chat", "ki-chat", "ai-opplasting", "last opp kontrakt", "laste opp kontrakter", "ai i fenistra", "ki i fenistra"],
+    answer: "Fenistra har innebygd AI. KI-assistenten følger deg overalt i systemet: still spørsmål om kontrakter, leietakere eller hele porteføljen, be om innsikt og analyse, eller spør hvordan du gjør noe. Med AI-opplasting drar du kontrakten rett inn i Fenistra, AI fyller ut feltene, og du kontrollerer før kontrakten er klar for fakturering og forvaltning. <a href=\"ki.html#ki-i-fenistra\">Les mer om AI i Fenistra →</a>"
+  },
+  {
     keywords: ["intelligens", "kunstig", "jobber"],
     answer: "Ja. Fenistra og Visma Property Solutions jobber aktivt med AI i eiendomsforvaltningen, blant annet gjennom innovasjonsprosjektet Felix, et AI-native verktøy for kontraktsforvaltning som gir varsler, anbefalinger og svar basert på opplastede kontrakter. Les mer om AI hos Fenistra. <a href=\"ki.html\">Les mer om AI hos Fenistra →</a>"
   },

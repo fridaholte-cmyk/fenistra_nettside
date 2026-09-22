@@ -15,7 +15,7 @@ const GTM_ID = '';
 
 /**
  * Google Consent Mode v2, "basic" mode: GTM is not loaded at all until the visitor has
- * accepted "statistikk" or "markedsforing", so nothing is sent to Google without consent.
+ * accepted optional cookies, so nothing is sent to Google without consent.
  *
  * Events for GTM triggers (pushed to dataLayer, harmless while GTM is not loaded):
  *   virtual_page_view  { page_path, page_title }   on every route change (SPA)
@@ -50,7 +50,7 @@ export class GoogleTagsService {
       const s = this.consent.state();
       if (!s) return;
       window.gtag!('consent', 'update', toGoogleConsent(s));
-      if (s.statistikk || s.markedsforing) this.loadGtm();
+      if (s.granted) this.loadGtm();
     });
   }
 
@@ -73,9 +73,9 @@ export class GoogleTagsService {
 function toGoogleConsent(s: ConsentState): Record<string, 'granted' | 'denied'> {
   const g = (on: boolean) => (on ? 'granted' : 'denied');
   return {
-    analytics_storage: g(s.statistikk),
-    ad_storage: g(s.markedsforing),
-    ad_user_data: g(s.markedsforing),
-    ad_personalization: g(s.markedsforing),
+    analytics_storage: g(s.granted),
+    ad_storage: g(s.granted),
+    ad_user_data: g(s.granted),
+    ad_personalization: g(s.granted),
   };
 }

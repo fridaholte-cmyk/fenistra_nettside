@@ -215,6 +215,7 @@
   .index-card p{font-size:14px;color:var(--ink-soft);line-height:1.5;flex-grow:1;}
   .index-card .go{font-family:var(--font-mono);font-size:12px;color:var(--plum);margin-top:2px;}
   .index-card:hover .go{color:var(--berry-deep);}
+  .index-grid-4{grid-template-columns:repeat(4,1fr);}
   .index-hero{padding:50px 0 20px;}
   .index-hero .eyebrow{margin-bottom:16px;}
   .index-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(32px,4vw,48px);letter-spacing:-0.02em;margin-bottom:16px;max-width:700px;}
@@ -431,18 +432,30 @@
       <h2>Inkludert i både Standard og Premium</h2>
       <p>Disse løsningene er inkludert i begge pakker, men belastes med basis i antall transaksjoner hver måned.</p>
     </div>
-    <div class="mini-grid">
-      <a routerLink="/losning-mva-erklaring" class="mini-card">
+    <div class="index-grid index-grid-4">
+      <a routerLink="/losning-mva-erklaring" class="index-card">
+        <div class="module-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><rect x="5" y="4" width="14" height="17" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M9 8h.01M9 12h.01M15 8h.01M15 12h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9 16.5l1.8 1.8L15.5 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>MVA-erklæring</h3>
+        <p>Automatisert innhenting fra MVA-registrerte leietakere.</p>
+        <span class="go">Se løsningen →</span>
       </a>
-      <a routerLink="/losning-rbo" class="mini-card">
+      <a routerLink="/losning-rbo" class="index-card">
+        <div class="module-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 18 9.5 12 13.5 15 20 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7h5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Revisorbekreftet omsetning</h3>
+        <p>Leietakernes reviderte omsetningstall, samlet og administrert.</p>
+        <span class="go">Se løsningen →</span>
       </a>
-      <a routerLink="/losning-protokoller" class="mini-card">
+      <a routerLink="/losning-protokoller" class="index-card">
+        <div class="module-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M9 4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1.5H9V4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.7 13.3l1.8 1.8 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Protokoller</h3>
+        <p>Overtakelse og tilbakelevering av lokaler, dokumentert.</p>
+        <span class="go">Se løsningen →</span>
       </a>
-      <a routerLink="/losning-digital-signering" class="mini-card">
+      <a routerLink="/losning-digital-signering" class="index-card">
+        <div class="module-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 20c3-.3 5-.6 8-3.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.5 15.5 17 7a2 2 0 0 1 2.8 2.8L11.3 18.3l-4 1 1-4Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Digital signering</h3>
+        <p>Signer kontrakter og dokumenter digitalt, direkte i Fenistra.</p>
+        <span class="go">Se løsningen →</span>
       </a>
     </div>
   </div>
@@ -455,15 +468,24 @@
       <h2>Selvstendige, eller kombinert med Standard</h2>
       <p>Følgende løsninger kan benyttes som selvstendige produkter, eller kombineres med Fenistra Standard. Alle er inkludert i Premium.</p>
     </div>
-    <div class="mini-grid">
-      <a routerLink="/losning-justering" class="mini-card">
+    <div class="index-grid">
+      <a routerLink="/losning-justering" class="index-card">
+        <div class="module-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 7h9M17 7h3M4 17h3M10 17h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="13" cy="7" r="2.2" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="17" r="2.2" stroke="currentColor" stroke-width="1.6"/></svg></div>
         <h3>Justering</h3>
+        <p>MVA og justeringsforpliktelser i tråd med regelverket.</p>
+        <span class="go">Se løsningen →</span>
       </a>
-      <a routerLink="/losning-arealberegning" class="mini-card">
+      <a routerLink="/losning-arealberegning" class="index-card">
+        <div class="module-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><rect x="3" y="9" width="18" height="6" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M7 9v2M11 9v3M15 9v2M19 9v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
         <h3>Arealberegning</h3>
+        <p>Nøyaktige arealer, koblet direkte til tegning og kontrakt.</p>
+        <span class="go">Se løsningen →</span>
       </a>
-      <a routerLink="/losning-kjopesenter" class="mini-card">
+      <a routerLink="/losning-kjopesenter" class="index-card">
+        <div class="module-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="9" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/><path d="M3 4h2l2.2 11.4a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Kjøpesenter</h3>
+        <p>Dashboard for omsetning, automatisk purring og bransjetilpassede rapporter for senterledere.</p>
+        <span class="go">Se løsningen →</span>
       </a>
     </div>
   </div>

@@ -222,6 +222,7 @@
   .index-card p{font-size:14px;color:var(--ink-soft);line-height:1.5;flex-grow:1;}
   .index-card .go{font-family:var(--font-mono);font-size:12px;color:var(--plum);margin-top:2px;}
   .index-card:hover .go{color:var(--berry-deep);}
+  .index-grid-4{grid-template-columns:repeat(4,1fr);}
   .index-hero{padding:50px 0 20px;}
   .index-hero .eyebrow{margin-bottom:16px;}
   .index-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(32px,4vw,48px);letter-spacing:-0.02em;margin-bottom:16px;max-width:700px;}
@@ -355,7 +356,7 @@
         <div class="chip-grid">
           <div class="chip">Finale</div>
         </div>
-        <p class="integration-note">Bruker dere et annet system til årsoppgjør? <a routerLink="/kundeteam">Ta kontakt</a> for mer informasjon om integrasjonsmuligheter.</p>
+        <p class="integration-note">Bruker dere et annet system til årsoppgjør? <a routerLink="/kontakt-oss">Ta kontakt</a> for mer informasjon om integrasjonsmuligheter.</p>
       </div>
       <aside class="side-card reveal">
         <div class="field">
@@ -386,22 +387,30 @@
       <h2>Andre integrasjonskategorier</h2>
       <p>Fenistra kobles til systemene dere allerede bruker, uansett hvor i porteføljen behovet ligger.</p>
     </div>
-    <div class="mini-grid">
-      <a class="mini-card" routerLink="/integrasjon-regnskap-erp" style="display:block;">
+    <div class="index-grid index-grid-4">
+      <a routerLink="/integrasjon-regnskap-erp" class="index-card">
+        <div class="module-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M9 3v5M15 3v5M6 8h12v4a6 6 0 0 1-6 6 6 6 0 0 1-6-6V8Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 18v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
         <h3>Regnskap og ERP-systemer</h3>
         <p>Fem systemer integrert direkte via API, pluss en rekke andre ERP-systemer.</p>
+        <span class="go">Se integrasjoner →</span>
       </a>
-<a class="mini-card" routerLink="/integrasjon-rapportering" style="display:block;">
+      <a routerLink="/integrasjon-rapportering" class="index-card">
+        <div class="module-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 20v-6M9 20v-9M14 20v-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="17.5" cy="8.5" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M19.8 10.8 22 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
         <h3>Rapporter og analyse</h3>
         <p>Kombiner Fenistra-data med verktøy for business intelligence og statistikk.</p>
+        <span class="go">Se integrasjoner →</span>
       </a>
-<a class="mini-card" routerLink="/integrasjon-drift-vedlikehold" style="display:block;">
+      <a routerLink="/integrasjon-drift-vedlikehold" class="index-card">
+        <div class="module-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2-.6-.6-2 2.6-2.6Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Drift og vedlikehold</h3>
         <p>Koble Fenistra sammen med verktøyene dere bruker til drift og vedlikehold.</p>
+        <span class="go">Se integrasjoner →</span>
       </a>
-<a class="mini-card" routerLink="/integrasjon-kjopesenter" style="display:block;">
+      <a routerLink="/integrasjon-kjopesenter" class="index-card">
+        <div class="module-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 9.5 12 3l9 6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 8v12h14V8" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 20v-6h6v6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
         <h3>Kjøpesenterløsninger</h3>
         <p>Integrasjoner mot ferdselstelling og senterdata for kjøpesenter.</p>
+        <span class="go">Se integrasjoner →</span>
       </a>
     </div>
   </div>
@@ -411,7 +420,7 @@
   <div class="cta-band reveal">
     <h2>Bruker dere et system vi ikke har nevnt?</h2>
     <div class="actions">
-      <a routerLink="/kundeteam" class="btn btn-on-dark">Ta kontakt</a>
+      <a routerLink="/kontakt-oss" class="btn btn-on-dark">Ta kontakt</a>
       <a routerLink="/integrasjoner" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Utforsk flere integrasjoner</a>
     </div>
   </div>
