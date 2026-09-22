@@ -289,6 +289,12 @@
   @media (max-width:760px){
     .timeline-item{flex-basis:200px;}
   }
+  /* PC: whole timeline visible, no scrollbar. Smaller screens keep horizontal swipe. */
+  @media (min-width:1080px){
+    .timeline-track{overflow-x:visible;scroll-snap-type:none;}
+    .timeline-item{flex:1 1 0;min-width:0;}
+    .timeline-item.timeline-item-future{flex:0 0 24px;}
+  }
 </style>
 <section class="index-hero">
   <div class="wrap">
@@ -323,7 +329,7 @@
       <div class="eyebrow">Historien</div>
       <h2>Fra fagsystem til digitalt økosystem</h2>
     </div>
-    <div class="feature-row" style="padding-top:0;">
+    <div class="feature-row" style="padding-top:0; grid-template-columns:1fr;">
       <div class="feature-copy">
         <ul class="feature-list">
           <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Fenistra har røtter tilbake til midten av 1990-tallet, og har vært markedsledende i eiendomsbransjen i Norge i flere tiår.</li>
@@ -331,12 +337,6 @@
           <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>I dag leverer vi den skybaserte plattformen Fenistra.net, bygget for å forenkle komplekse forvaltningsprosesser gjennom automatisering og dyp bransjeinnsikt.</li>
           <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Kontorene våre ligger på Skøyen i Oslo, i Visma-bygget.</li>
         </ul>
-      </div>
-      <div class="feature-visual" style="background:var(--plum-deep); display:flex; align-items:center; justify-content:center; padding:36px;">
-        <div style="color:#fff;">
-          <blockquote style="font-family:var(--font-display); font-weight:300; font-size:19px; line-height:1.5; margin-bottom:16px;">«Alt fokuset vårt nå ligger på forenkling: brukergrensesnitt, integrasjoner, priser, pakketering, terminologi.»</blockquote>
-          <p style="font-family:var(--font-mono); font-size:12.5px; color:rgba(255,255,255,.6);">Kjartan Nielsen Friis, Daglig leder, Visma Property Solutions</p>
-        </div>
       </div>
     </div>
   </div>
@@ -396,7 +396,7 @@
           <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
           <div class="timeline-year">2026</div>
           <div class="timeline-card">
-            <h4>AI-revolusjonen: Hils på Felix</h4>
+            <h4>Fenistra lanserer Felix</h4>
             <p>En ny epoke starter der vi tar eiendomsforvaltning fra å være reaktiv til å bli proaktiv. Vi lanserer AI-grensesnittet Felix, et verktøy som kan brukes helt alene eller integrert direkte i Fenistra. <a routerLink="/ki" style="color:var(--berry-deep); font-weight:600;">Les mer →</a></p>
           </div>
         </div>

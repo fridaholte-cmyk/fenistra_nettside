@@ -19,24 +19,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.fenistra.no/blogg-felleskostnadsavregning</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.fenistra.no/blogg-mva-utleie-naringseiendom</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.fenistra.no/blogg-omsetningsleie-kjopesenter</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://www.fenistra.no/cookies</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>

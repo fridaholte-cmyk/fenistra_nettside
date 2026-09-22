@@ -397,9 +397,9 @@
   .feature-row{
     display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;
     padding:70px 0;
-    border-top:1px solid var(--line);
   }
-  .feature-row:last-child{border-bottom:1px solid var(--line);}
+  /* only a divider between two rows that follow each other, no lines above/below a group */
+  .feature-row + .feature-row{border-top:1px solid var(--line);}
   .feature-row.reverse .feature-copy{order:2;}
   .feature-row.reverse .feature-visual{order:1;}
   .feature-copy .eyebrow{margin-bottom:16px;}

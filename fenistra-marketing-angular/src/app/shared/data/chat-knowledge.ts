@@ -22,7 +22,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["standard"],
-    answer: "Fenistra Standard passer for små og mellomstore eiendomsselskaper, og dekker hele arbeidsflyten fra kontrakt til rapportering: Kontrakt, Fakturering, Regnskap, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse og Inntektsbudsjett, i tillegg til transaksjonsproduktene MVA-erklæring, RBO, Protokoller og Digital signering."
+    answer: "Fenistra Standard passer for små og mellomstore eiendomsselskaper, og dekker hele arbeidsflyten fra kontrakt til rapportering: Kontrakt, Fakturering, Regnskap, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse og Inntektsbudsjett, i tillegg til transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering."
   },
   {
     keywords: ["premium"],
@@ -66,7 +66,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["revisorbekreftet", "omsetning", "rbo"],
-    answer: "RBO er innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata, informasjon utleier trenger for å avregne omsetningsbasert leie korrekt. RBO er et transaksjonsprodukt inkludert i Fenistra Standard. <a href=\"losning-rbo.html\">Les mer om Fenistra RBO →</a>"
+    answer: "Revisorbekreftet omsetning er innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata, informasjon utleier trenger for å avregne omsetningsbasert leie korrekt. Det er et transaksjonsprodukt inkludert i Fenistra Standard. <a href=\"losning-rbo.html\">Les mer om Revisorbekreftet omsetning →</a>"
   },
   {
     keywords: ["formuesverdsettelse", "trenger"],
@@ -78,7 +78,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["transaksjonsprodukter"],
-    answer: "MVA-erklæring, RBO, Protokoller og Digital signering er transaksjonsprodukter. De er inkludert i Fenistra Standard, men betales per transaksjon eller bruk fremfor en fast pris."
+    answer: "MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering er transaksjonsprodukter. De er inkludert i Fenistra Standard, men betales per transaksjon eller bruk fremfor en fast pris."
   },
   {
     keywords: ["kontrakter", "digitalt", "signere"],
@@ -170,7 +170,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["rbo", "revisorbekreftet omsetning", "fenistra rbo", "revisorbekreftet", "omsetning"],
-    answer: "Fenistra RBO: Enkel innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata. Inkludert i Fenistra Standard. Blant annet: Innhenting av revisorbekreftet omsetning fra leietakere; Samlet administrasjon per leietaker og eiendom; Grunnlag for omsetningsbasert avregning. <a href=\"losning-rbo.html\">Les mer om Fenistra RBO →</a>"
+    answer: "Fenistra Revisorbekreftet omsetning: Enkel innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata. Inkludert i Fenistra Standard. Blant annet: Innhenting av revisorbekreftet omsetning fra leietakere; Samlet administrasjon per leietaker og eiendom; Grunnlag for omsetningsbasert avregning. <a href=\"losning-rbo.html\">Les mer om Revisorbekreftet omsetning →</a>"
   },
   {
     keywords: ["regnskap", "regnskapssystem", "kundereskontro", "fenistra regnskap"],
@@ -233,18 +233,6 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   {
     keywords: ["ansatte", "teamet", "menneskene bak fenistra", "kundeteam", "produktteam", "menneskene"],
     answer: "Fenistra har egne team for kundesuksess og produktutvikling. Se menneskene bak Fenistra, med lenker til kundeteamet og produktteamet, på Ansatte-siden. <a href=\"ansatte.html\">Les mer om Ansatte →</a>"
-  },
-  {
-    keywords: ["felleskostnadsavregning", "feil"],
-    answer: "Hva er felleskostnadsavregning, og hvorfor blir den ofte feil? Manuell fordeling av felleskostnader er en av de vanligste feilkildene i eiendomsforvaltning. Her er hva som går galt, og hvordan automatisering løser det. <a href=\"blogg-felleskostnadsavregning.html\">Les mer om Hva er felleskostnadsavregning, og hvorfor blir den ofte feil? →</a>"
-  },
-  {
-    keywords: ["mva", "utleie", "næringsdrivende", "vite"],
-    answer: "MVA ved utleie til næringsdrivende: dette må dere vite Frivillig registrering, justeringsforpliktelser og dokumentasjonskrav, MVA-reglene ved utleie av næringseiendom er strenge. Her er en innføring i det viktigste. <a href=\"blogg-mva-utleie-naringseiendom.html\">Les mer om MVA ved utleie til næringsdrivende: dette må dere vite →</a>"
-  },
-  {
-    keywords: ["omsetningsleie", "kjøpesenter", "korrekt", "rapportering"],
-    answer: "Omsetningsleie i kjøpesenter: slik sikrer du korrekt rapportering Omsetningsbasert leie krever løpende oppfølging av hver enkelt leietaker. Her er hva som skal til for å få rapporteringen riktig, og hvorfor senterledere sliter med det manuelt. <a href=\"blogg-omsetningsleie-kjopesenter.html\">Les mer om Omsetningsleie i kjøpesenter: slik sikrer du korrekt rapportering →</a>"
   },
   {
     keywords: ["høegh eiendom", "høegh"],
@@ -324,7 +312,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["tilleggsprodukter", "selvstendige produkter", "hva er inkludert"],
-    answer: "Fenistra er delt i tre: kjerneløsninger (Kontrakter, Felleskostnader, Fakturering, Regnskap, Rapportering, Dokument, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett), transaksjonsprodukter som er inkludert i begge pakker men betales per bruk (MVA-erklæring, RBO, Protokoller, Digital signering), og tilleggsprodukter som er selvstendige eller kombinert med Standard, og alltid inkludert i Premium (Justering, Arealberegning, Kjøpesenter)."
+    answer: "Fenistra er delt i tre: kjerneløsninger (Kontrakter, Felleskostnader, Fakturering, Regnskap, Rapportering, Dokument, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett), transaksjonsprodukter som er inkludert i begge pakker men betales per bruk (MVA-erklæring, revisorbekreftet omsetning, Protokoller, Digital signering), og tilleggsprodukter som er selvstendige eller kombinert med Standard, og alltid inkludert i Premium (Justering, Arealberegning, Kjøpesenter)."
   },
   {
     keywords: ["kundeteamet kontakt", "hvem kan jeg kontakte kunde", "brukerstøtte kontakt person", "head of customer success"],
@@ -352,7 +340,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["fenistra standard", "hva inneholder standard"],
-    answer: "Fenistra Standard inneholder løsningene Kontrakt, Fakturering, Regnskap, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse og Inntektsbudsjett, i tillegg til transaksjonsproduktene MVA-erklæring, RBO, Protokoller og Digital signering."
+    answer: "Fenistra Standard inneholder løsningene Kontrakt, Fakturering, Regnskap, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse og Inntektsbudsjett, i tillegg til transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering."
   },
   {
     keywords: ["premium"],
@@ -376,7 +364,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["transaksjonsprodukt", "transaksjon"],
-    answer: "MVA-erklæring, RBO, Protokoller og Digital signering er transaksjonsprodukter - de er inkludert i Fenistra Standard, men betales per transaksjon/bruk fremfor en fast pris."
+    answer: "MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering er transaksjonsprodukter - de er inkludert i Fenistra Standard, men betales per transaksjon/bruk fremfor en fast pris."
   },
   {
     keywords: ["pris", "koster", "kostnad", "abonnement"],
@@ -404,6 +392,6 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["blogg", "artikkel", "artikler", "fagstoff"],
-    answer: "Vi skriver fagartikler om eiendomsforvaltning - felleskostnader, MVA-regelverk, omsetningsleie og kjøpesenterdrift. Se alle artikler på Blogg-siden. <a href=\"blogg.html\">Les mer om Bloggen →</a>"
+    answer: "På bloggen finner du kundehistorier, produktnyheter og innsikt om Fenistra og økonomisk forvaltning av næringseiendom. Se alle artikler på Blogg-siden. <a href=\"blogg.html\">Les mer om Bloggen →</a>"
   },
 ];

@@ -188,7 +188,7 @@ export class QuizService {
       reasons.push('Løpende fakturering med automatisk håndtering av avvik er en av kjernefunksjonene i Fenistra, uansett pakke.');
     }
 
-    reasons.push('Alle transaksjonsprodukter (MVA-erklæring, RBO, Protokoller, Digital signering) er inkludert i begge pakker, betalt per bruk.');
+    reasons.push('Alle transaksjonsprodukter (MVA-erklæring, Revisorbekreftet omsetning, Protokoller, Digital signering) er inkludert i begge pakker, betalt per bruk.');
     relatedChips.push({ label: 'Kontrakter', route: '/losning-kontrakter' }, { label: 'Fakturering', route: '/losning-fakturering' });
 
     const result: QuizResult = {
