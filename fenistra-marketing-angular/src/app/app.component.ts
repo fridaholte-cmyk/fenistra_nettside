@@ -1,4 +1,4 @@
-import { Component, PLATFORM_ID, afterNextRender, inject } from '@angular/core';
+import { Component, HostListener, PLATFORM_ID, afterNextRender, inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { Router, RouterOutlet, NavigationEnd, NavigationStart, NavigationCancel, NavigationError } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -14,6 +14,7 @@ import { SeoService } from './shared/seo.service';
 import { GoogleTagsService } from './shared/consent/google-tags.service';
 import { ConsentService } from './shared/consent/consent.service';
 import { PREVIEW_GATE_ENABLED, PREVIEW_GATE_KEY, PREVIEW_GATE_PASSWORD } from './shared/preview-gate';
+import { trapTabInOpenDialog } from './shared/focus-return';
 
 const LOADER_DELAY_MS = 250;
 
@@ -83,6 +84,11 @@ export class AppComponent {
           if (e.id > 1) setTimeout(() => document.getElementById('hovedinnhold')?.focus({ preventScroll: true }), 0);
         }
       });
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  onKeydown(event: KeyboardEvent) {
+    trapTabInOpenDialog(event);
   }
 
   /** Skip link: move focus to the main content (a plain #hash link would go through the router). */
