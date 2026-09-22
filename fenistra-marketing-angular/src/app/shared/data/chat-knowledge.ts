@@ -103,8 +103,12 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
     answer: "Fenistradagene er vårt årlige arrangement for Fenistra-kunder, med faglig påfyll, nettverksbygging og sosialt samvær. Arrangementet het tidligere Fenistra Brukerforum, og har gått av stabelen i over 25 år. Se mer om Fenistradagene. <a href=\"fenistradagene.html\">Les mer om Fenistradagene →</a>"
   },
   {
-    keywords: ["markedsledende", "kompromiss", "hvorfor fenistra", "hvorfor velge", "konkurrent", "sammenlign", "forskjell på fenistra og", "fordelene med fenistra", "bedre enn", "alternativ til"],
+    keywords: ["markedsledende", "kompromiss", "velge fenistra", "skiller fenistra", "skiller dere", "andre systemer", "hvorfor fenistra", "hvorfor velge", "konkurrent", "sammenlign", "forskjell på fenistra og", "fordelene med fenistra", "bedre enn", "alternativ til"],
     answer: "Fenistra er markedsledende av en grunn: hos oss får du alt, uten kompromiss. Du får full kontroll på all økonomisk forvaltning, med alt som er viktig for daglig leder, økonomisjef, regnskapsfører og forvalter, i én helhetlig løsning. Har dere spesielle kontrakter eller behov, finner vi en løsning i Fenistra. Et system som tilpasser seg dere, ikke omvendt. I tillegg: moderne grensesnitt, rask oppstart uten skjulte kostnader og en sterk integrasjonsmotor mot regnskapet. <a href=\"sporsmal.html\">Les mer i Spørsmål og svar →</a>"
+  },
+  {
+    keywords: ["hvilken verdi", "verdi kan fenistra", "verdi for", "mitt selskap", "vårt selskap", "gevinst", "spare tid", "hva tjener vi"],
+    answer: "Fenistra gir full kontroll på den økonomiske forvaltningen, og frigjør tid som i dag går til manuelt arbeid. Fakturering, avregning, regulering og felleskostnader automatiseres og avstemmes mot regnskapet, uten dobbeltregistrering. Hos Höegh Eiendom har tidsbruken på faktureringsprosesser gått ned med 50–60 % etter overgangen til nye Fenistra. Samtidig får ledelsen full oversikt over porteføljen i rapporter. <a href=\"kunder.html\">Se kundehistoriene →</a>"
   },
   {
     keywords: ["hva får vi", "hva får man", "helhetlig", "alt i ett", "bredde", "hva inneholder fenistra"],

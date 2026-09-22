@@ -12,9 +12,10 @@ interface ChatMessage {
 }
 
 const DEFAULT_SUGGESTIONS = [
-  'Hva er Fenistra?',
-  'Hva inneholder Standard?',
-  'Kan dere integreres med vårt regnskapssystem?'
+  'Hvorfor bør jeg velge Fenistra?',
+  'Kan dere integreres med vårt regnskapssystem?',
+  'Hva skiller Fenistra fra andre systemer?',
+  'Hvilken verdi kan Fenistra gi til mitt selskap?'
 ];
 
 @Component({
