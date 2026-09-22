@@ -507,11 +507,28 @@
       </div>
     </div>
 
-    <div class="year-list">
-      <div class="year-row" id="2024">
-        <span class="yr">2024</span>
-        <span class="loc">Lilys Country Club</span>
+    <div class="feature-row" id="2024" style="grid-template-columns:1fr; gap:28px; border-top:1px solid var(--line); margin-top:16px; scroll-margin-top:90px;">
+      <div class="feature-copy" style="order:1;margin-bottom:24px;">
+        <div class="eyebrow">2024 · Holmenkollen Park</div>
+        <h3 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px,2.6vw,32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);">Brukerforum på Holmenkollen Park</h3>
+        <p style="color:var(--ink-soft); font-size:16px; max-width:480px; margin-bottom:14px;">Fenistra Brukerforum 2024 ble arrangert på Scandic Holmenkollen Park Hotel 4. og 5. juni. Programmet tok for seg den nye Fenistra-plattformen, bærekraft og fremtidens rapportering, rapporter og innsikt, markedstrender, teknologi i eiendom og IT-sikkerhet, i tillegg til faglige innlegg fra Norsk Eiendom. Begge dagene kunne deltakerne møte ekspertbrukere og samarbeidspartnere på stands.</p>
+        <p style="color:var(--ink-soft); font-size:16px; max-width:480px; margin-bottom:14px;">Underholdningen var det heller ikke noe å si på: deltakerne fikk omvisning i Skimuseet, middagen ble krydret med musikk og humor fra «Heine aleine og 2 til» med Heine Totland, Karianne Kjærnes og Roger Allan Ivin, og Harald Eia åpnet dag to med foredraget «Det store VI».</p>
+        <p style="font-family:var(--font-mono);font-size:13px;margin-top:4px;"><a routerLink="/media-brukerforum-2024-oppsummering" style="color:var(--berry-deep);font-weight:600;">Les oppsummeringen fra 2024 →</a></p>
       </div>
+      <div class="feature-visual" style="border:none;box-shadow:none;overflow:visible;min-height:0;min-width:0;background:none;order:2;">
+        <div class="carousel" style="margin-bottom:0;">
+          <button class="carousel-btn prev" onclick="document.getElementById('gallery2024').scrollBy({left:-320,behavior:'smooth'})" aria-label="Forrige bilder">&#8249;</button>
+          <button class="carousel-btn next" onclick="document.getElementById('gallery2024').scrollBy({left:320,behavior:'smooth'})" aria-label="Neste bilder">&#8250;</button>
+          <div class="carousel-track" id="gallery2024">
+          <a href="images/media-brukerforum-2024-oppsummering-01.jpg" target="_blank" rel="noopener"><img src="images/media-brukerforum-2024-oppsummering-01.jpg" loading="lazy" alt="Plenumssalen på Fenistra Brukerforum 2024, Holmenkollen Park"></a>
+          <a href="images/media-brukerforum-2024-oppsummering-02.jpg" target="_blank" rel="noopener"><img src="images/media-brukerforum-2024-oppsummering-02.jpg" loading="lazy" alt="Foredrag på Fenistra Brukerforum 2024"></a>
+          <a href="images/media-brukerforum-2024-oppsummering-03.jpg" target="_blank" rel="noopener"><img src="images/media-brukerforum-2024-oppsummering-03.jpg" loading="lazy" alt="Bærekraft og fremtidens rapportering på Fenistra Brukerforum 2024"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="year-list">
       <div class="year-row" id="2023">
         <span class="yr">2023</span>
         <span class="loc">Holmenkollen</span>
@@ -564,7 +581,7 @@
     <a href="#2024" class="timeline-v-item" data-year="2024">
       <span class="dot"></span>
       <span class="year">2024</span>
-      <span class="loc">Lilys Country Club</span>
+      <span class="loc">Holmenkollen Park</span>
     </a>
     <a href="#2023" class="timeline-v-item muted" data-year="2023">
       <span class="dot"></span>
