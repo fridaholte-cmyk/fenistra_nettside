@@ -10,7 +10,7 @@ export interface SearchEntry {
 
 export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
   { title: "Løsninger", url: "losninger.html", category: "Side", desc: "Se alle 18 løsninger i Fenistra forvaltningssystem, fra kontrakter og felleskostnader til rapportering og kjøpesenterdrift." },
-  { title: "Kundehistorier", url: "kunder.html", category: "Side", desc: "Se hvordan Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm og Backer AS bruker Fenistra i sin daglige eiendomsforvaltning." },
+  { title: "Kundehistorier", url: "kunder.html", category: "Side", desc: "Se hvordan Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm (nå Aspelin Reitan) og Backer AS bruker Fenistra i sin daglige eiendomsforvaltning." },
   { title: "Om oss", url: "om-oss.html", category: "Side", desc: "Fenistra er en markedsledende leverandør av forvaltningssystemer for eiendomsbransjen, en del av Visma Property Solutions siden 2020." },
   { title: "AI hos Fenistra", url: "ki.html", category: "Side", desc: "AI i Fenistra: KI-assistenten, AI-opplasting av kontrakter, veikartet for AI og innovasjonsprosjektet Felix.", keywords: ["ai", "ki", "kunstig intelligens", "felix", "maskinlæring", "chatbot", "ki-assistent", "ai-assistent", "opplasting", "last opp kontrakt", "veikart"] },
   { title: "Fenistradagene", url: "fenistradagene.html", category: "Side", desc: "Fenistradagene samler alle Fenistra-kunder hvert år i juni for faglig påfyll, nettverksbygging og sosialt samvær." },

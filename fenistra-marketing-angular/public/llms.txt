@@ -41,7 +41,7 @@ Fenistra er markedsledende av en grunn: hos oss får du alt, uten kompromiss.
 - [Integrasjoner](https://www.fenistra.no/integrasjoner): regnskap/ERP, årsoppgjør, drift og vedlikehold, rapportering og kjøpesenter
 - [Regnskap og ERP-integrasjoner](https://www.fenistra.no/integrasjon-regnskap-erp): Tripletex, Xledger, PowerOffice GO, Visma Business NXT, Visma.net m.fl.
 - [AI i Fenistra](https://www.fenistra.no/ki): KI-assistenten, AI-opplasting av kontrakter og veikartet for AI
-- [Kundehistorier](https://www.fenistra.no/kunder): Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm og Backer AS
+- [Kundehistorier](https://www.fenistra.no/kunder): Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm (nå Aspelin Reitan) og Backer AS
 - [Om oss](https://www.fenistra.no/om-oss): historien bak Fenistra og Visma Property Solutions
 - [Datasikkerhet](https://www.fenistra.no/datasikkerhet): Visma Security Program og GDPR
 - [Kontakt oss](https://www.fenistra.no/kontakt-oss): brukerstøtte, adresse og møtebooking

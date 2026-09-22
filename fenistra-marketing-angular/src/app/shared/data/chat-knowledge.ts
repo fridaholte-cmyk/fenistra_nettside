@@ -58,7 +58,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kunder"],
-    answer: "Fenistra brukes i dag av over 170 eiendomsforvaltere i Norge, blant andre Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm og Backer AS. Se kundehistoriene våre. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
+    answer: "Fenistra brukes i dag av over 170 eiendomsforvaltere i Norge, blant andre Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm (nå Aspelin Reitan) og Backer AS. Se kundehistoriene våre. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
   },
   {
     keywords: ["felleskostnadsavregning", "hjelper"],
@@ -95,7 +95,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   /* Skjult fra nettsiden:
   {
     keywords: ["lokaler", "leier"],
-    answer: "Ja. Fenistra Innleie er en egen løsning for dere som leier inn eiendommer, med håndtering av alle leiekontrakter og aktiviteter på innleiesiden, i tillegg til den vanlige utleiesiden. <a href=\"losning-innleie.html\">Les mer om Fenistra Innleie →</a>"
+    answer: "Ja. Fenistra Innleie er en egen løsning for dere som leier inn eiendommer, med håndtering av alle leiekontrakter og aktiviteter på innleiesiden, i tillegg til den vanlige utleiesiden. <a href=\"kontakt-oss.html\">Ta kontakt for å høre mer om Innleie →</a>"
   },
   */
   {
@@ -173,7 +173,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   /* Skjult fra nettsiden:
   {
     keywords: ["innleie", "leier inn", "innleiesiden", "fenistra innleie", "leier"],
-    answer: "Fenistra Innleie: En løsning for deg som leier inn eiendommer, med håndtering av alle leiekontrakter og aktiviteter knyttet til hvert leieforhold. Tilleggsprodukt i Fenistra Premium. Blant annet: Oversikt over leieforpliktelser, varighet og kostnader; Overvåkning av felleskostnader mot kontraktens betingelser; Matcher inngående husleiefakturaer mot kontrakt. <a href=\"losning-innleie.html\">Les mer om Fenistra Innleie →</a>"
+    answer: "Fenistra Innleie: En løsning for deg som leier inn eiendommer, med håndtering av alle leiekontrakter og aktiviteter knyttet til hvert leieforhold. Tilleggsprodukt i Fenistra Premium. Blant annet: Oversikt over leieforpliktelser, varighet og kostnader; Overvåkning av felleskostnader mot kontraktens betingelser; Matcher inngående husleiefakturaer mot kontrakt. <a href=\"kontakt-oss.html\">Ta kontakt for å høre mer om Innleie →</a>"
   },
   */
   {
@@ -256,7 +256,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kundehistorier", "referansekunder", "kundecase"],
-    answer: "Fenistra brukes av over 170 eiendomsforvaltere i Norge. Se kundehistoriene fra blant andre Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm og Backer AS på Kunder-siden. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
+    answer: "Fenistra brukes av over 170 eiendomsforvaltere i Norge. Se kundehistoriene fra blant andre Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm (nå Aspelin Reitan) og Backer AS på Kunder-siden. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
   },
   {
     keywords: ["fenistradagene", "arrangement", "konferanse"],
@@ -339,8 +339,8 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
     answer: "Frydenbø Eiendom bruker Fenistra som forvaltningssystem, kombinert med Create Insight for markedsinnsikt. «Fenistra har utviklet seg i takt med krav og regelverk i tett samarbeid med eiendomsbesittere,» sier utviklingssjef Bente Haugsdal. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
   },
   {
-    keywords: ["aspelin ramm", "ninette jurs", "kristin støfringsdal", "vulkan"],
-    answer: "Aspelin Ramm, kjent for byutviklingsprosjektet Vulkan i Oslo, bruker Fenistra.net i det daglige. «Det er mye mer brukervennlig enn den gamle løsningen og gir full oversikt over alle leietakere,» sier kontraktsforvalter Ninette Jurs og eiendomsforvalter Kristin Støfringsdal. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
+    keywords: ["aspelin ramm", "ninette jurs", "kristin støfringsdal", "vulkan", "aspelin reitan", "reitan"],
+    answer: "Aspelin Ramm (nå Aspelin Reitan), kjent for byutviklingsprosjektet Vulkan i Oslo, bruker Fenistra.net i det daglige. «Det er mye mer brukervennlig enn den gamle løsningen og gir full oversikt over alle leietakere,» sier kontraktsforvalter Ninette Jurs og eiendomsforvalter Kristin Støfringsdal. <a href=\"kunder.html\">Les mer om Kundehistorier →</a>"
   },
   {
     keywords: ["backer as", "tine wergeland johannessen", "ny kunde backer"],
