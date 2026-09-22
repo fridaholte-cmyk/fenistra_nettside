@@ -317,7 +317,7 @@
   /* ================= TIMELINE (vertical column, sticky, always on the right on desktop) ================= */
   .timeline-page{padding:8px 0 0;}
   .timeline-layout{display:grid;grid-template-columns:1fr 200px;gap:64px;align-items:start;}
-  .timeline-main{min-width:0;}
+  .timeline-main, .timeline-sidebar{min-width:0;}
   .timeline-sidebar{position:sticky;top:140px;max-height:250px;overflow:hidden;-webkit-mask-image:linear-gradient(to bottom, #000 85%, transparent);mask-image:linear-gradient(to bottom, #000 85%, transparent);}
   .timeline-v{position:relative;display:flex;flex-direction:column;gap:0;padding-left:2px;transition:transform .4s cubic-bezier(.2,.8,.2,1);}
   .timeline-v::before{content:"";position:absolute;top:8px;bottom:8px;left:6px;width:1px;background:var(--line);}
@@ -341,12 +341,33 @@
   .year-row .yr{font-family:var(--font-display);font-weight:300;font-size:19px;color:var(--ink);min-width:52px;}
   .year-row .loc{font-size:14px;color:var(--ink-soft);}
   @media (max-width:900px){
-    .timeline-layout{grid-template-columns:1fr;gap:8px;}
+    .timeline-layout{grid-template-columns:minmax(0,1fr);gap:8px;}
     .timeline-sidebar{position:static;order:-1;margin-bottom:8px;max-height:none;overflow:visible;-webkit-mask-image:none;mask-image:none;}
     .timeline-v{flex-direction:row;overflow-x:auto;gap:22px;padding:4px 4px 12px;-webkit-overflow-scrolling:touch;transform:none !important;}
     .timeline-v::before{top:auto;bottom:6px;left:20px;right:20px;width:auto;height:1px;}
     .timeline-v-item{flex:0 0 auto;padding:20px 4px 0;align-items:center;text-align:center;}
     .timeline-v-item .dot{left:50%;top:0;transform:translateX(-50%);}
+  }
+
+  /* ================= LIGHTBOX ================= */
+  .carousel-track a{cursor:zoom-in;}
+  body.lb-open{overflow:hidden;}
+  .lb{position:fixed;inset:0;z-index:400;background:rgba(19,9,22,.94);display:flex;flex-direction:column;animation:lbIn .2s ease;}
+  @keyframes lbIn{from{opacity:0}to{opacity:1}}
+  .lb-stage{flex:1;display:flex;align-items:center;justify-content:center;padding:64px 80px 16px;min-height:0;touch-action:pan-y;}
+  .lb-stage img{max-width:100%;max-height:100%;object-fit:contain;border-radius:10px;box-shadow:0 30px 80px -20px rgba(0,0,0,.6);user-select:none;-webkit-user-drag:none;}
+  .lb-close,.lb-nav{position:absolute;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.2);cursor:pointer;transition:background .2s ease;}
+  .lb-close:hover,.lb-nav:hover{background:rgba(255,255,255,.24);}
+  .lb-close:focus-visible,.lb-nav:focus-visible{outline:2px solid #fff;outline-offset:3px;}
+  .lb-close{top:18px;right:18px;width:44px;height:44px;font-size:18px;}
+  .lb-nav{top:50%;transform:translateY(-50%);width:52px;height:52px;font-size:26px;line-height:1;}
+  .lb-prev{left:18px;} .lb-next{right:18px;}
+  .lb-count{text-align:center;color:rgba(255,255,255,.7);font-family:var(--font-mono);font-size:13px;padding:10px 0 22px;}
+  @media (max-width:760px){
+    .lb-stage{padding:64px 12px 12px;}
+    .lb-nav{top:auto;bottom:14px;transform:none;width:44px;height:44px;}
+    .lb-prev{left:16px;} .lb-next{right:16px;}
+    .lb-count{padding:22px 0 26px;}
   }
 </style>
 <section class="index-hero">
@@ -599,3 +620,15 @@
     </div>
   </div>
 </section>
+
+@if (lightbox(); as lb) {
+  <div class="lb" role="dialog" aria-modal="true" aria-label="Bildevisning" (click)="onBackdrop($event)">
+    <button type="button" class="lb-close" (click)="close()" aria-label="Lukk bildevisning">✕</button>
+    <button type="button" class="lb-nav lb-prev" (click)="step(-1)" aria-label="Forrige bilde">‹</button>
+    <div class="lb-stage" (pointerdown)="swipeStart($event)" (pointerup)="swipeEnd($event)">
+      <img [src]="lb.images[lb.index].src" [alt]="lb.images[lb.index].alt" draggable="false">
+    </div>
+    <button type="button" class="lb-nav lb-next" (click)="step(1)" aria-label="Neste bilde">›</button>
+    <div class="lb-count" aria-live="polite">{{ lb.index + 1 }} / {{ lb.images.length }}</div>
+  </div>
+}
