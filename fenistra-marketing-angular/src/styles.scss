@@ -823,3 +823,8 @@
   app-header .mobile-drawer > a.m-login{font-family:var(--font-body); font-size:16px; color:var(--ink-soft); border-bottom:none; min-height:52px;}
   app-header .mobile-drawer > a.m-cta{justify-content:center; margin-top:12px; min-height:52px; font-family:var(--font-body); font-size:16px; font-weight:600; color:#fff; background:var(--berry); border-bottom:none; border-radius:9px;}
   @media (prefers-reduced-motion: reduce){ app-header .m-acc-panel{transition:none;} }
+
+  /* HubSpot form placeholder while the embed loads */
+  .form-loading{display:flex;justify-content:center;align-items:center;max-width:480px;min-height:240px;}
+  .form-failed{max-width:480px;font-size:15px;color:var(--ink-soft);background:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:18px 20px;}
+  .form-failed a{color:var(--berry-deep);font-weight:600;}

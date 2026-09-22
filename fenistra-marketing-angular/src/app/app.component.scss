@@ -81,3 +81,20 @@
 .gate-card button:hover {
   background: #7B173E;
 }
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(252, 250, 251, 0.72);
+  backdrop-filter: blur(2px);
+  animation: page-loader-in .2s ease both;
+}
+
+@keyframes page-loader-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

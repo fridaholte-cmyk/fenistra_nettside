@@ -393,6 +393,12 @@
       <h2>Book et møte</h2>
       <p>Fyll ut skjemaet under, så tar en av rådgiverne våre kontakt for å avtale tid.</p>
     </div>
+    @if (formState === 'loading') {
+      <div class="form-loading"><app-loader size="sm" label="Laster skjema"></app-loader></div>
+    }
+    @if (formState === 'failed') {
+      <p class="form-failed">Skjemaet kunne ikke lastes. Send oss en e-post på <a href="mailto:support.fenistra&#64;visma.com">support.fenistra&#64;visma.com</a>, så tar vi kontakt.</p>
+    }
     <div id="hubspotContactForm" style="max-width:480px;"></div>
   </div>
 </section>

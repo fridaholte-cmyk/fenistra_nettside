@@ -2,7 +2,7 @@ declare global {
   interface Window {
     hbspt?: {
       forms: {
-        create: (options: { portalId: string; formId: string; region: string; target: string; onFormSubmitted?: () => void }) => void;
+        create: (options: { portalId: string; formId: string; region: string; target: string; onFormReady?: () => void; onFormSubmitted?: () => void }) => void;
       };
     };
   }
@@ -29,16 +29,36 @@ function loadHubspotScript(): Promise<void> {
   return hubspotScriptPromise;
 }
 
-/** `formName` is reported to GTM as the generate_lead event's form_name (conversion tracking). */
-export function createHubspotForm(targetSelector: string, formName: string): void {
-  if (typeof window === 'undefined') return; // prerendering
-  loadHubspotScript().then(() => {
-    window.hbspt?.forms.create({
-      portalId: HUBSPOT_PORTAL_ID,
-      formId: HUBSPOT_FORM_ID,
-      region: HUBSPOT_REGION,
-      target: targetSelector,
-      onFormSubmitted: () => window.dataLayer?.push({ event: 'generate_lead', form_name: formName }),
-    });
+export type HubspotFormState = 'loading' | 'ready' | 'failed';
+
+// if the form isn't there by then (blocked by an ad blocker, network down), show the fallback
+const FORM_TIMEOUT_MS = 12000;
+
+/**
+ * `formName` is reported to GTM as the generate_lead event's form_name (conversion tracking).
+ * Resolves 'ready' when the form is rendered, or 'failed' if it can't be loaded.
+ */
+export function createHubspotForm(targetSelector: string, formName: string): Promise<HubspotFormState> {
+  if (typeof window === 'undefined') return Promise.resolve('loading'); // prerendering
+  return new Promise((resolve) => {
+    const timer = setTimeout(() => resolve('failed'), FORM_TIMEOUT_MS);
+    loadHubspotScript()
+      .then(() => {
+        window.hbspt?.forms.create({
+          portalId: HUBSPOT_PORTAL_ID,
+          formId: HUBSPOT_FORM_ID,
+          region: HUBSPOT_REGION,
+          target: targetSelector,
+          onFormReady: () => {
+            clearTimeout(timer);
+            resolve('ready');
+          },
+          onFormSubmitted: () => window.dataLayer?.push({ event: 'generate_lead', form_name: formName }),
+        });
+      })
+      .catch(() => {
+        clearTimeout(timer);
+        resolve('failed');
+      });
   });
 }

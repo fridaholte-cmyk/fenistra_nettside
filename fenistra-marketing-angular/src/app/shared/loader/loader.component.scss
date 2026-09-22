@@ -1,0 +1,63 @@
+:host { display: inline-flex; }
+
+.fl {
+  --fl-core: 56px;
+  --fl-berry: var(--berry, #AB3164);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  // room for the outer halo at its largest
+  width: calc(var(--fl-core) * 2);
+  height: calc(var(--fl-core) * 2);
+}
+.fl-sm { --fl-core: 40px; }
+
+.fl-core {
+  position: relative;
+  z-index: 1;
+  width: var(--fl-core);
+  height: var(--fl-core);
+  border-radius: 50%;
+  background: var(--fl-berry);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fl-core 1.6s ease-in-out infinite;
+
+  svg { width: 52%; height: 52%; fill: #fff; }
+}
+
+.fl-halo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--fl-core);
+  height: var(--fl-core);
+  margin: calc(var(--fl-core) / -2) 0 0 calc(var(--fl-core) / -2);
+  border-radius: 50%;
+  background: var(--fl-berry);
+  transform: scale(1);
+}
+// the halos grow out and fall back in, like variants 1 → 4 → 6
+.fl-halo-inner { opacity: .16; animation: fl-inner 1.6s ease-in-out infinite; }
+.fl-halo-outer { opacity: .08; animation: fl-outer 1.6s ease-in-out infinite; }
+
+@keyframes fl-inner {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.45); }
+}
+@keyframes fl-outer {
+  0%, 100% { transform: scale(1); }
+  55%      { transform: scale(1.95); }
+}
+@keyframes fl-core {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(.94); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fl-core { animation: none; }
+  .fl-halo-inner, .fl-halo-outer { animation: fl-fade 2s ease-in-out infinite; transform: scale(1.4); }
+  @keyframes fl-fade { 0%, 100% { opacity: .04; } 50% { opacity: .16; } }
+}

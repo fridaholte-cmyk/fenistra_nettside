@@ -2,16 +2,18 @@ import { AfterViewInit, ChangeDetectorRef, Component, OnDestroy, ViewEncapsulati
 import { RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { QuizService, QuizResult } from '../../shared/quiz.service';
-import { createHubspotForm } from '../../shared/hubspot-form';
+import { createHubspotForm, HubspotFormState } from '../../shared/hubspot-form';
+import { LoaderComponent } from '../../shared/loader/loader.component';
 
 @Component({
   selector: 'app-pakke-resultat',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, LoaderComponent],
   templateUrl: './pakke-resultat.component.html',
   encapsulation: ViewEncapsulation.None
 })
 export class PakkeResultatComponent implements AfterViewInit, OnDestroy {
+  formState: HubspotFormState = 'loading';
   result: QuizResult | null = null;
   private sub: Subscription;
 
@@ -25,7 +27,7 @@ export class PakkeResultatComponent implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    createHubspotForm('#hubspotMeetingForm', 'book_demo');
+    createHubspotForm('#hubspotMeetingForm', 'book_demo').then((state) => (this.formState = state));
   }
 
   retakeQuiz() {
