@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({ providedIn: 'root' })
 export class PageEffectsService {
   private observer?: IntersectionObserver;
+  private resizeHandler?: () => void;
 
   run() {
     if (typeof document === 'undefined') return; // prerendering
@@ -70,6 +71,21 @@ export class PageEffectsService {
       (filterRow as HTMLElement).dataset['wired'] = '1';
       const grid = document.getElementById('indexGrid') || document.getElementById('systemGrid');
       const items = grid ? Array.from(grid.querySelectorAll<HTMLElement>('[data-pkg], [data-cat]')) : [];
+      // stretch the last visible card so the last row never shows an empty (grey) cell
+      const fillLastRow = () => {
+        if (!grid) return;
+        const cols = getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length || 1;
+        const visible = items.filter((item) => item.style.display !== 'none');
+        visible.forEach((item) => (item.style.gridColumn = 'auto'));
+        const rest = visible.length % cols;
+        const last = visible[visible.length - 1];
+        if (rest && last) last.style.gridColumn = `span ${cols - rest + 1}`;
+      };
+      fillLastRow();
+      // one listener at a time (the previous page's grid is gone after navigation)
+      if (this.resizeHandler) window.removeEventListener('resize', this.resizeHandler);
+      this.resizeHandler = fillLastRow;
+      window.addEventListener('resize', fillLastRow);
       filterRow.addEventListener('click', (e) => {
         const btn = (e.target as HTMLElement).closest('button');
         if (!btn) return;
@@ -82,6 +98,7 @@ export class PageEffectsService {
           const show = filter === 'all' || filter === 'alle' || tokens.includes(filter);
           item.style.display = show ? '' : 'none';
         });
+        fillLastRow();
       });
     }
 

@@ -47,14 +47,6 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     ],
   },
   {
-    id: 'innleie',
-    question: 'Leier dere også lokaler selv (innleie), i tillegg til å leie ut?',
-    options: [
-      { label: 'Nei, kun utleie', premiumWeight: 0 },
-      { label: 'Ja, vi har innleieforhold også', premiumWeight: 1 },
-    ],
-  },
-  {
     id: 'areal',
     question: 'Ønsker dere god kontroll over arealer, med tegninger koblet direkte til kontrakt og leietaker?',
     options: [
@@ -154,12 +146,6 @@ export class QuizService {
       relatedChips.push({ label: 'Kjøpesenter', route: '/losning-kjopesenter' });
     }
 
-    const innleieAnswer = byId.get('innleie');
-    if (innleieAnswer?.optionIndex === 1) {
-      // Innleie er skjult fra nettsiden foreløpig.
-      // reasons.push('Innleiehåndtering er et tilleggsprodukt som alltid er inkludert i Premium.');
-      // relatedChips.push({ label: 'Innleie', route: '/losning-innleie' });
-    }
 
     const arealAnswer = byId.get('areal');
     if (arealAnswer?.optionIndex === 1) {

@@ -161,13 +161,6 @@
   .mini-card h3{font-size:15.5px;font-weight:600;color:var(--ink);margin-bottom:6px;}
   .mini-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
 
-  .chip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
-  .chip{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 16px;text-align:center;font-family:var(--font-mono);font-size:13px;color:var(--ink);transition:border-color .2s ease, transform .2s ease;}
-  .chip:hover{border-color:var(--berry);transform:translateY(-2px);}
-  .integration-note{font-size:14px;color:var(--ink-soft);margin-top:22px;}
-  .integration-note a{color:var(--berry-deep);font-weight:600;}
-  @media (max-width:600px){.chip-grid{grid-template-columns:1fr 1fr;}}
-
   .cta-band{background:var(--berry);background-image:radial-gradient(circle at 15% 20%, rgba(255,255,255,0.14), transparent 40%), radial-gradient(circle at 85% 80%, rgba(0,0,0,0.12), transparent 45%);border-radius:24px;padding:64px 56px;display:flex;align-items:center;justify-content:space-between;gap:32px;color:#fff;}
   .cta-band h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px,2.8vw,34px);letter-spacing:-0.02em;max-width:460px;}
   .cta-band .actions{display:flex;gap:14px;flex-shrink:0;}
@@ -323,46 +316,23 @@
     .chat-panel{width:calc(100vw - 24px);height:min(70vh, 560px);right:12px;bottom:12px;}
     .chat-trigger{right:16px;bottom:16px;}
   }
-
-  /* ================= FAQ ================= */
-  .faq-list{max-width:760px;}
-  .faq-item{border-bottom:1px solid var(--line);}
-  .faq-q{
-    width:100%; display:flex; justify-content:space-between; align-items:center;
-    padding:24px 0; text-align:left; font-size:16.5px; font-weight:500; color:var(--ink);
-  }
-  .faq-q .plus{
-    width:22px;height:22px; flex-shrink:0; position:relative; margin-left:20px;
-  }
-  .faq-q .plus::before, .faq-q .plus::after{
-    content:""; position:absolute; background:var(--berry); border-radius:2px;
-  }
-  .faq-q .plus::before{width:14px;height:2px; top:10px; left:4px;}
-  .faq-q .plus::after{width:2px;height:14px; top:4px; left:10px; transition:transform .25s ease;}
-  .faq-item.open .faq-q .plus::after{transform:rotate(90deg);}
-  .faq-a{
-    max-height:0; overflow:hidden; transition:max-height .35s ease;
-  }
-  .faq-a-inner{padding-bottom:24px; color:var(--ink-soft); font-size:15px; max-width:640px;}
-  .faq-a-inner ul{margin-top:10px; padding-left:2px;}
-  .faq-a-inner li{padding-left:16px; position:relative; margin-bottom:6px;}
-  .faq-a-inner li::before{content:"–"; position:absolute; left:0; color:var(--berry);}
 </style>
 <div class="wrap">
   <div class="breadcrumb">
     <a routerLink="/">Forside</a><span class="sep">/</span>
-    <span class="current">Spørsmål og svar</span>
+    <a routerLink="/losninger">Løsninger</a><span class="sep">/</span>
+    <span class="current">Formuesverdsettelse</span>
   </div>
 </div>
 
 <section class="module-hero">
   <div class="wrap">
-    <span class="badge badge-standard">Spørsmål og svar</span>
-    <h1>Alt du lurer på om Fenistra</h1>
-    <p class="lead">Her har vi samlet svar på de vanligste spørsmålene om forvaltningssystemet, pakkene, integrasjonene og selskapet. Finner du ikke svaret du leter etter, ta gjerne kontakt med oss for en prat.</p>
+    <span class="badge badge-standard">Inkludert i Fenistra Standard</span>
+    <h1>Fenistra Formuesverdsettelse</h1>
+    <p class="lead">Beregning og dokumentasjon av formuesverdi for næringseiendom, basert på faktiske leieinntekter og ledighet.</p>
     <div class="hero-actions">
       <a routerLink="/pakke-resultat" class="btn btn-primary">Book en demo</a>
-      <button type="button" class="btn btn-ghost" (click)="quiz.open()">Ta testen</button>
+      <a routerLink="/losninger" class="btn btn-ghost">Se alle løsninger</a>
     </div>
   </div>
 </section>
@@ -371,139 +341,35 @@
   <div class="wrap">
     <div class="module-grid-layout">
       <div class="module-main reveal">
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-q"><span>Hva er et forvaltningssystem?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Et forvaltningssystem er et samlet sett med verktøy og arbeidsprosesser som hjelper eiendomsbesittere, gårdeiere og forvaltere med å organisere drift, vedlikehold, økonomi og administrasjon av eiendommer, alt fra leietakeradministrasjon til regnskap og rapportering, på ett sted. Fenistra er ikke bare et kontraktshåndteringssystem, men også et faktureringssystem — en komplett løsning for økonomisk forvaltning av næringseiendom, fra kontrakt og budsjettering til fakturering, felleskostnadsavregning, mva-håndtering og rapportering i én sammenhengende flyt.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hva inneholder Fenistra Standard?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">
-              <p>Fenistra Standard passer for små og mellomstore eiendomsselskaper, og dekker hele arbeidsflyten fra kontrakt til rapportering.</p>
-              <ul>
-                <li>Kontrakt</li>
-                <li>Fakturering</li>
-                <li>Regnskap</li>
-                <li>Rapportering</li>
-                <li>Dokument</li>
-                <li>Felleskostnader</li>
-                <li>Omsetningsavregning</li>
-                <li>Formuesverdsettelse</li>
-                <li>Inntektsbudsjett</li>
-                <li>MVA-erklæring (transaksjonsprodukt)</li>
-                <li>Revisorbekreftet omsetning (transaksjonsprodukt)</li>
-                <li>Protokoller (transaksjonsprodukt)</li>
-                <li>Digital signering (transaksjonsprodukt)</li>
-              </ul>
-              <a routerLink="/priser" fragment="standard" class="btn btn-light" style="margin-top:16px;">Se Fenistra Standard →</a>
-            </div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hva inneholder Fenistra Premium?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">
-              <p>Alt fra Standard-pakken, i tillegg til alle tilleggsprodukter og egen dedikert kunderådgiver.</p>
-              <a routerLink="/priser" fragment="premium" class="btn btn-light" style="margin-top:16px;">Se pris og løsning →</a>
-            </div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hva er Fenistra Kjøpesenter?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">
-              <p>Fenistra Kjøpesenter er senterleders verktøy, og gir full oversikt over status på senteret og oppgavene som hører til rollen. Fokuset ligger på butikk, aktiviteter og løpende omsetningsrapportering.</p>
-              <a routerLink="/losning-kjopesenter" class="go">Les mer her →</a>
-            </div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Kan Fenistra integreres med vårt regnskapssystem?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Sannsynligvis ja. Fenistra er i dag integrert mot rundt 20 ulike regnskapssystemer i produksjon hos kunder, blant annet Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net, i tillegg til en rekke andre ERP-systemer som SAP, Microsoft Dynamics og 24SevenOffice. Se <a routerLink="/integrasjon-regnskap-erp" style="color:var(--berry-deep); font-weight:600;">full oversikt over regnskapsintegrasjoner</a>.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hva koster Fenistra?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Fenistra prises etter porteføljens leieomsetning, ikke antall brukere, alle pakker har ubegrenset antall brukere. Vi har ikke faste priser liggende åpent på siden, siden det varierer med portefølje og behov. Book en demo, så finner vi ut hva som passer for dere.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hva er forskjellen på Fenistra Standard og Premium?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Standard passer for små og mellomstore eiendomsselskaper, og inneholder kjerneløsningene i Fenistra samt transaksjonsproduktene. Premium passer for store eiendomsselskaper, og inneholder alt fra Standard i tillegg til alle tilleggsprodukter og en egen dedikert kunderådgiver.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hvem eier Fenistra?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Fenistra er en del av Visma Property Solutions, og har vært det siden januar 2020. Visma Property Solutions er en del av Visma-konsernet.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hvor lenge har Fenistra eksistert?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Fenistra har røtter tilbake til 1994. Selskapet ble formelt stiftet som BRA Consult AS i februar 1995, endret navn til BRA Informasjonssystemer AS i 1996, og fikk navnet Fenistra AS i oktober 2003.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hvor mange kunder har Fenistra?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Fenistra brukes i dag av over 170 eiendomsforvaltere i Norge, blant andre Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm og Backer AS. Se <a routerLink="/kunder" style="color:var(--berry-deep); font-weight:600;">kundehistoriene våre</a>.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hva er felleskostnadsavregning, og hvordan hjelper Fenistra med det?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Felleskostnadsavregning er fordelingen av driftskostnader (som strøm i fellesareal, vaktmestertjenester og renhold) mellom leietakerne i en eiendom, avregnet mot akontobeløp gjennom året. Fenistra Felleskostnader automatiserer MVA-behandling, beregning og avregning, og kobler fordelingsnøkler direkte til kontraktsdataene. Les mer om <a routerLink="/losning-felleskostnader" style="color:var(--berry-deep); font-weight:600;">Fenistra Felleskostnader</a>.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hva er omsetningsbasert leie (omsetningsleie)?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Omsetningsbasert leie er en leiemodell der deler av leien er knyttet til leietakers faktiske omsetning, vanlig i kjøpesentre og handelseiendom. Fenistra henter inn og avregner omsetningstall automatisk, med automatisk purring på manglende rapportering. Les mer om <a routerLink="/losning-omsetningsavregning" style="color:var(--berry-deep); font-weight:600;">Fenistra Omsetningsavregning</a>.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hva er revisorbekreftet omsetning?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Revisorbekreftet omsetning er innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata, informasjon utleier trenger for å avregne omsetningsbasert leie korrekt. Det er et transaksjonsprodukt inkludert i Fenistra Standard.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hva er formuesverdsettelse, og hvorfor trenger vi det?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Formuesverdsettelse er beregning og dokumentasjon av formuesverdien til næringseiendom. Formuesverdien utgjør ofte en stor del av selskapets verdier og påvirker verdien på aksjene, så riktig grunnlag er viktig. Fenistra Formuesverdsettelse beregner den ut fra faktisk fakturert leieinntekt og ledighet, hentet direkte fra porteføljedataene deres, og gir en rapport regnskapsfører og revisor kan kontrollere. <a routerLink="/losning-formuesverdsettelse" style="color:var(--berry-deep); font-weight:600;">Les mer om Fenistra Formuesverdsettelse</a>.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hva er MVA-erklæring i Fenistra?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Fenistra MVA-erklæring automatiserer innhentingen av MVA-erklæringer fra MVA-registrerte leietakere, og gir oversikt over bruken av lokalene gjennom året. Det var Fenistras aller første produkt, lansert i 2017.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hva er transaksjonsprodukter?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">MVA-erklæring, Revisorbekreftet omsetning, Protokoller og Digital signering er transaksjonsprodukter. De er inkludert i Fenistra Standard, men betales per transaksjon eller bruk fremfor en fast pris.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Kan vi signere kontrakter digitalt i Fenistra?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Ja. Fenistra Digital signering lar dere signere kontrakter og dokumenter digitalt, direkte i Fenistra, uten å måtte gå via e-post eller eksterne verktøy. Det er et transaksjonsprodukt inkludert i Fenistra Standard.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hva er Fenistra Arealberegning?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Fenistra Arealberegning kobler areal direkte til tegning og kontrakt, og gir nøyaktige arealberegninger som reduserer risikoen for feil i leiekostnader og kvadratmeterpriser.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Passer Fenistra for oss som leier inn lokaler, ikke bare leier ut?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Ja. Fenistra Innleie er en egen løsning for dere som leier inn eiendommer, med håndtering av alle leiekontrakter og aktiviteter på innleiesiden, i tillegg til den vanlige utleiesiden.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hva er Fenistradagene?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Fenistradagene er vårt årlige arrangement for Fenistra-kunder, med faglig påfyll, nettverksbygging og sosialt samvær. Arrangementet het tidligere Fenistra Brukerforum, og har gått av stabelen i over 25 år. Se <a routerLink="/fenistradagene" style="color:var(--berry-deep); font-weight:600;">mer om Fenistradagene</a>.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Jobber Fenistra med kunstig intelligens (AI)?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Ja. Fenistra og Visma Property Solutions jobber aktivt med AI i eiendomsforvaltningen, blant annet gjennom innovasjonsprosjektet Felix, et AI-native verktøy for kontraktsforvaltning som gir varsler, anbefalinger og svar basert på opplastede kontrakter. Les mer om <a routerLink="/ki" style="color:var(--berry-deep); font-weight:600;">AI hos Fenistra</a>.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Hvordan kommer vi i gang med Fenistra?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Book en demo, eller <a href="javascript:void(0)" style="color:var(--berry-deep); font-weight:600;" (click)="quiz.open()">ta testen vår</a> for å se hvilken pakke og hvilke løsninger som passer for akkurat deres portefølje. En av rådgiverne våre tar deretter kontakt for å finne riktig oppsett.</div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Er Fenistra skybasert?</span><span class="plus"></span></button>
-            <div class="faq-a"><div class="faq-a-inner">Ja. Fenistra.net er et skybasert kontrakts- og faktureringssystem, bygget på logikken fra Fenistra Eiendom. Du som kunde får tilgang til en komplett og sikker plattform direkte i nettleseren. Vil du vite mer om hva systemet kan gjøre for deg? Besøk <a routerLink="/losninger" style="color:var(--berry-deep); font-weight:600;">Løsninger</a>-siden vår, eller <a routerLink="/kontakt-oss" style="color:var(--berry-deep); font-weight:600;">ta kontakt med oss</a> for en hyggelig prat.</div></div>
-          </div>
+        <h2>Dette får du</h2>
+        <ul class="feature-list">
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Beregner formuesverdi ut fra fakturert leieinntekt, hentet rett fra kontrakter og fakturering</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Fanger opp ledighet, både for deler av året og hele året</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Korrigerer for kreditnotaer, rabatter og leiefritak</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Samler flere eiendomsobjekter i én beregning</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><path d="M4.5 8.3 6.8 10.6 11.5 5.4" stroke="#7B173E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Oversiktlig rapport med kontroll- og beregningsfelt som gjør tallene enkle å etterprøve</li>
+        </ul>
+        <div class="body-copy">
+          <p>Formuesverdien av næringseiendom utgjør ofte en stor del av verdiene i et selskap, og påvirker dermed både verdien på aksjene og aksjonærenes formue. Feil grunnlag kan gi for høy eller for lav verdi. Derfor er det avgjørende å ha god oversikt over faktisk fakturert leieinntekt og ledighet.</p>
+          <p>Fenistra Formuesverdsettelse henter disse tallene direkte fra kontrakter og fakturering. Dere velger selv hvilke transaksjons- og kontraktstyper som skal være med, slik at for eksempel felleskostnader og depositum holdes utenfor, og går gjennom beregningen steg for steg: fakturert leieinntekt, korreksjoner, ledighet og til slutt en samlet beregning.</p>
+          <p>Resultatet er en oversiktlig rapport som gir dere, regnskapsfører og revisor både tallene dere trenger i årsoppgjøret og muligheten til å kontrollere og etterberegne dem. Fordi alt hentes fra samme system som resten av forvaltningen, reduseres risikoen for avvik mellom det som rapporteres og det som faktisk ligger i kontrakt og areal.</p>
         </div>
       </div>
       <aside class="side-card reveal">
         <div class="field">
-          <h4>Fant du ikke svaret?</h4>
-          <p>Ta gjerne kontakt med oss for en prat, eller book en demo direkte.</p>
+          <h4>Pakke</h4>
+          <p>Fenistra Standard og Fenistra Premium</p>
         </div>
         <div class="field">
-          <h4>Usikker på hvilke løsninger dere trenger?</h4>
-          <p>Ta testen vår og få en anbefaling på under to minutter.</p>
+          <h4>Passer for</h4>
+          <p>Regnskapsavdeling, økonomiansvarlige og revisor</p>
         </div>
         <div class="field">
-          <h4>Utforsk mer</h4>
+          <h4>Fungerer sammen med</h4>
           <div class="related-chips">
-            <a routerLink="/losninger">Alle løsninger</a>
-<a routerLink="/integrasjoner">Integrasjoner</a>
+            <a routerLink="/losning-regnskap">Regnskap</a>
+<a routerLink="/losning-arealberegning">Arealberegning</a>
+<a routerLink="/losning-inntektsbudsjett">Inntektsbudsjett</a>
           </div>
         </div>
       </aside>
@@ -511,12 +377,39 @@
   </div>
 </section>
 
+<section class="related-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Se også</div>
+      <h2>Løsninger som ofte brukes sammen med Formuesverdsettelse</h2>
+      <p>Fenistra er bygget som ett system. Bruk løsningene sammen, eller sett sammen kombinasjonen som passer deres portefølje.</p>
+    </div>
+    <div class="mini-grid">
+      <a routerLink="/losning-regnskap" class="mini-card">
+        <span class="badge badge-standard">Inkludert i Fenistra Standard</span>
+        <h3>Regnskap</h3>
+        <p>Økonomien samlet og avstemt mot systemet dere allerede bruker.</p>
+      </a>
+<a routerLink="/losning-arealberegning" class="mini-card">
+        <span class="badge badge-tillegg">Tilleggsprodukt / Premium</span>
+        <h3>Arealberegning</h3>
+        <p>Nøyaktige arealer, koblet direkte til tegning og kontrakt.</p>
+      </a>
+<a routerLink="/losning-inntektsbudsjett" class="mini-card">
+        <span class="badge badge-standard">Inkludert i Fenistra Standard</span>
+        <h3>Inntektsbudsjett</h3>
+        <p>Budsjettering med utgangspunkt i faktiske leieforhold.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section class="cta-wrap">
   <div class="cta-band reveal">
-    <h2>Fant du ikke svaret du lette etter?</h2>
+    <h2>Klar for å se Formuesverdsettelse i praksis?</h2>
     <div class="actions">
       <a routerLink="/pakke-resultat" class="btn btn-on-dark">Book en demo</a>
-      <button type="button" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;" (click)="quiz.open()">Ta testen</button>
+      <a routerLink="/losninger" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Utforsk flere løsninger</a>
     </div>
   </div>
 </section>

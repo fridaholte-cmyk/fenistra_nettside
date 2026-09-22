@@ -9,6 +9,10 @@ export interface ChatKbEntry {
 
 export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   {
+    keywords: ["menneske", "snakke med", "ekte person", "en person", "kundeservice", "ringe", "telefon", "tlf", "kontakte dere", "kontakt dere", "nå dere", "support"],
+    answer: "Ja, selvfølgelig! Du når oss på telefon <a href=\"tel:+4722229049\">22 22 90 49</a> eller e-post support.fenistra&#64;visma.com. Du kan også fylle ut skjemaet på kontaktsiden, så tar en av oss kontakt. <a href=\"kontakt-oss.html\">Gå til Kontakt oss →</a>"
+  },
+  {
     keywords: ["passer fenistra", "passer det for", "passer fenistra for", "er fenistra noe for", "fenistra for meg", "fenistra for oss", "passer dette for", "egner fenistra seg", "kan fenistra brukes av", "passer for min bedrift", "passer for oss"],
     answer: "Ja, sannsynligvis! Fenistra passer for de fleste eiendomsforvaltere og eiendomsselskaper i Norge, uansett størrelse på porteføljen. Ta testen, så viser vi hvilke løsninger og hvilken pakke som passer akkurat for dere, på under to minutter. <a href=\"pakke-resultat.html\">Ta testen →</a>"
   },
@@ -70,7 +74,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["formuesverdsettelse", "trenger"],
-    answer: "Formuesverdsettelse er beregning og dokumentasjon av formuesverdi for næringseiendom, som underlag til skattemeldingen (RF-1098). Fenistra Formuesverdsettelse beregner og dokumenterer dette direkte fra porteføljedataene deres."
+    answer: "Formuesverdsettelse er beregning og dokumentasjon av formuesverdien til næringseiendom. Formuesverdien utgjør ofte en stor del av selskapets verdier og påvirker verdien på aksjene. Fenistra Formuesverdsettelse beregner den ut fra faktisk fakturert leieinntekt og ledighet, hentet direkte fra porteføljedataene deres. <a href=\"losning-formuesverdsettelse.html\">Les mer om Fenistra Formuesverdsettelse →</a>"
   },
   {
     keywords: ["mva-erklæring"],
@@ -127,8 +131,8 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
     answer: "Fenistra Felleskostnader: Automatisert felleskostnadsavregning med full oversikt over kostnader, fordeling og MVA-behandling. Inkludert i Fenistra Standard. Blant annet: Automatisert MVA-behandling; Fleksible avregningssykluser; Avanserte beregninger sikrer rettferdig kostnadsfordeling. <a href=\"losning-felleskostnader.html\">Les mer om Fenistra Felleskostnader →</a>"
   },
   {
-    keywords: ["formuesverdsettelse", "formuesverdi", "rf-1098", "skattemelding", "fenistra formuesverdsettelse"],
-    answer: "Fenistra Formuesverdsettelse: Beregning og dokumentasjon av formuesverdi for næringseiendom, som underlag til RF-1098. Inkludert i Fenistra Standard. Blant annet: Beregner formuesverdi for næringseiendom; Underlag direkte til myndighetenes skjema RF-1098; Samler grunnlagsdata fra eiendom og leieforhold."
+    keywords: ["formuesverdsettelse", "formuesverdi", "skattemelding", "fenistra formuesverdsettelse"],
+    answer: "Fenistra Formuesverdsettelse: Beregning og dokumentasjon av formuesverdi for næringseiendom, basert på faktiske leieinntekter og ledighet. Inkludert i Fenistra Standard. Blant annet: Beregner formuesverdi ut fra fakturert leieinntekt; Fanger opp ledighet, både deler av året og hele året; Korrigerer for kreditnotaer, rabatter og leiefritak; Rapport med kontroll- og beregningsfelt. <a href=\"losning-formuesverdsettelse.html\">Les mer om Fenistra Formuesverdsettelse →</a>"
   },
   /* Skjult fra nettsiden:
   {
@@ -188,7 +192,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   */
   {
     keywords: ["løsninger", "alle løsninger", "hva kan fenistra", "moduler"],
-    answer: "Fenistra har 17 løsninger, fra kontrakter og felleskostnader til rapportering og kjøpesenterdrift, samlet i ett system. Se hele oversikten på Løsninger-siden. <a href=\"losninger.html\">Les mer om Løsninger →</a>"
+    answer: "Fenistra har 18 løsninger, fra kontrakter og felleskostnader til rapportering og kjøpesenterdrift, samlet i ett system. Se hele oversikten på Løsninger-siden. <a href=\"losninger.html\">Les mer om Løsninger →</a>"
   },
   {
     keywords: ["regnskap integrasjon", "erp", "tripletex", "xledger", "poweroffice", "visma business nxt", "visma.net", "sap", "24sevenoffice", "unimicro", "microsoft dynamics", "regnskap", "integrasjon", "visma", "business", "microsoft", "dynamics"],
@@ -356,7 +360,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["løsning", "løsninger", "hva kan fenistra"],
-    answer: "Fenistra har 17 løsninger, fra kontrakter og felleskostnader til rapportering og kjøpesenterdrift. <a href=\"losninger.html\">Les mer om Løsninger →</a>"
+    answer: "Fenistra har 18 løsninger, fra kontrakter og felleskostnader til rapportering og kjøpesenterdrift. <a href=\"losninger.html\">Les mer om Løsninger →</a>"
   },
   {
     keywords: ["digital signering", "signering", "signere"],

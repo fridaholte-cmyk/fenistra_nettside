@@ -4,15 +4,17 @@ export interface SearchEntry {
   url: string;
   category: string;
   desc: string;
+  /** extra words that should find this entry (synonyms, names, common misspellings) */
+  keywords?: string[];
 }
 
 export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
-  { title: "Løsninger", url: "losninger.html", category: "Side", desc: "Se alle 17 løsninger i Fenistra forvaltningssystem, fra kontrakter og felleskostnader til rapportering og kjøpesenterdrift." },
+  { title: "Løsninger", url: "losninger.html", category: "Side", desc: "Se alle 18 løsninger i Fenistra forvaltningssystem, fra kontrakter og felleskostnader til rapportering og kjøpesenterdrift." },
   { title: "Kundehistorier", url: "kunder.html", category: "Side", desc: "Se hvordan Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm og Backer AS bruker Fenistra i sin daglige eiendomsforvaltning." },
   { title: "Om oss", url: "om-oss.html", category: "Side", desc: "Fenistra er en markedsledende leverandør av forvaltningssystemer for eiendomsbransjen, en del av Visma Property Solutions siden 2020." },
-  { title: "AI hos Fenistra", url: "ki.html", category: "Side", desc: "Hvordan Fenistra og Visma Property Solutions jobber med AI i eiendomsforvaltningen, og innovasjonsprosjektet Felix." },
+  { title: "AI hos Fenistra", url: "ki.html", category: "Side", desc: "Hvordan Fenistra og Visma Property Solutions jobber med AI i eiendomsforvaltningen, og innovasjonsprosjektet Felix.", keywords: ["ai", "ki", "kunstig intelligens", "felix", "maskinlæring", "chatbot"] },
   { title: "Fenistradagene", url: "fenistradagene.html", category: "Side", desc: "Fenistradagene samler alle Fenistra-kunder hvert år i juni for faglig påfyll, nettverksbygging og sosialt samvær." },
-  { title: "Kundeteamet", url: "kundeteam.html", category: "Side", desc: "Møt kundeteamet i Fenistra - kundekontakter, brukerstøtte og konsulenter som følger opp kundene våre hver dag." },
+  { title: "Kundeteamet", url: "kundeteam.html", category: "Side", desc: "Møt kundeteamet i Fenistra - kundekontakter, brukerstøtte og konsulenter som følger opp kundene våre hver dag.", keywords: ["support", "brukerstøtte", "kundeservice", "kontaktperson", "kundekontakt", "hjelp"] },
   { title: "Produktteamet", url: "produktteam.html", category: "Side", desc: "Møt produktteamet i Fenistra - designere og produktledelse som former løsningene våre." },
   { title: "Blogg", url: "blogg.html", category: "Side", desc: "Kundehistorier, produktnyheter og innsikt om Fenistra og økonomisk forvaltning av næringseiendom." },
 
@@ -30,7 +32,8 @@ export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
   { title: "Inntektsbudsjett", url: "losning-inntektsbudsjett.html", category: "Løsning", desc: "Bygg inntektsbudsjett direkte fra de faktiske leieforholdene i porteføljen, ikke fra separate regneark." },
   // Skjult fra nettsiden: { title: "Innleie", url: "losning-innleie.html", category: "Løsning", desc: "En løsning for deg som leier inn eiendommer, med håndtering av alle leiekontrakter og aktiviteter." },
   { title: "Protokoller", url: "losning-protokoller.html", category: "Løsning", desc: "Verktøy for overtakelse og tilbakelevering av lokaler, med protokoller koblet direkte til riktig kontrakt." },
-  { title: "Priser og pakker", url: "priser.html", category: "Side", desc: "Fenistra Standard og Premium, prises etter leieomsetning med ubegrenset antall brukere." },
+  { title: "Priser og pakker", url: "priser.html", category: "Side", desc: "Fenistra Standard og Premium, prises etter leieomsetning med ubegrenset antall brukere.", keywords: ["pris", "priser", "kostnad", "koster", "hva koster", "pakke", "pakker", "premium", "standard"] },
+  { title: "Formuesverdsettelse", url: "losning-formuesverdsettelse.html", category: "Løsning", desc: "Beregning og dokumentasjon av formuesverdi for næringseiendom, basert på faktiske leieinntekter og ledighet." },
   { title: "Revisorbekreftet omsetning", url: "losning-rbo.html", category: "Løsning", desc: "Enkel innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata." },
   { title: "Digital signering", url: "losning-digital-signering.html", category: "Løsning", desc: "Signer kontrakter og dokumenter digitalt, direkte i Fenistra. Transaksjonsprodukt inkludert i Fenistra Standard." },
 
@@ -53,7 +56,7 @@ export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
   { title: "Hva er felleskostnadsavregning?", url: "sporsmal.html", category: "Spørsmål", desc: "Fordeling av driftskostnader mellom leietakere, automatisert av Fenistra." },
   { title: "Hva er omsetningsbasert leie (omsetningsleie)?", url: "sporsmal.html", category: "Spørsmål", desc: "Leie knyttet til leietakers omsetning, vanlig i kjøpesentre." },
   { title: "Hva er revisorbekreftet omsetning?", url: "sporsmal.html", category: "Spørsmål", desc: "Innhenting av leietakers reviderte omsetningsdata." },
-  { title: "Hva er formuesverdsettelse?", url: "sporsmal.html", category: "Spørsmål", desc: "Beregning av formuesverdi for næringseiendom, underlag til RF-1098." },
+  { title: "Hva er formuesverdsettelse?", url: "sporsmal.html", category: "Spørsmål", desc: "Formuesverdi basert på faktisk leieinntekt og ledighet." },
   { title: "Hva er MVA-erklæring i Fenistra?", url: "sporsmal.html", category: "Spørsmål", desc: "Automatisert innhenting av MVA-erklæringer fra leietakere." },
   { title: "Hva er transaksjonsprodukter?", url: "sporsmal.html", category: "Spørsmål", desc: "MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering." },
   { title: "Kan vi signere kontrakter digitalt i Fenistra?", url: "sporsmal.html", category: "Spørsmål", desc: "Ja, med Digital signering." },
@@ -62,8 +65,8 @@ export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
   { title: "Hva er Fenistradagene?", url: "sporsmal.html", category: "Spørsmål", desc: "Årlig samling for Fenistra-kunder, 25+ år med historie." },
   { title: "Jobber Fenistra med kunstig intelligens (AI)?", url: "sporsmal.html", category: "Spørsmål", desc: "Ja, blant annet gjennom Felix." },
   { title: "Hvordan kommer vi i gang med Fenistra?", url: "sporsmal.html", category: "Spørsmål", desc: "Book en demo, eller ta testen for å finne riktig pakke." },
-  { title: "Ansatte", url: "ansatte.html", category: "Side", desc: "Menneskene bak Fenistra - kundeteamet og produktteamet som utvikler og drifter systemet." },
-  { title: "Kontakt oss", url: "kontakt-oss.html", category: "Side", desc: "Kontaktinfo til brukerstøtte, besøksadresse og skjema for å booke et møte." },
+  { title: "Ansatte", url: "ansatte.html", category: "Side", desc: "Menneskene bak Fenistra - kundeteamet og produktteamet som utvikler og drifter systemet.", keywords: ["ansatt", "ansatte", "folk", "team", "medarbeidere", "hvem jobber", "Trygve Vardenær", "Kristian Lien", "Frida Holte", "Beate Paulsen", "Patrick Eriksen", "Henning Aas", "Marius Sømme", "Kristin Falch", "Rokshar Zendehbizadeh", "Espen Kløfta", "Joakim Howlid", "Veslemøy Sandbæk", "Vilja Pettersen", "Lill Reyes", "Ilham Jillani", "Seif Fadel", "Øyvind Taugland", "Kenneth Bjørnvoll", "Kristian Abrahamsen", "Tomé Cerqueira", "Douglas Modena", "André Pinto", "Adilet Ivadliyev"] },
+  { title: "Kontakt oss", url: "kontakt-oss.html", category: "Side", desc: "Kontaktinfo til brukerstøtte, besøksadresse og skjema for å booke et møte.", keywords: ["telefon", "tlf", "telefonnummer", "ringe", "ring", "nummer", "adresse", "besøksadresse", "e-post", "epost", "mail", "support", "kundeservice", "hjelp", "menneske", "snakke med"] },
   { title: "Redegjørelse etter åpenhetsloven", url: "apenhetsloven.html", category: "Side", desc: "Aktsomhetsvurderinger for grunnleggende menneskerettigheter og anstendige arbeidsforhold hos Visma Property Solutions." },
   { title: "Cookie policy", url: "cookies.html", category: "Side", desc: "Retningslinjer for bruk av cookies (informasjonskapsler) hos Visma Property Solutions." },
   { title: "Datasikkerhet", url: "datasikkerhet.html", category: "Side", desc: "Hvordan Fenistra og Visma Property Solutions ivaretar datasikkerhet, gjennom Visma Security Program og GDPR." },
@@ -87,4 +90,28 @@ export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
   { title: "Fenistra: Mest komplette løsningen for eiendomsforvaltning", url: "media-mest-komplette-losningen.html", category: "I media", desc: "Hvorfor Fenistra posisjoneres som den mest komplette løsningen for eiendomsforvaltning i Norge." },
   { title: "Slik sikrer du effektiv innhenting av MVA-erklæringer", url: "media-mva-erklaringer.html", category: "I media", desc: "Effektive metoder for å samle inn MVA-erklæringer fra leietakere." },
   { title: "Ny rapport i Fenistra kjøpesenter", url: "media-ny-rapport-kjopesenter.html", category: "I media", desc: "Ny rapport lansert i Fenistra Kjøpesenter, for enda bedre innsikt i senterdriften." },
+// Ansatte: navnesøk viser personen og teamet hun/han tilhører
+  { title: "Trygve Vardenær", url: "kundeteam.html", category: "Ansatt", desc: "Kundeteamet i Fenistra." },
+  { title: "Kristian Lien", url: "kundeteam.html", category: "Ansatt", desc: "Kundeteamet i Fenistra." },
+  { title: "Frida Holte", url: "kundeteam.html", category: "Ansatt", desc: "Kundeteamet i Fenistra." },
+  { title: "Beate Paulsen", url: "kundeteam.html", category: "Ansatt", desc: "Kundeteamet i Fenistra." },
+  { title: "Patrick Eriksen", url: "kundeteam.html", category: "Ansatt", desc: "Kundeteamet i Fenistra." },
+  { title: "Henning Aas", url: "kundeteam.html", category: "Ansatt", desc: "Kundeteamet i Fenistra." },
+  { title: "Marius Sømme", url: "kundeteam.html", category: "Ansatt", desc: "Kundeteamet i Fenistra." },
+  { title: "Kristin Falch", url: "kundeteam.html", category: "Ansatt", desc: "Kundeteamet i Fenistra." },
+  { title: "Rokshar Zendehbizadeh", url: "kundeteam.html", category: "Ansatt", desc: "Kundeteamet i Fenistra." },
+  { title: "Espen Kløfta", url: "kundeteam.html", category: "Ansatt", desc: "Kundeteamet i Fenistra." },
+  { title: "Joakim Howlid", url: "produktteam.html", category: "Ansatt", desc: "Produktteamet i Fenistra." },
+  { title: "Veslemøy Sandbæk", url: "produktteam.html", category: "Ansatt", desc: "Produktteamet i Fenistra." },
+  { title: "Vilja Pettersen", url: "produktteam.html", category: "Ansatt", desc: "Produktteamet i Fenistra." },
+  { title: "Lill Reyes", url: "produktteam.html", category: "Ansatt", desc: "Produktteamet i Fenistra." },
+  { title: "Ilham Jillani", url: "produktteam.html", category: "Ansatt", desc: "Produktteamet i Fenistra." },
+  { title: "Seif Fadel", url: "produktteam.html", category: "Ansatt", desc: "Produktteamet i Fenistra." },
+  { title: "Øyvind Taugland", url: "produktteam.html", category: "Ansatt", desc: "Produktteamet i Fenistra." },
+  { title: "Kenneth Bjørnvoll", url: "produktteam.html", category: "Ansatt", desc: "Produktteamet i Fenistra." },
+  { title: "Kristian Abrahamsen", url: "produktteam.html", category: "Ansatt", desc: "Produktteamet i Fenistra." },
+  { title: "Tomé Cerqueira", url: "produktteam.html", category: "Ansatt", desc: "Produktteamet i Fenistra." },
+  { title: "Douglas Modena", url: "produktteam.html", category: "Ansatt", desc: "Produktteamet i Fenistra." },
+  { title: "André Pinto", url: "produktteam.html", category: "Ansatt", desc: "Produktteamet i Fenistra." },
+  { title: "Adilet Ivadliyev", url: "produktteam.html", category: "Ansatt", desc: "Produktteamet i Fenistra." },
 ];
