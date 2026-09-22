@@ -369,6 +369,11 @@
     .lb-prev{left:16px;} .lb-next{right:16px;}
     .lb-count{padding:22px 0 26px;}
   }
+  .feature-row-wide-visual{grid-template-columns:1fr 1.35fr;}
+  .photo-single{display:block;border-radius:14px;overflow:hidden;cursor:zoom-in;}
+  .photo-single img{width:100%;height:auto;display:block;transition:transform .4s ease;}
+  .photo-single:hover img{transform:scale(1.03);}
+  @media (max-width:980px){.feature-row-wide-visual{grid-template-columns:1fr;}}
 </style>
 <section class="index-hero">
   <div class="wrap">
@@ -467,15 +472,15 @@
       </div>
     </div>
 
-    <div class="feature-row" style="border-top:1px solid var(--line);">
+    <div class="feature-row feature-row-wide-visual" style="border-top:1px solid var(--line);">
       <div class="feature-copy">
         <div class="eyebrow">Sosialt i 2026</div>
         <h3 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px,2.6vw,32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);">Skikurs med Johaug på SNØ</h3>
         <p style="color:var(--ink-soft); font-size:16px; max-width:480px;">Utenom det faglige programmet fikk deltakerne prøve seg på langrenn med selveste Therese Johaug som instruktør, i skihallen på SNØ. En litt annerledes teambuilding-økt mellom fagsesjonene.</p>
       </div>
-      <div class="feature-visual" style="height:240px;min-height:0;max-height:240px;">
-        <img style="object-position:center 82%;" src="images/fenistradagene-01.jpg" alt="Skikurs med Therese Johaug på SNØ under Fenistradagene 2026" loading="lazy">
-      </div>
+      <a class="photo-single" href="images/fenistradagene-2026-skikurs-johaug.jpg" target="_blank" rel="noopener" data-lightbox>
+        <img src="images/fenistradagene-2026-skikurs-johaug.jpg" width="1300" height="721" alt="Skikurs med Therese Johaug på SNØ under Fenistradagene 2026" loading="lazy">
+      </a>
     </div>
 
     <div class="mini-cta reveal" style="background:var(--berry-light); border-radius:16px; margin-top:8px; padding:40px 44px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
@@ -643,11 +648,17 @@
 @if (lightbox(); as lb) {
   <div class="lb" role="dialog" aria-modal="true" aria-label="Bildevisning" (click)="onBackdrop($event)">
     <button type="button" class="lb-close" (click)="close()" aria-label="Lukk bildevisning">✕</button>
-    <button type="button" class="lb-nav lb-prev" (click)="step(-1)" aria-label="Forrige bilde">‹</button>
+    @if (lb.images.length > 1) {
+      <button type="button" class="lb-nav lb-prev" (click)="step(-1)" aria-label="Forrige bilde">‹</button>
+    }
     <div class="lb-stage" (pointerdown)="swipeStart($event)" (pointerup)="swipeEnd($event)">
       <img [src]="lb.images[lb.index].src" [alt]="lb.images[lb.index].alt" draggable="false">
     </div>
-    <button type="button" class="lb-nav lb-next" (click)="step(1)" aria-label="Neste bilde">›</button>
-    <div class="lb-count" aria-live="polite">{{ lb.index + 1 }} / {{ lb.images.length }}</div>
+    @if (lb.images.length > 1) {
+      <button type="button" class="lb-nav lb-next" (click)="step(1)" aria-label="Neste bilde">›</button>
+      <div class="lb-count" aria-live="polite">{{ lb.index + 1 }} / {{ lb.images.length }}</div>
+    } @else {
+      <div class="lb-count"></div>
+    }
   </div>
 }

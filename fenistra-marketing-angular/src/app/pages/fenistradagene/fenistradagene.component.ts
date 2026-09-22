@@ -32,11 +32,12 @@ export class FenistradageneComponent implements OnDestroy {
   @HostListener('click', ['$event'])
   onClick(event: MouseEvent): void {
     if (event.ctrlKey || event.metaKey || event.shiftKey || event.button !== 0) return; // new tab etc. still works
-    const link = (event.target as Element | null)?.closest?.('.carousel-track a') as HTMLAnchorElement | null;
-    const track = link?.closest('.carousel-track');
-    if (!link || !track) return;
+    const link = (event.target as Element | null)?.closest?.('.carousel-track a, a[data-lightbox]') as HTMLAnchorElement | null;
+    if (!link) return;
     event.preventDefault();
-    const links = Array.from(track.querySelectorAll('a'));
+    // a gallery opens with all its photos; a single photo (data-lightbox) opens on its own
+    const track = link.closest('.carousel-track');
+    const links = track ? Array.from(track.querySelectorAll('a')) : [link];
     const images = links.map((a) => ({
       src: a.getAttribute('href') ?? '',
       alt: a.querySelector('img')?.getAttribute('alt') ?? '',
@@ -50,6 +51,7 @@ export class FenistradageneComponent implements OnDestroy {
   onKey(event: KeyboardEvent): void {
     if (!this.lightbox()) return;
     if (event.key === 'Escape') this.close();
+    else if (this.lightbox()!.images.length < 2) return;
     else if (event.key === 'ArrowRight') this.step(1);
     else if (event.key === 'ArrowLeft') this.step(-1);
   }
