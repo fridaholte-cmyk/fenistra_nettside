@@ -44,6 +44,7 @@ Fenistra er markedsledende av en grunn: hos oss får du alt, uten kompromiss.
 - [Kundehistorier](https://www.fenistra.no/kunder): Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm (nå Aspelin Reitan) og Backer AS
 - [Om oss](https://www.fenistra.no/om-oss): historien bak Fenistra og Visma Property Solutions
 - [Datasikkerhet](https://www.fenistra.no/datasikkerhet): Visma Security Program og GDPR
+- [Kom i gang](https://www.fenistra.no/kom-i-gang): oppstart steg for steg, AI-opplasting av kontrakter, kobling mot regnskap og hva oppstarten koster
 - [Kontakt oss](https://www.fenistra.no/kontakt-oss): brukerstøtte, adresse og møtebooking
 - [Tilgjengelighetserklæring](https://www.fenistra.no/tilgjengelighet): universell utforming (WCAG 2.1 AA), tastatur, 400 % zoom og klage til Uutilsynet
 

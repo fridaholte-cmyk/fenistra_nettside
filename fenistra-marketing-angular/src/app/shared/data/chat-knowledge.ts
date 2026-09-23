@@ -123,6 +123,10 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
     answer: "Fakturering skjer fra Fenistra, med full kontroll og avstemming mot regnskapet. Avregningen skjer på deres premisser, og avregningsbrevet følger med faktureringen til leietaker. Reguleringen kan tilpasses etter deres behov, og leietaker får reguleringsbrev. <a href=\"losning-fakturering.html\">Se Fakturering →</a>"
   },
   {
+    keywords: ["kom i gang", "oppstart", "implementering", "migrering", "bytte fra", "flytte data", "onboarding", "hvor lang tid"],
+    answer: "Oppstarten går på tre steg: dere laster opp kontraktene, AI leser dem inn og fyller ut feltene, Fenistra kobles mot regnskapssystemet deres, og så er dere live. Har dere data som ikke ligger i kontraktene, som akontobeløp, fordelingsnøkler eller garantier, går vi gjennom det sammen før oppstart. <a href=\"kom-i-gang.html\">Se hvordan oppstarten fungerer →</a>"
+  },
+  {
     keywords: ["konsulenttimer", "skjulte kostnader", "skjult", "oppstart", "oppstartskostnad", "implementering", "komme raskt i gang", "hvor lang tid tar"],
     answer: "Det er enkelt og raskt å komme i gang med Fenistra, uten betalte konsulenttimer og uten skjulte kostnader. Med AI-opplasting drar du kontraktene rett inn, og AI fyller ut feltene for deg. <a href=\"sporsmal.html\">Les mer i Spørsmål og svar →</a>"
   },

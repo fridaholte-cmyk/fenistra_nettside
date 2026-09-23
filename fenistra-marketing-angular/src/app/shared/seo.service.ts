@@ -4,6 +4,9 @@ import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRouteSnapshot, Router } from '@angular/router';
 
 const SITE_ORIGIN = 'https://www.fenistra.no';
+// Delingsbilde (1200×630) som vises når en side deles på LinkedIn, Facebook eller i meldinger
+const OG_IMAGE = 'https://www.fenistra.no/images/og-fenistra.jpg';
+
 const DEFAULT_DESCRIPTION =
   'Markedsledende forvaltningssystem for næringseiendom. Full kontroll på kontrakter, arealer, fakturering, avregning og regulering i én helhetlig løsning.';
 
@@ -33,7 +36,9 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:title', content: title });
     this.meta.updateTag({ property: 'og:description', content: description });
     this.meta.updateTag({ property: 'og:url', content: canonical });
-    this.meta.updateTag({ name: 'twitter:card', content: 'summary' });
+    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.meta.updateTag({ property: 'og:image', content: OG_IMAGE });
+    this.meta.updateTag({ name: 'twitter:image', content: OG_IMAGE });
     this.meta.updateTag({ name: 'twitter:title', content: title });
     this.meta.updateTag({ name: 'twitter:description', content: description });
 
