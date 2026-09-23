@@ -65,12 +65,8 @@
               <div class="nav-mega-text"><h4 role="presentation">Integrasjoner og API</h4><p>Regnskapssystemer og andre koblinger.</p></div>
             </a>
             <a routerLink="/kom-i-gang" class="nav-mega-item">
-              <div class="nav-mega-icon"><svg width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120l0 136c0 8 4 15.5 10.7 19.9l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg></div>
+              <div class="nav-mega-icon"><svg width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M480 256a224 224 0 1 1 -448 0 224 224 0 1 1 448 0zM0 256a256 256 0 1 0 512 0 256 256 0 1 0 -512 0zM240 112l0 144c0 5.4 2.7 10.3 7.1 13.3l96 64c7.4 4.9 17.3 2.9 22.2-4.4s2.9-17.3-4.4-22.2L272 247.4 272 112c0-8.8-7.2-16-16-16s-16 7.2-16 16z"/></svg></div>
               <div class="nav-mega-text"><h4 role="presentation">Kom i gang</h4><p>Slik går oppstarten steg for steg.</p></div>
-            </a>
-            <a routerLink="/sporsmal" class="nav-mega-item">
-              <div class="nav-mega-icon"><svg width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M480 256a224 224 0 1 0 -448 0 224 224 0 1 0 448 0zM0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0zm256-96c-26.5 0-48 21.5-48 48 0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80s80 35.8 80 80c0 39.6-25.7 60.3-46.2 70.1-11.5 5.5-17.8 14.5-17.8 22.2l0 5.7c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-5.7c0-24.6 18.3-42.6 36-51 14.5-6.9 28-18.8 28-41.2 0-26.5-21.5-48-48-48zM232 376a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg></div>
-              <div class="nav-mega-text"><h4 role="presentation">Spørsmål</h4><p>Svar på det du lurer på.</p></div>
             </a>
             <a routerLink="/datasikkerhet" class="nav-mega-item">
               <div class="nav-mega-icon"><svg width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M231.1 7.9c16-6.8 34-6.8 50 0L457.8 82.8c22 9.3 38.4 31 38.3 57.2-.5 99.2-41.3 280.7-213.7 363.2-16.7 8-36.1 8-52.7 0-172.4-82.5-213.1-264-213.6-363.2-.1-26.2 16.3-47.9 38.3-57.2L231.1 7.9zm37.5 29.4c-8-3.4-17-3.4-25 0l-176.7 75c-11.3 4.8-18.8 15.5-18.8 27.6 .5 94 39.3 259.8 195.4 334.5 7.9 3.8 17.2 3.8 25.1 0 156.1-74.7 195-240.4 195.5-334.5 .1-12.1-7.5-22.8-18.8-27.6l-176.7-75zm54.5 132.9c5.2-7.1 15.2-8.7 22.3-3.5s8.7 15.2 3.5 22.3L243.4 334.2c-2.8 3.8-7.1 6.2-11.8 6.5s-9.3-1.4-12.6-4.8l-54.4-56.3c-6.1-6.4-6-16.5 .4-22.6s16.5-5.9 22.6 .4l41.2 42.6 94.4-129.8z"/></svg></div>
@@ -116,7 +112,7 @@
   <div class="m-acc-panel" id="drawerRessurser" [class.open]="openSection === 'ressurser'"><div class="m-acc-inner">
     <a routerLink="/blogg" (click)="closeMobileDrawer()">Blogg</a>
     <a routerLink="/integrasjoner" (click)="closeMobileDrawer()">Integrasjoner og API</a>
-    <a routerLink="/sporsmal" (click)="closeMobileDrawer()">Spørsmål</a>
+    <a routerLink="/kom-i-gang" (click)="closeMobileDrawer()">Kom i gang</a>
     <a routerLink="/datasikkerhet" (click)="closeMobileDrawer()">Datasikkerhet</a>
   </div></div>
   <a routerLink="/ki" (click)="closeMobileDrawer()">AI</a>
