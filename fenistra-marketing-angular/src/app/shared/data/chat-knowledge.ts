@@ -26,7 +26,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["standard"],
-    answer: "Fenistra Standard passer for små og mellomstore eiendomsselskaper, og dekker hele arbeidsflyten fra kontrakt til rapportering: Kontrakt, Fakturering, Regnskap, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse og Inntektsbudsjett, i tillegg til transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering."
+    answer: "Fenistra Standard passer for små og mellomstore eiendomsselskaper, og dekker hele arbeidsflyten fra kontrakt til rapportering: Kontrakt, Fakturering, Regnskap, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett og Sikkerhetsstyring, i tillegg til transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering."
   },
   {
     keywords: ["premium"],
@@ -38,7 +38,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["regnskapssystem", "integreres"],
-    answer: "Sannsynligvis ja. Fenistra er i dag integrert mot rundt 20 ulike regnskapssystemer i produksjon hos kunder, blant annet Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net, i tillegg til en rekke andre ERP-systemer som SAP, Microsoft Dynamics og 24SevenOffice. Se full oversikt over regnskapsintegrasjoner. <a href=\"integrasjon-regnskap-erp.html\">Les mer om Regnskap og ERP-integrasjoner →</a>"
+    answer: "Sannsynligvis ja. Fenistra er i dag integrert mot rundt 20 regnskaps- og ERP-systemer i produksjon hos kunder. Fem av dem har API-integrasjon med dataflyt begge veier, de øvrige sender data én vei, blant annet Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net, i tillegg til en rekke andre ERP-systemer som SAP, Microsoft Dynamics og 24SevenOffice. Se full oversikt over regnskapsintegrasjoner. <a href=\"integrasjon-regnskap-erp.html\">Les mer om Regnskap og ERP-integrasjoner →</a>"
   },
   {
     keywords: ["koster", "kostnad", "abonnement"],
@@ -214,7 +214,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["regnskap", "regnskapssystem", "kundereskontro", "fenistra regnskap"],
-    answer: "Fenistra Regnskap: Hold eiendomsøkonomien avstemt og oppdatert, med integrasjon mot regnskapssystemene dere allerede bruker i dag. Inkludert i Fenistra Standard. Blant annet: Integrasjon mot over 20 ulike regnskapssystemer i produksjon; Avstemming av fakturering og felleskostnader; Grunnlag for budsjettering og oppfølging. <a href=\"losning-regnskap.html\">Les mer om Fenistra Regnskap →</a>"
+    answer: "Fenistra Regnskap: Hold eiendomsøkonomien avstemt og oppdatert, med integrasjon mot regnskapssystemene dere allerede bruker i dag. Inkludert i Fenistra Standard. Blant annet: Integrasjon mot rundt 20 regnskaps- og ERP-systemer, fem av dem med dataflyt begge veier; Avstemming av fakturering og felleskostnader; Grunnlag for budsjettering og oppfølging. <a href=\"losning-regnskap.html\">Les mer om Fenistra Regnskap →</a>"
   },
   {
     keywords: ["sikkerhetsstyring", "bankgaranti", "depositum", "sikkerhet", "fenistra sikkerhetsstyring"],
@@ -223,7 +223,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   /* Skjult fra nettsiden:
   {
     keywords: ["tegning", "tegninger", "plantegning", "npoint", "fenistra tegning"],
-    answer: "Fenistra Tegning: Ett sentralt arkiv for alle plantegninger, koblet direkte til kontrakt, leietaker og areal, uten AutoCAD eller andre spesialprogrammer. Tilleggsprodukt i Fenistra Premium. Blant annet: Sentralt arkiv for alle plantegninger, tilgjengelig for hele organisasjonen; Se tegninger direkte i nettleseren, ingen spesialprogramvare nødvendig; Full versjonshistorikk når tegninger oppdateres eller erstattes. <a href=\"losning-tegning.html\">Les mer om Fenistra Tegning →</a>"
+    answer: "Fenistra Tegning: Ett sentralt arkiv for alle plantegninger, koblet direkte til kontrakt, leietaker og areal, uten AutoCAD eller andre spesialprogrammer. Tilleggsprodukt i Fenistra Premium. Blant annet: Sentralt arkiv for alle plantegninger, tilgjengelig for hele organisasjonen; Se tegninger direkte i nettleseren, ingen spesialprogramvare nødvendig; Full versjonshistorikk når tegninger oppdateres eller erstattes. <a href=\"kontakt-oss.html\">Ta kontakt for å høre mer om Tegning →</a>"
   },
   */
   {
@@ -232,7 +232,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["regnskap integrasjon", "erp", "tripletex", "xledger", "poweroffice", "visma business nxt", "visma.net", "sap", "24sevenoffice", "unimicro", "microsoft dynamics", "regnskap", "integrasjon", "visma", "business", "microsoft", "dynamics"],
-    answer: "Fenistra har direkte API-integrasjon mot fem regnskapssystemer: Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net, med automatisk dataflyt begge veier. I tillegg har vi integrasjoner mot en rekke andre ERP-systemer som 24SevenOffice, UniMicro, Microsoft Dynamics, Visma Business, Visma Global, SAP, PowerOffice, Unit4 ERP, Infor M3 og flere. Bruker dere noe annet, ta kontakt, så ser vi på løsningen. <a href=\"integrasjon-regnskap-erp.html\">Les mer om Regnskap og ERP-integrasjoner →</a>"
+    answer: "Fenistra har API-integrasjon med dataflyt begge veier mot fem regnskapssystemer: Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net, med automatisk dataflyt begge veier. I tillegg har vi integrasjoner mot en rekke andre ERP-systemer som 24SevenOffice, UniMicro, Microsoft Dynamics, Visma Business, Visma Global, SAP, PowerOffice, Unit4 ERP, Infor M3 og flere. Bruker dere noe annet, ta kontakt, så ser vi på løsningen. <a href=\"integrasjon-regnskap-erp.html\">Les mer om Regnskap og ERP-integrasjoner →</a>"
   },
   {
     keywords: ["årsoppgjør", "finale"],
@@ -392,7 +392,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["integrer", "integrasjon", "regnskapssystem", "tripletex", "visma", "xledger", "poweroffice", "sap", "erp", "24sevenoffice"],
-    answer: "Sannsynligvis ja! Fenistra er i dag integrert mot rundt 20 ulike regnskapssystemer i produksjon hos kunder – blant annet Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net via direkte API-integrasjon. <a href=\"integrasjon-regnskap-erp.html\">Les mer om Regnskap og ERP-integrasjoner →</a>"
+    answer: "Sannsynligvis ja! Fenistra er i dag integrert mot rundt 20 regnskaps- og ERP-systemer i produksjon hos kunder. Fem av dem har API-integrasjon med dataflyt begge veier, de øvrige sender data én vei – blant annet Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net via direkte API-integrasjon. <a href=\"integrasjon-regnskap-erp.html\">Les mer om Regnskap og ERP-integrasjoner →</a>"
   },
   {
     keywords: ["løsning", "løsninger", "hva kan fenistra"],

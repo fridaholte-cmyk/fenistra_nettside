@@ -73,7 +73,7 @@ export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
   { title: "Datasikkerhet", url: "datasikkerhet.html", category: "Side", desc: "Hvordan Fenistra og Visma Property Solutions ivaretar datasikkerhet, gjennom Visma Security Program og GDPR." },
   { title: "Kjøpesenterløsninger", url: "integrasjon-kjopesenter.html", category: "Integrasjon", desc: "Fenistra integreres med Viametrics og IMAS for ferdselstelling og senterdata." },
   { title: "Alle systemer vi integrerer mot", url: "integrasjoner-alle-systemer.html", category: "Integrasjon", desc: "Full oversikt over alle systemer Fenistra integreres mot: regnskap/ERP, årsoppgjør, drift, rapportering og kjøpesenter." },
-  { title: "Integrasjoner", url: "integrasjoner.html", category: "Integrasjon", desc: "Fenistra integreres i dag mot rundt 20 systemer i produksjon hos kunder." },
+  { title: "Integrasjoner", url: "integrasjoner.html", category: "Integrasjon", desc: "Fenistra integreres i dag mot over 20 systemer i produksjon hos kunder." },
   { title: "Fenistra Sikkerhetsstyring", url: "losning-sikkerhetsstyring.html", category: "Løsning", desc: "Full oversikt over bankgaranti og depositum i porteføljen, med varsel når sikkerhet mangler eller utløper." },
   // Skjult fra nettsiden: { title: "Fenistra Tegning", url: "losning-tegning.html", category: "Løsning", desc: "Ett sentralt arkiv for alle plantegninger, koblet direkte til kontrakt, leietaker og areal." },
   { title: "Sjekk hvilke løsninger som passer for deg", url: "pakke-resultat.html", category: "Side", desc: "Se hvilken Fenistra-pakke som passer for deres portefølje, og book møte med salg." },

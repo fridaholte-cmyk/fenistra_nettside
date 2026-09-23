@@ -22,14 +22,14 @@ Fenistra er markedsledende av en grunn: hos oss får du alt, uten kompromiss.
 ### I tillegg
 
 - **Moderne og intuitivt grensesnitt**, og enkelt og raskt å komme i gang: ingen betalte konsulenttimer og ingen skjulte kostnader.
-- **Sterk integrasjonsmotor (Hub):** kobler seg via API mot regnskapssystemer som Tripletex, PowerOffice GO, Xledger og Visma.net. Det eliminerer dobbeltregistrering og sikrer at leiereguleringer og fakturagrunnlag flyter automatisk over til regnskapet. Fenistra er integrert mot rundt 20 systemer i produksjon hos kunder.
+- **Sterk integrasjonsmotor (Hub):** kobler seg via API mot regnskapssystemer som Tripletex, PowerOffice GO, Xledger og Visma.net. Det eliminerer dobbeltregistrering og sikrer at leiereguleringer og fakturagrunnlag flyter automatisk over til regnskapet. Fenistra er integrert mot over 20 systemer i produksjon hos kunder.
 - **Automatisering av rutineoppgaver** som fakturering, felleskostnadsavregning, MVA-håndtering og omsetningsavregning.
 - **Fleksibelt og skalerbart:** velg pakken som passer i dag, og legg til funksjonalitet etter hvert som porteføljen vokser.
 - **Innebygd AI:** en KI-assistent i hele systemet og AI-opplasting av kontrakter.
 
 ## Pakker
 
-- **Fenistra Standard:** for små og mellomstore eiendomsselskaper. Kontrakt, fakturering, regnskap, rapportering, dokument, felleskostnader, omsetningsavregning, formuesverdsettelse og inntektsbudsjett, pluss transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, protokoller og digital signering.
+- **Fenistra Standard:** for små og mellomstore eiendomsselskaper. Kontrakt, fakturering, regnskap, rapportering, dokument, felleskostnader, omsetningsavregning, formuesverdsettelse, inntektsbudsjett og sikkerhetsstyring, pluss transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, protokoller og digital signering.
 - **Fenistra Premium:** for store eiendomsselskaper. Alt i Standard, alle tilleggsprodukter (justering, arealberegning, kjøpesenter) og en egen dedikert kunderådgiver.
 
 ## Hovedsider
