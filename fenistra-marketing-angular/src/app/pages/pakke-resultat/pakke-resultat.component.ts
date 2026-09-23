@@ -27,7 +27,7 @@ export class PakkeResultatComponent implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    createHubspotForm('#hubspotMeetingForm', 'book_demo').then((state) => (this.formState = state));
+    createHubspotForm('#hubspotMeetingForm', 'book_demo', true).then((state) => (this.formState = state));
   }
 
   retakeQuiz() {
