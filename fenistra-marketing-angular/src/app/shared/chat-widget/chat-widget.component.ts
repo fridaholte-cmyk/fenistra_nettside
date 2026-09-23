@@ -12,6 +12,12 @@ interface ChatMessage {
   suggestions?: string[];
 }
 
+// Chat rate limit: at most this many questions per minute, so a script can't flood the chat
+// (and, with consent, the HubSpot log behind it). Real enforcement needs the server; this stops
+// the ordinary case and is also a kinder way to tell a fast typer to slow down.
+const MAX_QUESTIONS = 4;
+const WINDOW_MS = 60_000;
+
 const DEFAULT_SUGGESTIONS = [
   'Hvorfor bør jeg velge Fenistra?',
   'Kan dere integreres med vårt regnskapssystem?',
@@ -30,6 +36,7 @@ export class ChatWidgetComponent {
   draft = '';
   messages: ChatMessage[] = [];
   private greeted = false;
+  private sentAt: number[] = [];
 
   @ViewChild('messagesEl') messagesEl?: ElementRef<HTMLElement>;
   @ViewChild('chatInputEl') chatInputEl?: ElementRef<HTMLInputElement>;
@@ -66,6 +73,20 @@ export class ChatWidgetComponent {
   handleSend(text: string) {
     const trimmed = text.trim();
     if (!trimmed) return;
+
+    const now = Date.now();
+    this.sentAt = this.sentAt.filter((t) => now - t < WINDOW_MS);
+    if (this.sentAt.length >= MAX_QUESTIONS) {
+      const waitSeconds = Math.ceil((WINDOW_MS - (now - this.sentAt[0])) / 1000);
+      this.addMessage(
+        `Du kan stille ${MAX_QUESTIONS} spørsmål i minuttet. Prøv igjen om ${waitSeconds} sekunder.` +
+        '<br><br>Haster det, ta kontakt med <a href="/kundeteam" data-internal>kundeteamet</a>.',
+        'bot'
+      );
+      return;
+    }
+    this.sentAt.push(now);
+
     this.addMessage(this.escapeHtml(trimmed), 'user');
     setTimeout(() => {
       const answer = this.findAnswer(trimmed);
