@@ -360,11 +360,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kundeteamet kontakt", "hvem kan jeg kontakte kunde", "brukerstøtte kontakt person", "head of customer success"],
-    answer: "Kundeteamet ledes av Trygve Vardenær, Head of Customer Success (trygve.vardenar@visma.com). I teamet finner du også kundekontakter som Kristian Lien, Frida Holte, Beate Paulsen og Patrick Eriksen, brukerstøtte ved Henning Aas, og konsulenter som Marius Sømme, Kristin Falch og Rokhsar Zendehbizadeh. <a href=\"kundeteam.html\">Les mer om Kundeteamet →</a>"
+    answer: "Kundeteamet ledes av Trygve Vardenær, Head of Customers and Growth (trygve.vardenar@visma.com). I teamet finner du også Kristian Lien (Sales Director), kundekontaktene Frida Holte, Beate Paulsen og Patrick Eriksen, brukerstøtte ved Henning Aas, og konsulentene Marius Sømme, Kristin Falch og Rokhsar Zendehbizadeh. <a href=\"kundeteam.html\">Les mer om Kundeteamet →</a>"
   },
   {
     keywords: ["produktteamet kontakt", "hvem lager fenistra", "joakim howlid", "daglig leder fenistra"],
-    answer: "Produktteamet ledes av Joakim Howlid, daglig leder og produktsjef i Fenistra. Teamet består ellers av produktledelse, UX-designere og et utviklingsteam på rundt ti personer som bygger og videreutvikler løsningene. <a href=\"produktteam.html\">Les mer om Produktteamet →</a>"
+    answer: "Produktteamet ledes av Joakim Howlid, daglig leder i Fenistra. Teamet består ellers av produktledelse, UX-designere og et utviklingsteam på rundt ti personer som bygger og videreutvikler løsningene. <a href=\"produktteam.html\">Les mer om Produktteamet →</a>"
   },
   {
     keywords: ["personvern", "personopplysninger", "gdpr", "personvernerklæring"],
