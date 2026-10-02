@@ -368,7 +368,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["personvern", "personopplysninger", "gdpr", "personvernerklæring"],
-    answer: "Personvernerklæringen beskriver hvordan Visma Property Solutions, som leverer Fenistra, håndterer personopplysninger og data. Se hele erklæringen på Personvern-siden. <a href=\"personvern.html\">Les mer om Personvern →</a>"
+    answer: "Personvernerklæringen beskriver hvordan vi behandler personopplysninger på nettsiden: skjemaene, chatten, informasjonskapslene og driften. Opplysningene inne i Fenistra-systemet behandles på vegne av arbeidsgiveren din, etter databehandleravtalen med virksomheten. <a href=\"personvern.html\">Les mer om Personvern →</a>"
   },
   {
     keywords: ["cookies", "informasjonskapsler", "cookie policy"],

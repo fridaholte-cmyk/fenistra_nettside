@@ -78,7 +78,7 @@ export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
   { title: "Fenistra Sikkerhetsstyring", url: "losning-sikkerhetsstyring.html", category: "Løsning", desc: "Full oversikt over bankgaranti og depositum i porteføljen, med varsel når sikkerhet mangler eller utløper." },
   // Skjult fra nettsiden: { title: "Fenistra Tegning", url: "losning-tegning.html", category: "Løsning", desc: "Ett sentralt arkiv for alle plantegninger, koblet direkte til kontrakt, leietaker og areal." },
   { title: "Sjekk hvilke løsninger som passer for deg", url: "pakke-resultat.html", category: "Side", desc: "Se hvilken Fenistra-pakke som passer for deres portefølje, og book møte med salg." },
-  { title: "Personvernerklæring", url: "personvern.html", category: "Side", desc: "Retningslinjer for datahåndtering og personvern hos Visma Property Solutions." },
+  { title: "Personvernerklæring", url: "personvern.html", category: "Side", desc: "Slik behandler vi personopplysninger på nettsiden fenistra.no: skjemaer, chat, informasjonskapsler og drift." },
   { title: "Backer rigger for fremtiden", url: "media-backer.html", category: "I media", desc: "Backer velger Fenistra som nytt forvaltningssystem for sin eiendomsportefølje." },
   { title: "Fenistra Brukerforum 2024", url: "media-brukerforum-2024-invitasjon.html", category: "I media", desc: "Invitasjon til Fenistra Brukerforum 2024, faglig påfyll, nettverksbygging og sosialt samvær." },
   { title: "Oppsummering av Fenistra Brukerforum 2024", url: "media-brukerforum-2024-oppsummering.html", category: "I media", desc: "Innsikt og innovasjon fra bransjens egne foredragsholdere på Fenistra Brukerforum 2024." },
