@@ -32,11 +32,11 @@ export class FenistradageneComponent implements OnDestroy {
   @HostListener('click', ['$event'])
   onClick(event: MouseEvent): void {
     if (event.ctrlKey || event.metaKey || event.shiftKey || event.button !== 0) return; // new tab etc. still works
-    const link = (event.target as Element | null)?.closest?.('.carousel-track a, a[data-lightbox]') as HTMLAnchorElement | null;
+    const link = (event.target as Element | null)?.closest?.('.carousel-track a, [data-gallery] a, a[data-lightbox]') as HTMLAnchorElement | null;
     if (!link) return;
     event.preventDefault();
     // a gallery opens with all its photos; a single photo (data-lightbox) opens on its own
-    const track = link.closest('.carousel-track');
+    const track = link.closest('.carousel-track, [data-gallery]');
     const links = track ? Array.from(track.querySelectorAll('a')) : [link];
     const images = links.map((a) => ({
       src: a.getAttribute('href') ?? '',

@@ -374,269 +374,262 @@
   .photo-single img{width:100%;height:auto;display:block;transition:transform .4s ease;}
   .photo-single:hover img{transform:scale(1.03);}
   @media (max-width:980px){.feature-row-wide-visual{grid-template-columns:1fr;}}
+
+  /* ===== Fenistradagene, ny layout ===== */
+  .fd-hero{position:relative;min-height:min(78vh,680px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--plum-900);}
+  .fd-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;transform:scale(1.04);animation:fdZoom 18s ease-out forwards;}
+  @keyframes fdZoom{to{transform:scale(1);}}
+  .fd-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,9,22,.25) 0%,rgba(19,9,22,.55) 45%,rgba(19,9,22,.95) 100%);}
+  .fd-hero .wrap{position:relative;z-index:1;padding-top:120px;padding-bottom:72px;width:100%;}
+  .fd-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(38px,5vw,68px);line-height:1.04;letter-spacing:-0.025em;max-width:880px;margin-bottom:20px;text-wrap:balance;}
+  .fd-hero h1 strong{display:block;font-weight:600;color:var(--berry-mid);}
+  .fd-hero p{font-size:18px;color:rgba(255,255,255,.85);max-width:620px;line-height:1.6;}
+  .fd-hero .fd-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
+  .fd-hero .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff;}
+  .fd-hero .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:#fff;}
+  .fd-pill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(6px);font-family:var(--font-mono);font-size:12px;letter-spacing:.04em;margin-bottom:22px;}
+  .fd-pill .pulse{width:7px;height:7px;border-radius:50%;background:var(--berry-mid);box-shadow:0 0 0 0 rgba(188,90,131,.6);animation:fdPulse 2.2s ease-out infinite;}
+  @keyframes fdPulse{70%{box-shadow:0 0 0 9px rgba(188,90,131,0);}100%{box-shadow:0 0 0 0 rgba(188,90,131,0);}}
+
+  .fd-stats{background:var(--plum-900);color:#fff;border-top:1px solid rgba(255,255,255,.08);}
+  .fd-stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:44px;padding-bottom:56px;}
+  .fd-stat .num{font-family:var(--font-mono);font-weight:700;font-size:clamp(28px,3.2vw,42px);color:var(--berry-mid);}
+  .fd-stat .lbl{margin-top:6px;font-size:14px;color:rgba(255,255,255,.8);max-width:220px;}
+
+  section.fd-sec{padding:112px 0;}
+  section.fd-alt{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .fd-head{max-width:720px;margin-bottom:44px;}
+  .fd-head h2{font-family:var(--font-display);font-weight:300;font-size:clamp(28px,3.2vw,44px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:14px;text-wrap:balance;}
+  .fd-head h2 strong{font-weight:600;color:var(--berry-deep);}
+  .fd-head p{font-size:16.5px;color:var(--ink-soft);line-height:1.6;}
+
+  .fd-quote{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;max-width:920px;}
+  .fd-quote .mark{font-family:var(--font-display);font-size:120px;line-height:.7;color:var(--berry);font-weight:600;}
+  .fd-quote blockquote{font-family:var(--font-display);font-weight:300;font-size:clamp(22px,2.6vw,32px);line-height:1.38;letter-spacing:-0.01em;color:var(--ink);margin:0 0 18px;}
+  .fd-quote .who{font-family:var(--font-mono);font-size:13px;color:var(--plum);}
+
+  .fd-2026{display:grid;grid-template-columns:1fr 1.5fr;gap:56px;align-items:start;}
+  .fd-2026 .eyebrow{margin-bottom:16px;}
+  .fd-2026 h2{font-family:var(--font-display);font-weight:300;font-size:clamp(28px,3vw,40px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:16px;}
+  .fd-2026 h2 strong{font-weight:600;color:var(--berry-deep);}
+  .fd-2026 p{font-size:16px;color:var(--ink-soft);line-height:1.6;margin-bottom:18px;}
+  .fd-points{list-style:none;display:flex;flex-direction:column;gap:12px;margin:22px 0 0;padding:0;}
+  .fd-points li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink);}
+  .fd-points li span{flex-shrink:0;font-family:var(--font-mono);font-weight:700;font-size:12px;color:var(--berry);margin-top:3px;}
+
+  .fd-mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:10px;}
+  .fd-mosaic a{position:relative;display:block;border-radius:14px;overflow:hidden;background:var(--mist);}
+  .fd-mosaic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1);}
+  .fd-mosaic a:hover img{transform:scale(1.05);}
+  .fd-mosaic .m-big{grid-column:span 3;grid-row:span 2;}
+  .fd-mosaic .m-tall{grid-row:span 2;}
+  .fd-mosaic .m-wide{grid-column:span 2;}
+  .fd-more{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:40px;flex-wrap:wrap;}
+  .fd-more h3{font-size:18px;font-weight:600;color:var(--ink);}
+  .fd-strip{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;margin-top:18px;scrollbar-width:thin;}
+  .fd-strip a{flex:0 0 auto;width:220px;height:160px;border-radius:12px;overflow:hidden;scroll-snap-align:start;}
+  .fd-strip img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;}
+  .fd-strip a:hover img{transform:scale(1.05);}
+  .fd-strip-nav{display:flex;gap:8px;}
+  .fd-strip-nav button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:20px;color:var(--ink);cursor:pointer;transition:border-color .2s ease;}
+  .fd-strip-nav button:hover{border-color:var(--berry);color:var(--berry-deep);}
+
+  .fd-johaug{display:grid;grid-template-columns:1.3fr 1fr;border-radius:20px;overflow:hidden;background:var(--plum-deep);color:#fff;margin-top:56px;}
+  .fd-johaug a{display:block;min-height:320px;}
+  .fd-johaug img{width:100%;height:100%;object-fit:cover;display:block;}
+  .fd-johaug div{padding:44px 40px;display:flex;flex-direction:column;justify-content:center;}
+  .fd-johaug .eyebrow{align-self:flex-start;}
+  .fd-johaug h3{font-family:var(--font-display);font-weight:300;font-size:clamp(24px,2.6vw,34px);letter-spacing:-0.02em;margin-bottom:12px;}
+  .fd-johaug h3 strong{font-weight:600;color:var(--berry-mid);}
+  .fd-johaug p{color:rgba(255,255,255,.8);font-size:15.5px;line-height:1.6;}
+
+  .fd-years{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .fd-year{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;}
+  .fd-year-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;height:200px;}
+  .fd-year-photos a{display:block;overflow:hidden;}
+  .fd-year-photos img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;}
+  .fd-year-photos a:hover img{transform:scale(1.05);}
+  .fd-year-body{padding:26px 26px 28px;}
+  .fd-year-body .yr{font-family:var(--font-mono);font-size:12.5px;color:var(--berry-deep);font-weight:700;}
+  .fd-year-body h3{font-size:19px;font-weight:600;color:var(--ink);margin:8px 0 10px;}
+  .fd-year-body p{font-size:14.5px;color:var(--ink-soft);line-height:1.6;}
+  .fd-year-body .go{display:inline-block;margin-top:12px;font-family:var(--font-mono);font-size:12.5px;color:var(--berry-deep);font-weight:600;}
+
+  .fd-timeline{margin-top:48px;display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--line);}
+  .fd-timeline div{flex:1 1 120px;padding:18px 16px 0 0;position:relative;}
+  .fd-timeline div::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--plum);opacity:.5;}
+  .fd-timeline .yr{display:block;font-family:var(--font-mono);font-weight:700;font-size:14px;color:var(--ink);}
+  .fd-timeline .loc{font-size:13px;color:var(--ink-soft);}
+
+  @media (max-width:980px){
+    .fd-stats .wrap{grid-template-columns:1fr 1fr;row-gap:28px;}
+    .fd-2026,.fd-years,.fd-johaug{grid-template-columns:1fr;}
+    .fd-mosaic{grid-auto-rows:120px;}
+  }
+  @media (max-width:760px){
+    section.fd-sec{padding:72px 0;}
+    .fd-hero .wrap{padding-top:96px;padding-bottom:48px;}
+    .fd-mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:130px;}
+    .fd-mosaic .m-big{grid-column:span 2;}
+    .fd-quote{grid-template-columns:1fr;gap:4px;}
+    .fd-quote .mark{font-size:80px;}
+    .fd-johaug div{padding:28px 24px;}
+  }
+  @media (prefers-reduced-motion:reduce){.fd-hero-bg{animation:none;transform:none;}}
 </style>
-<section class="index-hero">
+<!-- ================= HERO ================= -->
+<section class="fd-hero">
+  <img class="fd-hero-bg" src="images/fenistradagene-2026-13.jpg" width="1100" height="733" alt="Plenumssalen på Thon Hotel Snø under Fenistradagene 2026" fetchpriority="high">
   <div class="wrap">
-    <div class="eyebrow">Fenistradagene</div>
-    <h1>Fenistradagene</h1>
-    <p>Hvert år i juni samler vi alle Fenistra-kunder til to dager med faglig påfyll, nettverksbygging og sosialt samvær. Arrangementet het tidligere Fenistra Brukerforum, og har gått av stabelen i over 25 år. Alle kunder er velkomne.</p>
+    <div class="fd-pill"><span class="pulse"></span>Hvert år i juni · for alle Fenistra-kunder</div>
+    <h1>Fenistradagene. <strong>To dager med fag, folk og framtid.</strong></h1>
+    <p>Hvert år samler vi Fenistra-kundene til to dager med faglig påfyll, nettverksbygging og sosialt samvær. Det som startet som Fenistra Brukerforum i 1999, er i dag bransjens egen møteplass.</p>
+    <div class="fd-actions">
+      <a routerLink="/kontakt-oss" class="btn btn-primary">Meld interesse for 2027</a>
+      <a routerLink="/fenistradagene" fragment="2026" class="btn btn-ghost">Se bilder fra 2026 ↓</a>
+    </div>
   </div>
 </section>
 
-<section class="timeline-page">
-  <div class="wrap timeline-layout">
-    <div class="timeline-main">
-
-<section id="historikk" class="related-section" style="padding-top:24px;padding-bottom:20px;">
-  <div>
-    <div class="quote-block reveal">
-      <div class="eyebrow">Kompetanse og fellesskap</div>
-      <blockquote>«Fenistradagene er en kjempefin mulighet til å lære mer og bli inspirert. Her møter vi andre i bransjen, og vi får utvekslet og delt fagkompetanse.»</blockquote>
-      <p class="attribution">Lene Hansen, Servicekoordinator, Höegh Eiendom</p>
-      <a routerLink="/kunder" class="btn btn-light" style="margin-top:10px;">Les kundehistorien til Höegh Eiendom</a>
-    </div>
-
-    <div class="section-head" style="margin-top:72px;">
-      <div class="eyebrow">Historikk</div>
-      <h2>Over 25 år med samlinger for Fenistra-kunder</h2>
-      <p>Fenistradagene het tidligere Fenistra Brukerforum, og har vært en fast årlig arena for eiendomsbransjen i over 25 år. Her samles kunder på tvers av selskaper for faglig påfyll, erfaringsutveksling og nettverksbygging, hvert år i juni.</p>
-    </div>
-    <div class="mini-grid">
-      <div class="mini-card">
-        <h3>Fra Brukerforum til Fenistradagene</h3>
-        <p>Fenistra Brukerforum ble arrangert for første gang i 1999, og var en årlig tradisjon i over 25 år frem til 2026, da det skiftet navn og konsept til Fenistradagene.</p>
-      </div>
-      <div class="mini-card">
-        <h3>Åpent for alle kunder</h3>
-        <p>Uansett om dere er nye eller erfarne Fenistra-brukere, er Fenistradagene en arena for hele kundebasen.</p>
-      </div>
-      <div class="mini-card">
-        <h3>Utforsk hvert år</h3>
-        <p>Bla gjennom tidslinjen til høyre for å se hvor og når vi har samlet kundene våre, helt tilbake til 2015.</p>
-      </div>
-    </div>
-
+<section class="fd-stats" aria-label="Fenistradagene i tall">
+  <div class="wrap">
+    <div class="fd-stat"><div class="num">1999</div><div class="lbl">Det første Fenistra Brukerforum</div></div>
+    <div class="fd-stat"><div class="num">25+</div><div class="lbl">År med årlige samlinger for kundene</div></div>
+    <div class="fd-stat"><div class="num">2 dager</div><div class="lbl">Faglig program, workshops og sosialt</div></div>
+    <div class="fd-stat"><div class="num">Alle</div><div class="lbl">Fenistra-kunder er velkomne, nye som erfarne</div></div>
   </div>
 </section>
 
-<section id="2026" style="padding-top:10px;border-top:1px solid var(--line);scroll-margin-top:90px;">
-  <div>
+<!-- ================= SITAT ================= -->
+<section class="fd-sec">
+  <div class="wrap">
+    <div class="fd-quote reveal">
+      <span class="mark" aria-hidden="true">«</span>
+      <div>
+        <blockquote>Fenistradagene er en kjempefin mulighet til å lære mer og bli inspirert. Her møter vi andre i bransjen, og vi får utvekslet og delt fagkompetanse.</blockquote>
+        <div class="who">Lene Hansen, Servicekoordinator, Höegh Eiendom</div>
+        <a routerLink="/kunder" class="btn btn-light" style="margin-top:22px;">Les kundehistorien til Höegh Eiendom →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="feature-row reveal" style="grid-template-columns:1fr;padding-top:48px;">
-      <div class="feature-copy">
+<!-- ================= 2026 ================= -->
+<section class="fd-sec fd-alt" id="2026" style="scroll-margin-top:76px;">
+  <div class="wrap">
+    <div class="fd-2026">
+      <div class="reveal">
         <div class="eyebrow">3.–4. juni 2026 · Thon Hotel Snø</div>
-        <h3 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px,2.6vw,32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);">Fenistradagene 2026</h3>
-        <p style="color:var(--ink-soft); font-size:16px; margin-bottom:18px; max-width:480px;">Etter over 25 år med Fenistra Brukerforum gjennomførte vi i år arrangementet i ny drakt, med nytt navn og ny ramme: Fenistradagene. Dagene ble arrangert på Thon Hotel Snø, med den imponerende snøhallen som kulisse for både fag og sosialt samvær.</p>
-        <ul class="feature-list">
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>To dager med faglig program og sosialt samvær</li>
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Parallelle fagsesjoner, tilpasset både nye og erfarne Fenistra-brukere</li>
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Den imponerende snøhallen hos Thon Hotel Snø som unik kulisse for dagene</li>
+        <h2>Nytt navn. <strong>Ny energi.</strong></h2>
+        <p>Etter over 25 år som Fenistra Brukerforum gjennomførte vi i år samlingen i ny drakt, med nytt navn og ny ramme. Og vi lanserte Felix fra scenen.</p>
+        <ul class="fd-points">
+          <li><span>01</span>To dager med faglig program og sosialt samvær</li>
+          <li><span>02</span>Parallelle fagsesjoner for både nye og erfarne Fenistra-brukere</li>
+          <li><span>03</span>Snøhallen hos Thon Hotel Snø som unik kulisse</li>
         </ul>
       </div>
-    </div>
-
-    <div class="feature-row reverse reveal" style="grid-template-columns:1fr; gap:20px; border-top:1px solid var(--line); background:var(--paper-2); margin:0 -32px; padding:40px 32px;">
-      <div class="feature-visual" style="border:none;box-shadow:none;overflow:visible;min-height:0;min-width:0;background:none;order:2;">
-        <div class="carousel" style="margin-bottom:0;">
-          <button class="carousel-btn prev" onclick="document.getElementById('gallery2026').scrollBy({left:-320,behavior:'smooth'})" aria-label="Forrige bilder">&#8249;</button>
-          <button class="carousel-btn next" onclick="document.getElementById('gallery2026').scrollBy({left:320,behavior:'smooth'})" aria-label="Neste bilder">&#8250;</button>
-          <div class="carousel-track" id="gallery2026">
-      <a href="images/fenistradagene-2026-03.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-03.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-04.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-04.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-05.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-05.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-06.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-06.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-07.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-07.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-08.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-08.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-09.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-09.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-10.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-10.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-11.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-11.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-12.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-12.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-13.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-13.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-14.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-14.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-15.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-15.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-17.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-17.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-18.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-18.jpg" loading="lazy" alt="Foredragsholder på scenen under Fenistradagene 2026"></a>
-      <a href="images/fenistradagene-2026-19.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-19.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-20.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-20.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-      <a href="images/fenistradagene-2026-21.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-21.jpg" loading="lazy" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
-          </div>
-        </div>
-      </div>
-      <div class="feature-copy" style="text-align:center;order:1;margin-bottom:24px;">
-        <div class="eyebrow" style="justify-content:center;">Bilder fra 2026</div>
-        <h3 style="font-family:var(--font-display); font-weight:300; font-size:clamp(20px,2.2vw,26px); letter-spacing:-0.02em; margin:0; color:var(--ink);">Fra scenen og salen på Thon Hotel Snø</h3>
+      <div class="fd-mosaic reveal" data-gallery>
+          <a href="images/fenistradagene-2026-15.jpg" class="m-big" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-15.jpg" loading="lazy" decoding="async" alt="Felix lanseres fra scenen under Fenistradagene 2026"></a>
+          <a href="images/fenistradagene-2026-06.jpg" class="m-wide" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-06.jpg" loading="lazy" decoding="async" alt="Engasjerte deltakere i en fagsesjon på Fenistradagene 2026"></a>
+          <a href="images/fenistradagene-2026-18.jpg" class="m-tall" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-18.jpg" loading="lazy" decoding="async" alt="Foredragsholder på scenen under Fenistradagene 2026"></a>
+          <a href="images/fenistradagene-2026-03.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-03.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
+          <a href="images/fenistradagene-2026-08.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-08.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
       </div>
     </div>
 
-    <div class="feature-row feature-row-wide-visual" style="border-top:1px solid var(--line);">
-      <div class="feature-copy">
-        <div class="eyebrow">Sosialt i 2026</div>
-        <h3 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px,2.6vw,32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);">Skikurs med Johaug på SNØ</h3>
-        <p style="color:var(--ink-soft); font-size:16px; max-width:480px;">Utenom det faglige programmet fikk deltakerne prøve seg på langrenn med selveste Therese Johaug som instruktør, i skihallen på SNØ. En litt annerledes teambuilding-økt mellom fagsesjonene.</p>
+    <div class="fd-more">
+      <h3>Flere bilder fra 2026</h3>
+      <div class="fd-strip-nav">
+        <button type="button" aria-label="Forrige bilder" onclick="document.getElementById('gallery2026').scrollBy({left:-460,behavior:'smooth'})">‹</button>
+        <button type="button" aria-label="Neste bilder" onclick="document.getElementById('gallery2026').scrollBy({left:460,behavior:'smooth'})">›</button>
       </div>
-      <a class="photo-single" href="images/fenistradagene-2026-skikurs-johaug.jpg" target="_blank" rel="noopener" data-lightbox>
-        <img src="images/fenistradagene-2026-skikurs-johaug.jpg" width="1300" height="721" alt="Skikurs med Therese Johaug på SNØ under Fenistradagene 2026" loading="lazy">
+    </div>
+    <div class="fd-strip" id="gallery2026" data-gallery>
+          <a href="images/fenistradagene-2026-17.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-17.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
+          <a href="images/fenistradagene-2026-13.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-13.jpg" loading="lazy" decoding="async" alt="Plenumssalen på Thon Hotel Snø under Fenistradagene 2026"></a>
+          <a href="images/fenistradagene-2026-11.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-11.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
+          <a href="images/fenistradagene-2026-14.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-14.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
+          <a href="images/fenistradagene-2026-04.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-04.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
+          <a href="images/fenistradagene-2026-05.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-05.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
+          <a href="images/fenistradagene-2026-09.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-09.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
+          <a href="images/fenistradagene-2026-10.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-10.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
+          <a href="images/fenistradagene-2026-12.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-12.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
+          <a href="images/fenistradagene-2026-19.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-19.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
+          <a href="images/fenistradagene-2026-20.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-20.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
+          <a href="images/fenistradagene-2026-21.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-21.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
+          <a href="images/fenistradagene-2026-01.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-01.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
+          <a href="images/fenistradagene-2026-02.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-02.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
+          <a href="images/fenistradagene-2026-07.jpg" class="" target="_blank" rel="noopener"><img src="images/fenistradagene-2026-07.jpg" loading="lazy" decoding="async" alt="Fenistradagene 2026 på Thon Hotel Snø"></a>
+    </div>
+
+    <div class="fd-johaug reveal">
+      <a href="images/fenistradagene-2026-skikurs-johaug.jpg" target="_blank" rel="noopener" data-lightbox>
+        <img src="images/fenistradagene-2026-skikurs-johaug.jpg" width="1300" height="721" alt="Skikurs med Therese Johaug på SNØ under Fenistradagene 2026" loading="lazy" decoding="async">
       </a>
-    </div>
-
-    <div class="mini-cta reveal" style="background:var(--berry-light); border-radius:16px; margin-top:8px; padding:40px 44px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
-      <p style="font-family:var(--font-display); font-weight:300; font-size:20px; line-height:1.5; color:var(--ink); margin:0; max-width:520px;">Nysgjerrig på Fenistradagene 2027, eller lurer du på noe om årets samling?</p>
-      <a routerLink="/kundeteam" class="btn btn-light">Ta kontakt</a>
-    </div>
-  </div>
-</section>
-
-<section style="padding-top:0;">
-  <div>
-    <div class="feature-row reverse" id="2025" style="grid-template-columns:1fr; gap:28px; border-top:1px solid var(--line); margin-top:16px; scroll-margin-top:90px;">
-      <div class="feature-copy" style="order:1;margin-bottom:24px;">
-        <div class="eyebrow">2025 · Holmen Fjordhotell</div>
-        <h3 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px,2.6vw,32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);">Brukerforum på Holmen Fjordhotell</h3>
-        <p style="color:var(--ink-soft); font-size:16px; max-width:480px; margin-bottom:14px;">Fenistra Brukerforum 2025 ble arrangert på Holmen Fjordhotell 3. og 4. juni. På programmet sto AI, med Jacob Nyman fra Visma, og IT-sikkerhet, med Roar Thon fra Nasjonal sikkerhetsmyndighet.</p>
-        <p style="color:var(--ink-soft); font-size:16px; max-width:480px; margin-bottom:14px;">Deloitte bidro med faglige sesjoner ledet av Kristoffer Bito Vårheim, partner og advokat innen MVA og fast eiendom: et innlegg om fellesarealer og merverdiavgift, og en paneldebatt om felleskostnader sammen med Thorvald Nyquist, leder for eiendomsavdelingen i Deloitte Advokatfirma.</p>
-        <p style="color:var(--ink-soft); font-size:16px; max-width:480px; margin-bottom:14px;">Mellom fagøktene ble det en frisk RIB-tur i Oslofjorden som sosial hovedaktivitet.</p>
-      </div>
-      <div class="feature-visual" style="border:none;box-shadow:none;overflow:visible;min-height:0;min-width:0;background:none;order:2;">
-        <div class="carousel" style="margin-bottom:0;">
-          <button class="carousel-btn prev" onclick="document.getElementById('gallery2025').scrollBy({left:-320,behavior:'smooth'})" aria-label="Forrige bilder">&#8249;</button>
-          <button class="carousel-btn next" onclick="document.getElementById('gallery2025').scrollBy({left:320,behavior:'smooth'})" aria-label="Neste bilder">&#8250;</button>
-          <div class="carousel-track" id="gallery2025">
-          <a href="images/fenistradagene-2025-holmen-ribb-01.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2025-holmen-ribb-01.jpg" loading="lazy" alt="RIB-tur i Oslofjorden, Fenistra Brukerforum 2025"></a>
-          <a href="images/fenistradagene-2025-holmen-ribb-02.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2025-holmen-ribb-02.jpg" loading="lazy" alt="RIB-tur i Oslofjorden, Fenistra Brukerforum 2025"></a>
-          <a href="images/fenistradagene-2025-holmen-ribb-03.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2025-holmen-ribb-03.jpg" loading="lazy" alt="RIB-tur i Oslofjorden, Fenistra Brukerforum 2025"></a>
-          <a href="images/fenistradagene-2025-holmen-ribb-04.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2025-holmen-ribb-04.jpg" loading="lazy" alt="RIB-tur i Oslofjorden, Fenistra Brukerforum 2025"></a>
-        </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="feature-row" id="2024" style="grid-template-columns:1fr; gap:28px; border-top:1px solid var(--line); margin-top:16px; scroll-margin-top:90px;">
-      <div class="feature-copy" style="order:1;margin-bottom:24px;">
-        <div class="eyebrow">2024 · Holmenkollen Park</div>
-        <h3 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px,2.6vw,32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);">Brukerforum på Holmenkollen Park</h3>
-        <p style="color:var(--ink-soft); font-size:16px; max-width:480px; margin-bottom:14px;">Fenistra Brukerforum 2024 ble arrangert på Scandic Holmenkollen Park Hotel 4. og 5. juni. Programmet tok for seg den nye Fenistra-plattformen, bærekraft og fremtidens rapportering, rapporter og innsikt, markedstrender, teknologi i eiendom og IT-sikkerhet, i tillegg til faglige innlegg fra Norsk Eiendom. Begge dagene kunne deltakerne møte ekspertbrukere og samarbeidspartnere på stands.</p>
-        <p style="color:var(--ink-soft); font-size:16px; max-width:480px; margin-bottom:14px;">Underholdningen var det heller ikke noe å si på: deltakerne fikk omvisning i Skimuseet, middagen ble krydret med musikk og humor fra «Heine aleine og 2 til» med Heine Totland, Karianne Kjærnes og Roger Allan Ivin, og Harald Eia åpnet dag to med foredraget «Det store VI».</p>
-        <p style="font-family:var(--font-mono);font-size:13px;margin-top:4px;"><a routerLink="/media-brukerforum-2024-oppsummering" style="color:var(--berry-deep);font-weight:600;">Les oppsummeringen fra 2024 →</a></p>
-      </div>
-      <div class="feature-visual" style="border:none;box-shadow:none;overflow:visible;min-height:0;min-width:0;background:none;order:2;">
-        <div class="carousel" style="margin-bottom:0;">
-          <button class="carousel-btn prev" onclick="document.getElementById('gallery2024').scrollBy({left:-320,behavior:'smooth'})" aria-label="Forrige bilder">&#8249;</button>
-          <button class="carousel-btn next" onclick="document.getElementById('gallery2024').scrollBy({left:320,behavior:'smooth'})" aria-label="Neste bilder">&#8250;</button>
-          <div class="carousel-track" id="gallery2024">
-          <a href="images/media-brukerforum-2024-oppsummering-01.jpg" target="_blank" rel="noopener"><img src="images/media-brukerforum-2024-oppsummering-01.jpg" loading="lazy" alt="Plenumssalen på Fenistra Brukerforum 2024, Holmenkollen Park"></a>
-          <a href="images/media-brukerforum-2024-oppsummering-02.jpg" target="_blank" rel="noopener"><img src="images/media-brukerforum-2024-oppsummering-02.jpg" loading="lazy" alt="Foredrag på Fenistra Brukerforum 2024"></a>
-          <a href="images/media-brukerforum-2024-oppsummering-03.jpg" target="_blank" rel="noopener"><img src="images/media-brukerforum-2024-oppsummering-03.jpg" loading="lazy" alt="Bærekraft og fremtidens rapportering på Fenistra Brukerforum 2024"></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="year-list">
-      <div class="year-row" id="2023">
-        <span class="yr">2023</span>
-        <span class="loc">Lilys Country Club</span>
-      </div>
-      <div class="year-row" id="2022">
-        <span class="yr">2022</span>
-        <span class="loc">Sandefjord</span>
-      </div>
-      <div class="year-row" id="2021">
-        <span class="yr">2021</span>
-        <span class="loc">Klekken</span>
-      </div>
-      <div class="year-row" id="2019">
-        <span class="yr">2019</span>
-        <span class="loc">Larvik</span>
-      </div>
-      <div class="year-row" id="2018">
-        <span class="yr">2018</span>
-        <span class="loc">Støtvik</span>
-      </div>
-      <div class="year-row" id="2017">
-        <span class="yr">2017</span>
-        <span class="loc">Hamar</span>
-      </div>
-      <div class="year-row" id="2016">
-        <span class="yr">2016</span>
-        <span class="loc">Drammen</span>
-      </div>
-      <div class="year-row" id="2015">
-        <span class="yr">2015</span>
-        <span class="loc">Hurdalsjøen</span>
+      <div>
+        <div class="eyebrow eyebrow-on-dark">Sosialt i 2026</div>
+        <h3>Skikurs med <strong>Therese Johaug</strong></h3>
+        <p>Utenom det faglige programmet fikk deltakerne prøve seg på langrenn med selveste Therese Johaug som instruktør, i skihallen på SNØ. En litt annerledes måte å bli kjent med bransjekollegaer på.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ================= TIDLIGERE ÅR ================= -->
+<section class="fd-sec" id="historikk">
+  <div class="wrap">
+    <div class="fd-head">
+      <div class="eyebrow">Tidligere år</div>
+      <h2>Over 25 år med samlinger <strong>for Fenistra-kunder</strong></h2>
+      <p>Fra 1999 til 2025 het samlingen Fenistra Brukerforum. Her er noen av høydepunktene.</p>
     </div>
-    <aside class="timeline-sidebar">
-  <nav class="timeline-v" aria-label="Tidslinje for Fenistradagene">
-    <a href="#2026" class="timeline-v-item active" data-year="2026">
-      <span class="dot"></span>
-      <span class="year">2026</span>
-      <span class="loc">Thon Hotel Snø</span>
-    </a>
-    <a href="#2025" class="timeline-v-item" data-year="2025">
-      <span class="dot"></span>
-      <span class="year">2025</span>
-      <span class="loc">Holmen Fjordhotell</span>
-    </a>
-    <a href="#2024" class="timeline-v-item" data-year="2024">
-      <span class="dot"></span>
-      <span class="year">2024</span>
-      <span class="loc">Holmenkollen Park</span>
-    </a>
-    <a href="#2023" class="timeline-v-item muted" data-year="2023">
-      <span class="dot"></span>
-      <span class="year">2023</span>
-      <span class="loc">Lilys Country Club</span>
-    </a>
-    <a href="#2022" class="timeline-v-item muted" data-year="2022">
-      <span class="dot"></span>
-      <span class="year">2022</span>
-      <span class="loc">Sandefjord</span>
-    </a>
-    <a href="#2021" class="timeline-v-item muted" data-year="2021">
-      <span class="dot"></span>
-      <span class="year">2021</span>
-      <span class="loc">Klekken</span>
-    </a>
-    <a href="#2019" class="timeline-v-item muted" data-year="2019">
-      <span class="dot"></span>
-      <span class="year">2019</span>
-      <span class="loc">Larvik</span>
-    </a>
-    <a href="#2018" class="timeline-v-item muted" data-year="2018">
-      <span class="dot"></span>
-      <span class="year">2018</span>
-      <span class="loc">Støtvik</span>
-    </a>
-    <a href="#2017" class="timeline-v-item muted" data-year="2017">
-      <span class="dot"></span>
-      <span class="year">2017</span>
-      <span class="loc">Hamar</span>
-    </a>
-    <a href="#2016" class="timeline-v-item muted" data-year="2016">
-      <span class="dot"></span>
-      <span class="year">2016</span>
-      <span class="loc">Drammen</span>
-    </a>
-    <a href="#2015" class="timeline-v-item muted" data-year="2015">
-      <span class="dot"></span>
-      <span class="year">2015</span>
-      <span class="loc">Hurdalsjøen</span>
-    </a>
-  </nav>
-</aside>
+    <div class="fd-years">
+      <article class="fd-year reveal" id="2025" style="scroll-margin-top:90px;">
+        <div class="fd-year-photos" data-gallery>
+          <a href="images/fenistradagene-2025-holmen-ribb-01.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2025-holmen-ribb-01.jpg" loading="lazy" decoding="async" alt="RIB-tur i Oslofjorden, Fenistra Brukerforum 2025"></a>
+          <a href="images/fenistradagene-2025-holmen-ribb-02.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2025-holmen-ribb-02.jpg" loading="lazy" decoding="async" alt="RIB-tur i Oslofjorden, Fenistra Brukerforum 2025"></a>
+          <a href="images/fenistradagene-2025-holmen-ribb-03.jpg" target="_blank" rel="noopener"><img src="images/fenistradagene-2025-holmen-ribb-03.jpg" loading="lazy" decoding="async" alt="RIB-tur i Oslofjorden, Fenistra Brukerforum 2025"></a>
+        </div>
+        <div class="fd-year-body">
+          <span class="yr">2025 · Holmen Fjordhotell</span>
+          <h3>AI, MVA og RIB i Oslofjorden</h3>
+          <p>AI med Jacob Nyman fra Visma, og MVA og fast eiendom med Kristoffer Bito Vårheim, partner i Deloitte. Mellom fagøktene: RIB-tur i Oslofjorden.</p>
+        </div>
+      </article>
+      <article class="fd-year reveal" id="2024" style="scroll-margin-top:90px;">
+        <div class="fd-year-photos" data-gallery>
+          <a href="images/media-brukerforum-2024-oppsummering-01.jpg" target="_blank" rel="noopener"><img src="images/media-brukerforum-2024-oppsummering-01.jpg" loading="lazy" decoding="async" alt="Plenumssalen på Fenistra Brukerforum 2024, Holmenkollen Park"></a>
+          <a href="images/media-brukerforum-2024-oppsummering-02.jpg" target="_blank" rel="noopener"><img src="images/media-brukerforum-2024-oppsummering-02.jpg" loading="lazy" decoding="async" alt="Foredrag på Fenistra Brukerforum 2024"></a>
+          <a href="images/media-brukerforum-2024-oppsummering-03.jpg" target="_blank" rel="noopener"><img src="images/media-brukerforum-2024-oppsummering-03.jpg" loading="lazy" decoding="async" alt="Foredrag på Fenistra Brukerforum 2024"></a>
+        </div>
+        <div class="fd-year-body">
+          <span class="yr">2024 · Holmenkollen Park</span>
+          <h3>Den nye Fenistra-plattformen</h3>
+          <p>To dager om den nye plattformen, med omvisning i Skimuseet og en middag krydret med musikk og humor.</p>
+          <a routerLink="/media-brukerforum-2024-oppsummering" class="go">Les oppsummeringen fra 2024 →</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="fd-timeline" aria-label="Tidligere steder">
+      <div><span class="yr">2023</span><span class="loc">Lilys Country Club</span></div>
+      <div><span class="yr">2022</span><span class="loc">Sandefjord</span></div>
+      <div><span class="yr">2021</span><span class="loc">Klekken</span></div>
+      <div><span class="yr">2019</span><span class="loc">Larvik</span></div>
+      <div><span class="yr">2018</span><span class="loc">Støtvik</span></div>
+      <div><span class="yr">2017</span><span class="loc">Hamar</span></div>
+      <div><span class="yr">2016</span><span class="loc">Drammen</span></div>
+      <div><span class="yr">2015</span><span class="loc">Hurdalsjøen</span></div>
+    </div>
   </div>
 </section>
 
-<section class="cta-wrap">
+<section class="cta-wrap" style="padding-top:0;padding-bottom:20px;">
   <div class="cta-band reveal">
-    <h2>Ønsker du å høre mer om neste Fenistradagene?</h2>
+    <h2>Vil du være med på Fenistradagene 2027?</h2>
     <div class="actions">
-      <a routerLink="/kontakt-oss" class="btn btn-on-dark">Kontakt oss</a>
-      <a routerLink="/kunder" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Se kundehistorier</a>
+      <a routerLink="/kontakt-oss" class="btn btn-on-dark">Meld interesse</a>
+      <a routerLink="/kundeteam" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Snakk med kundeteamet</a>
     </div>
   </div>
 </section>
