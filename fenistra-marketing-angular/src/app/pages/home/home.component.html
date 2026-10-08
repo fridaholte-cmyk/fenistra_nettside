@@ -199,7 +199,7 @@
     font-style:normal; font-weight:600; color:var(--berry-deep);
   }
   .hero p.lead{
-    font-size:18px; color:var(--ink-soft); max-width:480px; margin:0 auto 34px;
+    font-size:18px; color:var(--ink-soft); max-width:600px; margin:0 auto 34px;
     font-weight:400;
   }
   .hero-actions{display:flex; justify-content:center; gap:14px; margin-bottom:40px; flex-wrap:wrap;}
@@ -739,19 +739,123 @@
   .step-card.step-live h3{color:#fff;}
   .step-card.step-live p{color:rgba(255,255,255,.7);}
   @media (max-width:860px){ .steps-grid{grid-template-columns:1fr;} }
+
+  /* ================= OUTCOMES ================= */
+  #produkt{padding:96px 0 90px;}
+  .outcome-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .outcome-card{background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius); padding:32px 28px; display:flex; flex-direction:column; gap:14px;}
+  .outcome-card .module-icon{width:38px;height:38px;display:flex;align-items:center;justify-content:center;color:var(--berry);}
+  .outcome-card h3{font-size:19px; font-weight:600; color:var(--ink); letter-spacing:-0.01em;}
+  .outcome-card p{font-size:15px; color:var(--ink-soft); line-height:1.55;}
+
+  /* ================= PENGENE RIKTIG ================= */
+  .money{background:var(--plum-deep); color:#fff; position:relative; overflow:hidden;}
+  .money::before{content:""; position:absolute; inset:0; pointer-events:none; background-image:linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size:34px 34px;}
+  .money .wrap{position:relative;}
+  .money .section-head{max-width:760px;}
+  .money .section-head h2{color:#fff; font-size:clamp(32px,4vw,52px);}
+  .money .section-head h2 strong{color:var(--berry-mid);}
+  .money .section-head p{color:rgba(255,255,255,.8);}
+  .money-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.12); border-radius:var(--radius); overflow:hidden;}
+  .money-item{background:var(--plum-deep); padding:28px 26px;}
+  .money-item h3{font-size:16.5px; font-weight:600; margin-bottom:8px; color:#fff;}
+  .money-item p{font-size:14.5px; color:rgba(255,255,255,.75); line-height:1.55;}
+
+  /* ================= AI ================= */
+  .ai-section{padding:90px 0;}
+  .ai-row{border-top:none; padding:0;}
+  .ai-title{font-family:var(--font-display); font-weight:300; font-size:clamp(28px,3.2vw,42px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);}
+  .ai-title strong{font-weight:600; color:var(--berry-deep);}
+  .ai-visual{background:linear-gradient(155deg, var(--plum-deep) 0%, var(--plum-900) 100%); border:none; display:flex; align-items:center; justify-content:center; padding:44px;}
+  .ai-visual img{width:100%; max-width:360px; height:auto; border-radius:12px; box-shadow:0 30px 60px -24px rgba(0,0,0,.6);}
+
+  /* ================= HVORFOR FENISTRA ================= */
+  .why{background:var(--paper-2); border-top:1px solid var(--line);}
+  .why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:32px;}
+  .why-item{border-top:2px solid var(--berry); padding-top:20px;}
+  .why-k{font-size:18px; font-weight:600; color:var(--ink); margin-bottom:10px; letter-spacing:-0.01em;}
+  .why-item p{font-size:14.5px; color:var(--ink-soft); line-height:1.55;}
+  .why-customers{margin-top:56px; padding:22px 26px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); font-size:15px; color:var(--ink-soft);}
+  .why-customers a{color:var(--berry-deep); font-weight:600; white-space:nowrap;}
+
+  /* two quotes side by side */
+  .testimonial .wrap:has(.quote-pair){max-width:var(--container);}
+  .quote-pair{display:grid; grid-template-columns:1fr 1fr; gap:56px;}
+  .quote-pair figure{display:flex; flex-direction:column;}
+  .quote-pair figcaption{margin-top:auto;}
+  .quote-pair blockquote{font-size:clamp(19px,1.9vw,23px);}
+  .quote-stat{font-size:15px; color:rgba(255,255,255,.8); margin-bottom:24px;}
+  .quote-stat span{display:block; font-family:var(--font-mono); font-weight:700; font-size:clamp(56px,6vw,76px); line-height:1; letter-spacing:-0.02em; color:var(--berry-mid); margin-bottom:10px;}
+
+  @media (max-width:980px){
+    .outcome-grid, .money-grid{grid-template-columns:1fr 1fr;}
+    .why-grid{grid-template-columns:1fr 1fr;}
+    .quote-pair{grid-template-columns:1fr; gap:40px;}
+  }
+  @media (max-width:760px){
+    .outcome-grid, .money-grid, .why-grid{grid-template-columns:1fr;}
+    #produkt, .ai-section{padding:64px 0;}
+    .ai-visual{padding:28px;}
+  }
+
+  /* ================= HERO TRUST PILLS ================= */
+  .trust-pills{display:flex; justify-content:center; flex-wrap:wrap; gap:10px; list-style:none;}
+  .hero .trust-pills.hero-part{display:flex;}
+  .trust-pills li{display:inline-flex; align-items:center; gap:10px; padding:9px 16px 9px 14px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.7); font-family:var(--font-mono); font-size:12.5px; color:var(--plum); letter-spacing:.02em; transition:border-color .25s ease, transform .25s ease;}
+  .trust-pills li:hover{border-color:var(--berry-mid); transform:translateY(-1px);}
+  .trust-pills .pulse{position:relative; width:8px; height:8px; border-radius:50%; background:var(--berry); flex-shrink:0;}
+  .trust-pills .pulse::after{content:""; position:absolute; inset:0; border-radius:50%; background:var(--berry); animation:trustPulse 2.4s cubic-bezier(.2,.6,.3,1) infinite;}
+  .trust-pills li:nth-child(2) .pulse::after{animation-delay:.8s;}
+  .trust-pills li:nth-child(3) .pulse::after{animation-delay:1.6s;}
+  @keyframes trustPulse{0%{transform:scale(1); opacity:.55;} 80%,100%{transform:scale(3.2); opacity:0;}}
+
+  /* ================= PLUG-AND-PLAY STATEMENT ================= */
+  .money-flip{display:grid; grid-template-columns:1.35fr 1fr; gap:56px; align-items:center; margin-top:64px; padding:48px 52px; border-radius:20px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12);}
+  .flip-line{font-family:var(--font-display); font-weight:300; font-size:clamp(26px,2.9vw,38px); letter-spacing:-0.02em; line-height:1.2; color:#fff; margin:0;}
+  .flip-line strong{display:block; font-weight:600; color:var(--berry-mid);}
+  .flip-side{display:flex; flex-direction:column; align-items:flex-start; gap:22px;}
+  .flip-sub{font-size:16px; color:rgba(255,255,255,.78); line-height:1.6; margin:0;}
+
+  /* ================= SECTION RHYTHM ================= */
+  #produkt, #okonomi, #ai, #løsninger, #kom-i-gang, #hvorfor, #kunder, #faq{padding:112px 0;}
+  #løsninger{background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  #hvorfor{border-top:1px solid var(--line);}
+  .ai-row{gap:72px;}
+  .section-head{max-width:720px;}
+  .faq-layout{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.5fr); gap:72px; align-items:start;}
+  .faq-head{margin-bottom:0; position:sticky; top:110px;}
+  .faq-head-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:28px;}
+  .faq-layout .faq-list{max-width:none; border-top:1px solid var(--line);}
+  .faq-layout .faq-q{padding:22px 0;}
+  .section-head h2, .ai-title, .flip-line{text-wrap:balance;}
+  .section-head p{text-wrap:pretty;}
+  @media (max-width:980px){
+    .money-flip{grid-template-columns:1fr; gap:24px; padding:36px 32px;}
+    .faq-layout{grid-template-columns:1fr; gap:40px;}
+    .faq-head{position:static;}
+  }
+  @media (max-width:760px){
+    #produkt, #okonomi, #ai, #løsninger, #kom-i-gang, #hvorfor, #kunder, #faq{padding:72px 0;}
+    .money-flip{margin-top:40px; padding:28px 24px;}
+    .trust-pills{gap:8px;}
+    .trust-pills li{font-size:11.5px; padding:7px 12px 7px 11px;}
+  }
 </style>
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="wrap">
     <div class="hero-content">
-      <h1><span class="hero-part hero-part-1">Økonomisk forvaltning fra A til Å.</span> <em class="hero-part hero-part-2">Norges største system for næringseiendom.</em></h1>
-      <p class="lead hero-part hero-part-3">Fenistra samler kontrakter, arealer, felleskostnader, fakturering og rapportering i én plattform, det mest komplette systemet for økonomisk forvaltning av næringseiendom i Norge.</p>
+      <h1><span class="hero-part hero-part-1">Over 30 år med norsk næringseiendom.</span> <em class="hero-part hero-part-2">Bygget for de neste 30.</em></h1>
+      <p class="lead hero-part hero-part-3">Fenistra er systemet profesjonelle eiendomsaktører forvalter porteføljen sin i. Skybasert, alltid oppdatert, og bygget for å få hver krone riktig.</p>
       <div class="hero-actions hero-part hero-part-3">
         <a routerLink="/pakke-resultat" class="btn btn-primary">Book en demo</a>
-        <a routerLink="/losninger" class="btn btn-ghost">Utforsk løsningene</a>
-        <a routerLink="/ki" class="btn btn-ghost">Se vår AI-satsing</a>
+        <a routerLink="/losninger" class="btn btn-ghost">Se løsningene</a>
       </div>
-      <div class="trust-line hero-part hero-part-3"><span class="dot"></span>Valgt av 170+ eiendomsforvaltere i Norge</div>
+      <ul class="trust-pills hero-part hero-part-3" aria-label="Fenistra i korte trekk">
+        <li><span class="pulse"></span>Siden 1994</li>
+        <li><span class="pulse"></span>En del av Visma</li>
+        <li><span class="pulse"></span>170+ eiendomsforvaltere</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -772,12 +876,12 @@
 <section class="stats">
   <div class="wrap stats-grid">
     <div class="stat-item reveal">
-      <div class="num"><span class="accent">170+</span></div>
-      <div class="lbl">Eiendomsforvaltere i Norge bruker Fenistra</div>
+      <div class="num"><span class="accent">1994</span></div>
+      <div class="lbl">Året utviklingen av Fenistra startet. Vi har ikke stoppet siden</div>
     </div>
     <div class="stat-item reveal">
-      <div class="num">20<span class="accent">+</span></div>
-      <div class="lbl">Integrasjoner mot andre systemer i produksjon hos kunder</div>
+      <div class="num"><span class="accent">170+</span></div>
+      <div class="lbl">Eiendomsforvaltere i Norge bruker Fenistra</div>
     </div>
     <div class="stat-item reveal">
       <div class="num">60 <span class="accent">mrd</span></div>
@@ -790,112 +894,161 @@
   </div>
 </section>
 
-<!-- ================= PRODUCT INTRO ================= -->
+<!-- ================= OUTCOMES ================= -->
 <section id="produkt">
   <div class="wrap">
-    <div class="section-head wide-head">
-      <div class="eyebrow">Produkt</div>
-      <h2>Ett system. <strong>Hele porteføljen.</strong></h2>
-      <p>Fenistra forenkler og automatiserer eiendomsforvaltningen for utleiere og leietakere. Det er enkelt og raskt å komme i gang med AI-innlesing av kontrakter som raskt og enkelt lar deg importere og ta i bruk systemet. Data kan enkelt deles internt, med samarbeidspartnere og andre systemer, slik at du alltid oppfyller gjeldende regler og krav.</p>
+    <div class="section-head">
+      <div class="eyebrow">Hva dere får</div>
+      <h2>Tall ledelsen kan stå inne for. <strong>Et verktøy forvalterne liker å bruke.</strong></h2>
+      <p>Fenistra gir økonomisjefen kontroll og trygghet, og gir forvalterne et system som er laget for akkurat den jobben de gjør hver dag.</p>
+    </div>
+    <div class="outcome-grid">
+      <div class="outcome-card reveal">
+        <div class="module-icon"><svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M231.1 7.9c16-6.8 34-6.8 50 0L457.8 82.8c22 9.3 38.4 31 38.3 57.2-.5 99.2-41.3 280.7-213.7 363.2-16.7 8-36.1 8-52.7 0-172.4-82.5-213.1-264-213.6-363.2-.1-26.2 16.3-47.9 38.3-57.2L231.1 7.9zm37.5 29.4c-8-3.4-17-3.4-25 0l-176.7 75c-11.3 4.8-18.8 15.5-18.8 27.6 .5 94 39.3 259.8 195.4 334.5 7.9 3.8 17.2 3.8 25.1 0 156.1-74.7 195-240.4 195.5-334.5 .1-12.1-7.5-22.8-18.8-27.6l-176.7-75zm54.5 132.9c5.2-7.1 15.2-8.7 22.3-3.5s8.7 15.2 3.5 22.3L243.4 334.2c-2.8 3.8-7.1 6.2-11.8 6.5s-9.3-1.4-12.6-4.8l-54.4-56.3c-6.1-6.4-6-16.5 .4-22.6s16.5-5.9 22.6 .4l41.2 42.6 94.4-129.8z"/></svg></div>
+        <h3>Alltid kontroll på porteføljen</h3>
+        <p>Hver kontrakt, hvert areal, hver garanti og hver utløpsdato i ett bilde. Dere ser risikoen før den blir et problem.</p>
+      </div>
+      <div class="outcome-card reveal">
+        <div class="module-icon"><svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M416 416c0 2.4-1 7.4-8.4 14.9-7.5 7.6-19.9 15.9-37.8 23.6-35.7 15.3-87.2 25.5-145.8 25.5S113.9 469.8 78.2 454.5c-17.9-7.7-30.3-16-37.8-23.6-7.4-7.5-8.4-12.5-8.4-14.9l0-84.5c17.2 8.9 38.1 16.3 61.2 21.9 37.5 9.2 82.5 14.5 130.8 14.5s93.3-5.3 130.8-14.5c23.1-5.7 44-13 61.2-21.9l0 84.5zm0-212.5l0 90.6c-14.5 10.6-37.9 20.6-68.9 28.3-34.7 8.5-77.1 13.6-123.1 13.6s-88.5-5.1-123.1-13.6c-31-7.6-54.4-17.7-68.9-28.3l0-90.6c17.2 8.9 38.1 16.3 61.2 21.9 37.5 9.2 82.5 14.5 130.8 14.5s93.3-5.3 130.8-14.5c23.1-5.7 44-13 61.2-21.9zm0-37.4c-14.5 10.6-37.9 20.6-68.9 28.3-34.7 8.5-77.1 13.6-123.1 13.6s-88.5-5.1-123.1-13.6c-31-7.6-54.4-17.7-68.9-28.3L32 96c0-2.4 1-7.4 8.4-14.9 7.5-7.6 19.9-15.9 37.8-23.6 35.7-15.3 87.2-25.5 145.8-25.5S334.1 42.2 369.8 57.5c17.9 7.7 30.3 16 37.8 23.6 7.4 7.5 8.4 12.5 8.4 14.9l0 70.1zM448 416l0-320C448 43 347.7 0 224 0S0 43 0 96L0 416c0 53 100.3 96 224 96s224-43 224-96z"/></svg></div>
+        <h3>Registrert én gang. Riktig overalt.</h3>
+        <p>Data legges inn én gang og flyter videre til fakturering, regnskap og rapportering. Ingen dobbeltregistrering, ingen avvik mellom systemene, data dere kan stole på.</p>
+      </div>
+      <div class="outcome-card reveal">
+        <div class="module-icon"><svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 384 512" fill="currentColor"><path d="M197.5 0c17 0 33.2 6.8 45.2 18.8L365.3 141.2c12 12 18.7 28.3 18.7 45.2L384 448c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64C0 28.7 28.7 0 64 0L197.5 0zM64 32C46.3 32 32 46.3 32 64l0 384c0 17.7 14.3 32 32 32l256 0c17.7 0 32-14.3 32-32l0-256-96 0c-35.3 0-64-28.7-64-64l0-96-128 0zM259.1 250.2c5.2-7.1 15.2-8.7 22.3-3.5s8.7 15.2 3.5 22.3L179.3 414.2c-2.8 3.8-7.1 6.2-11.8 6.5s-9.3-1.4-12.6-4.8l-54.4-56.3c-6.1-6.4-6-16.5 .4-22.6s16.5-5.9 22.6 .4l41.2 42.6 94.4-129.8zM224 128c0 17.7 14.3 32 32 32l82.7 0-114.7-114.8 0 82.8z"/></svg></div>
+        <h3>Hver beregning riktig, automatisk</h3>
+        <p>Regulering, avregning og MVA beregnes av systemet, ikke i regneark. Det er der de dyre feilene pleier å oppstå.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ================= MODULE GRID ================= -->
-<section id="løsninger" class="modules" style="padding-top:0;">
+<!-- ================= PENGENE RIKTIG ================= -->
+<section id="okonomi" class="money">
   <div class="wrap">
-    <div class="section-head wide-head">
+    <div class="section-head">
+      <div class="eyebrow eyebrow-on-dark">Økonomi og regelverk</div>
+      <h2>Fenistra får <strong>pengene riktig.</strong></h2>
+      <p>Det er i beregningene feil koster mest: en glemt indeksregulering, en skjev fordeling av felleskostnader, en justeringsforpliktelse ingen fulgte opp. Fenistra beregner alt automatisk, i tråd med norsk regelverk, og lager dokumentasjonen for dere.</p>
+    </div>
+    <div class="money-grid">
+      <div class="money-item reveal">
+        <h3>KPI-regulering</h3>
+        <p>Direkte integrasjon mot SSB. Leien reguleres, og reguleringsbrevene lages automatisk.</p>
+      </div>
+      <div class="money-item reveal">
+        <h3>Felleskostnader</h3>
+        <p>Avregning ned til siste øre, med MVA-behandling og full sporbarhet overfor leietakerne.</p>
+      </div>
+      <div class="money-item reveal">
+        <h3>MVA og justering</h3>
+        <p>MVA-erklæringer fra leietakerne og justeringsforpliktelser fulgt opp gjennom hele perioden.</p>
+      </div>
+      <div class="money-item reveal">
+        <h3>Omsetningsleie</h3>
+        <p>Leie basert på faktisk omsetning, beregnet og fakturert uten manuelle mellomregninger.</p>
+      </div>
+      <div class="money-item reveal">
+        <h3>Revisorbekreftet omsetning</h3>
+        <p>Leietakernes reviderte tall hentet inn og avstemt, per leietaker.</p>
+      </div>
+      <div class="money-item reveal">
+        <h3>Tall som tåler revisjon</h3>
+        <p>Rapporter og nøkkeltall rett fra kildedataene, klare for styret og revisor.</p>
+      </div>
+    </div>
+    <div class="money-flip reveal">
+      <p class="flip-line">Plug-and-play fungerer fint. <strong>Helt til porteføljen din ikke er enkel lenger.</strong></p>
+      <div class="flip-side">
+        <p class="flip-sub">Fenistra er bygget for porteføljer med flere selskaper, mange kontraktstyper og ekte kompleksitet. Dybden er hele poenget.</p>
+        <a routerLink="/pakke-resultat" class="btn btn-on-dark">Book en demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AI ================= -->
+<section id="ai" class="ai-section">
+  <div class="wrap">
+    <div class="feature-row ai-row">
+      <div class="feature-copy">
+        <div class="eyebrow">AI og data</div>
+        <h2 class="ai-title">Bygget for <strong>AI-æraen.</strong></h2>
+        <p>AI blir aldri bedre enn dataene den står på. Fenistra har samlet strukturerte data om norsk næringseiendom siden 1994, med kontrakt, areal og økonomi koblet sammen i ett system. Et slikt fundament tar tiår å bygge.</p>
+        <ul class="feature-list">
+          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>AI-innlesing av kontrakter: dra inn PDF-en, så fylles feltene ut for deg</li>
+          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>KI-assistent som svarer på spørsmål om porteføljen, basert på deres egne data</li>
+          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Skybasert og alltid oppdatert. Det nye kommer til dere, uten oppgraderingsprosjekter</li>
+        </ul>
+        <a routerLink="/ki" class="btn btn-light">Se vår AI-satsing →</a>
+      </div>
+      <div class="feature-visual ai-visual">
+        <img src="images/ki-assistent.png" width="429" height="465" loading="lazy" decoding="async"
+             alt="KI-assistenten i Fenistra med forslag som «Oppsummer denne kontrakten» og «Nylig utløpte kontrakter»">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LØSNINGER (jobber som skal gjøres) ================= -->
+<section id="løsninger" class="modules">
+  <div class="wrap">
+    <div class="section-head">
       <div class="eyebrow">Løsninger</div>
-      <h2>Eiendomsforvaltning fra A til Å, <strong>alt i ett system</strong></h2>
-      <p>Fra leieavtaler og arealer til økonomi og rapportering. Alt i en komplett løsning bygget som ett sammenhengende system. Vi leverer det mest komplette innen økonomisk forvaltning av næringseiendom i Norge.</p>
-      <a routerLink="/losninger" class="btn btn-light" style="margin-top:20px;">Se alle løsninger →</a>
+      <h2>En plattform som <strong>vokser med porteføljen</strong></h2>
+      <p>Start med det dere trenger i dag, og bygg videre når porteføljen vokser. Alt henger sammen i ett system.</p>
     </div>
 
-    <div class="module-grid">
-
+    <div class="module-grid integrations-grid">
       <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 384 512" fill="currentColor"><path d="M192 32L64 32C46.3 32 32 46.3 32 64l0 384c0 17.7 14.3 32 32 32l256 0c17.7 0 32-14.3 32-32l0-256-96 0c-35.3 0-64-28.7-64-64l0-96zM338.7 160L224 45.3 224 128c0 17.7 14.3 32 32 32l82.7 0zM0 64C0 28.7 28.7 0 64 0L197.5 0c17 0 33.3 6.7 45.3 18.7L365.3 141.3c12 12 18.7 28.3 18.7 45.3L384 448c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zM127.6 314.9c5.5-6.9 13.9-10.9 22.7-10.9 12.8 0 24.2 8.4 27.8 20.7L195.9 384 304 384c8.8 0 16 7.2 16 16s-7.2 16-16 16l-120 0c-7.1 0-13.3-4.6-15.3-11.4L149.1 339.3 92.5 410c-5.5 6.9-15.6 8-22.5 2.5s-8-15.6-2.5-22.5l60.1-75.1zM80 96l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
-        </div>
-        <h3>Kontrakter</h3>
-        <p>Effektiv oversikt og håndtering av utleie-, fremleie- og interne kontrakter, samlet på tvers av porteføljen.</p>
+        <div class="module-icon"><svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 384 512" fill="currentColor"><path d="M192 32L64 32C46.3 32 32 46.3 32 64l0 384c0 17.7 14.3 32 32 32l256 0c17.7 0 32-14.3 32-32l0-256-96 0c-35.3 0-64-28.7-64-64l0-96zM338.7 160L224 45.3 224 128c0 17.7 14.3 32 32 32l82.7 0zM0 64C0 28.7 28.7 0 64 0L197.5 0c17 0 33.3 6.7 45.3 18.7L365.3 141.3c12 12 18.7 28.3 18.7 45.3L384 448c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zM127.6 314.9c5.5-6.9 13.9-10.9 22.7-10.9 12.8 0 24.2 8.4 27.8 20.7L195.9 384 304 384c8.8 0 16 7.2 16 16s-7.2 16-16 16l-120 0c-7.1 0-13.3-4.6-15.3-11.4L149.1 339.3 92.5 410c-5.5 6.9-15.6 8-22.5 2.5s-8-15.6-2.5-22.5l60.1-75.1zM80 96l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></div>
+        <h3>Kontroll på hvert leieforhold</h3>
+        <p>Kontrakter, sikkerheter og varsler før utløp, samlet på tvers av hele porteføljen.</p>
         <a routerLink="/losning-kontrakter" class="go">Les mer →</a>
       </div>
-
       <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 576 512" fill="currentColor"><path d="M510 208C496.2 118.8 425.6 48.2 336.4 34.4l0 173.6 173.6 0zM224.4 69.6c-91.7 21.7-160 104.1-160 202.4 0 114.9 93.1 208 208 208 34.4 0 66.7-8.3 95.2-23L237.3 299.7c-8.3-10-12.9-22.7-12.9-35.7l0-194.4zM538.9 320l-139.3 0 82.9 100.1c27.4-27 47.3-61.5 56.4-100.1zm3.5-111.9c2.3 17.5-12.2 31.9-29.9 31.9l-176 0c-17.7 0-32-14.3-32-32l0-176c0-17.7 14.4-32.2 31.9-29.9 107 14.2 191.8 99 206 206zM256.4 66.7l0 197.3c0 5.6 2 11 5.5 15.3L394 438.7c11.7 14.1 9.2 35.4-6.9 44.1-34.1 18.6-73.2 29.2-114.7 29.2-132.5 0-240-107.5-240-240 0-115.5 81.5-211.9 190.2-234.8 18.1-3.8 33.8 11 33.8 29.5zM571.2 321.8c-10.2 48.4-35 91.4-69.6 124.2-12.3 11.7-31.6 9.2-42.4-3.9L374.9 340.4c-17.3-20.9-2.4-52.4 24.6-52.4l142.2 0c18.5 0 33.3 15.7 29.5 33.8z"/></svg>
-        </div>
-        <h3>Felleskostnader</h3>
-        <p>Avregning med automatisert MVA-behandling, fleksible sykluser og detaljerte analyserapporter.</p>
-        <a routerLink="/losning-felleskostnader" class="go">Les mer →</a>
-      </div>
-
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M48 64l96 0c8.8 0 16 7.2 16 16l0 48-48 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l48 0 0 48-48 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l48 0 0 48-48 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l48 0 0 48c0 8.8 7.2 16 16 16s16-7.2 16-16l0-48 48 0 0 48c0 8.8 7.2 16 16 16s16-7.2 16-16l0-48 48 0 0 48c0 8.8 7.2 16 16 16s16-7.2 16-16l0-48 48 0c8.8 0 16 7.2 16 16l0 96c0 8.8-7.2 16-16 16L48 448c-8.8 0-16-7.2-16-16L32 80c0-8.8 7.2-16 16-16zm144 80l0-64c0-26.5-21.5-48-48-48L48 32C21.5 32 0 53.5 0 80L0 432c0 26.5 21.5 48 48 48l352 0c26.5 0 48-21.5 48-48l0-96c0-26.5-21.5-48-48-48l-208 0 0-144z"/></svg>
-        </div>
-        <h3>Arealberegning</h3>
-        <p>Nøyaktige arealberegninger som reduserer risikoen for feil i leiekostnader og kvadratmeterpriser.</p>
-        <a routerLink="/losning-arealberegning" class="go">Les mer →</a>
-      </div>
-
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M231.1 7.9c16-6.8 34-6.8 50 0L457.8 82.8c22 9.3 38.4 31 38.3 57.2-.5 99.2-41.3 280.7-213.7 363.2-16.7 8-36.1 8-52.7 0-172.4-82.5-213.1-264-213.6-363.2-.1-26.2 16.3-47.9 38.3-57.2L231.1 7.9zm37.5 29.4c-8-3.4-17-3.4-25 0l-176.7 75c-11.3 4.8-18.8 15.5-18.8 27.6 .5 94 39.3 259.8 195.4 334.5 7.9 3.8 17.2 3.8 25.1 0 156.1-74.7 195-240.4 195.5-334.5 .1-12.1-7.5-22.8-18.8-27.6l-176.7-75zm54.5 132.9c5.2-7.1 15.2-8.7 22.3-3.5s8.7 15.2 3.5 22.3L243.4 334.2c-2.8 3.8-7.1 6.2-11.8 6.5s-9.3-1.4-12.6-4.8l-54.4-56.3c-6.1-6.4-6-16.5 .4-22.6s16.5-5.9 22.6 .4l41.2 42.6 94.4-129.8z"/></svg>
-        </div>
-        <h3>Sikkerhetsstyring</h3>
-        <p>Full kontroll på bankgaranti og depositum, med varsel når sikkerheten mangler, er for lav eller nærmer seg utløp.</p>
-        <a routerLink="/losning-sikkerhetsstyring" class="go">Les mer →</a>
-      </div>
-
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 384 512" fill="currentColor"><path d="M197.5 0c17 0 33.2 6.8 45.2 18.8L365.3 141.2c12 12 18.7 28.3 18.7 45.2L384 448c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64C0 28.7 28.7 0 64 0L197.5 0zM64 32C46.3 32 32 46.3 32 64l0 384c0 17.7 14.3 32 32 32l256 0c17.7 0 32-14.3 32-32l0-256-96 0c-35.3 0-64-28.7-64-64l0-96-128 0zM259.1 250.2c5.2-7.1 15.2-8.7 22.3-3.5s8.7 15.2 3.5 22.3L179.3 414.2c-2.8 3.8-7.1 6.2-11.8 6.5s-9.3-1.4-12.6-4.8l-54.4-56.3c-6.1-6.4-6-16.5 .4-22.6s16.5-5.9 22.6 .4l41.2 42.6 94.4-129.8zM224 128c0 17.7 14.3 32 32 32l82.7 0-114.7-114.8 0 82.8z"/></svg>
-        </div>
-        <h3>MVA-erklæring</h3>
-        <p>Automatisert innhenting av nødvendig informasjon for utleie til MVA-registrerte leietakere.</p>
-        <a routerLink="/losning-mva-erklaring" class="go">Les mer →</a>
-      </div>
-
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 384 512" fill="currentColor"><path d="M192 32L64 32C46.3 32 32 46.3 32 64l0 384c0 17.7 14.3 32 32 32l256 0c17.7 0 32-14.3 32-32l0-256-96 0c-35.3 0-64-28.7-64-64l0-96zM338.7 160L224 45.3 224 128c0 17.7 14.3 32 32 32l82.7 0zM0 64C0 28.7 28.7 0 64 0L197.5 0c17 0 33.3 6.7 45.3 18.7L365.3 141.3c12 12 18.7 28.3 18.7 45.3L384 448c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zM96 296l0 80c0 4.4 3.6 8 8 8l176 0c4.4 0 8-3.6 8-8l0-80c0-4.4-3.6-8-8-8l-176 0c-4.4 0-8 3.6-8 8zm-32 0c0-22.1 17.9-40 40-40l176 0c22.1 0 40 17.9 40 40l0 80c0 22.1-17.9 40-40 40l-176 0c-22.1 0-40-17.9-40-40l0-80zM80 96l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
-        </div>
-        <h3>Fakturering</h3>
-        <p>Registrer én gang, fakturer gjennom hele leieforholdet. Fast, akonto og omsetningsbasert husleie i ett bilde.</p>
+        <div class="module-icon"><svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 384 512" fill="currentColor"><path d="M192 32L64 32C46.3 32 32 46.3 32 64l0 384c0 17.7 14.3 32 32 32l256 0c17.7 0 32-14.3 32-32l0-256-96 0c-35.3 0-64-28.7-64-64l0-96zM338.7 160L224 45.3 224 128c0 17.7 14.3 32 32 32l82.7 0zM0 64C0 28.7 28.7 0 64 0L197.5 0c17 0 33.3 6.7 45.3 18.7L365.3 141.3c12 12 18.7 28.3 18.7 45.3L384 448c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zM96 296l0 80c0 4.4 3.6 8 8 8l176 0c4.4 0 8-3.6 8-8l0-80c0-4.4-3.6-8-8-8l-176 0c-4.4 0-8 3.6-8 8zm-32 0c0-22.1 17.9-40 40-40l176 0c22.1 0 40 17.9 40 40l0 80c0 22.1-17.9 40-40 40l-176 0c-22.1 0-40-17.9-40-40l0-80zM80 96l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></div>
+        <h3>Fakturere og avregne riktig</h3>
+        <p>Fakturering, felleskostnader og omsetningsleie i én sammenhengende flyt.</p>
         <a routerLink="/losning-fakturering" class="go">Les mer →</a>
       </div>
-
       <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 640 512" fill="currentColor"><path d="M16 0C7.2 0 0 7.2 0 16S7.2 32 16 32l45.3 0C69 32 75.7 37.5 77 45.1l50.9 279.7c6.2 34.2 36 59.1 70.8 59.1L464 384c8.8 0 16-7.2 16-16s-7.2-16-16-16l-265.3 0c-19.3 0-35.9-13.8-39.4-32.8l-5.7-31.2 313 0c33.9 0 63.3-23.7 70.4-56.9L569.4 80.4C574.8 55.5 555.8 32 530.3 32L106.6 32C99.9 13.1 81.9 0 61.3 0L16 0zm97 64l417.3 0c5.1 0 8.9 4.7 7.8 9.7L505.8 224.4c-4 18.4-20.2 31.6-39.1 31.6L147.9 256 113 64zm75 396a20 20 0 1 1 40 0 20 20 0 1 1 -40 0zm72 0a52 52 0 1 0 -104 0 52 52 0 1 0 104 0zm172-20a20 20 0 1 1 0 40 20 20 0 1 1 0-40zm0 72a52 52 0 1 0 0-104 52 52 0 1 0 0 104z"/></svg>
-        </div>
-        <h3>Kjøpesenter</h3>
-        <p>Full oversikt over senterdrift for senterleder. Butikk, aktiviteter og omsetningsrapportering i sanntid.</p>
+        <div class="module-icon"><svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 576 512" fill="currentColor"><path d="M510 208C496.2 118.8 425.6 48.2 336.4 34.4l0 173.6 173.6 0zM224.4 69.6c-91.7 21.7-160 104.1-160 202.4 0 114.9 93.1 208 208 208 34.4 0 66.7-8.3 95.2-23L237.3 299.7c-8.3-10-12.9-22.7-12.9-35.7l0-194.4zM538.9 320l-139.3 0 82.9 100.1c27.4-27 47.3-61.5 56.4-100.1zm3.5-111.9c2.3 17.5-12.2 31.9-29.9 31.9l-176 0c-17.7 0-32-14.3-32-32l0-176c0-17.7 14.4-32.2 31.9-29.9 107 14.2 191.8 99 206 206zM256.4 66.7l0 197.3c0 5.6 2 11 5.5 15.3L394 438.7c11.7 14.1 9.2 35.4-6.9 44.1-34.1 18.6-73.2 29.2-114.7 29.2-132.5 0-240-107.5-240-240 0-115.5 81.5-211.9 190.2-234.8 18.1-3.8 33.8 11 33.8 29.5zM571.2 321.8c-10.2 48.4-35 91.4-69.6 124.2-12.3 11.7-31.6 9.2-42.4-3.9L374.9 340.4c-17.3-20.9-2.4-52.4 24.6-52.4l142.2 0c18.5 0 33.3 15.7 29.5 33.8z"/></svg></div>
+        <h3>MVA i tråd med regelverket</h3>
+        <p>MVA-erklæringer, justeringsforpliktelser og dokumentasjonen som følger med.</p>
+        <a routerLink="/losning-justering" class="go">Les mer →</a>
+      </div>
+      <div class="module-card">
+        <div class="module-icon"><svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M32 48c0-8.8-7.2-16-16-16S0 39.2 0 48L0 400c0 44.2 35.8 80 80 80l416 0c8.8 0 16-7.2 16-16s-7.2-16-16-16L80 448c-26.5 0-48-21.5-48-48L32 48zm288 96c0 8.8 7.2 16 16 16l89.4 0-105.4 105.4-84.7-84.7c-6.2-6.2-16.4-6.2-22.6 0l-112 112c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L224 214.6 308.7 299.3c6.2 6.2 16.4 6.2 22.6 0L448 182.6 448 272c0 8.8 7.2 16 16 16s16-7.2 16-16l0-128c0-8.8-7.2-16-16-16l-128 0c-8.8 0-16 7.2-16 16z"/></svg></div>
+        <h3>Beslutninger på ferske tall</h3>
+        <p>Rapportering, inntektsbudsjett og formuesverdsettelse rett fra kildedataene.</p>
+        <a routerLink="/losning-rapportering" class="go">Les mer →</a>
+      </div>
+      <div class="module-card">
+        <div class="module-icon"><svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 640 512" fill="currentColor"><path d="M16 0C7.2 0 0 7.2 0 16S7.2 32 16 32l45.3 0C69 32 75.7 37.5 77 45.1l50.9 279.7c6.2 34.2 36 59.1 70.8 59.1L464 384c8.8 0 16-7.2 16-16s-7.2-16-16-16l-265.3 0c-19.3 0-35.9-13.8-39.4-32.8l-5.7-31.2 313 0c33.9 0 63.3-23.7 70.4-56.9L569.4 80.4C574.8 55.5 555.8 32 530.3 32L106.6 32C99.9 13.1 81.9 0 61.3 0L16 0zm97 64l417.3 0c5.1 0 8.9 4.7 7.8 9.7L505.8 224.4c-4 18.4-20.2 31.6-39.1 31.6L147.9 256 113 64zm75 396a20 20 0 1 1 40 0 20 20 0 1 1 -40 0zm72 0a52 52 0 1 0 -104 0 52 52 0 1 0 104 0zm172-20a20 20 0 1 1 0 40 20 20 0 1 1 0-40zm0 72a52 52 0 1 0 0-104 52 52 0 1 0 0 104z"/></svg></div>
+        <h3>Drive kjøpesenter</h3>
+        <p>Omsetning, besøk og oppfølging av butikkene, samlet for senterleder.</p>
         <a routerLink="/losning-kjopesenter" class="go">Les mer →</a>
       </div>
-
       <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M32 48c0-8.8-7.2-16-16-16S0 39.2 0 48L0 400c0 44.2 35.8 80 80 80l416 0c8.8 0 16-7.2 16-16s-7.2-16-16-16L80 448c-26.5 0-48-21.5-48-48L32 48zm288 96c0 8.8 7.2 16 16 16l89.4 0-105.4 105.4-84.7-84.7c-6.2-6.2-16.4-6.2-22.6 0l-112 112c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L224 214.6 308.7 299.3c6.2 6.2 16.4 6.2 22.6 0L448 182.6 448 272c0 8.8 7.2 16 16 16s16-7.2 16-16l0-128c0-8.8-7.2-16-16-16l-128 0c-8.8 0-16 7.2-16 16z"/></svg>
-        </div>
-        <h3>Revisorbekreftet omsetning</h3>
-        <p>Innhenting og administrasjon av revisorbekreftet omsetning, med komplett overblikk per leietaker.</p>
-        <a routerLink="/losning-rbo" class="go">Les mer →</a>
+        <div class="module-icon"><svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M208 32a176 176 0 1 1 0 352 176 176 0 1 1 0-352zm0 384c51.7 0 99-18.8 135.3-50L484.7 507.3c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L366 343.3C397.2 307 416 259.7 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208 93.1 416 208 416zM128 208l0 64c0 8.8 7.2 16 16 16s16-7.2 16-16l0-64c0-8.8-7.2-16-16-16s-16 7.2-16 16zm64-96l0 160c0 8.8 7.2 16 16 16s16-7.2 16-16l0-160c0-8.8-7.2-16-16-16s-16 7.2-16 16zm64 64l0 96c0 8.8 7.2 16 16 16s16-7.2 16-16l0-96c0-8.8-7.2-16-16-16s-16 7.2-16 16z"/></svg></div>
+        <h3>Koble på resten av økonomien</h3>
+        <p>Rundt 20 regnskaps- og ERP-systemer, og et åpent API for det dere trenger i tillegg.</p>
+        <a routerLink="/integrasjoner" class="go">Les mer →</a>
       </div>
-
+    </div>
+    <div style="margin-top:32px;">
+      <a routerLink="/losninger" class="btn btn-light">Se alle løsninger →</a>
     </div>
   </div>
 </section>
 
 <!-- ================= KOM I GANG 1-2-3 ================= -->
-<section id="kom-i-gang" style="padding-top:20px;">
+<section id="kom-i-gang">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Kom i gang</div>
-      <h2>Kom i gang på <strong>1-2-3</strong></h2>
-      <p>Fra spredte dokumenter til ferdig oppsatt forvaltningssystem, raskere enn du tror.</p>
+      <h2>Dypt system. <strong>Rask oppstart.</strong></h2>
+      <p>Dybde betyr ikke tung innføring. Med AI-innlesing av kontraktene er porteføljen på plass raskere enn dere tror.</p>
     </div>
     <div class="steps-grid">
       <div class="step-card reveal">
@@ -914,158 +1067,38 @@
         <p>Porteføljen er på plass, og du kan begynne å forvalte, fakturere og rapportere i Fenistra.</p>
       </div>
     </div>
-  </div>
-      <div style="text-align:center; margin-top:34px;">
-        <a routerLink="/kom-i-gang" class="btn btn-ghost">Se hvordan oppstarten fungerer</a>
-      </div>
-    
-</section>
-
-<!-- ================= FEATURE DEEP-DIVES ================= -->
-<section style="padding-top:20px;">
-  <div class="wrap">
-
-    <div class="feature-row reveal">
-      <div class="feature-copy">
-        <div class="eyebrow">Felleskostnader</div>
-        <h3>Avregning uten hodebry, ned til siste øre</h3>
-        <p>Automatisert MVA-behandling og fleksible avregningssykluser gjør felleskostnadsavregningen forutsigbar, både for deg og leietakerne dine.</p>
-        <ul class="feature-list">
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Automatisk MVA-behandling</li>
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Fleksible avregningssykluser</li>
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Detaljerte analyserapporter</li>
-        </ul>
-        <a routerLink="/losning-felleskostnader" class="btn btn-light">Se felleskostnadsløsningen</a>
-      </div>
-      <div class="feature-visual">
-        <img src="images/felleskost-skjevfordeling.webp" class="feature-shot" width="1200" height="977" loading="lazy" decoding="async"
-             alt="Skjevfordeling i Fenistra Felleskost: tabell der kostnadskontoer ligger som kolonner og leietakere som rader, med faste beløp per celle.">
-      </div>
+    <div style="margin-top:32px;">
+      <a routerLink="/kom-i-gang" class="btn btn-light">Se hvordan oppstarten fungerer →</a>
     </div>
-
-    <div class="feature-row reverse reveal">
-      <div class="feature-copy">
-        <div class="eyebrow">Kontrakter</div>
-        <h3>Aldri mist oversikten over en kontrakt igjen</h3>
-        <p>Overvåk utleie-, fremleie- og interne kontrakter samlet, med varsler før utløp og automatiske reguleringsbrev basert på KPI eller markedsleie.</p>
-        <ul class="feature-list">
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Varsling før kontraktsutløp</li>
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Automatiske reguleringsbrev</li>
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Full transparens mot leietaker</li>
-        </ul>
-        <a routerLink="/losning-kontrakter" class="btn btn-light">Se kontraktsløsningen</a>
-      </div>
-      <div class="feature-visual">
-        <img src="images/kontrakter-oversikt.webp" class="feature-shot" width="1200" height="977" loading="lazy" decoding="async"
-             alt="Kontraktsoversikten i Fenistra: søkbar liste over alle kontrakter med leietaker, selskap, eiendom og startdato, med summerte nøkkeltall øverst.">
-      </div>
-    </div>
-
-    <div class="feature-row reveal">
-      <div class="feature-copy">
-        <div class="eyebrow">Rapportering</div>
-        <h3>Markedets beste rapporter</h3>
-        <p>Fenistra gir deg alltid oppdaterte, detaljerte rapporter og nøkkeltall på tvers av hele porteføljen, klare for eksport til Excel, med grafer som gjør det enkelt å ta gode beslutninger.</p>
-        <ul class="feature-list">
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Alltid oppdaterte nøkkeltall, ingen manuell sammenstilling</li>
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Detaljerte grafer og bransjespesifikke analyser</li>
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Eksport til Excel</li>
-        </ul>
-        <a routerLink="/losning-rapportering" class="btn btn-light">Se rapporteringsløsningen</a>
-      </div>
-      <div class="feature-visual">
-        <img src="images/rapportering-leietakerliste.webp" class="feature-shot" width="1200" height="977" loading="lazy" decoding="async"
-             alt="Rapportmodulen i Fenistra: leietakerliste med filtre for selskap, portefølje og eiendom, søylediagram over månedlig leieomsetning og en detaljert tabell med areal, arealleie, felleskost og årsbeløp per eiendom.">
-      </div>
-    </div>
-
-    <div class="feature-row reverse reveal">
-      <div class="feature-copy">
-        <div class="eyebrow">Kjøpesenter</div>
-        <h3>Senterleders viktigste verktøy</h3>
-        <p>Full oversikt over status på senteret, med fokus på butikk, aktiviteter og løpende omsetningsrapportering. Løsningen er alltid tilgjengelig og oppdatert, uansett hvor senterleder befinner seg.</p>
-        <ul class="feature-list">
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Oversiktlig dashboard for omsetning og utvikling</li>
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Automatisk purring på manglende omsetningsrapportering</li>
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Bransjetilpassede rapporter, inkludert Kvarud Analyse</li>
-        </ul>
-        <a routerLink="/losning-kjopesenter" class="btn btn-light">Se kjøpesenterløsningen</a>
-      </div>
-      <div class="feature-visual">
-        <img src="images/kjopesenter-senterdashbord.webp" class="feature-shot" width="1200" height="977" loading="lazy" decoding="async"
-             alt="Senterdashbordet i Fenistra: ukentlige nøkkeltall for besøkende, handlende og omsetning, søylediagram over omsetning per dag sammenlignet med fjoråret, omsetning per bransje og ukens aktiviteter.">
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- ================= INTEGRATIONS ================= -->
-<section id="integrasjoner" class="integrations">
+<!-- ================= HVORFOR FENISTRA ================= -->
+<section id="hvorfor" class="why">
   <div class="wrap">
-    <div class="section-head center">
-      <div class="eyebrow">Integrasjoner</div>
-      <h2>Snakker sammen med systemene <strong>du allerede bruker</strong></h2>
-      <p>Fenistra integreres i dag mot over 20 ulike systemer i produksjon hos kunder. Trenger du noe mer spesifikt, byr vårt API på fleksibiliteten.</p>
+    <div class="section-head">
+      <div class="eyebrow">Hvorfor Fenistra</div>
+      <h2>For porteføljer som er for viktige <strong>til å ta sjanser</strong></h2>
     </div>
-
-    <div class="module-grid integrations-grid">
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M416 416c0 2.4-1 7.4-8.4 14.9-7.5 7.6-19.9 15.9-37.8 23.6-35.7 15.3-87.2 25.5-145.8 25.5S113.9 469.8 78.2 454.5c-17.9-7.7-30.3-16-37.8-23.6-7.4-7.5-8.4-12.5-8.4-14.9l0-84.5c17.2 8.9 38.1 16.3 61.2 21.9 37.5 9.2 82.5 14.5 130.8 14.5s93.3-5.3 130.8-14.5c23.1-5.7 44-13 61.2-21.9l0 84.5zm0-212.5l0 90.6c-14.5 10.6-37.9 20.6-68.9 28.3-34.7 8.5-77.1 13.6-123.1 13.6s-88.5-5.1-123.1-13.6c-31-7.6-54.4-17.7-68.9-28.3l0-90.6c17.2 8.9 38.1 16.3 61.2 21.9 37.5 9.2 82.5 14.5 130.8 14.5s93.3-5.3 130.8-14.5c23.1-5.7 44-13 61.2-21.9zm0-37.4c-14.5 10.6-37.9 20.6-68.9 28.3-34.7 8.5-77.1 13.6-123.1 13.6s-88.5-5.1-123.1-13.6c-31-7.6-54.4-17.7-68.9-28.3L32 96c0-2.4 1-7.4 8.4-14.9 7.5-7.6 19.9-15.9 37.8-23.6 35.7-15.3 87.2-25.5 145.8-25.5S334.1 42.2 369.8 57.5c17.9 7.7 30.3 16 37.8 23.6 7.4 7.5 8.4 12.5 8.4 14.9l0 70.1zM448 416l0-320C448 43 347.7 0 224 0S0 43 0 96L0 416c0 53 100.3 96 224 96s224-43 224-96z"/></svg>
-        </div>
-        <h3>Regnskap og ERP-systemer</h3>
-        <p>Rundt 20 regnskaps- og ERP-systemer. Fem av dem har API-integrasjon med dataflyt begge veier, de øvrige sender data én vei.</p>
-        <a routerLink="/integrasjon-regnskap-erp" class="go">Se integrasjoner →</a>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <div class="why-k">Siden 1994</div>
+        <p>Over 30 år med norsk næringseiendom. Vi kjenner regelverket, bransjen og fallgruvene.</p>
       </div>
-
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M336 0c8.8 0 16 7.2 16 16l0 48 32 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l32 0 0-48c0-8.8 7.2-16 16-16s16 7.2 16 16l0 48 192 0 0-48c0-8.8 7.2-16 16-16zM64 96c-17.7 0-32 14.3-32 32l0 288c0 17.7 14.3 32 32 32l320 0c17.7 0 32-14.3 32-32l0-288c0-17.7-14.3-32-32-32L64 96zm243.1 86.6c5.2-7.1 15.2-8.7 22.3-3.5s8.7 15.2 3.5 22.3l-128 176c-2.8 3.8-7 6.2-11.7 6.5s-9.3-1.3-12.6-4.6l-64-64c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l50.7 50.7 117-160.8z"/></svg>
-        </div>
-        <h3>Årsoppgjør</h3>
-        <p>Integrasjoner mot systemer for årsregnskap og innsending til offentlige registre.</p>
-        <a routerLink="/integrasjon-arsoppgjor" class="go">Se integrasjoner →</a>
+      <div class="why-item reveal">
+        <div class="why-k">En del av Visma</div>
+        <p>En stabil eier og ressurser til å bygge i mange år fremover. ISO 27001-sertifisert og VCDM-godkjent.</p>
       </div>
-
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M208 32a176 176 0 1 1 0 352 176 176 0 1 1 0-352zm0 384c51.7 0 99-18.8 135.3-50L484.7 507.3c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L366 343.3C397.2 307 416 259.7 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208 93.1 416 208 416zM128 208l0 64c0 8.8 7.2 16 16 16s16-7.2 16-16l0-64c0-8.8-7.2-16-16-16s-16 7.2-16 16zm64-96l0 160c0 8.8 7.2 16 16 16s16-7.2 16-16l0-160c0-8.8-7.2-16-16-16s-16 7.2-16 16zm64 64l0 96c0 8.8 7.2 16 16 16s16-7.2 16-16l0-96c0-8.8-7.2-16-16-16s-16 7.2-16 16z"/></svg>
-        </div>
-        <h3>Rapporter og analyse</h3>
-        <p>Kombiner Fenistra-data med verktøy for business intelligence og nøkkeltallsanalyse.</p>
-        <a routerLink="/integrasjon-rapportering" class="go">Se integrasjoner →</a>
+      <div class="why-item reveal">
+        <div class="why-k">Riktige tall</div>
+        <p>De komplekse beregningene gjøres av systemet, i tråd med norsk regelverk, hver gang.</p>
       </div>
-
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 576 512" fill="currentColor"><path d="M25.4 38.7c-5.4 5.4-6.2 13.8-2 20.2l79.2 118.8c5.9 8.9 15.9 14.2 26.6 14.2l72.2 0 76.3 76.3c-24.6 35.3-21.2 84.2 10.3 115.7L414.2 510.1c18.7 18.7 49.1 18.7 67.9 0l60.1-60.1c18.7-18.7 18.7-49.1 0-67.9L416.1 256c-31.5-31.5-80.4-34.9-115.7-10.3l-76.3-76.3 0-72.2c0-10.7-5.3-20.7-14.2-26.6L91-8.7c-6.3-4.2-14.8-3.4-20.2 2L25.4 38.7zM192.1 160l-62.9 0-71.9-107.9 26.9-26.9 107.9 71.9 0 62.9zM519.5 427.3l-60.1 60.1c-6.2 6.2-16.4 6.2-22.6 0L310.7 361.4c-22.8-22.9-22.8-59.9 0-82.7s59.9-22.8 82.7 0L519.5 404.7c6.2 6.2 6.2 16.4 0 22.6zM45.2 397.1c-28.1 28.1-28.1 73.7 0 101.8s73.7 28.1 101.8 0L242 404c-6.8-8.9-12.4-18.5-16.8-28.5L124.4 476.3c-15.6 15.6-40.9 15.6-56.6 0s-15.6-40.9 0-56.6L214.6 273 192 250.3 45.2 397.1zM256.7 49.9c7 9.5 11.8 20.5 14 32.2 24.9-30.6 62.9-50.1 105.4-50.1 14.9 0 29.2 2.4 42.6 6.8l-61.9 61.9c-3 3-4.7 7.1-4.7 11.3l0 64c0 1.9 .3 3.8 1 5.5 17.7 .1 35.4 3.6 52.1 10.5l27 0c4.2 0 8.3-1.7 11.3-4.7l61.9-61.9c4.4 13.4 6.8 27.7 6.8 42.6 0 32.5-11.4 62.3-30.4 85.7l22.7 22.7c24.8-29.3 39.7-67.1 39.7-108.4 0-28.2-6.9-54.7-19.2-78.1-2.4-4.5-6.7-7.6-11.8-8.4s-10.1 .9-13.7 4.5l-73.9 73.9-41.4 0 0-41.4 73.9-73.9c3.6-3.6 5.3-8.7 4.5-13.7s-3.9-9.4-8.4-11.8C430.8 6.9 404.3 0 376.1 0 329.4 0 287.1 19.1 256.7 49.9z"/></svg>
-        </div>
-        <h3>Drift og vedlikehold</h3>
-        <p>Koble Fenistra sammen med verktøyene dere bruker til drift og vedlikehold av eiendommene.</p>
-        <a routerLink="/integrasjon-drift-vedlikehold" class="go">Se integrasjoner →</a>
-      </div>
-
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 576 512" fill="currentColor"><path d="M106.9 81.7C112.4 70.8 123.4 64 135.6 64l304.9 0c12.1 0 23.2 6.8 28.6 17.7l56.8 113.7c1.4 2.7 2.1 5.8 2.1 8.8 0 10.9-8.9 19.8-19.8 19.8L67.8 224c-10.9 0-19.8-8.9-19.8-19.8 0-3.1 .7-6.1 2.1-8.8L106.9 81.7zM16 204.2c0 27.3 21.2 49.7 48 51.6L64 432c0 26.5 21.5 48 48 48l192 0c26.5 0 48-21.5 48-48l0-176 128 0 0 208c0 8.8 7.2 16 16 16s16-7.2 16-16l0-208.1c26.8-1.9 48-24.3 48-51.6 0-8-1.9-16-5.5-23.2L497.7 67.4C486.8 45.7 464.7 32 440.4 32L135.6 32c-24.2 0-46.4 13.7-57.2 35.4L21.5 181.1c-3.6 7.2-5.5 15.1-5.5 23.2zM96 352l0-96 224 0 0 96-224 0zm0 32l224 0 0 48c0 8.8-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16l0-48z"/></svg>
-        </div>
-        <h3>Kjøpesenterløsninger</h3>
-        <p>Integrasjoner mot ferdselstelling og senterdata, som Viametrics og IMAS.</p>
-        <a routerLink="/integrasjon-kjopesenter" class="go">Se integrasjoner →</a>
-      </div>
-
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M64 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l384 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32L64 96zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128zM128 232a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm80-40l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 96l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zM104 304a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
-        </div>
-        <h3>Se alle systemer</h3>
-        <p>Full oversikt over alle systemer Fenistra integreres mot, i én liste.</p>
-        <a routerLink="/integrasjoner-alle-systemer" class="go">Se alle systemer →</a>
+      <div class="why-item reveal">
+        <div class="why-k">Tyngde i markedet</div>
+        <p>Norges største system for næringseiendom, valgt av blant andre Thon Gruppen, Coop, Selvaag og Höegh.</p>
       </div>
     </div>
-
-    <p class="integration-footnote"><strong>Innebygde integrasjoner i Fenistra:</strong> SSB, e-faktura (EHF/PEPPOL) og oppslag mot Brønnøysundregistrene er en del av standard Fenistra-integrasjonene, uavhengig av hvilke øvrige integrasjoner dere velger.</p>
+    <p class="why-customers">Allerede kunde? Fenistra fornyer seg hele tiden, og det nye kommer automatisk til dere. <a routerLink="/blogg">Se hva som er nytt →</a></p>
   </div>
 </section>
 
@@ -1073,13 +1106,29 @@
 <section id="kunder" class="testimonial">
   <div class="wrap">
     <svg class="quote-mark" width="34" height="26" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M0 208C0 146.1 50.1 96 112 96l32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0c-44.2 0-80 35.8-80 80l0 24.6c9.4-5.4 20.3-8.6 32-8.6l64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64L0 208zm32 80l0 64c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32zm352-32l-64 0c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32zM256 320l0-112c0-61.9 50.1-112 112-112l32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0c-44.2 0-80 35.8-80 80l0 24.6c9.4-5.4 20.3-8.6 32-8.6l64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32z"/></svg>
-    <blockquote>«Det er en trygghet i å møte en samarbeidspartner som forstår vår særbransje og de utfordringene vi har i hverdagen. Hos Fenistra blir vi møtt med forståelse, og det er godt å jobbe med fagfolk som virkelig kan faget sitt.»</blockquote>
-    <div class="attr">
-      <div class="avatar">MT</div>
-      <div>
-        <div class="who">Maren Elise Dalene Torp, Senior Controller Eiendomsforvaltning</div>
-        <div class="role">Höegh Eiendom · Fenistra-kunde</div>
-      </div>
+    <div class="quote-pair">
+      <figure>
+        <div class="quote-stat"><span>50–60 %</span> mindre tid på fakturering etter overgangen til nye Fenistra</div>
+        <blockquote>«Det er en trygghet i å møte en samarbeidspartner som forstår vår særbransje og de utfordringene vi har i hverdagen. Hos Fenistra blir vi møtt med forståelse, og det er godt å jobbe med fagfolk som virkelig kan faget sitt.»</blockquote>
+        <figcaption class="attr">
+          <div class="avatar">MT</div>
+          <div>
+            <div class="who">Maren Elise Dalene Torp, Senior Controller Eiendomsforvaltning</div>
+            <div class="role">Höegh Eiendom · kunde i over 20 år</div>
+          </div>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="quote-stat"><span>2026</span> Backer velger Fenistra som nytt forvaltningssystem</div>
+        <blockquote>«For oss i Backer var det avgjørende å velge en løsning som er både moderne og intuitiv. Vi valgte Fenistra fordi de kombinerer dyp bransjekunnskap med et verktøy som forenkler hverdagen vår.»</blockquote>
+        <figcaption class="attr">
+          <div class="avatar">TJ</div>
+          <div>
+            <div class="who">Tine Wergeland Johannessen, utleie- og markedssjef</div>
+            <div class="role">Backer AS · Fenistra-kunde</div>
+          </div>
+        </figcaption>
+      </figure>
     </div>
     <a routerLink="/kunder" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff; margin-top:32px;">Les flere kundehistorier →</a>
   </div>
@@ -1087,57 +1136,66 @@
 
 <!-- ================= FAQ ================= -->
 <section id="faq">
-  <div class="wrap">
-    <div class="section-head">
+  <div class="wrap faq-layout">
+    <div class="section-head faq-head">
       <div class="eyebrow">Spørsmål og svar</div>
-      <h2>Svar på det du <strong>lurer på</strong></h2>
+      <h2>Spørsmålene vi får <strong>før dere velger</strong></h2>
       <p>Finner du ikke svaret her, ta gjerne kontakt med oss for en prat.</p>
+      <div class="faq-head-actions">
+        <a routerLink="/kontakt-oss" class="btn btn-primary">Kontakt oss</a>
+        <a routerLink="/sporsmal" class="btn btn-ghost">Se alle spørsmål →</a>
+      </div>
     </div>
 
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-q"><span>Hva er et forvaltningssystem?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Et forvaltningssystem er et samlet sett med verktøy og arbeidsprosesser som hjelper eiendomsbesittere, gårdeiere og forvaltere med å organisere drift, vedlikehold, økonomi og administrasjon av eiendommer, alt fra leietakeradministrasjon til regnskap og rapportering, på ett sted. Fenistra er ikke bare et kontraktshåndteringssystem, men også et faktureringssystem – en komplett løsning for økonomisk forvaltning av næringseiendom, fra kontrakt og budsjettering til fakturering, felleskostnadsavregning, MVA-håndtering og rapportering i én sammenhengende flyt.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>Hva inneholder Fenistra Standard?</span><span class="plus"></span></button>
+        <button class="faq-q"><span>Hva får vi med Fenistra som vi ikke får med et enklere system?</span><span class="plus"></span></button>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>Fenistra Standard passer for små og mellomstore eiendomsselskaper, og dekker hele arbeidsflyten fra kontrakt til rapportering.</p>
-          <ul>
-            <li>Kontrakt</li>
-            <li>Fakturering</li>
-            <li>Regnskap</li>
-            <li>Rapportering</li>
-            <li>Dokument</li>
-            <li>Felleskostnader</li>
-            <li>Omsetningsavregning</li>
-            <li>Formuesverdsettelse</li>
-            <li>Inntektsbudsjett</li>
-            <li>MVA-erklæring (transaksjonsprodukt)</li>
-            <li>Revisorbekreftet omsetning (transaksjonsprodukt)</li>
-            <li>Protokoller (transaksjonsprodukt)</li>
-            <li>Digital signering (transaksjonsprodukt)</li>
-          </ul>
-          <a routerLink="/priser" fragment="standard" class="btn btn-light" style="margin-top:16px;">Se Fenistra Standard →</a>
+          <p>Dybde der det koster mest å ta feil. Enklere systemer er raske å ta i bruk fordi de er laget for enkle porteføljer. Med flere selskaper, mange kontraktstyper, felleskostnader, MVA og omsetningsleie i samme portefølje er det dybden som avgjør om tallene stemmer. Plug-and-play fungerer fint, helt til porteføljen din ikke er enkel lenger.</p>
+          <a routerLink="/losninger" class="btn btn-light" style="margin-top:16px;">Se plattformen →</a>
         </div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><span>Hva inneholder Fenistra Premium?</span><span class="plus"></span></button>
+        <button class="faq-q"><span>Hvordan reduserer Fenistra risikoen for feil i økonomien?</span><span class="plus"></span></button>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>Alt fra Standard-pakken, i tillegg til alle tilleggsprodukter og egen dedikert kunderådgiver.</p>
-          <a routerLink="/priser" fragment="premium" class="btn btn-light" style="margin-top:16px;">Se pris og løsning →</a>
+          <p>De krevende beregningene gjøres av systemet, ikke i regneark. KPI-reguleringen henter indeksen direkte fra SSB, felleskostnader avregnes ned til siste øre, og MVA og justeringsforpliktelser følges opp over hele perioden. Reguleringsbrev og MVA-dokumentasjon lages automatisk, i tråd med norsk regelverk. Alt registreres én gang, så fakturering, regnskap og rapporter alltid stemmer med hverandre.</p>
         </div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><span>Hva er Fenistra Kjøpesenter?</span><span class="plus"></span></button>
+        <button class="faq-q"><span>Porteføljen vår er kompleks. Hvor raskt kan vi være i gang?</span><span class="plus"></span></button>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>Fenistra Kjøpesenter er senterleders verktøy, og gir full oversikt over status på senteret og oppgavene som hører til rollen. Fokuset ligger på butikk, aktiviteter og løpende omsetningsrapportering.</p>
-          <a routerLink="/losning-kjopesenter" class="btn btn-light" style="margin-top:16px;">Les mer her →</a>
+          <p>Raskere enn dere tror. AI leser inn kontraktene, vi kobler Fenistra til regnskapsprogrammet dere allerede bruker, og så er dere i gang. Ingen betalte konsulenttimer og ingen skjulte kostnader. Backer valgte Fenistra i 2026 fordi de ville ha en løsning som er både moderne og intuitiv, med dyp bransjekunnskap bak.</p>
+          <a routerLink="/kom-i-gang" class="btn btn-light" style="margin-top:16px;">Se hvordan oppstarten fungerer →</a>
         </div></div>
       </div>
-    </div>
-    <div style="max-width:760px; text-align:right; margin-top:28px;">
-      <a routerLink="/sporsmal" class="btn btn-ghost">Se alle spørsmål →</a>
+      <div class="faq-item">
+        <button class="faq-q"><span>Hvorfor er Fenistra et trygt valg på lang sikt?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Fenistra har vært i norsk næringseiendom siden 1994 og brukes av over 170 eiendomsforvaltere. Vi er en del av Visma, ISO 27001-sertifisert og VCDM-godkjent, og plattformen er skybasert og alltid oppdatert. Dere velger et system med tyngde i dag og ressurser til å fortsette å bygge i mange år.</p>
+          <a routerLink="/datasikkerhet" class="btn btn-light" style="margin-top:16px;">Les om datasikkerhet →</a>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Er Fenistra klar for AI?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Ja, og fundamentet er det som avgjør. AI blir aldri bedre enn dataene den står på, og Fenistra bygger på strukturerte data om norsk næringseiendom siden 1994. Allerede i dag har Fenistra en KI-assistent som svarer på spørsmål om porteføljen, og AI-innlesing av kontrakter.</p>
+          <a routerLink="/ki" class="btn btn-light" style="margin-top:16px;">Se vår AI-satsing →</a>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Vi er allerede Fenistra-kunde. Hva får vi fremover?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Fenistra fornyer seg hele tiden. Plattformen er skybasert, så nye funksjoner og AI-forbedringer kommer automatisk til dere, uten oppgraderingsprosjekter. Dere har allerede valgt riktig, og det blir bare bedre.</p>
+          <a routerLink="/blogg" class="btn btn-light" style="margin-top:16px;">Se hva som er nytt →</a>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Hva koster Fenistra?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Prisen følger porteføljens leieomsetning, ikke antall brukere, og alle pakker har ubegrenset antall brukere. Fortell oss om porteføljen, så får dere et konkret tilbud.</p>
+          <a routerLink="/priser" class="btn btn-light" style="margin-top:16px;">Se pakkene →</a>
+        </div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1145,7 +1203,7 @@
 <!-- ================= CTA BAND ================= -->
 <section class="cta-wrap" style="padding-bottom:20px;">
   <div class="cta-band reveal">
-    <h2>Klar for bedre oversikt over eiendommen din?</h2>
+    <h2>Se hva Fenistra kan gjøre for porteføljen deres.</h2>
     <div class="actions">
       <a routerLink="/pakke-resultat" class="btn btn-on-dark">Book en demo</a>
       <a routerLink="/kontakt-oss" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Kontakt oss</a>

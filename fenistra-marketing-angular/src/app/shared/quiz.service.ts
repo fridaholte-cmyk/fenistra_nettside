@@ -32,8 +32,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     id: 'portfolio-size',
     question: 'Hvor stor er eiendomsporteføljen deres?',
     options: [
-      { label: 'Under 5 000 kvm', premiumWeight: 0 },
-      { label: '5 000–15 000 kvm', premiumWeight: 0 },
+      { label: 'Under 15 000 kvm', premiumWeight: 0 },
       { label: '15 000–50 000 kvm', premiumWeight: 0 },
       { label: '50 000–100 000 kvm', premiumWeight: 1 },
       { label: 'Over 100 000 kvm', premiumWeight: 1 },
@@ -143,7 +142,7 @@ export class QuizService {
     const relatedChips: { label: string; route: string }[] = [];
 
     const sizeAnswer = byId.get('portfolio-size');
-    if (sizeAnswer && sizeAnswer.optionIndex >= 3) {
+    if (sizeAnswer && sizeAnswer.optionIndex >= 2) {
       reasons.push('Porteføljen deres er stor nok til at en dedikert kunderådgiver og prioritert oppfølging gir mest verdi.');
     } else {
       reasons.push('Fenistra Standard dekker kjerneløsningene deres — kontrakt, fakturering, regnskap og rapportering — uten behov for tilleggsprodukter.');

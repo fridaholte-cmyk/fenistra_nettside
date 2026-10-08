@@ -14,11 +14,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["passer fenistra", "passer det for", "passer fenistra for", "er fenistra noe for", "fenistra for meg", "fenistra for oss", "passer dette for", "egner fenistra seg", "kan fenistra brukes av", "passer for min bedrift", "passer for oss"],
-    answer: "Ja, sannsynligvis! Fenistra passer for de fleste eiendomsforvaltere og eiendomsselskaper i Norge, uansett størrelse på porteføljen. Ta testen, så viser vi hvilke løsninger og hvilken pakke som passer akkurat for dere, på under to minutter. <a href=\"pakke-resultat.html\">Ta testen →</a>"
+    answer: "Fenistra er bygget for eiendomsselskaper som tar forvaltningen på alvor, særlig porteføljer med flere selskaper, mange kontraktstyper, felleskostnader, MVA eller omsetningsleie. Ta testen, så viser vi hvilke løsninger og hvilken pakke som passer akkurat for dere, på under to minutter. <a href=\"pakke-resultat.html\">Ta testen →</a>"
   },
   {
-    keywords: ["datasikkerhet", "sikker data", "dataene trygge", "sikrer dere dataene", "sikkerhet program", "visma security program", "kryptering", "hosting", "trust centre", "informasjonssikkerhet", "trygge data", "sikre data", "lagrer dere dataene", "hvor lagres dataene", "databeskyttelse", "cybersikkerhet", "dataene", "trygge"],
-    answer: "Fenistra er en del av Visma-konsernet, og dataene deres beskyttes gjennom Visma Security Program – de samme sikkerhetsstandardene som gjelder på tvers av hele Visma. For full teknisk og compliance-dokumentasjon, se Visma Trust Centre. <a href=\"datasikkerhet.html\">Les mer om Datasikkerhet →</a>"
+    keywords: ["datasikkerhet", "sikker data", "dataene trygge", "sikrer dere dataene", "sikkerhet program", "visma security program", "iso", "iso 27001", "27001", "sertifisert", "sertifisering", "vcdm", "kryptering", "hosting", "trust centre", "informasjonssikkerhet", "trygge data", "sikre data", "lagrer dere dataene", "hvor lagres dataene", "databeskyttelse", "cybersikkerhet", "dataene", "trygge"],
+    answer: "Fenistra er ISO/IEC 27001-sertifisert og godkjent etter VCDM, Vismas krav til sikker utvikling og drift av skytjenester. Fenistra er også en del av Visma-konsernet, og dataene deres beskyttes gjennom Visma Security Program – de samme sikkerhetsstandardene som gjelder på tvers av hele Visma. For full teknisk og compliance-dokumentasjon, se Visma Trust Centre. <a href=\"datasikkerhet.html\">Les mer om Datasikkerhet →</a>"
   },
   {
     keywords: ["forvaltningssystem"],
@@ -26,7 +26,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["standard"],
-    answer: "Fenistra Standard passer for små og mellomstore eiendomsselskaper, og dekker hele arbeidsflyten fra kontrakt til rapportering: Kontrakt, Fakturering, Regnskap, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett og Sikkerhetsstyring, i tillegg til transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering."
+    answer: "Fenistra Standard dekker hele arbeidsflyten fra kontrakt til rapportering, samlet i ett system: Kontrakt, Fakturering, Regnskap, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett og Sikkerhetsstyring, i tillegg til transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering."
   },
   {
     keywords: ["premium"],
@@ -46,7 +46,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["forskjellen", "standard", "premium"],
-    answer: "Standard passer for små og mellomstore eiendomsselskaper, og inneholder kjerneløsningene i Fenistra samt transaksjonsproduktene. Premium passer for store eiendomsselskaper, og inneholder alt fra Standard i tillegg til alle tilleggsprodukter og en egen dedikert kunderådgiver."
+    answer: "Standard inneholder kjerneløsningene i Fenistra samt transaksjonsproduktene. Premium er for porteføljer med flere selskaper og høye krav, og inneholder alt fra Standard i tillegg til alle tilleggsprodukter og en egen dedikert kunderådgiver."
   },
   {
     keywords: ["eier"],
@@ -104,7 +104,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["markedsledende", "kompromiss", "velge fenistra", "skiller fenistra", "skiller dere", "andre systemer", "hvorfor fenistra", "hvorfor velge", "konkurrent", "sammenlign", "forskjell på fenistra og", "fordelene med fenistra", "bedre enn", "alternativ til"],
-    answer: "Fenistra er markedsledende av en grunn: hos oss får du alt, uten kompromiss. Du får full kontroll på all økonomisk forvaltning, med alt som er viktig for daglig leder, økonomisjef, regnskapsfører og forvalter, i én helhetlig løsning. Har dere spesielle kontrakter eller behov, finner vi en løsning i Fenistra. Et system som tilpasser seg dere, ikke omvendt. I tillegg: moderne grensesnitt, rask oppstart uten skjulte kostnader og en sterk integrasjonsmotor mot regnskapet. <a href=\"sporsmal.html\">Les mer i Spørsmål og svar →</a>"
+    answer: "Fenistra har vært forvaltningssystemet for norsk næringseiendom i over 30 år, og er nå skybasert og bygget for de neste 30. Fenistra får pengene riktig: KPI-regulering via SSB, felleskostnader, MVA og justering, omsetningsleie og revisorbekreftet omsetning beregnes automatisk i tråd med norsk regelverk, og dokumentasjonen lages for dere. Data registreres én gang og er riktig overalt, noe som også gjør Fenistra godt rustet for AI. Plug-and-play fungerer fint helt til porteføljen ikke er enkel lenger; Fenistra er bygget for ekte kompleksitet, med Visma i ryggen. I tillegg: moderne grensesnitt, rask oppstart med AI-innlesing av kontrakter og integrasjoner mot regnskapet. <a href=\"sporsmal.html\">Les mer i Spørsmål og svar →</a>"
   },
   {
     keywords: ["hvilken verdi", "verdi kan fenistra", "verdi for", "mitt selskap", "vårt selskap", "gevinst", "spare tid", "hva tjener vi"],

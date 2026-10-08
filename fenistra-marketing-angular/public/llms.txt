@@ -1,49 +1,49 @@
 # Fenistra
 
-> Fenistra er et markedsledende, skybasert forvaltningssystem for næringseiendom, levert av Visma Property Solutions AS (del av Visma-konsernet). Fenistra samler kontrakter, arealer, felleskostnader, fakturering, regnskap og rapportering i én plattform, og brukes av over 170 eiendomsforvaltere i Norge.
+> Fenistra er forvaltningssystemet profesjonell norsk næringseiendom har brukt i over 30 år, nå skybasert og bygget for de neste 30. Fenistra beregner regulering, felleskostnader, MVA og omsetningsleie automatisk, i tråd med norsk regelverk, og brukes av over 170 eiendomsforvaltere i Norge. Levert av Visma Property Solutions AS (del av Visma-konsernet).
 
-Fenistra har røtter tilbake til 1994 og har vært en del av Visma Property Solutions siden 2020. Systemet selges i to pakker, Fenistra Standard og Fenistra Premium, og prises etter porteføljens leieomsetning med ubegrenset antall brukere.
+Utviklingen av Fenistra startet i 1994, og Fenistra har vært en del av Visma siden 2020. Nye kunder bruker den skybaserte plattformen Fenistra.net, som alltid er oppdatert. Fenistra er bygget for eiendomsselskaper med store og mellomstore porteføljer: flere selskaper, mange kontraktstyper og ekte kompleksitet. Systemet selges i to pakker, Fenistra Standard og Fenistra Premium, og prises etter porteføljens leieomsetning med ubegrenset antall brukere. Konkret pris gis i et tilbud tilpasset porteføljen.
 
 ## Hvorfor Fenistra
 
-Fenistra er markedsledende av en grunn: hos oss får du alt, uten kompromiss.
+### Fenistra får pengene riktig
 
-- **Full kontroll på all økonomisk forvaltning:** alt som er viktig for daglig leder, økonomisjef, regnskapsfører og forvalter, i ett system.
-- **En helhetlig løsning:** arealer, kontrakter, fakturering, avregning, regulering, omsetning og kjøpesenter, innhenting av MVA-erklæringer, revisorbekreftet omsetning, digital signering av kontrakter, inn- og utflyttingsprotokoller og rapporter med full oversikt over porteføljen. En bredde i funksjonalitet du sjelden finner i ett og samme system.
-- **Et hav av muligheter:** har du spesielle kontrakter eller spesielle behov, finner vi en løsning i Fenistra. De største aktørene i bransjen får dekket behovene sine i Fenistra.
-- **Et system som tilpasser seg deg,** ikke et system du må tilpasse deg til.
+Det er i beregningene feil koster mest. Fenistra automatiserer de krevende beregningene i norsk næringseiendom og lager dokumentasjonen:
 
-### Fakturering, avregning og regulering
+- **KPI-regulering** med direkte integrasjon mot SSB, og automatiske reguleringsbrev.
+- **Felleskostnadsavregning** ned til siste øre, med MVA-behandling og full sporbarhet overfor leietakerne.
+- **MVA og justeringsforpliktelser** fulgt opp gjennom hele perioden, med innhenting av MVA-erklæringer fra leietakerne.
+- **Omsetningsbasert leie** og **revisorbekreftet omsetning**, beregnet, avstemt og fakturert uten manuelle mellomregninger.
+- **Rapporter og nøkkeltall** rett fra kildedataene, klare for styret og revisor.
 
-- **Fakturering fra Fenistra:** full kontroll på fakturering av leie, avstemt mot regnskapet.
-- **Avregning på dine premisser:** avregningsbrevet følger med faktureringen til leietaker, slik at leietaker får enkel oversikt.
-- **Regulering og reguleringsbrev:** reguleringen kan tilpasses etter dine behov, og leietaker får reguleringsbrev.
+### Bygget for AI-æraen
 
-### I tillegg
+AI blir aldri bedre enn dataene den står på. Fenistra har strukturerte data om norsk næringseiendom siden 1994, med kontrakt, areal og økonomi koblet sammen i ett system, og alle data registreres én gang. I dag har Fenistra en KI-assistent i hele systemet og AI-opplasting av kontrakter, og AI-utvikling er prioritert fremover.
 
-- **Moderne og intuitivt grensesnitt**, og enkelt og raskt å komme i gang: ingen betalte konsulenttimer og ingen skjulte kostnader.
-- **Sterk integrasjonsmotor (Hub):** kobler seg via API mot regnskapssystemer som Tripletex, PowerOffice GO, Xledger og Visma.net. Det eliminerer dobbeltregistrering og sikrer at leiereguleringer og fakturagrunnlag flyter automatisk over til regnskapet. Fenistra er integrert mot over 20 systemer i produksjon hos kunder.
-- **Automatisering av rutineoppgaver** som fakturering, felleskostnadsavregning, MVA-håndtering og omsetningsavregning.
-- **Fleksibelt og skalerbart:** velg pakken som passer i dag, og legg til funksjonalitet etter hvert som porteføljen vokser.
-- **Innebygd AI:** en KI-assistent i hele systemet og AI-opplasting av kontrakter.
+### Data dere kan stole på
+
+- **Registrert én gang, riktig overalt:** data flyter fra kontrakt til fakturering, regnskap og rapportering uten dobbeltregistrering.
+- **Integrasjoner:** API-integrasjon med dataflyt begge veier mot Tripletex, PowerOffice GO, Xledger, Visma Business NXT og Visma.net, og integrert mot over 20 systemer i produksjon hos kunder.
+- **Rask oppstart:** AI leser inn kontraktene, Fenistra kobles mot regnskapet, og dere er i gang. Ingen betalte konsulenttimer og ingen skjulte kostnader.
+- **Trygghet:** Fenistra er ISO/IEC 27001-sertifisert og VCDM-godkjent (Vismas krav til sikker skydrift), har over 30 års erfaring fra norsk næringseiendom, og Visma som eier, med Visma Security Program.
 
 ## Pakker
 
-- **Fenistra Standard:** for små og mellomstore eiendomsselskaper. Kontrakt, fakturering, regnskap, rapportering, dokument, felleskostnader, omsetningsavregning, formuesverdsettelse, inntektsbudsjett og sikkerhetsstyring, pluss transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, protokoller og digital signering.
-- **Fenistra Premium:** for store eiendomsselskaper. Alt i Standard, alle tilleggsprodukter (justering, arealberegning, kjøpesenter) og en egen dedikert kunderådgiver.
+- **Fenistra Standard:** hele arbeidsflyten fra kontrakt til rapportering i ett system. Kontrakt, fakturering, regnskap, rapportering, dokument, felleskostnader, omsetningsavregning, formuesverdsettelse, inntektsbudsjett og sikkerhetsstyring, pluss transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, protokoller og digital signering.
+- **Fenistra Premium:** for porteføljer med flere selskaper og høye krav. Alt i Standard, alle tilleggsprodukter (justering, arealberegning, kjøpesenter) og en egen dedikert kunderådgiver.
 
 ## Hovedsider
 
 - [Forside](https://www.fenistra.no/): oversikt over Fenistra forvaltningssystem
 - [Spørsmål og svar](https://www.fenistra.no/sporsmal): pakker, priser, integrasjoner, oppstart og hvorfor velge Fenistra
-- [Alle løsninger](https://www.fenistra.no/losninger): alle løsningene i Fenistra
-- [Priser og pakker](https://www.fenistra.no/priser): Fenistra Standard og Premium
+- [Løsninger](https://www.fenistra.no/losninger): plattformen ordnet etter det dere skal få gjort, med lenker til hver løsning
+- [Pakker og priser](https://www.fenistra.no/priser): Fenistra Standard og Premium, prisprinsipp og hva som er inkludert
 - [Integrasjoner](https://www.fenistra.no/integrasjoner): regnskap/ERP, årsoppgjør, drift og vedlikehold, rapportering og kjøpesenter
 - [Regnskap og ERP-integrasjoner](https://www.fenistra.no/integrasjon-regnskap-erp): Tripletex, Xledger, PowerOffice GO, Visma Business NXT, Visma.net m.fl.
-- [AI i Fenistra](https://www.fenistra.no/ki): KI-assistenten, AI-opplasting av kontrakter og veikartet for AI
+- [AI i Fenistra](https://www.fenistra.no/ki): KI-assistenten, AI-opplasting av kontrakter og hvorfor datagrunnlaget er avgjørende
 - [Kundehistorier](https://www.fenistra.no/kunder): Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm (nå Aspelin Reitan) og Backer AS
 - [Om oss](https://www.fenistra.no/om-oss): historien bak Fenistra og Visma Property Solutions
-- [Datasikkerhet](https://www.fenistra.no/datasikkerhet): Visma Security Program og GDPR
+- [Datasikkerhet](https://www.fenistra.no/datasikkerhet): ISO 27001-sertifisering, VCDM-godkjenning, Visma Security Program og GDPR
 - [Kom i gang](https://www.fenistra.no/kom-i-gang): oppstart steg for steg, AI-opplasting av kontrakter, kobling mot regnskap og hva oppstarten koster
 - [Kontakt oss](https://www.fenistra.no/kontakt-oss): brukerstøtte, adresse og møtebooking
 - [Tilgjengelighetserklæring](https://www.fenistra.no/tilgjengelighet): universell utforming (WCAG 2.1 AA), tastatur, 400 % zoom og klage til Uutilsynet
