@@ -357,12 +357,21 @@
   .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;}
   @media (max-width:760px){.price-grid{grid-template-columns:1fr;} .price-grid > div{padding:28px !important;}}
 </style>
-<section class="index-hero">
+<div class="wrap">
+  <div class="breadcrumb">
+    <a routerLink="/">Forside</a><span class="sep">/</span>
+    <span class="current">Pakker og priser</span>
+  </div>
+</div>
+
+<section class="mp-hero">
   <div class="wrap">
-    <div class="eyebrow">Pakker og priser</div>
-    <h1>Én pris som følger porteføljen</h1>
-    <p>Prisen settes ut fra porteføljens leieomsetning, ikke antall brukere. Alle pakker har ubegrenset antall brukere. Fortell oss om porteføljen, så får dere et konkret tilbud.</p>
-    <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary" style="margin-top:20px;">Få et tilbud</a>
+    <div class="mp-hero-top"><span class="eyebrow">Pakker og priser</span></div>
+    <h1>Én pris som følger <strong>porteføljen</strong></h1>
+    <p class="mp-lead">Prisen settes ut fra porteføljens leieomsetning, ikke antall brukere. Alle pakker har ubegrenset antall brukere. Fortell oss om porteføljen, så får dere et konkret tilbud.</p>
+    <div class="mp-actions">
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Få et tilbud</a>
+    </div>
   </div>
 </section>
 

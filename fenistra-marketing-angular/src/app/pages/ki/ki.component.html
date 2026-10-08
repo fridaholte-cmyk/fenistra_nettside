@@ -382,12 +382,19 @@
     .ki-steps{padding:18px;}
   }
 </style>
-<section class="module-hero">
+<div class="wrap">
+  <div class="breadcrumb">
+    <a routerLink="/">Forside</a><span class="sep">/</span>
+    <span class="current">AI og data</span>
+  </div>
+</div>
+
+<section class="mp-hero">
   <div class="wrap">
-    <div class="eyebrow">AI hos Fenistra</div>
-    <h1>Vi bygger AI inn i eiendomsforvaltningen, ikke oppå den</h1>
-    <p class="lead">Eiendomsforvaltning handler om store mengder data på tvers av kontrakter, arealer og økonomi. Det er nettopp den typen data AI er godt egnet til å strukturere, tolke og varsle på, når det gjøres riktig.</p>
-    <div class="hero-actions">
+    <div class="mp-hero-top"><span class="eyebrow">AI og data</span></div>
+    <h1>Vi bygger AI inn i eiendomsforvaltningen, <strong>ikke oppå den</strong></h1>
+    <p class="mp-lead">Eiendomsforvaltning handler om store mengder data på tvers av kontrakter, arealer og økonomi. Det er nettopp den typen data AI er godt egnet til å strukturere, tolke og varsle på, når det gjøres riktig.</p>
+    <div class="mp-actions">
       <a href="ki#felix" class="btn btn-primary" (click)="scrollToFelix($event)">Se Felix, vårt AI-prosjekt</a>
       <a routerLink="/losninger" class="btn btn-ghost">Se alle løsninger</a>
     </div>

@@ -392,12 +392,22 @@
     .depth-section{padding:64px 0;}
   }
 </style>
+<div class="wrap">
+  <div class="breadcrumb">
+    <a routerLink="/">Forside</a><span class="sep">/</span>
+    <span class="current">Løsninger</span>
+  </div>
+</div>
 
-<section class="index-hero">
+<section class="mp-hero">
   <div class="wrap">
-    <div class="eyebrow">Løsninger</div>
-    <h1>Én plattform. Alt dere trenger for å forvalte porteføljen.</h1>
-    <p>Start med det dere trenger i dag, og bygg videre når porteføljen vokser. Kontrakt, økonomi og rapportering henger sammen i ett skybasert system, og hver beregning gjøres riktig, automatisk.</p>
+    <div class="mp-hero-top"><span class="eyebrow">Løsninger</span></div>
+    <h1>Én plattform for hele forvaltningen</h1>
+    <p class="mp-lead">Start med det dere trenger i dag, og bygg videre når porteføljen vokser. Kontrakt, økonomi og rapportering henger sammen i ett skybasert system, og hver beregning gjøres riktig, automatisk.</p>
+    <div class="mp-actions">
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book en demo</a>
+      <button type="button" class="btn btn-ghost" (click)="quiz.open()">Ta testen</button>
+    </div>
   </div>
 </section>
 
