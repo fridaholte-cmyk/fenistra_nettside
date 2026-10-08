@@ -330,6 +330,16 @@
     .chat-panel{width:calc(100vw - 24px);height:min(70vh, 560px);right:12px;bottom:12px;}
     .chat-trigger{right:16px;bottom:16px;}
   }
+  .module-body .section-head p a{color:var(--berry-deep);font-weight:600;}
+  .erp-grid{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:0;padding:0;}
+  .erp-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 20px 20px;display:flex;flex-direction:column;align-items:center;gap:16px;transition:border-color .2s ease, transform .2s ease, box-shadow .2s ease;}
+  .erp-card:hover{border-color:var(--berry-mid);transform:translateY(-2px);box-shadow:0 14px 30px -18px rgba(21,10,24,.25);}
+  .erp-logo{height:56px;width:100%;display:flex;align-items:center;justify-content:center;}
+  .erp-logo img{max-height:40px;max-width:min(150px, 80%);width:auto;height:auto;object-fit:contain;}
+  .erp-wordmark{font-family:var(--font-display);font-weight:600;font-size:17px;letter-spacing:-0.01em;color:var(--plum);text-align:center;line-height:1.25;}
+  .erp-name{font-family:var(--font-mono);font-size:12px;color:var(--ink-soft);text-align:center;border-top:1px solid var(--line);padding-top:12px;width:100%;}
+  @media (max-width:980px){.erp-grid{grid-template-columns:repeat(3,1fr);}}
+  @media (max-width:760px){.erp-grid{grid-template-columns:repeat(2,1fr);gap:12px;}}
 </style>
 <div class="wrap">
   <div class="breadcrumb">
@@ -342,7 +352,7 @@
 <section class="module-hero">
   <div class="wrap">
     <h1>Regnskap og ERP-systemer</h1>
-    <p class="lead">Fenistra integreres sømløst med regnskaps- og ERP-systemene dere allerede bruker. Fem systemer er integrert direkte via API, med automatisk dataflyt begge veier. De øvrige regnskaps- og ERP-systemene sender data én vei.</p>
+    <p class="lead">Fenistra er integrert mot regnskaps- og ERP-systemene norske eiendomsselskaper bruker. Fakturaer og posteringer fra Fenistra overføres til systemet dere allerede har, så dere slipper å registrere noe to ganger.</p>
     <div class="hero-actions">
       <a routerLink="/pakke-resultat" class="btn btn-primary">Book en demo</a>
       <a routerLink="/integrasjoner" class="btn btn-ghost">Se alle integrasjoner</a>
@@ -352,75 +362,25 @@
 
 <section class="module-body">
   <div class="wrap">
-    <div class="module-grid-layout">
-      <div class="module-main reveal">
-        <h2>API-integrerte systemer</h2>
-        <div class="body-copy">
-          <p>For disse fem systemene har Fenistra en direkte API-integrasjon med sømløs dataflyt begge veier: Fenistra sender ut alle bilag som produseres i systemet, og henter automatisk inn kundereskontro og saldo på kostnadskonto for avregning av felleskostnader.</p>
-        </div>
-        <div class="api-card-grid" style="margin-bottom:44px;">
-          <div class="api-card">
-            <span class="api-badge">API-integrert</span>
-            <div class="api-card-name">Tripletex</div>
-          </div>
-          <div class="api-card">
-            <span class="api-badge">API-integrert</span>
-            <div class="api-card-name">Xledger</div>
-          </div>
-          <div class="api-card">
-            <span class="api-badge">API-integrert</span>
-            <div class="api-card-name">PowerOffice GO</div>
-          </div>
-          <div class="api-card">
-            <span class="api-badge">API-integrert</span>
-            <div class="api-card-name">Visma Business NXT</div>
-          </div>
-          <div class="api-card">
-            <span class="api-badge">API-integrert</span>
-            <div class="api-card-name">Visma.net</div>
-          </div>
-        </div>
-
-        <h2>Andre ERP-systemer</h2>
-        <div class="body-copy">
-          <p>Fenistra har i tillegg integrasjoner mot en rekke andre ERP- og regnskapssystemer. Disse sender data én vei og er ikke like standardiserte som API-integrasjonene over, så ta kontakt for informasjon om hvordan integrasjonen løses for akkurat deres system.</p>
-        </div>
-        <div class="chip-grid">
-          <div class="chip">24SevenOffice</div>
-          <div class="chip">Uni Micro</div>
-          <div class="chip">Microsoft Dynamics</div>
-          <div class="chip">Visma Business</div>
-          <div class="chip">Visma Global</div>
-          <div class="chip">SAP</div>
-          <div class="chip">PowerOffice</div>
-          <div class="chip">Unit4 ERP (Agresso)</div>
-          <div class="chip">Microsoft Dynamics 365 (Axapta)</div>
-          <div class="chip">Info Easy</div>
-          <div class="chip">Infor M3 (Lawson M3)</div>
-          <div class="chip">Deltek Maconomy (Maconomy)</div>
-          <div class="chip">Oracle PeopleSoft (Peoplesoft)</div>
-          <div class="chip">Visma Unique</div>
-        </div>
-        <p class="integration-note">Bruker dere et annet system? <a routerLink="/kontakt-oss">Ta kontakt</a> for mer informasjon om integrasjonsmuligheter.</p>
-      </div>
-      <aside class="side-card reveal">
-        <div class="field">
-          <h4 aria-level="3">Type integrasjon</h4>
-          <p>API og filintegrasjon</p>
-        </div>
-        <div class="field">
-          <h4>Passer for</h4>
-          <p>Regnskapsavdeling, økonomiansvarlige</p>
-        </div>
-        <div class="field">
-          <h4>Fungerer sammen med</h4>
-          <div class="related-chips">
-<a routerLink="/losning-fakturering">Fakturering</a>
-<a routerLink="/losning-felleskostnader">Felleskostnader</a>
-          </div>
-        </div>
-      </aside>
+    <div class="section-head">
+      <h2>Systemene Fenistra er integrert mot</h2>
+      <p>Finner dere ikke systemet deres her? <a routerLink="/kontakt-oss">Ta kontakt</a>, så ser vi på hvordan vi kobler oss på.</p>
     </div>
+    <ul class="erp-grid">
+      @for (s of systems; track s.name) {
+        <li class="erp-card reveal">
+          <div class="erp-logo">
+            @if (s.logo) {
+              <img [src]="s.logo" [alt]="s.name" loading="lazy" decoding="async">
+            } @else {
+              <span class="erp-wordmark" aria-hidden="true">{{ s.name }}</span>
+            }
+          </div>
+          <div class="erp-name">{{ s.name }}</div>
+        </li>
+      }
+    </ul>
+    <p class="integration-note">Integrasjonen fungerer sammen med <a routerLink="/losning-fakturering">Fakturering</a> og <a routerLink="/losning-felleskostnader">Felleskostnader</a> i Fenistra.</p>
   </div>
 </section>
 
