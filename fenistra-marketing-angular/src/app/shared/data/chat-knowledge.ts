@@ -213,10 +213,6 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
     answer: "Fenistra Sikkerhetsstyring: Full oversikt over bankgaranti og depositum i porteføljen, med varsel når sikkerhet mangler eller utløper. Inkludert i Fenistra Standard. Blant annet: Bankgaranti og depositum samlet per kontrakt og på tvers av porteføljen; Varsel når sikkerhet mangler, er for lav eller nærmer seg utløp; Aggregert risikooversikt for hele porteføljen, ikke bare kontrakt for kontrakt. <a href=\"losning-sikkerhetsstyring.html\">Les mer om Fenistra Sikkerhetsstyring →</a>"
   },
   /* Skjult fra nettsiden:
-  {
-    keywords: ["tegning", "tegninger", "plantegning", "npoint", "fenistra tegning"],
-    answer: "Fenistra Tegning: Ett sentralt arkiv for alle plantegninger, koblet direkte til kontrakt, leietaker og areal, uten AutoCAD eller andre spesialprogrammer. Tilleggsprodukt i Fenistra Premium. Blant annet: Sentralt arkiv for alle plantegninger, tilgjengelig for hele organisasjonen; Se tegninger direkte i nettleseren, ingen spesialprogramvare nødvendig; Full versjonshistorikk når tegninger oppdateres eller erstattes. <a href=\"kontakt-oss.html\">Ta kontakt for å høre mer om Tegning →</a>"
-  },
   */
   {
     keywords: ["løsninger", "alle løsninger", "hva kan fenistra", "moduler"],
@@ -344,7 +340,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["tilleggsprodukter", "selvstendige produkter", "hva er inkludert"],
-    answer: "Fenistra er delt i tre: kjerneløsninger (Kontrakter, Felleskostnader, Fakturering, Rapportering, Dokument, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett), transaksjonsprodukter som er inkludert i begge pakker men betales per bruk (MVA-erklæring, revisorbekreftet omsetning, Protokoller, Digital signering), og tilleggsprodukter som er selvstendige eller kombinert med Standard, og alltid inkludert i Premium (Justering, Arealberegning, Kjøpesenter)."
+    answer: "Fenistra er delt i tre: kjerneløsninger (Kontrakter, Felleskostnader, Fakturering, Rapportering, Dokument, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett, Sikkerhetsstyring), transaksjonsprodukter som er inkludert i begge pakker men betales per bruk (MVA-erklæring, revisorbekreftet omsetning, Protokoller, Digital signering), og tilleggsprodukter som er selvstendige eller kombinert med Standard, og alltid inkludert i Premium (Justering, Arealberegning, Kjøpesenter)."
   },
   {
     keywords: ["kundeteamet kontakt", "hvem kan jeg kontakte kunde", "brukerstøtte kontakt person", "head of customer success"],
@@ -372,7 +368,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["fenistra standard", "hva inneholder standard"],
-    answer: "Fenistra Standard inneholder løsningene Kontrakt, Fakturering, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse og Inntektsbudsjett, i tillegg til transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering."
+    answer: "Fenistra Standard inneholder løsningene Kontrakt, Fakturering, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett og Sikkerhetsstyring, i tillegg til transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering."
   },
   {
     keywords: ["premium"],

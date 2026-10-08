@@ -8,7 +8,7 @@ const SITE_ORIGIN = 'https://www.fenistra.no';
 const OG_IMAGE = 'https://www.fenistra.no/images/og-fenistra.jpg';
 
 const DEFAULT_DESCRIPTION =
-  'Markedsledende forvaltningssystem for næringseiendom. Full kontroll på kontrakter, arealer, fakturering, avregning og regulering i én helhetlig løsning.';
+  'Over 30 år med norsk næringseiendom, bygget for de neste 30. Fenistra beregner regulering, felleskostnader og MVA automatisk, i ett skybasert forvaltningssystem.';
 
 interface ArticleData {
   published: string;

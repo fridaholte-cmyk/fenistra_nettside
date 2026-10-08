@@ -23,7 +23,7 @@ AI blir aldri bedre enn dataene den står på. Fenistra har strukturerte data om
 ### Data dere kan stole på
 
 - **Registrert én gang, riktig overalt:** data flyter fra kontrakt til fakturering, regnskap og rapportering uten dobbeltregistrering.
-- **Integrasjoner:** API-integrasjon med dataflyt begge veier mot Tripletex, PowerOffice GO, Xledger, Visma Business NXT og Visma.net, og integrert mot over 20 systemer i produksjon hos kunder.
+- **Integrasjoner:** integrert mot 26 systemer, blant dem 19 regnskaps- og ERP-systemer som Tripletex, PowerOffice GO, Xledger, Visma Business NXT og Visma.net.
 - **Rask oppstart:** AI leser inn kontraktene, Fenistra kobles mot regnskapet, og dere er i gang. Ingen betalte konsulenttimer og ingen skjulte kostnader.
 - **Trygghet:** Fenistra er ISO/IEC 27001-sertifisert og VCDM-godkjent (Vismas krav til sikker skydrift), har over 30 års erfaring fra norsk næringseiendom, og Visma som eier, med Visma Security Program.
 

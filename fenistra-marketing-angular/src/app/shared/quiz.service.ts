@@ -150,7 +150,7 @@ export class QuizService {
 
     const kjopesenterAnswer = byId.get('kjopesenter');
     if (kjopesenterAnswer?.optionIndex === 1) {
-      reasons.push('Kjøpesenterdrift og omsetningsbasert leie er et tilleggsprodukt som alltid er inkludert i Premium.');
+      reasons.push('Fenistra Kjøpesenter er et tilleggsprodukt som alltid er inkludert i Premium. Omsetningsbasert leie avregnes med Omsetningsavregning, som er inkludert i Standard.');
       relatedChips.push({ label: 'Kjøpesenter', route: '/losning-kjopesenter' });
     }
 
