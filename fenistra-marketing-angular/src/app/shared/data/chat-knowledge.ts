@@ -276,11 +276,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["mest", "komplette", "løsningen", "eiendomsforvaltning"],
-    answer: "Eiendomsselskaper benytter et økende antall spesialiserte IT-løsninger for å håndtere sine behov. Med kundens tilbakemeldinger i sentrum har vi derfor tatt grep og fornyet Fenistra. <a href=\"media-mest-komplette-losningen.html\">Les artikkelen →</a>"
+    answer: "Fenistra: mest komplette løsningen for eiendomsforvaltning Eiendomsselskaper benytter et økende antall spesialiserte IT-løsninger for å håndtere sine behov. Med kundens tilbakemeldinger i sentrum har vi derfor tatt grep og fornyet Fenistra. <a href=\"media-mest-komplette-losningen.html\">Les mer om Fenistra: mest komplette løsningen for eiendomsforvaltning →</a>"
   },
   {
     keywords: ["business", "nxt", "full", "business nxt"],
-    answer: "Fenistra+Business NXT: Full kontroll på økonomi og eiendomsforvaltning Eiendomsselskaper står overfor et raskt skiftende marked med økende krav til effektiv drift, økonomisk kontroll og digitale løsninger. Med Fenistra og Business NXT får du en helhetlig skybasert plattform som automatiserer økonomistyring og eiendomsforvaltning. På den måten reduserer du risiko samtidig som du jobber smartere og sikrer lønnsom vekst. <a href=\"media-business-nxt.html\">Les mer om Fenistra+Business NXT: Full kontroll på økonomi og eiendomsforvaltning →</a>"
+    answer: "Fenistra+Business NXT: Full kontroll på økonomi og eiendomsforvaltning Eiendomsselskaper står overfor et raskt skiftende marked med økende krav til effektiv drift, økonomisk kontroll og digitale løsninger. Med Fenistra og Business NXT får du en komplett skybasert plattform som automatiserer økonomistyring og eiendomsforvaltning. På den måten reduserer du risiko samtidig som du jobber smartere og sikrer lønnsom vekst. <a href=\"media-business-nxt.html\">Les mer om Fenistra+Business NXT: Full kontroll på økonomi og eiendomsforvaltning →</a>"
   },
   {
     keywords: ["budsjett", "faktura", "presis", "transparent", "fordeling", "felleskost budsjett", "felleskost"],
@@ -308,11 +308,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["brukeropplevelsen", "neste", "nivå", "ny brukeropplevelse", "nytt grensesnitt", "brukeropplevelse", "nytt", "grensesnitt"],
-    answer: "Fenistra tar brukeropplevelsen til neste nivå! Fenistra er skybasert og alltid oppdatert, med en moderne og intuitiv brukeropplevelse. Flere ansatte får nå god tilgang til informasjonen de trenger. <a href=\"media-brukeropplevelse-neste-niva.html\">Les mer om Fenistra tar brukeropplevelsen til neste nivå! →</a>"
+    answer: "Fenistra tar brukeropplevelsen til neste nivå! Visma Property Solutions flytter forvaltningssystemet Fenistra over på ny plattform, med en helt ny og intuitiv brukeropplevelse. Flere ansatte får nå god tilgang til informasjonen de trenger. <a href=\"media-brukeropplevelse-neste-niva.html\">Les mer om Fenistra tar brukeropplevelsen til neste nivå! →</a>"
   },
   {
     keywords: ["skaper", "kontinuerlig", "verdi", "kundene", "voksende"],
-    answer: "Skaper kontinuerlig verdi for kundene i et voksende marked Nye Fenistra kombinerer fleksibilitet og effektivitet med moderne teknologi og brukergrensesnitt. Den nyeste versjonen representerer et betydelig fremskritt ved å tilby tilpassede verktøy som møter dagens forvaltningskrav. <a href=\"media-kontinuerlig-verdi.html\">Les mer om Skaper kontinuerlig verdi for kundene i et voksende marked →</a>"
+    answer: "Skaper kontinuerlig verdi for kundene i et voksende marked Nye Fenistra gir eiendomsselskapene den beste kombinasjonen av fleksibilitet og effektivitet kombinert med moderne teknologi og brukergrensesnitt. Den nyeste versjonen representerer et betydelig fremskritt ved å tilby tilpassede verktøy som møter dagens forvaltningskrav. <a href=\"media-kontinuerlig-verdi.html\">Les mer om Skaper kontinuerlig verdi for kundene i et voksende marked →</a>"
   },
   {
     keywords: ["egen", "eiendomsportefølje", "create insight", "create", "insight"],

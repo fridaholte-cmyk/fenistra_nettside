@@ -906,3 +906,7 @@ section.mp-body{padding:96px 0;}
 .mp-together h3{font-family:var(--font-mono);font-size:12px;font-weight:400;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft);margin-bottom:14px;}
 @media (max-width:980px){.mp-why-grid{grid-template-columns:1fr;gap:32px;}}
 @media (max-width:760px){section.mp-hero{padding:24px 0 56px;} section.mp-why{padding:56px 0;} section.mp-body{padding:64px 0;} .mp-body .feature-list{grid-template-columns:1fr;}}
+
+/* Brødsmulestien bryter over flere linjer på smale skjermer */
+.breadcrumb{flex-wrap:wrap;row-gap:4px;}
+.breadcrumb .current{overflow-wrap:anywhere;}
