@@ -1,0 +1,104 @@
+/* Illustrert KI-chat. Fargene er nettstedets tokens; spiller av én gang når kortet er i synsfeltet. */
+:host { display: block; }
+
+.kc-stage {
+  position: relative; overflow: hidden;
+  border-radius: 22px; padding: 48px 40px 64px;
+  background: radial-gradient(120% 90% at 0% 0%, #3a1a42 0%, var(--plum-deep) 45%, var(--plum-900) 100%);
+  box-shadow: 0 40px 80px -40px rgba(21, 10, 24, .7);
+  isolation: isolate;
+}
+.kc-stage::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(80% 80% at 50% 40%, #000 30%, transparent 100%);
+}
+.kc-glow { position: absolute; border-radius: 50%; filter: blur(40px); z-index: -1; animation: kcFloat 9s ease-in-out infinite; }
+.kc-glow-1 { width: 260px; height: 260px; background: rgba(171, 49, 100, .55); top: -80px; right: -60px; }
+.kc-glow-2 { width: 220px; height: 220px; background: rgba(99, 73, 103, .6); bottom: -90px; left: -50px; animation-delay: -4s; }
+@keyframes kcFloat { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(-14px, 12px); } }
+
+/* ---------- chat window ---------- */
+.kc-window {
+  max-width: 400px; margin: 0 auto;
+  background: rgba(252, 250, 251, .97); border-radius: 18px;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .55), 0 0 0 1px rgba(255,255,255,.08);
+  overflow: hidden;
+  transform: perspective(1200px) rotateY(-4deg) rotateX(2deg);
+  transition: transform .8s cubic-bezier(.2,.8,.2,1);
+}
+.kc-stage:hover .kc-window { transform: perspective(1200px) rotateY(0) rotateX(0); }
+
+.kc-head { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-bottom: 1px solid var(--line); }
+.kc-avatar {
+  width: 34px; height: 34px; border-radius: 10px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; color: #fff;
+  background: linear-gradient(135deg, var(--berry-mid), var(--berry-deep));
+  box-shadow: 0 6px 14px -6px rgba(171, 49, 100, .8);
+}
+.kc-title { font-size: 14px; font-weight: 600; color: var(--ink); }
+.kc-sub { display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-soft); }
+.kc-live { width: 6px; height: 6px; border-radius: 50%; background: #1D7A34; box-shadow: 0 0 0 0 rgba(29,122,52,.5); animation: kcLive 2s ease-out infinite; }
+@keyframes kcLive { 70% { box-shadow: 0 0 0 6px rgba(29,122,52,0); } 100% { box-shadow: 0 0 0 0 rgba(29,122,52,0); } }
+
+.kc-body { padding: 18px; display: flex; flex-direction: column; gap: 12px; min-height: 330px; }
+.kc-msg { font-size: 13px; line-height: 1.5; border-radius: 14px; padding: 10px 13px; max-width: 88%; }
+.kc-user { align-self: flex-end; background: var(--berry); color: #fff; border-bottom-right-radius: 4px; }
+.kc-bot { align-self: flex-start; background: #fff; border: 1px solid var(--line); color: var(--ink); border-bottom-left-radius: 4px; width: 88%; }
+.kc-bot p { margin: 0; }
+.kc-list { list-style: none; margin: 10px 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.kc-list li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 10px; background: var(--paper-2); }
+.kc-list strong { display: block; font-size: 12.5px; font-weight: 600; }
+.kc-list small { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-soft); }
+.kc-date { font-family: var(--font-mono); font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 999px; }
+.kc-red { background: #FBEAEA; color: #B23B3B; }
+.kc-amber { background: #FDF0E0; color: #A85A06; }
+.kc-follow { color: var(--ink-soft); font-size: 12.5px; }
+
+.kc-typing { align-self: flex-start; display: flex; gap: 4px; padding: 12px 14px; background: #fff; border: 1px solid var(--line); border-radius: 14px; border-bottom-left-radius: 4px; }
+.kc-typing span { width: 6px; height: 6px; border-radius: 50%; background: var(--plum); opacity: .4; animation: kcDot 1s ease-in-out infinite; }
+.kc-typing span:nth-child(2) { animation-delay: .15s; }
+.kc-typing span:nth-child(3) { animation-delay: .3s; }
+@keyframes kcDot { 50% { opacity: 1; transform: translateY(-3px); } }
+
+.kc-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.kc-chips span { font-size: 11.5px; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--berry-deep); }
+
+.kc-input { display: flex; align-items: center; justify-content: space-between; margin: 0 14px 14px; padding: 9px 9px 9px 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; font-size: 12.5px; color: var(--ink-soft); }
+.kc-send { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; background: var(--berry); color: #fff; }
+
+.kc-badge {
+  position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%);
+  display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;
+  padding: 8px 14px; border-radius: 999px;
+  background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(6px);
+  font-family: var(--font-mono); font-size: 11.5px; color: rgba(255,255,255,.9);
+}
+.kc-badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--berry-mid); }
+
+/* ---------- play sequence (starts when in view) ---------- */
+.kc-user, .kc-bot, .kc-chips { opacity: 0; transform: translateY(10px); }
+.kc-typing { display: none; }
+.play .kc-user { animation: kcIn .5s cubic-bezier(.2,.8,.2,1) .3s forwards; }
+.play .kc-typing { display: flex; opacity: 0; animation: kcIn .3s ease 1s forwards, kcOut .2s ease 2.3s forwards; }
+.play .kc-bot { animation: kcIn .55s cubic-bezier(.2,.8,.2,1) 2.4s forwards; }
+.play .kc-list li { opacity: 0; animation: kcIn .4s ease forwards; }
+.play .kc-list li:nth-child(1) { animation-delay: 2.7s; }
+.play .kc-list li:nth-child(2) { animation-delay: 2.85s; }
+.play .kc-list li:nth-child(3) { animation-delay: 3s; }
+.play .kc-chips { animation: kcIn .5s ease 3.5s forwards; }
+@keyframes kcIn { to { opacity: 1; transform: translateY(0); } }
+@keyframes kcOut { to { opacity: 0; height: 0; padding: 0; margin: -6px 0; border-width: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .kc-user, .kc-bot, .kc-chips, .kc-list li { opacity: 1 !important; transform: none !important; animation: none !important; }
+  .kc-typing { display: none !important; }
+  .kc-glow, .kc-live { animation: none; }
+  .kc-window { transform: none; }
+}
+@media (max-width: 760px) {
+  .kc-stage { padding: 28px 16px 60px; border-radius: 18px; }
+  .kc-window { transform: none; }
+  .kc-body { min-height: 0; }
+}

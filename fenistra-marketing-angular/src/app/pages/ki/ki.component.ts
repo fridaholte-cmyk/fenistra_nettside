@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { KiChatDemoComponent } from '../../shared/ki-chat-demo/ki-chat-demo.component';
 
 // The article section ("Fenistra endrer eiendomsbransjen med AI" + download form) is hidden for now.
 // Set to true to publish it again.
@@ -8,7 +9,7 @@ const SHOW_ARTICLE = false;
 @Component({
   selector: 'app-ki',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, KiChatDemoComponent],
   templateUrl: './ki.component.html',
   encapsulation: ViewEncapsulation.None
 })

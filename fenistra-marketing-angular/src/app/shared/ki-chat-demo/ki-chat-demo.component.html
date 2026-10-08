@@ -1,0 +1,47 @@
+<div class="kc-stage" [class.play]="playing" role="img"
+     aria-label="Eksempel på KI-assistenten i Fenistra: brukeren spør hvilke kontrakter som utløper de neste seks månedene, og assistenten lister tre kontrakter med dato og årlig leie.">
+  <div class="kc-glow kc-glow-1" aria-hidden="true"></div>
+  <div class="kc-glow kc-glow-2" aria-hidden="true"></div>
+
+  <div class="kc-window" aria-hidden="true">
+    <div class="kc-head">
+      <span class="kc-avatar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2l1.9 5.6L19.5 9.5l-5.6 1.9L12 17l-1.9-5.6L4.5 9.5l5.6-1.9L12 2z" fill="currentColor"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15z" fill="currentColor" opacity=".7"/></svg>
+      </span>
+      <div>
+        <div class="kc-title">KI-assistent</div>
+        <div class="kc-sub"><span class="kc-live"></span>Svarer ut fra deres data i Fenistra</div>
+      </div>
+    </div>
+
+    <div class="kc-body">
+      <div class="kc-msg kc-user">Hvilke kontrakter utløper de neste 6 månedene?</div>
+
+      <div class="kc-typing"><span></span><span></span><span></span></div>
+
+      <div class="kc-msg kc-bot">
+        <p>Tre kontrakter utløper før 1. april:</p>
+        <ul class="kc-list">
+          <li><div><strong>Kontorbygg Nydalen</strong><small>Advokatfirma AS</small></div><span class="kc-date kc-red">31.01</span></li>
+          <li><div><strong>Handel Storgata 12</strong><small>Café Nord</small></div><span class="kc-date kc-amber">28.02</span></li>
+          <li><div><strong>Lager Alnabru</strong><small>Logistikk AS</small></div><span class="kc-date kc-amber">31.03</span></li>
+        </ul>
+        <p class="kc-follow">Vil du ha en oppsummering av kontraktene?</p>
+      </div>
+
+      <div class="kc-chips">
+        <span>Oppsummer kontraktene</span>
+        <span>Vis sikkerhetene</span>
+      </div>
+    </div>
+
+    <div class="kc-input">
+      <span>Spør om porteføljen …</span>
+      <span class="kc-send"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </div>
+  </div>
+
+  <div class="kc-badge" aria-hidden="true">
+    <span class="kc-badge-dot"></span>AI-innlesing av kontrakter
+  </div>
+</div>
