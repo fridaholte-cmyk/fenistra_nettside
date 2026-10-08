@@ -375,14 +375,12 @@
   <div class="wrap split">
     <div class="split-left">
       @if (!result) {
-        <div class="eyebrow">Finn riktig løsning</div>
         <h1>Se hvilke løsninger som passer for porteføljen deres</h1>
         <p class="lead">Svar på noen få spørsmål om porteføljen deres, så viser vi hvilken pakke og hvilke løsninger som passer, på under to minutter.</p>
         <div class="hero-actions">
           <button type="button" class="btn btn-primary" (click)="quiz.open()">Ta testen →</button>
         </div>
       } @else {
-        <div class="eyebrow">Resultat</div>
         <h1 id="resultHeading">Ja, Fenistra passer for dere</h1>
         <div class="pkg-badge" id="resultBadge">Anbefalt pakke: Fenistra {{ result.package }}</div>
         <ul class="reasons" id="resultReasons">
@@ -402,7 +400,6 @@
 
     <div class="split-right">
       <div class="form-box" id="skjema" style="scroll-margin-top:100px;">
-        <div class="eyebrow">Kontakt</div>
         <h2>Book et møte</h2>
         <p class="form-intro">Fyll ut skjemaet, så tar en av rådgiverne våre kontakt for å avtale tid.</p>
         @if (formState === 'loading') {

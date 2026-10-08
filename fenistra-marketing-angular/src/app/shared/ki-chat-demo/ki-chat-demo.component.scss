@@ -9,14 +9,15 @@
   isolation: isolate;
 }
 .kc-stage::before {
+  display: none;
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
   background-size: 28px 28px;
   mask-image: radial-gradient(80% 80% at 50% 40%, #000 30%, transparent 100%);
 }
-.kc-glow { position: absolute; border-radius: 50%; filter: blur(40px); z-index: -1; animation: kcFloat 9s ease-in-out infinite; }
+.kc-glow { position: absolute; border-radius: 50%; filter: blur(40px); z-index: -1;  }
 .kc-glow-1 { width: 260px; height: 260px; background: rgba(171, 49, 100, .55); top: -80px; right: -60px; }
-.kc-glow-2 { width: 220px; height: 220px; background: rgba(99, 73, 103, .6); bottom: -90px; left: -50px; animation-delay: -4s; }
+.kc-glow-2 { display: none; width: 220px; height: 220px; background: rgba(99, 73, 103, .6); bottom: -90px; left: -50px; animation-delay: -4s; }
 @keyframes kcFloat { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(-14px, 12px); } }
 
 /* ---------- chat window ---------- */
@@ -25,10 +26,7 @@
   background: rgba(252, 250, 251, .97); border-radius: 18px;
   box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .55), 0 0 0 1px rgba(255,255,255,.08);
   overflow: hidden;
-  transform: perspective(1200px) rotateY(-4deg) rotateX(2deg);
-  transition: transform .8s cubic-bezier(.2,.8,.2,1);
 }
-.kc-stage:hover .kc-window { transform: perspective(1200px) rotateY(0) rotateX(0); }
 
 .kc-head { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-bottom: 1px solid var(--line); }
 .kc-avatar {
@@ -39,7 +37,7 @@
 }
 .kc-title { font-size: 14px; font-weight: 600; color: var(--ink); }
 .kc-sub { display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-soft); }
-.kc-live { width: 6px; height: 6px; border-radius: 50%; background: #1D7A34; box-shadow: 0 0 0 0 rgba(29,122,52,.5); animation: kcLive 2s ease-out infinite; }
+.kc-live { width: 6px; height: 6px; border-radius: 50%; background: #1D7A34; box-shadow: 0 0 0 0 rgba(29,122,52,.5);  }
 @keyframes kcLive { 70% { box-shadow: 0 0 0 6px rgba(29,122,52,0); } 100% { box-shadow: 0 0 0 0 rgba(29,122,52,0); } }
 
 .kc-body { padding: 18px; display: flex; flex-direction: column; gap: 12px; min-height: 330px; }

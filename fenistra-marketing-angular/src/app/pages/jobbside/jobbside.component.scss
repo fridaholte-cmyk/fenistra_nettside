@@ -27,7 +27,7 @@ section.jb-outcomes { padding: 0 0 112px; }
 .jb-outcome {
   background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius);
   padding: 32px 28px;
-  h2 { font-size: 19px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; margin: 14px 0 10px; }
+  h2 { font-size: 19px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; margin: 0 0 10px; }
   p { font-size: 15px; color: var(--ink-soft); line-height: 1.6; }
 }
 .jb-num { font-family: var(--font-mono); font-weight: 700; font-size: 13px; color: var(--berry); }
@@ -52,6 +52,7 @@ section.jb-spot { padding: 0 0 112px; scroll-margin-top: 76px; }
 /* ---------- why (dark) ---------- */
 section.jb-why { background: var(--plum-deep); color: #fff; padding: 112px 0; position: relative; overflow: hidden; }
 section.jb-why::before {
+  display: none;
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
   background-size: 34px 34px;

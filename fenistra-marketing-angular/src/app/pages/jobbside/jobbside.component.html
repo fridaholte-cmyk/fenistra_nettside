@@ -9,8 +9,7 @@
 <!-- ================= HERO ================= -->
 <section class="jb-hero">
   <div class="wrap">
-    <div class="eyebrow">{{ page.name }}</div>
-    <h1>{{ page.h1 }} <strong>{{ page.h1Strong }}</strong></h1>
+    <h1>{{ page.h1 }}</h1>
     <p class="jb-lead">{{ page.lead }}</p>
     <div class="jb-actions">
       <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book en demo</a>
@@ -25,7 +24,6 @@
     <div class="jb-outcome-grid">
       @for (o of page.outcomes; track o[0]; let i = $index) {
         <div class="jb-outcome reveal">
-          <span class="jb-num">0{{ i + 1 }}</span>
           <h2>{{ o[0] }}</h2>
           <p>{{ o[1] }}</p>
         </div>
@@ -39,8 +37,7 @@
 <section class="jb-spot" [id]="s.id">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">{{ s.eyebrow }}</div>
-      <h2>{{ s.title }} <strong>{{ s.strong }}</strong></h2>
+      <h2>{{ s.title }}</h2>
       <p>{{ s.intro }}</p>
     </div>
     <ol class="jb-steps">
@@ -76,8 +73,7 @@
 <section class="jb-modules" id="moduler">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Moduler</div>
-      <h2>Modulene bak <strong>{{ nameInSentence }}</strong></h2>
+      <h2>Modulene bak {{ nameInSentence }}</h2>
       <p>Les mer om hver modul, eller book en demo, så viser vi hvordan de henger sammen for deres portefølje.</p>
     </div>
     <div class="jb-module-grid">

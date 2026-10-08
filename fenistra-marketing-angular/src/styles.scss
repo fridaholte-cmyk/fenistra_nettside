@@ -887,7 +887,7 @@ section.mp-hero{padding:40px 0 80px;}
 .mp-hero .money-note{margin:0 0 6px !important;}
 .mp-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
 section.mp-why{background:var(--plum-deep);color:#fff;padding:72px 0;position:relative;overflow:hidden;}
-section.mp-why::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:34px 34px;}
+section.mp-why::before{display:none;content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:34px 34px;}
 .mp-why-grid{position:relative;display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center;}
 .mp-why-text{font-family:var(--font-display);font-weight:300;font-size:clamp(20px,2.2vw,28px);line-height:1.4;letter-spacing:-0.01em;color:#fff;margin:0;text-wrap:pretty;}
 .mp-facts{display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);overflow:hidden;}
@@ -919,3 +919,5 @@ section.mp-body{padding:96px 0;}
 
 /* Bilder med oppgitt størrelse beholder forholdet når de skaleres (lav spesifisitet, så klasser som setter høyde vinner) */
 :where(img[width][height]){height:auto;}
+
+.mp-hero-top:empty{display:none;}

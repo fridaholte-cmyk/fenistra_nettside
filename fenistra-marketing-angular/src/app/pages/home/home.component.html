@@ -314,7 +314,7 @@
     position:relative;
     overflow:hidden;
   }
-  .stats::before{
+  .stats::before{display:none;
     content:""; position:absolute; inset:0;
     background-image:linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
     background-size:34px 34px;
@@ -527,7 +527,7 @@
     position:relative;
     overflow:hidden;
   }
-  .testimonial::before{
+  .testimonial::before{display:none;
     content:""; position:absolute; inset:0;
     background-image:linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
     background-size:34px 34px;
@@ -898,8 +898,7 @@
 <section id="produkt">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Hva dere får</div>
-      <h2>Tall ledelsen kan stå inne for. <strong>Et verktøy forvalterne liker å bruke.</strong></h2>
+      <h2>Tall ledelsen kan stå inne for, i et verktøy forvalterne liker å bruke</h2>
       <p>Fenistra gir økonomisjefen kontroll og trygghet, og gir forvalterne et system som er laget for akkurat den jobben de gjør hver dag.</p>
     </div>
     <div class="outcome-grid">
@@ -926,7 +925,6 @@
 <section id="okonomi" class="money">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow eyebrow-on-dark">Økonomi og regelverk</div>
       <h2>Fenistra får <strong>pengene riktig.</strong></h2>
       <p>Det er i beregningene feil koster mest: en glemt indeksregulering, en skjev fordeling av felleskostnader, en justeringsforpliktelse ingen fulgte opp. Fenistra beregner alt automatisk, i tråd med norsk regelverk, og lager dokumentasjonen for dere.</p>
     </div>
@@ -971,8 +969,7 @@
   <div class="wrap">
     <div class="feature-row ai-row">
       <div class="feature-copy">
-        <div class="eyebrow">AI og data</div>
-        <h2 class="ai-title">Bygget for <strong>AI-æraen.</strong></h2>
+        <h2 class="ai-title">Bygget for AI-æraen</h2>
         <p>AI blir aldri bedre enn dataene den står på. Fenistra har samlet strukturerte data om norsk næringseiendom siden 1994, med kontrakt, areal og økonomi koblet sammen i ett system. Et slikt fundament tar tiår å bygge.</p>
         <ul class="feature-list">
           <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>AI-innlesing av kontrakter: dra inn PDF-en, så fylles feltene ut for deg</li>
@@ -990,8 +987,7 @@
 <section id="løsninger" class="modules">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Løsninger</div>
-      <h2>En plattform som <strong>vokser med porteføljen</strong></h2>
+      <h2>En plattform som vokser med porteføljen</h2>
       <p>Start med det dere trenger i dag, og bygg videre når porteføljen vokser. Alt henger sammen i ett system.</p>
     </div>
 
@@ -1043,8 +1039,7 @@
 <section id="kom-i-gang">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Kom i gang</div>
-      <h2>Dypt system. <strong>Rask oppstart.</strong></h2>
+      <h2>Et dypt system som er raskt å komme i gang med</h2>
       <p>Dybde betyr ikke tung innføring. Med AI-innlesing av kontraktene er porteføljen på plass raskere enn dere tror.</p>
     </div>
     <div class="steps-grid">
@@ -1074,8 +1069,7 @@
 <section id="hvorfor" class="why">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Hvorfor Fenistra</div>
-      <h2>For porteføljer som er for viktige <strong>til å ta sjanser</strong></h2>
+      <h2>For porteføljer som er for viktige til å ta sjanser</h2>
     </div>
     <div class="why-grid">
       <div class="why-item reveal">
@@ -1135,8 +1129,7 @@
 <section id="faq">
   <div class="wrap faq-layout">
     <div class="section-head faq-head">
-      <div class="eyebrow">Spørsmål og svar</div>
-      <h2>Spørsmålene vi får <strong>før dere velger</strong></h2>
+      <h2>Spørsmålene vi får før dere velger</h2>
       <p>Finner du ikke svaret her, ta gjerne kontakt med oss for en prat.</p>
       <div class="faq-head-actions">
         <a routerLink="/kontakt-oss" class="btn btn-primary">Kontakt oss</a>

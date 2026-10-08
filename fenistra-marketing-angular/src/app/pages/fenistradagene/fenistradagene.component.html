@@ -388,7 +388,7 @@
   .fd-hero .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff;}
   .fd-hero .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:#fff;}
   .fd-pill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(6px);font-family:var(--font-mono);font-size:12px;letter-spacing:.04em;margin-bottom:22px;}
-  .fd-pill .pulse{width:7px;height:7px;border-radius:50%;background:var(--berry-mid);box-shadow:0 0 0 0 rgba(188,90,131,.6);animation:fdPulse 2.2s ease-out infinite;}
+  .fd-pill .pulse{width:7px;height:7px;border-radius:50%;background:var(--berry-mid);}
   @keyframes fdPulse{70%{box-shadow:0 0 0 9px rgba(188,90,131,0);}100%{box-shadow:0 0 0 0 rgba(188,90,131,0);}}
 
   .fd-stats{background:var(--plum-900);color:#fff;border-top:1px solid rgba(255,255,255,.08);}
@@ -415,7 +415,7 @@
   .fd-2026 p{font-size:16px;color:var(--ink-soft);line-height:1.6;margin-bottom:18px;}
   .fd-points{list-style:none;display:flex;flex-direction:column;gap:12px;margin:22px 0 0;padding:0;}
   .fd-points li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink);}
-  .fd-points li span{flex-shrink:0;font-family:var(--font-mono);font-weight:700;font-size:12px;color:var(--berry);margin-top:3px;}
+  .fd-points li .dot{flex-shrink:0;width:6px;height:6px;border-radius:50%;background:var(--berry);margin-top:9px;}
 
   .fd-mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:150px 150px 140px;grid-template-areas:"big big big tall" "big big big tall" "wide wide a b";gap:10px;}
   .fd-mosaic a{position:relative;display:block;border-radius:14px;overflow:hidden;background:var(--mist);min-height:0;}
@@ -483,7 +483,7 @@
   <img class="fd-hero-bg" src="images/fenistradagene-2026-13.jpg" width="1100" height="733" alt="Plenumssalen på Thon Hotel Snø under Fenistradagene 2026" fetchpriority="high">
   <div class="wrap">
     <div class="fd-pill"><span class="pulse"></span>Hvert år i juni · for alle Fenistra-kunder</div>
-    <h1>Fenistradagene. <strong>To dager med fag, folk og framtid.</strong></h1>
+    <h1>Fenistradagene: to dager med fag og folk</h1>
     <p>Hvert år samler vi Fenistra-kundene til to dager med faglig påfyll, nettverksbygging og sosialt samvær. Det som startet som Fenistra Brukerforum i 1999, er i dag bransjens egen møteplass.</p>
     <div class="fd-actions">
       <a routerLink="/kontakt-oss" class="btn btn-primary">Meld interesse for 2027</a>
@@ -521,12 +521,12 @@
     <div class="fd-2026">
       <div class="reveal">
         <div class="eyebrow">3.–4. juni 2026 · Thon Hotel Snø</div>
-        <h2>Nytt navn. <strong>Ny energi.</strong></h2>
+        <h2>Ny drakt etter 25 år som Brukerforum</h2>
         <p>Etter over 25 år som Fenistra Brukerforum gjennomførte vi i år samlingen i ny drakt, med nytt navn og ny ramme. Og vi lanserte Felix fra scenen.</p>
         <ul class="fd-points">
-          <li><span>01</span>To dager med faglig program og sosialt samvær</li>
-          <li><span>02</span>Parallelle fagsesjoner for både nye og erfarne Fenistra-brukere</li>
-          <li><span>03</span>Snøhallen hos Thon Hotel Snø som unik kulisse</li>
+          <li><span class="dot"></span>To dager med faglig program og sosialt samvær</li>
+          <li><span class="dot"></span>Parallelle fagsesjoner for både nye og erfarne Fenistra-brukere</li>
+          <li><span class="dot"></span>Snøhallen hos Thon Hotel Snø som unik kulisse</li>
         </ul>
       </div>
       <div class="fd-mosaic reveal" data-gallery>
@@ -580,8 +580,7 @@
 <section class="fd-sec" id="historikk">
   <div class="wrap">
     <div class="fd-head">
-      <div class="eyebrow">Tidligere år</div>
-      <h2>Over 25 år med samlinger <strong>for Fenistra-kunder</strong></h2>
+      <h2>Over 25 år med samlinger for Fenistra-kunder</h2>
       <p>Fra 1999 til 2025 het samlingen Fenistra Brukerforum. Her er noen av høydepunktene.</p>
     </div>
     <div class="fd-years">

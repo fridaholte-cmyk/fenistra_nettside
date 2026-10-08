@@ -21,7 +21,7 @@ export const JOBBSIDER: Jobbside[] = [
   {
     "slug": "kontroll-pa-portefoljen",
     "name": "Kontroll på porteføljen",
-    "h1": "Hvert leieforhold under kontroll.",
+    "h1": "Hvert leieforhold under kontroll, før noe glipper",
     "h1Strong": "Før noe glipper.",
     "lead": "Kontrakter, sikkerheter, frister og dokumenter samlet i ett system. Fenistra varsler før utløp, regulering og manglende sikkerhet, så dere ser risikoen mens det fortsatt er tid til å handle.",
     "outcomes": [
@@ -82,7 +82,7 @@ export const JOBBSIDER: Jobbside[] = [
   {
     "slug": "fakturering-og-avregning",
     "name": "Fakturering og avregning",
-    "h1": "Registrer én gang.",
+    "h1": "Registrer én gang, og få riktig faktura hver gang",
     "h1Strong": "Riktig faktura hver gang.",
     "lead": "Fenistra regulerer, fakturerer og avregner gjennom hele leieforholdet. Fast leie, akonto, felleskostnader og omsetningsbasert leie i én sammenhengende flyt, overført til regnskapssystemet dere allerede bruker.",
     "outcomes": [
@@ -110,7 +110,7 @@ export const JOBBSIDER: Jobbside[] = [
     "spotlight": {
       "id": "kpi-regulering",
       "eyebrow": "KPI-regulering",
-      "title": "Fra SSB til riktig faktura.",
+      "title": "Fra SSB-indeks til riktig faktura, uten regneark",
       "strong": "Uten regneark.",
       "intro": "Indeksregulering er der små feil blir store over tid. I Fenistra reguleres leien automatisk, og leietakeren får reguleringsbrevet sammen med fakturaen.",
       "steps": [
@@ -150,7 +150,7 @@ export const JOBBSIDER: Jobbside[] = [
   {
     "slug": "mva-og-regelverk",
     "name": "MVA og regelverk",
-    "h1": "MVA i tråd med regelverket.",
+    "h1": "MVA i tråd med regelverket, dokumentert for revisor",
     "h1Strong": "Dokumentert for revisor.",
     "lead": "MVA-erklæringer fra leietakerne, justeringsforpliktelser over hele perioden og dokumentasjonen som følger med, håndtert av systemet i stedet for i regneark.",
     "outcomes": [
@@ -194,7 +194,7 @@ export const JOBBSIDER: Jobbside[] = [
   {
     "slug": "rapport-og-analyse",
     "name": "Rapport og analyse",
-    "h1": "Beslutninger på ferske tall.",
+    "h1": "Beslutninger på ferske tall, rett fra kildedataene",
     "h1Strong": "Rett fra kildedataene.",
     "lead": "Nøkkeltall, budsjett og verdier hentet direkte fra kontrakter, arealer og økonomi i Fenistra. Alltid oppdatert, og klare for ledelse, styre og revisor.",
     "outcomes": [
