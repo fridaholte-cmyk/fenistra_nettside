@@ -21,6 +21,6 @@ export class KiComponent {
     if (event.ctrlKey || event.metaKey || event.shiftKey || event.button !== 0) return; // open in new tab etc.
     event.preventDefault();
     document.getElementById('felix')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    history.replaceState(history.state, '', '/ki#felix');
+    history.replaceState(history.state, '', 'ki#felix'); // relativ, så base-href følges
   }
 }
