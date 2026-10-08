@@ -3,6 +3,11 @@
   "trailingSlash": "never",
   "routes": [
     {
+      "route": "/losning-regnskap",
+      "redirect": "/integrasjon-regnskap-erp",
+      "statusCode": 301
+    },
+    {
       "route": "/index.html",
       "headers": {
         "cache-control": "no-cache, no-store, must-revalidate"

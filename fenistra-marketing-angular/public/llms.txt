@@ -29,7 +29,7 @@ AI blir aldri bedre enn dataene den står på. Fenistra har strukturerte data om
 
 ## Pakker
 
-- **Fenistra Standard:** hele arbeidsflyten fra kontrakt til rapportering i ett system. Kontrakt, fakturering, regnskap, rapportering, dokument, felleskostnader, omsetningsavregning, formuesverdsettelse, inntektsbudsjett og sikkerhetsstyring, pluss transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, protokoller og digital signering.
+- **Fenistra Standard:** hele arbeidsflyten fra kontrakt til rapportering i ett system. Kontrakt, fakturering, rapportering, dokument, felleskostnader, omsetningsavregning, formuesverdsettelse, inntektsbudsjett og sikkerhetsstyring, pluss transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, protokoller og digital signering.
 - **Fenistra Premium:** for porteføljer med flere selskaper og høye krav. Alt i Standard, alle tilleggsprodukter (justering, arealberegning, kjøpesenter) og en egen dedikert kunderådgiver.
 
 ## Hovedsider
@@ -53,7 +53,6 @@ AI blir aldri bedre enn dataene den står på. Fenistra har strukturerte data om
 - [Kontrakter](https://www.fenistra.no/losning-kontrakter): utleie-, fremleie- og interne kontrakter samlet på tvers av porteføljen
 - [Fakturering](https://www.fenistra.no/losning-fakturering): fast, akonto og omsetningsbasert husleie med gjentakende fakturering
 - [Felleskostnader](https://www.fenistra.no/losning-felleskostnader): automatisert felleskostnadsavregning med fordeling og MVA-behandling
-- [Regnskap](https://www.fenistra.no/losning-regnskap): eiendomsøkonomi avstemt mot regnskapssystemet
 - [Rapportering](https://www.fenistra.no/losning-rapportering): standardrapporter og interaktive visualiseringer
 - [Omsetningsavregning](https://www.fenistra.no/losning-omsetningsavregning): avregning av omsetningsbasert leie
 - [Formuesverdsettelse](https://www.fenistra.no/losning-formuesverdsettelse): beregning og dokumentasjon av formuesverdi

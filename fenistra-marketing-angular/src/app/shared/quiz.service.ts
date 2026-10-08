@@ -145,7 +145,7 @@ export class QuizService {
     if (sizeAnswer && sizeAnswer.optionIndex >= 2) {
       reasons.push('Porteføljen deres er stor nok til at en dedikert kunderådgiver og prioritert oppfølging gir mest verdi.');
     } else {
-      reasons.push('Fenistra Standard dekker kjerneløsningene deres — kontrakt, fakturering, regnskap og rapportering — uten behov for tilleggsprodukter.');
+      reasons.push('Fenistra Standard dekker kjerneløsningene deres — kontrakt, fakturering, felleskostnader og rapportering — uten behov for tilleggsprodukter.');
     }
 
     const kjopesenterAnswer = byId.get('kjopesenter');

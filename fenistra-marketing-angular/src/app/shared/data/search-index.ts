@@ -26,7 +26,6 @@ export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
   { title: "Fakturering", url: "losning-fakturering.html", category: "Løsning", desc: "Fast, akonto og omsetningsbasert husleie samlet i én løsning, med gjentakende fakturering gjennom hele leieforholdet." },
   { title: "Kjøpesenter", url: "losning-kjopesenter.html", category: "Løsning", desc: "Full oversikt over senterdrift for senterleder, med fokus på butikk, aktiviteter og omsetningsrapportering." },
   { title: "Dokument", url: "losning-dokument.html", category: "Løsning", desc: "Samle kontrakter, tegninger og annen dokumentasjon direkte koblet til riktig eiendom og leieforhold." },
-  { title: "Regnskap", url: "losning-regnskap.html", category: "Løsning", desc: "Hold eiendomsøkonomien avstemt og oppdatert, med integrasjon mot regnskapssystemene dere allerede har på plass." },
   { title: "Rapportering", url: "losning-rapportering.html", category: "Løsning", desc: "Standardiserte rapporter og interaktive visualiseringer av porteføljens data og nøkkeltall." },
   { title: "Omsetningsavregning", url: "losning-omsetningsavregning.html", category: "Løsning", desc: "Forenkler og effektiviserer avregningen av omsetningsbasert leie, basert på revisorbekreftet omsetning." },
   { title: "Inntektsbudsjett", url: "losning-inntektsbudsjett.html", category: "Løsning", desc: "Bygg inntektsbudsjett direkte fra de faktiske leieforholdene i porteføljen, ikke fra separate regneark." },
@@ -44,7 +43,7 @@ export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
 
   { title: "Hva er et forvaltningssystem?", url: "sporsmal.html", category: "Spørsmål", desc: "Svar på det du lurer på om Fenistra." },
   { title: "Er Fenistra skybasert?", url: "sporsmal.html", category: "Spørsmål", desc: "Ja, Fenistra.net er et skybasert kontrakts- og faktureringssystem du får tilgang til direkte i nettleseren." },
-  { title: "Hva inneholder Fenistra Standard?", url: "sporsmal.html", category: "Spørsmål", desc: "Kontrakt, fakturering, regnskap, rapportering, dokument, felleskostnader, omsetningsavregning, formuesverdsettelse og inntektsbudsjett." },
+  { title: "Hva inneholder Fenistra Standard?", url: "sporsmal.html", category: "Spørsmål", desc: "Kontrakt, fakturering, rapportering, dokument, felleskostnader, omsetningsavregning, formuesverdsettelse og inntektsbudsjett." },
   { title: "Hva inneholder Fenistra Premium?", url: "sporsmal.html", category: "Spørsmål", desc: "Svar på det du lurer på om Fenistra Premium." },
   { title: "Hva er Fenistra Kjøpesenter?", url: "sporsmal.html", category: "Spørsmål", desc: "Svar på det du lurer på om Fenistra Kjøpesenter." },
   { title: "Kan Fenistra integreres med vårt regnskapssystem?", url: "sporsmal.html", category: "Spørsmål", desc: "Svar om integrasjon mot regnskapssystemer." },

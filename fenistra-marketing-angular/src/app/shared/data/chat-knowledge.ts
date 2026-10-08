@@ -26,7 +26,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["standard"],
-    answer: "Fenistra Standard dekker hele arbeidsflyten fra kontrakt til rapportering, samlet i ett system: Kontrakt, Fakturering, Regnskap, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett og Sikkerhetsstyring, i tillegg til transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering."
+    answer: "Fenistra Standard dekker hele arbeidsflyten fra kontrakt til rapportering, samlet i ett system: Kontrakt, Fakturering, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett og Sikkerhetsstyring, i tillegg til transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering."
   },
   {
     keywords: ["premium"],
@@ -218,7 +218,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["regnskap", "regnskapssystem", "kundereskontro", "fenistra regnskap"],
-    answer: "Fenistra Regnskap: Hold eiendomsøkonomien avstemt og oppdatert, med integrasjon mot regnskapssystemene dere allerede bruker i dag. Inkludert i Fenistra Standard. Blant annet: Integrasjon mot rundt 20 regnskaps- og ERP-systemer, fem av dem med dataflyt begge veier; Avstemming av fakturering og felleskostnader; Grunnlag for budsjettering og oppfølging. <a href=\"losning-regnskap.html\">Les mer om Fenistra Regnskap →</a>"
+    answer: "Fenistra har ikke en egen regnskapsløsning. Fenistra overfører fakturaer og posteringer til regnskapssystemet dere allerede bruker, gjennom integrasjoner mot rundt 20 regnskaps- og ERP-systemer. Fem av dem har API-integrasjon med dataflyt begge veier: Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net. <a href=\"integrasjon-regnskap-erp.html\">Se regnskaps- og ERP-integrasjonene →</a>"
   },
   {
     keywords: ["sikkerhetsstyring", "bankgaranti", "depositum", "sikkerhet", "fenistra sikkerhetsstyring"],
@@ -356,7 +356,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["tilleggsprodukter", "selvstendige produkter", "hva er inkludert"],
-    answer: "Fenistra er delt i tre: kjerneløsninger (Kontrakter, Felleskostnader, Fakturering, Regnskap, Rapportering, Dokument, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett), transaksjonsprodukter som er inkludert i begge pakker men betales per bruk (MVA-erklæring, revisorbekreftet omsetning, Protokoller, Digital signering), og tilleggsprodukter som er selvstendige eller kombinert med Standard, og alltid inkludert i Premium (Justering, Arealberegning, Kjøpesenter)."
+    answer: "Fenistra er delt i tre: kjerneløsninger (Kontrakter, Felleskostnader, Fakturering, Rapportering, Dokument, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett), transaksjonsprodukter som er inkludert i begge pakker men betales per bruk (MVA-erklæring, revisorbekreftet omsetning, Protokoller, Digital signering), og tilleggsprodukter som er selvstendige eller kombinert med Standard, og alltid inkludert i Premium (Justering, Arealberegning, Kjøpesenter)."
   },
   {
     keywords: ["kundeteamet kontakt", "hvem kan jeg kontakte kunde", "brukerstøtte kontakt person", "head of customer success"],
@@ -384,7 +384,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["fenistra standard", "hva inneholder standard"],
-    answer: "Fenistra Standard inneholder løsningene Kontrakt, Fakturering, Regnskap, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse og Inntektsbudsjett, i tillegg til transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering."
+    answer: "Fenistra Standard inneholder løsningene Kontrakt, Fakturering, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse og Inntektsbudsjett, i tillegg til transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering."
   },
   {
     keywords: ["premium"],
