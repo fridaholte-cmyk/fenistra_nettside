@@ -373,7 +373,6 @@
   .int-jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;}
   .int-jump a{padding:9px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px;font-weight:500;color:var(--ink);transition:border-color .2s ease,color .2s ease;}
   .int-jump a:hover{border-color:var(--berry);color:var(--berry-deep);}
-  .int-jump a span{font-family:var(--font-mono);font-size:12px;color:var(--plum);margin-left:6px;}
   section.int-cat{padding:64px 0;border-top:1px solid var(--line);scroll-margin-top:76px;}
   section.int-cat:first-of-type{border-top:none;}
   .int-cat-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px;flex-wrap:wrap;}
@@ -415,7 +414,7 @@
     </div>
     <nav class="int-jump" aria-label="Hopp til kategori">
       @for (c of categories; track c.id) {
-        <a routerLink="/integrasjoner" [fragment]="c.id">{{ c.title }}<span>{{ c.systems.length }}</span></a>
+        <a routerLink="/integrasjoner" [fragment]="c.id">{{ c.title }}</a>
       }
       <a routerLink="/integrasjoner" fragment="api">API og innebygde koblinger</a>
     </nav>
