@@ -38,8 +38,7 @@ AI blir aldri bedre enn dataene den står på. Fenistra har strukturerte data om
 - [Spørsmål og svar](https://www.fenistra.no/sporsmal): pakker, priser, integrasjoner, oppstart og hvorfor velge Fenistra
 - [Løsninger](https://www.fenistra.no/losninger): plattformen ordnet etter det dere skal få gjort, med lenker til hver løsning
 - [Pakker og priser](https://www.fenistra.no/priser): Fenistra Standard og Premium, prisprinsipp og hva som er inkludert
-- [Integrasjoner](https://www.fenistra.no/integrasjoner): regnskap/ERP, årsoppgjør, drift og vedlikehold, rapportering og kjøpesenter
-- [Regnskap og ERP-integrasjoner](https://www.fenistra.no/integrasjon-regnskap-erp): Tripletex, Xledger, PowerOffice GO, Visma Business NXT, Visma.net m.fl.
+- [Integrasjoner](https://www.fenistra.no/integrasjoner): alle 26 systemene Fenistra er integrert mot, samlet på én side: regnskap og ERP (Tripletex, Xledger, PowerOffice GO, Visma Business NXT, Visma.net, 24SevenOffice, Uni Micro, Microsoft Dynamics, Visma Business, Visma Global, Visma Unique, SAP, Unit4, Info Easy, Infor M3, Deltek Maconomy, Oracle PeopleSoft), årsoppgjør (Finale), rapportering (Power BI, Maestro), drift og vedlikehold (Properly, FAMAC) og kjøpesenter (Viametrics, IMAS/Countmatters), pluss Reporting API og innebygde koblinger mot SSB, EHF/PEPPOL og Brønnøysundregistrene
 - [AI i Fenistra](https://www.fenistra.no/ki): KI-assistenten, AI-opplasting av kontrakter og hvorfor datagrunnlaget er avgjørende
 - [Kundehistorier](https://www.fenistra.no/kunder): Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm (nå Aspelin Reitan) og Backer AS
 - [Om oss](https://www.fenistra.no/om-oss): historien bak Fenistra og Visma Property Solutions

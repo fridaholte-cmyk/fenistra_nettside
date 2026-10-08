@@ -368,6 +368,35 @@
     .chat-panel{width:calc(100vw - 24px);height:min(70vh, 560px);right:12px;bottom:12px;}
     .chat-trigger{right:16px;bottom:16px;}
   }
+
+  /* ===== Samlet integrasjonsside ===== */
+  .int-jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;}
+  .int-jump a{padding:9px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px;font-weight:500;color:var(--ink);transition:border-color .2s ease,color .2s ease;}
+  .int-jump a:hover{border-color:var(--berry);color:var(--berry-deep);}
+  .int-jump a span{font-family:var(--font-mono);font-size:12px;color:var(--plum);margin-left:6px;}
+  section.int-cat{padding:64px 0;border-top:1px solid var(--line);scroll-margin-top:76px;}
+  section.int-cat:first-of-type{border-top:none;}
+  .int-cat-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px;flex-wrap:wrap;}
+  .int-cat-head h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px,2.6vw,34px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:8px;}
+  .int-cat-head p{font-size:15.5px;color:var(--ink-soft);max-width:620px;}
+  .int-count{font-family:var(--font-mono);font-size:12.5px;color:var(--plum);white-space:nowrap;}
+  .erp-grid{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:0;padding:0;}
+  .erp-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 20px 20px;display:flex;flex-direction:column;align-items:center;gap:16px;transition:border-color .2s ease, transform .2s ease, box-shadow .2s ease;}
+  .erp-card:hover{border-color:var(--berry-mid);transform:translateY(-2px);box-shadow:0 14px 30px -18px rgba(21,10,24,.25);}
+  .erp-logo{height:56px;width:100%;display:flex;align-items:center;justify-content:center;}
+  .erp-logo img{max-height:40px;max-width:min(150px, 80%);width:auto;height:auto;object-fit:contain;}
+  .erp-wordmark{font-family:var(--font-display);font-weight:600;font-size:17px;letter-spacing:-0.01em;color:var(--plum);text-align:center;line-height:1.25;}
+  .erp-name{font-family:var(--font-mono);font-size:12px;color:var(--ink-soft);text-align:center;border-top:1px solid var(--line);padding-top:12px;width:100%;}
+  .erp-name-muted{color:var(--plum);opacity:.7;}
+  .int-builtin{background:var(--paper-2);border-top:1px solid var(--line);}
+  .int-builtin-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .int-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;}
+  .int-box h3{font-size:18px;font-weight:600;color:var(--ink);margin-bottom:10px;}
+  .int-box p{font-size:15px;color:var(--ink-soft);line-height:1.6;margin-bottom:18px;}
+  .int-box ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;}
+  .int-box li{font-family:var(--font-mono);font-size:12.5px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink);}
+  @media (max-width:980px){.erp-grid{grid-template-columns:repeat(3,1fr);} .int-builtin-grid{grid-template-columns:1fr;}}
+  @media (max-width:760px){.erp-grid{grid-template-columns:repeat(2,1fr);gap:12px;} section.int-cat{padding:48px 0;}}
 </style>
 <div class="wrap">
   <div class="breadcrumb">
@@ -379,90 +408,77 @@
 <section class="module-hero">
   <div class="wrap">
     <h1>Snakker sammen med systemene dere allerede bruker</h1>
-    <p class="lead">Fenistra integreres i dag mot over 20 ulike systemer i produksjon hos kunder. Trenger du noe mer spesifikt, byr vårt API på fleksibiliteten.</p>
+    <p class="lead">Fenistra er integrert mot {{ total }} systemer for regnskap, årsoppgjør, rapportering, drift og kjøpesenter. Data registreres én gang i Fenistra og flyter videre dit den trengs.</p>
     <div class="hero-actions">
-      <a routerLink="/pakke-resultat" class="btn btn-primary">Book en demo</a>
-      <a routerLink="/losninger" class="btn btn-ghost">Se alle løsninger</a>
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book en demo</a>
+      <a routerLink="/kontakt-oss" class="btn btn-ghost">Spør om deres system</a>
     </div>
+    <nav class="int-jump" aria-label="Hopp til kategori">
+      @for (c of categories; track c.id) {
+        <a routerLink="/integrasjoner" [fragment]="c.id">{{ c.title }}<span>{{ c.systems.length }}</span></a>
+      }
+      <a routerLink="/integrasjoner" fragment="api">API og innebygde koblinger</a>
+    </nav>
   </div>
 </section>
 
-<section style="padding-top:0;">
+@for (c of categories; track c.id) {
+  <section class="int-cat" [id]="c.id">
+    <div class="wrap">
+      <div class="int-cat-head">
+        <div>
+          <h2>{{ c.title }}</h2>
+          <p>{{ c.intro }}</p>
+        </div>
+        <span class="int-count">{{ c.systems.length }} {{ c.systems.length === 1 ? 'system' : 'systemer' }}</span>
+      </div>
+      <ul class="erp-grid">
+        @for (s of c.systems; track s.name) {
+          <li class="erp-card">
+            <div class="erp-logo">
+              @if (s.logo) {
+                <img [src]="s.logo" alt="" loading="lazy" decoding="async">
+              } @else {
+                <span class="erp-wordmark">{{ s.name }}</span>
+              }
+            </div>
+            <div class="erp-name" [attr.aria-hidden]="s.logo ? null : 'true'" [class.erp-name-muted]="!s.logo">{{ s.logo ? s.name : 'Integrert' }}</div>
+          </li>
+        }
+      </ul>
+    </div>
+  </section>
+}
+
+<section class="int-cat int-builtin" id="api">
   <div class="wrap">
-    <div class="module-grid">
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M112-32c8.8 0 16 7.2 16 16l0 112 192 0 0-112c0-8.8 7.2-16 16-16s16 7.2 16 16l0 112 80 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-16 0 0 96c0 100.6-77.4 183.2-176 191.3l0 80.7c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-80.7C109.4 407.2 32 324.6 32 224l0-96-16 0c-8.8 0-16-7.2-16-16S7.2 96 16 96l80 0 0-112c0-8.8 7.2-16 16-16zM64 128l0 96c0 88.4 71.6 160 160 160s160-71.6 160-160l0-96-320 0z"/></svg>
-        </div>
-        <h3 aria-level="2">Regnskap og ERP-systemer</h3>
-        <p>Rundt 20 regnskaps- og ERP-systemer. Fem av dem har API-integrasjon med dataflyt begge veier, de øvrige sender data én vei.</p>
-        <a routerLink="/integrasjon-regnskap-erp" class="go">Se integrasjoner →</a>
-      </div>
-
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M336 0c8.8 0 16 7.2 16 16l0 48 32 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l32 0 0-48c0-8.8 7.2-16 16-16s16 7.2 16 16l0 48 192 0 0-48c0-8.8 7.2-16 16-16zM64 96c-17.7 0-32 14.3-32 32l0 288c0 17.7 14.3 32 32 32l320 0c17.7 0 32-14.3 32-32l0-288c0-17.7-14.3-32-32-32L64 96zm243.1 86.6c5.2-7.1 15.2-8.7 22.3-3.5s8.7 15.2 3.5 22.3l-128 176c-2.8 3.8-7 6.2-11.7 6.5s-9.3-1.3-12.6-4.6l-64-64c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l50.7 50.7 117-160.8z"/></svg>
-        </div>
-        <h3>Årsoppgjør</h3>
-        <p>Integrasjoner mot systemer for årsregnskap og innsending til offentlige registre.</p>
-        <a routerLink="/integrasjon-arsoppgjor" class="go">Se integrasjoner →</a>
-      </div>
-
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M208 32a176 176 0 1 1 0 352 176 176 0 1 1 0-352zm0 384c51.7 0 99-18.8 135.3-50L484.7 507.3c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L366 343.3C397.2 307 416 259.7 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208 93.1 416 208 416zM128 208l0 64c0 8.8 7.2 16 16 16s16-7.2 16-16l0-64c0-8.8-7.2-16-16-16s-16 7.2-16 16zm64-96l0 160c0 8.8 7.2 16 16 16s16-7.2 16-16l0-160c0-8.8-7.2-16-16-16s-16 7.2-16 16zm64 64l0 96c0 8.8 7.2 16 16 16s16-7.2 16-16l0-96c0-8.8-7.2-16-16-16s-16 7.2-16 16z"/></svg>
-        </div>
-        <h3>Rapporter og analyse</h3>
-        <p>Kombiner Fenistra-data med verktøy for business intelligence og nøkkeltallsanalyse.</p>
-        <a routerLink="/integrasjon-rapportering" class="go">Se integrasjoner →</a>
-      </div>
-
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 576 512" fill="currentColor"><path d="M25.4 38.7c-5.4 5.4-6.2 13.8-2 20.2l79.2 118.8c5.9 8.9 15.9 14.2 26.6 14.2l72.2 0 76.3 76.3c-24.6 35.3-21.2 84.2 10.3 115.7L414.2 510.1c18.7 18.7 49.1 18.7 67.9 0l60.1-60.1c18.7-18.7 18.7-49.1 0-67.9L416.1 256c-31.5-31.5-80.4-34.9-115.7-10.3l-76.3-76.3 0-72.2c0-10.7-5.3-20.7-14.2-26.6L91-8.7c-6.3-4.2-14.8-3.4-20.2 2L25.4 38.7zM192.1 160l-62.9 0-71.9-107.9 26.9-26.9 107.9 71.9 0 62.9zM519.5 427.3l-60.1 60.1c-6.2 6.2-16.4 6.2-22.6 0L310.7 361.4c-22.8-22.9-22.8-59.9 0-82.7s59.9-22.8 82.7 0L519.5 404.7c6.2 6.2 6.2 16.4 0 22.6zM45.2 397.1c-28.1 28.1-28.1 73.7 0 101.8s73.7 28.1 101.8 0L242 404c-6.8-8.9-12.4-18.5-16.8-28.5L124.4 476.3c-15.6 15.6-40.9 15.6-56.6 0s-15.6-40.9 0-56.6L214.6 273 192 250.3 45.2 397.1zM256.7 49.9c7 9.5 11.8 20.5 14 32.2 24.9-30.6 62.9-50.1 105.4-50.1 14.9 0 29.2 2.4 42.6 6.8l-61.9 61.9c-3 3-4.7 7.1-4.7 11.3l0 64c0 1.9 .3 3.8 1 5.5 17.7 .1 35.4 3.6 52.1 10.5l27 0c4.2 0 8.3-1.7 11.3-4.7l61.9-61.9c4.4 13.4 6.8 27.7 6.8 42.6 0 32.5-11.4 62.3-30.4 85.7l22.7 22.7c24.8-29.3 39.7-67.1 39.7-108.4 0-28.2-6.9-54.7-19.2-78.1-2.4-4.5-6.7-7.6-11.8-8.4s-10.1 .9-13.7 4.5l-73.9 73.9-41.4 0 0-41.4 73.9-73.9c3.6-3.6 5.3-8.7 4.5-13.7s-3.9-9.4-8.4-11.8C430.8 6.9 404.3 0 376.1 0 329.4 0 287.1 19.1 256.7 49.9z"/></svg>
-        </div>
-        <h3>Drift og vedlikehold</h3>
-        <p>Koble Fenistra sammen med verktøyene dere bruker til drift og vedlikehold av eiendommene.</p>
-        <a routerLink="/integrasjon-drift-vedlikehold" class="go">Se integrasjoner →</a>
-      </div>
-
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 576 512" fill="currentColor"><path d="M106.9 81.7C112.4 70.8 123.4 64 135.6 64l304.9 0c12.1 0 23.2 6.8 28.6 17.7l56.8 113.7c1.4 2.7 2.1 5.8 2.1 8.8 0 10.9-8.9 19.8-19.8 19.8L67.8 224c-10.9 0-19.8-8.9-19.8-19.8 0-3.1 .7-6.1 2.1-8.8L106.9 81.7zM16 204.2c0 27.3 21.2 49.7 48 51.6L64 432c0 26.5 21.5 48 48 48l192 0c26.5 0 48-21.5 48-48l0-176 128 0 0 208c0 8.8 7.2 16 16 16s16-7.2 16-16l0-208.1c26.8-1.9 48-24.3 48-51.6 0-8-1.9-16-5.5-23.2L497.7 67.4C486.8 45.7 464.7 32 440.4 32L135.6 32c-24.2 0-46.4 13.7-57.2 35.4L21.5 181.1c-3.6 7.2-5.5 15.1-5.5 23.2zM96 352l0-96 224 0 0 96-224 0zm0 32l224 0 0 48c0 8.8-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16l0-48z"/></svg>
-        </div>
-        <h3>Kjøpesenterløsninger</h3>
-        <p>Integrasjoner mot ferdselstelling og senterdata, som Viametrics og IMAS.</p>
-        <a routerLink="/integrasjon-kjopesenter" class="go">Se integrasjoner →</a>
-      </div>
-
-      <div class="module-card">
-        <div class="module-icon">
-          <svg width="30" height="30" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M64 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l384 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32L64 96zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128zM128 232a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm80-40l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 96l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zM104 304a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
-        </div>
-        <h3>Se alle systemer</h3>
-        <p>Full oversikt over alle systemer Fenistra integreres mot, i én liste.</p>
-        <a routerLink="/integrasjoner-alle-systemer" class="go">Se alle systemer →</a>
+    <div class="int-cat-head">
+      <div>
+        <h2>API og innebygde koblinger</h2>
+        <p>Trenger dere noe mer spesifikt, gir API-et fleksibiliteten. Noen koblinger følger dessuten alltid med, uansett hvilke integrasjoner dere velger.</p>
       </div>
     </div>
-
-    <p class="integration-footnote"><strong>Innebygde integrasjoner i Fenistra:</strong> SSB, e-faktura (EHF/PEPPOL) og oppslag mot Brønnøysundregistrene er en del av standard Fenistra-integrasjonene, uavhengig av hvilke øvrige integrasjoner dere velger.</p>
-
-    <div class="api-dev-box reveal" style="margin-top:56px;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:40px 44px;display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between;">
-      <div style="max-width:560px;">
-        <h3 style="margin:0 0 10px;font-family:var(--font-display);font-weight:500;font-size:20px;letter-spacing:-0.01em;">Hent ut den dataen du trenger</h3>
-        <p style="margin:0;color:var(--ink-soft);">Med Fenistra Reporting API kan du raskt og enkelt hente ut den dataen du trenger. Opprett API-bruker her og gi oss beskjed slik at du får alle de nødvendige tilgangene. Developer-portalen gir deg også en fullstendig oversikt over alle datafelter som inkluderes i API-et og kan hentes ut.</p>
+    <div class="int-builtin-grid">
+      <div class="int-box">
+        <h3>Innebygd i Fenistra</h3>
+        <p>Disse koblingene er en del av standard Fenistra, for alle kunder.</p>
+        <ul><li>SSB (KPI-regulering)</li><li>E-faktura (EHF/PEPPOL)</li><li>Brønnøysundregistrene</li></ul>
       </div>
-      <a href="https://developers.mire.no/signup" class="btn btn-primary" target="_blank" rel="noopener" style="flex-shrink:0;">Opprett API-bruker →</a>
+      <div class="int-box">
+        <h3>Fenistra Reporting API</h3>
+        <p>Hent ut dataene dere trenger til egne verktøy og analyser. Developer-portalen viser alle datafeltene som kan hentes ut. Opprett en API-bruker og gi oss beskjed, så får dere tilgangene som trengs.</p>
+        <a href="https://developers.mire.no/signup" class="btn btn-light" target="_blank" rel="noopener">Opprett API-bruker ↗</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="cta-wrap">
+<section class="cta-wrap" style="padding-top:64px;">
   <div class="cta-band reveal">
-    <h2>Bruker dere et system vi ikke har nevnt?</h2>
+    <h2>Bruker dere et system som ikke står her?</h2>
     <div class="actions">
       <a routerLink="/kontakt-oss" class="btn btn-on-dark">Ta kontakt</a>
-      <a routerLink="/pakke-resultat" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Book en demo</a>
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Book en demo</a>
     </div>
   </div>
 </section>

@@ -77,7 +77,7 @@ export class AppComponent {
         const fragment = e.urlAfterRedirects.split('#')[1];
         effects.run();
         if (fragment) {
-          setTimeout(() => document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth' }), 0);
+          scrollToFragment(fragment);
         } else {
           window.scrollTo(0, 0);
           // let screen readers know the page changed: focus the new page content (not on the first load)
@@ -111,5 +111,18 @@ export class AppComponent {
     } else {
       this.passwordError = true;
     }
+  }
+}
+
+/**
+ * Scroll to #fragment once it exists. Coming from another page, the new page is rendered a moment
+ * after NavigationEnd, so keep trying for up to ~1.5 s instead of giving up on the first try.
+ */
+function scrollToFragment(id: string, tries = 0): void {
+  const el = document.getElementById(id);
+  if (el) {
+    setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 0);
+  } else if (tries < 30) {
+    setTimeout(() => scrollToFragment(id, tries + 1), 50);
   }
 }

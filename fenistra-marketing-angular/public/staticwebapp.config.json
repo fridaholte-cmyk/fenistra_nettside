@@ -3,6 +3,36 @@
   "trailingSlash": "never",
   "routes": [
     {
+      "route": "/integrasjon-regnskap-erp",
+      "redirect": "/integrasjoner#regnskap",
+      "statusCode": 301
+    },
+    {
+      "route": "/integrasjon-arsoppgjor",
+      "redirect": "/integrasjoner#arsoppgjor",
+      "statusCode": 301
+    },
+    {
+      "route": "/integrasjon-rapportering",
+      "redirect": "/integrasjoner#rapportering",
+      "statusCode": 301
+    },
+    {
+      "route": "/integrasjon-drift-vedlikehold",
+      "redirect": "/integrasjoner#drift",
+      "statusCode": 301
+    },
+    {
+      "route": "/integrasjon-kjopesenter",
+      "redirect": "/integrasjoner#kjopesenter",
+      "statusCode": 301
+    },
+    {
+      "route": "/integrasjoner-alle-systemer",
+      "redirect": "/integrasjoner",
+      "statusCode": 301
+    },
+    {
       "route": "/losning-regnskap",
       "redirect": "/integrasjon-regnskap-erp",
       "statusCode": 301

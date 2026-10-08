@@ -38,7 +38,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["regnskapssystem", "integreres"],
-    answer: "Sannsynligvis ja. Fenistra er i dag integrert mot rundt 20 regnskaps- og ERP-systemer i produksjon hos kunder. Fem av dem har API-integrasjon med dataflyt begge veier, de øvrige sender data én vei, blant annet Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net, i tillegg til en rekke andre ERP-systemer som SAP, Microsoft Dynamics og 24SevenOffice. Se full oversikt over regnskapsintegrasjoner. <a href=\"integrasjon-regnskap-erp.html\">Les mer om Regnskap og ERP-integrasjoner →</a>"
+    answer: "Sannsynligvis ja. Fenistra er i dag integrert mot rundt 20 regnskaps- og ERP-systemer i produksjon hos kunder. Fem av dem har API-integrasjon med dataflyt begge veier, de øvrige sender data én vei, blant annet Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net, i tillegg til en rekke andre ERP-systemer som SAP, Microsoft Dynamics og 24SevenOffice. Se full oversikt over regnskapsintegrasjoner. <a href=\"integrasjoner.html#regnskap\">Les mer om Regnskap og ERP-integrasjoner →</a>"
   },
   {
     keywords: ["koster", "kostnad", "abonnement"],
@@ -218,7 +218,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["regnskap", "regnskapssystem", "kundereskontro", "fenistra regnskap"],
-    answer: "Fenistra har ikke en egen regnskapsløsning. Fenistra overfører fakturaer og posteringer til regnskapssystemet dere allerede bruker, gjennom integrasjoner mot rundt 20 regnskaps- og ERP-systemer. Fem av dem har API-integrasjon med dataflyt begge veier: Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net. <a href=\"integrasjon-regnskap-erp.html\">Se regnskaps- og ERP-integrasjonene →</a>"
+    answer: "Fenistra har ikke en egen regnskapsløsning. Fenistra overfører fakturaer og posteringer til regnskapssystemet dere allerede bruker, gjennom integrasjoner mot rundt 20 regnskaps- og ERP-systemer. Fem av dem har API-integrasjon med dataflyt begge veier: Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net. <a href=\"integrasjoner.html#regnskap\">Se regnskaps- og ERP-integrasjonene →</a>"
   },
   {
     keywords: ["sikkerhetsstyring", "bankgaranti", "depositum", "sikkerhet", "fenistra sikkerhetsstyring"],
@@ -236,27 +236,27 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["regnskap integrasjon", "erp", "tripletex", "xledger", "poweroffice", "visma business nxt", "visma.net", "sap", "24sevenoffice", "unimicro", "microsoft dynamics", "regnskap", "integrasjon", "visma", "business", "microsoft", "dynamics"],
-    answer: "Fenistra har API-integrasjon med dataflyt begge veier mot fem regnskapssystemer: Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net, med automatisk dataflyt begge veier. I tillegg har vi integrasjoner mot en rekke andre ERP-systemer som 24SevenOffice, UniMicro, Microsoft Dynamics, Visma Business, Visma Global, SAP, PowerOffice, Unit4 ERP, Infor M3 og flere. Bruker dere noe annet, ta kontakt, så ser vi på løsningen. <a href=\"integrasjon-regnskap-erp.html\">Les mer om Regnskap og ERP-integrasjoner →</a>"
+    answer: "Fenistra har API-integrasjon med dataflyt begge veier mot fem regnskapssystemer: Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net, med automatisk dataflyt begge veier. I tillegg har vi integrasjoner mot en rekke andre ERP-systemer som 24SevenOffice, UniMicro, Microsoft Dynamics, Visma Business, Visma Global, SAP, PowerOffice, Unit4 ERP, Infor M3 og flere. Bruker dere noe annet, ta kontakt, så ser vi på løsningen. <a href=\"integrasjoner.html#regnskap\">Les mer om Regnskap og ERP-integrasjoner →</a>"
   },
   {
     keywords: ["årsoppgjør", "finale"],
-    answer: "For årsoppgjør kobler Fenistra seg til systemet Finale for å utarbeide og sende inn årsregnskapet. Bruker dere et annet system, ta kontakt for informasjon om integrasjonsmuligheter. <a href=\"integrasjon-arsoppgjor.html\">Les mer om Årsoppgjør-integrasjoner →</a>"
+    answer: "For årsoppgjør kobler Fenistra seg til systemet Finale for å utarbeide og sende inn årsregnskapet. Bruker dere et annet system, ta kontakt for informasjon om integrasjonsmuligheter. <a href=\"integrasjoner.html#arsoppgjor\">Les mer om Årsoppgjør-integrasjoner →</a>"
   },
   {
     keywords: ["drift og vedlikehold", "properly", "famac", "vedlikeholdssystem", "drift", "vedlikehold"],
-    answer: "For drift og vedlikehold integreres Fenistra med Properly og FAMAC, slik at informasjon flyter mellom forvaltning og drift. <a href=\"integrasjon-drift-vedlikehold.html\">Les mer om Drift og vedlikehold-integrasjoner →</a>"
+    answer: "For drift og vedlikehold integreres Fenistra med Properly og FAMAC, slik at informasjon flyter mellom forvaltning og drift. <a href=\"integrasjoner.html#drift\">Les mer om Drift og vedlikehold-integrasjoner →</a>"
   },
   {
     keywords: ["kjøpesenterløsninger integrasjon", "viametrics", "imas", "ferdselstelling", "besøkstall", "kjøpesenterløsninger", "integrasjon"],
-    answer: "Fenistra kobles direkte mot Viametrics og IMAS for ferdselstelling og senterdata, slik at besøkstall flyter automatisk inn i Kjøpesenter-modulen og omsetningsrapporteringen. <a href=\"integrasjon-kjopesenter.html\">Les mer om Kjøpesenter-integrasjoner →</a>"
+    answer: "Fenistra kobles direkte mot Viametrics og IMAS for ferdselstelling og senterdata, slik at besøkstall flyter automatisk inn i Kjøpesenter-modulen og omsetningsrapporteringen. <a href=\"integrasjoner.html#kjopesenter\">Les mer om Kjøpesenter-integrasjoner →</a>"
   },
   {
     keywords: ["power bi", "maestro", "analyseverktøy", "rapporteringsverktøy", "power"],
-    answer: "Fenistra-data kan kobles til rapporterings- og analyseverktøy som Power BI og Maestro, slik at innsikten dere trenger alltid er oppdatert. <a href=\"integrasjon-rapportering.html\">Les mer om Rapportering-integrasjoner →</a>"
+    answer: "Fenistra-data kan kobles til rapporterings- og analyseverktøy som Power BI og Maestro, slik at innsikten dere trenger alltid er oppdatert. <a href=\"integrasjoner.html#rapportering\">Les mer om Rapportering-integrasjoner →</a>"
   },
   {
     keywords: ["hvor mange systemer", "alle integrasjoner", "integrasjoner oversikt", "integrasjoner"],
-    answer: "Fenistra er integrert mot rundt 25 systemer i produksjon, på tvers av regnskap/ERP, årsoppgjør, drift og vedlikehold, rapportering/analyse og kjøpesenterløsninger. Se full oversikt på Integrasjoner-siden. <a href=\"integrasjoner-alle-systemer.html\">Les mer om Integrasjoner →</a>"
+    answer: "Fenistra er integrert mot rundt 25 systemer i produksjon, på tvers av regnskap/ERP, årsoppgjør, drift og vedlikehold, rapportering/analyse og kjøpesenterløsninger. Se full oversikt på Integrasjoner-siden. <a href=\"integrasjoner.html\">Les mer om Integrasjoner →</a>"
   },
   {
     keywords: ["kundehistorier", "referansekunder", "kundecase"],
@@ -396,7 +396,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["integrer", "integrasjon", "regnskapssystem", "tripletex", "visma", "xledger", "poweroffice", "sap", "erp", "24sevenoffice"],
-    answer: "Sannsynligvis ja! Fenistra er i dag integrert mot rundt 20 regnskaps- og ERP-systemer i produksjon hos kunder. Fem av dem har API-integrasjon med dataflyt begge veier, de øvrige sender data én vei – blant annet Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net via direkte API-integrasjon. <a href=\"integrasjon-regnskap-erp.html\">Les mer om Regnskap og ERP-integrasjoner →</a>"
+    answer: "Sannsynligvis ja! Fenistra er i dag integrert mot rundt 20 regnskaps- og ERP-systemer i produksjon hos kunder. Fem av dem har API-integrasjon med dataflyt begge veier, de øvrige sender data én vei – blant annet Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net via direkte API-integrasjon. <a href=\"integrasjoner.html#regnskap\">Les mer om Regnskap og ERP-integrasjoner →</a>"
   },
   {
     keywords: ["løsning", "løsninger", "hva kan fenistra"],
