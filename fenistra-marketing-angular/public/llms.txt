@@ -50,6 +50,15 @@ AI blir aldri bedre enn dataene den står på. Fenistra har strukturerte data om
 
 ## Løsninger
 
+Plattformen er ordnet etter det kunden skal få gjort:
+
+- [Kontroll på porteføljen](https://www.fenistra.no/kontroll-pa-portefoljen): Kontrakter, sikkerheter, frister og dokumenter samlet i ett system, med varsel før noe glipper.
+- [Fakturering og avregning](https://www.fenistra.no/fakturering-og-avregning): Regulering, fakturering, felleskostnader og omsetningsleie i én flyt, beregnet automatisk og overført til regnskapet.
+- [MVA og regelverk](https://www.fenistra.no/mva-og-regelverk): MVA-erklæringer, justeringsforpliktelser og dokumentasjon i tråd med norsk regelverk.
+- [Rapport og analyse](https://www.fenistra.no/rapport-og-analyse): Nøkkeltall, inntektsbudsjett og formuesverdsettelse rett fra kildedataene.
+
+Enkeltmodulene:
+
 - [Kontrakter](https://www.fenistra.no/losning-kontrakter): utleie-, fremleie- og interne kontrakter samlet på tvers av porteføljen
 - [Fakturering](https://www.fenistra.no/losning-fakturering): fast, akonto og omsetningsbasert husleie med gjentakende fakturering
 - [Felleskostnader](https://www.fenistra.no/losning-felleskostnader): automatisert felleskostnadsavregning med fordeling og MVA-behandling

@@ -10,6 +10,10 @@ export interface SearchEntry {
 
 export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
   { title: "Løsninger", url: "losninger.html", category: "Side", desc: "Én plattform for hele porteføljen: kontrakter, fakturering, felleskostnader, MVA, rapportering og kjøpesenter." },
+  { title: "Kontroll på porteføljen", url: "kontroll-pa-portefoljen.html", category: "Løsning", desc: "Kontrakter, sikkerheter, frister og dokumenter samlet i ett system, med varsel før noe glipper.", keywords: ["kontroll", "oversikt", "frister", "varsling", "utløp", "portefølje"] },
+  { title: "Fakturering og avregning", url: "fakturering-og-avregning.html", category: "Løsning", desc: "Regulering, fakturering, felleskostnader og omsetningsleie i én flyt, beregnet automatisk og overført til regnskapet.", keywords: ["fakturering", "avregning", "regulering", "kpi", "husleie", "leie"] },
+  { title: "MVA og regelverk", url: "mva-og-regelverk.html", category: "Løsning", desc: "MVA-erklæringer, justeringsforpliktelser og dokumentasjon i tråd med norsk regelverk.", keywords: ["mva", "regelverk", "justering", "merverdiavgift", "revisor"] },
+  { title: "Rapport og analyse", url: "rapport-og-analyse.html", category: "Løsning", desc: "Nøkkeltall, inntektsbudsjett og formuesverdsettelse rett fra kildedataene.", keywords: ["rapport", "rapportering", "analyse", "nøkkeltall", "budsjett", "styre"] },
   { title: "Kundehistorier", url: "kunder.html", category: "Side", desc: "Se hvordan Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm (nå Aspelin Reitan) og Backer AS bruker Fenistra i sin daglige eiendomsforvaltning." },
   { title: "Om oss", url: "om-oss.html", category: "Side", desc: "Over 30 år med norsk næringseiendom, bygget for de neste 30. En del av Visma Property Solutions siden 2020." },
   { title: "AI hos Fenistra", url: "ki.html", category: "Side", desc: "AI i Fenistra: KI-assistenten, AI-opplasting av kontrakter og innovasjonsprosjektet Felix.", keywords: ["ai", "ki", "kunstig intelligens", "felix", "maskinlæring", "chatbot", "ki-assistent", "ai-assistent", "opplasting", "last opp kontrakt"] },

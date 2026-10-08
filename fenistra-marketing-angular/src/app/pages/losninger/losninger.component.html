@@ -360,6 +360,10 @@
   .job-card{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:12px;align-content:start;}
   .job-card h2{font-size:18px;font-weight:600;color:var(--ink);letter-spacing:-0.01em;}
   .job-card p{font-size:14.5px;color:var(--ink-soft);line-height:1.55;}
+  .job-link{color:inherit;transition:color .2s ease;}
+  .job-link span{display:inline-block;color:var(--berry);transition:transform .2s ease;}
+  .job-link:hover{color:var(--berry-deep);}
+  .job-link:hover span{transform:translateX(3px);}
   .job-card .related-chips{align-content:flex-start;margin-top:8px;}
   .catalog-head{border-top:1px solid var(--line);padding-top:56px;margin-bottom:28px;}
   .catalog-head h2{font-family:var(--font-display);font-weight:300;font-size:clamp(26px,3vw,36px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:6px;}
@@ -401,22 +405,22 @@
   <div class="wrap">
     <div class="jobs-grid">
       <div class="job-card">
-        <h2>Kontroll på hvert leieforhold</h2>
+        <h2><a routerLink="/kontroll-pa-portefoljen" class="job-link">Kontroll på hvert leieforhold <span aria-hidden="true">→</span></a></h2>
         <p>Hver kontrakt, hver sikkerhet og hver frist samlet, med varsel før noe glipper.</p>
         <div class="related-chips"><a routerLink="/losning-kontrakter">Kontrakter</a><a routerLink="/losning-sikkerhetsstyring">Sikkerhetsstyring</a><a routerLink="/losning-dokument">Dokument</a><a routerLink="/losning-digital-signering">Digital signering</a><a routerLink="/losning-protokoller">Protokoller</a></div>
       </div>
       <div class="job-card">
-        <h2>Fakturere og avregne riktig</h2>
+        <h2><a routerLink="/fakturering-og-avregning" class="job-link">Fakturere og avregne riktig <span aria-hidden="true">→</span></a></h2>
         <p>Registrer én gang, og la systemet regulere, fakturere og avregne gjennom hele leieforholdet.</p>
         <div class="related-chips"><a routerLink="/losning-fakturering">Fakturering</a><a routerLink="/losning-felleskostnader">Felleskostnader</a><a routerLink="/losning-omsetningsavregning">Omsetningsavregning</a></div>
       </div>
       <div class="job-card">
-        <h2>MVA i tråd med regelverket</h2>
+        <h2><a routerLink="/mva-og-regelverk" class="job-link">MVA i tråd med regelverket <span aria-hidden="true">→</span></a></h2>
         <p>MVA-erklæringer, justeringsforpliktelser og dokumentasjonen revisor spør etter.</p>
         <div class="related-chips"><a routerLink="/losning-mva-erklaring">MVA-erklæring</a><a routerLink="/losning-justering">Justering</a></div>
       </div>
       <div class="job-card">
-        <h2>Beslutninger på ferske tall</h2>
+        <h2><a routerLink="/rapport-og-analyse" class="job-link">Beslutninger på ferske tall <span aria-hidden="true">→</span></a></h2>
         <p>Nøkkeltall, budsjett og verdier rett fra kildedataene, klare for ledelse og styre.</p>
         <div class="related-chips"><a routerLink="/losning-rapportering">Rapportering</a><a routerLink="/losning-inntektsbudsjett">Inntektsbudsjett</a><a routerLink="/losning-formuesverdsettelse">Formuesverdsettelse</a><a routerLink="/losning-arealberegning">Arealberegning</a></div>
       </div>

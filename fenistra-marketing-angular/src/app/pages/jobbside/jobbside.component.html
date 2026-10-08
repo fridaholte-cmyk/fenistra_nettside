@@ -1,0 +1,97 @@
+<div class="wrap">
+  <nav class="jb-breadcrumb" aria-label="Brødsmulesti">
+    <a routerLink="/">Forside</a><span class="sep">/</span>
+    <a routerLink="/losninger">Løsninger</a><span class="sep">/</span>
+    <span class="current">{{ page.name }}</span>
+  </nav>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="jb-hero">
+  <div class="wrap">
+    <div class="eyebrow">{{ page.name }}</div>
+    <h1>{{ page.h1 }} <strong>{{ page.h1Strong }}</strong></h1>
+    <p class="jb-lead">{{ page.lead }}</p>
+    <div class="jb-actions">
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book en demo</a>
+      <a [routerLink]="[]" fragment="moduler" class="btn btn-ghost">Se modulene ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HVA DERE FÅR ================= -->
+<section class="jb-outcomes">
+  <div class="wrap">
+    <div class="jb-outcome-grid">
+      @for (o of page.outcomes; track o[0]; let i = $index) {
+        <div class="jb-outcome reveal">
+          <span class="jb-num">0{{ i + 1 }}</span>
+          <h2>{{ o[0] }}</h2>
+          <p>{{ o[1] }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ================= HVORFOR DET BETYR NOE ================= -->
+<section class="jb-why" [class.jb-why-noimg]="!page.image">
+  <div class="wrap jb-why-grid">
+    <div class="jb-why-copy reveal">
+      <div class="eyebrow eyebrow-on-dark">For økonomisjefen</div>
+      <h2>{{ page.whyTitle }}</h2>
+      <p>{{ page.why }}</p>
+    </div>
+    @if (page.image) {
+      <div class="jb-why-visual reveal">
+        <img [src]="page.image.src" [width]="page.image.w" [height]="page.image.h" [alt]="page.image.alt" loading="lazy" decoding="async">
+      </div>
+    }
+  </div>
+</section>
+
+<!-- ================= MODULENE ================= -->
+<section class="jb-modules" id="moduler">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Moduler</div>
+      <h2>Modulene bak <strong>{{ nameInSentence }}</strong></h2>
+      <p>Les mer om hver modul, eller book en demo, så viser vi hvordan de henger sammen for deres portefølje.</p>
+    </div>
+    <div class="jb-module-grid">
+      @for (m of page.modules; track m.route; let i = $index) {
+        <a [routerLink]="m.route" class="jb-module">
+          <span class="jb-module-icon" [innerHTML]="icons[i]"></span>
+          <h3>{{ m.title }}</h3>
+          <p>{{ m.desc }}</p>
+          <span class="go">Les mer →</span>
+        </a>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESTEN AV PLATTFORMEN ================= -->
+<section class="jb-more">
+  <div class="wrap">
+    <h2>Resten av plattformen</h2>
+    <div class="jb-more-links">
+      @for (o of others; track o.slug) {
+        <a [routerLink]="'/' + o.slug">{{ o.name }} →</a>
+      }
+      <a routerLink="/losning-kjopesenter">Kjøpesenter →</a>
+      <a routerLink="/integrasjoner">Integrasjoner og API →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta-wrap jb-cta">
+  <div class="cta-band reveal">
+    <h2>Se hvordan Fenistra løser dette for porteføljen deres.</h2>
+    <div class="actions">
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book en demo</a>
+      <a routerLink="/priser" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Pakker og priser</a>
+    </div>
+  </div>
+</section>
