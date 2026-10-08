@@ -328,19 +328,36 @@
   </div>
 </div>
 
-<section class="module-hero">
+<section class="mp-hero">
   <div class="wrap">
-    <span class="badge badge-tillegg">Tilleggsprodukt / Premium</span>
-    <h1>Fenistra Kjøpesenter</h1>
-    <p class="lead">Full oversikt over senterdrift for senterleder, med fokus på butikk, aktiviteter og omsetningsrapportering.</p>
-    <div class="hero-actions">
-      <a routerLink="/pakke-resultat" class="btn btn-primary">Book en demo</a>
-      <a routerLink="/losninger" class="btn btn-ghost">Se alle løsninger</a>
+    <div class="mp-hero-top">
+      <span class="eyebrow">Kjøpesenter</span>
+      <span class="badge badge-tillegg">Tilleggsprodukt / Premium</span>
+    </div>
+    <h1>Fenistra <strong>Kjøpesenter</strong></h1>
+    <p class="mp-lead">Full oversikt over senterdrift for senterleder, med fokus på butikk, aktiviteter og omsetningsrapportering.</p>
+    
+    <div class="mp-actions">
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book en demo</a>
+      <a routerLink="/losninger" class="btn btn-ghost">Se hele plattformen →</a>
     </div>
   </div>
 </section>
 
-<section class="module-body">
+<section class="mp-why">
+  <div class="wrap mp-why-grid">
+    <div class="reveal">
+      <div class="eyebrow eyebrow-on-dark">For økonomisjefen</div>
+      <p class="mp-why-text">Senterets omsetning og besøk følges løpende, med automatisk purring når leietakere ikke rapporterer. Det gir et sikrere grunnlag for omsetningsleie og drift.</p>
+    </div>
+    <div class="mp-facts reveal">
+        <div class="mp-fact"><span>Pakke</span><strong>Tilleggsprodukt (inkludert i Premium)</strong></div>
+        <div class="mp-fact"><span>Passer for</span><strong>Senterledelse, eiendomsforvaltere</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="module-body mp-body">
   <div class="wrap">
     <div class="module-grid-layout">
       <div class="module-main reveal">
@@ -391,25 +408,15 @@
             <p style="color:var(--ink-soft);font-size:15px;">Systemet automatiserer purringer for manglende rapportering, med mulighet for tilpassede purretekster og funksjoner som sikrer korrekt rapportering av omsetningsleie.</p>
           </div>
         </div>
-      </div>
-      <aside class="side-card reveal">
-        <div class="field">
-          <h4>Pakke</h4>
-          <p>Tilleggsprodukt (inkludert i Premium)</p>
-        </div>
-        <div class="field">
-          <h4>Passer for</h4>
-          <p>Senterledelse, eiendomsforvaltere</p>
-        </div>
-        <div class="field">
-          <h4>Fungerer sammen med</h4>
+        <div class="mp-together">
+          <h3>Fungerer sammen med</h3>
           <div class="related-chips">
             <a routerLink="/losning-omsetningsavregning">Omsetningsavregning</a>
 <a routerLink="/losning-rbo">Revisorbekreftet omsetning</a>
 <a routerLink="/losning-rapportering">Rapportering</a>
           </div>
         </div>
-      </aside>
+      </div>
     </div>
   </div>
 </section>
@@ -445,7 +452,7 @@
   <div class="cta-band reveal">
     <h2>Klar for å se Kjøpesenter i praksis?</h2>
     <div class="actions">
-      <a routerLink="/pakke-resultat" class="btn btn-on-dark">Book en demo</a>
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book en demo</a>
       <a routerLink="/losninger" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Utforsk flere løsninger</a>
     </div>
   </div>

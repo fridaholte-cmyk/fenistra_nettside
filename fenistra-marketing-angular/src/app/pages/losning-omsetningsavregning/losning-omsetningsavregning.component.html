@@ -321,24 +321,41 @@
   <div class="breadcrumb">
     <a routerLink="/">Forside</a><span class="sep">/</span>
     <a routerLink="/losninger">Løsninger</a><span class="sep">/</span>
+    <a routerLink="/fakturering-og-avregning">Fakturering og avregning</a><span class="sep">/</span>
     <span class="current">Omsetningsavregning</span>
   </div>
 </div>
 
-<section class="module-hero">
+<section class="mp-hero">
   <div class="wrap">
-    <span class="badge badge-standard">Inkludert i Fenistra Standard</span>
-    <h1>Fenistra Omsetningsavregning</h1>
-    <p class="lead">Forenkler og effektiviserer avregningen av omsetningsbasert leie, basert på revisorbekreftet omsetning.</p>
+    <div class="mp-hero-top">
+      <span class="eyebrow">Omsetningsavregning</span>
+      <span class="badge badge-standard">Inkludert i Fenistra Standard</span>
+    </div>
+    <h1>Fenistra <strong>Omsetningsavregning</strong></h1>
+    <p class="mp-lead">Forenkler og effektiviserer avregningen av omsetningsbasert leie, basert på revisorbekreftet omsetning.</p>
     <p class="money-note" style="font-family:var(--font-mono);font-size:12.5px;color:var(--plum);margin:-6px 0 24px;display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--berry);display:inline-block;flex-shrink:0;"></span>Beregnet automatisk, i tråd med norsk regelverk, og dokumentert for dere.</p>
-    <div class="hero-actions">
-      <a routerLink="/pakke-resultat" class="btn btn-primary">Book en demo</a>
-      <a routerLink="/losninger" class="btn btn-ghost">Se alle løsninger</a>
+    <div class="mp-actions">
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book en demo</a>
+      <a routerLink="/fakturering-og-avregning" class="btn btn-ghost">Del av fakturering og avregning →</a>
     </div>
   </div>
 </section>
 
-<section class="module-body">
+<section class="mp-why">
+  <div class="wrap mp-why-grid">
+    <div class="reveal">
+      <div class="eyebrow eyebrow-on-dark">For økonomisjefen</div>
+      <p class="mp-why-text">Omsetningsbasert leie krever riktige tall fra hver leietaker. Når avregningen bygger på revisorbekreftet omsetning, faktureres riktig leie uten manuelle mellomregninger.</p>
+    </div>
+    <div class="mp-facts reveal">
+        <div class="mp-fact"><span>Pakke</span><strong>Fenistra Standard og Fenistra Premium</strong></div>
+        <div class="mp-fact"><span>Passer for</span><strong>Regnskapsavdeling, senterledelse</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="module-body mp-body">
   <div class="wrap">
     <div class="module-grid-layout">
       <div class="module-main reveal">
@@ -353,25 +370,15 @@
           <p>Fenistra Omsetningsavregning beregner riktig leie basert på revisorbekreftet omsetning og de registrerte kontraktsbetingelsene i Fenistra Kontrakter. Denne leien sammenholdes med hva som faktisk er fakturert leietaker gjennom året, og differansen legges automatisk opp til fakturering.</p>
 <p>Løsningen har egen oppfølging i form av standarddokumenter for innhenting av revisorbekreftet omsetning og purringer, og kan ved behov også håndtere midlertidige avregninger underveis i året. Løsningen kan kombineres med Fenistra Kjøpesenter.</p>
         </div>
-      </div>
-      <aside class="side-card reveal">
-        <div class="field">
-          <h4 aria-level="3">Pakke</h4>
-          <p>Fenistra Standard og Fenistra Premium</p>
-        </div>
-        <div class="field">
-          <h4>Passer for</h4>
-          <p>Regnskapsavdeling, senterledelse</p>
-        </div>
-        <div class="field">
-          <h4>Fungerer sammen med</h4>
+        <div class="mp-together">
+          <h3>Fungerer sammen med</h3>
           <div class="related-chips">
             <a routerLink="/losning-fakturering">Fakturering</a>
 <a routerLink="/losning-rbo">Revisorbekreftet omsetning</a>
 <a routerLink="/losning-kjopesenter">Kjøpesenter</a>
           </div>
         </div>
-      </aside>
+      </div>
     </div>
   </div>
 </section>
@@ -407,7 +414,7 @@
   <div class="cta-band reveal">
     <h2>Klar for å se Omsetningsavregning i praksis?</h2>
     <div class="actions">
-      <a routerLink="/pakke-resultat" class="btn btn-on-dark">Book en demo</a>
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book en demo</a>
       <a routerLink="/losninger" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Utforsk flere løsninger</a>
     </div>
   </div>

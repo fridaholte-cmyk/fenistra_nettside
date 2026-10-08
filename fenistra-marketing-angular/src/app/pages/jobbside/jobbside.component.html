@@ -34,6 +34,28 @@
   </div>
 </section>
 
+@if (page.spotlight; as s) {
+<!-- ================= SPOTLIGHT (f.eks. KPI-regulering) ================= -->
+<section class="jb-spot" [id]="s.id">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">{{ s.eyebrow }}</div>
+      <h2>{{ s.title }} <strong>{{ s.strong }}</strong></h2>
+      <p>{{ s.intro }}</p>
+    </div>
+    <ol class="jb-steps">
+      @for (st of s.steps; track st[0]; let i = $index) {
+        <li class="reveal">
+          <span class="jb-step-n">{{ i + 1 }}</span>
+          <h3>{{ st[0] }}</h3>
+          <p>{{ st[1] }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
+}
+
 <!-- ================= HVORFOR DET BETYR NOE ================= -->
 <section class="jb-why" [class.jb-why-noimg]="!page.image">
   <div class="wrap jb-why-grid">

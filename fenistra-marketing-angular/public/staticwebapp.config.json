@@ -3,6 +3,16 @@
   "trailingSlash": "never",
   "routes": [
     {
+      "route": "/kundeteam",
+      "redirect": "/ansatte#kundeteam",
+      "statusCode": 301
+    },
+    {
+      "route": "/produktteam",
+      "redirect": "/ansatte#produktteam",
+      "statusCode": 301
+    },
+    {
       "route": "/integrasjon-regnskap-erp",
       "redirect": "/integrasjoner#regnskap",
       "statusCode": 301

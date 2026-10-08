@@ -80,7 +80,7 @@ export class ChatWidgetComponent {
       const waitSeconds = Math.ceil((WINDOW_MS - (now - this.sentAt[0])) / 1000);
       this.addMessage(
         `Du kan stille ${MAX_QUESTIONS} spørsmål i minuttet. Prøv igjen om ${waitSeconds} sekunder.` +
-        '<br><br>Haster det, ta kontakt med <a href="kundeteam" data-internal>kundeteamet</a>.',
+        '<br><br>Haster det, ta kontakt med <a href="ansatte#kundeteam" data-internal>kundeteamet</a>.',
         'bot'
       );
       return;
@@ -96,7 +96,7 @@ export class ChatWidgetComponent {
       } else {
         this.addMessage(
           'Jeg fant dessverre ikke et godt svar på det her. Ta gjerne kontakt med oss, så hjelper vi deg videre:' +
-          '<br><br>Se kontaktinfo til <a href="kundeteam" data-internal>kundeteamet</a>, eller <a href="pakke-resultat" data-internal>book en demo</a>.' +
+          '<br><br>Se kontaktinfo til <a href="ansatte#kundeteam" data-internal>kundeteamet</a>, eller <a href="pakke-resultat" data-internal>book en demo</a>.' +
           '<br><br>Du finner også svar på flere vanlige spørsmål på <a href="sporsmal" data-internal>Spørsmål og svar-siden</a>.',
           'bot'
         );

@@ -417,13 +417,15 @@
   .fd-points li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink);}
   .fd-points li span{flex-shrink:0;font-family:var(--font-mono);font-weight:700;font-size:12px;color:var(--berry);margin-top:3px;}
 
-  .fd-mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:10px;}
-  .fd-mosaic a{position:relative;display:block;border-radius:14px;overflow:hidden;background:var(--mist);}
+  .fd-mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:150px 150px 140px;grid-template-areas:"big big big tall" "big big big tall" "wide wide a b";gap:10px;}
+  .fd-mosaic a{position:relative;display:block;border-radius:14px;overflow:hidden;background:var(--mist);min-height:0;}
   .fd-mosaic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1);}
   .fd-mosaic a:hover img{transform:scale(1.05);}
-  .fd-mosaic .m-big{grid-column:span 3;grid-row:span 2;}
-  .fd-mosaic .m-tall{grid-row:span 2;}
-  .fd-mosaic .m-wide{grid-column:span 2;}
+  .fd-mosaic .m-big{grid-area:big;}
+  .fd-mosaic .m-tall{grid-area:tall;}
+  .fd-mosaic .m-wide{grid-area:wide;}
+  .fd-mosaic a:nth-child(4){grid-area:a;}
+  .fd-mosaic a:nth-child(5){grid-area:b;}
   .fd-more{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:40px;flex-wrap:wrap;}
   .fd-more h3{font-size:18px;font-weight:600;color:var(--ink);}
   .fd-strip{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;margin-top:18px;scrollbar-width:thin;}
@@ -464,13 +466,12 @@
   @media (max-width:980px){
     .fd-stats .wrap{grid-template-columns:1fr 1fr;row-gap:28px;}
     .fd-2026,.fd-years,.fd-johaug{grid-template-columns:1fr;}
-    .fd-mosaic{grid-auto-rows:120px;}
+    .fd-mosaic{grid-template-rows:170px 170px 150px;}
   }
   @media (max-width:760px){
     section.fd-sec{padding:72px 0;}
     .fd-hero .wrap{padding-top:96px;padding-bottom:48px;}
-    .fd-mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:130px;}
-    .fd-mosaic .m-big{grid-column:span 2;}
+    .fd-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:200px 130px 130px 130px;grid-template-areas:"big big" "wide wide" "tall a" "tall b";}
     .fd-quote{grid-template-columns:1fr;gap:4px;}
     .fd-quote .mark{font-size:80px;}
     .fd-johaug div{padding:28px 24px;}
@@ -629,7 +630,7 @@
     <h2>Vil du være med på Fenistradagene 2027?</h2>
     <div class="actions">
       <a routerLink="/kontakt-oss" class="btn btn-on-dark">Meld interesse</a>
-      <a routerLink="/kundeteam" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Snakk med kundeteamet</a>
+      <a routerLink="/ansatte" fragment="kundeteam" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Snakk med kundeteamet</a>
     </div>
   </div>
 </section>

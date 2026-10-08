@@ -321,23 +321,41 @@
   <div class="breadcrumb">
     <a routerLink="/">Forside</a><span class="sep">/</span>
     <a routerLink="/losninger">Løsninger</a><span class="sep">/</span>
+    <a routerLink="/kontroll-pa-portefoljen">Kontroll på porteføljen</a><span class="sep">/</span>
     <span class="current">Sikkerhetsstyring</span>
   </div>
 </div>
 
-<section class="module-hero">
+<section class="mp-hero">
   <div class="wrap">
-    <span class="badge badge-standard">Inkludert i Fenistra Standard</span>
-    <h1>Fenistra Sikkerhetsstyring</h1>
-    <p class="lead">Full oversikt over bankgaranti og depositum i porteføljen, med varsel når sikkerhet mangler eller utløper.</p>
-    <div class="hero-actions">
-      <a routerLink="/pakke-resultat" class="btn btn-primary">Book en demo</a>
-      <a routerLink="/losninger" class="btn btn-ghost">Se alle løsninger</a>
+    <div class="mp-hero-top">
+      <span class="eyebrow">Sikkerhetsstyring</span>
+      <span class="badge badge-standard">Inkludert i Fenistra Standard</span>
+    </div>
+    <h1>Fenistra <strong>Sikkerhetsstyring</strong></h1>
+    <p class="mp-lead">Full oversikt over bankgaranti og depositum i porteføljen, med varsel når sikkerhet mangler eller utløper.</p>
+    
+    <div class="mp-actions">
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book en demo</a>
+      <a routerLink="/kontroll-pa-portefoljen" class="btn btn-ghost">Del av kontroll på porteføljen →</a>
     </div>
   </div>
 </section>
 
-<section class="module-body">
+<section class="mp-why">
+  <div class="wrap mp-why-grid">
+    <div class="reveal">
+      <div class="eyebrow eyebrow-on-dark">For økonomisjefen</div>
+      <p class="mp-why-text">En bankgaranti som har utløpt, er en risiko ingen ser før det er for sent. Fenistra varsler når sikkerheten mangler, er for lav eller nærmer seg utløp.</p>
+    </div>
+    <div class="mp-facts reveal">
+        <div class="mp-fact"><span>Pakke</span><strong>Fenistra Standard og Fenistra Premium</strong></div>
+        <div class="mp-fact"><span>Passer for</span><strong>Ledelse, regnskapsavdeling, eiendomsforvaltere</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="module-body mp-body">
   <div class="wrap">
     <div class="module-grid-layout">
       <div class="module-main reveal">
@@ -352,25 +370,15 @@
           <p>Fenistra Sikkerhetsstyring gir full kontroll på bankgaranti og depositum i porteføljen. Sikkerheten registreres på kontrakten, og løsningen varsler automatisk når den mangler, er for lav eller nærmer seg utløp.</p>
 <p>Ledelsen får en aggregert oversikt over risikoen i hele porteføljen, i stedet for å sjekke kontrakt for kontrakt, og kan følge opp og redusere risikoen der den faktisk er.</p>
         </div>
-      </div>
-      <aside class="side-card reveal">
-        <div class="field">
-          <h4 aria-level="3">Pakke</h4>
-          <p>Fenistra Standard og Fenistra Premium</p>
-        </div>
-        <div class="field">
-          <h4>Passer for</h4>
-          <p>Ledelse, regnskapsavdeling, eiendomsforvaltere</p>
-        </div>
-        <div class="field">
-          <h4>Fungerer sammen med</h4>
+        <div class="mp-together">
+          <h3>Fungerer sammen med</h3>
           <div class="related-chips">
             <a routerLink="/losning-kontrakter">Kontrakter</a>
 <a routerLink="/losning-rapportering">Rapportering</a>
 <a routerLink="/integrasjoner" fragment="regnskap">Regnskap og ERP</a>
           </div>
         </div>
-      </aside>
+      </div>
     </div>
   </div>
 </section>
@@ -406,7 +414,7 @@
   <div class="cta-band reveal">
     <h2>Klar for å se Sikkerhetsstyring i praksis?</h2>
     <div class="actions">
-      <a routerLink="/pakke-resultat" class="btn btn-on-dark">Book en demo</a>
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book en demo</a>
       <a routerLink="/losninger" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Utforsk flere løsninger</a>
     </div>
   </div>

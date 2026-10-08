@@ -321,23 +321,41 @@
   <div class="breadcrumb">
     <a routerLink="/">Forside</a><span class="sep">/</span>
     <a routerLink="/losninger">Løsninger</a><span class="sep">/</span>
+    <a routerLink="/kontroll-pa-portefoljen">Kontroll på porteføljen</a><span class="sep">/</span>
     <span class="current">Dokument</span>
   </div>
 </div>
 
-<section class="module-hero">
+<section class="mp-hero">
   <div class="wrap">
-    <span class="badge badge-standard">Inkludert i Fenistra Standard</span>
-    <h1>Fenistra Dokument</h1>
-    <p class="lead">Samle kontrakter, tegninger og annen dokumentasjon direkte koblet til riktig eiendom og leieforhold.</p>
-    <div class="hero-actions">
-      <a routerLink="/pakke-resultat" class="btn btn-primary">Book en demo</a>
-      <a routerLink="/losninger" class="btn btn-ghost">Se alle løsninger</a>
+    <div class="mp-hero-top">
+      <span class="eyebrow">Dokument</span>
+      <span class="badge badge-standard">Inkludert i Fenistra Standard</span>
+    </div>
+    <h1>Fenistra <strong>Dokument</strong></h1>
+    <p class="mp-lead">Samle kontrakter, tegninger og annen dokumentasjon direkte koblet til riktig eiendom og leieforhold.</p>
+    
+    <div class="mp-actions">
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book en demo</a>
+      <a routerLink="/kontroll-pa-portefoljen" class="btn btn-ghost">Del av kontroll på porteføljen →</a>
     </div>
   </div>
 </section>
 
-<section class="module-body">
+<section class="mp-why">
+  <div class="wrap mp-why-grid">
+    <div class="reveal">
+      <div class="eyebrow eyebrow-on-dark">For økonomisjefen</div>
+      <p class="mp-why-text">Når kontrakter, tillegg og korrespondanse ligger der forvaltningen skjer, finner både revisor og ledelse dokumentasjonen uten leting.</p>
+    </div>
+    <div class="mp-facts reveal">
+        <div class="mp-fact"><span>Pakke</span><strong>Fenistra Standard og Fenistra Premium</strong></div>
+        <div class="mp-fact"><span>Passer for</span><strong>Alle roller i eiendomsselskapet</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="module-body mp-body">
   <div class="wrap">
     <div class="module-grid-layout">
       <div class="module-main reveal">
@@ -352,25 +370,15 @@
           <p>Fenistra Dokument sørger for at kontrakter, tegninger, protokoller og annen dokumentasjon ligger samlet på ett sted, koblet til riktig eiendom og leieforhold. Det gjør det enklere for hele organisasjonen, ikke bare forvalter, å finne fram i det de trenger.</p>
 <p>Fordi dokumentene er koblet direkte til objektene i Fenistra, unngår dere at viktig dokumentasjon havner i separate mapper eller e-poster.</p>
         </div>
-      </div>
-      <aside class="side-card reveal">
-        <div class="field">
-          <h4 aria-level="3">Pakke</h4>
-          <p>Fenistra Standard og Fenistra Premium</p>
-        </div>
-        <div class="field">
-          <h4>Passer for</h4>
-          <p>Alle roller i eiendomsselskapet</p>
-        </div>
-        <div class="field">
-          <h4>Fungerer sammen med</h4>
+        <div class="mp-together">
+          <h3>Fungerer sammen med</h3>
           <div class="related-chips">
             <a routerLink="/losning-kontrakter">Kontrakter</a>
 <a routerLink="/losning-protokoller">Protokoller</a>
 <a routerLink="/losning-arealberegning">Arealberegning</a>
           </div>
         </div>
-      </aside>
+      </div>
     </div>
   </div>
 </section>
@@ -406,7 +414,7 @@
   <div class="cta-band reveal">
     <h2>Klar for å se Dokument i praksis?</h2>
     <div class="actions">
-      <a routerLink="/pakke-resultat" class="btn btn-on-dark">Book en demo</a>
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book en demo</a>
       <a routerLink="/losninger" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Utforsk flere løsninger</a>
     </div>
   </div>

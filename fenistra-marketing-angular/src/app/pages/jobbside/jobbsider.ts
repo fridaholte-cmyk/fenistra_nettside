@@ -13,6 +13,8 @@ export interface Jobbside {
   why: string;
   image: { src: string; w: number; h: number; alt: string } | null;
   modules: JobbModul[];
+  /** optional highlighted process, shown between outcomes and the dark "why" section */
+  spotlight?: { id: string; eyebrow: string; title: string; strong: string; intro: string; steps: [string, string][] };
 }
 
 export const JOBBSIDER: Jobbside[] = [
@@ -104,6 +106,19 @@ export const JOBBSIDER: Jobbside[] = [
       "w": 1200,
       "h": 977,
       "alt": "Skjevfordeling i Fenistra Felleskost: tabell der kostnadskontoer ligger som kolonner og leietakere som rader, med faste beløp per celle."
+    },
+    "spotlight": {
+      "id": "kpi-regulering",
+      "eyebrow": "KPI-regulering",
+      "title": "Fra SSB til riktig faktura.",
+      "strong": "Uten regneark.",
+      "intro": "Indeksregulering er der små feil blir store over tid. I Fenistra reguleres leien automatisk, og leietakeren får reguleringsbrevet sammen med fakturaen.",
+      "steps": [
+        ["SSB publiserer indeksen", "Fenistra henter KPI direkte fra SSB, så ingen trenger å slå opp eller taste inn tall."],
+        ["Leien reguleres per kontrakt", "Hver kontrakt reguleres slik den er avtalt, etter KPI eller markedsleie."],
+        ["Reguleringsbrevet lages", "Brevet til leietakeren opprettes automatisk, så ingen trenger å skrive det selv."],
+        ["Sendes med fakturaen", "Reguleringsbrevet følger automatisk med som vedlegg når fakturaen sendes."]
+      ]
     },
     "modules": [
       {

@@ -349,14 +349,22 @@
   .gate-success p{font-size:13.5px;color:var(--ink-soft);margin-bottom:0;}
   .form-box{max-width:640px;background:var(--paper-2);border:1px solid var(--line);border-radius:16px;padding:36px 40px;}
   @media (max-width:600px){.form-box{padding:24px 20px;}}
+  .kt-grid{grid-template-columns:repeat(4,1fr);}
+  .kt-sales{background:var(--plum-deep);border-color:var(--plum-deep);color:#fff;}
+  .kt-sales h3{color:#fff;}
+  .kt-sales p{color:rgba(255,255,255,.8);}
+  .kt-sales .contact-link{color:var(--berry-mid);font-weight:600;}
+  .kt-sales:hover{background:var(--plum-900);}
+  @media (max-width:980px){.kt-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:760px){.kt-grid{grid-template-columns:1fr;}}
 </style>
-<section class="module-hero">
+<section class="mp-hero">
   <div class="wrap">
-    <div class="eyebrow">Kontakt oss</div>
-    <h1>Snakk med oss</h1>
-    <p class="lead">Enten dere trenger hjelp fra brukerstøtte, vil vite mer om priser og løsninger, eller ønsker å bli kjent med teamet vårt, her finner dere riktig kontaktpunkt.</p>
-    <div class="hero-actions">
-      <a routerLink="/pakke-resultat" class="btn btn-primary">Book en demo</a>
+    <div class="mp-hero-top"><span class="eyebrow">Kontakt oss</span></div>
+    <h1>Snakk med oss. <strong>Vi hjelper dere videre.</strong></h1>
+    <p class="mp-lead">Vil dere vite mer om Fenistra, trenger dere et tilbud, eller har dere spørsmål om systemet i det daglige? Her finner dere riktig kontaktpunkt.</p>
+    <div class="mp-actions">
+      <a routerLink="/kontakt-oss" fragment="skjema" class="btn btn-primary">Book et møte</a>
       <a routerLink="/sporsmal" class="btn btn-ghost">Vanlige spørsmål</a>
     </div>
   </div>
@@ -367,9 +375,14 @@
     <div class="section-head">
       <div class="eyebrow">Ta kontakt</div>
       <h2>Her finner dere oss</h2>
-      <p>Trenger dere hjelp fra brukerstøtte? Her er kontaktinfoen.</p>
+      <p>Salg, brukerstøtte eller et besøk på Skøyen: her er kontaktinfoen.</p>
     </div>
-    <div class="mini-grid">
+    <div class="mini-grid kt-grid">
+      <a routerLink="/kontakt-oss" fragment="skjema" class="mini-card kt-sales">
+        <h3>Salg og tilbud</h3>
+        <p>Vil dere se Fenistra, eller få et tilbud tilpasset porteføljen? Fyll ut skjemaet, så tar salgsteamet kontakt for å avtale tid.</p>
+        <span class="contact-link">Book et møte →</span>
+      </a>
       <div class="mini-card">
         <h3>Brukerstøtte</h3>
         <p>Har dere spørsmål om Fenistra i det daglige, eller trenger hjelp med noe i systemet?</p>
@@ -380,15 +393,15 @@
         <h3>Besøksadresse</h3>
         <p>Karenslyst allé 56<br>0277 Oslo, Norge</p>
       </div>
-      <a routerLink="/ansatte" class="mini-card">
-        <h3>Møt teamet</h3>
-        <p>Se hvem som jobber med kundeoppfølging og produktutvikling i Fenistra, på ansatte-siden →</p>
+      <a routerLink="/ansatte" fragment="kundeteam" class="mini-card">
+        <h3>Møt kundeteamet</h3>
+        <p>Se hvem som følger dere opp, fra onboarding til daglig brukerstøtte →</p>
       </a>
     </div>
   </div>
 </section>
 
-<section class="related-section">
+<section class="related-section" id="skjema" style="scroll-margin-top:76px;">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Kontakt</div>
@@ -411,7 +424,7 @@
   <div class="cta-band reveal">
     <h2>Klare for å komme i gang med Fenistra?</h2>
     <div class="actions">
-      <a routerLink="/pakke-resultat" class="btn btn-on-dark">Book en demo</a>
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book en demo</a>
       <a routerLink="/ansatte" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Møt teamet</a>
     </div>
   </div>

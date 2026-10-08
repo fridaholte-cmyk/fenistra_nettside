@@ -321,24 +321,41 @@
   <div class="breadcrumb">
     <a routerLink="/">Forside</a><span class="sep">/</span>
     <a routerLink="/losninger">Løsninger</a><span class="sep">/</span>
+    <a routerLink="/fakturering-og-avregning">Fakturering og avregning</a><span class="sep">/</span>
     <span class="current">Revisorbekreftet omsetning</span>
   </div>
 </div>
 
-<section class="module-hero">
+<section class="mp-hero">
   <div class="wrap">
-    <span class="badge badge-standard">Inkludert i Fenistra Standard</span>
+    <div class="mp-hero-top">
+      <span class="eyebrow">Revisorbekreftet omsetning</span>
+      <span class="badge badge-standard">Inkludert i Fenistra Standard</span>
+    </div>
     <h1>Revisorbekreftet omsetning</h1>
-    <p class="lead">Enkel innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata.</p>
+    <p class="mp-lead">Enkel innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata.</p>
     <p class="money-note" style="font-family:var(--font-mono);font-size:12.5px;color:var(--plum);margin:-6px 0 24px;display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--berry);display:inline-block;flex-shrink:0;"></span>Innhentet automatisk, i tråd med norsk regelverk, og dokumentert for dere.</p>
-    <div class="hero-actions">
-      <a routerLink="/pakke-resultat" class="btn btn-primary">Book en demo</a>
-      <a routerLink="/losninger" class="btn btn-ghost">Se alle løsninger</a>
+    <div class="mp-actions">
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book en demo</a>
+      <a routerLink="/fakturering-og-avregning" class="btn btn-ghost">Del av fakturering og avregning →</a>
     </div>
   </div>
 </section>
 
-<section class="module-body">
+<section class="mp-why">
+  <div class="wrap mp-why-grid">
+    <div class="reveal">
+      <div class="eyebrow eyebrow-on-dark">For økonomisjefen</div>
+      <p class="mp-why-text">Uten revisorbekreftede tall er omsetningsleien et anslag. Fenistra henter inn og holder oversikt over tallene per leietaker, så avregningen hviler på dokumentert omsetning.</p>
+    </div>
+    <div class="mp-facts reveal">
+        <div class="mp-fact"><span>Pakke</span><strong>Fenistra Standard (transaksjonsprodukt)</strong></div>
+        <div class="mp-fact"><span>Passer for</span><strong>Regnskapsavdeling, senterledelse</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="module-body mp-body">
   <div class="wrap">
     <div class="module-grid-layout">
       <div class="module-main reveal">
@@ -352,25 +369,15 @@
           <p>Fenistra forenkler den årlige innhentingen og administrasjonen av revisorbekreftet omsetning fra leietakerne. Data samles per leietaker og eiendom, og danner grunnlaget for omsetningsbasert avregning i Fenistra Omsetningsavregning.</p>
 <p>Ved å samle innhentingen på ett sted, med standardiserte dokumenter og purringer, blir den årlige runden med revisorbekreftet omsetning en langt mindre manuell affære.</p>
         </div>
-      </div>
-      <aside class="side-card reveal">
-        <div class="field">
-          <h4 aria-level="3">Pakke</h4>
-          <p>Fenistra Standard (transaksjonsprodukt)</p>
-        </div>
-        <div class="field">
-          <h4>Passer for</h4>
-          <p>Regnskapsavdeling, senterledelse</p>
-        </div>
-        <div class="field">
-          <h4>Fungerer sammen med</h4>
+        <div class="mp-together">
+          <h3>Fungerer sammen med</h3>
           <div class="related-chips">
             <a routerLink="/losning-omsetningsavregning">Omsetningsavregning</a>
 <a routerLink="/losning-kjopesenter">Kjøpesenter</a>
 <a routerLink="/losning-rapportering">Rapportering</a>
           </div>
         </div>
-      </aside>
+      </div>
     </div>
   </div>
 </section>
@@ -406,7 +413,7 @@
   <div class="cta-band reveal">
     <h2>Klar for å se Revisorbekreftet omsetning i praksis?</h2>
     <div class="actions">
-      <a routerLink="/pakke-resultat" class="btn btn-on-dark">Book en demo</a>
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book en demo</a>
       <a routerLink="/losninger" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Utforsk flere løsninger</a>
     </div>
   </div>

@@ -32,6 +32,23 @@ section.jb-outcomes { padding: 0 0 112px; }
 }
 .jb-num { font-family: var(--font-mono); font-weight: 700; font-size: 13px; color: var(--berry); }
 
+/* ---------- spotlight: process steps ---------- */
+section.jb-spot { padding: 0 0 112px; scroll-margin-top: 76px; }
+.jb-spot .section-head { max-width: 720px; margin-bottom: 44px; }
+.jb-spot .section-head h2 { text-wrap: balance; }
+.jb-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: s; }
+.jb-steps li { position: relative; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 24px; }
+.jb-steps li:not(:last-child)::after {
+  content: "→"; position: absolute; right: -14px; top: 34px; z-index: 1;
+  width: 24px; height: 24px; border-radius: 50%; background: var(--berry); color: #fff;
+  font-size: 13px; display: flex; align-items: center; justify-content: center;
+}
+.jb-step-n { display: inline-flex; width: 36px; height: 36px; border-radius: 50%; align-items: center; justify-content: center; background: var(--berry-light); color: var(--berry-deep); font-family: var(--font-mono); font-weight: 700; }
+.jb-steps h3 { font-size: 17px; font-weight: 600; color: var(--ink); margin: 16px 0 8px; }
+.jb-steps p { font-size: 14.5px; color: var(--ink-soft); line-height: 1.55; }
+@media (max-width: 980px) { .jb-steps { grid-template-columns: 1fr 1fr; } .jb-steps li::after { display: none; } }
+@media (max-width: 760px) { .jb-steps { grid-template-columns: 1fr; } section.jb-spot { padding-bottom: 72px; } }
+
 /* ---------- why (dark) ---------- */
 section.jb-why { background: var(--plum-deep); color: #fff; padding: 112px 0; position: relative; overflow: hidden; }
 section.jb-why::before {
