@@ -8,7 +8,7 @@ const SITE_ORIGIN = 'https://www.fenistra.no';
 const OG_IMAGE = 'https://www.fenistra.no/images/og-fenistra.jpg';
 
 const DEFAULT_DESCRIPTION =
-  'Over 30 år med norsk næringseiendom, bygget for de neste 30. Fenistra beregner regulering, felleskostnader og MVA automatisk, i ett skybasert forvaltningssystem.';
+  'Fenistra kan eiendom. Fagkunnskap, markedsdata fra Arealstatistikk og AI i løsningene dere forvalter med, så dere driver mer effektivt, øker lønnsomheten og ser mulighetene i porteføljen.';
 
 interface ArticleData {
   published: string;

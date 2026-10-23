@@ -6,25 +6,27 @@
   </nav>
 </div>
 
-<!-- ================= HERO ================= -->
+<!-- ================= HERO: kundens spørsmål eller problem ================= -->
 <section class="jb-hero">
   <div class="wrap">
+    <p class="jb-audience">{{ page.audience }}</p>
     <h1>{{ page.h1 }}</h1>
     <p class="jb-lead">{{ page.lead }}</p>
     <div class="jb-actions">
       <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book en demo</a>
-      <a [routerLink]="[]" fragment="moduler" class="btn btn-ghost">Se modulene ↓</a>
+      <a [routerLink]="[]" [fragment]="page.flow ? page.flow.id : 'slik'" class="btn btn-ghost">{{ page.flow ? 'Se steg for steg ↓' : 'Se hvordan ↓' }}</a>
     </div>
   </div>
 </section>
 
-<!-- ================= HVA DERE FÅR ================= -->
+<!-- ================= DER DET STOPPER OPP ================= -->
 <section class="jb-outcomes">
   <div class="wrap">
+    <h2 class="jb-kicker">Der det stopper opp</h2>
     <div class="jb-outcome-grid">
-      @for (o of page.outcomes; track o[0]; let i = $index) {
+      @for (o of page.problems; track o[0]) {
         <div class="jb-outcome reveal">
-          <h2>{{ o[0] }}</h2>
+          <h3>{{ o[0] }}</h3>
           <p>{{ o[1] }}</p>
         </div>
       }
@@ -32,16 +34,34 @@
   </div>
 </section>
 
-@if (page.spotlight; as s) {
-<!-- ================= SPOTLIGHT (f.eks. KPI-regulering) ================= -->
-<section class="jb-spot" [id]="s.id">
+<!-- ================= SLIK LØSER FENISTRA DET: svarer, sier ifra, gjør jobben ================= -->
+<section class="jb-pillars" id="slik">
   <div class="wrap">
     <div class="section-head">
-      <h2>{{ s.title }}</h2>
-      <p>{{ s.intro }}</p>
+      <h2>Slik løser Fenistra det</h2>
     </div>
-    <ol class="jb-steps">
-      @for (st of s.steps; track st[0]; let i = $index) {
+    <div class="jb-pillar-grid">
+      @for (p of pillars; track p.label) {
+        <div class="jb-pillar reveal">
+          <p class="jb-pillar-label">{{ p.label }}</p>
+          <h3>{{ p.text[0] }}</h3>
+          <p>{{ p.text[1] }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+@if (page.flow; as f) {
+<!-- ================= GJØR JOBBEN: prosessen steg for steg ================= -->
+<section class="jb-spot" [id]="f.id">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{{ f.title }}</h2>
+      <p>{{ f.intro }}</p>
+    </div>
+    <ol class="jb-steps" [class.jb-steps-long]="f.steps.length > 4">
+      @for (st of f.steps; track st[0]; let i = $index) {
         <li class="reveal">
           <span class="jb-step-n">{{ i + 1 }}</span>
           <h3>{{ st[0] }}</h3>
@@ -49,6 +69,30 @@
         </li>
       }
     </ol>
+    @if (f.history) {
+      <p class="jb-history"><strong>Én historikk:</strong> {{ f.history }}</p>
+    }
+    @if (f.roles || f.cycle) {
+      <div class="jb-flow-extra">
+        @if (f.roles; as r) {
+          <div class="jb-roles reveal">
+            <h3>Hvem gjør hva</h3>
+            <p>{{ r.intro }}</p>
+            <dl>
+              @for (role of r.list; track role[0]) {
+                <div><dt>{{ role[0] }}</dt><dd>{{ role[1] }}</dd></div>
+              }
+            </dl>
+          </div>
+        }
+        @if (f.cycle; as c) {
+          <div class="jb-cycle reveal">
+            <h3>{{ c[0] }}</h3>
+            <p>{{ c[1] }}</p>
+          </div>
+        }
+      </div>
+    }
   </div>
 </section>
 }
@@ -57,9 +101,12 @@
 <section class="jb-why" [class.jb-why-noimg]="!page.image">
   <div class="wrap jb-why-grid">
     <div class="jb-why-copy reveal">
-      <div class="eyebrow eyebrow-on-dark">For økonomisjefen</div>
+      <div class="eyebrow eyebrow-on-dark">{{ page.whyEyebrow }}</div>
       <h2>{{ page.whyTitle }}</h2>
       <p>{{ page.why }}</p>
+      @if (page.whyNote) {
+        <p class="jb-why-note">{{ page.whyNote }}</p>
+      }
     </div>
     @if (page.image) {
       <div class="jb-why-visual reveal">
@@ -73,8 +120,8 @@
 <section class="jb-modules" id="moduler">
   <div class="wrap">
     <div class="section-head">
-      <h2>Modulene bak {{ nameInSentence }}</h2>
-      <p>Les mer om hver modul, eller book en demo, så viser vi hvordan de henger sammen for deres portefølje.</p>
+      <h2>Bygget inn i Fenistra</h2>
+      <p>Dette er delene som gjør jobben. Les mer om hver av dem, eller book en demo, så viser vi hvordan de henger sammen for deres portefølje.</p>
     </div>
     <div class="jb-module-grid">
       @for (m of page.modules; track m.route; let i = $index) {
@@ -92,7 +139,7 @@
 <!-- ================= RESTEN AV PLATTFORMEN ================= -->
 <section class="jb-more">
   <div class="wrap">
-    <h2>Resten av plattformen</h2>
+    <h2>Mer dere kan oppnå</h2>
     <div class="jb-more-links">
       @for (o of others; track o.slug) {
         <a [routerLink]="'/' + o.slug">{{ o.name }} →</a>
@@ -106,7 +153,7 @@
 <!-- ================= CTA ================= -->
 <section class="cta-wrap jb-cta">
   <div class="cta-band reveal">
-    <h2>Se hvordan Fenistra løser dette for porteføljen deres.</h2>
+    <h2>Se hvordan Fenistra gjør dette med deres egen portefølje.</h2>
     <div class="actions">
       <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book en demo</a>
       <a routerLink="/priser" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Pakker og priser</a>

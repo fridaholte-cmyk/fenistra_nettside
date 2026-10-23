@@ -356,6 +356,14 @@
   /* ================= PRISER ================= */
   .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;}
   @media (max-width:760px){.price-grid{grid-template-columns:1fr;} .price-grid > div{padding:28px !important;}}
+  .pkg-does{margin:0 0 24px; padding:16px 0 0; border-top:1px solid var(--line); display:grid; gap:10px;}
+  .pkg-does > div{display:grid; grid-template-columns:110px 1fr; gap:10px; font-size:14.5px; line-height:1.5;}
+  .pkg-does dt{font-family:var(--font-mono); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--berry-deep); padding-top:2px;}
+  .pkg-does dd{margin:0; color:var(--ink-soft);}
+  .pkg-does-dark{border-top-color:rgba(255,255,255,.2);}
+  .pkg-does-dark dt{color:#BC5A83;}
+  .pkg-does-dark dd{color:rgba(255,255,255,.8);}
+  @media (max-width:520px){ .pkg-does > div{grid-template-columns:1fr; gap:2px;} }
 </style>
 <div class="wrap">
   <div class="breadcrumb">
@@ -366,8 +374,8 @@
 
 <section class="mp-hero">
   <div class="wrap">
-    <h1>Én pris som følger porteføljen</h1>
-    <p class="mp-lead">Prisen settes ut fra porteføljens leieomsetning, ikke antall brukere. Alle pakker har ubegrenset antall brukere. Fortell oss om porteføljen, så får dere et konkret tilbud.</p>
+    <h1>Prisen følger porteføljen, ikke antall brukere</h1>
+    <p class="mp-lead">Prisen følger porteføljens leieomsetning. Alle pakker har ubegrenset antall brukere, så hele organisasjonen kan spørre, fra forvalteren til ledelsen og styret. Fortell oss om porteføljen, så får dere et konkret tilbud.</p>
     <div class="mp-actions">
       <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Få et tilbud</a>
     </div>
@@ -393,7 +401,12 @@
       <div id="standard" class="reveal" style="background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:40px;scroll-margin-top:100px;">
         <span class="badge badge-standard">Standard</span>
         <h2 style="font-family:var(--font-display); font-weight:300; font-size:28px; letter-spacing:-0.02em; margin:16px 0 8px; color:var(--ink);">Fenistra Standard</h2>
-        <p style="color:var(--ink-soft); font-size:15.5px; margin-bottom:20px;">Hele arbeidsflyten fra kontrakt til rapportering, samlet i ett system. Kan kombineres med tilleggsprodukter etter behov.</p>
+        <p style="color:var(--ink-soft); font-size:15.5px; margin-bottom:20px;">For forvaltning og økonomi. Fenistra gjør jobben fra kontrakt til faktura, avregning og rapport, og kan kombineres med tilleggsprodukter etter behov.</p>
+        <dl class="pkg-does">
+          <div><dt>Svarer</dt><dd>Om kontraktene og leieforholdene deres, med kilder.</dd></div>
+          <div><dt>Sier ifra</dt><dd>Før frister, regulering, utløp og manglende sikkerhet.</dd></div>
+          <div><dt>Gjør jobben</dt><dd>Regulering, fakturering, felleskostnader og rapporter.</dd></div>
+        </dl>
         <ul class="feature-list" style="margin-bottom:24px;">
           <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Ubegrenset antall brukere</li>
           <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Pris basert på leieomsetning</li>
@@ -416,7 +429,12 @@
       <div id="premium" class="reveal" style="background:var(--berry-deep);background-image:radial-gradient(circle at 15% 20%, rgba(255,255,255,0.10), transparent 40%);border-radius:20px;padding:40px;color:#fff;scroll-margin-top:100px;">
         <span class="badge" style="background:rgba(255,255,255,.14);color:#fff;">Premium</span>
         <h2 style="font-family:var(--font-display); font-weight:300; font-size:28px; letter-spacing:-0.02em; margin:16px 0 8px; color:#fff;">Fenistra Premium</h2>
-        <p style="color:rgba(255,255,255,.75); font-size:15.5px; margin-bottom:20px;">For porteføljer med flere selskaper og høye krav. Alt inkludert, med egen kunderådgiver.</p>
+        <p style="color:rgba(255,255,255,.75); font-size:15.5px; margin-bottom:20px;">For porteføljer med flere selskaper og høye krav. Alt Fenistra kan, med en egen kunderådgiver som kjenner faget og porteføljen deres.</p>
+        <dl class="pkg-does pkg-does-dark">
+          <div><dt>Svarer</dt><dd>På tvers av selskaper og porteføljer.</dd></div>
+          <div><dt>Sier ifra</dt><dd>Også gjennom en kunderådgiver som følger opp sammen med dere.</dd></div>
+          <div><dt>Gjør jobben</dt><dd>Alle prosesser og tilleggsprodukter, inkludert MVA og justering, arealberegning og kjøpesenter.</dd></div>
+        </dl>
         <ul class="feature-list" style="margin-bottom:24px;">
           <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="rgba(255,255,255,.18)"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#fff" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg><span style="color:#fff;">Ubegrenset antall brukere</span></li>
           <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="rgba(255,255,255,.18)"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#fff" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg><span style="color:#fff;">Pris basert på leieomsetning</span></li>
@@ -501,7 +519,9 @@
 <section class="related-section">
   <div class="wrap">
     <div class="section-head" style="margin-bottom:0;max-width:none;">
-      <p style="font-size:15.5px;color:var(--ink-soft);">Ingen porteføljer er like, og prisen følger leieomsetningen deres. Ta kontakt eller book en demo, så får dere et konkret tilbud tilpasset porteføljen.</p>
+      <h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(24px,2.6vw,32px);letter-spacing:-0.02em;margin-bottom:12px;color:var(--ink);">Fagkompetansen er med i alle pakker</h2>
+      <p style="font-size:15.5px;color:var(--ink-soft);">Dere får mer enn et system. Fagfolk som kan felleskostnader, MVA, leieregulering og kjøpesentermodeller hjelper dere i gang, og dere møter resten av fagmiljøet på Fenistradagene. Ingen porteføljer er like, og prisen følger leieomsetningen deres. Ta kontakt eller book en demo, så får dere et konkret tilbud tilpasset porteføljen.</p>
+      <p style="font-size:15.5px;color:var(--ink-soft);margin-top:12px;">Utleieprosessen fra lead til signering og innflytting gjøres i Felix fra Fenistra. Spør oss om hvordan den passer inn i pakken deres. <a routerLink="/fra-lead-til-innflytting" style="color:var(--berry-deep);font-weight:600;">Se prosessen →</a></p>
       <p style="font-size:14px;color:var(--ink-soft);margin-top:12px;">Alle pakker leveres fra samme plattform: ISO 27001-sertifisert og VCDM-godkjent. <a routerLink="/datasikkerhet" style="color:var(--berry-deep);font-weight:600;">Les om datasikkerhet →</a></p>
     </div>
   </div>

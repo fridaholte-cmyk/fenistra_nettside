@@ -1,31 +1,35 @@
 # Fenistra
 
-> Fenistra er forvaltningssystemet profesjonell norsk næringseiendom har brukt i over 30 år, nå skybasert og bygget for de neste 30. Fenistra beregner regulering, felleskostnader, MVA og omsetningsleie automatisk, i tråd med norsk regelverk, og brukes av over 170 eiendomsforvaltere i Norge. Levert av Visma Property Solutions AS (del av Visma-konsernet).
+> Fenistra kan eiendom. Fenistra leverer programvare for norsk næringseiendom og kombinerer fagkunnskap (løsninger utviklet siden 1994), markedsdata fra Arealstatistikk integrert i løsningene og AI som gjør kunnskapen anvendelig. Fenistra svarer når kunden spør, sier ifra når noe krever oppmerksomhet, og gjør jobben i arbeidsprosessene, og brukes av over 170 eiendomsforvaltere i Norge. Levert av Visma Property Solutions AS (del av Visma-konsernet).
 
 Utviklingen av Fenistra startet i 1994, og Fenistra har vært en del av Visma siden 2020. Nye kunder bruker den skybaserte plattformen Fenistra.net, som alltid er oppdatert. Fenistra er bygget for eiendomsselskaper med store og mellomstore porteføljer: flere selskaper, mange kontraktstyper og ekte kompleksitet. Systemet selges i to pakker, Fenistra Standard og Fenistra Premium, og prises etter porteføljens leieomsetning med ubegrenset antall brukere. Konkret pris gis i et tilbud tilpasset porteføljen.
 
 ## Hvorfor Fenistra
 
-### Fenistra får pengene riktig
+### Svarer, sier ifra og gjør jobben
 
-Det er i beregningene feil koster mest. Fenistra automatiserer de krevende beregningene i norsk næringseiendom og lager dokumentasjonen:
+- **Svarer («Bare spør»):** Kunden kan spørre, for eksempel «Hvilke kontrakter utløper i 2027?», og får et svar med forklaring og kilder. Når markedsleie er relevant, brukes Arealstatistikk for riktig sone og leietype.
+- **Sier ifra:** Fenistra varsler før frister, utløp og manglende sikkerhet, og fanger opp muligheter, som en leietaker som trenger mer plass og et ledig lokale som passer.
+- **Gjør jobben:** Prosesser fra A til Å med kundens kontroll og godkjenning, uten dobbeltregistrering. Eksempler: fra lead til signering og innflytting, og fra kontrakt til regulering, felleskostnader, MVA og faktura.
+
+### Faget i beregningene
 
 - **KPI-regulering** med direkte integrasjon mot SSB, og automatiske reguleringsbrev.
-- **Felleskostnadsavregning** ned til siste øre, med MVA-behandling og full sporbarhet overfor leietakerne.
+- **Felleskostnadsavregning** etter kontrakten og fordelingsnøkkelen, med MVA-behandling og sporbarhet overfor leietakerne.
 - **MVA og justeringsforpliktelser** fulgt opp gjennom hele perioden, med innhenting av MVA-erklæringer fra leietakerne.
 - **Omsetningsbasert leie** og **revisorbekreftet omsetning**, beregnet, avstemt og fakturert uten manuelle mellomregninger.
-- **Rapporter og nøkkeltall** rett fra kildedataene, klare for styret og revisor.
+- **Rapporter og nøkkeltall** rett fra kildedataene, klare for ledelse, styre og revisor.
 
-### Bygget for AI-æraen
+### AI som bruker faget
 
-AI blir aldri bedre enn dataene den står på. Fenistra har strukturerte data om norsk næringseiendom siden 1994, med kontrakt, areal og økonomi koblet sammen i ett system, og alle data registreres én gang. I dag har Fenistra en KI-assistent i hele systemet og AI-opplasting av kontrakter, og AI-utvikling er prioritert fremover.
+AI leser kontrakter, henter ut opplysninger, svarer med kilder og følger opp funn. Den bruker eiendomskompetansen, kundens egne data og markedsdata fra Arealstatistikk sammen. I dag har Fenistra en KI-assistent i hele systemet og AI-innlesing av kontrakter. Utleie og kommersiell oppfølging gjøres i Felix fra Fenistra, som henger sammen med Fenistra.
 
 ### Data dere kan stole på
 
 - **Registrert én gang, riktig overalt:** data flyter fra kontrakt til fakturering, regnskap og rapportering uten dobbeltregistrering.
 - **Integrasjoner:** integrert mot 26 systemer, blant dem 19 regnskaps- og ERP-systemer som Tripletex, PowerOffice GO, Xledger, Visma Business NXT og Visma.net.
 - **Rask oppstart:** AI leser inn kontraktene, Fenistra kobles mot regnskapet, og dere er i gang. Ingen betalte konsulenttimer og ingen skjulte kostnader.
-- **Trygghet:** Fenistra er ISO/IEC 27001-sertifisert og VCDM-godkjent (Vismas krav til sikker skydrift), har over 30 års erfaring fra norsk næringseiendom, og Visma som eier, med Visma Security Program.
+- **Trygghet:** Fenistra er ISO/IEC 27001-sertifisert og VCDM-godkjent (Vismas krav til sikker skydrift), har utviklet løsninger for norsk næringseiendom siden 1994, og Visma som eier, med Visma Security Program.
 
 ## Pakker
 
@@ -37,6 +41,8 @@ AI blir aldri bedre enn dataene den står på. Fenistra har strukturerte data om
 - [Forside](https://www.fenistra.no/): oversikt over Fenistra forvaltningssystem
 - [Spørsmål og svar](https://www.fenistra.no/sporsmal): pakker, priser, integrasjoner, oppstart og hvorfor velge Fenistra
 - [Løsninger](https://www.fenistra.no/losninger): plattformen ordnet etter det dere skal få gjort, med lenker til hver løsning
+- [Fra lead til innflytting](https://www.fenistra.no/fra-lead-til-innflytting): utleieprosessen fra første henvendelse til signert kontrakt og innflytting
+- [Slik hjelper vi](https://www.fenistra.no/ki): hvordan Fenistra svarer, sier ifra og gjør jobben
 - [Pakker og priser](https://www.fenistra.no/priser): Fenistra Standard og Premium, prisprinsipp og hva som er inkludert
 - [Integrasjoner](https://www.fenistra.no/integrasjoner): alle 26 systemene Fenistra er integrert mot, samlet på én side: regnskap og ERP (Tripletex, Xledger, PowerOffice GO, Visma Business NXT, Visma.net, 24SevenOffice, Uni Micro, Microsoft Dynamics, Visma Business, Visma Global, Visma Unique, SAP, Unit4, Info Easy, Infor M3, Deltek Maconomy, Oracle PeopleSoft), årsoppgjør (Finale), rapportering (Power BI, Maestro), drift og vedlikehold (Properly, FAMAC) og kjøpesenter (Viametrics, IMAS/Countmatters), pluss Reporting API og innebygde koblinger mot SSB, EHF/PEPPOL og Brønnøysundregistrene
 - [AI i Fenistra](https://www.fenistra.no/ki): KI-assistenten, AI-opplasting av kontrakter og hvorfor datagrunnlaget er avgjørende

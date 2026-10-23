@@ -98,7 +98,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["markedsledende", "kompromiss", "velge fenistra", "skiller fenistra", "skiller dere", "andre systemer", "hvorfor fenistra", "hvorfor velge", "konkurrent", "sammenlign", "forskjell på fenistra og", "fordelene med fenistra", "bedre enn", "alternativ til"],
-    answer: "Over 30 år med norsk næringseiendom. Bygget for de neste 30: Fenistra er skybasert og alltid oppdatert. Fenistra får pengene riktig: KPI-regulering via SSB, felleskostnader, MVA og justering, omsetningsleie og revisorbekreftet omsetning beregnes automatisk i tråd med norsk regelverk, og dokumentasjonen lages for dere. Data registreres én gang og er riktig overalt, noe som også gjør Fenistra godt rustet for AI. Plug-and-play fungerer fint helt til porteføljen ikke er enkel lenger; Fenistra er bygget for ekte kompleksitet, med Visma i ryggen. I tillegg: moderne grensesnitt, rask oppstart med AI-innlesing av kontrakter og integrasjoner mot regnskapet. <a href=\"sporsmal.html\">Les mer i Spørsmål og svar →</a>"
+    answer: "Fenistra kan eiendom. Vi kombinerer erfaring fra norsk næringseiendom siden 1994, markedsdata fra Arealstatistikk integrert i løsningene og AI som bruker kunnskapen. Det merkes på tre måter: Fenistra svarer når dere spør, med forklaring og kilder; sier ifra når noe krever oppmerksomhet, som frister, utløpt sikkerhet eller en leietaker som trenger mer plass; og gjør jobben, fra lead til signering og innflytting, og fra kontrakt til regulering, felleskostnader, MVA og faktura, uten dobbeltregistrering. Fenistra er skybasert, ISO 27001-sertifisert og en del av Visma. <a href=\"sporsmal.html\">Les mer i Spørsmål og svar →</a>"
   },
   {
     keywords: ["hvilken verdi", "verdi kan fenistra", "verdi for", "mitt selskap", "vårt selskap", "gevinst", "spare tid", "hva tjener vi"],
@@ -138,7 +138,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["intelligens", "kunstig", "jobber"],
-    answer: "Ja. Fenistra og Visma Property Solutions jobber aktivt med AI i eiendomsforvaltningen, blant annet gjennom innovasjonsprosjektet Felix, et AI-basert verktøy for kontraktsforvaltning som gir varsler, anbefalinger og svar basert på opplastede kontrakter. <a href=\"ki.html\">Les mer om AI hos Fenistra →</a>"
+    answer: "Ja. AI er en viktig del av hvordan Fenistra gjør eiendomskunnskapen anvendelig. Den leser kontrakter, henter ut opplysninger, svarer med kilder og følger opp funn, og den bruker eiendomskompetansen, deres egne data og markedsdata fra Arealstatistikk sammen. <a href=\"ki.html\">Se hvordan Fenistra hjelper →</a>"
   },
   {
     keywords: ["kommer", "gang"],
@@ -412,7 +412,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kunstig intelligens", "felix", " ai ", "ai-", " ki ", "ki-"],
-    answer: "Fenistra og Visma Property Solutions jobber aktivt med AI i eiendomsforvaltningen, blant annet gjennom innovasjonsprosjektet Felix for AI-drevet kontraktsforvaltning. <a href=\"ki.html\">Les mer om AI hos Fenistra →</a>"
+    answer: "Fenistra bruker AI til å svare med kilder, si ifra om det som krever oppmerksomhet og gjøre jobben i prosesser som utleie fra lead til innflytting. Det kommersielle arbeidet gjøres i Felix fra Fenistra, applikasjonen for utleie og oppfølging, som henger sammen med Fenistra. <a href=\"ki.html\">Se hvordan Fenistra hjelper →</a>"
   },
   {
     keywords: ["kunder", "referanse", "case", "hvem bruker"],
