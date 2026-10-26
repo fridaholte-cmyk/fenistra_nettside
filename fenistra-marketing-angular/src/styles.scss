@@ -921,3 +921,23 @@ section.mp-body{padding:96px 0;}
 :where(img[width][height]){height:auto;}
 
 .mp-hero-top:empty{display:none;}
+
+/* ---------- Knapper: firkantede, vinrød-lilla (--berry-deep) i stedet for rosa (oktober 2026) ----------
+   `body` foran gir høyere spesifisitet enn kopiene av .btn-reglene i hver sides egen <style>. */
+body .btn, app-header .mobile-drawer > a.m-cta{border-radius:0;}
+body .btn-primary, app-header .mobile-drawer > a.m-cta{background:var(--berry-deep); color:#fff; box-shadow:none;}
+body .btn-primary:hover{background:var(--berry-900); box-shadow:none;}
+/* On dark sections a dark button would disappear, so it turns white with the same colour as text */
+body .btn-on-dark{background:#fff; color:var(--berry-deep);}
+body .btn-on-dark:hover{background:var(--paper-2); color:var(--berry-900);}
+body .btn-light:hover{border-color:var(--berry-deep); color:var(--berry-deep);}
+body .chat-trigger{background:var(--berry-deep);}
+body .chat-trigger:hover{background:var(--berry-900);}
+
+/* ---------- Bredere innhold: halve sidemarger (oktober 2026) ----------
+   The empty space outside the content is halved: (100vw - 1180px) / 4 per side instead of / 2,
+   capped at 1600px. `body` beats the copies of .wrap in each page's own <style>. */
+body .wrap{max-width:min(1600px, max(var(--container, 1180px), calc((100vw + 1180px) / 2)));}
+body .cta-wrap > .cta-band{max-width:calc(min(1600px, max(1180px, calc((100vw + 1180px) / 2))) - 64px);}
+/* Menu items sit to the right, next to the buttons, which stay at the right edge */
+body .nav-links{margin-left:auto; margin-right:32px;}

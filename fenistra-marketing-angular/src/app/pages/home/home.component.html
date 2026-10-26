@@ -225,108 +225,132 @@
     .hero-part{animation:none; opacity:1; filter:none;}
   }
 
-  /* hero visual: blueprint grid panel */
-  .hero-visual{
-    position:relative;
-    aspect-ratio:1/1.02;
-    border-radius:22px;
-    background:
-      linear-gradient(155deg, var(--plum-deep) 0%, var(--plum-900) 100%);
-    overflow:hidden;
-    box-shadow:0 30px 60px -24px rgba(21,10,24,0.45);
-  }
-  .hero-visual .grid-bg{
-    position:absolute; inset:0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
-    background-size:28px 28px;
-  }
-  .hero-visual .glow{
-    position:absolute; width:280px;height:280px;border-radius:50%;
-    background:radial-gradient(circle, rgba(171,49,100,0.55), transparent 70%);
-    top:-60px; right:-60px; filter:blur(10px);
-  }
-  .hero-card{
-    position:absolute;
-    background:rgba(252,250,251,0.06);
-    border:1px solid rgba(255,255,255,0.12);
-    border-radius:12px;
-    backdrop-filter:blur(6px);
-    padding:14px 16px;
-    color:#fff;
-  }
-  .hero-card .k{font-family:var(--font-mono); font-size:11px; color:rgba(255,255,255,0.55); letter-spacing:.06em; text-transform:uppercase; margin-bottom:6px;}
-  .hero-card .v{font-family:var(--font-mono); font-size:20px; font-weight:700;}
-  .hero-card .v small{font-size:12px;font-weight:400;color:rgba(255,255,255,.6);}
+  
+  
+  
+  
+  
+  
+  
 
-  .hc-1{ top:9%; left:8%; width:180px; animation:float1 7s ease-in-out infinite;}
-  .hc-2{ bottom:12%; left:12%; width:210px; animation:float2 8s ease-in-out infinite; animation-delay:.4s;}
-  .hc-3{ top:38%; right:7%; width:160px; animation:float1 7.5s ease-in-out infinite; animation-delay:1s;}
+  
+  
+  
 
   @keyframes float1{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
   @keyframes float2{0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}
 
-  .pulse-dot{
-    position:absolute; width:8px; height:8px; border-radius:50%;
-    background:var(--berry-mid);
-    box-shadow:0 0 0 0 rgba(188,90,131,0.6);
-    animation:pulse 2.4s ease-out infinite;
-  }
+  
   @keyframes pulse{
     0%{box-shadow:0 0 0 0 rgba(188,90,131,0.55);}
     70%{box-shadow:0 0 0 14px rgba(188,90,131,0);}
     100%{box-shadow:0 0 0 0 rgba(188,90,131,0);}
   }
 
-  /* ================= LOGO MARQUEE ================= */
-  .marquee-section{
-    padding:38px 0 44px;
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-  }
-  .marquee-label{
-    font-family:var(--font-mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase;
-    color:var(--ink-soft); text-align:center; margin-bottom:26px;
-  }
-  .marquee-track-wrap{ overflow:hidden; -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);}
-  .marquee-track{
-    display:flex; gap:56px; width:max-content;
-    animation:scroll 100s linear infinite;
-  }
-  .marquee-track span{
-    font-family:var(--font-mono); font-size:15px; color:var(--plum); opacity:.8;
-    white-space:nowrap; font-weight:400;
-  }
-  @keyframes scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+  /* ================= VI KAN EIENDOM ================= */
+  .know-title{font-family:var(--font-display); font-weight:300; font-size:clamp(40px,5.6vw,76px); line-height:1.02; letter-spacing:-0.03em; color:var(--ink); margin-bottom:56px;}
+  .know-row{display:grid; grid-template-columns:5fr 7fr; gap:48px; padding:44px 0; border-top:1px solid var(--line);}
+  .know-row:last-child{border-bottom:1px solid var(--line);}
+  .know-row h3{font-family:var(--font-display); font-weight:300; font-size:clamp(26px,2.8vw,38px); line-height:1.15; letter-spacing:-0.02em; color:var(--berry-deep);}
+  .know-body ul{list-style:none; margin:0; padding:0; display:grid; gap:14px;}
+  .know-questions li{font-size:17px; line-height:1.55; color:var(--ink);}
+  .know-points li{font-size:18px; line-height:1.55; color:var(--ink-soft);}
+  .know-row h3 .know-sub{display:block; margin-top:12px; font-family:var(--font-body); font-size:17px; line-height:1.5; letter-spacing:0; color:var(--ink-soft);}
+  .know-parts{display:grid; grid-template-columns:1fr 1fr; gap:28px; margin:0;}
+  .know-questions + .know-parts{margin-top:28px; padding-top:24px; border-top:1px solid var(--line);}
+  .know-parts dt{font-family:var(--font-mono); font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--berry-deep); margin-bottom:8px;}
+  .know-parts dd{margin:0; font-size:17px; line-height:1.55; color:var(--ink-soft);}
+  .know-link{display:inline-block; margin-top:22px; font-family:var(--font-mono); font-size:12.5px; color:var(--berry-deep); border-bottom:1px solid currentColor; padding-bottom:2px;}
+  @media (max-width:760px){ .know-title{margin-bottom:36px;} .know-row{grid-template-columns:1fr; gap:16px; padding:32px 0;} .know-parts{grid-template-columns:1fr; gap:18px;} }
 
-  /* ================= STAT STRIP ================= */
-  .stats{
-    background:var(--plum-900);
-    color:#fff;
-    padding:64px 0;
-    position:relative;
-    overflow:hidden;
-  }
-  .stats::before{display:none;
-    content:""; position:absolute; inset:0;
-    background-image:linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-    background-size:34px 34px;
-    pointer-events:none;
-  }
-  .stats-grid{
-    position:relative;
-    display:grid; grid-template-columns:repeat(4,1fr); gap:24px;
-  }
-  .stat-item{ padding-right:20px; }
-  .stat-item .num{
-    font-family:var(--font-mono); font-weight:700; font-size:clamp(30px,3.4vw,44px);
-    color:#fff; letter-spacing:-0.01em;
-  }
-  .stat-item .num .accent{color:var(--berry-mid);}
-  .stat-item .lbl{
-    margin-top:8px; font-size:14px; color:rgba(255,255,255,0.85); max-width:220px;
-  }
+  /* ================= KUNDENES EGNE ORD ================= */
+  /* sized so the title and all three quotes fit on one laptop screen */
+  .voices{padding:72px 0;}
+  .voices-title{font-family:var(--font-display); font-weight:300; font-size:clamp(32px,3.8vw,50px); line-height:1.05; letter-spacing:-0.025em; color:var(--ink); margin:0 0 24px;}
+  .voices-grid{display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start;}
+  .voice-main img{display:block; width:100%; height:auto; aspect-ratio:2/1; object-fit:cover; border-radius:var(--radius);}
+  .voice-main blockquote{font-family:var(--font-display); font-weight:300; font-size:clamp(19px,1.7vw,24px); line-height:1.35; letter-spacing:-0.01em; color:var(--ink); margin:22px 0 14px; text-wrap:pretty;}
+  .voices figcaption{display:flex; flex-direction:column; gap:2px;}
+  .voices .who{font-weight:600; font-size:14.5px; color:var(--ink);}
+  .voices .role{font-size:13px; color:var(--ink-soft);}
+  .voice-side{display:grid; gap:12px;}
+  .voice-card{display:grid; grid-template-columns:64px 1fr; gap:18px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:18px 22px;}
+  .voice-card img{width:64px; height:64px; border-radius:50%; object-fit:cover;}
+  .voice-card blockquote{font-size:14.5px; line-height:1.55; color:var(--ink); margin-bottom:12px;}
+  .voice-link{margin-top:6px; font-family:var(--font-mono); font-size:12px; color:var(--berry-deep);}
+  .voices-more{margin-top:24px; font-family:var(--font-mono); font-size:13px;}
+  .voices-more a{color:var(--berry-deep); border-bottom:1px solid currentColor; padding-bottom:2px;}
+  @media (max-width:980px){ .voices-grid{grid-template-columns:1fr;} }
+  @media (max-width:520px){ .voices{padding:56px 0;} .voice-card{grid-template-columns:1fr; gap:14px;} }
+
+  /* ================= FENISTRADAGENE ================= */
+  .fdays{background:var(--plum-900); color:#fff; padding:24px 0 88px;}
+  .fdays-grid{display:grid; grid-template-columns:1fr 1.15fr; gap:56px; align-items:center; padding-top:64px; border-top:1px solid rgba(255,255,255,.15);}
+  .fdays-copy h2{font-family:var(--font-display); font-weight:300; font-size:clamp(36px,4.6vw,60px); line-height:1.05; letter-spacing:-0.025em; margin:14px 0 18px;}
+  .fdays-lead{font-size:18px; color:rgba(255,255,255,.8); line-height:1.55; max-width:460px;}
+  .fdays-quote{margin:32px 0; padding-left:22px; border-left:3px solid var(--berry-mid);}
+  .fdays-quote blockquote{font-family:var(--font-display); font-weight:300; font-style:italic; font-size:19px; line-height:1.5; color:#fff;}
+  .fdays-quote figcaption{margin-top:12px; font-size:14px; color:rgba(255,255,255,.7);}
+  .fdays-quote figcaption strong{color:#fff; font-weight:600;}
+  .fdays-actions{display:flex; flex-wrap:wrap; align-items:center; gap:24px;}
+  .fdays-link{font-family:var(--font-mono); font-size:13px; color:#fff; border-bottom:1px solid var(--berry-mid); padding-bottom:2px;}
+  .fdays-photos{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .fdays-photos img{display:block; width:100%; height:100%; aspect-ratio:2/1; object-fit:cover; border-radius:var(--radius);}
+  .fdays-photos .fdays-wide{grid-column:1 / -1; aspect-ratio:5/2;}
+  @media (max-width:980px){ .fdays-grid{grid-template-columns:1fr; gap:44px;} }
+  @media (max-width:760px){ .fdays{padding:16px 0 64px;} .fdays-grid{padding-top:44px;} }
+
+  /* ================= TRYGGHET ================= */
+  .trust{padding:clamp(72px,9vw,140px) 0;}
+
+  /* ================= ØKOSYSTEM ================= */
+  .eco-section{padding:clamp(72px,8vw,120px) 0; border-top:1px solid var(--line);}
+  .eco-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:56px; align-items:center;}
+  .eco-copy h2{font-family:var(--font-display); font-weight:300; font-size:clamp(32px,4vw,54px); line-height:1.08; letter-spacing:-0.025em; color:var(--ink); margin-bottom:20px; text-wrap:balance;}
+  .eco-copy p{font-size:18px; line-height:1.6; color:var(--ink-soft); max-width:520px;}
+  @media (max-width:980px){ .eco-grid{grid-template-columns:1fr; gap:32px;} }
+
+  /* ================= BARE SPØR (avslutning) ================= */
+  .ask-band{background:var(--plum-deep); color:#fff; padding:88px 0;}
+  .ask-inner{display:flex; align-items:center; justify-content:space-between; gap:40px;}
+  .ask-band h2{font-family:var(--font-display); font-weight:300; font-size:clamp(40px,5.4vw,72px); line-height:1; letter-spacing:-0.03em; margin-bottom:16px;}
+  .ask-band p{font-size:18px; color:rgba(255,255,255,.8); line-height:1.55; max-width:560px;}
+  .ask-band .btn{flex-shrink:0;}
+  @media (max-width:760px){ .ask-band{padding:64px 0;} .ask-inner{flex-direction:column; align-items:flex-start;} }
+
+  /* ================= LOGOVEGG ================= */
+  .logo-wall{padding:104px 0 96px;}
+  .logo-wall-head{margin-bottom:40px;}
+  .logo-wall-head p{font-size:17px; color:var(--ink-soft); line-height:1.6;}
+  .logo-wall-head h2{font-family:var(--font-display); font-weight:300; font-size:clamp(30px,3.6vw,48px); line-height:1.1; letter-spacing:-0.02em; color:var(--ink); margin:14px 0 16px; text-wrap:pretty;}
+  .logo-grid{display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); list-style:none; margin:0; padding:0; border-top:1px solid var(--line); border-left:1px solid var(--line);}
+  .logo-grid li{border-right:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .logo-tile{position:relative; display:flex; align-items:center; justify-content:center; height:120px; padding:16px; text-align:center; color:var(--plum); transition:background .25s ease;}
+  .logo-tile img{width:auto; max-width:88%; object-fit:contain;}
+  .logo-name{font-family:var(--font-display); font-weight:500; font-size:15.5px; line-height:1.25; letter-spacing:-0.005em; opacity:.8; transition:opacity .25s ease, color .25s ease;}
+  .logo-tile:hover{background:var(--paper-2);}
+  .logo-tile img.logo-white, .logo-tile:hover img.logo-white{filter:brightness(0);}
+  .logo-tile:hover .logo-name{opacity:1; color:var(--ink);}
+  a.logo-tile:focus-visible{outline:2px solid var(--berry); outline-offset:-2px;}
+  .logo-story{position:absolute; left:0; right:0; bottom:12px; font-family:var(--font-mono); font-size:11px; color:var(--berry-deep); opacity:0; transform:translateY(4px); transition:opacity .2s ease, transform .2s ease;}
+  a.logo-tile:hover .logo-story, a.logo-tile:focus-visible .logo-story{opacity:1; transform:none;}
+  .logo-wall-more{margin-top:28px; font-family:var(--font-mono); font-size:13px;}
+  .logo-wall-more a{color:var(--berry-deep); border-bottom:1px solid currentColor; padding-bottom:2px;}
+  /* 21 customers: 7 or 3 per row so every row is full */
+  @media (max-width:900px){ .logo-grid{grid-template-columns:repeat(3,minmax(0,1fr));} }
+  @media (max-width:760px){ .logo-wall{padding:72px 0;} .logo-grid{grid-template-columns:repeat(3,minmax(0,1fr));} .logo-tile{height:96px; padding:14px;} .logo-name{font-size:14px;} }
+  @media (max-width:440px){ .logo-tile{height:84px; padding:10px;} .logo-name{font-size:13px;} }
+
+  /* ================= INNSIKT: tall og eksempelgrafer ================= */
+  .insight{background:var(--plum-900); color:#fff; padding:104px 0 96px;}
+  .insight-title{font-family:var(--font-display); font-weight:300; font-size:clamp(34px,5vw,68px); line-height:1.05; letter-spacing:-0.025em; margin:14px 0 64px; text-wrap:balance;}
+  .insight-stats{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:36px; list-style:none; margin:0; padding:0;}
+  .insight-stats .num{display:block; font-family:var(--font-display); font-weight:300; font-size:clamp(40px,4.5vw,66px); line-height:1; letter-spacing:-0.03em; color:#fff; white-space:nowrap;}
+  .insight-areal{margin-top:48px; padding-top:24px; border-top:1px solid rgba(255,255,255,.15); font-size:17px; line-height:1.55; color:rgba(255,255,255,.8); max-width:820px;}
+  .insight-areal h3{font-size:19px; font-weight:600; color:#fff; margin-bottom:8px;}
+  .insight-stats .lbl{display:block; margin-top:14px; font-size:16px; color:rgba(255,255,255,.75); line-height:1.45;}
+  @media (max-width:980px){ .insight-stats{grid-template-columns:repeat(2,minmax(0,1fr)); row-gap:44px;} }
+  @media (max-width:760px){ .insight{padding:72px 0;} .insight-title{margin-bottom:44px;} }
 
   /* ================= SECTION HEADERS ================= */
   section{padding:100px 0;}
@@ -343,187 +367,91 @@
 
   /* wide section intros: no accompanying visual, so heading and subtext both span the full width */
   #produkt{padding:72px 0 76px;}
-  .wide-head{max-width:none;}
-  .wide-head h2{font-size:clamp(28px,3vw,44px); white-space:nowrap;}
-  .wide-head p{max-width:none;}
-  @media (max-width:1100px){
-    .wide-head h2{white-space:normal;}
-  }
+  
+  
+  
+  
 
-  /* ================= MODULE GRID ================= */
-  .modules{background:var(--paper);}
-  .module-grid{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    overflow:hidden;
-  }
-  .module-card{
-    background:var(--paper);
-    padding:30px 26px;
-    display:flex; flex-direction:column; gap:14px;
-    transition:background .25s ease;
-    position:relative;
-  }
-  .module-card:hover{background:var(--paper-2);}
-  .module-card .idx{
-    font-family:var(--font-mono); font-size:12px; color:var(--berry); opacity:.75;
-  }
-  .module-icon{
-    width:38px;height:38px;
-    display:flex;align-items:center;justify-content:center;
-    color:var(--berry);
-  }
-  .module-card h3{font-size:16.5px; font-weight:600; color:var(--ink); letter-spacing:-0.01em;}
-  .module-card p{font-size:14px; color:var(--ink-soft); line-height:1.5; flex-grow:1;}
-  .module-card .go{
-    font-family:var(--font-mono); font-size:12px; color:var(--plum);
-    display:inline-flex; align-items:center; gap:6px; margin-top:4px;
-    opacity:0; transform:translateX(-4px);
-    transition:opacity .25s ease, transform .25s ease;
-  }
-  .module-card:hover .go, .module-card:focus-within .go{opacity:1; transform:translateX(0);}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   .go:focus-visible{opacity:1; transform:translateX(0);}
 
-  /* ================= FEATURE ROWS ================= */
-  .feature-row{
-    display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;
-    padding:70px 0;
-    border-top:1px solid var(--line);
-  }
   
-  .feature-row.reverse .feature-copy{order:2;}
-  .feature-row.reverse .feature-visual{order:1;}
-  .feature-copy .eyebrow{margin-bottom:16px;}
-  .feature-copy h3{
-    font-family:var(--font-display); font-weight:300; font-size:clamp(24px,2.6vw,34px);
-    letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);
-  }
-  .feature-copy p{color:var(--ink-soft); font-size:16px; margin-bottom:22px; max-width:440px;}
-  .feature-list{display:flex; flex-direction:column; gap:10px; margin-bottom:26px;}
-  .feature-list li{
-    display:flex; align-items:flex-start; gap:10px; font-size:14.5px; color:var(--ink-soft);
-  }
-  .feature-list li svg{flex-shrink:0; margin-top:3px; color:var(--berry);}
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
-  .feature-visual{
-    background:var(--paper-2);
-    border:1px solid var(--line);
-    border-radius:16px;
-    padding:24px;
-    box-shadow:0 24px 48px -30px rgba(21,10,24,.25);
-  }
-  .feature-shot{display:block; width:100%; height:auto; border-radius:10px; border:1px solid var(--line); background:#fff;}
-  .tag{
-    display:inline-block; padding:3px 9px; border-radius:20px; font-size:10.5px; font-family:var(--font-mono);
-  }
-  .tag-ok{background:#E7F3EA; color:#1D7A34;}
-  .tag-warn{background:#FDF0E0; color:#B5650A;}
-  .tag-info{background:var(--berry-light); color:var(--berry-deep);}
-  .tag-muted{background:var(--paper-2); color:var(--ink-soft);}
+  
+  
+  
+  
+  
+  
+  
 
-  .dot-red{background:#C23A3A;}
-  .dot-amber{background:#B5650A;}
-  .dot-ok{background:#1D7A34;}
-  .expiry.expiry-red{color:#C23A3A;}
-  .expiry.expiry-amber{color:#B5650A;}
-  .expiry.expiry-ok{color:#1D7A34;}
+  
+  
+  
+  
+  
+  
 
 
-  .cchange.up{color:#1D7A34;}
-  .cchange.down{color:#B23B3B;}
+  
+  
 
-  .tag-down{background:#FBEAEA; color:#B23B3B;}
+  
 
-  /* ================= INTEGRATIONS ================= */
-  .integrations{background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
-  .chip-grid{
-    display:grid; grid-template-columns:repeat(5,1fr); gap:12px;
-  }
-  .chip{
-    background:#fff; border:1px solid var(--line); border-radius:10px;
-    padding:20px 16px; text-align:center;
-    font-family:var(--font-mono); font-size:13px; color:var(--ink);
-    transition:border-color .2s ease, transform .2s ease;
-  }
-  .chip:hover{border-color:var(--berry); transform:translateY(-2px);}
-  .integration-footnote{
-    text-align:center; font-size:13.5px; color:var(--ink-soft); max-width:640px;
-    margin:32px auto 0;
-  }
-  .integration-footnote strong{color:var(--ink); font-weight:600;}
+  
+  
+  
+  
+  
+  
 
-  /* ================= TESTIMONIAL ================= */
-  .testimonial{
-    background:var(--plum-deep);
-    color:#fff;
-    padding:100px 0;
-    position:relative;
-    overflow:hidden;
-  }
-  .testimonial::before{display:none;
-    content:""; position:absolute; inset:0;
-    background-image:linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-    background-size:34px 34px;
-  }
-  .testimonial .wrap{position:relative; max-width:820px;}
-  .quote-mark{color:var(--berry-mid); margin-bottom:20px;}
-  .testimonial blockquote{
-    font-family:var(--font-display); font-weight:300; font-size:clamp(22px,2.6vw,30px);
-    line-height:1.42; letter-spacing:-0.01em; margin-bottom:28px;
-  }
-  .testimonial .attr{display:flex; align-items:center; gap:12px;}
-  .testimonial .attr .avatar{
-    width:42px;height:42px;border-radius:50%;
-    background:var(--berry); display:flex;align-items:center;justify-content:center;
-    font-family:var(--font-mono); font-weight:700; font-size:14px;
-  }
-  .testimonial .attr .who{font-weight:600; font-size:14.5px;}
-  .testimonial .attr .role{font-size:13px; color:rgba(255,255,255,.55); font-family:var(--font-mono);}
-  .testimonial-note{
-    margin-top:34px; font-size:12px; font-family:var(--font-mono); color:rgba(255,255,255,.4);
-  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
-  /* ================= FAQ ================= */
-  .faq-list{max-width:760px;}
-  .faq-item{border-bottom:1px solid var(--line);}
-  .faq-q{
-    width:100%; display:flex; justify-content:space-between; align-items:center;
-    padding:24px 0; text-align:left; font-size:16.5px; font-weight:500; color:var(--ink);
-  }
-  .faq-q .plus{
-    width:22px;height:22px; flex-shrink:0; position:relative; margin-left:20px;
-  }
-  .faq-q .plus::before, .faq-q .plus::after{
-    content:""; position:absolute; background:var(--berry); border-radius:2px;
-  }
-  .faq-q .plus::before{width:14px;height:2px; top:10px; left:4px;}
-  .faq-q .plus::after{width:2px;height:14px; top:4px; left:10px; transition:transform .25s ease;}
-  .faq-item.open .faq-q .plus::after{transform:rotate(90deg);}
-  .faq-a{
-    max-height:0; overflow:hidden; transition:max-height .35s ease;
-  }
-  .faq-a-inner{padding-bottom:24px; color:var(--ink-soft); font-size:15px; max-width:640px;}
-  .faq-a-inner ul{margin-top:10px; padding-left:2px;}
-  .faq-a-inner li{padding-left:16px; position:relative; margin-bottom:6px;}
-  .faq-a-inner li::before{content:"–"; position:absolute; left:0; color:var(--berry);}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
-  /* ================= CTA BAND ================= */
-  .cta-band{
-    background:var(--berry);
-    background-image:radial-gradient(circle at 15% 20%, rgba(255,255,255,0.14), transparent 40%), radial-gradient(circle at 85% 80%, rgba(0,0,0,0.12), transparent 45%);
-    border-radius:24px;
-    padding:72px 60px;
-    display:flex; align-items:center; justify-content:space-between; gap:32px;
-    color:#fff;
-  }
-  .cta-band h2{
-    font-family:var(--font-display); font-weight:300; font-size:clamp(26px,3vw,38px);
-    letter-spacing:-0.02em; max-width:480px;
-  }
-  .cta-band .actions{display:flex; gap:14px; flex-shrink:0;}
-  .cta-wrap{padding:0 32px;}
+  
+  
+  
+  
 
   /* ================= FOOTER ================= */
   footer{padding:80px 0 40px; border-top:1px solid var(--line); margin-top:40px;}
@@ -558,14 +486,13 @@
 
   /* ================= RESPONSIVE ================= */
   @media (max-width:980px){
-    .stats-grid{grid-template-columns:repeat(2,1fr); row-gap:36px;}
-    .module-grid{grid-template-columns:repeat(2,1fr);}
-    .feature-row{grid-template-columns:1fr; gap:32px;}
-    .feature-row.reverse .feature-copy{order:1;}
-    .feature-row.reverse .feature-visual{order:2;}
-    .chip-grid{grid-template-columns:repeat(3,1fr);}
+    
+    
+    
+    
+    
     .footer-top{grid-template-columns:1fr 1fr; row-gap:40px;}
-    .cta-band{flex-direction:column; text-align:center; padding:56px 32px;}
+    
   }
   @media (max-width:1080px){
     .nav-links{display:none;}
@@ -579,17 +506,15 @@
     .nav-cta .login{display:none;}
   }
   @media (max-width:760px){
-    .module-grid{grid-template-columns:1fr;}
-    .stats-grid{grid-template-columns:1fr 1fr;}
-    .chip-grid{grid-template-columns:repeat(2,1fr);}
+    
+    
     section{padding:64px 0;}
     .hero{padding:56px 0 40px;}
   }
 
-  /* integrations grid: 3 per row, independent of the solutions module-grid */
-  .integrations-grid{grid-template-columns:repeat(3,1fr);}
-  @media (max-width:980px){.integrations-grid{grid-template-columns:repeat(2,1fr);}}
-  @media (max-width:760px){.integrations-grid{grid-template-columns:1fr;}}
+  
+  
+  
 
   /* mobile nav drawer */
   .mobile-drawer{position:fixed;top:0;left:0;right:0;background:var(--paper);z-index:200;display:flex;flex-direction:column;padding:24px 32px 28px;max-height:100vh;overflow-y:auto;box-shadow:0 24px 48px -24px rgba(21,10,24,.3);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);}
@@ -663,74 +588,47 @@
     .chat-trigger{right:16px;bottom:16px;}
   }
 
-  /* ================= KOM I GANG 1-2-3 ================= */
-  .steps-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; counter-reset:step;}
-  .step-card{position:relative; background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:30px 28px; display:flex; flex-direction:column; gap:12px;}
-  .step-card .step-num{width:44px; height:44px; border-radius:50%; background:var(--berry-light); color:var(--berry-deep); font-family:var(--font-mono); font-weight:700; font-size:18px; display:flex; align-items:center; justify-content:center;}
-  .step-card h3{font-size:18px; font-weight:600; color:var(--ink); letter-spacing:-0.01em;}
-  .step-card p{font-size:14.5px; color:var(--ink-soft); line-height:1.55;}
-  .step-card.step-live{background:var(--plum-deep); border-color:var(--plum-deep);}
-  .step-card.step-live .step-num{background:var(--berry); color:#fff;}
-  .step-card.step-live h3{color:#fff;}
-  .step-card.step-live p{color:rgba(255,255,255,.7);}
-  @media (max-width:860px){ .steps-grid{grid-template-columns:1fr;} }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   /* ================= OUTCOMES ================= */
   #produkt{padding:96px 0 90px;}
-  .outcome-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
-  .outcome-card{background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius); padding:32px 28px; display:flex; flex-direction:column; gap:14px;}
-  .outcome-card .module-icon{width:38px;height:38px;display:flex;align-items:center;justify-content:center;color:var(--berry);}
-  .outcome-card h3{font-size:19px; font-weight:600; color:var(--ink); letter-spacing:-0.01em;}
-  .outcome-card p{font-size:15px; color:var(--ink-soft); line-height:1.55;}
 
-  /* ================= PENGENE RIKTIG ================= */
-  .money{background:var(--plum-deep); color:#fff; position:relative; overflow:hidden;}
-  .money::before{content:""; position:absolute; inset:0; pointer-events:none; background-image:linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size:34px 34px;}
-  .money .wrap{position:relative;}
-  .money .section-head{max-width:760px;}
-  .money .section-head h2{color:#fff; font-size:clamp(32px,4vw,52px);}
-  .money .section-head h2 strong{color:var(--berry-mid);}
-  .money .section-head p{color:rgba(255,255,255,.8);}
-  .money-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.12); border-radius:var(--radius); overflow:hidden;}
-  .money-item{background:var(--plum-deep); padding:28px 26px;}
-  .money-item h3{font-size:16.5px; font-weight:600; margin-bottom:8px; color:#fff;}
-  .money-item p{font-size:14.5px; color:rgba(255,255,255,.75); line-height:1.55;}
+  
+  
+  
+  
+  
+  
 
-  /* ================= AI ================= */
-  .ai-section{padding:90px 0;}
-  .ai-row{border-top:none; padding:0;}
-  .ai-title{font-family:var(--font-display); font-weight:300; font-size:clamp(28px,3.2vw,42px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);}
-  .ai-title strong{font-weight:600; color:var(--berry-deep);}
-  .ai-visual{background:linear-gradient(155deg, var(--plum-deep) 0%, var(--plum-900) 100%); border:none; display:flex; align-items:center; justify-content:center; padding:44px;}
-  .ai-visual img{width:100%; max-width:360px; height:auto; border-radius:12px; box-shadow:0 30px 60px -24px rgba(0,0,0,.6);}
+  
+  
+  
+  
+  
+  
+  
 
-  /* ================= HVORFOR FENISTRA ================= */
-  .why{background:var(--paper-2); border-top:1px solid var(--line);}
-  .why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:32px;}
-  .why-item{border-top:2px solid var(--berry); padding-top:20px;}
-  .why-k{font-size:18px; font-weight:600; color:var(--ink); margin-bottom:10px; letter-spacing:-0.01em;}
-  .why-item p{font-size:14.5px; color:var(--ink-soft); line-height:1.55;}
-  .why-customers{margin-top:56px; padding:22px 26px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); font-size:15px; color:var(--ink-soft);}
-  .why-customers a{color:var(--berry-deep); font-weight:600; white-space:nowrap;}
+  
+  
+  
+  
+  
+  
+  
 
-  /* two quotes side by side */
-  .testimonial .wrap:has(.quote-pair){max-width:var(--container);}
-  .quote-pair{display:grid; grid-template-columns:1fr 1fr; gap:56px;}
-  .quote-pair figure{display:flex; flex-direction:column;}
-  .quote-pair figcaption{margin-top:auto;}
-  .quote-pair blockquote{font-size:clamp(19px,1.9vw,23px);}
-  .quote-stat{font-size:15px; color:rgba(255,255,255,.8); margin-bottom:24px;}
-  .quote-stat span{display:block; font-family:var(--font-mono); font-weight:700; font-size:clamp(56px,6vw,76px); line-height:1; letter-spacing:-0.02em; color:var(--berry-mid); margin-bottom:10px;}
-
-  @media (max-width:980px){
-    .outcome-grid, .money-grid{grid-template-columns:1fr 1fr;}
-    .why-grid{grid-template-columns:1fr 1fr;}
-    .quote-pair{grid-template-columns:1fr; gap:40px;}
-  }
+  
   @media (max-width:760px){
-    .outcome-grid, .money-grid, .why-grid{grid-template-columns:1fr;}
-    #produkt, .ai-section{padding:64px 0;}
-    .ai-visual{padding:28px;}
+      #produkt{padding:64px 0;}
+    
   }
 
   /* ================= HERO TRUST PILLS ================= */
@@ -750,52 +648,44 @@
   #produkt, #okonomi, #ai, #løsninger, #kom-i-gang, #hvorfor, #kunder, #faq{padding:112px 0;}
   #løsninger{background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
   #hvorfor{border-top:1px solid var(--line);}
-  .ai-row{gap:72px;}
+  
   .section-head{max-width:720px;}
-  .faq-layout{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.5fr); gap:72px; align-items:start;}
-  .faq-head{margin-bottom:0; position:sticky; top:110px;}
-  .faq-head-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:28px;}
-  .faq-layout .faq-list{max-width:none; border-top:1px solid var(--line);}
-  .faq-layout .faq-q{padding:22px 0;}
+  
+  
+  
+  
+  
   .section-head h2, .ai-title, .flip-line{text-wrap:balance;}
   .section-head p{text-wrap:pretty;}
-  @media (max-width:980px){
-    .faq-layout{grid-template-columns:1fr; gap:40px;}
-    .faq-head{position:static;}
-  }
+  
   @media (max-width:760px){
     #produkt, #okonomi, #ai, #løsninger, #kom-i-gang, #hvorfor, #kunder, #faq{padding:72px 0;}
     .trust-pills{gap:8px;}
     .trust-pills li{font-size:11.5px; padding:7px 12px 7px 11px;}
   }
   /* «Fenistra kan eiendom»: målgruppekort, tre handlingsmåter, prosess */
-  a.goal-card{transition:border-color .2s ease, transform .2s ease;}
-  a.goal-card:hover{border-color:var(--berry); transform:translateY(-2px);}
-  .goal-card .goal-for{font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--berry-deep); margin:0;}
-  .goal-card p{flex-grow:1;}
-  .goal-card .goal-for{flex-grow:0;}
-  .goal-card .go{font-family:var(--font-mono); font-size:12.5px; color:var(--berry-deep); font-weight:600;}
-  .pillar-grid .money-item h3{font-family:var(--font-display); font-weight:400; font-size:21px; line-height:1.3; margin:8px 0 12px;}
-  .pillar-grid .money-item p.pillar-label{font-family:var(--font-mono); font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--berry-mid);}
-  .pillar-actions{margin-top:32px;}
-  ol.process-steps{list-style:none; margin:0; padding:0;}
-  #faget .module-card .go{opacity:1; transform:none;}
-  @media (max-width: 980px){ .pillar-grid{grid-template-columns:1fr;} }
+  
   /* Kundesitat rett under hero: solid mørk flate, stram typografi */
-  .proof-quote{background:var(--plum-deep); color:#fff; padding:88px 0;}
-  .proof-quote-grid{display:grid; grid-template-columns:1fr 300px; gap:72px; align-items:end;}
-  .proof-quote blockquote{font-family:var(--font-display); font-weight:500; font-size:clamp(22px,2.6vw,34px); line-height:1.3; letter-spacing:-0.015em; color:#fff; text-wrap:pretty; border-left:4px solid #BC5A83; padding-left:32px;}
-  .proof-quote figcaption{margin-top:28px; padding-left:36px; display:flex; flex-direction:column; gap:4px;}
-  .proof-quote .who{font-weight:600; font-size:15.5px;}
-  .proof-quote .role{font-family:var(--font-mono); font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; color:rgba(255,255,255,.65);}
-  .proof-quote-fact{border-top:1px solid rgba(255,255,255,.2); padding-top:24px;}
-  .proof-quote-fact .num{display:block; font-family:var(--font-mono); font-weight:700; font-size:clamp(40px,4vw,56px); line-height:1; color:#BC5A83; margin-bottom:12px;}
-  .proof-quote-fact p{font-size:15px; color:rgba(255,255,255,.8); line-height:1.55;}
-  .proof-quote-fact .go{display:inline-block; margin-top:16px; font-family:var(--font-mono); font-size:12.5px; color:#fff; border-bottom:1px solid #BC5A83; padding-bottom:2px;}
-  .quote-pair.quote-single{grid-template-columns:1fr; max-width:860px;}
-  @media (max-width:900px){ .proof-quote{padding:64px 0;} .proof-quote-grid{grid-template-columns:1fr; gap:40px;} .proof-quote blockquote{padding-left:20px;} .proof-quote figcaption{padding-left:24px;} }
+  .proof-quote{padding:96px 0;}
+  .proof-boxes{display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); row-gap:28px;}
+  .proof-quote figure{grid-column:1 / span 10; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:48px 56px; transition:opacity .8s ease, transform .8s ease;}
+  .proof-quote blockquote{font-family:var(--font-display); font-weight:300; font-size:clamp(19px,1.8vw,24px); line-height:1.4; letter-spacing:-0.015em; color:var(--ink); text-wrap:pretty;}
+  /* the word being read switches to purple at once and fades back to dark after; a fade-in this short would never reach the colour */
+  .proof-quote.quote-armed:not(.quote-shown) figure{opacity:0; transform:translateY(16px);}
+  .proof-quote .qw{transition:color .7s ease;}
+  .proof-quote .qw.qw-on{color:var(--berry-deep); transition:none;}
+  .proof-quote figure .go{display:inline-block; margin-top:18px; font-family:var(--font-mono); font-size:12.5px; color:var(--berry-deep); border-bottom:1px solid currentColor; padding-bottom:2px;}
+  .proof-quote figcaption{margin-top:24px; display:flex; flex-direction:column; gap:4px;}
+  .proof-quote .who{font-weight:600; font-size:15.5px; color:var(--ink);}
+  .proof-quote .role{font-family:var(--font-mono); font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft);}
+  .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+  @media (max-width:980px){ .proof-quote figure{grid-column:1 / -1;} }
+  @media (max-width:760px){ .proof-quote{padding:64px 0;} .proof-quote figure{padding:32px 28px;} }
   /* Hero: venstrejustert, stor signatur og en nøktern faktalinje (ingen tagger) */
   .hero .hero-content{max-width:none; margin:0; text-align:left;}
+  .hero .hero-grid{display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr); gap:48px; align-items:center;}
+  .hero-askbox{justify-self:end; width:100%; max-width:420px;}
+  @media (max-width:980px){ .hero .hero-grid{grid-template-columns:1fr; gap:44px;} .hero-askbox{justify-self:start;} }
   .hero h1{font-size:clamp(46px,6.6vw,96px); line-height:1; letter-spacing:-0.035em; margin-bottom:28px;}
   .hero h1 em{color:var(--ink);}
   .hero p.lead{margin:0 0 36px; max-width:620px;}
@@ -809,373 +699,211 @@
 </style>
 <!-- ================= HERO ================= -->
 <section class="hero">
-  <div class="wrap">
+  <div class="wrap hero-grid">
     <div class="hero-content">
-      <div class="eyebrow hero-part hero-part-1">Programvare for norsk næringseiendom</div>
       <h1><span class="hero-part hero-part-1">Fenistra</span>&ngsp;<em class="hero-part hero-part-2">kan eiendom.</em></h1>
-      <p class="lead hero-part hero-part-3">Fagkunnskap, markedsdata fra Arealstatistikk og AI, bygget inn i løsningene dere forvalter med. Så dere driver mer effektivt, øker lønnsomheten og ser mulighetene i porteføljen.</p>
+      <p class="lead hero-part hero-part-3">Det ledende forvaltningssystemet for næringseiendom, og fagfolkene bak. Ett system for hele leieforholdet, fra første henvendelse til ferdig avregnet.</p>
       <div class="hero-actions hero-part hero-part-3">
-        <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book en demo</a>
+        <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Snakk med oss</a>
         <a routerLink="/ki" class="btn btn-ghost">Se hvordan vi hjelper</a>
       </div>
-      <ul class="trust-pills hero-part hero-part-3" aria-label="Fenistra i korte trekk">
-        <li><span class="pulse"></span>Utviklet siden 1994</li>
-        <li><span class="pulse"></span>Arealstatistikk integrert</li>
-        <li><span class="pulse"></span>En del av Visma</li>
+      <ul class="trust-pills hero-part hero-part-3">
+        <li><span class="pulse"></span>Brukt av 170+ eiendomsselskaper.</li>
       </ul>
     </div>
+    <app-hero-ask-box class="hero-askbox"></app-hero-ask-box>
+  </div>
+</section>
+
+<!-- ================= LOGOVEGG ================= -->
+<section class="logo-wall" aria-labelledby="kunder-tittel">
+  <div class="wrap">
+    <div class="logo-wall-head reveal">
+      <h2 id="kunder-tittel">Selskaper som kan eiendom, krever et system som gjør det samme.</h2>
+      <p>Blant selskapene som forvalter i Fenistra:</p>
+    </div>
+    <ul class="logo-grid reveal">
+      @for (c of customers; track c.name) {
+        <li>
+          @if (c.story) {
+            <a [routerLink]="c.story" class="logo-tile" [attr.aria-label]="c.name + ': les kundehistorien'">
+              @if (c.logo) { <img [src]="c.logo" [alt]="c.name" [class.logo-white]="c.whiteLogo" [style.height.px]="c.logoHeight" loading="lazy"> } @else { <span class="logo-name">{{ c.name }}</span> }
+              <span class="logo-story" aria-hidden="true">Les historien →</span>
+            </a>
+          } @else {
+            <div class="logo-tile">
+              @if (c.logo) { <img [src]="c.logo" [alt]="c.name" [class.logo-white]="c.whiteLogo" [style.height.px]="c.logoHeight" loading="lazy"> } @else { <span class="logo-name">{{ c.name }}</span> }
+            </div>
+          }
+        </li>
+      }
+    </ul>
+    <p class="logo-wall-more reveal"><a routerLink="/kunder">Se kundehistoriene →</a></p>
   </div>
 </section>
 
 <!-- ================= KUNDESITAT VED FØRSTE SCROLL (ordrett som publisert) ================= -->
-<section class="proof-quote" aria-label="Kundesitat">
-  <div class="wrap proof-quote-grid">
+<section class="proof-quote" aria-label="Kundesitat" [class.quote-armed]="quoteArmed()" [class.quote-shown]="quoteShown()">
+  <div class="wrap proof-boxes">
     <figure>
-      <blockquote>«Det er en trygghet i å møte en samarbeidspartner som forstår vår særbransje og de utfordringene vi har i hverdagen. Hos Fenistra blir vi møtt med forståelse, og det er godt å jobbe med fagfolk som virkelig kan faget sitt.»</blockquote>
+      <blockquote>@for (w of quoteWords; track $index; let last = $last) {<span class="qw" [class.qw-on]="$index === quoteRead() - 1">{{ w }}{{ last ? '' : ' ' }}</span>}</blockquote>
       <figcaption>
         <span class="who">Maren Elise Dalene Torp</span>
         <span class="role">Senior Controller Eiendomsforvaltning, Höegh Eiendom</span>
       </figcaption>
-    </figure>
-    <div class="proof-quote-fact">
-      <span class="num">50–60 %</span>
-      <p>mindre tid på fakturering hos Höegh Eiendom etter overgangen til nye Fenistra. Kunde i over 20 år.</p>
       <a routerLink="/media-hoegh-eiendom" class="go">Les historien →</a>
-    </div>
+    </figure>
   </div>
 </section>
 
-<!-- ================= LOGO MARQUEE ================= -->
-<section class="marquee-section reveal">
+<!-- ================= BRO + TRE SØYLER: system og fagfolk ================= -->
+<section id="produkt" class="know">
   <div class="wrap">
-    <div class="marquee-label">Blant eiendomsselskapene som forvalter med Fenistra</div>
-  </div>
-  <div class="marquee-track-wrap" aria-hidden="true">
-    <div class="marquee-track" id="marqueeTrack">
-      <span>Thon Gruppen</span><span>Coop</span><span>Aspelin Reitan</span><span>Frydenbø Eiendom</span><span>Höegh Eiendom</span><span>Spabo Eiendom</span><span>Selvaag Eiendom</span><span>Mosvold</span><span>Alti</span><span>Backer AS</span><span>Scala</span><span>Norgesgruppen</span><span>Smedvik Eiendom</span><span>Avantor</span><span>Ragde</span><span>Møller</span><span>Lagunen</span><span>Stiftelsen Anker</span><span>H.I.Giørtz sønner</span><span>AKA</span><span>SKB</span>
-    </div>
-  </div>
-</section>
-
-<!-- ================= STATS ================= -->
-<section class="stats">
-  <div class="wrap stats-grid">
-    <div class="stat-item reveal">
-      <div class="num"><span class="accent">1994</span></div>
-      <div class="lbl">Året utviklingen av Fenistra startet. Vi har ikke stoppet siden</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="num"><span class="accent">170+</span></div>
-      <div class="lbl">Eiendomsforvaltere i Norge bruker Fenistra</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="num">60 <span class="accent">mrd</span></div>
-      <div class="lbl">Kroner i årlig leieomsetning registrert i Fenistra</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="num"><span class="accent">60 000+</span></div>
-      <div class="lbl">Kontrakter forvaltet gjennom Fenistra-plattformen</div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= HVA VIL DERE OPPNÅ? (tre målgrupper) ================= -->
-<section id="produkt">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Hva vil dere oppnå?</h2>
-      <p>Velg det som ligner hverdagen deres. Vi viser hvordan Fenistra hjelper.</p>
-    </div>
-    <div class="outcome-grid">
-      <a routerLink="/rapport-og-analyse" class="outcome-card goal-card reveal">
-        <p class="goal-for">For ledere og eiere</p>
-        <h3>Se mulighetene i porteføljen</h3>
-        <p>Hvilke kontrakter og lokaler bør dere prioritere? Se leien mot markedet, finn kontraktene som bør reforhandles, og se hva som påvirker inntektene fremover.</p>
-        <span class="go">Se mulighetene →</span>
-      </a>
-      <a routerLink="/fra-lead-til-innflytting" class="outcome-card goal-card reveal">
-        <p class="goal-for">For utleie og kommersielle team</p>
-        <h3>Fyll ledige lokaler raskere</h3>
-        <p>Fra første henvendelse til signert kontrakt og innflytting i én prosess. Opplysningene følger saken, så ingen taster dem inn to ganger.</p>
-        <span class="go">Se prosessen →</span>
-      </a>
-      <a routerLink="/fakturering-og-avregning" class="outcome-card goal-card reveal">
-        <p class="goal-for">For forvaltning og økonomi</p>
-        <h3>Mindre manuelt arbeid, færre feil</h3>
-        <p>Regulering, felleskostnader, MVA og omsetningsleie beregnes etter kontrakten og regelverket, med forklaring og dokumentasjon dere kan vise til.</p>
-        <span class="go">Se hvordan →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SVARER, SIER IFRA, GJØR JOBBEN ================= -->
-<section id="slik" class="money">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Slik merker dere at Fenistra <strong>kan eiendom</strong></h2>
-      <p>Kompetansen sitter ikke bare i menneskene våre. Den er bygget inn i løsningene.</p>
-    </div>
-    <div class="money-grid pillar-grid">
-      <div class="money-item reveal">
-        <p class="pillar-label">Svarer</p>
-        <h3>«Hvilke kontrakter utløper i 2027, og hvilke ligger under markedsleie?»</h3>
-        <p>Bare spør. Fenistra svarer med kontraktene det gjelder, forklarer hvorfor de krever oppmerksomhet og viser hvor svaret kommer fra. Når markedsleie er relevant, sammenlignes den med Arealstatistikk for riktig sone og leietype.</p>
-      </div>
-      <div class="money-item reveal">
-        <p class="pillar-label">Sier ifra</p>
-        <h3>«De trenger mer plass. Dere har lokalet.»</h3>
-        <p>Fenistra fanger opp behov og muligheter før dere leter etter dem: en leietaker som trenger mer plass, en garanti som snart utløper, eller en kostnadsprognose som tilsier at leietakerne bør varsles i god tid.</p>
-      </div>
-      <div class="money-item reveal">
-        <p class="pillar-label">Gjør jobben</p>
-        <h3>«Fra interessert til signert.»</h3>
-        <p>Fra registrert arealbehov til signert kontrakt, innflytting og faktura i samme flyt. Fenistra utfører rutinen, dere kontrollerer og godkjenner. Ingen dobbeltregistrering.</p>
-      </div>
-    </div>
-    <div class="pillar-actions reveal">
-        <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book en demo</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= BARE SPØR (AI) ================= -->
-<section id="ai" class="ai-section">
-  <div class="wrap">
-    <div class="feature-row ai-row">
-      <div class="feature-copy">
-        <h2 class="ai-title">Bare spør.</h2>
-        <p>Still spørsmålet slik du ville spurt en erfaren kollega. Fenistra svarer ut fra kontraktene deres, regelverket og markedsdata, og viser hvor svaret kommer fra.</p>
-        <ul class="feature-list">
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Svar med kilder fra deres egne kontrakter og leieforhold</li>
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Markedsleie fra Arealstatistikk, koblet til sone og leietype</li>
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>AI-innlesing av kontrakter: dra inn PDF-en, så fylles feltene ut</li>
+    <h2 class="know-title reveal">Et komplett system, med fagfolk som står bak det.</h2>
+    <div class="know-row reveal">
+      <h3>Bare spør<span class="know-sub">Om porteføljen, leienivået, ledigheten.</span></h3>
+      <div class="know-body">
+        <ul class="know-questions">
+          <li>Hvilke kontrakter og lokaler bør dere prioritere?</li>
+          <li>Hvordan er leieprisene i området?</li>
+          <li>Hvor mye ledighet har vi neste år?</li>
         </ul>
-        <a routerLink="/ki" class="btn btn-light">Se hvordan Fenistra hjelper →</a>
+        <dl class="know-parts">
+          <div><dt>Fenistra med AI</dt><dd>Spør KI-assistenten med vanlige ord, og få svar med kilder fra egne data og markedsdata fra Arealstatistikk.</dd></div>
+          <div><dt>Menneskene bak</dt><dd>Spør fagfolk som kan kontrakter, avregning og regelverk.</dd></div>
+        </dl>
+        <a routerLink="/rapport-og-analyse" class="know-link">Se mulighetene i porteføljen →</a>
       </div>
-      <app-ki-chat-demo></app-ki-chat-demo>
+    </div>
+    <div class="know-row reveal">
+      <h3>Sier ifra<span class="know-sub">Før noe glipper. Før det er for sent. Før dere taper penger.</span></h3>
+      <div class="know-body">
+        <dl class="know-parts">
+          <div><dt>Fenistra</dt><dd>Varsler om kontraktsutløp, frister, garantier og avvik i dataene.</dd></div>
+          <div><dt>Menneskene bak</dt><dd>Minner dere på sesongene: MVA, avregning av felleskostnader, RBO.</dd></div>
+        </dl>
+        <a routerLink="/fra-lead-til-innflytting" class="know-link">Fra lead til innflytting →</a>
+      </div>
+    </div>
+    <div class="know-row reveal">
+      <h3>Gjør jobben<span class="know-sub">Fenistra gjør jobben for dere.</span></h3>
+      <div class="know-body">
+        <dl class="know-parts">
+          <div><dt>Fenistra med AI</dt><dd>AI leser kontraktene og fyller ut feltene. Dere kontrollerer, og så regulerer, fakturerer og avregner Fenistra etter kontrakten.</dd></div>
+          <div><dt>Menneskene bak</dt><dd>[BEKREFT: hva fagteamet gjør her, f.eks. oppstart, migrering, bistand i avregning]</dd></div>
+        </dl>
+        <a routerLink="/fakturering-og-avregning" class="know-link">Fakturering og avregning →</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ================= GJØR JOBBEN: fra interessert til signert ================= -->
+<!-- ================= GJØR JOBBEN: hele leieforholdet, som animasjon ================= -->
 <section id="prosess">
   <div class="wrap">
-    <div class="section-head">
-      <h2>Fra interessert til signert</h2>
-      <p>Ett eksempel på hvordan Fenistra gjør jobben. Hvert steg bygger på det forrige, og det som er registrert, følger saken videre.</p>
-    </div>
-    <ol class="steps-grid process-steps">
-      <li class="step-card reveal"><div class="step-num">1</div><h3>Lead og behov</h3><p>Interessenten og behovet registreres én gang.</p></li>
-      <li class="step-card reveal"><div class="step-num">2</div><h3>Ledige lokaler</h3><p>Fenistra viser lokalene som passer behovet.</p></li>
-      <li class="step-card reveal"><div class="step-num">3</div><h3>Lønnsomhet</h3><p>Oppside, markedsleie fra Arealstatistikk og inntektsprognose.</p></li>
-      <li class="step-card reveal"><div class="step-num">4</div><h3>Kontrakt</h3><p>Utkastet fylles ut fra saken. Dere kontrollerer vilkårene.</p></li>
-      <li class="step-card reveal"><div class="step-num">5</div><h3>Signering</h3><p>Digitalt, med kommentarene samlet i saken.</p></li>
-      <li class="step-card step-live reveal"><div class="step-num">6</div><h3>Innflytting</h3><p>Protokoll på mobilen, og kontrakten rett inn i forvaltningen.</p></li>
-    </ol>
-    <div style="margin-top:32px;">
-      <a routerLink="/fra-lead-til-innflytting" class="btn btn-light">Se hele prosessen →</a>
-    </div>
+    <app-process-animation></app-process-animation>
   </div>
 </section>
 
-<!-- ================= FAGET I BEREGNINGENE ================= -->
-<section id="faget" class="modules">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Faget, bygget inn i beregningene</h2>
-      <p>Det er i beregningene små feil blir dyre. Fenistra regner etter kontrakten og regelverket og viser forutsetningene, så dere kan forklare tallene for leietaker og revisor.</p>
+<!-- ================= ØKOSYSTEM: integrasjoner ================= -->
+<section class="eco-section" aria-labelledby="eco-title">
+  <div class="wrap eco-grid">
+    <div class="eco-copy reveal">
+      <h2 id="eco-title">Knytt Fenistra til systemene dere allerede bruker i dag.</h2>
+      <p>26 integrerte systemer, blant dem 19 regnskaps- og ERP-systemer. Data registreres én gang og deles med regnskap, rapportering og drift.</p>
+      <a routerLink="/integrasjoner" class="know-link">Se alle integrasjoner →</a>
     </div>
-    <div class="module-grid integrations-grid">
-      <div class="module-card">
-        <h3>KPI-regulering</h3>
-        <p>Indeksen hentes fra SSB. Leien reguleres, og reguleringsbrevene lages automatisk.</p>
-        <a routerLink="/fakturering-og-avregning" fragment="steg-for-steg" class="go">Les mer →</a>
-      </div>
-      <div class="module-card">
-        <h3>Felleskostnader</h3>
-        <p>Hvilke kostnader kontrakten åpner for, hvilken fordelingsnøkkel som brukes, og hvordan a konto avregnes mot faktiske kostnader.</p>
-        <a routerLink="/losning-felleskostnader" class="go">Les mer →</a>
-      </div>
-      <div class="module-card">
-        <h3>MVA og justering</h3>
-        <p>MVA-erklæringer fra leietakerne og justeringsforpliktelser fulgt opp gjennom hele perioden.</p>
-        <a routerLink="/mva-og-regelverk" class="go">Les mer →</a>
-      </div>
-      <div class="module-card">
-        <h3>Omsetningsleie</h3>
-        <p>Leie basert på faktisk omsetning, beregnet og fakturert uten manuelle mellomregninger.</p>
-        <a routerLink="/losning-omsetningsavregning" class="go">Les mer →</a>
-      </div>
-      <div class="module-card">
-        <h3>Revisorbekreftet omsetning</h3>
-        <p>Leietakernes reviderte tall hentet inn og avstemt, per leietaker.</p>
-        <a routerLink="/losning-rbo" class="go">Les mer →</a>
-      </div>
-      <div class="module-card">
-        <h3>Rapporter med forklaring</h3>
-        <p>Nøkkeltall rett fra kildedataene, med forutsetningene synlige for ledelse, styre og revisor.</p>
-        <a routerLink="/losning-rapportering" class="go">Les mer →</a>
-      </div>
-    </div>
-    <div style="margin-top:32px;">
-      <a routerLink="/losninger" class="btn btn-light">Se alle løsninger og integrasjoner →</a>
-    </div>
+    <app-ecosystem></app-ecosystem>
   </div>
 </section>
 
-<!-- ================= KOM I GANG 1-2-3 ================= -->
-<section id="kom-i-gang">
+<!-- ================= KUNDENES EGNE ORD (sitater ordrett som publisert) ================= -->
+<section class="voices" aria-labelledby="voices-title">
   <div class="wrap">
-    <div class="section-head">
-      <h2>Et dypt system som er raskt å komme i gang med</h2>
-      <p>Dybde betyr ikke tung innføring. Med AI-innlesing av kontraktene er porteføljen på plass raskere enn dere tror.</p>
-    </div>
-    <div class="steps-grid">
-      <div class="step-card reveal">
-        <div class="step-num">1</div>
-        <h3>Last opp kontraktene dine</h3>
-        <p>Dra og slipp kontraktene dine inn i Fenistra. De leses inn og registreres automatisk ved hjelp av AI, for rask og enkel registrering av hele porteføljen.</p>
-      </div>
-      <div class="step-card reveal">
-        <div class="step-num">2</div>
-        <h3>Koble til regnskapsprogrammet</h3>
-        <p>Koble Fenistra opp mot regnskapsprogrammet dere allerede bruker, slik at fakturering og bokføring henger sammen.</p>
-      </div>
-      <div class="step-card step-live reveal">
-        <div class="step-num">3</div>
-        <h3>Du er LIVE</h3>
-        <p>Porteføljen er på plass, og du kan begynne å forvalte, fakturere og rapportere i Fenistra.</p>
-      </div>
-    </div>
-    <div style="margin-top:32px;">
-      <a routerLink="/kom-i-gang" class="btn btn-light">Se hvordan oppstarten fungerer →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= HVORFOR DERE KAN STOLE PÅ SVARET ================= -->
-<section id="hvorfor" class="why">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Hvorfor dere kan stole på svaret</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-item reveal">
-        <div class="why-k">Faget</div>
-        <p>Vi har utviklet løsninger for norsk næringseiendom siden 1994. Vi kjenner felleskostnader, MVA, leieregulering og kjøpesentermodeller, og fallgruvene i kontrakter og oppgjør.</p>
-      </div>
-      <div class="why-item reveal">
-        <div class="why-k">Markedet</div>
-        <p>Arealstatistikk er integrert i løsningene. Dere vurderer leien mot relevant sone og leietype der arbeidet skjer, uten å bygge analysen i et regneark først.</p>
-      </div>
-      <div class="why-item reveal">
-        <div class="why-k">AI som bruker faget</div>
-        <p>AI leser kontrakter, henter ut vilkår og svarer med kilder. Den bruker eiendomskompetansen, deres egne data og markedsinnsikten sammen.</p>
-      </div>
-      <div class="why-item reveal">
-        <div class="why-k">Trygg drift</div>
-        <p>En del av Visma, med ressurser til å bygge videre i mange år. ISO 27001-sertifisert og VCDM-godkjent.</p>
-      </div>
-    </div>
-    <p class="why-customers">Allerede kunde? Fenistra fornyer seg hele tiden, og det nye kommer automatisk til dere. <a routerLink="/blogg">Se hva som er nytt →</a></p>
-  </div>
-</section>
-
-<!-- ================= TESTIMONIAL ================= -->
-<section id="kunder" class="testimonial">
-  <div class="wrap">
-    <svg class="quote-mark" width="34" height="26" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M0 208C0 146.1 50.1 96 112 96l32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0c-44.2 0-80 35.8-80 80l0 24.6c9.4-5.4 20.3-8.6 32-8.6l64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64L0 208zm32 80l0 64c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32zm352-32l-64 0c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32zM256 320l0-112c0-61.9 50.1-112 112-112l32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0c-44.2 0-80 35.8-80 80l0 24.6c9.4-5.4 20.3-8.6 32-8.6l64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32z"/></svg>
-    <div class="quote-pair quote-single">
-      <figure>
-        <div class="quote-stat"><span>2026</span> Backer velger Fenistra som nytt forvaltningssystem</div>
-        <blockquote>«For oss i Backer var det avgjørende å velge en løsning som er både moderne og intuitiv. Vi valgte Fenistra fordi de kombinerer dyp bransjekunnskap med et verktøy som forenkler hverdagen vår og gir oss den innsikten vi trenger for å vokse videre. Gjennom dette samarbeidet får vi et solid fundament for profesjonell eiendomsforvaltning i mange år fremover.»</blockquote>
-        <figcaption class="attr">
-          <div class="avatar">TJ</div>
-          <div>
-            <div class="who">Tine Wergeland Johannessen, utleie- og markedssjef</div>
-            <div class="role">Backer AS · Fenistra-kunde</div>
-          </div>
-        </figcaption>
+    <h2 id="voices-title" class="voices-title reveal">Kundenes egne ord</h2>
+    <div class="voices-grid">
+      <figure class="voice-main reveal">
+        <img src="images/kunder-03.jpg" width="1412" height="806" alt="Ninette Jurs, kontraktsforvalter i Aspelin Ramm, og Kristin Støfringsdal, eiendomsforvalter på Vulkan" loading="lazy">
+        <!-- ordrett fra propertysolutions.no, 30.10.2024 -->
+        <blockquote>«Vi får en veldig god oversikt over alle leietakerne, samt en oversikt over hvilke lokaler som er utleid eller ledige.»</blockquote>
+        <figcaption><span class="who">Ninette Jurs og Kristin Støfringsdal</span><span class="role">Kontraktsforvalter og eiendomsforvalter, Aspelin Ramm</span><a href="https://propertysolutions.no/aktuelt/-fenistras-skybaserte-l%C3%B8sning-gir-full-oversikt-over-alle-leietakere-p%C3%A5-en-enkel-og-oversiktlig-m%C3%A5te" target="_blank" rel="noopener" class="voice-link">Les historien →</a></figcaption>
       </figure>
+      <div class="voice-side">
+        <figure class="voice-card reveal">
+          <img src="images/kunder-04.jpg" width="900" height="802" alt="Tine Wergeland Johannessen, utleie- og markedssjef i Backer AS" loading="lazy">
+          <div>
+            <blockquote>«For oss i Backer var det avgjørende å velge en løsning som er både moderne og intuitiv. Vi valgte Fenistra fordi de kombinerer dyp bransjekunnskap med et verktøy som forenkler hverdagen vår og gir oss den innsikten vi trenger for å vokse videre. Gjennom dette samarbeidet får vi et solid fundament for profesjonell eiendomsforvaltning i mange år fremover.»</blockquote>
+            <figcaption><span class="who">Tine Wergeland Johannessen</span><span class="role">Utleie- og markedssjef, Backer AS</span><a routerLink="/media-backer" class="voice-link">Les historien →</a></figcaption>
+          </div>
+        </figure>
+        <figure class="voice-card reveal">
+          <img src="images/kunder-02.jpg" width="960" height="1280" alt="Bente Haugsdal, tidligere utviklingssjef, Frydenbø Eiendom" loading="lazy">
+          <div>
+            <blockquote>«Fenistra har utviklet seg i takt med krav og regelverk i tett samarbeid med eiendomsbesittere. Vår erfaring har vært at når det rulles ut nye moduler, så er dette kvalitetssikret både mot regelverk og et behov i bransjen. Det er gjort mye forarbeid og grundig erfaringsutveksling før en iverksetter nye løsninger, noe som gir oss trygghet for kvalitet og behov.»</blockquote>
+            <figcaption><span class="who">Bente Haugsdal</span><span class="role">Tidligere utviklingssjef, Frydenbø Eiendom</span><a routerLink="/media-kontinuerlig-verdi" class="voice-link">Les historien →</a></figcaption>
+          </div>
+        </figure>
+      </div>
     </div>
-    <a routerLink="/kunder" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff; margin-top:32px;">Les flere kundehistorier →</a>
+    <p class="voices-more reveal"><a routerLink="/kunder">Les flere kundehistorier →</a></p>
   </div>
 </section>
 
-<!-- ================= FAQ ================= -->
-<section id="faq">
-  <div class="wrap faq-layout">
-    <div class="section-head faq-head">
-      <h2>Spørsmålene vi får før dere velger</h2>
-      <p>Finner du ikke svaret her, ta gjerne kontakt med oss for en prat.</p>
-      <div class="faq-head-actions">
-        <a routerLink="/kontakt-oss" class="btn btn-primary">Kontakt oss</a>
-        <a routerLink="/sporsmal" class="btn btn-ghost">Se alle spørsmål →</a>
-      </div>
-    </div>
+<!-- ================= FAGSEKSJON: tall, Arealstatistikk og Fenistradagene ================= -->
+<section class="insight" aria-labelledby="innsikt-tittel">
+  <div class="wrap">
+    <h2 id="innsikt-tittel" class="insight-title">Vi kan eiendom. Derfor samler bransjen seg hos oss.</h2>
 
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q"><span>Hva får vi med Fenistra som vi ikke får med et enklere system?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">
-          <p>Et system som kan eiendomsfaget. Fenistra kombinerer erfaring fra norsk næringseiendom siden 1994, markedsdata fra Arealstatistikk integrert i løsningene og AI som bruker kunnskapen. Det gir bedre vurderinger, mindre dobbeltarbeid og tidligere oppfølging, særlig når porteføljen har flere selskaper, mange kontraktstyper, felleskostnader, MVA og omsetningsleie.</p>
-          <a routerLink="/losninger" class="btn btn-light" style="margin-top:16px;">Se plattformen →</a>
-        </div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>Hvordan reduserer Fenistra risikoen for feil i økonomien?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">
-          <p>De krevende beregningene gjøres av systemet, ikke i regneark, og forutsetningene er synlige. KPI-reguleringen henter indeksen direkte fra SSB, felleskostnader avregnes etter kontrakten og fordelingsnøkkelen, og MVA og justeringsforpliktelser følges opp over hele perioden. Reguleringsbrev og MVA-dokumentasjon lages automatisk. Alt registreres én gang, så fakturering, regnskap og rapporter bygger på de samme tallene.</p>
-        </div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>Porteføljen vår er kompleks. Hvor raskt kan vi være i gang?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">
-          <p>Raskere enn dere tror. AI leser inn kontraktene, vi kobler Fenistra til regnskapsprogrammet dere allerede bruker, og så er dere i gang. Ingen betalte konsulenttimer og ingen skjulte kostnader. Backer valgte Fenistra i 2026 fordi de ville ha en løsning som er både moderne og intuitiv, med dyp bransjekunnskap bak.</p>
-          <a routerLink="/kom-i-gang" class="btn btn-light" style="margin-top:16px;">Se hvordan oppstarten fungerer →</a>
-        </div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>Hvorfor er Fenistra et trygt valg på lang sikt?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">
-          <p>Fenistras løsninger har vært utviklet for norsk næringseiendom siden 1994 og brukes av over 170 eiendomsforvaltere. Vi er en del av Visma, ISO 27001-sertifisert og VCDM-godkjent, og plattformen er skybasert og alltid oppdatert.</p>
-          <a routerLink="/datasikkerhet" class="btn btn-light" style="margin-top:16px;">Les om datasikkerhet →</a>
-        </div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>Hva betyr «Bare spør»?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">
-          <p>At dere kan stille Fenistra spørsmål om porteføljen, som «Hvilke kontrakter trenger oppfølging?», og få et svar med forklaring og kilder. AI-en bruker kontraktene deres, eiendomskompetansen vi har bygget siden 1994 og markedsdata fra Arealstatistikk. Den leser også inn kontrakter, så feltene fylles ut for dere.</p>
-          <a routerLink="/ki" class="btn btn-light" style="margin-top:16px;">Se hvordan Fenistra hjelper →</a>
-        </div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>Vi er allerede Fenistra-kunde. Hva får vi fremover?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">
-          <p>Fenistra fornyer seg hele tiden. Plattformen er skybasert, så nye funksjoner og AI-forbedringer kommer automatisk til dere, uten oppgraderingsprosjekter. Fremover får dere mer av det som gjør faget anvendelig: svar med kilder, varsler om muligheter i porteføljen og flere prosesser som gjør jobben, som utleie fra lead til innflytting.</p>
-          <a routerLink="/blogg" class="btn btn-light" style="margin-top:16px;">Se hva som er nytt →</a>
-        </div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>Hva koster Fenistra?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">
-          <p>Prisen følger porteføljens leieomsetning, ikke antall brukere, og alle pakker har ubegrenset antall brukere. Fortell oss om porteføljen, så får dere et konkret tilbud.</p>
-          <a routerLink="/priser" class="btn btn-light" style="margin-top:16px;">Se pakkene →</a>
-        </div></div>
-      </div>
+    <ul class="insight-stats">
+      @for (s of stats; track s.label; let i = $index) {
+        <li class="reveal"><span class="num">{{ formatStat(statValues()[i]) }}{{ s.suffix }}</span><span class="lbl">{{ s.label }}</span></li>
+      }
+    </ul>
+    <div class="insight-areal reveal">
+      <h3>Markedsdata fra Arealstatistikk, bygget inn i Fenistra</h3>
+      <p>[PLACEHOLDER: Arealstatistikk i løsningen. Hva dataene er, hvordan de brukes i Fenistra (f.eks. leie mot marked for riktig sone og leietype), og ett tall om databasen.]</p>
     </div>
   </div>
 </section>
 
-<!-- ================= CTA BAND ================= -->
-<section class="cta-wrap" style="padding-bottom:20px;">
-  <div class="cta-band reveal">
-    <h2>Bare spør. Vi viser hva Fenistra kan gjøre for porteføljen deres.</h2>
-    <div class="actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book en demo</a>
-      <a routerLink="/kontakt-oss" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Kontakt oss</a>
+<!-- ================= FENISTRADAGENE ================= -->
+<section class="fdays" aria-labelledby="fdays-title">
+  <div class="wrap fdays-grid">
+    <div class="fdays-copy reveal">
+      <h2 id="fdays-title">Fagdager for forvaltere</h2>
+      <p class="fdays-lead">Kurs, foredrag og samtaler med kunder og fagfolk fra Fenistra.</p>
+      <figure class="fdays-quote">
+        <blockquote>«Fenistradagene er en kjempefin mulighet til å lære mer og bli inspirert. Her møter vi andre i bransjen, og vi får utvekslet og delt fagkompetanse.»</blockquote>
+        <figcaption><strong>Lene Hansen</strong> · Servicekoordinator, Höegh Eiendom</figcaption>
+      </figure>
+      <div class="fdays-actions">
+        <a routerLink="/kontakt-oss" class="btn btn-on-dark">Meld interesse for 2027</a>
+        <a routerLink="/fenistradagene" class="fdays-link">Se Fenistradagene →</a>
+      </div>
     </div>
+    <div class="fdays-photos reveal">
+      <img class="fdays-wide" src="images/fenistradagene-2026-13.jpg" width="1100" height="733" alt="Plenumssalen på Thon Hotel Snø under Fenistradagene 2026" loading="lazy">
+      <img src="images/fenistradagene-2026-06.jpg" width="1100" height="733" alt="Engasjerte deltakere i en fagsesjon på Fenistradagene 2026" loading="lazy">
+      <img src="images/fenistradagene-2026-15.jpg" width="1100" height="733" alt="Felix lanseres fra scenen under Fenistradagene 2026" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRYGGHET (animert liste) ================= -->
+<section class="trust" aria-label="Valgt av bransjen. Sikret av Visma.">
+  <div class="wrap">
+    <app-trust-list></app-trust-list>
+  </div>
+</section>
+
+<!-- ================= BARE SPØR (avslutning) ================= -->
+<section class="ask-band" aria-labelledby="ask-title">
+  <div class="wrap ask-inner reveal">
+    <div>
+      <h2 id="ask-title">Bare spør.</h2>
+      <p>Om porteføljen, om avregningen, om hva Fenistra kan gjøre for dere.</p>
+    </div>
+    <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book et møte</a>
   </div>
 </section>
 

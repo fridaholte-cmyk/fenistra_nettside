@@ -42,7 +42,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["koster", "kostnad", "abonnement"],
-    answer: "Fenistra prises etter porteføljens leieomsetning, ikke antall brukere – alle pakker har ubegrenset antall brukere. Vi har ikke faste priser liggende åpent på siden, siden det varierer med portefølje og behov. Book en demo, så finner vi ut hva som passer for dere."
+    answer: "Fenistra prises etter porteføljens leieomsetning, ikke antall brukere – alle pakker har ubegrenset antall brukere. Vi har ikke faste priser liggende åpent på siden, siden det varierer med portefølje og behov. Snakk med oss, så finner vi ut hva som passer for dere."
   },
   {
     keywords: ["forskjellen", "standard", "premium"],
@@ -142,7 +142,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kommer", "gang"],
-    answer: "Book en demo, eller ta testen vår for å se hvilken pakke og hvilke løsninger som passer for akkurat deres portefølje. En av rådgiverne våre tar deretter kontakt for å finne riktig oppsett. <a href=\"pakke-resultat.html\">Les mer om pakketesten →</a>"
+    answer: "Snakk med oss, eller ta testen vår for å se hvilken pakke og hvilke løsninger som passer for akkurat deres portefølje. En av rådgiverne våre tar deretter kontakt for å finne riktig oppsett. <a href=\"pakke-resultat.html\">Les mer om pakketesten →</a>"
   },
   {
     keywords: ["arealberegning", "areal", "kvadratmeter", "tegning", "fenistra arealberegning"],
@@ -316,7 +316,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["test hvilken pakke", "hvilken pakke passer", "pakketest", "test", "hvilken", "pakke"],
-    answer: "Book en demo for å se hvilke løsninger og hvilken pakke som passer akkurat deres portefølje. <a href=\"pakke-resultat.html\">Les mer om pakketesten →</a>"
+    answer: "Snakk med oss for å se hvilke løsninger og hvilken pakke som passer akkurat deres portefølje. <a href=\"pakke-resultat.html\">Les mer om pakketesten →</a>"
   },
   {
     keywords: ["høegh eiendom", "20 år som kunde", "maren elise"],
@@ -396,11 +396,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["pris", "koster", "kostnad", "abonnement"],
-    answer: "Fenistra prises etter porteføljens leieomsetning, ikke antall brukere – alle pakker har ubegrenset antall brukere. Book en demo, så finner vi ut hva som passer for dere."
+    answer: "Fenistra prises etter porteføljens leieomsetning, ikke antall brukere – alle pakker har ubegrenset antall brukere. Snakk med oss, så finner vi ut hva som passer for dere."
   },
   {
-    keywords: ["demo", "book demo", "prøve"],
-    answer: "Du kan booke en demo direkte via «Book demo»-knappen øverst på siden, så tar en av våre rådgivere kontakt. <a href=\"pakke-resultat.html\">Les mer om pakketesten →</a>"
+    keywords: ["demo", "book demo", "snakk med oss", "prøve"],
+    answer: "Du kan avtale en demo via «Snakk med oss»-knappen øverst på siden, så tar en av våre rådgivere kontakt. <a href=\"pakke-resultat.html\">Les mer om pakketesten →</a>"
   },
   {
     keywords: ["hei", "hallo", "yo", "morn"],

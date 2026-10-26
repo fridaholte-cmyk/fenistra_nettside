@@ -1,0 +1,27 @@
+<div class="eco" [class.eco-in]="shown()" role="img" aria-label="Fenistra i midten, koblet til Visma Business NXT, Tripletex, Properly, Xledger, Visma.net, PowerOffice GO og Power BI">
+  <svg class="eco-lines" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+    <circle class="eco-orbit" cx="300" cy="300" r="225" />
+    <circle class="eco-orbit eco-orbit-2" cx="300" cy="300" r="140" />
+    @for (l of links; track $index) {
+      <line class="eco-net" [attr.x1]="l.a.x" [attr.y1]="l.a.y" [attr.x2]="l.b.x" [attr.y2]="l.b.y" [style.--i]="$index" />
+    }
+    @for (d of dots; track $index) {
+      <circle class="eco-dot" [attr.cx]="d[0]" [attr.cy]="d[1]" r="2.5" [style.--i]="$index" />
+    }
+    @for (n of nodes; track n.name; let i = $index) {
+      <path class="eco-link" [attr.d]="path(n)" [style.--i]="i" />
+      <circle class="eco-pulse" r="4" [style.--i]="i">
+        <animateMotion [attr.dur]="(2.2 + (i % 3) * 0.5) + 's'" [attr.begin]="(i * 0.35) + 's'" repeatCount="indefinite" [attr.path]="i % 2 ? path(n) : 'M' + n.x + ',' + n.y + ' L300,300'" />
+      </circle>
+    }
+  </svg>
+
+  <div class="eco-core"><img src="images/fenistra-logo.png" alt="" width="132" height="27"></div>
+
+  @for (n of nodes; track n.name; let i = $index) {
+    <div class="eco-node" [style.left.%]="n.x / 6" [style.top.%]="n.y / 6" [style.--i]="i">
+      @if (n.logo) { <img [src]="n.logo" [alt]="n.iconOnly ? '' : n.name" [style.height.px]="n.h" loading="lazy"> }
+      @if (!n.logo || n.iconOnly) { <span>{{ n.name }}</span> }
+    </div>
+  }
+</div>

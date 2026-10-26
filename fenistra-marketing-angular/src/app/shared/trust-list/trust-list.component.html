@@ -1,0 +1,16 @@
+<div class="tl-grid">
+  <h2 class="tl-title"><span [class.tl-in]="t() >= 0">Valgt av bransjen. Sikret av Visma.</span></h2>
+  <ul class="tl-rows">
+    @for (it of items; track it.n; let i = $index) {
+      <li class="tl-row" [class.tl-shown]="shown(i)" [class.tl-active]="active() === i" [class.tl-idle]="active() < 0" (click)="jump(i)">
+        <span class="tl-line"></span>
+        <span class="tl-prog" [style.width.%]="active() === i ? progress() * 100 : 0"></span>
+        <span class="tl-n">{{ it.n }}</span>
+        <div class="tl-body">
+          <h3>{{ it.title }}</h3>
+          <p>{{ it.text }}</p>
+        </div>
+      </li>
+    }
+  </ul>
+</div>

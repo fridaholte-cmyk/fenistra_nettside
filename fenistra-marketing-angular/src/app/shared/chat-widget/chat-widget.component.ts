@@ -96,7 +96,7 @@ export class ChatWidgetComponent {
       } else {
         this.addMessage(
           'Jeg fant dessverre ikke et godt svar på det her. Ta gjerne kontakt med oss, så hjelper vi deg videre:' +
-          '<br><br>Se kontaktinfo til <a href="ansatte#kundeteam" data-internal>kundeteamet</a>, eller <a href="pakke-resultat" data-internal>book en demo</a>.' +
+          '<br><br>Se kontaktinfo til <a href="ansatte#kundeteam" data-internal>kundeteamet</a>, eller <a href="pakke-resultat" data-internal>snakk med oss</a>.' +
           '<br><br>Du finner også svar på flere vanlige spørsmål på <a href="sporsmal" data-internal>Spørsmål og svar-siden</a>.',
           'bot'
         );

@@ -1,0 +1,19 @@
+<div class="ab-card" [class.ab-shown]="shown()" aria-hidden="true">
+  <div class="ab-tabs">
+    @for (label of tabs; track label; let i = $index) {
+      <span [class.ab-tab-on]="qa().on && current().tab === i">{{ label }}</span>
+    }
+  </div>
+  <div class="ab-body">
+    <div class="ab-q">
+      <span class="ab-kind">{{ current().kind }}</span>
+      <span class="ab-text">{{ typed() }}<span class="ab-caret" [class.ab-caret-off]="!typing()"></span></span>
+    </div>
+    <div class="ab-answer">
+      @for (line of answer(); track $index; let last = $last) {
+        <div class="ab-line" [class.ab-source]="$index === current().a.length - 1">{{ line }}</div>
+      }
+    </div>
+  </div>
+</div>
+<p class="ab-caption" [class.ab-shown]="shown()">Slik svarer KI-assistenten i Fenistra. Eksempel med fiktive data.</p>

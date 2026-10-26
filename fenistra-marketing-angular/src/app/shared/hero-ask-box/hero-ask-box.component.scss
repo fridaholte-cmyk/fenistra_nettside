@@ -1,0 +1,50 @@
+/* Colours follow the site tokens: dark plum surface, berry accent (the prototype used #151214 / #D45487) */
+:host { display: block; }
+
+.ab-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--plum-900);
+  color: #EDE8E5;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 1s ease, transform 1s cubic-bezier(.2, .7, .1, 1);
+}
+.ab-card.ab-shown { opacity: 1; transform: none; }
+
+.ab-caption { margin-top: 12px; font-family: var(--font-mono); font-size: 12px; line-height: 1.5; color: var(--ink-soft); opacity: 0; transition: opacity 1s ease .4s; }
+.ab-caption.ab-shown { opacity: 1; }
+
+.ab-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.ab-tabs span { padding-bottom: 6px; color: #7D7477; border-bottom: 1px solid transparent; transition: color .4s, border-color .4s; }
+.ab-tabs span.ab-tab-on { color: #fff; border-bottom-color: var(--berry-mid); }
+
+.ab-body { padding: clamp(18px, 2vw, 26px) 18px; min-height: 230px; display: flex; flex-direction: column; gap: 18px; }
+.ab-q { display: flex; gap: 12px; font-size: clamp(13px, 1.1vw, 15px); line-height: 1.5; color: #fff; }
+.ab-kind { color: var(--berry-mid); }
+.ab-text { text-wrap: pretty; }
+.ab-caret { display: inline-block; width: .55em; height: 1.1em; margin-left: 2px; vertical-align: -.18em; background: var(--berry-mid); animation: abBlink 1s steps(1) infinite; }
+.ab-caret.ab-caret-off { opacity: 0; }
+
+.ab-answer { display: flex; flex-direction: column; gap: 10px; padding-left: 24px; font-size: clamp(12px, 1vw, 14px); line-height: 1.5; }
+.ab-line { color: #EDE8E5; animation: abUp .5s ease both; }
+.ab-line.ab-source { color: #8E8588; }
+
+@keyframes abBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@keyframes abUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ab-card { transition: none; }
+  .ab-caret, .ab-line { animation: none; }
+}

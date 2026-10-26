@@ -1,0 +1,55 @@
+:host { display: block; }
+
+.pa-frame { position: relative; }
+
+/* Pause/play: same look as the site's light buttons (square, thin border), only while the loop can run */
+.pa-toggle {
+  display: none;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color .2s ease, color .2s ease;
+}
+.pa-toggle:hover { border-color: var(--berry-deep); color: var(--berry-deep); }
+.pa-toggle:focus-visible { outline: 2px solid var(--berry-deep); outline-offset: 3px; }
+
+.pa-stage {
+  display: none;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--paper);
+  font-family: var(--font-body);
+  color: var(--plum-deep);
+}
+
+.pa-fallback h2 { font-family: var(--font-display); font-weight: 300; font-size: clamp(30px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 14px; }
+.pa-lead { font-size: 17px; color: var(--ink-soft); line-height: 1.6; max-width: 640px; margin-bottom: 32px; }
+.pa-list { list-style: none; margin: 0; padding: 0; }
+.pa-list li { position: relative; padding: 0 0 26px 34px; }
+.pa-list li::before { content: ""; position: absolute; left: 0; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--plum-deep); }
+.pa-list li::after { content: ""; position: absolute; left: 7px; top: 22px; bottom: 0; width: 2px; background: var(--line); }
+.pa-list li:last-child::before { background: var(--paper); border: 2px solid var(--plum-deep); box-sizing: border-box; }
+.pa-list li:last-child::after { display: none; }
+.pa-list h3 { font-size: 17px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+.pa-list p { font-size: 15px; color: var(--ink-soft); line-height: 1.55; }
+
+/* From tablet width up, once the browser has built it, the animation replaces the text version
+   (which stays in the page for screen readers and search engines) */
+@media (min-width: 760px) {
+  :host(.pa-ready) .pa-stage { display: block; }
+  :host(.pa-ready.pa-motion) .pa-toggle { display: inline-flex; }
+  :host(.pa-ready) .pa-fallback { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+}

@@ -87,7 +87,7 @@ a { color: var(--berry-deep, #7B173E); font-weight: 600; text-decoration: underl
   font-size: 14px;
   font-weight: 600;
   padding: 10px 18px;
-  border-radius: 9px;
+  border-radius: 0;
   border: 1.5px solid var(--line, #E4DEE1);
   background: #fff;
   color: var(--ink, #150A18);
@@ -98,10 +98,10 @@ a { color: var(--berry-deep, #7B173E); font-weight: 600; text-decoration: underl
 }
 // "Avvis alle" and "Godta alle" deliberately share the same style: rejecting must be as easy as accepting.
 .cc-btn-primary {
-  background: var(--berry, #AB3164);
-  border-color: var(--berry, #AB3164);
+  background: var(--berry-deep, #7B173E);
+  border-color: var(--berry-deep, #7B173E);
   color: #fff;
-  &:hover { background: var(--berry-deep, #7B173E); border-color: var(--berry-deep, #7B173E); }
+  &:hover { background: var(--berry-900, #560022); border-color: var(--berry-900, #560022); }
 }
 .cc-btn-link { border-color: transparent; margin-right: auto; padding-left: 4px; text-decoration: underline; }
 

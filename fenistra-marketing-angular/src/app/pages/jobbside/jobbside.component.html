@@ -13,7 +13,7 @@
     <h1>{{ page.h1 }}</h1>
     <p class="jb-lead">{{ page.lead }}</p>
     <div class="jb-actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book en demo</a>
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Snakk med oss</a>
       <a [routerLink]="[]" [fragment]="page.flow ? page.flow.id : 'slik'" class="btn btn-ghost">{{ page.flow ? 'Se steg for steg ↓' : 'Se hvordan ↓' }}</a>
     </div>
   </div>
@@ -101,7 +101,6 @@
 <section class="jb-why" [class.jb-why-noimg]="!page.image">
   <div class="wrap jb-why-grid">
     <div class="jb-why-copy reveal">
-      <div class="eyebrow eyebrow-on-dark">{{ page.whyEyebrow }}</div>
       <h2>{{ page.whyTitle }}</h2>
       <p>{{ page.why }}</p>
       @if (page.whyNote) {
@@ -121,7 +120,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Bygget inn i Fenistra</h2>
-      <p>Dette er delene som gjør jobben. Les mer om hver av dem, eller book en demo, så viser vi hvordan de henger sammen for deres portefølje.</p>
+      <p>Dette er delene som gjør jobben. Les mer om hver av dem, eller snakk med oss, så viser vi hvordan de henger sammen for deres portefølje.</p>
     </div>
     <div class="jb-module-grid">
       @for (m of page.modules; track m.route; let i = $index) {
@@ -155,7 +154,7 @@
   <div class="cta-band reveal">
     <h2>Se hvordan Fenistra gjør dette med deres egen portefølje.</h2>
     <div class="actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book en demo</a>
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Snakk med oss</a>
       <a routerLink="/priser" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Pakker og priser</a>
     </div>
   </div>

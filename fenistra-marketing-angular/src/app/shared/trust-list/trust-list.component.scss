@@ -1,0 +1,51 @@
+/* Prototype colours mapped to the site tokens (#160D1A → --ink, #4E4552 → --ink-soft, #E1DBE0 → --line, #AD3163 → --berry) */
+:host { display: block; }
+
+.tl-grid { display: flex; flex-wrap: wrap; gap: clamp(32px, 6vw, 96px); align-items: flex-start; }
+
+.tl-title {
+  flex: 1 1 320px;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(38px, 5vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -.025em;
+  color: var(--ink);
+  overflow: hidden;
+  padding-bottom: .08em;
+}
+.tl-title span { display: inline-block; transform: translateY(110%); transition: transform 1.1s cubic-bezier(.2, .7, .1, 1); text-wrap: balance; }
+.tl-title span.tl-in { transform: none; }
+
+.tl-rows { flex: 1.3 1 420px; min-width: 0; display: flex; flex-direction: column; list-style: none; margin: 0; padding: 0; }
+
+.tl-row {
+  cursor: pointer;
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 16px;
+  padding: clamp(20px, 2.4vw, 32px) 0;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .8s ease, transform .9s cubic-bezier(.2, .7, .1, 1);
+}
+.tl-row.tl-shown { opacity: 1; transform: none; }
+
+.tl-line { position: absolute; left: 0; right: 0; top: 0; height: 1px; background: var(--line); transform: scaleX(0); transform-origin: left; transition: transform 1.2s cubic-bezier(.2, .7, .1, 1); }
+.tl-row.tl-shown .tl-line { transform: scaleX(1); }
+.tl-prog { position: absolute; left: 0; top: 0; height: 1px; width: 0; background: var(--berry); }
+
+.tl-n { font-family: var(--font-mono); font-size: 13px; padding-top: 6px; color: #8A808C; transition: color .4s; }
+.tl-body { display: flex; flex-direction: column; gap: 8px; }
+.tl-body h3 { margin: 0; font-size: clamp(22px, 2.2vw, 30px); font-weight: 500; letter-spacing: -.015em; color: #8A808C; transition: color .4s; }
+.tl-body p { margin: 0; font-size: 16px; line-height: 1.6; color: #A39AA4; transition: color .4s; text-wrap: pretty; }
+
+.tl-row.tl-active .tl-n { color: var(--berry); }
+.tl-row.tl-active h3, .tl-row.tl-idle h3 { color: var(--ink); }
+.tl-row.tl-active p, .tl-row.tl-idle p { color: var(--ink-soft); }
+
+@media (prefers-reduced-motion: reduce) {
+  .tl-title span, .tl-row, .tl-line { transition: none; }
+}
