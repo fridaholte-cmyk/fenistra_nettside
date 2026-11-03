@@ -513,15 +513,15 @@
 
   /* Store tall: 65 og 60 teller opp fra 10 når seksjonen kommer i syne */
   .hp-numbers{background:var(--plum-900); color:#fff; padding:96px 0 88px;}
-  .hp-big{font-family:var(--font-display); font-weight:300; font-size:clamp(48px,9vw,148px); line-height:.92; letter-spacing:-0.04em; display:flex; align-items:baseline; gap:.18em; white-space:nowrap; font-variant-numeric:tabular-nums;}
+  .hp-big{font-family:var(--font-display); font-weight:300; font-size:clamp(44px,calc(6.6vw / var(--page-zoom, 1)),112px); line-height:.92; letter-spacing:-0.04em; display:flex; align-items:baseline; gap:.18em; white-space:nowrap; font-variant-numeric:tabular-nums;}
   .hp-unit{font-size:max(.36em,14px); letter-spacing:-0.01em; color:var(--berry-mid); font-weight:400;}
   .hp-numbers-row{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:64px; margin-top:28px; align-items:start;}
-  .hp-big-label{font-size:clamp(18px,1.6vw,22px); line-height:1.45; color:rgba(255,255,255,.82); max-width:36ch;}
-  .hp-mid{font-family:var(--font-display); font-weight:300; font-size:clamp(48px,7.4vw,124px); white-space:nowrap; line-height:1; letter-spacing:-0.035em; font-variant-numeric:tabular-nums;}
+  .hp-big-label{font-size:clamp(17px,calc(1.3vw / var(--page-zoom, 1)),20px); line-height:1.45; color:rgba(255,255,255,.82); max-width:36ch;}
+  .hp-mid{font-family:var(--font-display); font-weight:300; font-size:clamp(40px,calc(5.2vw / var(--page-zoom, 1)),92px); white-space:nowrap; line-height:1; letter-spacing:-0.035em; font-variant-numeric:tabular-nums;}
   /* pushed to the right edge so the pair spans the whole width */
   .hp-second{justify-self:end; text-align:right;}
-  .hp-second p + p{margin-top:14px; font-size:17px; color:rgba(255,255,255,.78); line-height:1.5;}
-  .hp-facts{display:flex; justify-content:space-between; gap:24px; list-style:none; margin:72px 0 0; padding:32px 0 0; border-top:1px solid rgba(255,255,255,.18); font-family:var(--font-display); font-weight:300; font-size:clamp(22px,2.4vw,34px); line-height:1.15; letter-spacing:-0.02em; color:#fff;}
+  .hp-second p + p{margin-top:14px; font-size:16px; color:rgba(255,255,255,.78); line-height:1.5;}
+  .hp-facts{display:flex; justify-content:space-between; gap:24px; list-style:none; margin:72px 0 0; padding:32px 0 0; border-top:1px solid rgba(255,255,255,.18); font-family:var(--font-display); font-weight:300; font-size:clamp(20px,calc(1.8vw / var(--page-zoom, 1)),28px); line-height:1.15; letter-spacing:-0.02em; color:#fff;}
   @media (max-width:760px){ .hp-facts{flex-direction:column; gap:14px;} }
 
   /* Logovegg: overskrift og lenke på én linje */
