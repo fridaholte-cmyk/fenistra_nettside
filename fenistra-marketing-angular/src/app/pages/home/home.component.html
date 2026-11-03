@@ -173,11 +173,6 @@
   .nav-panel-simple a:hover{background:var(--paper-2);color:var(--berry-deep);}
 
   /* Integrasjoner: tekst til venstre, animert økosystem til høyre */
-  .eco-section{padding:clamp(72px,8vw,120px) 0; border-top:1px solid var(--line);}
-  .eco-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:56px; align-items:center;}
-  .eco-copy .hp-title{color:var(--ink); margin-bottom:20px;}
-  .eco-copy .hp-lead{margin-bottom:24px;}
-  @media (max-width:980px){ .eco-grid{grid-template-columns:1fr; gap:32px;} }
 
   /* ================= TRYGGHET ================= */
   .trust{padding:clamp(72px,9vw,140px) 0;}
@@ -513,14 +508,10 @@
 
   /* Store tall: 65 og 60 teller opp fra 10 når seksjonen kommer i syne */
   .hp-numbers{background:var(--plum-900); color:#fff; padding:96px 0 88px;}
-  .hp-big{font-family:var(--font-display); font-weight:300; font-size:clamp(44px,calc(6.6vw / var(--page-zoom, 1)),112px); line-height:.92; letter-spacing:-0.04em; display:flex; align-items:baseline; gap:.18em; white-space:nowrap; font-variant-numeric:tabular-nums;}
-  .hp-unit{font-size:max(.36em,14px); letter-spacing:-0.01em; color:var(--berry-mid); font-weight:400;}
-  .hp-numbers-row{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:64px; margin-top:28px; align-items:start;}
-  .hp-big-label{font-size:clamp(17px,calc(1.3vw / var(--page-zoom, 1)),20px); line-height:1.45; color:rgba(255,255,255,.82); max-width:36ch;}
-  .hp-mid{font-family:var(--font-display); font-weight:300; font-size:clamp(40px,calc(5.2vw / var(--page-zoom, 1)),92px); white-space:nowrap; line-height:1; letter-spacing:-0.035em; font-variant-numeric:tabular-nums;}
+  .hp-stats{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:48px;}
+  .hp-stat-label{margin-top:12px; font-size:clamp(16px,calc(1.2vw / var(--page-zoom, 1)),19px); line-height:1.45; color:rgba(255,255,255,.82);}
+  .hp-mid{font-family:var(--font-display); font-weight:300; font-size:clamp(40px,calc(4vw / var(--page-zoom, 1)),72px); white-space:nowrap; line-height:1; letter-spacing:-0.035em; font-variant-numeric:tabular-nums;}
   /* pushed to the right edge so the pair spans the whole width */
-  .hp-second{justify-self:end; text-align:right;}
-  .hp-second p + p{margin-top:14px; font-size:16px; color:rgba(255,255,255,.78); line-height:1.5;}
   .hp-facts{display:flex; justify-content:space-between; gap:24px; list-style:none; margin:72px 0 0; padding:32px 0 0; border-top:1px solid rgba(255,255,255,.18); font-family:var(--font-display); font-weight:300; font-size:clamp(20px,calc(1.8vw / var(--page-zoom, 1)),28px); line-height:1.15; letter-spacing:-0.02em; color:#fff;}
   @media (max-width:760px){ .hp-facts{flex-direction:column; gap:14px;} }
 
@@ -616,31 +607,12 @@
   .hp-more{margin-top:32px;}
 
   /* Leie mot marked */
-  .hp-market{padding:0 0 104px;}
-  .hp-market-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:64px; align-items:center; border-top:1px solid var(--line); padding-top:88px; color:var(--ink);}
-  .hp-market .hp-lead{margin:20px 0 24px;}
-  .hp-rent{margin:0; background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
-  .hp-rent table{width:100%; border-collapse:collapse; font-size:14.5px; font-variant-numeric:tabular-nums;}
-  .hp-rent th{font-family:var(--font-mono); font-size:11.5px; font-weight:400; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-soft); background:var(--paper-2); text-align:left; padding:14px 22px;}
-  .hp-rent td{padding:14px 22px; border-top:1px solid var(--line);}
-  .hp-neg{color:var(--berry-deep); font-weight:600;}
-  .hp-rent figcaption{padding:12px 22px; border-top:1px solid var(--line); font-size:12px; color:var(--ink-soft);}
 
   /* Fenistradagene, lys flate og flere bilder */
-  .hp-fdays{padding:104px 0;}
-  .hp-fdays-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.35fr); gap:64px; align-items:center; color:var(--ink);}
-  .hp-fdays .hp-lead{margin-top:18px;}
-  .hp-fdays-quote{margin:28px 0 32px;}
-  .hp-fdays-quote blockquote{font-family:var(--font-display); font-weight:300; font-size:19px; line-height:1.5; padding-left:20px; border-left:1px solid var(--berry); margin-bottom:12px;}
-  .hp-fdays-quote figcaption{font-size:14px; color:var(--ink-soft);}
-  .hp-fd-photos{display:grid; grid-template-columns:1.4fr 1fr; grid-template-rows:1fr 1fr; gap:12px; height:520px;}
-  .hp-fd-photos img{width:100%; height:100%; object-fit:cover; border-radius:var(--radius);}
-  .hp-fd-photos img:first-child{grid-row:1 / span 2;}
 
   @media (max-width:1080px){
-    .hp-hero-grid, .hp-numbers-row, .hp-pillars-head, .hp-pillar, .hp-people-head, .hp-market-grid, .hp-fdays-grid, .hp-hoegh{grid-template-columns:1fr; gap:40px;}
+    .hp-hero-grid, .hp-stats, .hp-pillars-head, .hp-pillar, .hp-people-head, .hp-hoegh{grid-template-columns:1fr; gap:40px;}
     .hp-pillar:nth-of-type(odd) .hp-shot{order:0;}
-    .hp-second{justify-self:start; text-align:left;}
     .hp-hero-visual{min-height:480px;}
     .hp-people-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
     .hp-voices-grid, .hp-buyers-grid{grid-template-columns:1fr;}
@@ -651,10 +623,8 @@
     .hp-hero-copy{padding-bottom:24px;}
     .hp-hero-visual{min-height:0; padding-bottom:48px;}
     .hp-hero-photo{position:relative; inset:auto; aspect-ratio:4/3;}
-    .hp-numbers, .hp-pillars, .hp-buyers, .hp-people, .hp-voices, .hp-fdays{padding:64px 0;}
-    .proof-quote, .hp-market{padding-bottom:64px;}
-    .hp-market-grid{padding-top:56px;}
-    .hp-big{font-size:clamp(28px,9.2vw,64px);}
+    .hp-numbers, .hp-pillars, .hp-buyers, .hp-people, .hp-voices{padding:64px 0;}
+    .proof-quote{padding-bottom:64px;}
     .hp-facts{flex-direction:column; gap:8px;}
     .hp-facts li{border:none; padding:0; margin:0;}
     .hp-areas{grid-template-columns:1fr;}
@@ -662,10 +632,9 @@
     .hp-hoegh > img{min-height:260px;}
     .hp-people-grid{gap:12px;}
     .hp-csm{grid-template-columns:1fr;}
-    .hp-fd-photos{height:360px;}
-    .hp-rent th:nth-child(3), .hp-rent td:nth-child(3){display:none;}
-    .hp-rent th, .hp-rent td{padding:12px 14px;}
   }
+  #prosess{scroll-margin-top:76px;}
+  .hp-prosess-cta{display:flex; justify-content:center; margin-top:32px;}
 </style>
 <!-- ================= HERO ================= -->
 <section class="hp-hero">
@@ -675,7 +644,7 @@
       <p class="hp-lead hp-in hp-in-3">Forvaltningssystem for næringseiendom, med over 30 år med faget bygget inn. Fenistra svarer, sier ifra og gjør jobben, fra første henvendelse til ferdig avregnet.</p>
       <div class="hp-actions hp-in hp-in-4">
         <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
-        <a routerLink="/ki" class="btn btn-ghost">Se hvordan vi hjelper</a>
+        <a routerLink="/" fragment="prosess" class="btn btn-ghost">Se Fenistra i bruk</a>
       </div>
     </div>
     <div class="hp-hero-visual">
@@ -691,16 +660,19 @@
 <section class="hp-numbers" aria-labelledby="tall-tittel">
   <div class="wrap">
     <h2 id="tall-tittel" class="sr-only">Fenistra i tall</h2>
-    <p class="hp-big">
-      <span class="sr-only">65 000 000 000 kroner</span>
-      <span aria-hidden="true">{{ bigCount() }} 000 000 000</span>
-      <span class="hp-unit" aria-hidden="true">kr</span>
-    </p>
-    <div class="hp-numbers-row">
-      <p class="hp-big-label">i leieomsetning faktureres fra Fenistra hvert år.</p>
-      <div class="hp-second">
+    <!-- XXXXX: plassholdere til vi har tallene for brukere og kvadratmeter -->
+    <div class="hp-stats">
+      <div class="hp-stat">
         <p class="hp-mid"><span class="sr-only">Over 60 000</span><span aria-hidden="true">Over {{ midCount() }} 000</span></p>
-        <p>leiekontrakter i systemet.</p>
+        <p class="hp-stat-label">leiekontrakter i systemet</p>
+      </div>
+      <div class="hp-stat">
+        <p class="hp-mid">XXXXX</p>
+        <p class="hp-stat-label">brukere</p>
+      </div>
+      <div class="hp-stat">
+        <p class="hp-mid">XXXXX</p>
+        <p class="hp-stat-label">kvadratmeter i systemet</p>
       </div>
     </div>
     <ul class="hp-facts">
@@ -757,6 +729,35 @@
   </div>
 </section>
 
+<!-- ================= KUNDENES EGNE ORD (sitater ordrett som publisert) ================= -->
+<section class="hp-voices" aria-labelledby="voices-title">
+  <div class="wrap">
+    <h2 id="voices-title" class="hp-title reveal">Kundenes egne ord</h2>
+    <div class="hp-voices-grid">
+      <figure class="hp-voice reveal">
+        <img src="images/kunder-04.jpg" width="900" height="802" alt="Tine Wergeland Johannessen, utleie- og markedssjef i Backer AS" loading="lazy">
+        <blockquote>«For oss i Backer var det avgjørende å velge en løsning som er både moderne og intuitiv. Vi valgte Fenistra fordi de kombinerer dyp bransjekunnskap med et verktøy som forenkler hverdagen vår og gir oss den innsikten vi trenger for å vokse videre. Gjennom dette samarbeidet får vi et solid fundament for profesjonell eiendomsforvaltning i mange år fremover.»</blockquote>
+        <figcaption><span class="hp-who">Tine Wergeland Johannessen</span><span class="hp-role">Utleie- og markedssjef, Backer AS</span></figcaption>
+        <a routerLink="/media-backer" class="hp-link">Les historien →</a>
+      </figure>
+      <figure class="hp-voice reveal">
+        <img src="images/kunder-03.jpg" width="1412" height="806" alt="Ninette Jurs, kontraktsforvalter i Aspelin Ramm, og Kristin Støfringsdal, eiendomsforvalter på Vulkan" loading="lazy">
+        <!-- ordrett fra propertysolutions.no, 30.10.2024; [...] hopper over setningen som nevner «Fenistra.net» -->
+        <blockquote>«Dette fungerer veldig bra. Det er mye mer brukervennlig enn den gamle løsningen og gir full oversikt over alle leietakere på en enkel og oversiktlig måte. […] I de fleste rapportene er det også veldig enkelt å tilpasse rapportene etter hva du har behov for.»</blockquote>
+        <figcaption><span class="hp-who">Ninette Jurs og Kristin Støfringsdal</span><span class="hp-role">Kontraktsforvalter og eiendomsforvalter, Aspelin Ramm</span></figcaption>
+        <a href="https://propertysolutions.no/aktuelt/-fenistras-skybaserte-l%C3%B8sning-gir-full-oversikt-over-alle-leietakere-p%C3%A5-en-enkel-og-oversiktlig-m%C3%A5te" target="_blank" rel="noopener" class="hp-link">Les historien →</a>
+      </figure>
+      <figure class="hp-voice reveal">
+        <img src="images/kunder-02.jpg" width="960" height="1280" alt="Bente Haugsdal, tidligere utviklingssjef, Frydenbø Eiendom" loading="lazy">
+        <blockquote>«Fenistra har utviklet seg i takt med krav og regelverk i tett samarbeid med eiendomsbesittere. Vår erfaring har vært at når det rulles ut nye moduler, så er dette kvalitetssikret både mot regelverk og et behov i bransjen. Det er gjort mye forarbeid og grundig erfaringsutveksling før en iverksetter nye løsninger, noe som gir oss trygghet for kvalitet og behov.»</blockquote>
+        <figcaption><span class="hp-who">Bente Haugsdal</span><span class="hp-role">Tidligere utviklingssjef, Frydenbø Eiendom</span></figcaption>
+        <a routerLink="/media-kontinuerlig-verdi" class="hp-link">Les historien →</a>
+      </figure>
+    </div>
+    <p class="hp-more reveal"><a routerLink="/kunder" class="hp-link">Les flere kundehistorier →</a></p>
+  </div>
+</section>
+
 <!-- ================= TRE SØYLER: svarer, sier ifra, gjør jobben ================= -->
 <section class="hp-pillars" aria-labelledby="soyler-tittel">
   <div class="wrap">
@@ -769,11 +770,11 @@
       <div>
         <h3>Svarer</h3>
         <p class="hp-sub">Om porteføljen, leienivået, ledigheten.</p>
-        <p class="hp-body">Spør Fenistra med vanlige ord, og få svar med kilder fra egne data og markedsdata fra Arealstatistikk.</p>
+        <p class="hp-body">Spør Fenistra med vanlige ord, og få svar med kilder fra egne data og markedsdata fra <a href="https://arealstatistikk.no/" target="_blank" rel="noopener">Arealstatistikk</a>.</p>
         <ul class="hp-areas">
           <li><b>Porteføljeoversikt</b><span>Hele porteføljen, raskt og enkelt</span></li>
           <li><b>Analyser og prognoser</b><span>Inntekter, kostnader og budsjett</span></li>
-          <li><b>Leie mot marked</b><span>Snittleie fra Arealstatistikk</span></li>
+          <li><b>Leie mot marked</b><span>Snittleie fra <a href="https://arealstatistikk.no/" target="_blank" rel="noopener">Arealstatistikk</a></span></li>
           <li><b>Tilgang for alle roller</b><span>Ledelse, utleie og forvaltning</span></li>
         </ul>
         <a routerLink="/rapport-og-analyse" class="hp-link">Se mulighetene i porteføljen →</a>
@@ -819,18 +820,9 @@
 <section id="prosess">
   <div class="wrap">
     <app-process-animation></app-process-animation>
-  </div>
-</section>
-
-<!-- ================= INTEGRASJONER (animert økosystem) ================= -->
-<section class="eco-section" aria-labelledby="eco-title">
-  <div class="wrap eco-grid">
-    <div class="eco-copy reveal">
-      <h2 id="eco-title" class="hp-title">Knytt Fenistra til systemene dere allerede bruker i dag.</h2>
-      <p class="hp-lead">26 integrerte systemer, blant dem 19 regnskaps- og ERP-systemer. Data registreres én gang og deles med regnskap, rapportering og drift.</p>
-      <a routerLink="/integrasjoner" class="hp-link">Se alle integrasjoner →</a>
+    <div class="hp-prosess-cta">
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
     </div>
-    <app-ecosystem></app-ecosystem>
   </div>
 </section>
 
@@ -855,10 +847,11 @@
         <h3>Også den rare kontrakten.</h3>
         <p>Enkelt i hverdagen, og riktig når kontrakten ikke er standard.</p>
         <ul class="hp-checks">
-          <li>Trappetrinnsleie og leierabatter</li>
+          <li>Trappetrinnsleie og leiefritak</li>
           <li>Omsetningsbasert leie</li>
           <li>Utleie-, fremleie- og interne kontrakter</li>
           <li>Kontrakter med spesielle vilkår</li>
+          <li>Momsproblematikk: delvis MVA-pliktige lokaler, frivillig registrering og justering</li>
         </ul>
         <a routerLink="/losning-kontrakter" class="hp-link">Se hvordan kontraktene håndteres →</a>
       </article>
@@ -870,7 +863,7 @@
 <section class="hp-people" aria-labelledby="folk-tittel">
   <div class="wrap">
     <div class="hp-people-head reveal">
-      <h2 id="folk-tittel" class="hp-title">Fagfolkene er en telefon unna.</h2>
+      <h2 id="folk-tittel" class="hp-title">Fagfolkene er aldri langt unna.</h2>
       <p class="hp-lead">Veiledningen er bygget inn i systemet, og fagfolkene våre sitter både hos oss og ute hos kundene.</p>
     </div>
     <div class="hp-people-grid">
@@ -891,86 +884,10 @@
   </div>
 </section>
 
-<!-- ================= KUNDENES EGNE ORD (sitater ordrett som publisert) ================= -->
-<section class="hp-voices" aria-labelledby="voices-title">
-  <div class="wrap">
-    <h2 id="voices-title" class="hp-title reveal">Kundenes egne ord</h2>
-    <div class="hp-voices-grid">
-      <figure class="hp-voice reveal">
-        <img src="images/kunder-04.jpg" width="900" height="802" alt="Tine Wergeland Johannessen, utleie- og markedssjef i Backer AS" loading="lazy">
-        <blockquote>«For oss i Backer var det avgjørende å velge en løsning som er både moderne og intuitiv. Vi valgte Fenistra fordi de kombinerer dyp bransjekunnskap med et verktøy som forenkler hverdagen vår og gir oss den innsikten vi trenger for å vokse videre. Gjennom dette samarbeidet får vi et solid fundament for profesjonell eiendomsforvaltning i mange år fremover.»</blockquote>
-        <figcaption><span class="hp-who">Tine Wergeland Johannessen</span><span class="hp-role">Utleie- og markedssjef, Backer AS</span></figcaption>
-        <a routerLink="/media-backer" class="hp-link">Les historien →</a>
-      </figure>
-      <figure class="hp-voice reveal">
-        <img src="images/kunder-03.jpg" width="1412" height="806" alt="Ninette Jurs, kontraktsforvalter i Aspelin Ramm, og Kristin Støfringsdal, eiendomsforvalter på Vulkan" loading="lazy">
-        <!-- ordrett fra propertysolutions.no, 30.10.2024; [...] hopper over setningen som nevner «Fenistra.net» -->
-        <blockquote>«Dette fungerer veldig bra. Det er mye mer brukervennlig enn den gamle løsningen og gir full oversikt over alle leietakere på en enkel og oversiktlig måte. […] I de fleste rapportene er det også veldig enkelt å tilpasse rapportene etter hva du har behov for.»</blockquote>
-        <figcaption><span class="hp-who">Ninette Jurs og Kristin Støfringsdal</span><span class="hp-role">Kontraktsforvalter og eiendomsforvalter, Aspelin Ramm</span></figcaption>
-        <a href="https://propertysolutions.no/aktuelt/-fenistras-skybaserte-l%C3%B8sning-gir-full-oversikt-over-alle-leietakere-p%C3%A5-en-enkel-og-oversiktlig-m%C3%A5te" target="_blank" rel="noopener" class="hp-link">Les historien →</a>
-      </figure>
-      <figure class="hp-voice reveal">
-        <img src="images/kunder-02.jpg" width="960" height="1280" alt="Bente Haugsdal, tidligere utviklingssjef, Frydenbø Eiendom" loading="lazy">
-        <blockquote>«Fenistra har utviklet seg i takt med krav og regelverk i tett samarbeid med eiendomsbesittere. Vår erfaring har vært at når det rulles ut nye moduler, så er dette kvalitetssikret både mot regelverk og et behov i bransjen. Det er gjort mye forarbeid og grundig erfaringsutveksling før en iverksetter nye løsninger, noe som gir oss trygghet for kvalitet og behov.»</blockquote>
-        <figcaption><span class="hp-who">Bente Haugsdal</span><span class="hp-role">Tidligere utviklingssjef, Frydenbø Eiendom</span></figcaption>
-        <a routerLink="/media-kontinuerlig-verdi" class="hp-link">Les historien →</a>
-      </figure>
-    </div>
-    <p class="hp-more reveal"><a routerLink="/kunder" class="hp-link">Les flere kundehistorier →</a></p>
-  </div>
-</section>
-
-<!-- ================= LEIE MOT MARKED (Arealstatistikk) ================= -->
-<section class="hp-market" aria-labelledby="marked-tittel">
-  <div class="wrap hp-market-grid">
-    <div class="reveal">
-      <h2 id="marked-tittel" class="hp-title">Se hvilke kontrakter som ligger under markedet.</h2>
-      <p class="hp-lead">Fenistra sammenligner leien i kontraktene deres med snittleie fra Arealstatistikk for riktig sone og leietype. Dere ser hva som bør reforhandles, før kontrakten løper ut.</p>
-      <a routerLink="/ki" class="hp-link">Slik hjelper vi →</a>
-    </div>
-    <figure class="hp-rent reveal">
-      <table>
-        <caption class="sr-only">Eksempel: leie mot marked, fiktive data</caption>
-        <thead><tr><th scope="col">Lokale</th><th scope="col">Leie kr/m²</th><th scope="col">Marked kr/m²</th><th scope="col">Avvik</th></tr></thead>
-        <tbody>
-          <tr><td>Storgata 12, 3. etg.</td><td>2 150</td><td>2 480</td><td class="hp-neg">−13 %</td></tr>
-          <tr><td>Kanalen 4, butikk</td><td>3 900</td><td>4 200</td><td class="hp-neg">−7 %</td></tr>
-          <tr><td>Havneveien 8, lager</td><td>1 120</td><td>1 090</td><td>+3 %</td></tr>
-          <tr><td>Torget 1, kontor</td><td>2 600</td><td>2 950</td><td class="hp-neg">−12 %</td></tr>
-        </tbody>
-      </table>
-      <figcaption>Eksempel med fiktive data. Markedsdata fra Arealstatistikk.</figcaption>
-    </figure>
-  </div>
-</section>
-
 <!-- ================= TRYGGHET (animert liste) ================= -->
 <section class="trust" aria-label="Valgt av bransjen. Sikret av Visma.">
   <div class="wrap">
     <app-trust-list></app-trust-list>
-  </div>
-</section>
-
-<!-- ================= FENISTRADAGENE ================= -->
-<section class="hp-fdays" aria-labelledby="fdays-title">
-  <div class="wrap hp-fdays-grid">
-    <div class="reveal">
-      <h2 id="fdays-title" class="hp-title">Fagdag for Fenistrakunder</h2>
-      <p class="hp-lead">Kurs, foredrag og samtaler med kunder og fagfolk fra Fenistra.</p>
-      <figure class="hp-fdays-quote">
-        <blockquote>«Fenistradagene er en kjempefin mulighet til å lære mer og bli inspirert. Her møter vi andre i bransjen, og vi får utvekslet og delt fagkompetanse.»</blockquote>
-        <figcaption><span class="hp-who">Lene Hansen</span> · Servicekoordinator, Höegh Eiendom</figcaption>
-      </figure>
-      <div class="hp-actions">
-        <a routerLink="/kontakt-oss" class="btn btn-primary">Meld interesse for 2027</a>
-        <a routerLink="/fenistradagene" class="hp-link">Se Fenistradagene →</a>
-      </div>
-    </div>
-    <div class="hp-fd-photos reveal">
-      <img src="images/fd2026-21.jpg" width="1200" height="1800" alt="Deltakere i salen under Fenistradagene 2026" loading="lazy">
-      <img src="images/fd2026-61-1.jpg" width="1200" height="1800" alt="Kunder i samtale i pausen på Fenistradagene 2026" loading="lazy">
-      <img src="images/fd2026-40-1.jpg" width="1800" height="1200" alt="Fagsesjon i et mindre rom på Fenistradagene 2026" loading="lazy">
-    </div>
   </div>
 </section>
 

@@ -762,26 +762,6 @@
   }
 }
 
-  /* ================= FIT QUIZ (shared, global) ================= */
-  .quiz-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.5);z-index:399;opacity:0;pointer-events:none;transition:opacity .25s ease;}
-  .quiz-backdrop.open{opacity:1;pointer-events:auto;}
-  .quiz-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-48%);width:min(600px, calc(100% - 32px));max-height:min(680px, calc(100vh - 48px));z-index:400;background:#fff;border-radius:20px;box-shadow:0 40px 80px -20px rgba(15,23,42,.45);display:flex;flex-direction:column;overflow:hidden;opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;}
-  .quiz-modal.open{opacity:1;transform:translate(-50%,-50%);pointer-events:auto;}
-  .quiz-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--line);flex-shrink:0;}
-  .quiz-head-title{font-family:var(--font-mono);font-size:12px;color:var(--ink-soft);}
-  .quiz-close{border:none;background:none;cursor:pointer;color:var(--ink-soft);font-size:16px;padding:4px;}
-  .quiz-close:hover{color:var(--ink);}
-  .quiz-progress-track{height:3px;background:var(--line);flex-shrink:0;}
-  .quiz-progress-bar{height:100%;background:var(--berry);transition:width .3s ease;}
-  .quiz-body{padding:32px 28px;overflow-y:auto;flex:1;}
-  .quiz-question{font-family:var(--font-display);font-weight:400;font-size:20px;letter-spacing:-0.01em;color:var(--ink);margin-bottom:22px;line-height:1.35;}
-  .quiz-options{display:flex;flex-direction:column;gap:10px;}
-  .quiz-option{text-align:left;padding:14px 18px;border:1.5px solid var(--line);border-radius:12px;font-size:15px;color:var(--ink);cursor:pointer;transition:border-color .15s ease, background .15s ease;background:#fff;}
-  .quiz-option:hover{border-color:var(--plum);background:var(--paper-2);}
-  .quiz-option.selected{border-color:var(--berry);background:var(--berry-light);color:var(--berry-deep);font-weight:600;}
-  .quiz-nav{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-top:1px solid var(--line);flex-shrink:0;}
-  .quiz-nav .spacer{flex:1;}
-  .quiz-nav button:disabled{opacity:.4;cursor:default;}
 
   /* ================= MOBILE MENU =================
      Scoped to app-header so it wins over the copies of the old drawer CSS in the page components.
@@ -844,11 +824,9 @@ main:focus{outline:none;}
 /* Closed panels are only faded out, so their links and fields could still be reached with Tab.
    visibility:hidden takes them out of the tab order and away from screen readers (after the fade). */
 body .chat-panel:not(.open),
-body .search-panel:not(.open),
-body .quiz-modal:not(.open){visibility:hidden;transition:opacity .22s ease, transform .22s ease, visibility 0s linear .22s;}
+body .search-panel:not(.open){visibility:hidden;transition:opacity .22s ease, transform .22s ease, visibility 0s linear .22s;}
 body .chat-panel.open,
-body .search-panel.open,
-body .quiz-modal.open{visibility:visible;}
+body .search-panel.open{visibility:visible;}
 
 /* Contrast (1.4.3): small pink labels on dark backgrounds were 3.2:1, now 5.3:1 */
 body .eyebrow-on-dark{color:#CBD5E1;}

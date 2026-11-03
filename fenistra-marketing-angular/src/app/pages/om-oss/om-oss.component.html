@@ -320,39 +320,31 @@
   .ao-value .n{font-family:var(--font-mono);font-weight:700;font-size:13px;color:var(--berry);}
   .ao-value h3{font-size:19px;font-weight:600;color:var(--ink);margin:0 0 10px;letter-spacing:-0.01em;}
   .ao-value p{font-size:15px;color:var(--ink-soft);line-height:1.6;}
-  .ao-team{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center;}
-  .ao-team-photo{border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(15,23,42,.45);}
-  .ao-team-photo img{display:block;width:100%;height:auto;}
-  .ao-team-cards{display:flex;flex-direction:column;gap:16px;}
+  .ao-team-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
   .ao-team-card{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:border-color .2s ease,transform .2s ease;}
   .ao-team-card:hover{border-color:var(--berry-mid);transform:translateY(-2px);}
   .ao-team-card img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
   .ao-team-card h3{font-size:17px;font-weight:600;color:var(--ink);margin-bottom:6px;}
   .ao-team-card p{font-size:14.5px;color:var(--ink-soft);line-height:1.55;}
   .ao-team-card .go{display:inline-block;margin-top:10px;font-family:var(--font-mono);font-size:12.5px;color:var(--berry-deep);}
-  .ao-photos{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-  .ao-photos figure{margin:0;border-radius:16px;overflow:hidden;aspect-ratio:4/3;}
-  .ao-photos img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease;}
-  .ao-photos figure:hover img{transform:scale(1.03);}
   section.ao-cta{padding-top:0;padding-bottom:20px;}
   .ao-contact{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:20px;font-size:14.5px;color:rgba(255,255,255,.8);}
   .ao-contact a{color:#fff;font-weight:600;}
   @media (max-width:980px){
     .ao-stats-grid{grid-template-columns:1fr 1fr;row-gap:36px;}
     .ao-values{grid-template-columns:1fr;}
-    .ao-team{grid-template-columns:1fr;gap:32px;}
+    .ao-team-cards{grid-template-columns:1fr;}
   }
   @media (max-width:760px){
     section.ao-hero{padding:40px 0 56px;}
     section.ao-section{padding:72px 0;}
-    .ao-photos{grid-template-columns:1fr;}
   }
 </style>
 <!-- ================= HERO ================= -->
 <section class="ao-hero">
   <div class="wrap">
     <h1>Fenistra kan eiendom</h1>
-    <p class="ao-lead">Eiendom krever kunnskap. Om kontraktene, reglene, markedet og menneskene som bruker byggene. Fenistra har utviklet løsninger for eiendom siden 1994, og vi bruker erfaringen sammen med kundens kontrakter, markedsinnsikt fra Arealstatistikk og AI, så kundene kan vurdere muligheter, følge opp leietakere og få arbeidet gjort. Over 170 eiendomsforvaltere bruker Fenistra, og vi er en del av Visma.</p>
+    <p class="ao-lead">Eiendom krever kunnskap. Om kontraktene, reglene, markedet og menneskene som bruker byggene. Fenistra har utviklet løsninger for eiendom siden 1994, og vi bruker erfaringen sammen med kundens kontrakter, markedsinnsikt fra <a href="https://arealstatistikk.no/" target="_blank" rel="noopener">Arealstatistikk</a> og AI, så kundene kan vurdere muligheter, følge opp leietakere og få arbeidet gjort. Over 170 eiendomsforvaltere bruker Fenistra, og vi er en del av Visma.</p>
     <div class="ao-actions">
       <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
       <a routerLink="/kunder" class="btn btn-ghost">Se kundehistorier</a>
@@ -398,7 +390,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Tre tiår med erfaring, og vi har bare så vidt begynt</h2>
-      <p>Fra et lite norsk fagmiljø i 1994 til den skybaserte plattformen Fenistra.net, med markedsdata fra Arealstatistikk og AI som gjør kunnskapen anvendelig. Fenistra kan eiendom.</p>
+      <p>Fra et lite norsk fagmiljø i 1994 til den skybaserte plattformen Fenistra.net, med markedsdata fra <a href="https://arealstatistikk.no/" target="_blank" rel="noopener">Arealstatistikk</a> og AI som gjør kunnskapen anvendelig. Fenistra kan eiendom.</p>
     </div>
     <div class="timeline reveal">
       <div class="timeline-track">
@@ -474,9 +466,6 @@
       <p>Fra utvikling og produkt til kundesuksess og support står et fagmiljø med lang bransjeerfaring bak systemet. Vi sitter på Skøyen i Oslo og jobber tett på tvers av fagområder, så Fenistra henger sammen som ett system.</p>
     </div>
     <div class="ao-team">
-      <div class="ao-team-photo reveal">
-        <img width="1100" height="631" src="images/team-dinner.jpg" alt="Utviklerteamet i Fenistra samlet til middag" loading="lazy" decoding="async">
-      </div>
       <div class="ao-team-cards">
         <a routerLink="/ansatte" fragment="kundeteam" class="ao-team-card reveal">
           <img width="200" height="200" src="images/ansatte-01.jpg" alt="" loading="lazy" decoding="async">
@@ -495,20 +484,6 @@
           </div>
         </a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SOSIALT ================= -->
-<section class="ao-section ao-alt">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Vi stiller lag i Holmenkollstafetten hvert år</h2>
-      <p>Hvert år stiller Visma Property Solutions med eget lag, på tvers av avdelinger.</p>
-    </div>
-    <div class="ao-photos">
-      <figure class="reveal"><img width="1100" height="824" src="images/team-hks-1.jpg" alt="Fenistra-teamet før start i Holmenkollstafetten" loading="lazy" decoding="async"></figure>
-      <figure class="reveal"><img width="694" height="367" src="images/team-hks-2.jpg" alt="Fenistra-teamet etter Holmenkollstafetten" loading="lazy" decoding="async"></figure>
     </div>
   </div>
 </section>

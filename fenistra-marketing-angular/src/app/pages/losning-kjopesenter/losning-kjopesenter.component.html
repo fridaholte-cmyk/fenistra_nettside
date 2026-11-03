@@ -319,6 +319,27 @@
     .chat-panel{width:calc(100vw - 24px);height:min(70vh, 560px);right:12px;bottom:12px;}
     .chat-trigger{right:16px;bottom:16px;}
   }
+  /* Kjøpesenter: Retail Hub-innlogging, tre roller, logovegg */
+  .kj-report{padding:0 0 56px;}
+  .kj-report-box{display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius); padding:24px 28px;}
+  .kj-report-box h2{font-size:19px; font-weight:600; letter-spacing:-0.01em; margin-bottom:4px;}
+  .kj-report-box p{color:var(--ink-soft); font-size:15.5px; max-width:62ch;}
+  .kj-report-box p a{color:var(--ink); font-weight:600; text-decoration:underline; text-underline-offset:3px;}
+  .kj-roles{padding:88px 0;}
+  .kj-roles-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px;}
+  .kj-role{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:32px 28px;}
+  .kj-role-for{font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); margin-bottom:14px;}
+  .kj-role h3{font-size:21px; line-height:1.3; letter-spacing:-0.015em; margin-bottom:12px;}
+  .kj-role > p{color:var(--ink-soft); font-size:15.5px; margin-bottom:18px;}
+  .kj-role ul{display:flex; flex-direction:column; gap:8px; font-size:15px;}
+  .kj-role li{padding-left:18px; position:relative;}
+  .kj-role li::before{content:""; position:absolute; left:0; top:.62em; width:7px; height:7px; border-radius:50%; background:var(--berry-mid);}
+  .kj-logos{padding:0 0 88px;}
+  .kj-logo-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid var(--line); border-left:1px solid var(--line);}
+  .kj-logo-grid li{display:flex; align-items:center; justify-content:center; height:120px; padding:16px; border-right:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .kj-logo-grid img{width:auto; max-width:80%; object-fit:contain;}
+  .kj-logo-name{font-weight:500; font-size:16px; color:var(--plum);}
+  @media (max-width:900px){ .kj-roles-grid{grid-template-columns:1fr;} .kj-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr));} }
 </style>
 <div class="wrap">
   <div class="breadcrumb">
@@ -331,8 +352,8 @@
 <section class="mp-hero">
   <div class="wrap">
     <h1>Fenistra Kjøpesenter</h1>
-    <p class="mp-lead">Full oversikt over senterdrift for senterleder, med fokus på butikk, aktiviteter og omsetningsrapportering.</p>
-    
+    <p class="mp-lead">Ett system for hele senteret. Omsetning, leietakere og drift ligger samlet, så eiendomsselskapet, butikkene og senterleder jobber ut fra de samme tallene. Vi samarbeider med Norsk Retail Hub.</p>
+
     <div class="mp-actions">
       <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
       <a routerLink="/losninger" class="btn btn-ghost">Se hele plattformen →</a>
@@ -340,15 +361,78 @@
   </div>
 </section>
 
+<section class="kj-report" aria-labelledby="kj-report-title">
+  <div class="wrap">
+    <div class="kj-report-box">
+      <div>
+        <h2 id="kj-report-title">Skal du rapportere omsetning?</h2>
+        <p>Er du medlem av Norsk Retail Hub og skal rapportere omsetning, logg deg inn <a href="http://Fenistra.net">her</a>.</p>
+      </div>
+      <a href="http://Fenistra.net" class="btn btn-ghost">Logg inn i Fenistra.net →</a>
+    </div>
+  </div>
+</section>
+
 <section class="mp-why">
-  <div class="wrap mp-why-grid">
+  <div class="wrap">
     <div class="reveal">
       <p class="mp-why-text">Senterets omsetning og besøk følges løpende, med automatisk purring når leietakere ikke rapporterer. Det gir et sikrere grunnlag for omsetningsleie og drift.</p>
     </div>
-    <div class="mp-facts reveal">
-        <div class="mp-fact"><span>Pakke</span><strong>Tilleggsprodukt (inkludert i Premium)</strong></div>
-        <div class="mp-fact"><span>Passer for</span><strong>Senterledelse, eiendomsforvaltere</strong></div>
+  </div>
+</section>
+
+<section class="kj-roles" aria-labelledby="kj-roles-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 id="kj-roles-title">Verdi for alle som driver senteret</h2>
+      <p>Når omsetningen rapporteres ett sted og knyttes til kontraktene, får hver rolle det den trenger, uten regneark og e-poster fram og tilbake.</p>
     </div>
+    <div class="kj-roles-grid">
+      <article class="kj-role reveal">
+        <p class="kj-role-for">Eiendomsselskapet</p>
+        <h3>Riktig omsetningsleie og et bedre beslutningsgrunnlag.</h3>
+        <p>Omsetningen avregnes mot kontraktene, så leien blir riktig og dokumentert.</p>
+        <ul>
+          <li>Omsetningsleie beregnet fra rapporterte tall</li>
+          <li>Revisorbekreftet omsetning samlet ett sted</li>
+          <li>Utvikling per senter og leietaker over tid</li>
+        </ul>
+      </article>
+      <article class="kj-role reveal">
+        <p class="kj-role-for">Butikkbrukere</p>
+        <h3>Rask og enkel rapportering av omsetning.</h3>
+        <p>Butikkene rapporterer selv i Fenistra.net, når det passer dem.</p>
+        <ul>
+          <li>Påminnelse når fristen nærmer seg</li>
+          <li>Egne tall og historikk samlet</li>
+          <li>Innlogging for medlemmer av Norsk Retail Hub</li>
+        </ul>
+      </article>
+      <article class="kj-role reveal">
+        <p class="kj-role-for">Senterleder</p>
+        <h3>Hele senteret på én skjerm.</h3>
+        <p>Omsetning, besøk og aktiviteter samlet, så du ser hva som virker.</p>
+        <ul>
+          <li>Ukesrapporter og senterdashbord</li>
+          <li>Effekten av aktiviteter, med vær- og besøkstall</li>
+          <li>Automatisk purring når butikker ikke rapporterer</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Logovegg for kjøpesenterkunder: legg til flere i listen etter hvert som logoene er klare -->
+<section class="kj-logos" aria-labelledby="kj-logos-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 id="kj-logos-title">Sentre som driftes med Fenistra</h2>
+    </div>
+    <ul class="kj-logo-grid reveal">
+      <li><img src="images/kunder/alti.svg" alt="Alti" style="height:45px" loading="lazy"></li>
+      <li><img src="images/kunder/lagunen.png" alt="Lagunen" style="height:40px" loading="lazy"></li>
+      <li><span class="kj-logo-name">CC Gjøvik</span></li>
+    </ul>
   </div>
 </section>
 
@@ -403,38 +487,7 @@
             <p style="color:var(--ink-soft);font-size:15px;">Systemet automatiserer purringer for manglende rapportering, med mulighet for tilpassede purretekster og funksjoner som sikrer korrekt rapportering av omsetningsleie.</p>
           </div>
         </div>
-        <div class="mp-together">
-          <h3>Fungerer sammen med</h3>
-          <div class="related-chips">
-            <a routerLink="/losning-omsetningsavregning">Omsetningsavregning</a>
-<a routerLink="/losning-rbo">Revisorbekreftet omsetning</a>
-<a routerLink="/losning-rapportering">Rapportering</a>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="related-section">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Løsninger som ofte brukes sammen med Kjøpesenter</h2>
-      <p>Fenistra er bygget som ett system. Bruk løsningene sammen, eller sett sammen kombinasjonen som passer deres portefølje.</p>
-    </div>
-    <div class="mini-grid">
-      <a routerLink="/losning-omsetningsavregning" class="mini-card">
-        <h3>Omsetningsavregning</h3>
-        <p>Riktig leie, basert på faktisk omsetning.</p>
-      </a>
-<a routerLink="/losning-rbo" class="mini-card">
-        <h3>Revisorbekreftet omsetning</h3>
-        <p>Leietakernes reviderte omsetningstall, samlet og administrert.</p>
-      </a>
-<a routerLink="/losning-rapportering" class="mini-card">
-        <h3>Rapportering</h3>
-        <p>Nøkkeltallene deres, hentet fra kontraktene.</p>
-      </a>
     </div>
   </div>
 </section>

@@ -14,7 +14,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["passer fenistra", "passer det for", "passer fenistra for", "er fenistra noe for", "fenistra for meg", "fenistra for oss", "passer dette for", "egner fenistra seg", "kan fenistra brukes av", "passer for min bedrift", "passer for oss"],
-    answer: "Fenistra er bygget for eiendomsselskaper som tar forvaltningen på alvor, særlig porteføljer med flere selskaper, mange kontraktstyper, felleskostnader, MVA eller omsetningsleie. Ta testen, så viser vi hvilke løsninger og hvilken pakke som passer akkurat for dere, på under to minutter. <a href=\"pakke-resultat.html\">Ta testen →</a>"
+    answer: "Fenistra er bygget for eiendomsselskaper som tar forvaltningen på alvor, særlig porteføljer med flere selskaper, mange kontraktstyper, felleskostnader, MVA eller omsetningsleie. Book et møte, så viser vi hvilke løsninger som passer akkurat for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
   },
   {
     keywords: ["datasikkerhet", "sikker data", "dataene trygge", "sikrer dere dataene", "sikkerhet program", "visma security program", "iso", "iso 27001", "27001", "sertifisert", "sertifisering", "vcdm", "kryptering", "hosting", "trust centre", "informasjonssikkerhet", "trygge data", "sikre data", "lagrer dere dataene", "hvor lagres dataene", "databeskyttelse", "cybersikkerhet", "dataene", "trygge"],
@@ -26,11 +26,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["standard"],
-    answer: "Fenistra Standard dekker hele arbeidsflyten fra kontrakt til rapportering, samlet i ett system: Kontrakt, Fakturering, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett og Sikkerhetsstyring, i tillegg til transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering."
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
   },
   {
     keywords: ["premium"],
-    answer: "Alt fra Standard-pakken, i tillegg til alle tilleggsprodukter og egen dedikert kunderådgiver."
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
   },
   {
     keywords: ["kjøpesenter"],
@@ -46,7 +46,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["forskjellen", "standard", "premium"],
-    answer: "Standard inneholder kjerneløsningene i Fenistra samt transaksjonsproduktene. Premium er for porteføljer med flere selskaper og høye krav, og inneholder alt fra Standard i tillegg til alle tilleggsprodukter og en egen dedikert kunderådgiver."
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
   },
   {
     keywords: ["eier"],
@@ -70,7 +70,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["revisorbekreftet", "omsetning", "rbo"],
-    answer: "Revisorbekreftet omsetning er innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata, informasjon utleier trenger for å avregne omsetningsbasert leie korrekt. Det er et transaksjonsprodukt inkludert i Fenistra Standard. <a href=\"losning-rbo.html\">Les mer om Revisorbekreftet omsetning →</a>"
+    answer: "Revisorbekreftet omsetning er innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata, informasjon utleier trenger for å avregne omsetningsbasert leie korrekt. <a href=\"losning-rbo.html\">Les mer om Revisorbekreftet omsetning →</a>"
   },
   {
     keywords: ["formuesverdsettelse", "trenger"],
@@ -82,11 +82,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["transaksjonsprodukter"],
-    answer: "MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering er transaksjonsprodukter. De er inkludert i Fenistra Standard, men betales etter bruk."
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
   },
   {
     keywords: ["kontrakter", "digitalt", "signere"],
-    answer: "Ja. Fenistra Digital signering lar dere signere kontrakter og dokumenter digitalt, direkte i Fenistra, uten å måtte gå via e-post eller eksterne verktøy. Det er et transaksjonsprodukt inkludert i Fenistra Standard. <a href=\"losning-digital-signering.html\">Les mer om Fenistra Digital signering →</a>"
+    answer: "Ja. Fenistra Digital signering lar dere signere kontrakter og dokumenter digitalt, direkte i Fenistra, uten å måtte gå via e-post eller eksterne verktøy. <a href=\"losning-digital-signering.html\">Les mer om Fenistra Digital signering →</a>"
   },
   {
     keywords: ["arealberegning"],
@@ -130,7 +130,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["skalerbar", "fleksibel", "vokser", "tilleggsfunksjonalitet", "tilleggsprodukt"],
-    answer: "Fenistra er fleksibelt og skalerbart. Velg pakken som passer i dag, Standard eller Premium, og legg til tilleggsfunksjonalitet etter hvert som porteføljen vokser. Alle pakker har ubegrenset antall brukere."
+    answer: "Fenistra er fleksibelt og skalerbart. Start med det som passer i dag, og ta i bruk mer etter hvert som porteføljen vokser."
   },
   {
     keywords: ["ki-assistent", "ai-assistent", "ai-chat", "ki-chat", "ai-opplasting", "last opp kontrakt", "laste opp kontrakter", "ai i fenistra", "ki i fenistra"],
@@ -142,67 +142,67 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kommer", "gang"],
-    answer: "Snakk med oss, eller ta testen vår for å se hvilken pakke og hvilke løsninger som passer for akkurat deres portefølje. En av rådgiverne våre tar deretter kontakt for å finne riktig oppsett. <a href=\"pakke-resultat.html\">Les mer om pakketesten →</a>"
+    answer: "Snakk med oss, eller be om et møte for å se hvilke løsninger som passer for akkurat deres portefølje. En av rådgiverne våre tar deretter kontakt for å finne riktig oppsett. <a href=\"pakke-resultat.html\">Book et møte →</a>"
   },
   {
     keywords: ["arealberegning", "areal", "kvadratmeter", "tegning", "fenistra arealberegning"],
-    answer: "Fenistra Arealberegning: Nøyaktige arealberegninger som reduserer risikoen for feil i leiekostnader og kvadratmeterpriser, med kobling mot AutoCAD-tegninger. Tilleggsprodukt i Fenistra Premium. Blant annet: Kobling via Viewer mot AutoCAD-tegningsfiler; Automatisk beregning av MVA-grad på tegning; Historikk bevares ved endring av tegninger. <a href=\"losning-arealberegning.html\">Les mer om Fenistra Arealberegning →</a>"
+    answer: "Fenistra Arealberegning: Nøyaktige arealberegninger som reduserer risikoen for feil i leiekostnader og kvadratmeterpriser, med kobling mot AutoCAD-tegninger. Blant annet: Kobling via Viewer mot AutoCAD-tegningsfiler; Automatisk beregning av MVA-grad på tegning; Historikk bevares ved endring av tegninger. <a href=\"losning-arealberegning.html\">Les mer om Fenistra Arealberegning →</a>"
   },
   {
     keywords: ["digital signering", "signering", "signere", "e-signatur", "fenistra digital signering", "digital"],
-    answer: "Fenistra Digital signering: Signer kontrakter og dokumenter digitalt, direkte i Fenistra, uten å måtte gå via e-post eller eksterne verktøy. Inkludert i Fenistra Standard. Blant annet: Digital signering direkte i kontraktsflyten; Full sporbarhet på hvem som har signert og når; Juridisk bindende signaturer. <a href=\"losning-digital-signering.html\">Les mer om Fenistra Digital signering →</a>"
+    answer: "Fenistra Digital signering: Signer kontrakter og dokumenter digitalt, direkte i Fenistra, uten å måtte gå via e-post eller eksterne verktøy. Blant annet: Digital signering direkte i kontraktsflyten; Full sporbarhet på hvem som har signert og når; Juridisk bindende signaturer. <a href=\"losning-digital-signering.html\">Les mer om Fenistra Digital signering →</a>"
   },
   {
     keywords: ["dokument", "dokumenthåndtering", "dokumenter", "fenistra dokument"],
-    answer: "Fenistra Dokument: Samle kontrakter, tegninger og annen dokumentasjon direkte koblet til riktig eiendom og leieforhold. Inkludert i Fenistra Standard. Blant annet: Dokumenter koblet direkte til kontrakt og eiendom; Enkel tilgang for hele organisasjonen; Historikk og sporbarhet over tid. <a href=\"losning-dokument.html\">Les mer om Fenistra Dokument →</a>"
+    answer: "Fenistra Dokument: Samle kontrakter, tegninger og annen dokumentasjon direkte koblet til riktig eiendom og leieforhold. Blant annet: Dokumenter koblet direkte til kontrakt og eiendom; Enkel tilgang for hele organisasjonen; Historikk og sporbarhet over tid. <a href=\"losning-dokument.html\">Les mer om Fenistra Dokument →</a>"
   },
   {
     keywords: ["fakturering", "faktura", "fakturere", "fenistra fakturering"],
-    answer: "Fenistra Fakturering: Fast, akonto og omsetningsbasert husleie samlet i én løsning, med gjentakende fakturering gjennom hele leieforholdet. Inkludert i Fenistra Standard. Blant annet: Gjentakende fakturering gjennom hele leieforholdet; Støtter fast, akonto og omsetningsbasert husleie; Avstemming mot regnskapssystemet dere bruker. <a href=\"losning-fakturering.html\">Les mer om Fenistra Fakturering →</a>"
+    answer: "Fenistra Fakturering: Fast, akonto og omsetningsbasert husleie samlet i én løsning, med gjentakende fakturering gjennom hele leieforholdet. Blant annet: Gjentakende fakturering gjennom hele leieforholdet; Støtter fast, akonto og omsetningsbasert husleie; Avstemming mot regnskapssystemet dere bruker. <a href=\"losning-fakturering.html\">Les mer om Fenistra Fakturering →</a>"
   },
   {
     keywords: ["felleskostnader", "felleskost", "felleskostavregning", "avregning", "fenistra felleskostnader"],
-    answer: "Fenistra Felleskostnader: Automatisert felleskostnadsavregning med full oversikt over kostnader, fordeling og MVA-behandling. Inkludert i Fenistra Standard. Blant annet: Automatisert MVA-behandling; Fleksible avregningssykluser; Avanserte beregninger sikrer rettferdig kostnadsfordeling. <a href=\"losning-felleskostnader.html\">Les mer om Fenistra Felleskostnader →</a>"
+    answer: "Fenistra Felleskostnader: Automatisert felleskostnadsavregning med full oversikt over kostnader, fordeling og MVA-behandling. Blant annet: Automatisert MVA-behandling; Fleksible avregningssykluser; Avanserte beregninger sikrer rettferdig kostnadsfordeling. <a href=\"losning-felleskostnader.html\">Les mer om Fenistra Felleskostnader →</a>"
   },
   {
     keywords: ["formuesverdsettelse", "formuesverdi", "skattemelding", "fenistra formuesverdsettelse"],
-    answer: "Fenistra Formuesverdsettelse: Beregning og dokumentasjon av formuesverdi for næringseiendom, basert på faktiske leieinntekter og ledighet. Inkludert i Fenistra Standard. Blant annet: Beregner formuesverdi ut fra fakturert leieinntekt; Fanger opp ledighet, både deler av året og hele året; Korrigerer for kreditnotaer, rabatter og leiefritak; Rapport med kontroll- og beregningsfelt. <a href=\"losning-formuesverdsettelse.html\">Les mer om Fenistra Formuesverdsettelse →</a>"
+    answer: "Fenistra Formuesverdsettelse: Beregning og dokumentasjon av formuesverdi for næringseiendom, basert på faktiske leieinntekter og ledighet. Blant annet: Beregner formuesverdi ut fra fakturert leieinntekt; Fanger opp ledighet, både deler av året og hele året; Korrigerer for kreditnotaer, rabatter og leiefritak; Rapport med kontroll- og beregningsfelt. <a href=\"losning-formuesverdsettelse.html\">Les mer om Fenistra Formuesverdsettelse →</a>"
   },
   {
     keywords: ["inntektsbudsjett", "budsjett", "budsjettering", "fenistra inntektsbudsjett"],
-    answer: "Fenistra Inntektsbudsjett: Bygg inntektsbudsjett direkte fra de faktiske leieforholdene i porteføljen, ikke fra separate regneark. Inkludert i Fenistra Standard. Blant annet: Budsjettering basert på faktiske kontraktsdata; Oppdateres automatisk ved endringer i leieforhold; Avstemming mot faktisk fakturert leie. <a href=\"losning-inntektsbudsjett.html\">Les mer om Fenistra Inntektsbudsjett →</a>"
+    answer: "Fenistra Inntektsbudsjett: Bygg inntektsbudsjett direkte fra de faktiske leieforholdene i porteføljen, ikke fra separate regneark. Blant annet: Budsjettering basert på faktiske kontraktsdata; Oppdateres automatisk ved endringer i leieforhold; Avstemming mot faktisk fakturert leie. <a href=\"losning-inntektsbudsjett.html\">Les mer om Fenistra Inntektsbudsjett →</a>"
   },
   {
     keywords: ["justering", "justeringsforpliktelser", "mva-fradrag", "fenistra justering"],
-    answer: "Fenistra Justering: Et effektivt verktøy for å håndtere MVA og justeringsforpliktelser for utleiere av fast eiendom, i samsvar med lover, forskrifter og uttalelser. Tilleggsprodukt i Fenistra Premium. Blant annet: Kontroll på justeringsforpliktelser for eiendommene; Beregner MVA-fradragsprosent per prosjekt; Oversikt over MVA-status i bygge- og tiltaksperioden. <a href=\"losning-justering.html\">Les mer om Fenistra Justering →</a>"
+    answer: "Fenistra Justering: Et effektivt verktøy for å håndtere MVA og justeringsforpliktelser for utleiere av fast eiendom, i samsvar med lover, forskrifter og uttalelser. Blant annet: Kontroll på justeringsforpliktelser for eiendommene; Beregner MVA-fradragsprosent per prosjekt; Oversikt over MVA-status i bygge- og tiltaksperioden. <a href=\"losning-justering.html\">Les mer om Fenistra Justering →</a>"
   },
   {
     keywords: ["kjøpesenter", "senterdrift", "senterleder", "butikkoversikt", "fenistra kjøpesenter"],
-    answer: "Fenistra Kjøpesenter: Full oversikt over senterdrift for senterleder, med fokus på butikk, aktiviteter og omsetningsrapportering. Tilleggsprodukt i Fenistra Premium. Blant annet: Oversiktlig dashboard for omsetning og utvikling på senteret; Automatisk purring på manglende omsetningsrapportering, med ønsket antall repetisjoner; Bransjetilpassede rapporter, inkludert Kvarud Analyse. <a href=\"losning-kjopesenter.html\">Les mer om Fenistra Kjøpesenter →</a>"
+    answer: "Fenistra Kjøpesenter: Full oversikt over senterdrift for senterleder, med fokus på butikk, aktiviteter og omsetningsrapportering. Blant annet: Oversiktlig dashboard for omsetning og utvikling på senteret; Automatisk purring på manglende omsetningsrapportering, med ønsket antall repetisjoner; Bransjetilpassede rapporter, inkludert Kvarud Analyse. <a href=\"losning-kjopesenter.html\">Les mer om Fenistra Kjøpesenter →</a>"
   },
   {
     keywords: ["kontrakter", "kontrakt", "leiekontrakt", "leiekontrakter", "fenistra kontrakter"],
-    answer: "Fenistra Kontrakter: Effektiv overvåkning og håndtering av utleie-, fremleie- og interne kontrakter, samlet på tvers av hele porteføljen. Inkludert i Fenistra Standard. Blant annet: Håndtering av utleie-, fremleie- og interne kontrakter; Varsling før kontraktsutløp og viktige frister; Direkte kobling mot leietaker, areal og fakturering. <a href=\"losning-kontrakter.html\">Les mer om Fenistra Kontrakter →</a>"
+    answer: "Fenistra Kontrakter: Effektiv overvåkning og håndtering av utleie-, fremleie- og interne kontrakter, samlet på tvers av hele porteføljen. Blant annet: Håndtering av utleie-, fremleie- og interne kontrakter; Varsling før kontraktsutløp og viktige frister; Direkte kobling mot leietaker, areal og fakturering. <a href=\"losning-kontrakter.html\">Les mer om Fenistra Kontrakter →</a>"
   },
   {
     keywords: ["mva-erklæring", "mva", "merverdiavgift", "erklæring", "fenistra mva-erklæring"],
-    answer: "Fenistra MVA-erklæring: Automatisert innhenting av nødvendig informasjon ved utleie til MVA-registrerte leietakere. Inkludert i Fenistra Standard. Blant annet: Automatisert innhenting av MVA-erklæringer fra leietakere; Oversikt over bruken av lokalene gjennom året; Reduserer manuelt oppfølgingsarbeid. <a href=\"losning-mva-erklaring.html\">Les mer om Fenistra MVA-erklæring →</a>"
+    answer: "Fenistra MVA-erklæring: Automatisert innhenting av nødvendig informasjon ved utleie til MVA-registrerte leietakere. Blant annet: Automatisert innhenting av MVA-erklæringer fra leietakere; Oversikt over bruken av lokalene gjennom året; Reduserer manuelt oppfølgingsarbeid. <a href=\"losning-mva-erklaring.html\">Les mer om Fenistra MVA-erklæring →</a>"
   },
   {
     keywords: ["omsetningsavregning", "omsetningsleie", "omsetningsbasert leie", "fenistra omsetningsavregning", "omsetningsbasert", "leie"],
-    answer: "Fenistra Omsetningsavregning: Forenkler og effektiviserer avregningen av omsetningsbasert leie, basert på revisorbekreftet omsetning. Inkludert i Fenistra Standard. Blant annet: Beregner korrekt leie basert på revisorbekreftet omsetning; Sammenholder løpende fakturert leie med faktisk omsetning; Differanse legges automatisk opp til fakturering. <a href=\"losning-omsetningsavregning.html\">Les mer om Fenistra Omsetningsavregning →</a>"
+    answer: "Fenistra Omsetningsavregning: Forenkler og effektiviserer avregningen av omsetningsbasert leie, basert på revisorbekreftet omsetning. Blant annet: Beregner korrekt leie basert på revisorbekreftet omsetning; Sammenholder løpende fakturert leie med faktisk omsetning; Differanse legges automatisk opp til fakturering. <a href=\"losning-omsetningsavregning.html\">Les mer om Fenistra Omsetningsavregning →</a>"
   },
   {
     keywords: ["protokoller", "overtakelsesprotokoll", "tilbakelevering", "fenistra protokoller"],
-    answer: "Fenistra Protokoller: Verktøy for overtakelse og tilbakelevering av lokaler, med protokoller koblet direkte til riktig kontrakt. Inkludert i Fenistra Standard. Blant annet: Protokoller for overtakelse av lokaler; Protokoller for tilbakelevering ved utflytting; Direkte kobling til kontrakt og dokumentasjon. <a href=\"losning-protokoller.html\">Les mer om Fenistra Protokoller →</a>"
+    answer: "Fenistra Protokoller: Verktøy for overtakelse og tilbakelevering av lokaler, med protokoller koblet direkte til riktig kontrakt. Blant annet: Protokoller for overtakelse av lokaler; Protokoller for tilbakelevering ved utflytting; Direkte kobling til kontrakt og dokumentasjon. <a href=\"losning-protokoller.html\">Les mer om Fenistra Protokoller →</a>"
   },
   {
     keywords: ["rapportering", "rapport", "rapporter", "nøkkeltall", "fenistra rapportering"],
-    answer: "Fenistra Rapportering: Fenistras rapporter gir deg innsikten du trenger, når du trenger den. Inkludert i Fenistra Standard. Blant annet: Enkle rapporter som gir deg og teamet et godt beslutningsgrunnlag; Hent ut per selskap, eiendom, portefølje eller egendefinerte tags og bransje; Alle rapporter kan hentes ut og lastes ned direkte fra løsningen. <a href=\"losning-rapportering.html\">Les mer om Fenistra Rapportering →</a>"
+    answer: "Fenistra Rapportering: Fenistras rapporter gir deg innsikten du trenger, når du trenger den. Blant annet: Enkle rapporter som gir deg og teamet et godt beslutningsgrunnlag; Hent ut per selskap, eiendom, portefølje eller egendefinerte tags og bransje; Alle rapporter kan hentes ut og lastes ned direkte fra løsningen. <a href=\"losning-rapportering.html\">Les mer om Fenistra Rapportering →</a>"
   },
   {
     keywords: ["rbo", "revisorbekreftet omsetning", "fenistra rbo", "revisorbekreftet", "omsetning"],
-    answer: "Fenistra Revisorbekreftet omsetning: Enkel innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata. Inkludert i Fenistra Standard. Blant annet: Innhenting av revisorbekreftet omsetning fra leietakere; Samlet administrasjon per leietaker og eiendom; Grunnlag for omsetningsbasert avregning. <a href=\"losning-rbo.html\">Les mer om Revisorbekreftet omsetning →</a>"
+    answer: "Fenistra Revisorbekreftet omsetning: Enkel innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata. Blant annet: Innhenting av revisorbekreftet omsetning fra leietakere; Samlet administrasjon per leietaker og eiendom; Grunnlag for omsetningsbasert avregning. <a href=\"losning-rbo.html\">Les mer om Revisorbekreftet omsetning →</a>"
   },
   {
     keywords: ["regnskap", "regnskapssystem", "kundereskontro", "fenistra regnskap"],
@@ -210,7 +210,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["sikkerhetsstyring", "bankgaranti", "depositum", "sikkerhet", "fenistra sikkerhetsstyring"],
-    answer: "Fenistra Sikkerhetsstyring: Full oversikt over bankgaranti og depositum i porteføljen, med varsel når sikkerhet mangler eller utløper. Inkludert i Fenistra Standard. Blant annet: Bankgaranti og depositum samlet per kontrakt og på tvers av porteføljen; Varsel når sikkerhet mangler, er for lav eller nærmer seg utløp; Aggregert risikooversikt for hele porteføljen, ikke bare kontrakt for kontrakt. <a href=\"losning-sikkerhetsstyring.html\">Les mer om Fenistra Sikkerhetsstyring →</a>"
+    answer: "Fenistra Sikkerhetsstyring: Full oversikt over bankgaranti og depositum i porteføljen, med varsel når sikkerhet mangler eller utløper. Blant annet: Bankgaranti og depositum samlet per kontrakt og på tvers av porteføljen; Varsel når sikkerhet mangler, er for lav eller nærmer seg utløp; Aggregert risikooversikt for hele porteføljen, ikke bare kontrakt for kontrakt. <a href=\"losning-sikkerhetsstyring.html\">Les mer om Fenistra Sikkerhetsstyring →</a>"
   },
   /* Skjult fra nettsiden:
   */
@@ -316,7 +316,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["test hvilken pakke", "hvilken pakke passer", "pakketest", "test", "hvilken", "pakke"],
-    answer: "Snakk med oss for å se hvilke løsninger og hvilken pakke som passer akkurat deres portefølje. <a href=\"pakke-resultat.html\">Les mer om pakketesten →</a>"
+    answer: "Snakk med oss for å se hvilke løsninger som passer akkurat deres portefølje. <a href=\"pakke-resultat.html\">Book et møte →</a>"
   },
   {
     keywords: ["høegh eiendom", "20 år som kunde", "maren elise"],
@@ -340,7 +340,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["tilleggsprodukter", "selvstendige produkter", "hva er inkludert"],
-    answer: "Fenistra er delt i tre: kjerneløsninger (Kontrakter, Felleskostnader, Fakturering, Rapportering, Dokument, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett, Sikkerhetsstyring), transaksjonsprodukter som er inkludert i begge pakker men betales per bruk (MVA-erklæring, revisorbekreftet omsetning, Protokoller, Digital signering), og tilleggsprodukter som er selvstendige eller kombinert med Standard, og alltid inkludert i Premium (Justering, Arealberegning, Kjøpesenter)."
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
   },
   {
     keywords: ["kundeteamet kontakt", "hvem kan jeg kontakte kunde", "brukerstøtte kontakt person", "head of customer success"],
@@ -368,11 +368,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["fenistra standard", "hva inneholder standard"],
-    answer: "Fenistra Standard inneholder løsningene Kontrakt, Fakturering, Rapportering, Dokument, Felleskostnader, Omsetningsavregning, Formuesverdsettelse, Inntektsbudsjett og Sikkerhetsstyring, i tillegg til transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering."
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
   },
   {
     keywords: ["premium"],
-    answer: "Fenistra Premium inneholder alt fra Standard-pakken, i tillegg til alle tilleggsprodukter og egen dedikert kunderådgiver."
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
   },
   {
     keywords: ["kjøpesenter", "senterdrift", "senterleder"],
@@ -388,11 +388,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["digital signering", "signering", "signere"],
-    answer: "Fenistra Digital signering lar dere signere kontrakter og dokumenter digitalt, direkte i Fenistra – uten å måtte gå via e-post eller eksterne verktøy. Det er et transaksjonsprodukt inkludert i Fenistra Standard, så dere betaler kun for signeringene dere faktisk bruker. <a href=\"losning-digital-signering.html\">Les mer om Fenistra Digital signering →</a>"
+    answer: "Fenistra Digital signering lar dere signere kontrakter og dokumenter digitalt, direkte i Fenistra – uten å måtte gå via e-post eller eksterne verktøy., så dere betaler kun for signeringene dere faktisk bruker. <a href=\"losning-digital-signering.html\">Les mer om Fenistra Digital signering →</a>"
   },
   {
     keywords: ["transaksjonsprodukt", "transaksjon"],
-    answer: "MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering er transaksjonsprodukter – de er inkludert i Fenistra Standard, men betales etter bruk."
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
   },
   {
     keywords: ["pris", "koster", "kostnad", "abonnement"],
@@ -400,11 +400,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["demo", "book demo", "snakk med oss", "prøve"],
-    answer: "Du kan avtale en demo via «Ta kontakt» øverst på siden og velge «Book et møte», så tar en av våre rådgivere kontakt. <a href=\"pakke-resultat.html\">Les mer om pakketesten →</a>"
+    answer: "Du kan avtale en demo via «Ta kontakt» øverst på siden og velge «Book et møte», så tar en av våre rådgivere kontakt. <a href=\"pakke-resultat.html\">Book et møte →</a>"
   },
   {
     keywords: ["hei", "hallo", "yo", "morn"],
-    answer: "Hei! Jeg kan svare på enkle spørsmål om Fenistra – løsninger, integrasjoner og pakker. Hva lurer du på?"
+    answer: "Hei! Jeg kan svare på enkle spørsmål om Fenistra – løsninger, integrasjoner og hvordan dere kommer i gang. Hva lurer du på?"
   },
   {
     keywords: ["fenistradagene", "brukerforum"],

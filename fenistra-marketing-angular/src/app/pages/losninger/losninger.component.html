@@ -317,40 +317,9 @@
     .chat-trigger{right:16px;bottom:16px;}
   }
 
-  /* ================= FIT QUIZ ================= */
-  .quiz-callout{background:var(--berry);background-image:radial-gradient(circle at 15% 20%, rgba(255,255,255,0.14), transparent 40%), radial-gradient(circle at 85% 80%, rgba(0,0,0,0.12), transparent 45%);border-radius:20px;padding:36px 40px;display:flex;align-items:center;justify-content:space-between;gap:28px;color:#fff;flex-wrap:wrap;}
-  .quiz-callout h3{font-family:var(--font-display);font-weight:300;font-size:clamp(20px,2.2vw,26px);letter-spacing:-0.02em;margin-bottom:8px;}
-  .quiz-callout p{font-size:14.5px;color:rgba(255,255,255,.85);max-width:480px;}
-  .quiz-callout .btn{flex-shrink:0;}
 
-  .quiz-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.5);z-index:399;opacity:0;pointer-events:none;transition:opacity .25s ease;}
-  .quiz-backdrop.open{opacity:1;pointer-events:auto;}
-  .quiz-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-48%);width:min(600px, calc(100% - 32px));max-height:min(680px, calc(100vh - 48px));z-index:400;background:#fff;border-radius:20px;box-shadow:0 40px 80px -20px rgba(15,23,42,.45);display:flex;flex-direction:column;overflow:hidden;opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;}
-  .quiz-modal.open{opacity:1;transform:translate(-50%,-50%);pointer-events:auto;}
-  .quiz-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--line);flex-shrink:0;}
-  .quiz-head-title{font-family:var(--font-mono);font-size:12px;color:var(--ink-soft);}
-  .quiz-close{border:none;background:none;cursor:pointer;color:var(--ink-soft);font-size:16px;padding:4px;}
-  .quiz-close:hover{color:var(--ink);}
-  .quiz-progress-track{height:3px;background:var(--line);flex-shrink:0;}
-  .quiz-progress-bar{height:100%;background:var(--berry);transition:width .3s ease;}
-  .quiz-body{padding:32px 28px;overflow-y:auto;flex:1;}
-  .quiz-question{font-family:var(--font-display);font-weight:400;font-size:20px;letter-spacing:-0.01em;color:var(--ink);margin-bottom:22px;line-height:1.35;}
-  .quiz-options{display:flex;flex-direction:column;gap:10px;}
-  .quiz-option{text-align:left;padding:14px 18px;border:1.5px solid var(--line);border-radius:12px;font-size:15px;color:var(--ink);cursor:pointer;transition:border-color .15s ease, background .15s ease;background:#fff;}
-  .quiz-option:hover{border-color:var(--plum);background:var(--paper-2);}
-  .quiz-option.selected{border-color:var(--berry);background:var(--berry-light);color:var(--berry-deep);font-weight:600;}
-  .quiz-nav{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-top:1px solid var(--line);flex-shrink:0;}
-  .quiz-nav .spacer{flex:1;}
-  .quiz-result h3{font-family:var(--font-display);font-weight:300;font-size:clamp(22px,2.4vw,28px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:14px;}
-  .quiz-result .reasons{display:flex;flex-direction:column;gap:10px;margin-bottom:24px;}
-  .quiz-result .reasons li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;color:var(--ink-soft);line-height:1.5;}
-  .quiz-result .reasons li svg{flex-shrink:0;margin-top:3px;color:var(--berry);}
-  .quiz-result .pkg-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.04em;padding:5px 12px;border-radius:20px;background:var(--berry-light);color:var(--berry-deep);margin-bottom:14px;}
-  .quiz-result .related-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
   @media (max-width:600px){
-    .quiz-callout{padding:28px 24px;text-align:center;justify-content:center;}
-    .quiz-callout p{max-width:none;}
-  }
+      }
   @media (min-width:761px){ .index-card-wide{grid-column:span 2;} }
 
   /* ---- jobber som skal gjøres ---- */
@@ -369,7 +338,7 @@
   .catalog-head h2{font-family:var(--font-display);font-weight:300;font-size:clamp(26px,3vw,36px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:6px;}
   .catalog-head p{font-size:15.5px;color:var(--ink-soft);}
 
-  /* ---- dybde + prisprinsipp ---- */
+  /* ---- dybde ---- */
   .depth-section{background:var(--plum-deep);color:#fff;padding:90px 0;}
   .depth-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center;}
   .depth-section h2{font-family:var(--font-display);font-weight:300;font-size:clamp(26px,3vw,38px);letter-spacing:-0.02em;line-height:1.2;margin-bottom:18px;}
@@ -405,7 +374,6 @@
     <p class="mp-lead">Kontrakt, økonomi, utleie og rapportering i ett system, for porteføljer med mange selskaper, kontraktstyper og regler. Fenistra svarer, sier ifra og gjør jobben.</p>
     <div class="mp-actions">
       <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
-      <button type="button" class="btn btn-ghost" (click)="quiz.open()">Ta testen</button>
     </div>
   </div>
 </section>
@@ -448,18 +416,6 @@
         <p>26 integrerte systemer, blant dem 19 regnskaps- og ERP-systemer, og et åpent API.</p>
         <div class="related-chips"><a routerLink="/integrasjoner" fragment="regnskap">Regnskap og ERP</a><a routerLink="/integrasjoner">Alle integrasjoner</a></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section style="padding-top:0;padding-bottom:56px;">
-  <div class="wrap">
-    <div class="quiz-callout">
-      <div>
-        <h3 aria-level="2">Lurer du på hvilke deler av plattformen dere trenger?</h3>
-        <p>Svar på noen få spørsmål om porteføljen deres, så viser vi hvilke løsninger som passer, på under to minutter.</p>
-      </div>
-      <button type="button" class="btn btn-on-dark" style="background:#fff;color:var(--berry-deep);flex-shrink:0;" (click)="quiz.open()">Ta testen →</button>
     </div>
   </div>
 </section>

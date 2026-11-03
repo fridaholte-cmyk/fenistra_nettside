@@ -1,7 +1,6 @@
 import { Component, ElementRef, OnDestroy, ViewEncapsulation, afterNextRender, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ProcessAnimationComponent } from '../../shared/process-animation/process-animation.component';
-import { EcosystemComponent } from '../../shared/ecosystem/ecosystem.component';
 import { TrustListComponent } from '../../shared/trust-list/trust-list.component';
 
 interface Customer {
@@ -19,7 +18,7 @@ interface Customer {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, ProcessAnimationComponent, EcosystemComponent, TrustListComponent],
+  imports: [RouterLink, ProcessAnimationComponent, TrustListComponent],
   templateUrl: './home.component.html',
   encapsulation: ViewEncapsulation.None
 })
@@ -53,9 +52,8 @@ export class HomeComponent implements OnDestroy {
   quoteArmed = signal(false);
   quoteShown = signal(false);
 
-  // 65 mrd in yearly rent and 60 000 contracts: the prerendered page shows the final numbers; in the browser
-  // they drop to 10 and count up through every number once the section is in view.
-  bigCount = signal(65);
+  // 60 000 contracts: the prerendered page shows the final number; in the browser
+  // it drops to 10 and counts up through every number once the section is in view.
   midCount = signal(60);
 
   // Maren's quote (verbatim): once its box has faded in, one word at a time lights up purple, as if read along
@@ -73,7 +71,6 @@ export class HomeComponent implements OnDestroy {
       addEventListener('resize', this.onResize, { passive: true });
       if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       this.quoteArmed.set(true);
-      this.bigCount.set(10);
       this.midCount.set(10);
 
       const watchers: { selector: string; scrolled?: boolean; start: () => void }[] = [
@@ -89,7 +86,6 @@ export class HomeComponent implements OnDestroy {
           // only once the visitor has scrolled, never straight on load
           scrolled: true,
           start: () => {
-            this.countUp(this.bigCount, 65);
             this.countUp(this.midCount, 60);
           },
         },

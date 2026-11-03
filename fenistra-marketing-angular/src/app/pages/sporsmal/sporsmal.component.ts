@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, ViewEncapsulation, inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { QuizService } from '../../shared/quiz.service';
 
 const LD_ID = 'ld-faq';
 
@@ -16,7 +15,6 @@ export class SporsmalComponent implements AfterViewInit, OnDestroy {
   private readonly doc = inject(DOCUMENT);
   private readonly host = inject(ElementRef<HTMLElement>);
 
-  constructor(public quiz: QuizService) {}
 
   /**
    * FAQPage structured data (schema.org), built from the questions in the template so there is a single

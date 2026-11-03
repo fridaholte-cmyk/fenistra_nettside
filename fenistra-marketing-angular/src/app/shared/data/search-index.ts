@@ -19,6 +19,7 @@ export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
   { title: "Om oss", url: "om-oss.html", category: "Side", desc: "Fenistra kan eiendom. Løsninger for norsk næringseiendom siden 1994, en del av Visma Property Solutions siden 2020." },
   { title: "Slik hjelper Fenistra", url: "ki.html", category: "Side", desc: "Fenistra svarer, sier ifra og gjør jobben: KI-assistenten, AI-innlesing av kontrakter og markedsdata fra Arealstatistikk.", keywords: ["ai", "ki", "kunstig intelligens", "felix", "maskinlæring", "chatbot", "ki-assistent", "ai-assistent", "opplasting", "last opp kontrakt"] },
   { title: "Fenistradagene", url: "fenistradagene.html", category: "Side", desc: "Fenistradagene samler alle Fenistra-kunder hvert år i juni for faglig påfyll, nettverksbygging og sosialt samvær." },
+  { title: "Partnere", url: "partnere.html", category: "Side", desc: "Partnere som tar seg av eiendomsforvaltningen i Fenistra for dere.", keywords: ["partner", "forvalter", "forvaltning", "View Procurator", "Aider", "Njord", "Borg", "Estate Management"] },
   { title: "Blogg", url: "blogg.html", category: "Side", desc: "Kundehistorier, produktnyheter og innsikt om Fenistra og økonomisk forvaltning av næringseiendom." },
 
   { title: "Kontrakter", url: "losning-kontrakter.html", category: "Løsning", desc: "Effektiv overvåkning og håndtering av utleie-, fremleie- og interne kontrakter, samlet på tvers av hele porteføljen." },
@@ -36,7 +37,7 @@ export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
   { title: "Protokoller", url: "losning-protokoller.html", category: "Løsning", desc: "Verktøy for overtakelse og tilbakelevering av lokaler, med protokoller koblet direkte til riktig kontrakt." },
   { title: "Formuesverdsettelse", url: "losning-formuesverdsettelse.html", category: "Løsning", desc: "Beregning og dokumentasjon av formuesverdi for næringseiendom, basert på faktiske leieinntekter og ledighet." },
   { title: "Revisorbekreftet omsetning", url: "losning-rbo.html", category: "Løsning", desc: "Enkel innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata." },
-  { title: "Digital signering", url: "losning-digital-signering.html", category: "Løsning", desc: "Signer kontrakter og dokumenter digitalt, direkte i Fenistra. Transaksjonsprodukt inkludert i Fenistra Standard." },
+  { title: "Digital signering", url: "losning-digital-signering.html", category: "Løsning", desc: "Signer kontrakter og dokumenter digitalt, direkte i Fenistra." },
 
   { title: "Regnskap og ERP-systemer", url: "integrasjoner.html", category: "Integrasjon", desc: "Tripletex, Xledger, PowerOffice GO, Visma Business NXT, Visma.net og en rekke andre ERP-systemer som SAP, Dynamics og 24SevenOffice." },
   { title: "Årsoppgjør", url: "integrasjoner.html", category: "Integrasjon", desc: "Integrasjon mot Finale for årsregnskap." },
@@ -45,7 +46,7 @@ export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
 
   { title: "Ansatte", url: "ansatte.html", category: "Side", desc: "Menneskene bak Fenistra - kundeteamet og produktteamet som utvikler og drifter systemet.", keywords: ["ansatt", "ansatte", "folk", "team", "medarbeidere", "hvem jobber", "Trygve Vardenær", "Kristian Lien", "Frida Holte", "Beate Paulsen", "Patrick Eriksen", "Henning Aas", "Marius Sømme", "Kristin Falch", "Rokhsar Zendehbizadeh", "Espen Kløfta", "Joakim Howlid", "Veslemøy Ylva Maria Sandbæk", "Vilja Pettersen", "Lill Reyes", "Ilham Jillani", "Seif Fadel", "Øyvind Taugland", "Kenneth Bjørnvoll", "Kristian Marheim Abrahamsen", "Douglas Modena", "André Pinto", "Adilet Ivadliyev"] },
   { title: "Kom i gang", url: "kom-i-gang.html", category: "Side", desc: "Slik kommer dere i gang: last opp kontraktene med AI, koble til regnskapssystemet og gå live. Ingen betalte konsulenttimer.", keywords: ["kom i gang", "oppstart", "implementering", "migrering", "onboarding", "bytte system", "innføring"] },
-  { title: "Kontakt oss", url: "kontakt-oss.html", category: "Side", desc: "Kontaktinfo til brukerstøtte, besøksadresse og skjema for å booke et møte.", keywords: ["telefon", "tlf", "telefonnummer", "ringe", "ring", "nummer", "adresse", "besøksadresse", "e-post", "epost", "mail", "support", "kundeservice", "hjelp", "menneske", "snakke med"] },
+  { title: "Kontakt oss", url: "kontakt-oss.html", category: "Side", desc: "Kontaktinfo til salg, brukerstøtte og besøksadresse.", keywords: ["telefon", "tlf", "telefonnummer", "ringe", "ring", "nummer", "adresse", "besøksadresse", "e-post", "epost", "mail", "support", "kundeservice", "hjelp", "menneske", "snakke med"] },
   { title: "Redegjørelse etter åpenhetsloven", url: "apenhetsloven.html", category: "Side", desc: "Aktsomhetsvurderinger for grunnleggende menneskerettigheter og anstendige arbeidsforhold hos Visma Property Solutions." },
   { title: "Cookie policy", url: "cookies.html", category: "Side", desc: "Retningslinjer for bruk av cookies (informasjonskapsler) hos Visma Property Solutions." },
   { title: "Tilgjengelighetserklæring", url: "tilgjengelighet.html", category: "Side", desc: "Universell utforming av fenistra.no: tastaturnavigasjon, 400 % zoom, skjermleser, kjente mangler og klage til Uutilsynet.", keywords: ["tilgjengelighet", "universell utforming", "uu", "wcag", "uutilsynet", "tastatur", "zoom", "skjermleser"] },
@@ -54,7 +55,7 @@ export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
   { title: "Integrasjoner", url: "integrasjoner.html", category: "Integrasjon", desc: "Fenistra integreres i dag mot over 20 systemer i produksjon hos kunder." },
   { title: "Fenistra Sikkerhetsstyring", url: "losning-sikkerhetsstyring.html", category: "Løsning", desc: "Full oversikt over bankgaranti og depositum i porteføljen, med varsel når sikkerhet mangler eller utløper." },
   // Skjult fra nettsiden: { title: "Fenistra Tegning", url: "losning-tegning.html", category: "Løsning", desc: "Ett sentralt arkiv for alle plantegninger, koblet direkte til kontrakt, leietaker og areal." },
-  { title: "Sjekk hvilke løsninger som passer for deg", url: "pakke-resultat.html", category: "Side", desc: "Se hvilken Fenistra-pakke som passer for deres portefølje, og book møte med salg." },
+  { title: "Book et møte", url: "pakke-resultat.html", category: "Side", desc: "Book et møte og se Fenistra, tilpasset porteføljen deres." },
   { title: "Personvernerklæring", url: "personvern.html", category: "Side", desc: "Slik behandler vi personopplysninger på nettsiden fenistra.no: skjemaer, chat, informasjonskapsler og drift." },
   { title: "Backer rigger for fremtiden", url: "media-backer.html", category: "I media", desc: "Backer velger Fenistra som nytt forvaltningssystem for sin eiendomsportefølje." },
   { title: "Fenistra Brukerforum 2024", url: "media-brukerforum-2024-invitasjon.html", category: "I media", desc: "Invitasjon til Fenistra Brukerforum 2024, faglig påfyll, nettverksbygging og sosialt samvær." },

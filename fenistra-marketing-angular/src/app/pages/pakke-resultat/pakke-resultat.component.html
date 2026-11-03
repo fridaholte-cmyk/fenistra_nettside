@@ -318,10 +318,6 @@
   }
 
   /* ================= RESULT PAGE ================= */
-  .pkg-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.04em;padding:5px 12px;border-radius:20px;background:var(--berry-light);color:var(--berry-deep);margin-bottom:18px;}
-  .reasons{display:flex;flex-direction:column;gap:12px;margin-bottom:28px;}
-  .reasons li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--ink-soft);line-height:1.55;}
-  .reasons li svg{flex-shrink:0;margin-top:3px;color:var(--berry);}
   .time-picker-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px;}
   .time-slot{padding:11px 18px;border:1.5px solid var(--line);border-radius:10px;font-size:14.5px;font-family:var(--font-body);color:var(--ink);cursor:pointer;background:#fff;transition:border-color .15s ease, background .15s ease;}
   .time-slot:hover{border-color:var(--plum);}
@@ -374,28 +370,8 @@
 <section class="split-section">
   <div class="wrap split">
     <div class="split-left">
-      @if (!result) {
-        <h1>Se hvilke løsninger som passer for porteføljen deres</h1>
-        <p class="lead">Svar på noen få spørsmål om porteføljen deres, så viser vi hvilken pakke og hvilke løsninger som passer, på under to minutter.</p>
-        <div class="hero-actions">
-          <button type="button" class="btn btn-primary" (click)="quiz.open()">Ta testen →</button>
-        </div>
-      } @else {
-        <h1 id="resultHeading">Ja, Fenistra passer for dere</h1>
-        <div class="pkg-badge" id="resultBadge">Anbefalt pakke: Fenistra {{ result.package }}</div>
-        <ul class="reasons" id="resultReasons">
-          @for (reason of result.reasons; track reason) {
-            <li><svg width="18" height="18" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512zm0-480a224 224 0 1 0 0 448 224 224 0 1 0 0-448zm83.1 134.6c5.2-7.1 15.2-8.7 22.3-3.5s8.7 15.2 3.5 22.3l-128 176c-2.8 3.8-7 6.2-11.7 6.5s-9.3-1.3-12.6-4.6l-64-64c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l50.7 50.7 117-160.8z"/></svg><span>{{ reason }}</span></li>
-          }
-        </ul>
-        <p style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft);margin-bottom:12px;">Løsninger som er spesielt relevante for dere</p>
-        <div class="related-chips" id="resultChips">
-          @for (chip of result.relatedChips; track chip.route) {
-            <a [routerLink]="chip.route">{{ chip.label }}</a>
-          }
-        </div>
-        <button type="button" class="btn btn-ghost" style="margin-top:24px;" (click)="retakeQuiz()">Ta testen på nytt</button>
-      }
+      <h1>Se Fenistra, tilpasset porteføljen deres</h1>
+      <p class="lead">Fyll ut skjemaet, så tar en av rådgiverne våre kontakt. I møtet viser vi hvordan Fenistra fungerer for akkurat deres kontrakter, selskaper og regler.</p>
     </div>
 
     <div class="split-right">

@@ -347,8 +347,6 @@
   .gate-success .check{width:48px;height:48px;border-radius:50%;background:var(--berry-light);color:var(--berry-deep);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
   .gate-success h4{font-size:17px;color:var(--ink);margin-bottom:8px;font-weight:600;}
   .gate-success p{font-size:13.5px;color:var(--ink-soft);margin-bottom:0;}
-  .form-box{max-width:640px;background:var(--paper-2);border:1px solid var(--line);border-radius:16px;padding:36px 40px;}
-  @media (max-width:600px){.form-box{padding:24px 20px;}}
   .kt-grid{grid-template-columns:repeat(4,1fr);}
   .kt-sales{background:var(--plum-deep);border-color:var(--plum-deep);color:#fff;}
   .kt-sales h3{color:#fff;}
@@ -362,9 +360,6 @@
   <div class="wrap">
     <h1>Snakk med oss</h1>
     <p class="mp-lead">Vil dere vite mer om Fenistra, trenger dere et tilbud, eller har dere spørsmål om systemet i det daglige? Her finner dere riktig kontaktpunkt.</p>
-    <div class="mp-actions">
-      <a routerLink="/kontakt-oss" fragment="skjema" class="btn btn-primary">Book et møte</a>
-    </div>
   </div>
 </section>
 
@@ -375,10 +370,10 @@
       <p>Salg, brukerstøtte eller et besøk på Skøyen: her er kontaktinfoen.</p>
     </div>
     <div class="mini-grid kt-grid">
-      <a routerLink="/kontakt-oss" fragment="skjema" class="mini-card kt-sales">
+      <a routerLink="/pakke-resultat" fragment="skjema" class="mini-card kt-sales">
         <h3>Salg og tilbud</h3>
-        <p>Vil dere se Fenistra, eller få et tilbud tilpasset porteføljen? Fyll ut skjemaet, så tar salgsteamet kontakt for å avtale tid.</p>
-        <span class="contact-link">Book et møte →</span>
+        <p>Vil dere se Fenistra, eller få et tilbud tilpasset porteføljen? Ta kontakt, så avtaler salgsteamet en tid som passer.</p>
+        <span class="contact-link">Ta kontakt med salg →</span>
       </a>
       <div class="mini-card">
         <h3>Brukerstøtte</h3>
@@ -394,24 +389,6 @@
         <h3>Møt kundeteamet</h3>
         <p>Se hvem som følger dere opp, fra onboarding til daglig brukerstøtte →</p>
       </a>
-    </div>
-  </div>
-</section>
-
-<section class="related-section" id="skjema" style="scroll-margin-top:76px;">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Book et møte</h2>
-      <p>Fyll ut skjemaet under, så tar en av rådgiverne våre kontakt for å avtale tid.</p>
-    </div>
-    <div class="form-box">
-      @if (formState === 'loading') {
-        <div class="form-loading"><app-loader size="sm" label="Laster skjema"></app-loader></div>
-      }
-      @if (formState === 'failed') {
-        <p class="form-failed">Skjemaet kunne ikke lastes. Send oss en e-post på <a href="mailto:support.fenistra&#64;visma.com">support.fenistra&#64;visma.com</a>, så tar vi kontakt.</p>
-      }
-      <div id="hubspotContactForm"></div>
     </div>
   </div>
 </section>

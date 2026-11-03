@@ -1,0 +1,63 @@
+<style>
+  .pt-hero{padding:72px 0 56px; color:var(--ink);}
+  .pt-hero h1{font-family:var(--font-display); font-weight:400; font-size:clamp(40px,5vw,64px); line-height:1.05; letter-spacing:-0.03em; max-width:16ch; margin-bottom:24px;}
+  .pt-lead{font-size:clamp(18px,1.6vw,21px); line-height:1.55; color:var(--ink-soft); max-width:58ch;}
+  .pt-list-section{padding:0 0 88px;}
+  .pt-list-title{font-size:15px; font-weight:600; letter-spacing:.02em; color:var(--ink-soft); margin-bottom:16px;}
+  .pt-list{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); list-style:none; margin:0; padding:0; border-top:1px solid var(--line); border-left:1px solid var(--line);}
+  .pt-list li{display:flex; align-items:center; justify-content:center; min-height:120px; padding:20px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); font-family:var(--font-display); font-weight:500; font-size:18px; letter-spacing:-0.01em; color:var(--ink); text-align:center;}
+  .pt-why{padding:0 0 88px;}
+  .pt-why-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px;}
+  .pt-why-grid article{background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius, 14px); padding:28px;}
+  .pt-why-grid h3{font-size:19px; letter-spacing:-0.01em; margin-bottom:10px; color:var(--ink);}
+  .pt-why-grid p{color:var(--ink-soft); font-size:15.5px; line-height:1.55;}
+  .pt-h2{font-family:var(--font-display); font-weight:400; font-size:clamp(26px,2.6vw,36px); letter-spacing:-0.02em; color:var(--ink); margin-bottom:28px;}
+  @media (max-width:900px){ .pt-why-grid{grid-template-columns:1fr;} .pt-hero{padding:48px 0 40px;} }
+</style>
+
+<section class="pt-hero">
+  <div class="wrap">
+    <h1>Partnere som kan forvaltning</h1>
+    <p class="pt-lead">Hvis man ikke sitter på kunnskap om eiendomsforvaltning kan det være lurt å bruke en av våre partnere. De kjenner Fenistra godt, og kan ta seg av forvaltningen for dere. Se listen her:</p>
+  </div>
+</section>
+
+<section class="pt-list-section" aria-labelledby="pt-list-title">
+  <div class="wrap">
+    <h2 id="pt-list-title" class="pt-list-title">Våre partnere</h2>
+    <ul class="pt-list">
+      @for (p of partners; track p) {
+        <li>{{ p }}</li>
+      }
+    </ul>
+  </div>
+</section>
+
+<section class="pt-why" aria-labelledby="pt-why-title">
+  <div class="wrap">
+    <h2 id="pt-why-title" class="pt-h2">Hvorfor bruke en partner?</h2>
+    <div class="pt-why-grid">
+      <article>
+        <h3>Fagkunnskapen på plass fra dag én</h3>
+        <p>Partnerne kan kontrakter, felleskostnader og MVA, så dere slipper å bygge opp kompetansen selv.</p>
+      </article>
+      <article>
+        <h3>Samme system, full innsikt</h3>
+        <p>Forvaltningen gjøres i Fenistra, og dere ser de samme tallene og rapportene som partneren.</p>
+      </article>
+      <article>
+        <h3>Vokser med porteføljen</h3>
+        <p>Start med partner, og ta over mer av forvaltningen selv når det passer.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-wrap" style="padding-bottom:88px;">
+  <div class="cta-band reveal">
+    <h2>Usikker på hvilken partner som passer?</h2>
+    <div class="actions">
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book et møte</a>
+    </div>
+  </div>
+</section>

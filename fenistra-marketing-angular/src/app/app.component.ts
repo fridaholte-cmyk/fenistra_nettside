@@ -6,7 +6,6 @@ import { filter } from 'rxjs/operators';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ChatWidgetComponent } from './shared/chat-widget/chat-widget.component';
-import { QuizWidgetComponent } from './shared/quiz-widget/quiz-widget.component';
 import { CookieBannerComponent } from './shared/consent/cookie-banner.component';
 import { LoaderComponent } from './shared/loader/loader.component';
 import { PageEffectsService } from './shared/page-effects.service';
@@ -21,7 +20,7 @@ const LOADER_DELAY_MS = 250;
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, ChatWidgetComponent, QuizWidgetComponent, CookieBannerComponent, LoaderComponent, FormsModule],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, ChatWidgetComponent, CookieBannerComponent, LoaderComponent, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
