@@ -72,7 +72,7 @@ export class HomeComponent implements OnDestroy {
       this.bigCount.set(10);
       this.midCount.set(10);
 
-      const watchers = [
+      const watchers: { selector: string; scrolled?: boolean; start: () => void }[] = [
         {
           selector: '.proof-quote figure',
           start: () => {
@@ -82,6 +82,8 @@ export class HomeComponent implements OnDestroy {
         },
         {
           selector: '.hp-numbers',
+          // only once the visitor has scrolled, never straight on load
+          scrolled: true,
           start: () => {
             this.countUp(this.bigCount, 65);
             this.countUp(this.midCount, 60);
@@ -98,7 +100,7 @@ export class HomeComponent implements OnDestroy {
           const el = host.nativeElement.querySelector(watchers[i].selector);
           if (!el) continue;
           const r = el.getBoundingClientRect();
-          if (r.top < innerHeight * 0.8 && r.bottom > 0) {
+          if (r.top < innerHeight * 0.8 && r.bottom > 0 && (!watchers[i].scrolled || scrollY > 0)) {
             watchers[i].start();
             watchers.splice(i, 1);
           }
