@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnDestroy, ViewEncapsulation, afterNextRender, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ProcessAnimationComponent } from '../../shared/process-animation/process-animation.component';
+import { EcosystemComponent } from '../../shared/ecosystem/ecosystem.component';
 import { TrustListComponent } from '../../shared/trust-list/trust-list.component';
 
 interface Customer {
@@ -18,7 +19,7 @@ interface Customer {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, ProcessAnimationComponent, TrustListComponent],
+  imports: [RouterLink, ProcessAnimationComponent, EcosystemComponent, TrustListComponent],
   templateUrl: './home.component.html',
   encapsulation: ViewEncapsulation.None
 })

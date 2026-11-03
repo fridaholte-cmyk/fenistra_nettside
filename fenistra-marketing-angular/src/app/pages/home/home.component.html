@@ -172,6 +172,13 @@
   .nav-panel-simple a{display:block;padding:10px 12px;border-radius:10px;font-size:14px;color:var(--ink);transition:background .15s ease, color .15s ease;}
   .nav-panel-simple a:hover{background:var(--paper-2);color:var(--berry-deep);}
 
+  /* Integrasjoner: tekst til venstre, animert økosystem til høyre */
+  .eco-section{padding:clamp(72px,8vw,120px) 0; border-top:1px solid var(--line);}
+  .eco-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:56px; align-items:center;}
+  .eco-copy .hp-title{color:var(--ink); margin-bottom:20px;}
+  .eco-copy .hp-lead{margin-bottom:24px;}
+  @media (max-width:980px){ .eco-grid{grid-template-columns:1fr; gap:32px;} }
+
   /* ================= TRYGGHET ================= */
   .trust{padding:clamp(72px,9vw,140px) 0;}
 
@@ -665,7 +672,7 @@
   <div class="wrap hp-hero-grid">
     <div class="hp-hero-copy">
       <h1><span class="hp-in hp-in-1">Fenistra</span> <em class="hp-in hp-in-2">kan eiendom.</em></h1>
-      <p class="hp-lead hp-in hp-in-3">Over 30 år med faget, bygget inn i ett system som svarer, sier ifra og gjør jobben. Fra første henvendelse til ferdig avregnet.</p>
+      <p class="hp-lead hp-in hp-in-3">Forvaltningssystem for næringseiendom, med over 30 år med faget bygget inn. Fenistra svarer, sier ifra og gjør jobben, fra første henvendelse til ferdig avregnet.</p>
       <div class="hp-actions hp-in hp-in-4">
         <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
         <a routerLink="/ki" class="btn btn-ghost">Se hvordan vi hjelper</a>
@@ -812,6 +819,18 @@
 <section id="prosess">
   <div class="wrap">
     <app-process-animation></app-process-animation>
+  </div>
+</section>
+
+<!-- ================= INTEGRASJONER (animert økosystem) ================= -->
+<section class="eco-section" aria-labelledby="eco-title">
+  <div class="wrap eco-grid">
+    <div class="eco-copy reveal">
+      <h2 id="eco-title" class="hp-title">Knytt Fenistra til systemene dere allerede bruker i dag.</h2>
+      <p class="hp-lead">26 integrerte systemer, blant dem 19 regnskaps- og ERP-systemer. Data registreres én gang og deles med regnskap, rapportering og drift.</p>
+      <a routerLink="/integrasjoner" class="hp-link">Se alle integrasjoner →</a>
+    </div>
+    <app-ecosystem></app-ecosystem>
   </div>
 </section>
 
