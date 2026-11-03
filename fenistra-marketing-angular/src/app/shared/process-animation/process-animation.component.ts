@@ -248,6 +248,7 @@ export class ProcessAnimationComponent implements OnDestroy {
   paused = signal(false);
   private frame?: number;
   private sync?: () => void;
+  private rewind?: () => void;
   private cleanup: (() => void)[] = [];
 
   constructor() {
@@ -289,10 +290,18 @@ export class ProcessAnimationComponent implements OnDestroy {
       if (play && !running) { running = true; last = performance.now(); this.frame = requestAnimationFrame(loop); }
       else if (!play && running) { running = false; if (this.frame) cancelAnimationFrame(this.frame); }
     };
+    this.rewind = () => { elapsed = 0; render(0); };
     render(0);
     const io = new IntersectionObserver(([e]) => { visible = e.isIntersecting; this.sync?.(); }, { threshold: 0.25 });
     io.observe(stage);
     this.cleanup.push(() => io.disconnect());
+  }
+
+  /** Back to the first step, and playing again if it was paused */
+  restart() {
+    this.rewind?.();
+    this.paused.set(false);
+    this.sync?.();
   }
 
   togglePause() {

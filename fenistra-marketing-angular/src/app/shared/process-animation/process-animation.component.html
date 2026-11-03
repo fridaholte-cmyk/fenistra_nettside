@@ -1,7 +1,12 @@
 <!-- Animated stage (built in the browser); purely visual, the same content is in the list below -->
 <div class="pa-frame">
   <div class="pa-stage" aria-hidden="true"></div>
-  <button type="button" class="pa-toggle" (click)="togglePause()" [attr.aria-pressed]="paused()"
+  <div class="pa-controls">
+  <button type="button" class="pa-btn" (click)="restart()" aria-label="Se prosessanimasjonen fra start">
+    <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M1 1h2v10H1zM11 1v10L4 6z" fill="currentColor"/></svg>
+    <span>Se fra start</span>
+  </button>
+  <button type="button" class="pa-btn" (click)="togglePause()" [attr.aria-pressed]="paused()"
           [attr.aria-label]="paused() ? 'Spill av prosessanimasjonen' : 'Sett prosessanimasjonen på pause'">
     @if (paused()) {
       <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg>
@@ -11,6 +16,7 @@
       <span>Pause</span>
     }
   </button>
+  </div>
 </div>
 
 <!-- Text version: shown on small screens and before the stage is built, read by screen readers and search engines -->

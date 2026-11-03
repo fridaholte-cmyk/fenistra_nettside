@@ -64,9 +64,12 @@ export class HomeComponent implements OnDestroy {
 
   private frames: number[] = [];
   private onScroll?: () => void;
+  private onResize = () => document.documentElement.style.setProperty('--screen-h', innerHeight + 'px');
 
   constructor(host: ElementRef<HTMLElement>) {
     afterNextRender(() => {
+      this.onResize();
+      addEventListener('resize', this.onResize, { passive: true });
       if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       this.quoteArmed.set(true);
       this.bigCount.set(10);
@@ -148,6 +151,7 @@ export class HomeComponent implements OnDestroy {
   }
 
   ngOnDestroy() {
+    removeEventListener('resize', this.onResize);
     this.stopWatching();
     this.frames.forEach((f) => cancelAnimationFrame(f));
     clearInterval(this.quoteTimer);
