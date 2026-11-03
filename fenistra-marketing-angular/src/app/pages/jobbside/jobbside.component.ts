@@ -1,3 +1,4 @@
+import { ProofCtaComponent } from '../../shared/proof-cta/proof-cta.component';
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
@@ -7,7 +8,7 @@ import { JOBBSIDER, Jobbside } from './jobbsider';
 @Component({
   selector: 'app-jobbside',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, ProofCtaComponent],
   templateUrl: './jobbside.component.html',
   styleUrl: './jobbside.component.scss'
 })

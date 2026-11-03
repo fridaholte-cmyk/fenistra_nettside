@@ -1,20 +1,20 @@
 <style>
 
   :root{
-    --paper:      #FCFAFB;
-    --paper-2:    #F6F3F5;
-    --mist:       #EBE8EC;
-    --ink:        #150A18;
-    --ink-soft:   #4A3B4E;
-    --plum:       #634967;
-    --plum-deep:  #27122C;
-    --plum-900:   #130916;
-    --line:       #E4DEE1;
-    --berry:      #AB3164;
-    --berry-deep: #7B173E;
-    --berry-900:  #560022;
-    --berry-light:#F8EAEE;
-    --berry-mid:  #BC5A83;
+    --paper:      #F8FAFC;
+    --paper-2:    #F1F5F9;
+    --mist:       #E2E8F0;
+    --ink:        #0F172A;
+    --ink-soft:   #475569;
+    --plum:       #475569;
+    --plum-deep:  #1E293B;
+    --plum-900:   #0F172A;
+    --line:       #E2E8F0;
+    --berry:      #1E293B;
+    --berry-deep: #1E293B;
+    --berry-900:  #0F172A;
+    --berry-light:#F1F5F9;
+    --berry-mid:  #94A3B8;
     --font-display: 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
     --font-mono: 'Space Mono', monospace;
@@ -64,7 +64,7 @@
   .eyebrow-on-dark::before{background:var(--berry-mid);}
   .glyph{display:block;} .glyph rect{fill:currentColor;}
 
-  header{position:sticky;top:0;z-index:100;background:rgba(252,250,251,0.86);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line);}
+  header{position:sticky;top:0;z-index:100;background:rgba(248,250,252,0.86);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line);}
   nav.wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
   .brand{display:flex;align-items:center;}
   .brand-logo{height:28px;width:auto;display:block;}
@@ -87,7 +87,7 @@
   .nav-item-dropdown.nav-active > .nav-trigger{color:var(--ink);}
   .nav-panel{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);opacity:0;pointer-events:none;transition:opacity .18s ease, transform .18s ease;padding-top:14px;z-index:120;}
   .nav-item-dropdown:hover .nav-panel, .nav-item-dropdown:focus-within .nav-panel{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0);}
-  .nav-panel-inner{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -20px rgba(21,10,24,.35);padding:12px;}
+  .nav-panel-inner{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -20px rgba(15,23,42,.35);padding:12px;}
   .nav-panel-mega{width:480px;}
   .nav-mega-item{display:flex;gap:14px;padding:12px;border-radius:12px;transition:background .15s ease;}
   .nav-mega-item:hover{background:var(--paper-2);}
@@ -100,13 +100,13 @@
   .nav-panel-simple a:hover{background:var(--paper-2);color:var(--berry-deep);}
 
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:14.5px;padding:12px 22px;border-radius:9px;transition:transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s ease, background .25s ease, border-color .25s ease;white-space:nowrap;}
-  .btn-primary{background:var(--berry);color:#fff;box-shadow:0 1px 2px rgba(86,0,34,0.15), 0 8px 20px -10px rgba(171,49,100,0.55);}
-  .btn-primary:hover{background:var(--berry-deep);transform:translateY(-1px);box-shadow:0 10px 24px -8px rgba(123,23,62,0.55);}
+  .btn-primary{background:var(--berry);color:#fff;box-shadow:0 1px 2px rgba(15,23,42,0.15), 0 8px 20px -10px rgba(30,41,59,0.55);}
+  .btn-primary:hover{background:var(--berry-deep);transform:translateY(-1px);box-shadow:0 10px 24px -8px rgba(30,41,59,0.55);}
   .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);}
   .btn-ghost:hover{border-color:var(--plum);background:var(--paper-2);transform:translateY(-1px);}
   .btn-light{background:#fff;color:var(--ink);border:1.5px solid var(--line);}
   .btn-light:hover{border-color:var(--berry);color:var(--berry-deep);}
-  .btn-on-dark{background:var(--berry);color:#fff;} .btn-on-dark:hover{background:#c14273;}
+  .btn-on-dark{background:var(--berry);color:#fff;} .btn-on-dark:hover{background:#334155;}
 
   .breadcrumb{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:12.5px;color:var(--ink-soft);padding:22px 0 0;}
   .breadcrumb a{color:var(--plum);} .breadcrumb a:hover{color:var(--berry-deep);}
@@ -144,7 +144,7 @@
   .feature-row{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:70px 0;}
   .feature-row.reverse .feature-copy{order:2;}
   .feature-row.reverse .feature-visual{order:1;}
-  .feature-visual{border-radius:16px;overflow:hidden;box-shadow:0 24px 48px -30px rgba(21,10,24,.25);min-height:280px;}
+  .feature-visual{border-radius:16px;overflow:hidden;box-shadow:0 24px 48px -30px rgba(15,23,42,.25);min-height:280px;}
   .feature-visual img{width:100%;height:100%;object-fit:cover;display:block;}
   @media (max-width:980px){
     .feature-row{grid-template-columns:1fr;gap:32px;padding:44px 0;}
@@ -185,7 +185,7 @@
   .carousel-track a{flex:0 0 auto;scroll-snap-align:start;width:300px;border-radius:14px;overflow:hidden;border:1px solid var(--line);display:block;}
   .carousel-track img{width:100%;height:210px;object-fit:cover;display:block;transition:transform .4s ease;}
   .carousel-track a:hover img{transform:scale(1.04);}
-  .carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -10px rgba(21,10,24,.3);cursor:pointer;z-index:5;color:var(--ink);transition:border-color .2s ease, color .2s ease;}
+  .carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -10px rgba(15,23,42,.3);cursor:pointer;z-index:5;color:var(--ink);transition:border-color .2s ease, color .2s ease;}
   .carousel-btn:hover{border-color:var(--berry);color:var(--berry-deep);}
   .carousel-btn.prev{left:-6px;} .carousel-btn.next{right:-6px;}
   @media (max-width:760px){
@@ -245,9 +245,9 @@
     section, .module-body, .related-section{padding-top:44px;padding-bottom:44px;}
   }
 
-  .mobile-drawer{position:fixed;top:0;left:0;right:0;background:var(--paper);z-index:200;display:flex;flex-direction:column;padding:24px 32px 28px;max-height:100vh;overflow-y:auto;box-shadow:0 24px 48px -24px rgba(21,10,24,.3);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);}
+  .mobile-drawer{position:fixed;top:0;left:0;right:0;background:var(--paper);z-index:200;display:flex;flex-direction:column;padding:24px 32px 28px;max-height:100vh;overflow-y:auto;box-shadow:0 24px 48px -24px rgba(15,23,42,.3);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);}
   .mobile-drawer.open{transform:translateY(0);}
-  .mobile-drawer-backdrop{position:fixed;inset:0;background:rgba(21,10,24,.32);z-index:199;opacity:0;pointer-events:none;transition:opacity .3s ease;}
+  .mobile-drawer-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.32);z-index:199;opacity:0;pointer-events:none;transition:opacity .3s ease;}
   .mobile-drawer-backdrop.open{opacity:1;pointer-events:auto;}
   .mobile-drawer .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
   .mobile-drawer a{font-size:22px;font-weight:500;padding:14px 0;border-bottom:1px solid var(--line);font-family:var(--font-display);}
@@ -265,9 +265,9 @@
   .search-trigger:hover{color:var(--ink);}
   .search-trigger span{display:none;}
   @media (min-width:900px){.search-trigger span{display:inline;}}
-  .search-backdrop{position:fixed;inset:0;background:rgba(21,10,24,.32);z-index:299;opacity:0;pointer-events:none;transition:opacity .25s ease;}
+  .search-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.32);z-index:299;opacity:0;pointer-events:none;transition:opacity .25s ease;}
   .search-backdrop.open{opacity:1;pointer-events:auto;}
-  .search-panel{position:fixed;top:90px;left:50%;width:min(560px, calc(100% - 48px));transform:translate(-50%, -16px);z-index:300;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -20px rgba(21,10,24,.35);opacity:0;pointer-events:none;transition:opacity .2s ease, transform .2s ease;}
+  .search-panel{position:fixed;top:90px;left:50%;width:min(560px, calc(100% - 48px));transform:translate(-50%, -16px);z-index:300;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -20px rgba(15,23,42,.35);opacity:0;pointer-events:none;transition:opacity .2s ease, transform .2s ease;}
   .search-panel.open{opacity:1;transform:translate(-50%, 0);pointer-events:auto;}
   .search-input-row{display:flex;align-items:center;gap:10px;padding:16px 18px;border-bottom:1px solid var(--line);}
   .search-input-row svg{color:var(--ink-soft);flex-shrink:0;}
@@ -286,12 +286,12 @@
   .search-hint{padding:28px 18px;text-align:center;font-size:13.5px;color:var(--ink-soft);}
 
   /* ================= CHAT WIDGET ================= */
-  .chat-trigger{position:fixed;bottom:24px;right:24px;z-index:250;width:56px;height:56px;border-radius:50%;background:var(--berry);color:#fff;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;box-shadow:0 14px 30px -10px rgba(123,23,62,.55);transition:transform .2s ease, opacity .2s ease, background .2s ease;}
-  .chat-backdrop{position:fixed;inset:0;background:rgba(21,10,24,.32);z-index:249;opacity:0;pointer-events:none;transition:opacity .25s ease;}
+  .chat-trigger{position:fixed;bottom:24px;right:24px;z-index:250;width:56px;height:56px;border-radius:50%;background:var(--berry);color:#fff;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;box-shadow:0 14px 30px -10px rgba(30,41,59,.55);transition:transform .2s ease, opacity .2s ease, background .2s ease;}
+  .chat-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.32);z-index:249;opacity:0;pointer-events:none;transition:opacity .25s ease;}
   .chat-backdrop.open{opacity:1;pointer-events:auto;}
   .chat-trigger:hover{transform:translateY(-2px);background:var(--berry-deep);}
   .chat-trigger.chat-open-hide{opacity:0;pointer-events:none;transform:scale(.8);}
-  .chat-panel{position:fixed;bottom:24px;right:24px;z-index:250;width:min(360px, calc(100vw - 32px));height:min(520px, calc(100vh - 100px));background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 60px -20px rgba(21,10,24,.4);display:flex;flex-direction:column;overflow:hidden;opacity:0;transform:translateY(16px) scale(.98);pointer-events:none;transition:opacity .22s ease, transform .22s ease;}
+  .chat-panel{position:fixed;bottom:24px;right:24px;z-index:250;width:min(360px, calc(100vw - 32px));height:min(520px, calc(100vh - 100px));background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 60px -20px rgba(15,23,42,.4);display:flex;flex-direction:column;overflow:hidden;opacity:0;transform:translateY(16px) scale(.98);pointer-events:none;transition:opacity .22s ease, transform .22s ease;}
   .chat-panel.open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
   .chat-header{background:var(--berry);color:#fff;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
   .chat-header h4{font-size:14.5px;font-weight:600;}
@@ -332,7 +332,7 @@
     <p class="mp-lead">Bygg inntektsbudsjett direkte fra de faktiske leieforholdene i porteføljen, ikke fra separate regneark.</p>
     
     <div class="mp-actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Snakk med oss</a>
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
       <a routerLink="/rapport-og-analyse" class="btn btn-ghost">Del av rapport og analyse →</a>
     </div>
   </div>
@@ -356,10 +356,10 @@
       <div class="module-main reveal">
         <h2>Dette får du</h2>
         <ul class="feature-list">
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Budsjettering basert på faktiske kontraktsdata</li>
-<li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Oppdateres automatisk ved endringer i leieforhold</li>
-<li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Avstemming mot faktisk fakturert leie</li>
-<li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F8EAEE"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#7B173E" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Grunnlag for prognoser på porteføljenivå</li>
+          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Budsjettering basert på faktiske kontraktsdata</li>
+<li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Oppdateres automatisk ved endringer i leieforhold</li>
+<li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Avstemming mot faktisk fakturert leie</li>
+<li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Grunnlag for prognoser på porteføljenivå</li>
         </ul>
         <div class="body-copy">
           <p>Fenistra Inntektsbudsjett gir dere et budsjett som er forankret i de faktiske leieforholdene i Fenistra, fremfor et regneark som fort blir utdatert. Når kontrakter endres, oppdateres grunnlaget for budsjettet i tråd med dette.</p>
@@ -406,7 +406,7 @@
   <div class="cta-band reveal">
     <h2>Klar for å se Inntektsbudsjett i praksis?</h2>
     <div class="actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Snakk med oss</a>
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book et møte</a>
       <a routerLink="/losninger" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Utforsk flere løsninger</a>
     </div>
   </div>

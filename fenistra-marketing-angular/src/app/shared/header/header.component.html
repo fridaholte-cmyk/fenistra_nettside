@@ -1,7 +1,7 @@
 <header id="siteHeader">
   <nav class="wrap">
     <a routerLink="/" class="brand" aria-label="Fenistra, til forsiden">
-      <img src="images/fenistra-logo.png" alt="Fenistra" class="brand-logo">
+      <img src="images/fenistra-logo-mono.png" alt="Fenistra" class="brand-logo">
     </a>
     <ul class="nav-links">
       <li class="nav-item-dropdown" [class.dismissed]="dismissedMenu === 'losninger'" (mouseenter)="menuEnter('losninger')" (mouseleave)="menuLeave('losninger')" (focusin)="menuEnter('losninger')" (focusout)="menuFocusOut('losninger', $event)">
@@ -51,7 +51,6 @@
         </div>
       </li>
       <li><a routerLink="/kunder">Kunder</a></li>
-      <li><a routerLink="/priser">Priser</a></li>
       <li class="nav-item-dropdown" [class.dismissed]="dismissedMenu === 'selskapet'" (mouseenter)="menuEnter('selskapet')" (mouseleave)="menuLeave('selskapet')" (focusin)="menuEnter('selskapet')" (focusout)="menuFocusOut('selskapet', $event)">
         <button type="button" class="nav-trigger" id="nav-trigger-selskapet" aria-controls="nav-panel-selskapet" [attr.aria-expanded]="openMenu === 'selskapet'" (click)="menuToggle('selskapet')">Om oss<svg width="10" height="10" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M235.3 411.3c-6.2 6.2-16.4 6.2-22.6 0l-208-208c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L224 377.4 420.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-208 208z"/></svg></button>
         <div class="nav-panel" id="nav-panel-selskapet">
@@ -73,10 +72,6 @@
               <div class="nav-mega-icon"><svg width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M160 64c-17.7 0-32 14.3-32 32l0 320c0 11.7-3.1 22.6-8.6 32L432 448c26.5 0 48-21.5 48-48l0-304c0-17.7-14.3-32-32-32L160 64zM64 448c17.7 0 32-14.3 32-32L96 96c0-35.3 28.7-64 64-64l288 0c35.3 0 64 28.7 64 64l0 304c0 44.2-35.8 80-80 80L64 480c-35.3 0-64-28.7-64-64L0 112c0-8.8 7.2-16 16-16s16 7.2 16 16l0 304c0 17.7 14.3 32 32 32zM352 176c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16zm0 64c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16zM176 304c0-8.8 7.2-16 16-16l224 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-224 0c-8.8 0-16-7.2-16-16zm0 64c0-8.8 7.2-16 16-16l224 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-224 0c-8.8 0-16-7.2-16-16zm48-144l64 0 0-64-64 0 0 64zm-32-72c0-13.3 10.7-24 24-24l80 0c13.3 0 24 10.7 24 24l0 80c0 13.3-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24l0-80z"/></svg></div>
               <div class="nav-mega-text"><h4 role="presentation">Fag og nyheter</h4><p>Fagartikler, kundehistorier og nyheter.</p></div>
             </a>
-            <a routerLink="/sporsmal" class="nav-mega-item">
-              <div class="nav-mega-icon"><svg width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M231.1 7.9c16-6.8 34-6.8 50 0L457.8 82.8c22 9.3 38.4 31 38.3 57.2-.5 99.2-41.3 280.7-213.7 363.2-16.7 8-36.1 8-52.7 0-172.4-82.5-213.1-264-213.6-363.2-.1-26.2 16.3-47.9 38.3-57.2L231.1 7.9zm37.5 29.4c-8-3.4-17-3.4-25 0l-176.7 75c-11.3 4.8-18.8 15.5-18.8 27.6 .5 94 39.3 259.8 195.4 334.5 7.9 3.8 17.2 3.8 25.1 0 156.1-74.7 195-240.4 195.5-334.5 .1-12.1-7.5-22.8-18.8-27.6l-176.7-75zm54.5 132.9c5.2-7.1 15.2-8.7 22.3-3.5s8.7 15.2 3.5 22.3L243.4 334.2c-2.8 3.8-7.1 6.2-11.8 6.5s-9.3-1.4-12.6-4.8l-54.4-56.3c-6.1-6.4-6-16.5 .4-22.6s16.5-5.9 22.6 .4l41.2 42.6 94.4-129.8z"/></svg></div>
-              <div class="nav-mega-text"><h4 role="presentation">Spørsmål og svar</h4><p>Svar på det dere lurer på om Fenistra.</p></div>
-            </a>
             <a routerLink="/kontakt-oss" class="nav-mega-item">
               <div class="nav-mega-icon"><svg width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M0 122.5l0-2.5 .1 0C1.3 88.9 27 64 58.5 64l395 0c31.5 0 57.1 24.9 58.4 56l.1 0 0 264c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 122.5zm480 53.1L303.3 305.1c-28.2 20.6-66.5 20.6-94.6 0L32 175.6 32 384c0 17.7 14.3 32 32 32l384 0c17.7 0 32-14.3 32-32l0-208.4zm0-53.1c0-14.6-11.9-26.5-26.5-26.5l-395 0c-14.6 0-26.5 11.9-26.5 26.5 0 8.4 4 16.4 10.8 21.4L227.6 279.3c16.9 12.4 39.9 12.4 56.8 0L469.2 143.8c6.8-5 10.8-12.9 10.8-21.4z"/></svg></div>
               <div class="nav-mega-text"><h4 role="presentation">Kontakt oss</h4><p>Support, salg og besøksadresse.</p></div>
@@ -89,7 +84,15 @@
     <div class="nav-cta">
       <button class="search-trigger" id="searchTrigger" aria-label="Søk på nettsiden" (click)="openSearch()"><svg width="17" height="17" aria-hidden="true" focusable="false" viewBox="0 0 512 512" fill="currentColor"><path d="M384 208a176 176 0 1 0 -352 0 176 176 0 1 0 352 0zM343.3 366C307 397.2 259.7 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208c0 51.7-18.8 99-50 135.3L507.3 484.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0L343.3 366z"/></svg><span>Søk</span></button>
       <a href="https://www.fenistra.net" class="login">Logg inn</a>
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Snakk med oss</a>
+      <div class="nav-item-dropdown nav-contact" [class.dismissed]="dismissedMenu === 'kontakt'" (mouseenter)="menuEnter('kontakt')" (mouseleave)="menuLeave('kontakt')" (focusin)="menuEnter('kontakt')" (focusout)="menuFocusOut('kontakt', $event)">
+        <button type="button" class="btn btn-primary nav-contact-trigger" id="nav-trigger-kontakt" aria-controls="nav-panel-kontakt" [attr.aria-expanded]="openMenu === 'kontakt'" (click)="menuToggle('kontakt')">Ta kontakt<svg width="10" height="10" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M235.3 411.3c-6.2 6.2-16.4 6.2-22.6 0l-208-208c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L224 377.4 420.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-208 208z"/></svg></button>
+        <div class="nav-panel" id="nav-panel-kontakt">
+          <div class="nav-panel-inner nav-panel-contact">
+            <a routerLink="/pakke-resultat" fragment="skjema" class="nav-mega-item"><div class="nav-mega-text"><h4 role="presentation">Book et møte</h4><p>Se Fenistra med en rådgiver, tilpasset porteføljen deres.</p></div></a>
+            <a routerLink="/kontakt-oss" class="nav-mega-item"><div class="nav-mega-text"><h4 role="presentation">Kontakt oss</h4><p>Support, salg og besøksadresse.</p></div></a>
+          </div>
+        </div>
+      </div>
       <button class="hamburger" id="hamburgerBtn" aria-label="Åpne meny" aria-controls="mobileDrawer" [attr.aria-expanded]="mobileDrawerOpen" (click)="openMobileDrawer()"><span></span></button>
     </div>
   </nav>
@@ -98,7 +101,7 @@
 <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop" [class.open]="mobileDrawerOpen" (click)="closeMobileDrawer()"></div>
 <div class="mobile-drawer" id="mobileDrawer" [class.open]="mobileDrawerOpen" role="dialog" aria-modal="true" aria-label="Meny">
   <div class="top">
-    <img src="images/fenistra-logo.png" alt="Fenistra" class="brand-logo" style="height:24px;">
+    <img src="images/fenistra-logo-mono.png" alt="Fenistra" class="brand-logo" style="height:24px;">
     <button class="close" id="closeDrawer" aria-label="Lukk meny" (click)="closeMobileDrawer()">✕</button>
   </div>
   <button type="button" class="m-acc-trigger" [class.open]="openSection === 'losninger'" [attr.aria-expanded]="openSection === 'losninger'" aria-controls="drawerLosninger" (click)="toggleSection('losninger')">Slik hjelper vi<svg width="14" height="14" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M235.3 411.3c-6.2 6.2-16.4 6.2-22.6 0l-208-208c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L224 377.4 420.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-208 208z"/></svg></button>
@@ -115,18 +118,17 @@
     <a routerLink="/losninger" (click)="closeMobileDrawer()">Se hele oversikten →</a>
   </div></div>
   <a routerLink="/kunder" (click)="closeMobileDrawer()">Kunder</a>
-  <a routerLink="/priser" (click)="closeMobileDrawer()">Priser</a>
+  <a routerLink="/kontakt-oss" (click)="closeMobileDrawer()">Kontakt oss</a>
   <button type="button" class="m-acc-trigger" [class.open]="openSection === 'selskapet'" [attr.aria-expanded]="openSection === 'selskapet'" aria-controls="drawerSelskapet" (click)="toggleSection('selskapet')">Om oss<svg width="14" height="14" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M235.3 411.3c-6.2 6.2-16.4 6.2-22.6 0l-208-208c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L224 377.4 420.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-208 208z"/></svg></button>
   <div class="m-acc-panel" id="drawerSelskapet" [class.open]="openSection === 'selskapet'"><div class="m-acc-inner">
     <a routerLink="/om-oss" (click)="closeMobileDrawer()">Om Fenistra</a>
     <a routerLink="/ansatte" (click)="closeMobileDrawer()">Menneskene bak</a>
     <a routerLink="/fenistradagene" (click)="closeMobileDrawer()">Fenistradagene</a>
     <a routerLink="/blogg" (click)="closeMobileDrawer()">Fag og nyheter</a>
-    <a routerLink="/sporsmal" (click)="closeMobileDrawer()">Spørsmål og svar</a>
     <a routerLink="/kontakt-oss" (click)="closeMobileDrawer()">Kontakt oss</a>
   </div></div>
   <a href="https://www.fenistra.net" class="m-login">Logg inn</a>
-  <a routerLink="/pakke-resultat" fragment="skjema" (click)="closeMobileDrawer()" class="btn btn-primary m-cta">Snakk med oss</a>
+  <a routerLink="/pakke-resultat" fragment="skjema" (click)="closeMobileDrawer()" class="btn btn-primary m-cta">Book et møte</a>
 </div>
 
 <div class="search-backdrop" id="searchBackdrop" [class.open]="searchOpen" (click)="closeSearch()"></div>

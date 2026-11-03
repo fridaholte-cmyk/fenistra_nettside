@@ -4,8 +4,8 @@
 .kc-stage {
   position: relative; overflow: hidden;
   border-radius: 22px; padding: 48px 40px 64px;
-  background: radial-gradient(120% 90% at 0% 0%, #3a1a42 0%, var(--plum-deep) 45%, var(--plum-900) 100%);
-  box-shadow: 0 40px 80px -40px rgba(21, 10, 24, .7);
+  background: radial-gradient(120% 90% at 0% 0%, #1E293B 0%, var(--plum-deep) 45%, var(--plum-900) 100%);
+  box-shadow: 0 40px 80px -40px rgba(15,23,42, .7);
   isolation: isolate;
 }
 .kc-stage::before {
@@ -16,14 +16,14 @@
   mask-image: radial-gradient(80% 80% at 50% 40%, #000 30%, transparent 100%);
 }
 .kc-glow { position: absolute; border-radius: 50%; filter: blur(40px); z-index: -1;  }
-.kc-glow-1 { width: 260px; height: 260px; background: rgba(171, 49, 100, .55); top: -80px; right: -60px; }
-.kc-glow-2 { display: none; width: 220px; height: 220px; background: rgba(99, 73, 103, .6); bottom: -90px; left: -50px; animation-delay: -4s; }
+.kc-glow-1 { width: 260px; height: 260px; background: rgba(30,41,59, .55); top: -80px; right: -60px; }
+.kc-glow-2 { display: none; width: 220px; height: 220px; background: rgba(71,85,105, .6); bottom: -90px; left: -50px; animation-delay: -4s; }
 @keyframes kcFloat { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(-14px, 12px); } }
 
 /* ---------- chat window ---------- */
 .kc-window {
   max-width: 400px; margin: 0 auto;
-  background: rgba(252, 250, 251, .97); border-radius: 18px;
+  background: rgba(248,250,252, .97); border-radius: 18px;
   box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .55), 0 0 0 1px rgba(255,255,255,.08);
   overflow: hidden;
 }
@@ -33,7 +33,7 @@
   width: 34px; height: 34px; border-radius: 10px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center; color: #fff;
   background: linear-gradient(135deg, var(--berry-mid), var(--berry-deep));
-  box-shadow: 0 6px 14px -6px rgba(171, 49, 100, .8);
+  box-shadow: 0 6px 14px -6px rgba(30,41,59, .8);
 }
 .kc-title { font-size: 14px; font-weight: 600; color: var(--ink); }
 .kc-sub { display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-soft); }

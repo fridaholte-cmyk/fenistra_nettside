@@ -1,0 +1,26 @@
+:host { display: block; }
+
+.pc { padding: clamp(64px, 8vw, 104px) 0; }
+
+.pc-proof {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0;
+  list-style: none; margin: 0 0 32px; padding: 0; border-top: 1px solid var(--line);
+}
+.pc-proof li { padding: 22px 24px 0 0; display: flex; flex-direction: column; gap: 6px; }
+.pc-proof strong { font-family: var(--font-display); font-weight: 300; font-size: clamp(28px, 2.8vw, 40px); letter-spacing: -0.025em; line-height: 1.05; color: var(--ink); font-variant-numeric: tabular-nums; }
+.pc-proof span { font-size: 15px; line-height: 1.45; color: var(--ink-soft); }
+
+.pc-band {
+  display: flex; align-items: center; justify-content: space-between; gap: 40px;
+  background: var(--plum-deep); color: #fff; padding: clamp(40px, 5vw, 64px); border-radius: var(--radius, 14px);
+}
+.pc-band h2 { font-family: var(--font-display); font-weight: 300; font-size: clamp(36px, 4.6vw, 64px); line-height: 1; letter-spacing: -0.03em; margin: 0 0 14px; }
+.pc-band p { font-size: 18px; line-height: 1.55; color: rgba(255, 255, 255, .82); max-width: 52ch; margin: 0; }
+.pc-actions { display: flex; flex-wrap: wrap; gap: 12px; flex-shrink: 0; }
+.pc-ghost { border: 1.5px solid rgba(255, 255, 255, .45); color: #fff; background: transparent; }
+.pc-ghost:hover { border-color: #fff; background: rgba(255, 255, 255, .08); }
+
+@media (max-width: 900px) {
+  .pc-proof { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 24px; }
+  .pc-band { flex-direction: column; align-items: flex-start; }
+}

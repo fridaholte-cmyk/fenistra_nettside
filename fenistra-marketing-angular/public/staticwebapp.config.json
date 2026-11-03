@@ -3,6 +3,11 @@
   "trailingSlash": "never",
   "routes": [
     {
+      "route": "/priser",
+      "redirect": "/pakke-resultat",
+      "statusCode": 301
+    },
+    {
       "route": "/kundeteam",
       "redirect": "/ansatte#kundeteam",
       "statusCode": 301

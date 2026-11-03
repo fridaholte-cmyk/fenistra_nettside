@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #FCFAFB;
+  background: #F8FAFC;
   padding: 24px;
 }
 
@@ -11,10 +11,10 @@
   width: 100%;
   max-width: 380px;
   background: #fff;
-  border: 1px solid #E4DEE1;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 40px 32px;
-  box-shadow: 0 30px 60px -30px rgba(21, 10, 24, 0.25);
+  box-shadow: 0 30px 60px -30px rgba(15,23,42, 0.25);
   text-align: center;
 }
 
@@ -23,7 +23,7 @@
   font-weight: 700;
   font-size: 15px;
   letter-spacing: 0.06em;
-  color: #AB3164;
+  color: #1E293B;
   margin-bottom: 20px;
 }
 
@@ -31,13 +31,13 @@
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: 24px;
-  color: #150A18;
+  color: #0F172A;
   margin-bottom: 10px;
 }
 
 .gate-card p {
   font-size: 14px;
-  color: #4A3B4E;
+  color: #475569;
   margin-bottom: 24px;
   line-height: 1.5;
 }
@@ -45,7 +45,7 @@
 .gate-card input {
   width: 100%;
   padding: 12px 14px;
-  border: 1.5px solid #E4DEE1;
+  border: 1.5px solid #E2E8F0;
   border-radius: 9px;
   font-size: 15px;
   font-family: inherit;
@@ -55,7 +55,7 @@
 }
 
 .gate-card input:focus {
-  border-color: #AB3164;
+  border-color: #1E293B;
 }
 
 .gate-error {
@@ -70,7 +70,7 @@
   padding: 12px 22px;
   border-radius: 9px;
   border: none;
-  background: #AB3164;
+  background: #1E293B;
   color: #fff;
   font-weight: 600;
   font-size: 14.5px;
@@ -79,7 +79,7 @@
 }
 
 .gate-card button:hover {
-  background: #7B173E;
+  background: #1E293B;
 }
 
 .page-loader {
@@ -89,7 +89,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(252, 250, 251, 0.72);
+  background: rgba(248,250,252, 0.72);
   backdrop-filter: blur(2px);
   animation: page-loader-in .2s ease both;
 }

@@ -8,7 +8,7 @@ import { Component, ElementRef, NgZone, OnDestroy, afterNextRender, inject, sign
  * the browser has built the stage, a plain list of the same steps is shown instead.
  */
 
-const INK = 'var(--plum-deep)', BODY = 'var(--ink-soft)', MUTED = '#9A8FA3', LINE = 'var(--line)', CARD = '#FFFFFF', TINT = 'var(--paper-2)';
+const INK = 'var(--plum-deep)', BODY = 'var(--ink-soft)', MUTED = '#94A3B8', LINE = 'var(--line)', CARD = '#FFFFFF', TINT = 'var(--paper-2)';
 const MONO = 'var(--font-mono)';
 /** playback speed: 1 = the prototype's tempo (31.9 s per loop) */
 const SPEED = 1.5;
@@ -111,7 +111,7 @@ const VIGNETTES: Record<string, () => Vignette> = {
     const data: [string, number][] = [['Bryggegata 4', 96], ['Tollbugata 12', 81], ['Akersgata 7', 74]];
     const rows = data.map(([k, v], i) => {
       const name = el('span', { color: INK, fontWeight: 500 }, k);
-      const fill = el('span', { display: 'block', height: '100%', width: '0%', background: i === 0 ? INK : '#B9AEC1' });
+      const fill = el('span', { display: 'block', height: '100%', width: '0%', background: i === 0 ? INK : '#CBD5E1' });
       const pct = el('span', { fontFamily: MONO, fontSize: 16, color: BODY, textAlign: 'right' }, '0%');
       const r = el('div', { display: 'grid', gridTemplateColumns: '150px 1fr 48px', alignItems: 'center', gap: 12, padding: '8px 8px', margin: '0 -8px', borderRadius: 4, fontSize: 18 },
         name, el('span', { height: 6, background: LINE, borderRadius: 3, overflow: 'hidden' }, fill), pct);
@@ -126,7 +126,7 @@ const VIGNETTES: Record<string, () => Vignette> = {
           x.fill.style.width = `${x.v * p}%`;
           x.pct.textContent = `${Math.round(x.v * p)}%`;
           if (i === 0) {
-            x.r.style.background = `rgba(39,18,44,${0.06 * hi})`;
+            x.r.style.background = `rgba(30,41,59,${0.06 * hi})`;
             x.name.style.fontWeight = hi > 0.5 ? '600' : '500';
           }
         });
@@ -147,7 +147,7 @@ const VIGNETTES: Record<string, () => Vignette> = {
   Signering: () => {
     const p0 = pill('Signert');
     const bars = [0.92, 0.78, 0.86].map((w) => {
-      const fill = el('div', { height: '100%', width: '0%', background: '#CFC5D6' });
+      const fill = el('div', { height: '100%', width: '0%', background: '#CBD5E1' });
       return { wrap: el('div', { height: 8, borderRadius: 4, background: TINT, marginBottom: 10, overflow: 'hidden' }, fill), fill, w };
     });
     const sig = el('div', { position: 'absolute', left: 4, bottom: 4, fontFamily: "Georgia, 'Times New Roman', serif", fontStyle: 'italic', fontSize: 34, color: INK, whiteSpace: 'nowrap' }, 'K. Nordli');
@@ -196,7 +196,7 @@ const VIGNETTES: Record<string, () => Vignette> = {
   },
   Felleskost: () => {
     const segs = [8.4, 22, 31, 18, 20.6];
-    const colors = [INK, '#CFC5D6', '#E2DAE7', '#D8CFDE', '#E9E3ED'];
+    const colors = [INK, '#CBD5E1', '#E2E8F0', '#CBD5E1', '#E2E8F0'];
     const bars = segs.map((s, i) => ({ e: el('div', { width: '0%', background: colors[i], borderRadius: 2 }), s }));
     const lbl = el('div', { display: 'flex', justifyContent: 'space-between', marginTop: 12, fontSize: 18 },
       el('span', { color: INK, fontWeight: 600 }, 'Nordlys AS · 8,4 %'), el('span', { color: BODY, fontVariantNumeric: 'tabular-nums' }, '408 240 kr'));
@@ -224,7 +224,7 @@ const VIGNETTES: Record<string, () => Vignette> = {
   },
   Videre: () => {
     const rows = [['Ny avregning', '2028'], ['Reforhandling', 'Bryggegata 4'], ['Ny leietaker', 'Tollbugata 12']].map(([k, v]) =>
-      el('div', { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '9px 12px', marginBottom: 8, border: '1px dashed #CFC5D6', borderRadius: 4, fontSize: 18 },
+      el('div', { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '9px 12px', marginBottom: 8, border: '1px dashed #CBD5E1', borderRadius: 4, fontSize: 18 },
         el('span', { color: INK, fontWeight: 500 }, k), el('span', { fontFamily: MONO, fontSize: 15, color: MUTED }, v)));
     return {
       root: el('div', {}, label('Neste i saken'), ...rows),
@@ -377,7 +377,7 @@ export class ProcessAnimationComponent implements OnDestroy {
         css(n.card, {
           opacity: cardIn * (1 - 0.6 * dim),
           transform: `translateY(${(1 - cardIn) * 28 + dim * 6}px)`,
-          boxShadow: `0 ${18 * (1 - dim)}px ${40 * (1 - dim)}px -18px rgba(39,18,44,${0.28 * (1 - dim)})`,
+          boxShadow: `0 ${18 * (1 - dim)}px ${40 * (1 - dim)}px -18px rgba(30,41,59,${0.28 * (1 - dim)})`,
         });
         if (cardIn > 0) n.v.update(T - c);
         n.stem.style.height = `${(LINE_Y - 17 - CARD_Y - CARD_H) * cardIn}px`;
@@ -388,7 +388,7 @@ export class ProcessAnimationComponent implements OnDestroy {
         const tin = M.enter(1.0 + i * 0.08, 0.6)(T);
         css(n.text, { opacity: tin, transform: `translateY(${(1 - tin) * 12}px)` });
         n.title.style.color = on ? 'var(--plum-deep)' : MUTED;
-        n.desc.style.color = on ? 'var(--ink-soft)' : '#BDB3C4';
+        n.desc.style.color = on ? 'var(--ink-soft)' : '#CBD5E1';
       });
 
       const li = M.enter(cue(0) + 1.4, 0.6)(T);

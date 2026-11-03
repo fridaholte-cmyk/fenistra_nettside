@@ -1,5 +1,5 @@
 // Kunnskapsbase for chat-assistenten. Nøkkelord matches mot brukerens spørsmål.
-// Dekker: sporsmal.html (FAQ), alle løsningssider, integrasjonssider, priser, kundehistorier,
+// Dekker: sporsmal.html (FAQ), alle løsningssider, integrasjonssider, kundehistorier,
 // nøkkeltall, team/kontaktinfo, datasikkerhet, blogg- og media-artikler, samt personvern/cookies/åpenhetsloven.
 // Hver post lenker videre til kildesiden for mer informasjon.
 export interface ChatKbEntry {
@@ -30,7 +30,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["premium"],
-    answer: "Alt fra Standard-pakken, i tillegg til alle tilleggsprodukter og egen dedikert kunderådgiver. Se pris og løsning."
+    answer: "Alt fra Standard-pakken, i tillegg til alle tilleggsprodukter og egen dedikert kunderådgiver."
   },
   {
     keywords: ["kjøpesenter"],
@@ -42,7 +42,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["koster", "kostnad", "abonnement"],
-    answer: "Fenistra prises etter porteføljens leieomsetning, ikke antall brukere – alle pakker har ubegrenset antall brukere. Vi har ikke faste priser liggende åpent på siden, siden det varierer med portefølje og behov. Snakk med oss, så finner vi ut hva som passer for dere."
+    answer: "Vi gir et tilbud tilpasset porteføljen deres. Book et møte, så ser vi på hva som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
   },
   {
     keywords: ["forskjellen", "standard", "premium"],
@@ -82,7 +82,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["transaksjonsprodukter"],
-    answer: "MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering er transaksjonsprodukter. De er inkludert i Fenistra Standard, men betales per transaksjon eller bruk fremfor en fast pris."
+    answer: "MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering er transaksjonsprodukter. De er inkludert i Fenistra Standard, men betales etter bruk."
   },
   {
     keywords: ["kontrakter", "digitalt", "signere"],
@@ -98,7 +98,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["markedsledende", "kompromiss", "velge fenistra", "skiller fenistra", "skiller dere", "andre systemer", "hvorfor fenistra", "hvorfor velge", "konkurrent", "sammenlign", "forskjell på fenistra og", "fordelene med fenistra", "bedre enn", "alternativ til"],
-    answer: "Fenistra kan eiendom. Vi kombinerer erfaring fra norsk næringseiendom siden 1994, markedsdata fra Arealstatistikk integrert i løsningene og AI som bruker kunnskapen. Det merkes på tre måter: Fenistra svarer når dere spør, med forklaring og kilder; sier ifra når noe krever oppmerksomhet, som frister, utløpt sikkerhet eller en leietaker som trenger mer plass; og gjør jobben, fra lead til signering og innflytting, og fra kontrakt til regulering, felleskostnader, MVA og faktura, uten dobbeltregistrering. Fenistra er skybasert, ISO 27001-sertifisert og en del av Visma. <a href=\"sporsmal.html\">Les mer i Spørsmål og svar →</a>"
+    answer: "Fenistra kan eiendom. Vi kombinerer erfaring fra norsk næringseiendom siden 1994, markedsdata fra Arealstatistikk integrert i løsningene og AI som bruker kunnskapen. Det merkes på tre måter: Fenistra svarer når dere spør, med forklaring og kilder; sier ifra når noe krever oppmerksomhet, som frister, utløpt sikkerhet eller en leietaker som trenger mer plass; og gjør jobben, fra lead til signering og innflytting, og fra kontrakt til regulering, felleskostnader, MVA og faktura, uten dobbeltregistrering. Fenistra er skybasert, ISO 27001-sertifisert og en del av Visma."
   },
   {
     keywords: ["hvilken verdi", "verdi kan fenistra", "verdi for", "mitt selskap", "vårt selskap", "gevinst", "spare tid", "hva tjener vi"],
@@ -122,7 +122,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["konsulenttimer", "skjulte kostnader", "skjult", "oppstart", "oppstartskostnad", "implementering", "komme raskt i gang", "hvor lang tid tar"],
-    answer: "Det er enkelt og raskt å komme i gang med Fenistra, uten betalte konsulenttimer og uten skjulte kostnader. Med AI-opplasting drar du kontraktene rett inn, og AI fyller ut feltene for deg. <a href=\"sporsmal.html\">Les mer i Spørsmål og svar →</a>"
+    answer: "Det er enkelt og raskt å komme i gang med Fenistra, uten betalte konsulenttimer. Med AI-opplasting drar du kontraktene rett inn, og AI fyller ut feltene for deg."
   },
   {
     keywords: ["integrasjonsmotor", "fenistra hub", "dobbeltregistrering", " api", "leieregulering"],
@@ -130,7 +130,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["skalerbar", "fleksibel", "vokser", "tilleggsfunksjonalitet", "tilleggsprodukt"],
-    answer: "Fenistra er fleksibelt og skalerbart. Velg pakken som passer i dag, Standard eller Premium, og legg til tilleggsfunksjonalitet etter hvert som porteføljen vokser. Alle pakker har ubegrenset antall brukere. <a href=\"priser.html\">Se pakkene →</a>"
+    answer: "Fenistra er fleksibelt og skalerbart. Velg pakken som passer i dag, Standard eller Premium, og legg til tilleggsfunksjonalitet etter hvert som porteføljen vokser. Alle pakker har ubegrenset antall brukere."
   },
   {
     keywords: ["ki-assistent", "ai-assistent", "ai-chat", "ki-chat", "ai-opplasting", "last opp kontrakt", "laste opp kontrakter", "ai i fenistra", "ki i fenistra"],
@@ -336,7 +336,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["nøkkeltall", "hvor mange bruker", "statistikk fenistra", "60 000 kontrakter"],
-    answer: "Noen nøkkeltall om Fenistra: 170+ eiendomsforvaltere i Norge bruker Fenistra, 20+ integrasjoner mot andre systemer er i produksjon hos kunder, rundt 60 milliarder kroner i årlig leieomsetning er registrert i Fenistra, og over 60 000 kontrakter forvaltes gjennom Fenistra-plattformen. <a href=\"index.html\">Les mer om Forsiden →</a>"
+    answer: "Noen nøkkeltall om Fenistra: 170+ eiendomsforvaltere i Norge bruker Fenistra, 20+ integrasjoner mot andre systemer er i produksjon hos kunder, rundt 65 milliarder kroner i årlig leieomsetning er registrert i Fenistra, og over 60 000 kontrakter forvaltes gjennom Fenistra-plattformen. <a href=\"index.html\">Les mer om Forsiden →</a>"
   },
   {
     keywords: ["tilleggsprodukter", "selvstendige produkter", "hva er inkludert"],
@@ -392,15 +392,15 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["transaksjonsprodukt", "transaksjon"],
-    answer: "MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering er transaksjonsprodukter – de er inkludert i Fenistra Standard, men betales per transaksjon/bruk fremfor en fast pris."
+    answer: "MVA-erklæring, revisorbekreftet omsetning, Protokoller og Digital signering er transaksjonsprodukter – de er inkludert i Fenistra Standard, men betales etter bruk."
   },
   {
     keywords: ["pris", "koster", "kostnad", "abonnement"],
-    answer: "Fenistra prises etter porteføljens leieomsetning, ikke antall brukere – alle pakker har ubegrenset antall brukere. Snakk med oss, så finner vi ut hva som passer for dere."
+    answer: "Vi gir et tilbud tilpasset porteføljen deres. Book et møte, så ser vi på hva som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
   },
   {
     keywords: ["demo", "book demo", "snakk med oss", "prøve"],
-    answer: "Du kan avtale en demo via «Snakk med oss»-knappen øverst på siden, så tar en av våre rådgivere kontakt. <a href=\"pakke-resultat.html\">Les mer om pakketesten →</a>"
+    answer: "Du kan avtale en demo via «Ta kontakt» øverst på siden og velge «Book et møte», så tar en av våre rådgivere kontakt. <a href=\"pakke-resultat.html\">Les mer om pakketesten →</a>"
   },
   {
     keywords: ["hei", "hallo", "yo", "morn"],

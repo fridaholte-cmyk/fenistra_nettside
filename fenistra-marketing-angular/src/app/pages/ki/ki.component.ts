@@ -1,21 +1,16 @@
+import { ProofCtaComponent } from '../../shared/proof-cta/proof-cta.component';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { KiChatDemoComponent } from '../../shared/ki-chat-demo/ki-chat-demo.component';
 
-// The article section ("Fenistra endrer eiendomsbransjen med AI" + download form) is hidden for now.
-// Set to true to publish it again.
-const SHOW_ARTICLE = false;
-
 @Component({
   selector: 'app-ki',
   standalone: true,
-  imports: [RouterLink, KiChatDemoComponent],
+  imports: [RouterLink, ProofCtaComponent, KiChatDemoComponent],
   templateUrl: './ki.component.html',
   encapsulation: ViewEncapsulation.None
 })
 export class KiComponent {
-  readonly showArticle = SHOW_ARTICLE;
-
   // Scroll straight to the «gjør jobben» section on this page. Letting the plain link do a fragment
   // navigation makes the browser and the Angular router both scroll, which can make the page jump.
   scrollToProcess(event: MouseEvent): void {

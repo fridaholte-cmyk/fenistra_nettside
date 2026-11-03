@@ -1,9 +1,7 @@
 import { Component, ElementRef, OnDestroy, ViewEncapsulation, afterNextRender, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ProcessAnimationComponent } from '../../shared/process-animation/process-animation.component';
-import { HeroAskBoxComponent } from '../../shared/hero-ask-box/hero-ask-box.component';
 import { TrustListComponent } from '../../shared/trust-list/trust-list.component';
-import { EcosystemComponent } from '../../shared/ecosystem/ecosystem.component';
 
 interface Customer {
   name: string;
@@ -20,7 +18,7 @@ interface Customer {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, ProcessAnimationComponent, HeroAskBoxComponent, TrustListComponent, EcosystemComponent],
+  imports: [RouterLink, ProcessAnimationComponent, TrustListComponent],
   templateUrl: './home.component.html',
   encapsulation: ViewEncapsulation.None
 })
@@ -54,14 +52,10 @@ export class HomeComponent implements OnDestroy {
   quoteArmed = signal(false);
   quoteShown = signal(false);
 
-  // "Vi kjenner markedet" figures, counted up the same way
-  stats = [
-    { to: 30, suffix: '+ år', label: 'med fagkunnskap om norsk næringseiendom' },
-    { to: 170, suffix: '+', label: 'eiendomsselskaper har valgt Fenistra, fra de største porteføljene til aktører i vekst' },
-    { to: 60000, suffix: '+', label: 'leiekontrakter forvaltes i Fenistra.' },
-    { to: 60, suffix: ' mrd', label: 'kroner i årlig leie, regulert, fakturert og avregnet riktig' },
-  ];
-  statValues = signal(this.stats.map((s) => s.to));
+  // 65 mrd in yearly rent and 60 000 contracts: the prerendered page shows the final numbers; in the browser
+  // they drop to 10 and count up through every number once the section is in view.
+  bigCount = signal(65);
+  midCount = signal(60);
 
   // Maren's quote (verbatim): once its box has faded in, one word at a time lights up purple, as if read along
   quoteWords = '«Det er en trygghet i å møte en samarbeidspartner som forstår vår særbransje og de utfordringene vi har i hverdagen. Hos Fenistra blir vi møtt med forståelse, og det er godt å jobbe med fagfolk som virkelig kan faget sitt.»'.split(' ');
@@ -75,7 +69,8 @@ export class HomeComponent implements OnDestroy {
     afterNextRender(() => {
       if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       this.quoteArmed.set(true);
-      this.statValues.set(this.stats.map(() => 0));
+      this.bigCount.set(10);
+      this.midCount.set(10);
 
       const watchers = [
         {
@@ -86,8 +81,11 @@ export class HomeComponent implements OnDestroy {
           },
         },
         {
-          selector: '.insight-stats',
-          start: () => this.animate(1800, (e) => this.statValues.set(this.stats.map((s) => Math.round(s.to * e)))),
+          selector: '.hp-numbers',
+          start: () => {
+            this.countUp(this.bigCount, 65);
+            this.countUp(this.midCount, 60);
+          },
         },
       ];
 
@@ -114,6 +112,21 @@ export class HomeComponent implements OnDestroy {
     });
   }
 
+  /** One step per frame, so every number is shown, with a short slow-down over the last few */
+  private countUp(count: ReturnType<typeof signal<number>>, target: number) {
+    let last = 0;
+    const step = (t: number) => {
+      const left = target - count();
+      if (left <= 0) return;
+      if (t - last >= (left <= 6 ? 30 + (6 - left) * 15 : 0)) {
+        count.update((n) => n + 1);
+        last = t;
+      }
+      this.frames.push(requestAnimationFrame(step));
+    };
+    this.frames.push(requestAnimationFrame(step));
+  }
+
   /** Starts after the quote box has faded in (CSS: 0.8 s) plus a short pause */
   private readQuote() {
     setTimeout(() => {
@@ -123,21 +136,6 @@ export class HomeComponent implements OnDestroy {
         if (this.quoteRead() > this.quoteWords.length) clearInterval(this.quoteTimer);
       }, 220);
     }, 1400);
-  }
-
-  formatStat(n: number) {
-    return n.toLocaleString('nb-NO');
-  }
-
-  private animate(duration: number, step: (eased: number) => void, done?: () => void) {
-    const start = performance.now();
-    const tick = (now: number) => {
-      const t = Math.min(1, (now - start) / duration);
-      step(1 - Math.pow(1 - t, 3));
-      if (t < 1) this.frames.push(requestAnimationFrame(tick));
-      else done?.();
-    };
-    this.frames.push(requestAnimationFrame(tick));
   }
 
   private stopWatching() {

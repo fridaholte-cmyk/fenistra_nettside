@@ -39,6 +39,7 @@ const SIDER: Jobbside[] = [
     "lead": "Utløp, opsjoner, regulering og sikkerheter er spredt over hundrevis av kontrakter. Fenistra holder oversikten, sier ifra i tide og gjør rutinene, så dere rekker å handle før noe glipper.",
     "problems": [["Fristene står i kontrakten, ikke i kalenderen", "Oppsigelsesfrister, opsjoner og utløp må letes frem kontrakt for kontrakt."], ["Sikkerheten oppdages for sent", "Bankgarantier og depositum som mangler, er for lave eller har gått ut, blir ofte oppdaget først når de trengs."], ["Behovene når ikke frem", "At en leietaker trenger mer plass eller vurderer å flytte, blir sjelden koblet til porteføljen i tide."]],
     "pillars": {"svarer": ["«Hvilke kontrakter utløper i 2027?»", "Fenistra svarer med kontraktene det gjelder, vilkårene som avgjør, og hvorfor de krever oppmerksomhet. Dere ser hvilke kontrakter svaret bygger på."], "sierIfra": ["«Garantien til leietakeren utløper om 60 dager.»", "Varsel før kontraktsutløp, oppsigelsesfrister og opsjoner, og når sikkerheten mangler, er for lav eller nærmer seg utløp."], "gjorJobben": ["«Reguleringsbrevene er klare.»", "Leien reguleres etter KPI eller markedsleie, og reguleringsbrevene lages automatisk. Dere kontrollerer og sender."]},
+    "flow": {"id": "steg", "title": "Fra varsel til oppdatert kontrakt", "intro": "Slik følger Fenistra opp et leieforhold som nærmer seg en frist.", "steps": [["Fenistra sier ifra", "Varsel før utløp, opsjonsfrist eller manglende sikkerhet, til den som har ansvaret for leieforholdet."], ["Dere ser hele bildet", "Kontrakten, historikken og leie mot marked fra Arealstatistikk ligger på samme sted."], ["Dere bestemmer", "Forlenge, reforhandle eller si opp. Avgjørelsen og dokumentasjonen lagres på leieforholdet."], ["Fenistra gjør resten", "Ny leie, nye datoer og faktureringen følger kontrakten, uten dobbeltregistrering."]]},
     "whyEyebrow": "For ledelsen",
     "whyTitle": "Risiko dere ser i tide, er risiko dere kan styre",
     "why": "Utløpte garantier, glemte reguleringer og frister som passerer, fanges opp før de koster penger. Ledelsen ser hvilke kontrakter som trenger oppfølging, og hvilke muligheter som åpner seg, på tvers av hele porteføljen.",
@@ -144,6 +145,7 @@ const SIDER: Jobbside[] = [
     "lead": "MVA-erklæringer, justeringsforpliktelser og dokumentasjonen som følger med, fulgt opp av systemet gjennom hele perioden i stedet for i regneark.",
     "problems": [["Erklæringer som ikke kommer inn", "Leietakerne må purres på MVA-erklæringer, og oversikten ligger i e-post."], ["Justering over mange år", "Justeringsforpliktelser løper i opptil ti år, ofte lenger enn den som satte dem opp, har ansvaret."], ["Feil som oppdages sent", "MVA-feil kan koste lenge etter at de ble gjort, og er vanskelige å rette i ettertid."]],
     "pillars": {"svarer": ["«Hvilke leietakere mangler MVA-erklæring?»", "Fenistra viser hvem som ikke har levert, og hvilke arealer og kontrakter det gjelder."], "sierIfra": ["«Endret bruk av lokalet kan påvirke justeringen.»", "Justeringsforpliktelsene følges gjennom hele perioden, i tråd med lover, forskrifter og uttalelser, så dere ser hva en endring betyr før den får konsekvenser."], "gjorJobben": ["«Erklæringene er hentet inn.»", "MVA-erklæringer hentes automatisk fra MVA-registrerte leietakere, og MVA-behandlingen i felleskostnadsavregningen skjer for hver leietaker."]},
+    "flow": {"id": "steg", "title": "Fra MVA-erklæring til dokumentasjon", "intro": "Slik følger Fenistra opp MVA og justering gjennom hele perioden.", "steps": [["Erklæringene hentes inn", "Fenistra henter inn MVA-erklæringer fra de MVA-registrerte leietakerne, uten purring på e-post."], ["Avvik vises", "Svar som avviker fra det som står i leiekontrakten, blir flagget, så dere kan følge dem opp."], ["Justeringen følges opp", "MVA-status på arealene og justeringsforpliktelsene følges gjennom hele perioden."], ["Dokumentasjonen ligger klar", "Grunnlaget for tilbakegående avgiftsoppgjør lages løpende, og alt ligger samlet når revisor spør."]]},
     "whyEyebrow": "For økonomiledelsen",
     "whyTitle": "Feil som oppdages sent, er de dyreste",
     "why": "MVA og justering er der feil kan koste lenge etter at de ble gjort. Når systemet følger opp hele perioden og dokumenterer underveis, står dere trygt når regnskapsfører, revisor eller Skatteetaten spør.",
@@ -177,6 +179,7 @@ const SIDER: Jobbside[] = [
     "lead": "Se kontraktene i lys av markedet. Fenistra kobler kontraktene, arealene og økonomien deres med markedsdata fra Arealstatistikk, så dere ser mulighetene for reforhandling, ny leietaker og tilpasning av lokalene.",
     "problems": [["Tallene må settes sammen først", "Nøkkeltall hentes fra flere systemer og regneark før ledermøtet, og er gamle når de presenteres."], ["Markedet ligger i en annen rapport", "Leien i egne kontrakter sammenlignes med markedet for hånd, hvis det skjer i det hele tatt."], ["Budsjettet bygger på et ark ved siden av", "Inntektsbudsjettet lages utenfor systemet der kontraktene faktisk ligger."]],
     "pillars": {"svarer": ["«Er leien på nivå med markedet?»", "Fenistra sammenligner leien i kontraktene med markedsleie fra Arealstatistikk for riktig sone og leietype, og viser forutsetningene. Markedsdataene erstatter ikke en faglig vurdering, men gir den et bedre utgangspunkt."], "sierIfra": ["«Disse kontraktene ligger under markedsleie og utløper snart.»", "Dere ser kontraktene som bør reforhandles, og ledige lokaler som passer leietakere med nye behov, før dere selv leter etter dem."], "gjorJobben": ["«Tallene til styremøtet er oppdatert.»", "Nøkkeltall, inntektsbudsjett og formuesverdsettelse bygger på de samme dataene som faktureringen, klare for ledelse, styre og revisor."]},
+    "flow": {"id": "steg", "title": "Fra kontraktene til ledermøtet", "intro": "Slik blir tallene i porteføljen til beslutninger.", "steps": [["Tallene kommer fra kontraktene", "Rent roll, ledighet og utløp bygger på de samme dataene som faktureringen og regnskapet."], ["Markedet ligger ved siden av", "Leien i kontraktene sammenlignes med markedsleie fra Arealstatistikk for riktig sone og leietype."], ["Dere ser framover", "Utløpslister med inntekt, neste års leie etter KPI og inntektsbudsjett bygget på faktiske leieforhold."], ["Klart til ledermøtet", "Rapporter per selskap, eiendom eller portefølje, klare til nedlasting."]]},
     "whyEyebrow": "For ledelsen",
     "whyTitle": "Samme tall i ledermøtet som i regnskapet",
     "why": "Når rapportene bygger på de samme dataene som faktureringen og regnskapet, slipper dere å avstemme flere versjoner av tallene. Med markedsleien ved siden av ser ledelsen og styret både hvordan porteføljen går, og hvor mulighetene ligger.",
@@ -190,7 +193,7 @@ const SIDER: Jobbside[] = [
       {
         "route": "/losning-rapportering",
         "title": "Rapportering",
-        "desc": "Nøkkeltallene deres, alltid oppdatert.",
+        "desc": "Nøkkeltallene deres, hentet fra kontraktene.",
         "icon": "<svg width=\"22\" height=\"22\" aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 512 512\" fill=\"currentColor\"><path d=\"M16 32c8.8 0 16 7.2 16 16l0 352c0 26.5 21.5 48 48 48l416 0c8.8 0 16 7.2 16 16s-7.2 16-16 16L80 480c-44.2 0-80-35.8-80-80L0 48c0-8.8 7.2-16 16-16zM144 256c8.8 0 16 7.2 16 16l0 96c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-96c0-8.8 7.2-16 16-16zM256 144l0 224c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-224c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 48c8.8 0 16 7.2 16 16l0 160c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-160c0-8.8 7.2-16 16-16zM448 80l0 288c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-288c0-8.8 7.2-16 16-16s16 7.2 16 16z\"/></svg>"
       },
       {
@@ -242,7 +245,7 @@ const LEAD_TIL_INNFLYTTING: Jobbside = {
     steps: [
       ['Lead og behov', 'Interessenten og behovet registreres én gang: areal, arbeidsplasser og ønsket innflytting.'],
       ['Ledige lokaler', 'Fenistra viser lokalene som passer, med areal, tilgjengelighet og leie.'],
-      ['Salgsmulighet', 'Behov, lokale, pris og vurderinger samles i én sak, med fase, verdi og sannsynlighet.'],
+      ['Salgsmulighet', 'Behov, lokale, leie og vurderinger samles i én sak, med fase, verdi og sannsynlighet.'],
       ['Oppside og prognose', 'Se leien mot markedsleie fra Arealstatistikk, kostnader til tilpasning og hva avtalen betyr for inntektsprognosen.'],
       ['Kontraktsutkast', 'Utkastet fylles ut fra opplysningene i saken. Kontraktsansvarlig kontrollerer vilkårene.'],
       ['Deling og signering', 'Utkastet deles med leietakeren, kommentarene samles i saken, og kontrakten signeres digitalt.'],
@@ -266,7 +269,7 @@ const LEAD_TIL_INNFLYTTING: Jobbside = {
   whyEyebrow: 'For utleie og ledelse',
   whyTitle: 'Kortere vei fra ledig lokale til ny leietaker',
   why: 'Når behov, lokaler, markedsleie og kontrakt henger sammen, bruker teamet tiden på leietakerne i stedet for på overleveringer. Ledelsen ser hvilke muligheter som er i løp, og hva de betyr for inntektene.',
-  whyNote: 'Det kommersielle arbeidet gjøres i Felix fra Fenistra, applikasjonen for utleie og salg. Den henger sammen med Fenistra, så kontrakten går rett over til forvaltning og fakturering når den er signert.',
+  whyNote: 'Utleiearbeidet henger sammen med resten av Fenistra, så kontrakten går rett over til forvaltning og fakturering når den er signert.',
   image: null,
   modules: ['/losning-kontrakter', '/losning-digital-signering', '/losning-protokoller', '/losning-dokument', '/losning-arealberegning'].map(modul),
 };

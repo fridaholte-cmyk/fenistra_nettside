@@ -1,20 +1,20 @@
 <style>
 
   :root{
-    --paper:      #FCFAFB;
-    --paper-2:    #F6F3F5;
-    --mist:       #EBE8EC;
-    --ink:        #150A18;
-    --ink-soft:   #4A3B4E;
-    --plum:       #634967;
-    --plum-deep:  #27122C;
-    --plum-900:   #130916;
-    --line:       #E4DEE1;
-    --berry:      #AB3164;
-    --berry-deep: #7B173E;
-    --berry-900:  #560022;
-    --berry-light:#F8EAEE;
-    --berry-mid:  #BC5A83;
+    --paper:      #F8FAFC;
+    --paper-2:    #F1F5F9;
+    --mist:       #E2E8F0;
+    --ink:        #0F172A;
+    --ink-soft:   #475569;
+    --plum:       #475569;
+    --plum-deep:  #1E293B;
+    --plum-900:   #0F172A;
+    --line:       #E2E8F0;
+    --berry:      #1E293B;
+    --berry-deep: #1E293B;
+    --berry-900:  #0F172A;
+    --berry-light:#F1F5F9;
+    --berry-mid:  #94A3B8;
     --font-display: 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
     --font-mono: 'Space Mono', monospace;
@@ -64,7 +64,7 @@
   .eyebrow-on-dark::before{background:var(--berry-mid);}
   .glyph{display:block;} .glyph rect{fill:currentColor;}
 
-  header{position:sticky;top:0;z-index:100;background:rgba(252,250,251,0.86);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line);}
+  header{position:sticky;top:0;z-index:100;background:rgba(248,250,252,0.86);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line);}
   nav.wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
   .brand{display:flex;align-items:center;}
   .brand-logo{height:28px;width:auto;display:block;}
@@ -87,7 +87,7 @@
   .nav-item-dropdown.nav-active > .nav-trigger{color:var(--ink);}
   .nav-panel{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);opacity:0;pointer-events:none;transition:opacity .18s ease, transform .18s ease;padding-top:14px;z-index:120;}
   .nav-item-dropdown:hover .nav-panel, .nav-item-dropdown:focus-within .nav-panel{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0);}
-  .nav-panel-inner{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -20px rgba(21,10,24,.35);padding:12px;}
+  .nav-panel-inner{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -20px rgba(15,23,42,.35);padding:12px;}
   .nav-panel-mega{width:480px;}
   .nav-mega-item{display:flex;gap:14px;padding:12px;border-radius:12px;transition:background .15s ease;}
   .nav-mega-item:hover{background:var(--paper-2);}
@@ -100,13 +100,13 @@
   .nav-panel-simple a:hover{background:var(--paper-2);color:var(--berry-deep);}
 
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:14.5px;padding:12px 22px;border-radius:9px;transition:transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s ease, background .25s ease, border-color .25s ease;white-space:nowrap;}
-  .btn-primary{background:var(--berry);color:#fff;box-shadow:0 1px 2px rgba(86,0,34,0.15), 0 8px 20px -10px rgba(171,49,100,0.55);}
-  .btn-primary:hover{background:var(--berry-deep);transform:translateY(-1px);box-shadow:0 10px 24px -8px rgba(123,23,62,0.55);}
+  .btn-primary{background:var(--berry);color:#fff;box-shadow:0 1px 2px rgba(15,23,42,0.15), 0 8px 20px -10px rgba(30,41,59,0.55);}
+  .btn-primary:hover{background:var(--berry-deep);transform:translateY(-1px);box-shadow:0 10px 24px -8px rgba(30,41,59,0.55);}
   .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);}
   .btn-ghost:hover{border-color:var(--plum);background:var(--paper-2);transform:translateY(-1px);}
   .btn-light{background:#fff;color:var(--ink);border:1.5px solid var(--line);}
   .btn-light:hover{border-color:var(--berry);color:var(--berry-deep);}
-  .btn-on-dark{background:var(--berry);color:#fff;} .btn-on-dark:hover{background:#c14273;}
+  .btn-on-dark{background:var(--berry);color:#fff;} .btn-on-dark:hover{background:#334155;}
 
   .breadcrumb{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:12.5px;color:var(--ink-soft);padding:22px 0 0;}
   .breadcrumb a{color:var(--plum);} .breadcrumb a:hover{color:var(--berry-deep);}
@@ -144,7 +144,7 @@
   .feature-row{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:70px 0;}
   .feature-row.reverse .feature-copy{order:2;}
   .feature-row.reverse .feature-visual{order:1;}
-  .feature-visual{border-radius:16px;overflow:hidden;box-shadow:0 24px 48px -30px rgba(21,10,24,.25);min-height:280px;}
+  .feature-visual{border-radius:16px;overflow:hidden;box-shadow:0 24px 48px -30px rgba(15,23,42,.25);min-height:280px;}
   .feature-visual img{width:100%;height:100%;object-fit:cover;display:block;}
   @media (max-width:980px){
     .feature-row{grid-template-columns:1fr;gap:32px;padding:44px 0;}
@@ -185,7 +185,7 @@
   .carousel-track a{flex:0 0 auto;scroll-snap-align:start;width:300px;border-radius:14px;overflow:hidden;border:1px solid var(--line);display:block;}
   .carousel-track img{width:100%;height:210px;object-fit:cover;display:block;transition:transform .4s ease;}
   .carousel-track a:hover img{transform:scale(1.04);}
-  .carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -10px rgba(21,10,24,.3);cursor:pointer;z-index:5;color:var(--ink);transition:border-color .2s ease, color .2s ease;}
+  .carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -10px rgba(15,23,42,.3);cursor:pointer;z-index:5;color:var(--ink);transition:border-color .2s ease, color .2s ease;}
   .carousel-btn:hover{border-color:var(--berry);color:var(--berry-deep);}
   .carousel-btn.prev{left:-6px;} .carousel-btn.next{right:-6px;}
   @media (max-width:760px){
@@ -242,12 +242,11 @@
   @media (max-width:760px){
     .mini-grid{grid-template-columns:1fr;}
     .index-grid{grid-template-columns:1fr;}
-    section, .module-body, .related-section, .article-gate{padding-top:44px;padding-bottom:44px;}
   }
 
-  .mobile-drawer{position:fixed;top:0;left:0;right:0;background:var(--paper);z-index:200;display:flex;flex-direction:column;padding:24px 32px 28px;max-height:100vh;overflow-y:auto;box-shadow:0 24px 48px -24px rgba(21,10,24,.3);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);}
+  .mobile-drawer{position:fixed;top:0;left:0;right:0;background:var(--paper);z-index:200;display:flex;flex-direction:column;padding:24px 32px 28px;max-height:100vh;overflow-y:auto;box-shadow:0 24px 48px -24px rgba(15,23,42,.3);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);}
   .mobile-drawer.open{transform:translateY(0);}
-  .mobile-drawer-backdrop{position:fixed;inset:0;background:rgba(21,10,24,.32);z-index:199;opacity:0;pointer-events:none;transition:opacity .3s ease;}
+  .mobile-drawer-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.32);z-index:199;opacity:0;pointer-events:none;transition:opacity .3s ease;}
   .mobile-drawer-backdrop.open{opacity:1;pointer-events:auto;}
   .mobile-drawer .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
   .mobile-drawer a{font-size:22px;font-weight:500;padding:14px 0;border-bottom:1px solid var(--line);font-family:var(--font-display);}
@@ -265,9 +264,9 @@
   .search-trigger:hover{color:var(--ink);}
   .search-trigger span{display:none;}
   @media (min-width:900px){.search-trigger span{display:inline;}}
-  .search-backdrop{position:fixed;inset:0;background:rgba(21,10,24,.32);z-index:299;opacity:0;pointer-events:none;transition:opacity .25s ease;}
+  .search-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.32);z-index:299;opacity:0;pointer-events:none;transition:opacity .25s ease;}
   .search-backdrop.open{opacity:1;pointer-events:auto;}
-  .search-panel{position:fixed;top:90px;left:50%;width:min(560px, calc(100% - 48px));transform:translate(-50%, -16px);z-index:300;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -20px rgba(21,10,24,.35);opacity:0;pointer-events:none;transition:opacity .2s ease, transform .2s ease;}
+  .search-panel{position:fixed;top:90px;left:50%;width:min(560px, calc(100% - 48px));transform:translate(-50%, -16px);z-index:300;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -20px rgba(15,23,42,.35);opacity:0;pointer-events:none;transition:opacity .2s ease, transform .2s ease;}
   .search-panel.open{opacity:1;transform:translate(-50%, 0);pointer-events:auto;}
   .search-input-row{display:flex;align-items:center;gap:10px;padding:16px 18px;border-bottom:1px solid var(--line);}
   .search-input-row svg{color:var(--ink-soft);flex-shrink:0;}
@@ -286,12 +285,12 @@
   .search-hint{padding:28px 18px;text-align:center;font-size:13.5px;color:var(--ink-soft);}
 
   /* ================= CHAT WIDGET ================= */
-  .chat-trigger{position:fixed;bottom:24px;right:24px;z-index:250;width:56px;height:56px;border-radius:50%;background:var(--berry);color:#fff;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;box-shadow:0 14px 30px -10px rgba(123,23,62,.55);transition:transform .2s ease, opacity .2s ease, background .2s ease;}
-  .chat-backdrop{position:fixed;inset:0;background:rgba(21,10,24,.32);z-index:249;opacity:0;pointer-events:none;transition:opacity .25s ease;}
+  .chat-trigger{position:fixed;bottom:24px;right:24px;z-index:250;width:56px;height:56px;border-radius:50%;background:var(--berry);color:#fff;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;box-shadow:0 14px 30px -10px rgba(30,41,59,.55);transition:transform .2s ease, opacity .2s ease, background .2s ease;}
+  .chat-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.32);z-index:249;opacity:0;pointer-events:none;transition:opacity .25s ease;}
   .chat-backdrop.open{opacity:1;pointer-events:auto;}
   .chat-trigger:hover{transform:translateY(-2px);background:var(--berry-deep);}
   .chat-trigger.chat-open-hide{opacity:0;pointer-events:none;transform:scale(.8);}
-  .chat-panel{position:fixed;bottom:24px;right:24px;z-index:250;width:min(360px, calc(100vw - 32px));height:min(520px, calc(100vh - 100px));background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 60px -20px rgba(21,10,24,.4);display:flex;flex-direction:column;overflow:hidden;opacity:0;transform:translateY(16px) scale(.98);pointer-events:none;transition:opacity .22s ease, transform .22s ease;}
+  .chat-panel{position:fixed;bottom:24px;right:24px;z-index:250;width:min(360px, calc(100vw - 32px));height:min(520px, calc(100vh - 100px));background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 60px -20px rgba(15,23,42,.4);display:flex;flex-direction:column;overflow:hidden;opacity:0;transform:translateY(16px) scale(.98);pointer-events:none;transition:opacity .22s ease, transform .22s ease;}
   .chat-panel.open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
   .chat-header{background:var(--berry);color:#fff;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
   .chat-header h4{font-size:14.5px;font-weight:600;}
@@ -318,33 +317,11 @@
   }
 
   /* ================= ARTICLE DOWNLOAD GATE ================= */
-  .article-gate{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:80px 0;}
-  .article-gate-row{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;}
-  .article-gate-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:40px;box-shadow:0 24px 48px -30px rgba(21,10,24,.2);}
-  .article-gate-card .kicker{font-family:var(--font-mono);font-size:12px;color:var(--berry-deep);font-weight:700;margin-bottom:14px;}
-  .article-gate-card h3{font-family:var(--font-display);font-weight:300;font-size:clamp(20px,2.1vw,24px);letter-spacing:-0.01em;color:var(--ink);margin-bottom:26px;line-height:1.35;}
-  @media (max-width:900px){.article-gate-row{grid-template-columns:1fr;}}
 
-  .gate-backdrop{position:fixed;inset:0;background:rgba(21,10,24,.5);z-index:399;opacity:0;pointer-events:none;transition:opacity .25s ease;}
-  .gate-backdrop.open{opacity:1;pointer-events:auto;}
-  .gate-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-48%);width:min(460px, calc(100% - 32px));max-height:calc(100vh - 48px);z-index:400;background:#fff;border-radius:20px;box-shadow:0 40px 80px -20px rgba(21,10,24,.45);display:flex;flex-direction:column;overflow:hidden;opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;}
-  .gate-backdrop.open + .gate-modal, .gate-modal.open{opacity:1;transform:translate(-50%,-50%);pointer-events:auto;}
-  .gate-head{display:flex;align-items:flex-start;justify-content:space-between;padding:24px 24px 0;flex-shrink:0;}
-  .gate-head h3{font-family:var(--font-display);font-weight:300;font-size:21px;letter-spacing:-0.01em;color:var(--ink);max-width:340px;}
-  .gate-close{border:none;background:none;cursor:pointer;color:var(--ink-soft);font-size:16px;padding:4px;flex-shrink:0;}
-  .gate-close:hover{color:var(--ink);}
-  .gate-body{padding:14px 24px 28px;overflow-y:auto;}
-  .gate-body p{font-size:13.5px;color:var(--ink-soft);margin-bottom:20px;line-height:1.5;}
-  .gate-form{display:flex;flex-direction:column;gap:16px;}
   .form-field{display:flex;flex-direction:column;gap:6px;}
   .form-field label{font-family:var(--font-mono);font-size:12px;color:var(--ink-soft);}
   .form-field input{padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:15px;font-family:var(--font-body);color:var(--ink);outline:none;transition:border-color .15s ease;background:#fff;}
   .form-field input:focus{border-color:var(--berry);}
-  .gate-success{display:none;text-align:center;padding:12px 0 4px;}
-  .gate-success.show{display:block;}
-  .gate-success .check{width:48px;height:48px;border-radius:50%;background:var(--berry-light);color:var(--berry-deep);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
-  .gate-success h4{font-size:17px;color:var(--ink);margin-bottom:8px;font-weight:600;}
-  .gate-success p{font-size:13.5px;color:var(--ink-soft);margin-bottom:0;}
 
   /* ================= AI I FENISTRA ================= */
   .ki-fenistra{padding:20px 0 90px;border-top:1px solid var(--line);}
@@ -354,7 +331,7 @@
   .ki-fenistra .feature-list{margin-bottom:0;}
   .ki-num{display:block;font-family:var(--font-mono);font-size:13px;color:var(--berry);margin-bottom:10px;}
   .ki-shot{background:var(--paper-2);display:flex;align-items:center;justify-content:center;padding:36px;}
-  .ki-shot img{width:100%;max-width:380px;height:auto;border-radius:12px;box-shadow:0 18px 40px -22px rgba(21,10,24,.35);}
+  .ki-shot img{width:100%;max-width:380px;height:auto;border-radius:12px;box-shadow:0 18px 40px -22px rgba(15,23,42,.35);}
   .ki-steps{background:var(--paper-2);padding:32px;min-height:0;}
   .ki-steps ol{list-style:none;display:flex;flex-direction:column;gap:18px;}
   .ki-steps li{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;}
@@ -394,7 +371,7 @@
     <h1>Fenistra svarer, sier ifra og gjør jobben</h1>
     <p class="mp-lead">Fenistra kan eiendom. Kunnskapen ligger i fagmiljøet, i markedsdata fra Arealstatistikk og i AI som bruker begge deler sammen med kontraktene deres. Slik blir den nyttig i hverdagen.</p>
     <div class="mp-actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Snakk med oss</a>
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
       <a href="ki#gjor-jobben" class="btn btn-ghost" (click)="scrollToProcess($event)">Se hvordan Fenistra gjør jobben ↓</a>
     </div>
   </div>
@@ -476,7 +453,7 @@
           <li style="color:rgba(255,255,255,.85);"><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="rgba(255,255,255,.12)"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#fff" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>CRM og protokoller på mobilen: logg møter, ta bilder og fyll ut befaringer, også uten nett</li>
           <li style="color:rgba(255,255,255,.85);"><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="rgba(255,255,255,.12)"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#fff" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Spør med vanlige ord, og få svar med grafer, tabeller og kildehenvisninger</li>
         </ul>
-        <p style="font-size:14.5px;color:rgba(255,255,255,.6);margin-bottom:32px;max-width:480px;">Det kommersielle arbeidet gjøres i Felix fra Fenistra, applikasjonen for utleie, oppfølging og mobilt arbeid. Den henger sammen med Fenistra, så det som registreres, følger saken videre til forvaltning og fakturering.</p>
+        <p style="font-size:14.5px;color:rgba(255,255,255,.6);margin-bottom:32px;max-width:480px;">Utleiearbeidet, oppfølgingen og det mobile arbeidet henger sammen med resten av Fenistra, så det som registreres, følger saken videre til forvaltning og fakturering.</p>
         <a routerLink="/fra-lead-til-innflytting" class="btn btn-on-dark">Se prosessen fra lead til innflytting →</a>
       </div>
       <div class="feature-visual" style="background:transparent;padding:0;">
@@ -489,64 +466,4 @@
   </div>
 </section>
 
-<!-- Fagartikkel: skjult inntil videre. Slå på med SHOW_ARTICLE i ki.component.ts -->
-@if (showArticle) {
-<section class="article-gate" style="border-top:1px solid var(--plum-deep);">
-  <div class="wrap">
-    <div class="article-gate-row">
-      <div>
-        <h2 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px,2.8vw,32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);">Interessert i hvordan Fenistra skal endre eiendomsbransjen med AI?</h2>
-        <p style="color:var(--ink-soft); font-size:16px; max-width:520px; margin-bottom:0;">Vi har delt tankene våre om fremtidens eiendomsforvaltning i en fagartikkel, om hvorfor vi går fra reaktiv til proaktiv forvaltning, hvordan Felix bygger på tre steg mot intelligente systemer, og hva dette faktisk betyr for hverdagen din. Last ned artikkelen og les våre tanker om fremtidens forvaltning av næringseiendom.</p>
-      </div>
-      <div class="article-gate-card">
-        <div class="kicker">GRATIS NEDLASTING</div>
-        <h3>Fenistra endrer eiendomsbransjen med AI</h3>
-        <button type="button" class="btn btn-primary" id="gateOpenBtn" style="width:100%; justify-content:center;">Last ned artikkelen</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="gate-backdrop" id="gateBackdrop"></div>
-<div class="gate-modal" id="gateModal" role="dialog" aria-label="Last ned artikkelen">
-  <div class="gate-head">
-    <h3>Last ned artikkelen</h3>
-    <button class="gate-close" id="gateCloseBtn" aria-label="Lukk">✕</button>
-  </div>
-  <div class="gate-body">
-    <div id="gateFormWrap">
-      <p>«Fenistra endrer eiendomsbransjen med AI» &mdash; fyll ut noen få felt, så lastes artikkelen ned med det samme.</p>
-      <form class="gate-form" id="gateForm">
-        <div class="form-field">
-          <label for="gateNavn">Navn *</label>
-          <input type="text" id="gateNavn" required autocomplete="name">
-        </div>
-        <div class="form-field">
-          <label for="gateEpost">E-post *</label>
-          <input type="email" id="gateEpost" required autocomplete="email">
-        </div>
-        <div class="form-field">
-          <label for="gateFirma">Firma (valgfritt)</label>
-          <input type="text" id="gateFirma" autocomplete="organization">
-        </div>
-        <button type="submit" class="btn btn-primary" style="justify-content:center; margin-top:4px;">Last ned artikkelen →</button>
-      </form>
-    </div>
-    <div class="gate-success" id="gateSuccess">
-      <div class="check"><svg width="22" height="22" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></div>
-      <h4>Takk! Nedlastingen starter nå.</h4>
-      <p>Skjer det ikke automatisk? <a href="fenistra-ki-artikkel.docx" download style="color:var(--berry-deep); font-weight:600;">Trykk her for å laste ned</a>.</p>
-    </div>
-  </div>
-</div>
-}
-
-<section class="cta-wrap" style="padding-top:56px;">
-  <div class="cta-band reveal">
-    <h2>Bare spør. Vi viser hvordan Fenistra svarer, sier ifra og gjør jobben for dere.</h2>
-    <div class="actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Snakk med oss</a>
-      <a routerLink="/fra-lead-til-innflytting" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Se prosessen fra lead til innflytting</a>
-    </div>
-  </div>
-</section>
+<app-proof-cta text="Bare spør. Vi viser hvordan Fenistra svarer, sier ifra og gjør jobben for dere."></app-proof-cta>

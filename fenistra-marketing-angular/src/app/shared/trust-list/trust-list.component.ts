@@ -10,7 +10,7 @@ const ITEMS = [
   { title: 'En del av Visma', text: 'Fenistra er en del av Visma Property Solutions siden 2020.' },
   { title: 'ISO 27001-sertifisert', text: 'Informasjonssikkerheten er sertifisert etter ISO 27001.' },
   { title: '26 integrerte systemer', text: 'Blant dem 19 regnskaps- og ERP-systemer.' },
-  { title: 'Prisen følger leieomsetningen', text: 'Alle pakker har ubegrenset antall brukere.' },
+  { title: 'Fagfolk som kan faget', text: 'Fagkonsulenter og kunderådgivere følger dere fra oppstart og videre.' },
 ];
 const START = 1.4, PER = 3.6;
 

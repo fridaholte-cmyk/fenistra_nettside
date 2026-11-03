@@ -1,3 +1,4 @@
+import { ProofCtaComponent } from '../../shared/proof-cta/proof-cta.component';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { QuizService } from '../../shared/quiz.service';
@@ -5,7 +6,7 @@ import { QuizService } from '../../shared/quiz.service';
 @Component({
   selector: 'app-losninger',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, ProofCtaComponent],
   templateUrl: './losninger.component.html',
   encapsulation: ViewEncapsulation.None
 })

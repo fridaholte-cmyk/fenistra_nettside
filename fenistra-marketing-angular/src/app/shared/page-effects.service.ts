@@ -118,55 +118,5 @@ export class PageEffectsService {
       });
     }
 
-    // article download gate (lead-gen modal)
-    const gateOpenBtn = document.getElementById('gateOpenBtn');
-    const gateBackdrop = document.getElementById('gateBackdrop');
-    const gateModal = document.getElementById('gateModal');
-    if (gateOpenBtn && gateBackdrop && gateModal && !gateOpenBtn.dataset['wired']) {
-      gateOpenBtn.dataset['wired'] = '1';
-      const gateCloseBtn = document.getElementById('gateCloseBtn');
-      const gateForm = document.getElementById('gateForm') as HTMLFormElement | null;
-      const gateFormWrap = document.getElementById('gateFormWrap');
-      const gateSuccess = document.getElementById('gateSuccess');
-      const downloadLink = gateSuccess?.querySelector<HTMLAnchorElement>('a[download]');
-
-      const resetGate = () => {
-        gateForm?.reset();
-        if (gateFormWrap) gateFormWrap.style.display = '';
-        gateSuccess?.classList.remove('show');
-      };
-      const openGate = () => {
-        gateBackdrop.classList.add('open');
-        gateModal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      };
-      const closeGate = () => {
-        gateBackdrop.classList.remove('open');
-        gateModal.classList.remove('open');
-        document.body.style.overflow = '';
-        resetGate();
-      };
-
-      gateOpenBtn.addEventListener('click', openGate);
-      gateCloseBtn?.addEventListener('click', closeGate);
-      gateBackdrop.addEventListener('click', closeGate);
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && gateModal.classList.contains('open')) closeGate();
-      });
-
-      gateForm?.addEventListener('submit', (e) => {
-        e.preventDefault();
-        if (gateFormWrap) gateFormWrap.style.display = 'none';
-        gateSuccess?.classList.add('show');
-        if (downloadLink) {
-          const link = document.createElement('a');
-          link.href = downloadLink.href;
-          link.download = downloadLink.getAttribute('download') || '';
-          document.body.appendChild(link);
-          link.click();
-          link.remove();
-        }
-      });
-    }
   }
 }

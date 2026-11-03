@@ -1,20 +1,20 @@
 <style>
   :root{
     /* ---- Fenistra token system ---- */
-    --paper:      #FCFAFB;
-    --paper-2:    #F6F3F5;
-    --mist:       #EBE8EC;
-    --ink:        #150A18;
-    --ink-soft:   #4A3B4E;
-    --plum:       #634967;
-    --plum-deep:  #27122C;
-    --plum-900:   #130916;
-    --line:       #E4DEE1;
-    --berry:      #AB3164;
-    --berry-deep: #7B173E;
-    --berry-900:  #560022;
-    --berry-light:#F8EAEE;
-    --berry-mid:  #BC5A83;
+    --paper:      #F8FAFC;
+    --paper-2:    #F1F5F9;
+    --mist:       #E2E8F0;
+    --ink:        #0F172A;
+    --ink-soft:   #475569;
+    --plum:       #475569;
+    --plum-deep:  #1E293B;
+    --plum-900:   #0F172A;
+    --line:       #E2E8F0;
+    --berry:      #1E293B;
+    --berry-deep: #1E293B;
+    --berry-900:  #0F172A;
+    --berry-light:#F1F5F9;
+    --berry-mid:  #94A3B8;
 
     --font-display: 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -93,7 +93,7 @@
   /* ================= NAV ================= */
   header{
     position:sticky; top:0; z-index:100;
-    background:rgba(252,250,251,0.82);
+    background:rgba(248,250,252,0.82);
     backdrop-filter:blur(14px) saturate(140%);
     -webkit-backdrop-filter:blur(14px) saturate(140%);
     border-bottom:1px solid transparent;
@@ -101,7 +101,7 @@
   }
   header.scrolled{
     border-bottom-color:var(--line);
-    box-shadow:0 8px 24px -20px rgba(21,10,24,0.35);
+    box-shadow:0 8px 24px -20px rgba(15,23,42,0.35);
   }
   nav.wrap{
     display:flex; align-items:center; justify-content:space-between;
@@ -135,9 +135,9 @@
   }
   .btn-primary{
     background:var(--berry); color:#fff;
-    box-shadow:0 1px 2px rgba(86,0,34,0.15), 0 8px 20px -10px rgba(171,49,100,0.55);
+    box-shadow:0 1px 2px rgba(15,23,42,0.15), 0 8px 20px -10px rgba(30,41,59,0.55);
   }
-  .btn-primary:hover{background:var(--berry-deep); transform:translateY(-1px); box-shadow:0 10px 24px -8px rgba(123,23,62,0.55);}
+  .btn-primary:hover{background:var(--berry-deep); transform:translateY(-1px); box-shadow:0 10px 24px -8px rgba(30,41,59,0.55);}
   .btn-ghost{
     background:transparent; color:var(--ink); border:1.5px solid var(--line);
   }
@@ -147,7 +147,7 @@
   }
   .btn-light:hover{border-color:var(--berry); color:var(--berry-deep);}
   .btn-on-dark{background:var(--berry);color:#fff;}
-  .btn-on-dark:hover{background:#c14273;}
+  .btn-on-dark:hover{background:#334155;}
 
   .hamburger{display:none;}
 
@@ -160,7 +160,7 @@
   .nav-item-dropdown.nav-active > .nav-trigger{color:var(--ink);}
   .nav-panel{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);opacity:0;pointer-events:none;transition:opacity .18s ease, transform .18s ease;padding-top:14px;z-index:120;}
   .nav-item-dropdown:hover .nav-panel, .nav-item-dropdown:focus-within .nav-panel{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0);}
-  .nav-panel-inner{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -20px rgba(21,10,24,.35);padding:12px;}
+  .nav-panel-inner{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -20px rgba(15,23,42,.35);padding:12px;}
   .nav-panel-mega{width:480px;}
   .nav-mega-item{display:flex;gap:14px;padding:12px;border-radius:12px;transition:background .15s ease;}
   .nav-mega-item:hover{background:var(--paper-2);}
@@ -172,143 +172,8 @@
   .nav-panel-simple a{display:block;padding:10px 12px;border-radius:10px;font-size:14px;color:var(--ink);transition:background .15s ease, color .15s ease;}
   .nav-panel-simple a:hover{background:var(--paper-2);color:var(--berry-deep);}
 
-  /* ================= HERO ================= */
-  .hero{
-    position:relative;
-    padding:96px 0 64px;
-    overflow:hidden;
-    min-height:calc(100vh - 76px);
-    display:flex;
-    align-items:center;
-  }
-  .hero .wrap{
-    display:block;
-    width:100%;
-  }
-  .hero-content{max-width:1100px; margin:0 auto; text-align:center;}
-  .hero h1{
-    font-family:var(--font-display);
-    font-weight:300;
-    font-size:clamp(38px, 4.6vw, 62px);
-    line-height:1.06;
-    letter-spacing:-0.025em;
-    color:var(--ink);
-    margin-bottom:22px;
-  }
-  .hero h1 em{
-    font-style:normal; font-weight:600; color:var(--berry-deep);
-  }
-  .hero p.lead{
-    font-size:18px; color:var(--ink-soft); max-width:600px; margin:0 auto 34px;
-    font-weight:400;
-  }
-  .hero-actions{display:flex; justify-content:center; gap:14px; margin-bottom:40px; flex-wrap:wrap;}
-
-  /* hero entrance: dramatic staged reveal on page load */
-  @keyframes heroReveal{
-    0%{opacity:0; transform:translateY(52px) scale(.94); filter:blur(9px);}
-    60%{filter:blur(0);}
-    100%{opacity:1; transform:translateY(0) scale(1); filter:blur(0);}
-  }
-  .hero-part{
-    display:inline-block;
-    opacity:0;
-    animation:heroReveal 1.15s cubic-bezier(.19,1,.22,1) forwards;
-  }
-  .hero .eyebrow.hero-part{display:inline-flex;}
-  .hero p.lead.hero-part{display:block;}
-  .hero-actions.hero-part{display:flex;}
-  .hero-part-1{animation-delay:.2s;}
-  .hero-part-2{animation-delay:.85s;}
-  .hero-part-3{animation-delay:1.65s;}
-  @media (prefers-reduced-motion:reduce){
-    .hero-part{animation:none; opacity:1; filter:none;}
-  }
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-
-  @keyframes float1{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
-  @keyframes float2{0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}
-
-  
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(188,90,131,0.55);}
-    70%{box-shadow:0 0 0 14px rgba(188,90,131,0);}
-    100%{box-shadow:0 0 0 0 rgba(188,90,131,0);}
-  }
-
-  /* ================= VI KAN EIENDOM ================= */
-  .know-title{font-family:var(--font-display); font-weight:300; font-size:clamp(40px,5.6vw,76px); line-height:1.02; letter-spacing:-0.03em; color:var(--ink); margin-bottom:56px;}
-  .know-row{display:grid; grid-template-columns:5fr 7fr; gap:48px; padding:44px 0; border-top:1px solid var(--line);}
-  .know-row:last-child{border-bottom:1px solid var(--line);}
-  .know-row h3{font-family:var(--font-display); font-weight:300; font-size:clamp(26px,2.8vw,38px); line-height:1.15; letter-spacing:-0.02em; color:var(--berry-deep);}
-  .know-body ul{list-style:none; margin:0; padding:0; display:grid; gap:14px;}
-  .know-questions li{font-size:17px; line-height:1.55; color:var(--ink);}
-  .know-points li{font-size:18px; line-height:1.55; color:var(--ink-soft);}
-  .know-row h3 .know-sub{display:block; margin-top:12px; font-family:var(--font-body); font-size:17px; line-height:1.5; letter-spacing:0; color:var(--ink-soft);}
-  .know-parts{display:grid; grid-template-columns:1fr 1fr; gap:28px; margin:0;}
-  .know-questions + .know-parts{margin-top:28px; padding-top:24px; border-top:1px solid var(--line);}
-  .know-parts dt{font-family:var(--font-mono); font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--berry-deep); margin-bottom:8px;}
-  .know-parts dd{margin:0; font-size:17px; line-height:1.55; color:var(--ink-soft);}
-  .know-link{display:inline-block; margin-top:22px; font-family:var(--font-mono); font-size:12.5px; color:var(--berry-deep); border-bottom:1px solid currentColor; padding-bottom:2px;}
-  @media (max-width:760px){ .know-title{margin-bottom:36px;} .know-row{grid-template-columns:1fr; gap:16px; padding:32px 0;} .know-parts{grid-template-columns:1fr; gap:18px;} }
-
-  /* ================= KUNDENES EGNE ORD ================= */
-  /* sized so the title and all three quotes fit on one laptop screen */
-  .voices{padding:72px 0;}
-  .voices-title{font-family:var(--font-display); font-weight:300; font-size:clamp(32px,3.8vw,50px); line-height:1.05; letter-spacing:-0.025em; color:var(--ink); margin:0 0 24px;}
-  .voices-grid{display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start;}
-  .voice-main img{display:block; width:100%; height:auto; aspect-ratio:2/1; object-fit:cover; border-radius:var(--radius);}
-  .voice-main blockquote{font-family:var(--font-display); font-weight:300; font-size:clamp(19px,1.7vw,24px); line-height:1.35; letter-spacing:-0.01em; color:var(--ink); margin:22px 0 14px; text-wrap:pretty;}
-  .voices figcaption{display:flex; flex-direction:column; gap:2px;}
-  .voices .who{font-weight:600; font-size:14.5px; color:var(--ink);}
-  .voices .role{font-size:13px; color:var(--ink-soft);}
-  .voice-side{display:grid; gap:12px;}
-  .voice-card{display:grid; grid-template-columns:64px 1fr; gap:18px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:18px 22px;}
-  .voice-card img{width:64px; height:64px; border-radius:50%; object-fit:cover;}
-  .voice-card blockquote{font-size:14.5px; line-height:1.55; color:var(--ink); margin-bottom:12px;}
-  .voice-link{margin-top:6px; font-family:var(--font-mono); font-size:12px; color:var(--berry-deep);}
-  .voices-more{margin-top:24px; font-family:var(--font-mono); font-size:13px;}
-  .voices-more a{color:var(--berry-deep); border-bottom:1px solid currentColor; padding-bottom:2px;}
-  @media (max-width:980px){ .voices-grid{grid-template-columns:1fr;} }
-  @media (max-width:520px){ .voices{padding:56px 0;} .voice-card{grid-template-columns:1fr; gap:14px;} }
-
-  /* ================= FENISTRADAGENE ================= */
-  .fdays{background:var(--plum-900); color:#fff; padding:24px 0 88px;}
-  .fdays-grid{display:grid; grid-template-columns:1fr 1.15fr; gap:56px; align-items:center; padding-top:64px; border-top:1px solid rgba(255,255,255,.15);}
-  .fdays-copy h2{font-family:var(--font-display); font-weight:300; font-size:clamp(36px,4.6vw,60px); line-height:1.05; letter-spacing:-0.025em; margin:14px 0 18px;}
-  .fdays-lead{font-size:18px; color:rgba(255,255,255,.8); line-height:1.55; max-width:460px;}
-  .fdays-quote{margin:32px 0; padding-left:22px; border-left:3px solid var(--berry-mid);}
-  .fdays-quote blockquote{font-family:var(--font-display); font-weight:300; font-style:italic; font-size:19px; line-height:1.5; color:#fff;}
-  .fdays-quote figcaption{margin-top:12px; font-size:14px; color:rgba(255,255,255,.7);}
-  .fdays-quote figcaption strong{color:#fff; font-weight:600;}
-  .fdays-actions{display:flex; flex-wrap:wrap; align-items:center; gap:24px;}
-  .fdays-link{font-family:var(--font-mono); font-size:13px; color:#fff; border-bottom:1px solid var(--berry-mid); padding-bottom:2px;}
-  .fdays-photos{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
-  .fdays-photos img{display:block; width:100%; height:100%; aspect-ratio:2/1; object-fit:cover; border-radius:var(--radius);}
-  .fdays-photos .fdays-wide{grid-column:1 / -1; aspect-ratio:5/2;}
-  @media (max-width:980px){ .fdays-grid{grid-template-columns:1fr; gap:44px;} }
-  @media (max-width:760px){ .fdays{padding:16px 0 64px;} .fdays-grid{padding-top:44px;} }
-
   /* ================= TRYGGHET ================= */
   .trust{padding:clamp(72px,9vw,140px) 0;}
-
-  /* ================= ØKOSYSTEM ================= */
-  .eco-section{padding:clamp(72px,8vw,120px) 0; border-top:1px solid var(--line);}
-  .eco-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:56px; align-items:center;}
-  .eco-copy h2{font-family:var(--font-display); font-weight:300; font-size:clamp(32px,4vw,54px); line-height:1.08; letter-spacing:-0.025em; color:var(--ink); margin-bottom:20px; text-wrap:balance;}
-  .eco-copy p{font-size:18px; line-height:1.6; color:var(--ink-soft); max-width:520px;}
-  @media (max-width:980px){ .eco-grid{grid-template-columns:1fr; gap:32px;} }
 
   /* ================= BARE SPØR (avslutning) ================= */
   .ask-band{background:var(--plum-deep); color:#fff; padding:88px 0;}
@@ -340,17 +205,6 @@
   @media (max-width:900px){ .logo-grid{grid-template-columns:repeat(3,minmax(0,1fr));} }
   @media (max-width:760px){ .logo-wall{padding:72px 0;} .logo-grid{grid-template-columns:repeat(3,minmax(0,1fr));} .logo-tile{height:96px; padding:14px;} .logo-name{font-size:14px;} }
   @media (max-width:440px){ .logo-tile{height:84px; padding:10px;} .logo-name{font-size:13px;} }
-
-  /* ================= INNSIKT: tall og eksempelgrafer ================= */
-  .insight{background:var(--plum-900); color:#fff; padding:104px 0 96px;}
-  .insight-title{font-family:var(--font-display); font-weight:300; font-size:clamp(34px,5vw,68px); line-height:1.05; letter-spacing:-0.025em; margin:14px 0 64px; text-wrap:balance;}
-  .insight-stats{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:36px; list-style:none; margin:0; padding:0;}
-  .insight-stats .num{display:block; font-family:var(--font-display); font-weight:300; font-size:clamp(40px,4.5vw,66px); line-height:1; letter-spacing:-0.03em; color:#fff; white-space:nowrap;}
-  .insight-areal{margin-top:48px; padding-top:24px; border-top:1px solid rgba(255,255,255,.15); font-size:17px; line-height:1.55; color:rgba(255,255,255,.8); max-width:820px;}
-  .insight-areal h3{font-size:19px; font-weight:600; color:#fff; margin-bottom:8px;}
-  .insight-stats .lbl{display:block; margin-top:14px; font-size:16px; color:rgba(255,255,255,.75); line-height:1.45;}
-  @media (max-width:980px){ .insight-stats{grid-template-columns:repeat(2,minmax(0,1fr)); row-gap:44px;} }
-  @media (max-width:760px){ .insight{padding:72px 0;} .insight-title{margin-bottom:44px;} }
 
   /* ================= SECTION HEADERS ================= */
   section{padding:100px 0;}
@@ -517,9 +371,9 @@
   
 
   /* mobile nav drawer */
-  .mobile-drawer{position:fixed;top:0;left:0;right:0;background:var(--paper);z-index:200;display:flex;flex-direction:column;padding:24px 32px 28px;max-height:100vh;overflow-y:auto;box-shadow:0 24px 48px -24px rgba(21,10,24,.3);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);}
+  .mobile-drawer{position:fixed;top:0;left:0;right:0;background:var(--paper);z-index:200;display:flex;flex-direction:column;padding:24px 32px 28px;max-height:100vh;overflow-y:auto;box-shadow:0 24px 48px -24px rgba(15,23,42,.3);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);}
   .mobile-drawer.open{transform:translateY(0);}
-  .mobile-drawer-backdrop{position:fixed;inset:0;background:rgba(21,10,24,.32);z-index:199;opacity:0;pointer-events:none;transition:opacity .3s ease;}
+  .mobile-drawer-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.32);z-index:199;opacity:0;pointer-events:none;transition:opacity .3s ease;}
   .mobile-drawer-backdrop.open{opacity:1;pointer-events:auto;}
   .mobile-drawer .top{display:flex; justify-content:space-between; align-items:center; margin-bottom:48px;}
   .mobile-drawer a{font-size:22px; font-weight:500; padding:14px 0; border-bottom:1px solid var(--line); font-family:var(--font-display);}
@@ -536,9 +390,9 @@
   .search-trigger:hover{color:var(--ink);}
   .search-trigger span{display:none;}
   @media (min-width:900px){.search-trigger span{display:inline;}}
-  .search-backdrop{position:fixed;inset:0;background:rgba(21,10,24,.32);z-index:299;opacity:0;pointer-events:none;transition:opacity .25s ease;}
+  .search-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.32);z-index:299;opacity:0;pointer-events:none;transition:opacity .25s ease;}
   .search-backdrop.open{opacity:1;pointer-events:auto;}
-  .search-panel{position:fixed;top:90px;left:50%;width:min(560px, calc(100% - 48px));transform:translate(-50%, -16px);z-index:300;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -20px rgba(21,10,24,.35);opacity:0;pointer-events:none;transition:opacity .2s ease, transform .2s ease;}
+  .search-panel{position:fixed;top:90px;left:50%;width:min(560px, calc(100% - 48px));transform:translate(-50%, -16px);z-index:300;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -20px rgba(15,23,42,.35);opacity:0;pointer-events:none;transition:opacity .2s ease, transform .2s ease;}
   .search-panel.open{opacity:1;transform:translate(-50%, 0);pointer-events:auto;}
   .search-input-row{display:flex;align-items:center;gap:10px;padding:16px 18px;border-bottom:1px solid var(--line);}
   .search-input-row svg{color:var(--ink-soft);flex-shrink:0;}
@@ -557,12 +411,12 @@
   .search-hint{padding:28px 18px;text-align:center;font-size:13.5px;color:var(--ink-soft);}
 
   /* ================= CHAT WIDGET ================= */
-  .chat-trigger{position:fixed;bottom:24px;right:24px;z-index:250;width:56px;height:56px;border-radius:50%;background:var(--berry);color:#fff;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;box-shadow:0 14px 30px -10px rgba(123,23,62,.55);transition:transform .2s ease, opacity .2s ease, background .2s ease;}
-  .chat-backdrop{position:fixed;inset:0;background:rgba(21,10,24,.32);z-index:249;opacity:0;pointer-events:none;transition:opacity .25s ease;}
+  .chat-trigger{position:fixed;bottom:24px;right:24px;z-index:250;width:56px;height:56px;border-radius:50%;background:var(--berry);color:#fff;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;box-shadow:0 14px 30px -10px rgba(30,41,59,.55);transition:transform .2s ease, opacity .2s ease, background .2s ease;}
+  .chat-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.32);z-index:249;opacity:0;pointer-events:none;transition:opacity .25s ease;}
   .chat-backdrop.open{opacity:1;pointer-events:auto;}
   .chat-trigger:hover{transform:translateY(-2px);background:var(--berry-deep);}
   .chat-trigger.chat-open-hide{opacity:0;pointer-events:none;transform:scale(.8);}
-  .chat-panel{position:fixed;bottom:24px;right:24px;z-index:250;width:min(360px, calc(100vw - 32px));height:min(520px, calc(100vh - 100px));background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 60px -20px rgba(21,10,24,.4);display:flex;flex-direction:column;overflow:hidden;opacity:0;transform:translateY(16px) scale(.98);pointer-events:none;transition:opacity .22s ease, transform .22s ease;}
+  .chat-panel{position:fixed;bottom:24px;right:24px;z-index:250;width:min(360px, calc(100vw - 32px));height:min(520px, calc(100vh - 100px));background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 60px -20px rgba(15,23,42,.4);display:flex;flex-direction:column;overflow:hidden;opacity:0;transform:translateY(16px) scale(.98);pointer-events:none;transition:opacity .22s ease, transform .22s ease;}
   .chat-panel.open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
   .chat-header{background:var(--berry);color:#fff;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
   .chat-header h4{font-size:14.5px;font-weight:600;}
@@ -597,53 +451,6 @@
   
   
   
-  
-
-  /* ================= OUTCOMES ================= */
-  #produkt{padding:96px 0 90px;}
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-  @media (max-width:760px){
-      #produkt{padding:64px 0;}
-    
-  }
-
-  /* ================= HERO TRUST PILLS ================= */
-  .trust-pills{display:flex; justify-content:center; flex-wrap:wrap; gap:10px; list-style:none;}
-  .hero .trust-pills.hero-part{display:flex;}
-  .trust-pills li{display:inline-flex; align-items:center; gap:10px; padding:9px 16px 9px 14px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.7); font-family:var(--font-mono); font-size:12.5px; color:var(--plum); letter-spacing:.02em; transition:border-color .25s ease, transform .25s ease;}
-  .trust-pills li:hover{border-color:var(--berry-mid); transform:translateY(-1px);}
-  .trust-pills .pulse{position:relative; width:8px; height:8px; border-radius:50%; background:var(--berry); flex-shrink:0;}
-  .trust-pills .pulse::after{content:""; position:absolute; inset:0; border-radius:50%; background:var(--berry); animation:trustPulse 2.4s cubic-bezier(.2,.6,.3,1) infinite;}
-  .trust-pills li:nth-child(2) .pulse::after{animation-delay:.8s;}
-  .trust-pills li:nth-child(3) .pulse::after{animation-delay:1.6s;}
-  @keyframes trustPulse{0%{transform:scale(1); opacity:.55;} 80%,100%{transform:scale(3.2); opacity:0;}}
-
-  /* ================= PLUG-AND-PLAY STATEMENT ================= */
-
   /* ================= SECTION RHYTHM ================= */
   #produkt, #okonomi, #ai, #løsninger, #kom-i-gang, #hvorfor, #kunder, #faq{padding:112px 0;}
   #løsninger{background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
@@ -663,66 +470,233 @@
     .trust-pills{gap:8px;}
     .trust-pills li{font-size:11.5px; padding:7px 12px 7px 11px;}
   }
-  /* «Fenistra kan eiendom»: målgruppekort, tre handlingsmåter, prosess */
-  
-  /* Kundesitat rett under hero: solid mørk flate, stram typografi */
-  .proof-quote{padding:96px 0;}
-  .proof-boxes{display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); row-gap:28px;}
-  .proof-quote figure{grid-column:1 / span 10; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:48px 56px; transition:opacity .8s ease, transform .8s ease;}
-  .proof-quote blockquote{font-family:var(--font-display); font-weight:300; font-size:clamp(19px,1.8vw,24px); line-height:1.4; letter-spacing:-0.015em; color:var(--ink); text-wrap:pretty;}
+  /* ================= FORSIDE «Fenistra kan eiendom» (budskapshuset, okt. 2026) ================= */
+  .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+  .hp-title{font-family:var(--font-display); font-weight:300; font-size:clamp(32px,3.9vw,54px); line-height:1.06; letter-spacing:-0.025em; color:inherit; text-wrap:balance;}
+  .hp-lead{font-size:18px; line-height:1.6; color:var(--ink-soft); max-width:60ch; text-wrap:pretty;}
+  .hp-link{display:inline-block; font-family:var(--font-mono); font-size:12.5px; color:var(--berry-deep); border-bottom:1px solid currentColor; padding-bottom:2px;}
+  .hp-actions{display:flex; flex-wrap:wrap; align-items:center; gap:14px 24px;}
+  .hp-who{font-weight:600; font-size:15px; color:var(--ink);}
+  .hp-role{font-family:var(--font-mono); font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-soft);}
+
+  /* Hero: signaturen til venstre, foto fra Fenistradagene til høyre */
+  .hp-hero{padding:72px 0 0;}
+  .hp-hero-grid{display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:56px; align-items:stretch;}
+  .hp-hero-copy{display:flex; flex-direction:column; justify-content:center; padding-bottom:72px;}
+  .hp-hero h1{font-family:var(--font-display); font-weight:300; font-size:clamp(52px,6.8vw,104px); line-height:.98; letter-spacing:-0.035em; color:var(--ink); margin-bottom:30px;}
+  .hp-hero h1 em{font-style:normal; font-weight:600;}
+  .hp-hero .hp-lead{font-size:clamp(18px,1.5vw,21px); max-width:34ch; margin-bottom:36px;}
+  .hp-hero-visual{position:relative; min-height:560px;}
+  .hp-hero-photo{position:absolute; inset:0 0 72px; border-radius:var(--radius); overflow:hidden; margin:0;}
+  .hp-hero-photo img{width:100%; height:100%; object-fit:cover; object-position:54% 40%;}
+  .hp-hero-photo figcaption{position:absolute; right:16px; bottom:14px; font-size:12.5px; color:#fff; background:rgba(15,23,42,.72); padding:5px 10px;}
+
+  /* Store tall: 65 og 60 teller opp fra 10 når seksjonen kommer i syne */
+  .hp-numbers{background:var(--plum-900); color:#fff; padding:96px 0 88px;}
+  .hp-big{font-family:var(--font-display); font-weight:300; font-size:clamp(48px,9vw,148px); line-height:.92; letter-spacing:-0.04em; display:flex; align-items:baseline; gap:.18em; white-space:nowrap; font-variant-numeric:tabular-nums;}
+  .hp-unit{font-size:max(.36em,14px); letter-spacing:-0.01em; color:var(--berry-mid); font-weight:400;}
+  .hp-numbers-row{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:64px; margin-top:28px; align-items:start;}
+  .hp-big-label{font-size:clamp(18px,1.6vw,22px); line-height:1.45; color:rgba(255,255,255,.82); max-width:36ch;}
+  .hp-mid{font-family:var(--font-display); font-weight:300; font-size:clamp(44px,5vw,76px); line-height:1; letter-spacing:-0.035em; font-variant-numeric:tabular-nums;}
+  .hp-second p + p{margin-top:14px; font-size:17px; color:rgba(255,255,255,.78); line-height:1.5;}
+  .hp-facts{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); list-style:none; margin:72px 0 0; padding:32px 0 0; border-top:1px solid rgba(255,255,255,.18); font-family:var(--font-display); font-weight:300; font-size:clamp(22px,2.4vw,34px); line-height:1.15; letter-spacing:-0.02em; color:#fff;}
+  .hp-facts li:nth-child(2){text-align:center;}
+  .hp-facts li:last-child{text-align:right;}
+  @media (max-width:760px){ .hp-facts{grid-template-columns:1fr; gap:14px;} .hp-facts li:nth-child(n){text-align:left;} }
+
+  /* Logovegg: overskrift og lenke på én linje */
+  .logo-wall{padding:88px 0 80px;}
+  .hp-logos-head{display:flex; justify-content:space-between; align-items:end; gap:40px; margin-bottom:36px;}
+  .hp-logos-head{flex-direction:column; align-items:flex-start; gap:18px;}
+  /* sized so the whole sentence runs on one line across the page */
+  .hp-logos-head h2{max-width:none; margin:0; hyphens:manual; text-wrap:initial; font-size:clamp(24px, calc((100vw - 64px) / 31), 38px);}
+
+  /* Höegh: bilde, ordrett sitat og 50–60 % */
+  .proof-quote{padding:0 0 104px;}
+  .hp-hoegh{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:#fff; margin:0; transition:opacity .8s ease, transform .8s ease;}
+  .hp-hoegh > img{width:100%; height:100%; object-fit:cover; min-height:420px;}
+  .hp-hoegh-copy{padding:56px 56px 48px; display:flex; flex-direction:column;}
+  .hp-hoegh-copy blockquote{font-family:var(--font-display); font-weight:300; font-size:clamp(20px,1.8vw,25px); line-height:1.42; letter-spacing:-0.012em; color:var(--ink); text-wrap:pretty;}
+  .hp-hoegh-copy figcaption{margin-top:22px; display:flex; flex-direction:column; gap:3px;}
+  .hp-hoegh-fact{margin-top:auto; padding-top:28px; border-top:1px solid var(--line); display:flex; align-items:baseline; gap:20px; flex-wrap:wrap;}
+  .hp-hoegh-fact strong{font-family:var(--font-display); font-weight:300; font-size:clamp(60px,6.4vw,96px); letter-spacing:-0.03em; color:var(--berry-deep); line-height:1;}
+  .hp-hoegh-fact span{font-size:16px; color:var(--ink-soft); max-width:34ch;}
+  .hp-hoegh-fact .hp-link{margin-top:10px;}
   /* the word being read switches to purple at once and fades back to dark after; a fade-in this short would never reach the colour */
   .proof-quote.quote-armed:not(.quote-shown) figure{opacity:0; transform:translateY(16px);}
   .proof-quote .qw{transition:color .7s ease;}
   .proof-quote .qw.qw-on{color:var(--berry-deep); transition:none;}
-  .proof-quote figure .go{display:inline-block; margin-top:18px; font-family:var(--font-mono); font-size:12.5px; color:var(--berry-deep); border-bottom:1px solid currentColor; padding-bottom:2px;}
-  .proof-quote figcaption{margin-top:24px; display:flex; flex-direction:column; gap:4px;}
-  .proof-quote .who{font-weight:600; font-size:15.5px; color:var(--ink);}
-  .proof-quote .role{font-family:var(--font-mono); font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft);}
-  .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
-  @media (max-width:980px){ .proof-quote figure{grid-column:1 / -1;} }
-  @media (max-width:760px){ .proof-quote{padding:64px 0;} .proof-quote figure{padding:32px 28px;} }
-  /* Hero: venstrejustert, stor signatur og en nøktern faktalinje (ingen tagger) */
-  .hero .hero-content{max-width:none; margin:0; text-align:left;}
-  .hero .hero-grid{display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr); gap:48px; align-items:center;}
-  .hero-askbox{justify-self:end; width:100%; max-width:420px;}
-  @media (max-width:980px){ .hero .hero-grid{grid-template-columns:1fr; gap:44px;} .hero-askbox{justify-self:start;} }
-  .hero h1{font-size:clamp(46px,6.6vw,96px); line-height:1; letter-spacing:-0.035em; margin-bottom:28px;}
-  .hero h1 em{color:var(--ink);}
-  .hero p.lead{margin:0 0 36px; max-width:620px;}
-  .hero .hero-actions{justify-content:flex-start; margin-bottom:56px;}
-  .hero .trust-pills{justify-content:flex-start; gap:0; border-top:1px solid var(--ink); padding-top:18px; max-width:760px;}
-  .hero .trust-pills li{border:none; background:none; padding:0 28px 0 0; margin-right:28px; border-right:1px solid var(--line); font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink);}
-  .hero .trust-pills li:last-child{border-right:none; margin-right:0;}
-  .hero .trust-pills li:hover{transform:none;}
-  .hero .trust-pills .pulse{display:none;}
-  @media (max-width:600px){ .hero .trust-pills{flex-direction:column; gap:8px;} .hero .trust-pills li{border-right:none; margin:0; padding:0;} }
+
+  /* Tre søyler med områder og ekte skjermbilder */
+  .hp-pillars{padding:104px 0 40px; border-top:1px solid var(--line);}
+  .hp-pillars-head{display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:56px; align-items:end; margin-bottom:56px; color:var(--ink);}
+  .hp-pillar{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); gap:64px; align-items:center; padding:56px 0; border-top:1px solid var(--line);}
+  .hp-pillar:nth-of-type(odd) .hp-shot{order:-1;}
+  .hp-pillar h3{font-family:var(--font-display); font-weight:300; font-size:clamp(34px,3.4vw,48px); letter-spacing:-0.025em; line-height:1.05; color:var(--berry-deep);}
+  .hp-sub{margin-top:10px; font-size:18px; color:var(--ink); font-weight:500;}
+  .hp-body{margin-top:16px; font-size:17px; color:var(--ink-soft); max-width:52ch;}
+  .hp-areas{margin:26px 0; display:grid; grid-template-columns:1fr 1fr; gap:10px 28px; list-style:none; padding:0;}
+  .hp-areas li{font-size:15.5px; padding:10px 0; border-top:1px solid var(--line);}
+  .hp-areas b{display:block; font-weight:600; color:var(--ink);}
+  .hp-areas span{color:var(--ink-soft); font-size:14px;}
+  .hp-shot{background:var(--mist); border-radius:var(--radius); padding:28px; display:flex; align-items:center; justify-content:center;}
+  .hp-shot img{width:100%; height:auto; border-radius:8px; box-shadow:0 24px 48px -28px rgba(15,23,42,.45), 0 1px 3px rgba(15,23,42,.08);}
+
+  /* To kjøpere: ledelsen signerer, forvalterne kan stoppe */
+  .hp-buyers{padding:104px 0;}
+  .hp-buyers .hp-title{margin-bottom:48px; max-width:20ch; color:var(--ink);}
+  .hp-buyers-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+  .hp-buyer{border-radius:var(--radius); padding:48px 48px 44px; display:flex; flex-direction:column;}
+  .hp-buyer-dark{background:var(--plum-deep); color:#fff;}
+  .hp-buyer-light{background:#fff; border:1px solid var(--line);}
+  .hp-for{font-size:15px; font-weight:600; margin-bottom:22px;}
+  .hp-buyer-dark .hp-for{color:rgba(255,255,255,.78);}
+  .hp-buyer-light .hp-for{color:var(--berry-deep);}
+  .hp-buyer h3{font-family:var(--font-display); font-weight:300; font-size:clamp(28px,2.6vw,38px); line-height:1.12; letter-spacing:-0.02em; margin-bottom:18px; text-wrap:balance;}
+  .hp-buyer > p:not(.hp-for){font-size:17px; line-height:1.6;}
+  .hp-buyer-dark > p:not(.hp-for){color:rgba(255,255,255,.82);}
+  .hp-buyer-light > p:not(.hp-for){color:var(--ink-soft);}
+  .hp-checks{margin:26px 0 30px; list-style:none; padding:0;}
+  .hp-checks li{padding:12px 0; border-top:1px solid var(--line); font-size:15.5px; display:flex; justify-content:space-between; gap:16px;}
+  .hp-buyer-dark .hp-checks li{border-color:rgba(255,255,255,.16);}
+  .hp-checks li span{font-family:var(--font-mono); font-size:12px; color:var(--ink-soft); white-space:nowrap;}
+  .hp-buyer-dark .hp-checks li span{color:rgba(255,255,255,.66);}
+  .hp-buyer .hp-link{margin-top:auto; align-self:flex-start;}
+  .hp-buyer-dark .hp-link{color:#fff; border-color:var(--berry-mid);}
+
+  /* Folkene: fagkonsulenter og kunderådgivere */
+  .hp-people{padding:104px 0; background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .hp-people-head{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:56px; align-items:end; margin-bottom:48px; color:var(--ink);}
+  .hp-people-grid{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px;}
+  .hp-person{background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
+  .hp-ph{aspect-ratio:1/1; background:#EEEDEF; overflow:hidden;}
+  .hp-ph img{width:100%; height:100%; object-fit:cover; object-position:50% 20%;}
+  .hp-tx{padding:18px 20px 20px;}
+  .hp-tx h3{font-weight:600; font-size:16px; color:var(--ink);}
+  .hp-rl{font-size:14px; color:var(--ink-soft); margin-top:2px;}
+  .hp-kan{margin-top:12px; font-size:15px; color:var(--berry-deep); font-weight:500;}
+  .hp-csm{display:grid; grid-template-columns:auto 1fr auto; gap:28px; align-items:center; margin-top:20px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:22px 28px;}
+  .hp-faces{display:flex;}
+  .hp-faces img{width:56px; height:56px; border-radius:50%; object-fit:cover; border:3px solid #fff; margin-left:-12px; background:var(--mist);}
+  .hp-faces img:first-child{margin-left:0;}
+  .hp-csm p{font-size:16px; color:var(--ink-soft);}
+  .hp-csm b{color:var(--ink); font-weight:600;}
+
+  /* Kundenes egne ord, med større bilder */
+  .hp-voices{padding:104px 0;}
+  .hp-voices .hp-title{margin-bottom:44px; color:var(--ink);}
+  /* three equal cards: same photo crop, same type size, caption and link pinned to the foot */
+  .hp-voices-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; align-items:stretch;}
+  .hp-voice{margin:0; display:flex; flex-direction:column; background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
+  .hp-voice img{width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; object-position:50% 22%;}
+  .hp-voice blockquote{margin:24px 24px 20px; font-size:16.5px; line-height:1.6; color:var(--ink); text-wrap:pretty;}
+  .hp-voice figcaption{display:flex; flex-direction:column; gap:2px; margin:auto 24px 0; padding-top:16px; border-top:1px solid var(--line);}
+  .hp-voice .hp-link{margin:14px 24px 24px; align-self:flex-start;}
+  .hp-more{margin-top:32px;}
+
+  /* Leie mot marked */
+  .hp-market{padding:0 0 104px;}
+  .hp-market-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:64px; align-items:center; border-top:1px solid var(--line); padding-top:88px; color:var(--ink);}
+  .hp-market .hp-lead{margin:20px 0 24px;}
+  .hp-rent{margin:0; background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
+  .hp-rent table{width:100%; border-collapse:collapse; font-size:14.5px; font-variant-numeric:tabular-nums;}
+  .hp-rent th{font-family:var(--font-mono); font-size:11.5px; font-weight:400; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-soft); background:var(--paper-2); text-align:left; padding:14px 22px;}
+  .hp-rent td{padding:14px 22px; border-top:1px solid var(--line);}
+  .hp-neg{color:var(--berry-deep); font-weight:600;}
+  .hp-rent figcaption{padding:12px 22px; border-top:1px solid var(--line); font-size:12px; color:var(--ink-soft);}
+
+  /* Fenistradagene, lys flate og flere bilder */
+  .hp-fdays{padding:104px 0;}
+  .hp-fdays-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.35fr); gap:64px; align-items:center; color:var(--ink);}
+  .hp-fdays .hp-lead{margin-top:18px;}
+  .hp-fdays-quote{margin:28px 0 32px;}
+  .hp-fdays-quote blockquote{font-family:var(--font-display); font-weight:300; font-size:19px; line-height:1.5; padding-left:20px; border-left:1px solid var(--berry); margin-bottom:12px;}
+  .hp-fdays-quote figcaption{font-size:14px; color:var(--ink-soft);}
+  .hp-fd-photos{display:grid; grid-template-columns:1.4fr 1fr; grid-template-rows:1fr 1fr; gap:12px; height:520px;}
+  .hp-fd-photos img{width:100%; height:100%; object-fit:cover; border-radius:var(--radius);}
+  .hp-fd-photos img:first-child{grid-row:1 / span 2;}
+
+  @media (max-width:1080px){
+    .hp-hero-grid, .hp-numbers-row, .hp-pillars-head, .hp-pillar, .hp-people-head, .hp-market-grid, .hp-fdays-grid, .hp-hoegh{grid-template-columns:1fr; gap:40px;}
+    .hp-pillar:nth-of-type(odd) .hp-shot{order:0;}
+    .hp-hero-visual{min-height:480px;}
+    .hp-people-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .hp-voices-grid, .hp-buyers-grid{grid-template-columns:1fr;}
+    .hp-logos-head{flex-direction:column; align-items:flex-start;}
+  }
+  @media (max-width:640px){
+    .hp-hero{padding-top:44px;}
+    .hp-hero-copy{padding-bottom:24px;}
+    .hp-hero-visual{min-height:0; padding-bottom:48px;}
+    .hp-hero-photo{position:relative; inset:auto; aspect-ratio:4/3;}
+    .hp-numbers, .hp-pillars, .hp-buyers, .hp-people, .hp-voices, .hp-fdays{padding:64px 0;}
+    .proof-quote, .hp-market{padding-bottom:64px;}
+    .hp-market-grid{padding-top:56px;}
+    .hp-big{font-size:clamp(28px,9.2vw,64px);}
+    .hp-facts{flex-direction:column; gap:8px;}
+    .hp-facts li{border:none; padding:0; margin:0;}
+    .hp-areas{grid-template-columns:1fr;}
+    .hp-buyer, .hp-hoegh-copy{padding:32px 24px;}
+    .hp-hoegh > img{min-height:260px;}
+    .hp-people-grid{gap:12px;}
+    .hp-csm{grid-template-columns:1fr;}
+    .hp-fd-photos{height:360px;}
+    .hp-rent th:nth-child(3), .hp-rent td:nth-child(3){display:none;}
+    .hp-rent th, .hp-rent td{padding:12px 14px;}
+  }
 </style>
 <!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-content">
-      <h1><span class="hero-part hero-part-1">Fenistra</span>&ngsp;<em class="hero-part hero-part-2">kan eiendom.</em></h1>
-      <p class="lead hero-part hero-part-3">Det ledende forvaltningssystemet for næringseiendom, og fagfolkene bak. Ett system for hele leieforholdet, fra første henvendelse til ferdig avregnet.</p>
-      <div class="hero-actions hero-part hero-part-3">
-        <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Snakk med oss</a>
+<section class="hp-hero">
+  <div class="wrap hp-hero-grid">
+    <div class="hp-hero-copy">
+      <h1>Fenistra <em>kan eiendom.</em></h1>
+      <p class="hp-lead">Over 30 år med faget, bygget inn i ett system som svarer, sier ifra og gjør jobben. Fra første henvendelse til ferdig avregnet.</p>
+      <div class="hp-actions">
+        <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
         <a routerLink="/ki" class="btn btn-ghost">Se hvordan vi hjelper</a>
       </div>
-      <ul class="trust-pills hero-part hero-part-3">
-        <li><span class="pulse"></span>Brukt av 170+ eiendomsselskaper.</li>
-      </ul>
     </div>
-    <app-hero-ask-box class="hero-askbox"></app-hero-ask-box>
+    <div class="hp-hero-visual">
+      <figure class="hp-hero-photo">
+        <img src="images/hero-fenistradagene-2026.jpg" width="1800" height="1200" alt="Fagsesjon på Fenistradagene 2026" fetchpriority="high">
+        <figcaption>Fra Fenistradagene 2026</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STORE TALL ================= -->
+<section class="hp-numbers" aria-labelledby="tall-tittel">
+  <div class="wrap">
+    <h2 id="tall-tittel" class="sr-only">Fenistra i tall</h2>
+    <p class="hp-big">
+      <span class="sr-only">65 000 000 000 kroner</span>
+      <span aria-hidden="true">{{ bigCount() }} 000 000 000</span>
+      <span class="hp-unit" aria-hidden="true">kr</span>
+    </p>
+    <div class="hp-numbers-row">
+      <p class="hp-big-label">i leieomsetning faktureres fra Fenistra hvert år.</p>
+      <div class="hp-second">
+        <p class="hp-mid"><span class="sr-only">Over 60 000</span><span aria-hidden="true">Over {{ midCount() }} 000</span></p>
+        <p>leiekontrakter i systemet.</p>
+      </div>
+    </div>
+    <ul class="hp-facts">
+      <li>170+ eiendomsforvaltere</li>
+      <li>Utviklet siden 1994</li>
+      <li>En del av Visma</li>
+    </ul>
   </div>
 </section>
 
 <!-- ================= LOGOVEGG ================= -->
 <section class="logo-wall" aria-labelledby="kunder-tittel">
   <div class="wrap">
-    <div class="logo-wall-head reveal">
+    <div class="logo-wall-head hp-logos-head reveal">
       <h2 id="kunder-tittel">Selskaper som kan eiendom, krever et system som gjør det samme.</h2>
-      <p>Blant selskapene som forvalter i Fenistra:</p>
+      <a routerLink="/kunder" class="hp-link">Se kundehistoriene →</a>
     </div>
-    <ul class="logo-grid reveal">
+    <ul class="logo-grid reveal" aria-label="Blant selskapene som forvalter i Fenistra">
       @for (c of customers; track c.name) {
         <li>
           @if (c.story) {
@@ -738,62 +712,83 @@
         </li>
       }
     </ul>
-    <p class="logo-wall-more reveal"><a routerLink="/kunder">Se kundehistoriene →</a></p>
   </div>
 </section>
 
-<!-- ================= KUNDESITAT VED FØRSTE SCROLL (ordrett som publisert) ================= -->
+<!-- ================= KUNDESITAT (ordrett som publisert) ================= -->
 <section class="proof-quote" aria-label="Kundesitat" [class.quote-armed]="quoteArmed()" [class.quote-shown]="quoteShown()">
-  <div class="wrap proof-boxes">
-    <figure>
-      <blockquote>@for (w of quoteWords; track $index; let last = $last) {<span class="qw" [class.qw-on]="$index === quoteRead() - 1">{{ w }}{{ last ? '' : ' ' }}</span>}</blockquote>
-      <figcaption>
-        <span class="who">Maren Elise Dalene Torp</span>
-        <span class="role">Senior Controller Eiendomsforvaltning, Höegh Eiendom</span>
-      </figcaption>
-      <a routerLink="/media-hoegh-eiendom" class="go">Les historien →</a>
+  <div class="wrap">
+    <figure class="hp-hoegh">
+      <img src="images/kunder-01.jpg" width="1000" height="570" alt="Maren Elise Dalene Torp, Senior Controller Eiendomsforvaltning, Höegh Eiendom" loading="lazy">
+      <div class="hp-hoegh-copy">
+        <blockquote>@for (w of quoteWords; track $index; let last = $last) {<span class="qw" [class.qw-on]="$index === quoteRead() - 1">{{ w }}{{ last ? '' : ' ' }}</span>}</blockquote>
+        <figcaption>
+          <span class="hp-who">Maren Elise Dalene Torp</span>
+          <span class="hp-role">Senior Controller Eiendomsforvaltning, Höegh Eiendom</span>
+        </figcaption>
+        <div class="hp-hoegh-fact">
+          <strong>50–60 %</strong>
+          <span>mindre tid på fakturering hos Höegh Eiendom, kunde i over 20 år. <a routerLink="/media-hoegh-eiendom" class="hp-link">Les historien →</a></span>
+        </div>
+      </div>
     </figure>
   </div>
 </section>
 
-<!-- ================= BRO + TRE SØYLER: system og fagfolk ================= -->
-<section id="produkt" class="know">
+<!-- ================= TRE SØYLER: svarer, sier ifra, gjør jobben ================= -->
+<section class="hp-pillars" aria-labelledby="soyler-tittel">
   <div class="wrap">
-    <h2 class="know-title reveal">Et komplett system, med fagfolk som står bak det.</h2>
-    <div class="know-row reveal">
-      <h3>Bare spør<span class="know-sub">Om porteføljen, leienivået, ledigheten.</span></h3>
-      <div class="know-body">
-        <ul class="know-questions">
-          <li>Hvilke kontrakter og lokaler bør dere prioritere?</li>
-          <li>Hvordan er leieprisene i området?</li>
-          <li>Hvor mye ledighet har vi neste år?</li>
+    <div class="hp-pillars-head reveal">
+      <h2 id="soyler-tittel" class="hp-title">Fenistra svarer, sier ifra og gjør jobben.</h2>
+      <p class="hp-lead">Kunden merker det på tre måter. Bak hver av dem står fagfolk som kan kontrakter, avregning og regelverk.</p>
+    </div>
+
+    <div class="hp-pillar reveal">
+      <div>
+        <h3>Svarer</h3>
+        <p class="hp-sub">Om porteføljen, leienivået, ledigheten.</p>
+        <p class="hp-body">Spør Fenistra med vanlige ord, og få svar med kilder fra egne data og markedsdata fra Arealstatistikk.</p>
+        <ul class="hp-areas">
+          <li><b>Porteføljeoversikt</b><span>Hele porteføljen, raskt og enkelt</span></li>
+          <li><b>Analyser og prognoser</b><span>Inntekter, kostnader og budsjett</span></li>
+          <li><b>Leie mot marked</b><span>Snittleie fra Arealstatistikk</span></li>
+          <li><b>Tilgang for alle roller</b><span>Ledelse, utleie og forvaltning</span></li>
         </ul>
-        <dl class="know-parts">
-          <div><dt>Fenistra med AI</dt><dd>Spør KI-assistenten med vanlige ord, og få svar med kilder fra egne data og markedsdata fra Arealstatistikk.</dd></div>
-          <div><dt>Menneskene bak</dt><dd>Spør fagfolk som kan kontrakter, avregning og regelverk.</dd></div>
-        </dl>
-        <a routerLink="/rapport-og-analyse" class="know-link">Se mulighetene i porteføljen →</a>
+        <a routerLink="/rapport-og-analyse" class="hp-link">Se mulighetene i porteføljen →</a>
       </div>
+      <div class="hp-shot"><img src="images/rapportering-leietakerliste.webp" width="1200" height="977" alt="Leietakerlisten i Fenistra" loading="lazy"></div>
     </div>
-    <div class="know-row reveal">
-      <h3>Sier ifra<span class="know-sub">Før noe glipper. Før det er for sent. Før dere taper penger.</span></h3>
-      <div class="know-body">
-        <dl class="know-parts">
-          <div><dt>Fenistra</dt><dd>Varsler om kontraktsutløp, frister, garantier og avvik i dataene.</dd></div>
-          <div><dt>Menneskene bak</dt><dd>Minner dere på sesongene: MVA, avregning av felleskostnader, RBO.</dd></div>
-        </dl>
-        <a routerLink="/fra-lead-til-innflytting" class="know-link">Fra lead til innflytting →</a>
+
+    <div class="hp-pillar reveal">
+      <div>
+        <h3>Sier ifra</h3>
+        <p class="hp-sub">Før noe glipper. Før det er for sent.</p>
+        <p class="hp-body">Fenistra varsler om kontraktsutløp, frister, garantier og avvik i dataene. Fagfolkene minner dere på sesongene: MVA, felleskostnader og RBO.</p>
+        <ul class="hp-areas">
+          <li><b>Kontraktshelse</b><span>Feil og risiko fanges opp tidlig</span></li>
+          <li><b>Frister og utløp</b><span>Varslet i god tid</span></li>
+          <li><b>Leietakeroppfølging</b><span>Leads, henvendelser og behov</span></li>
+          <li><b>Sikkerheter og garantier</b><span>Manglende sikkerhet flagges</span></li>
+        </ul>
+        <a routerLink="/kontroll-pa-portefoljen" class="hp-link">Kontroll på porteføljen →</a>
       </div>
+      <div class="hp-shot"><img src="images/kontrakter-oversikt.webp" width="1200" height="977" alt="Kontraktsoversikten i Fenistra" loading="lazy"></div>
     </div>
-    <div class="know-row reveal">
-      <h3>Gjør jobben<span class="know-sub">Fenistra gjør jobben for dere.</span></h3>
-      <div class="know-body">
-        <dl class="know-parts">
-          <div><dt>Fenistra med AI</dt><dd>AI leser kontraktene og fyller ut feltene. Dere kontrollerer, og så regulerer, fakturerer og avregner Fenistra etter kontrakten.</dd></div>
-          <div><dt>Menneskene bak</dt><dd>[BEKREFT: hva fagteamet gjør her, f.eks. oppstart, migrering, bistand i avregning]</dd></div>
-        </dl>
-        <a routerLink="/fakturering-og-avregning" class="know-link">Fakturering og avregning →</a>
+
+    <div class="hp-pillar reveal">
+      <div>
+        <h3>Gjør jobben</h3>
+        <p class="hp-sub">Fra kontrakt til avregning, med deres godkjenning.</p>
+        <p class="hp-body">Fenistra leser kontraktene og fyller ut feltene. Dere kontrollerer, og så regulerer, fakturerer og avregner Fenistra etter kontrakten.</p>
+        <ul class="hp-areas">
+          <li><b>Kontraktsskriving</b><span>Fra maler, uten dobbeltregistrering</span></li>
+          <li><b>Digital signering</b><span>Rett inn i forvaltningen</span></li>
+          <li><b>Protokoller</b><span>Overtakelse og tilbakelevering</span></li>
+          <li><b>Fra lead til innflytting</b><span>Hele kjeden i ett system</span></li>
+        </ul>
+        <a routerLink="/fra-lead-til-innflytting" class="hp-link">Fra lead til innflytting →</a>
       </div>
+      <div class="hp-shot"><img src="images/fakturering-klar-til-fakturering.png" width="1200" height="977" alt="Fakturering i Fenistra, klar til fakturering" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -805,87 +800,113 @@
   </div>
 </section>
 
-<!-- ================= ØKOSYSTEM: integrasjoner ================= -->
-<section class="eco-section" aria-labelledby="eco-title">
-  <div class="wrap eco-grid">
-    <div class="eco-copy reveal">
-      <h2 id="eco-title">Knytt Fenistra til systemene dere allerede bruker i dag.</h2>
-      <p>26 integrerte systemer, blant dem 19 regnskaps- og ERP-systemer. Data registreres én gang og deles med regnskap, rapportering og drift.</p>
-      <a routerLink="/integrasjoner" class="know-link">Se alle integrasjoner →</a>
+<!-- ================= TO KJØPERE ================= -->
+<section class="hp-buyers" aria-labelledby="kjopere-tittel">
+  <div class="wrap">
+    <h2 id="kjopere-tittel" class="hp-title reveal">To grunner til å si ja.</h2>
+    <div class="hp-buyers-grid">
+      <article class="hp-buyer hp-buyer-dark reveal">
+        <p class="hp-for">For ledelsen</p>
+        <h3>Hva skjer når den ene som forstår regnearket, er syk?</h3>
+        <p>Med Fenistra glemmes ingenting, og alle jobber ut fra én felles sannhet. Porteføljen ligger i systemet, ikke i hodet til én person.</p>
+        <ul class="hp-checks">
+          <li>Frister og utløp følges opp av systemet <span>Sier ifra</span></li>
+          <li>Rapporter og prognoser fra de faktiske kontraktene <span>Svarer</span></li>
+          <li>Sikret av Visma, ISO/IEC 27001 <span>Trygghet</span></li>
+        </ul>
+        <a routerLink="/rapport-og-analyse" class="hp-link">Se mulighetene i porteføljen →</a>
+      </article>
+      <article class="hp-buyer hp-buyer-light reveal">
+        <p class="hp-for">For kontrakts- og eiendomsforvaltere</p>
+        <h3>Også den rare kontrakten.</h3>
+        <p>Enkelt i hverdagen, og riktig når kontrakten ikke er standard.</p>
+        <ul class="hp-checks">
+          <li>Trappetrinnsleie og leierabatter</li>
+          <li>Omsetningsbasert leie</li>
+          <li>Utleie-, fremleie- og interne kontrakter</li>
+          <li>Kontrakter med spesielle vilkår</li>
+        </ul>
+        <a routerLink="/losning-kontrakter" class="hp-link">Se hvordan kontraktene håndteres →</a>
+      </article>
     </div>
-    <app-ecosystem></app-ecosystem>
+  </div>
+</section>
+
+<!-- ================= FOLKENE ================= -->
+<section class="hp-people" aria-labelledby="folk-tittel">
+  <div class="wrap">
+    <div class="hp-people-head reveal">
+      <h2 id="folk-tittel" class="hp-title">Fagfolkene er en telefon unna.</h2>
+      <p class="hp-lead">Veiledningen er bygget inn i systemet, og fagfolkene våre sitter både hos oss og ute hos kundene.</p>
+    </div>
+    <div class="hp-people-grid">
+      <article class="hp-person reveal"><div class="hp-ph"><img src="images/fagfolk-marius-somme.jpg" width="800" height="800" alt="Marius Sømme på scenen under Fenistradagene 2026" loading="lazy"></div><div class="hp-tx"><h3>Marius Sømme</h3><p class="hp-rl">Revisor og fagkonsulent</p><p class="hp-kan">Kan MVA, arealer, justering og regnskap</p></div></article>
+      <article class="hp-person reveal"><div class="hp-ph"><img src="images/fagfolk-kristin-falch.jpg" width="800" height="800" alt="Kristin Falch i samtale under Fenistradagene 2026" loading="lazy"></div><div class="hp-tx"><h3>Kristin Falch</h3><p class="hp-rl">Seniorkonsulent</p><p class="hp-kan">Kan felleskostnader og rapporter</p></div></article>
+      <article class="hp-person reveal"><div class="hp-ph"><img src="images/kundeteam-08.png" width="145" height="149" alt="Rokhsar Zendehbizadeh" loading="lazy"></div><div class="hp-tx"><h3>Rokhsar Zendehbizadeh</h3><p class="hp-rl">Fagkonsulent, byggingeniør og BIM-tekniker</p><p class="hp-kan">Kan tegninger</p></div></article>
+      <article class="hp-person reveal"><div class="hp-ph"><img src="images/fagfolk-espen-klofta.jpg" width="800" height="800" alt="Espen Kløfta under Fenistradagene 2026" loading="lazy"></div><div class="hp-tx"><h3>Espen Kløfta</h3><p class="hp-rl">Technical Account Manager, teknisk konsulent</p><p class="hp-kan">Kan implementering og oppsett</p></div></article>
+    </div>
+    <div class="hp-csm reveal">
+      <div class="hp-faces">
+        <img src="images/kundeteam-03.png" width="157" height="156" alt="Frida Holte" loading="lazy">
+        <img src="images/kundeteam-04.png" width="145" height="156" alt="Beate Paulsen" loading="lazy">
+        <img src="images/kundeteam-05.png" width="159" height="156" alt="Patrick Eriksen" loading="lazy">
+      </div>
+      <p><b>Egen kunderådgiver.</b> Frida, Beate og Patrick følger opp kundene våre fra oppstart og hvert år etter.</p>
+      <a routerLink="/ansatte" class="hp-link">Møt hele teamet →</a>
+    </div>
   </div>
 </section>
 
 <!-- ================= KUNDENES EGNE ORD (sitater ordrett som publisert) ================= -->
-<section class="voices" aria-labelledby="voices-title">
+<section class="hp-voices" aria-labelledby="voices-title">
   <div class="wrap">
-    <h2 id="voices-title" class="voices-title reveal">Kundenes egne ord</h2>
-    <div class="voices-grid">
-      <figure class="voice-main reveal">
+    <h2 id="voices-title" class="hp-title reveal">Kundenes egne ord</h2>
+    <div class="hp-voices-grid">
+      <figure class="hp-voice reveal">
+        <img src="images/kunder-04.jpg" width="900" height="802" alt="Tine Wergeland Johannessen, utleie- og markedssjef i Backer AS" loading="lazy">
+        <blockquote>«For oss i Backer var det avgjørende å velge en løsning som er både moderne og intuitiv. Vi valgte Fenistra fordi de kombinerer dyp bransjekunnskap med et verktøy som forenkler hverdagen vår og gir oss den innsikten vi trenger for å vokse videre. Gjennom dette samarbeidet får vi et solid fundament for profesjonell eiendomsforvaltning i mange år fremover.»</blockquote>
+        <figcaption><span class="hp-who">Tine Wergeland Johannessen</span><span class="hp-role">Utleie- og markedssjef, Backer AS</span></figcaption>
+        <a routerLink="/media-backer" class="hp-link">Les historien →</a>
+      </figure>
+      <figure class="hp-voice reveal">
         <img src="images/kunder-03.jpg" width="1412" height="806" alt="Ninette Jurs, kontraktsforvalter i Aspelin Ramm, og Kristin Støfringsdal, eiendomsforvalter på Vulkan" loading="lazy">
         <!-- ordrett fra propertysolutions.no, 30.10.2024 -->
         <blockquote>«Vi får en veldig god oversikt over alle leietakerne, samt en oversikt over hvilke lokaler som er utleid eller ledige.»</blockquote>
-        <figcaption><span class="who">Ninette Jurs og Kristin Støfringsdal</span><span class="role">Kontraktsforvalter og eiendomsforvalter, Aspelin Ramm</span><a href="https://propertysolutions.no/aktuelt/-fenistras-skybaserte-l%C3%B8sning-gir-full-oversikt-over-alle-leietakere-p%C3%A5-en-enkel-og-oversiktlig-m%C3%A5te" target="_blank" rel="noopener" class="voice-link">Les historien →</a></figcaption>
+        <figcaption><span class="hp-who">Ninette Jurs og Kristin Støfringsdal</span><span class="hp-role">Kontraktsforvalter og eiendomsforvalter, Aspelin Ramm</span></figcaption>
+        <a href="https://propertysolutions.no/aktuelt/-fenistras-skybaserte-l%C3%B8sning-gir-full-oversikt-over-alle-leietakere-p%C3%A5-en-enkel-og-oversiktlig-m%C3%A5te" target="_blank" rel="noopener" class="hp-link">Les historien →</a>
       </figure>
-      <div class="voice-side">
-        <figure class="voice-card reveal">
-          <img src="images/kunder-04.jpg" width="900" height="802" alt="Tine Wergeland Johannessen, utleie- og markedssjef i Backer AS" loading="lazy">
-          <div>
-            <blockquote>«For oss i Backer var det avgjørende å velge en løsning som er både moderne og intuitiv. Vi valgte Fenistra fordi de kombinerer dyp bransjekunnskap med et verktøy som forenkler hverdagen vår og gir oss den innsikten vi trenger for å vokse videre. Gjennom dette samarbeidet får vi et solid fundament for profesjonell eiendomsforvaltning i mange år fremover.»</blockquote>
-            <figcaption><span class="who">Tine Wergeland Johannessen</span><span class="role">Utleie- og markedssjef, Backer AS</span><a routerLink="/media-backer" class="voice-link">Les historien →</a></figcaption>
-          </div>
-        </figure>
-        <figure class="voice-card reveal">
-          <img src="images/kunder-02.jpg" width="960" height="1280" alt="Bente Haugsdal, tidligere utviklingssjef, Frydenbø Eiendom" loading="lazy">
-          <div>
-            <blockquote>«Fenistra har utviklet seg i takt med krav og regelverk i tett samarbeid med eiendomsbesittere. Vår erfaring har vært at når det rulles ut nye moduler, så er dette kvalitetssikret både mot regelverk og et behov i bransjen. Det er gjort mye forarbeid og grundig erfaringsutveksling før en iverksetter nye løsninger, noe som gir oss trygghet for kvalitet og behov.»</blockquote>
-            <figcaption><span class="who">Bente Haugsdal</span><span class="role">Tidligere utviklingssjef, Frydenbø Eiendom</span><a routerLink="/media-kontinuerlig-verdi" class="voice-link">Les historien →</a></figcaption>
-          </div>
-        </figure>
-      </div>
+      <figure class="hp-voice reveal">
+        <img src="images/kunder-02.jpg" width="960" height="1280" alt="Bente Haugsdal, tidligere utviklingssjef, Frydenbø Eiendom" loading="lazy">
+        <blockquote>«Fenistra har utviklet seg i takt med krav og regelverk i tett samarbeid med eiendomsbesittere. Vår erfaring har vært at når det rulles ut nye moduler, så er dette kvalitetssikret både mot regelverk og et behov i bransjen. Det er gjort mye forarbeid og grundig erfaringsutveksling før en iverksetter nye løsninger, noe som gir oss trygghet for kvalitet og behov.»</blockquote>
+        <figcaption><span class="hp-who">Bente Haugsdal</span><span class="hp-role">Tidligere utviklingssjef, Frydenbø Eiendom</span></figcaption>
+        <a routerLink="/media-kontinuerlig-verdi" class="hp-link">Les historien →</a>
+      </figure>
     </div>
-    <p class="voices-more reveal"><a routerLink="/kunder">Les flere kundehistorier →</a></p>
+    <p class="hp-more reveal"><a routerLink="/kunder" class="hp-link">Les flere kundehistorier →</a></p>
   </div>
 </section>
 
-<!-- ================= FAGSEKSJON: tall, Arealstatistikk og Fenistradagene ================= -->
-<section class="insight" aria-labelledby="innsikt-tittel">
-  <div class="wrap">
-    <h2 id="innsikt-tittel" class="insight-title">Vi kan eiendom. Derfor samler bransjen seg hos oss.</h2>
-
-    <ul class="insight-stats">
-      @for (s of stats; track s.label; let i = $index) {
-        <li class="reveal"><span class="num">{{ formatStat(statValues()[i]) }}{{ s.suffix }}</span><span class="lbl">{{ s.label }}</span></li>
-      }
-    </ul>
-    <div class="insight-areal reveal">
-      <h3>Markedsdata fra Arealstatistikk, bygget inn i Fenistra</h3>
-      <p>[PLACEHOLDER: Arealstatistikk i løsningen. Hva dataene er, hvordan de brukes i Fenistra (f.eks. leie mot marked for riktig sone og leietype), og ett tall om databasen.]</p>
+<!-- ================= LEIE MOT MARKED (Arealstatistikk) ================= -->
+<section class="hp-market" aria-labelledby="marked-tittel">
+  <div class="wrap hp-market-grid">
+    <div class="reveal">
+      <h2 id="marked-tittel" class="hp-title">Se hvilke kontrakter som ligger under markedet.</h2>
+      <p class="hp-lead">Fenistra sammenligner leien i kontraktene deres med snittleie fra Arealstatistikk for riktig sone og leietype. Dere ser hva som bør reforhandles, før kontrakten løper ut.</p>
+      <a routerLink="/ki" class="hp-link">Slik hjelper vi →</a>
     </div>
-  </div>
-</section>
-
-<!-- ================= FENISTRADAGENE ================= -->
-<section class="fdays" aria-labelledby="fdays-title">
-  <div class="wrap fdays-grid">
-    <div class="fdays-copy reveal">
-      <h2 id="fdays-title">Fagdager for forvaltere</h2>
-      <p class="fdays-lead">Kurs, foredrag og samtaler med kunder og fagfolk fra Fenistra.</p>
-      <figure class="fdays-quote">
-        <blockquote>«Fenistradagene er en kjempefin mulighet til å lære mer og bli inspirert. Her møter vi andre i bransjen, og vi får utvekslet og delt fagkompetanse.»</blockquote>
-        <figcaption><strong>Lene Hansen</strong> · Servicekoordinator, Höegh Eiendom</figcaption>
-      </figure>
-      <div class="fdays-actions">
-        <a routerLink="/kontakt-oss" class="btn btn-on-dark">Meld interesse for 2027</a>
-        <a routerLink="/fenistradagene" class="fdays-link">Se Fenistradagene →</a>
-      </div>
-    </div>
-    <div class="fdays-photos reveal">
-      <img class="fdays-wide" src="images/fenistradagene-2026-13.jpg" width="1100" height="733" alt="Plenumssalen på Thon Hotel Snø under Fenistradagene 2026" loading="lazy">
-      <img src="images/fenistradagene-2026-06.jpg" width="1100" height="733" alt="Engasjerte deltakere i en fagsesjon på Fenistradagene 2026" loading="lazy">
-      <img src="images/fenistradagene-2026-15.jpg" width="1100" height="733" alt="Felix lanseres fra scenen under Fenistradagene 2026" loading="lazy">
-    </div>
+    <figure class="hp-rent reveal">
+      <table>
+        <caption class="sr-only">Eksempel: leie mot marked, fiktive data</caption>
+        <thead><tr><th scope="col">Lokale</th><th scope="col">Leie kr/m²</th><th scope="col">Marked kr/m²</th><th scope="col">Avvik</th></tr></thead>
+        <tbody>
+          <tr><td>Storgata 12, 3. etg.</td><td>2 150</td><td>2 480</td><td class="hp-neg">−13 %</td></tr>
+          <tr><td>Kanalen 4, butikk</td><td>3 900</td><td>4 200</td><td class="hp-neg">−7 %</td></tr>
+          <tr><td>Havneveien 8, lager</td><td>1 120</td><td>1 090</td><td>+3 %</td></tr>
+          <tr><td>Torget 1, kontor</td><td>2 600</td><td>2 950</td><td class="hp-neg">−12 %</td></tr>
+        </tbody>
+      </table>
+      <figcaption>Eksempel med fiktive data. Markedsdata fra Arealstatistikk.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -893,6 +914,29 @@
 <section class="trust" aria-label="Valgt av bransjen. Sikret av Visma.">
   <div class="wrap">
     <app-trust-list></app-trust-list>
+  </div>
+</section>
+
+<!-- ================= FENISTRADAGENE ================= -->
+<section class="hp-fdays" aria-labelledby="fdays-title">
+  <div class="wrap hp-fdays-grid">
+    <div class="reveal">
+      <h2 id="fdays-title" class="hp-title">Fagdag for Fenistrakunder</h2>
+      <p class="hp-lead">Kurs, foredrag og samtaler med kunder og fagfolk fra Fenistra.</p>
+      <figure class="hp-fdays-quote">
+        <blockquote>«Fenistradagene er en kjempefin mulighet til å lære mer og bli inspirert. Her møter vi andre i bransjen, og vi får utvekslet og delt fagkompetanse.»</blockquote>
+        <figcaption><span class="hp-who">Lene Hansen</span> · Servicekoordinator, Höegh Eiendom</figcaption>
+      </figure>
+      <div class="hp-actions">
+        <a routerLink="/kontakt-oss" class="btn btn-primary">Meld interesse for 2027</a>
+        <a routerLink="/fenistradagene" class="hp-link">Se Fenistradagene →</a>
+      </div>
+    </div>
+    <div class="hp-fd-photos reveal">
+      <img src="images/fd2026-21.jpg" width="1200" height="1800" alt="Deltakere i salen under Fenistradagene 2026" loading="lazy">
+      <img src="images/fd2026-61-1.jpg" width="1200" height="1800" alt="Kunder i samtale i pausen på Fenistradagene 2026" loading="lazy">
+      <img src="images/fd2026-40-1.jpg" width="1800" height="1200" alt="Fagsesjon i et mindre rom på Fenistradagene 2026" loading="lazy">
+    </div>
   </div>
 </section>
 

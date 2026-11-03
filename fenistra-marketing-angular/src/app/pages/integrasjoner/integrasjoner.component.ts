@@ -1,3 +1,4 @@
+import { ProofCtaComponent } from '../../shared/proof-cta/proof-cta.component';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
@@ -8,7 +9,7 @@ export interface IntCategory { id: string; title: string; intro: string; systems
 @Component({
   selector: 'app-integrasjoner',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, ProofCtaComponent],
   templateUrl: './integrasjoner.component.html',
   encapsulation: ViewEncapsulation.None
 })
@@ -51,7 +52,7 @@ export class IntegrasjonerComponent {
     {
       id: 'rapportering',
       title: 'Rapportering og analyse',
-      intro: 'Kombiner Fenistra-data med verktøy for business intelligence og nøkkeltallsanalyse, så innsikten alltid er oppdatert.',
+      intro: 'Kombiner Fenistra-data med verktøy for business intelligence og nøkkeltallsanalyse, så innsikten bygger på oppdaterte tall.',
       systems: [
         { name: 'Power BI', logo: 'images/integrasjoner/powerbi.svg' },
         { name: 'Maestro' },
