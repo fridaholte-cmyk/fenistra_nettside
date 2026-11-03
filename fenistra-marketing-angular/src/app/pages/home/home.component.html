@@ -497,12 +497,12 @@
   .hp-unit{font-size:max(.36em,14px); letter-spacing:-0.01em; color:var(--berry-mid); font-weight:400;}
   .hp-numbers-row{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:64px; margin-top:28px; align-items:start;}
   .hp-big-label{font-size:clamp(18px,1.6vw,22px); line-height:1.45; color:rgba(255,255,255,.82); max-width:36ch;}
-  .hp-mid{font-family:var(--font-display); font-weight:300; font-size:clamp(44px,5vw,76px); line-height:1; letter-spacing:-0.035em; font-variant-numeric:tabular-nums;}
+  .hp-mid{font-family:var(--font-display); font-weight:300; font-size:clamp(48px,7.4vw,124px); white-space:nowrap; line-height:1; letter-spacing:-0.035em; font-variant-numeric:tabular-nums;}
+  /* pushed to the right edge so the pair spans the whole width */
+  .hp-second{justify-self:end; text-align:right;}
   .hp-second p + p{margin-top:14px; font-size:17px; color:rgba(255,255,255,.78); line-height:1.5;}
-  .hp-facts{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); list-style:none; margin:72px 0 0; padding:32px 0 0; border-top:1px solid rgba(255,255,255,.18); font-family:var(--font-display); font-weight:300; font-size:clamp(22px,2.4vw,34px); line-height:1.15; letter-spacing:-0.02em; color:#fff;}
-  .hp-facts li:nth-child(2){text-align:center;}
-  .hp-facts li:last-child{text-align:right;}
-  @media (max-width:760px){ .hp-facts{grid-template-columns:1fr; gap:14px;} .hp-facts li:nth-child(n){text-align:left;} }
+  .hp-facts{display:flex; justify-content:space-between; gap:24px; list-style:none; margin:72px 0 0; padding:32px 0 0; border-top:1px solid rgba(255,255,255,.18); font-family:var(--font-display); font-weight:300; font-size:clamp(22px,2.4vw,34px); line-height:1.15; letter-spacing:-0.02em; color:#fff;}
+  @media (max-width:760px){ .hp-facts{flex-direction:column; gap:14px;} }
 
   /* Logovegg: overskrift og lenke på én linje */
   .logo-wall{padding:88px 0 80px;}
@@ -587,11 +587,12 @@
   .hp-voices .hp-title{margin-bottom:44px; color:var(--ink);}
   /* three equal cards: same photo crop, same type size, caption and link pinned to the foot */
   .hp-voices-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; align-items:stretch;}
-  .hp-voice{margin:0; display:flex; flex-direction:column; background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
+  .hp-voice{margin:0; display:grid; grid-row:span 4; grid-template-rows:subgrid; row-gap:0; background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
   .hp-voice img{width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; object-position:50% 22%;}
   .hp-voice blockquote{margin:24px 24px 20px; font-size:16.5px; line-height:1.6; color:var(--ink); text-wrap:pretty;}
-  .hp-voice figcaption{display:flex; flex-direction:column; gap:2px; margin:auto 24px 0; padding-top:16px; border-top:1px solid var(--line);}
-  .hp-voice .hp-link{margin:14px 24px 24px; align-self:flex-start;}
+  .hp-voice figcaption{display:flex; flex-direction:column; gap:2px; margin:0 24px; align-self:start; padding-top:16px; border-top:1px solid var(--line);}
+  .hp-voice .hp-link{margin:14px 24px 24px; justify-self:start; align-self:start;}
+  /* the cards share rows (subgrid), so names and links line up whatever the quote length */
   .hp-more{margin-top:32px;}
 
   /* Leie mot marked */
@@ -619,6 +620,7 @@
   @media (max-width:1080px){
     .hp-hero-grid, .hp-numbers-row, .hp-pillars-head, .hp-pillar, .hp-people-head, .hp-market-grid, .hp-fdays-grid, .hp-hoegh{grid-template-columns:1fr; gap:40px;}
     .hp-pillar:nth-of-type(odd) .hp-shot{order:0;}
+    .hp-second{justify-self:start; text-align:left;}
     .hp-hero-visual{min-height:480px;}
     .hp-people-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
     .hp-voices-grid, .hp-buyers-grid{grid-template-columns:1fr;}
@@ -683,7 +685,7 @@
     </div>
     <ul class="hp-facts">
       <li>170+ eiendomsforvaltere</li>
-      <li>Utviklet siden 1994</li>
+      <li>Sikret etter ISO/IEC 27001</li>
       <li>En del av Visma</li>
     </ul>
   </div>
@@ -870,8 +872,8 @@
       </figure>
       <figure class="hp-voice reveal">
         <img src="images/kunder-03.jpg" width="1412" height="806" alt="Ninette Jurs, kontraktsforvalter i Aspelin Ramm, og Kristin Støfringsdal, eiendomsforvalter på Vulkan" loading="lazy">
-        <!-- ordrett fra propertysolutions.no, 30.10.2024 -->
-        <blockquote>«Vi får en veldig god oversikt over alle leietakerne, samt en oversikt over hvilke lokaler som er utleid eller ledige.»</blockquote>
+        <!-- ordrett fra propertysolutions.no, 30.10.2024; [...] hopper over setningen som nevner «Fenistra.net» -->
+        <blockquote>«Dette fungerer veldig bra. Det er mye mer brukervennlig enn den gamle løsningen og gir full oversikt over alle leietakere på en enkel og oversiktlig måte. […] I de fleste rapportene er det også veldig enkelt å tilpasse rapportene etter hva du har behov for.»</blockquote>
         <figcaption><span class="hp-who">Ninette Jurs og Kristin Støfringsdal</span><span class="hp-role">Kontraktsforvalter og eiendomsforvalter, Aspelin Ramm</span></figcaption>
         <a href="https://propertysolutions.no/aktuelt/-fenistras-skybaserte-l%C3%B8sning-gir-full-oversikt-over-alle-leietakere-p%C3%A5-en-enkel-og-oversiktlig-m%C3%A5te" target="_blank" rel="noopener" class="hp-link">Les historien →</a>
       </figure>

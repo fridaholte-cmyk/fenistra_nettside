@@ -949,3 +949,14 @@ body .wrap{max-width:min(1600px, max(var(--container, 1180px), calc((100vw + 118
 body .cta-wrap > .cta-band{max-width:calc(min(1600px, max(1180px, calc((100vw + 1180px) / 2))) - 64px);}
 /* Menu items sit to the right, next to the buttons, which stay at the right edge */
 body .nav-links{margin-left:auto; margin-right:32px;}
+
+/* ---------- Store skjermer: hele siden skaleres opp (november 2026) ----------
+   Above ~1800px the layout stops growing and leaves wide empty sides. Zooming the whole document keeps
+   the proportions of the 1440–1600px design and lets text, images and spacing fill the screen.
+   Media queries read the real viewport, so the zoom does not feed back into them. */
+@media (min-width:1800px){ html{zoom:1.1;} }
+@media (min-width:2000px){ html{zoom:1.2;} }
+@media (min-width:2300px){ html{zoom:1.35;} }
+@media (min-width:2600px){ html{zoom:1.5;} }
+@media (min-width:3000px){ html{zoom:1.75;} }
+@media (min-width:3400px){ html{zoom:2;} }
