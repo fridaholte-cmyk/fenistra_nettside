@@ -560,13 +560,10 @@
   .hp-buyer{border-radius:var(--radius); padding:48px 48px 44px; display:flex; flex-direction:column;}
   .hp-buyer-dark{background:var(--plum-deep); color:#fff;}
   .hp-buyer-light{background:#fff; border:1px solid var(--line);}
-  .hp-for{font-size:15px; font-weight:600; margin-bottom:22px;}
-  .hp-buyer-dark .hp-for{color:rgba(255,255,255,.78);}
-  .hp-buyer-light .hp-for{color:var(--berry-deep);}
   .hp-buyer h3{font-family:var(--font-display); font-weight:300; font-size:clamp(28px,2.6vw,38px); line-height:1.12; letter-spacing:-0.02em; margin-bottom:18px; text-wrap:balance;}
-  .hp-buyer > p:not(.hp-for){font-size:17px; line-height:1.6;}
-  .hp-buyer-dark > p:not(.hp-for){color:rgba(255,255,255,.82);}
-  .hp-buyer-light > p:not(.hp-for){color:var(--ink-soft);}
+  .hp-buyer > p{font-size:17px; line-height:1.6;}
+  .hp-buyer-dark > p{color:rgba(255,255,255,.82);}
+  .hp-buyer-light > p{color:var(--ink-soft);}
   .hp-checks{margin:26px 0 30px; list-style:none; padding:0;}
   .hp-checks li{padding:12px 0; border-top:1px solid var(--line); font-size:15.5px; display:flex; justify-content:space-between; gap:16px;}
   .hp-buyer-dark .hp-checks li{border-color:rgba(255,255,255,.16);}
@@ -580,16 +577,11 @@
   .hp-people-head{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:56px; align-items:end; margin-bottom:48px; color:var(--ink);}
   .hp-people-grid{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px;}
   .hp-person{background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
-  .hp-ph{aspect-ratio:1/1; background:#EEEDEF; overflow:hidden;}
-  .hp-ph img{width:100%; height:100%; object-fit:cover; object-position:50% 20%;}
   .hp-tx{padding:18px 20px 20px;}
   .hp-tx h3{font-weight:600; font-size:16px; color:var(--ink);}
   .hp-rl{font-size:14px; color:var(--ink-soft); margin-top:2px;}
   .hp-kan{margin-top:12px; font-size:15px; color:var(--berry-deep); font-weight:500;}
-  .hp-csm{display:grid; grid-template-columns:auto 1fr auto; gap:28px; align-items:center; margin-top:20px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:22px 28px;}
-  .hp-faces{display:flex;}
-  .hp-faces img{width:56px; height:56px; border-radius:50%; object-fit:cover; border:3px solid #fff; margin-left:-12px; background:var(--mist);}
-  .hp-faces img:first-child{margin-left:0;}
+  .hp-csm{display:grid; grid-template-columns:1fr auto; gap:28px; align-items:center; margin-top:20px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:22px 28px;}
   .hp-csm p{font-size:16px; color:var(--ink-soft);}
   .hp-csm b{color:var(--ink); font-weight:600;}
 
@@ -660,7 +652,6 @@
 <section class="hp-numbers" aria-labelledby="tall-tittel">
   <div class="wrap">
     <h2 id="tall-tittel" class="sr-only">Fenistra i tall</h2>
-    <!-- XXXXX: plassholder til vi har tallet for kvadratmeter -->
     <div class="hp-stats">
       <div class="hp-stat">
         <p class="hp-mid"><span class="sr-only">Over 60 000</span><span aria-hidden="true">&gt;{{ midCount() }} 000</span></p>
@@ -671,14 +662,14 @@
         <p class="hp-stat-label">brukere</p>
       </div>
       <div class="hp-stat">
-        <p class="hp-mid">XXXXX</p>
+        <p class="hp-mid"><span class="sr-only">Over 26 millioner</span><span aria-hidden="true">&gt;26 millioner</span></p>
         <p class="hp-stat-label">kvadratmeter i systemet</p>
       </div>
     </div>
     <ul class="hp-facts">
       <li>170+ eiendomsforvaltere</li>
       <li>Sikret etter ISO/IEC 27001</li>
-      <li>En del av Visma</li>
+      <li>En del av Visma Group</li>
     </ul>
   </div>
 </section>
@@ -832,7 +823,6 @@
     <h2 id="kjopere-tittel" class="hp-title reveal">To grunner til å si ja.</h2>
     <div class="hp-buyers-grid">
       <article class="hp-buyer hp-buyer-dark reveal">
-        <p class="hp-for">For ledelsen</p>
         <h3>Hva skjer når den ene som forstår regnearket, er syk?</h3>
         <p>Med Fenistra glemmes ingenting, og alle jobber ut fra én felles sannhet. Porteføljen ligger i systemet, ikke i hodet til én person.</p>
         <ul class="hp-checks">
@@ -843,7 +833,6 @@
         <a routerLink="/rapport-og-analyse" class="hp-link">Se mulighetene i porteføljen →</a>
       </article>
       <article class="hp-buyer hp-buyer-light reveal">
-        <p class="hp-for">For kontrakts- og eiendomsforvaltere</p>
         <h3>Også den rare kontrakten.</h3>
         <p>Enkelt i hverdagen, og riktig når kontrakten ikke er standard.</p>
         <ul class="hp-checks">
@@ -851,6 +840,7 @@
           <li>Omsetningsbasert leie</li>
           <li>Utleie-, fremleie- og interne kontrakter</li>
           <li>Kontrakter med spesielle vilkår</li>
+          <li>Skjevfordeling av felleskostnader</li>
           <li>Momsproblematikk: delvis MVA-pliktige lokaler, frivillig registrering og justering</li>
         </ul>
         <a routerLink="/losning-kontrakter" class="hp-link">Se hvordan kontraktene håndteres →</a>
@@ -867,17 +857,12 @@
       <p class="hp-lead">Veiledningen er bygget inn i systemet, og fagfolkene våre sitter både hos oss og ute hos kundene.</p>
     </div>
     <div class="hp-people-grid">
-      <article class="hp-person reveal"><div class="hp-ph"><img src="images/fagfolk-marius-somme.jpg" width="800" height="800" alt="Marius Sømme på scenen under Fenistradagene 2026" loading="lazy"></div><div class="hp-tx"><h3>Marius Sømme</h3><p class="hp-rl">Revisor og fagkonsulent</p><p class="hp-kan">Kan MVA, arealer, justering og regnskap</p></div></article>
-      <article class="hp-person reveal"><div class="hp-ph"><img src="images/fagfolk-kristin-falch.jpg" width="800" height="800" alt="Kristin Falch i samtale under Fenistradagene 2026" loading="lazy"></div><div class="hp-tx"><h3>Kristin Falch</h3><p class="hp-rl">Seniorkonsulent</p><p class="hp-kan">Kan felleskostnader og rapporter</p></div></article>
-      <article class="hp-person reveal"><div class="hp-ph"><img src="images/kundeteam-08.png" width="145" height="149" alt="Rokhsar Zendehbizadeh" loading="lazy"></div><div class="hp-tx"><h3>Rokhsar Zendehbizadeh</h3><p class="hp-rl">Fagkonsulent, byggingeniør og BIM-tekniker</p><p class="hp-kan">Kan tegninger</p></div></article>
-      <article class="hp-person reveal"><div class="hp-ph"><img src="images/fagfolk-espen-klofta.jpg" width="800" height="800" alt="Espen Kløfta under Fenistradagene 2026" loading="lazy"></div><div class="hp-tx"><h3>Espen Kløfta</h3><p class="hp-rl">Technical Account Manager, teknisk konsulent</p><p class="hp-kan">Kan implementering og oppsett</p></div></article>
+      <article class="hp-person reveal"><div class="hp-tx"><h3>Marius Sømme</h3><p class="hp-rl">Revisor og fagkonsulent</p><p class="hp-kan">Kan MVA, arealer, justering og regnskap</p></div></article>
+      <article class="hp-person reveal"><div class="hp-tx"><h3>Kristin Falch</h3><p class="hp-rl">Seniorkonsulent</p><p class="hp-kan">Kan felleskostnader og rapporter</p></div></article>
+      <article class="hp-person reveal"><div class="hp-tx"><h3>Rokhsar Zendehbizadeh</h3><p class="hp-rl">Fagkonsulent, byggingeniør og BIM-tekniker</p><p class="hp-kan">Kan tegninger</p></div></article>
+      <article class="hp-person reveal"><div class="hp-tx"><h3>Espen Kløfta</h3><p class="hp-rl">Technical Account Manager, teknisk konsulent</p><p class="hp-kan">Kan implementering og oppsett</p></div></article>
     </div>
     <div class="hp-csm reveal">
-      <div class="hp-faces">
-        <img src="images/kundeteam-03.png" width="157" height="156" alt="Frida Holte" loading="lazy">
-        <img src="images/kundeteam-04.png" width="145" height="156" alt="Beate Paulsen" loading="lazy">
-        <img src="images/kundeteam-05.png" width="159" height="156" alt="Patrick Eriksen" loading="lazy">
-      </div>
       <p><b>Egen kunderådgiver.</b> Frida, Beate og Patrick følger opp kundene våre fra oppstart og hvert år etter.</p>
       <a routerLink="/ansatte" class="hp-link">Møt hele teamet →</a>
     </div>

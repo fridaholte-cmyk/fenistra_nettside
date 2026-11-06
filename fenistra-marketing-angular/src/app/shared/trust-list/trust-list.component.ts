@@ -7,7 +7,7 @@ import { Component, ElementRef, NgZone, OnDestroy, afterNextRender, computed, in
  * Plays while on screen; clicking a point jumps to it.
  */
 const ITEMS = [
-  { title: 'En del av Visma', text: 'Fenistra er en del av Visma Property Solutions siden 2020.' },
+  { title: 'En del av Visma Group', text: 'Fenistra er en del av Visma Property Solutions siden 2020.' },
   { title: 'ISO 27001-sertifisert', text: 'Informasjonssikkerheten er sertifisert etter ISO 27001.' },
   { title: '26 integrerte systemer', text: 'Blant dem 19 regnskaps- og ERP-systemer.' },
   { title: 'Fagfolk som kan faget', text: 'Fagkonsulenter og kunderådgivere følger dere fra oppstart og videre.' },

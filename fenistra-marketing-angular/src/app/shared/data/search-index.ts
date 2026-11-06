@@ -19,7 +19,7 @@ export const FENISTRA_SEARCH_INDEX: SearchEntry[] = [
   { title: "Om oss", url: "om-oss.html", category: "Side", desc: "Fenistra kan eiendom. Løsninger for norsk næringseiendom siden 1994, en del av Visma Property Solutions siden 2020." },
   { title: "Slik hjelper Fenistra", url: "ki.html", category: "Side", desc: "Fenistra svarer, sier ifra og gjør jobben: KI-assistenten, AI-innlesing av kontrakter og markedsdata fra Arealstatistikk.", keywords: ["ai", "ki", "kunstig intelligens", "felix", "maskinlæring", "chatbot", "ki-assistent", "ai-assistent", "opplasting", "last opp kontrakt"] },
   { title: "Fenistradagene", url: "fenistradagene.html", category: "Side", desc: "Fenistradagene samler alle Fenistra-kunder hvert år i juni for faglig påfyll, nettverksbygging og sosialt samvær." },
-  { title: "Partnere", url: "partnere.html", category: "Side", desc: "Partnere som tar seg av eiendomsforvaltningen i Fenistra for dere.", keywords: ["partner", "forvalter", "forvaltning", "View Procurator", "Aider", "Njord", "Borg", "Estate Management"] },
+  { title: "Samarbeidspartnere", url: "partnere.html", category: "Side", desc: "Samarbeidspartnere som tar seg av eiendomsforvaltningen i Fenistra for dere.", keywords: ["partner", "partnere", "samarbeidspartner", "forvalter", "forvaltning", "View Procurator", "Aider", "Njord", "Borg", "Estate Management"] },
   { title: "Blogg", url: "blogg.html", category: "Side", desc: "Kundehistorier, produktnyheter og innsikt om Fenistra og økonomisk forvaltning av næringseiendom." },
 
   { title: "Kontrakter", url: "losning-kontrakter.html", category: "Løsning", desc: "Effektiv overvåkning og håndtering av utleie-, fremleie- og interne kontrakter, samlet på tvers av hele porteføljen." },

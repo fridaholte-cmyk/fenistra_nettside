@@ -98,7 +98,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["markedsledende", "kompromiss", "velge fenistra", "skiller fenistra", "skiller dere", "andre systemer", "hvorfor fenistra", "hvorfor velge", "konkurrent", "sammenlign", "forskjell på fenistra og", "fordelene med fenistra", "bedre enn", "alternativ til"],
-    answer: "Fenistra kan eiendom. Vi kombinerer erfaring fra norsk næringseiendom siden 1994, markedsdata fra Arealstatistikk integrert i løsningene og AI som bruker kunnskapen. Det merkes på tre måter: Fenistra svarer når dere spør, med forklaring og kilder; sier ifra når noe krever oppmerksomhet, som frister, utløpt sikkerhet eller en leietaker som trenger mer plass; og gjør jobben, fra lead til signering og innflytting, og fra kontrakt til regulering, felleskostnader, MVA og faktura, uten dobbeltregistrering. Fenistra er skybasert, ISO 27001-sertifisert og en del av Visma."
+    answer: "Fenistra kan eiendom. Vi kombinerer erfaring fra norsk næringseiendom siden 1994, markedsdata fra Arealstatistikk integrert i løsningene og AI som bruker kunnskapen. Det merkes på tre måter: Fenistra svarer når dere spør, med forklaring og kilder; sier ifra når noe krever oppmerksomhet, som frister, utløpt sikkerhet eller en leietaker som trenger mer plass; og gjør jobben, fra lead til signering og innflytting, og fra kontrakt til regulering, felleskostnader, MVA og faktura, uten dobbeltregistrering. Fenistra er skybasert, ISO 27001-sertifisert og en del av Visma Group."
   },
   {
     keywords: ["hvilken verdi", "verdi kan fenistra", "verdi for", "mitt selskap", "vårt selskap", "gevinst", "spare tid", "hva tjener vi"],

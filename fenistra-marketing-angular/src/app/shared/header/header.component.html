@@ -4,8 +4,25 @@
       <img src="images/fenistra-logo-mono.png" alt="Fenistra" class="brand-logo">
     </a>
     <ul class="nav-links">
-      <li><a routerLink="/losning-kjopesenter">Kjøpesenter</a></li>
-      <li><a routerLink="/partnere">Partnere</a></li>
+      <li class="nav-item-dropdown" [class.dismissed]="dismissedMenu === 'losninger'" (mouseenter)="menuEnter('losninger')" (mouseleave)="menuLeave('losninger')" (focusin)="menuEnter('losninger')" (focusout)="menuFocusOut('losninger', $event)">
+        <button type="button" class="nav-trigger" id="nav-trigger-losninger" aria-controls="nav-panel-losninger" [attr.aria-expanded]="openMenu === 'losninger'" (click)="menuToggle('losninger')">Løsninger<svg width="10" height="10" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M235.3 411.3c-6.2 6.2-16.4 6.2-22.6 0l-208-208c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L224 377.4 420.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-208 208z"/></svg></button>
+        <div class="nav-panel" id="nav-panel-losninger">
+          <div class="nav-panel-inner nav-panel-mega">
+            <div class="nav-mega-grid">
+            <a routerLink="/losning-kjopesenter" class="nav-mega-item">
+              <div class="nav-mega-text"><h4 role="presentation">Kjøpesenter</h4><p>Omsetning, leietakere og drift for hele senteret.</p></div>
+            </a>
+            <a routerLink="/fakturering-og-avregning" class="nav-mega-item">
+              <div class="nav-mega-text"><h4 role="presentation">Økonomisk forvaltning</h4><p>Fakturering, felleskostnader, regulering og avregning.</p></div>
+            </a>
+            <a routerLink="/fra-lead-til-innflytting" class="nav-mega-item">
+              <div class="nav-mega-text"><h4 role="presentation">Kommersiell forvaltning</h4><p>Fra første henvendelse til signert kontrakt og innflytting.</p></div>
+            </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a routerLink="/partnere">Samarbeidspartnere</a></li>
       <li><a routerLink="/integrasjoner">Integrasjoner</a></li>
       <li><a routerLink="/kunder">Kunder</a></li>
       <li class="nav-item-dropdown" [class.dismissed]="dismissedMenu === 'selskapet'" (mouseenter)="menuEnter('selskapet')" (mouseleave)="menuLeave('selskapet')" (focusin)="menuEnter('selskapet')" (focusout)="menuFocusOut('selskapet', $event)">
@@ -15,7 +32,7 @@
             <div class="nav-mega-grid">
             <a routerLink="/om-oss" class="nav-mega-item">
               <div class="nav-mega-icon"><svg width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 384 512" fill="currentColor"><path d="M64 32C46.3 32 32 46.3 32 64l0 384c0 17.7 14.3 32 32 32l64 0 0-80c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 80 64 0c17.7 0 32-14.3 32-32l0-384c0-17.7-14.3-32-32-32L64 32zm96 448l64 0 0-80c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16l0 80zm-32 32l-64 0c-35.3 0-64-28.7-64-64L0 64C0 28.7 28.7 0 64 0L320 0c35.3 0 64 28.7 64 64l0 384c0 35.3-28.7 64-64 64l-192 0zm96-384c0-8.8 7.2-16 16-16l16 0c8.8 0 16 7.2 16 16l0 16c0 8.8-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16l0-16zm16 96l16 0c8.8 0 16 7.2 16 16l0 16c0 8.8-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16l0-16c0-8.8 7.2-16 16-16zM112 128c0-8.8 7.2-16 16-16l16 0c8.8 0 16 7.2 16 16l0 16c0 8.8-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16l0-16zm16 96l16 0c8.8 0 16 7.2 16 16l0 16c0 8.8-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16l0-16c0-8.8 7.2-16 16-16z"/></svg></div>
-              <div class="nav-mega-text"><h4 role="presentation">Om Fenistra</h4><p>Siden 1994, en del av Visma.</p></div>
+              <div class="nav-mega-text"><h4 role="presentation">Om Fenistra</h4><p>Siden 1994, en del av Visma Group.</p></div>
             </a>
             <a routerLink="/fenistradagene" class="nav-mega-item">
               <div class="nav-mega-icon"><svg width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M112 0c8.8 0 16 7.2 16 16l0 48 192 0 0-48c0-8.8 7.2-16 16-16s16 7.2 16 16l0 48 32 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l32 0 0-48c0-8.8 7.2-16 16-16zM384 96L64 96c-17.7 0-32 14.3-32 32l0 32 384 0 0-32c0-17.7-14.3-32-32-32zm32 96l-96 0 0 64 96 0 0-64zm0 96l-96 0 0 64 96 0 0-64zm0 96l-96 0 0 64 64 0c17.7 0 32-14.3 32-32l0-32zM288 352l0-64-128 0 0 64 128 0zM160 384l0 64 128 0 0-64-128 0zm-32-32l0-64-96 0 0 64 96 0zM32 384l0 32c0 17.7 14.3 32 32 32l64 0 0-64-96 0zm0-128l96 0 0-64-96 0 0 64zm128 0l128 0 0-64-128 0 0 64z"/></svg></div>
@@ -57,8 +74,13 @@
     <img src="images/fenistra-logo-mono.png" alt="Fenistra" class="brand-logo" style="height:24px;">
     <button class="close" id="closeDrawer" aria-label="Lukk meny" (click)="closeMobileDrawer()">✕</button>
   </div>
-  <a routerLink="/losning-kjopesenter" (click)="closeMobileDrawer()">Kjøpesenter</a>
-  <a routerLink="/partnere" (click)="closeMobileDrawer()">Partnere</a>
+  <button type="button" class="m-acc-trigger" [class.open]="openSection === 'losninger'" [attr.aria-expanded]="openSection === 'losninger'" aria-controls="drawerLosninger" (click)="toggleSection('losninger')">Løsninger<svg width="14" height="14" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M235.3 411.3c-6.2 6.2-16.4 6.2-22.6 0l-208-208c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L224 377.4 420.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-208 208z"/></svg></button>
+  <div class="m-acc-panel" id="drawerLosninger" [class.open]="openSection === 'losninger'"><div class="m-acc-inner">
+    <a routerLink="/losning-kjopesenter" (click)="closeMobileDrawer()">Kjøpesenter</a>
+    <a routerLink="/fakturering-og-avregning" (click)="closeMobileDrawer()">Økonomisk forvaltning</a>
+    <a routerLink="/fra-lead-til-innflytting" (click)="closeMobileDrawer()">Kommersiell forvaltning</a>
+  </div></div>
+  <a routerLink="/partnere" (click)="closeMobileDrawer()">Samarbeidspartnere</a>
   <a routerLink="/integrasjoner" (click)="closeMobileDrawer()">Integrasjoner</a>
   <a routerLink="/kunder" (click)="closeMobileDrawer()">Kunder</a>
   <a routerLink="/kontakt-oss" (click)="closeMobileDrawer()">Kontakt oss</a>
