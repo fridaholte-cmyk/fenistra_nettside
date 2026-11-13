@@ -1,0 +1,270 @@
+<style>
+  .vf-hero{padding:clamp(48px,5vw,72px) 0 clamp(32px,3.5vw,48px); color:var(--ink);}
+  .vf-hero h1{font-family:var(--font-display); font-weight:300; font-size:clamp(34px,4vw,54px); line-height:1.06; letter-spacing:-0.03em; max-width:20ch; margin-bottom:22px;}
+  .vf-lead{font-size:clamp(17px,1.3vw,20px); line-height:1.55; color:var(--ink-soft); max-width:62ch;}
+  .vf-toc{margin:28px 0 0; padding:0; list-style:none; counter-reset:vf; columns:2; column-gap:32px; max-width:820px;}
+  .vf-toc li{counter-increment:vf; break-inside:avoid; padding:6px 0; font-size:15px;}
+  .vf-toc li::before{content:counter(vf, decimal-leading-zero); font-family:var(--font-mono); font-size:12px; color:var(--ink-soft); margin-right:10px;}
+  .vf-toc a{color:var(--ink); border-bottom:1px solid var(--line);}
+  .vf-toc a:hover{border-color:var(--ink);}
+  .vf-item{padding:var(--section-y-sm) 0; border-top:1px solid var(--line); scroll-margin-top:76px;}
+  .vf-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.25fr); gap:clamp(32px,5vw,72px);}
+  .vf-num{display:block; font-family:var(--font-mono); font-size:12.5px; color:var(--ink-soft); margin-bottom:12px;}
+  .vf-item h2{font-family:var(--font-display); font-weight:300; font-size:clamp(24px,2.3vw,34px); letter-spacing:-0.02em; line-height:1.12; color:var(--ink); margin-bottom:14px;}
+  .vf-why{font-size:16px; line-height:1.6; color:var(--ink-soft); max-width:46ch;}
+  .vf-k{display:block; font-family:var(--font-mono); font-size:11.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:10px;}
+  .vf-ask{list-style:none; margin:0 0 24px; padding:0;}
+  .vf-ask li{position:relative; padding:9px 0 9px 22px; border-top:1px solid var(--line); font-size:15.5px; line-height:1.5; color:var(--ink);}
+  .vf-ask li:first-child{border-top:none; padding-top:0;}
+  .vf-ask li::before{content:'?'; position:absolute; left:0; top:9px; font-family:var(--font-mono); font-size:13px; color:var(--ink-soft);}
+  .vf-ask li:first-child::before{top:0;}
+  .vf-answer{background:var(--paper-2); border-left:2px solid var(--ink); padding:16px 20px; font-size:15.5px; line-height:1.6; color:var(--ink);}
+  .vf-answer p{margin:0;}
+  .vf-steps{list-style:none; counter-reset:st; margin:14px 0 0; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px;}
+  .vf-steps li{counter-increment:st; background:#fff; border:1px solid var(--line); padding:14px 14px 12px; font-size:14.5px; line-height:1.45;}
+  .vf-steps li::before{content:counter(st); display:block; font-family:var(--font-display); font-weight:300; font-size:28px; line-height:1; margin-bottom:8px; color:var(--ink);}
+  .vf-points{margin:14px 0 0; padding:0; list-style:none;}
+  .vf-points li{position:relative; padding:8px 0 8px 18px; border-top:1px solid var(--line); font-size:15px; line-height:1.5;}
+  .vf-points li::before{content:''; position:absolute; left:0; top:16px; width:6px; height:6px; background:var(--ink);}
+  @media (max-width:560px){ .vf-steps{grid-template-columns:1fr;} }
+  .vf-why-f{padding:var(--section-y-sm) 0; background:var(--paper-2); border-top:1px solid var(--line); scroll-margin-top:76px;}
+  .vf-why-f h2, .vf-intro-criteria h2{font-family:var(--font-display); font-weight:300; font-size:clamp(28px,2.8vw,40px); letter-spacing:-0.02em; line-height:1.1; color:var(--ink); margin-bottom:10px;}
+  .vf-why-lead{font-size:16.5px; color:var(--ink-soft); margin-bottom:32px;}
+  .vf-reasons{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px;}
+  .vf-reason{background:#fff; border:1px solid var(--line); padding:clamp(22px,2.4vw,32px);}
+  .vf-reason.vf-wide{grid-column:span 2;}
+  .vf-reason h3{font-family:var(--font-display); font-weight:300; font-size:clamp(22px,2vw,28px); letter-spacing:-0.015em; line-height:1.15; color:var(--ink); margin-bottom:12px;}
+  .vf-reason > p{font-size:15.5px; line-height:1.6; color:var(--ink-soft); margin:0;}
+  .vf-intro-criteria{padding:var(--section-y-sm) 0 0;}
+  @media (max-width:900px){ .vf-reasons{grid-template-columns:1fr;} .vf-reason.vf-wide{grid-column:auto;} }
+  .vf-updated{margin:18px 0 0; font-family:var(--font-mono); font-size:12px; color:var(--ink-soft);}
+  .vf-facts{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:0; margin:22px 0 0; border:1px solid var(--line); background:#fff;}
+  .vf-facts > div{padding:14px 16px; border-right:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .vf-facts > div:nth-child(4n){border-right:none;}
+  .vf-facts > div:nth-last-child(-n+4){border-bottom:none;}
+  .vf-facts dt{font-family:var(--font-mono); font-size:11px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:4px;}
+  .vf-facts dd{margin:0; font-size:14.5px; line-height:1.4; color:var(--ink);}
+  .vf-proof{padding:var(--section-y-sm) 0; border-top:1px solid var(--line);}
+  .vf-proof h2, .vf-not h2{font-family:var(--font-display); font-weight:300; font-size:clamp(28px,2.8vw,40px); letter-spacing:-0.02em; line-height:1.1; color:var(--ink); margin-bottom:24px;}
+  .vf-quotes{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px;}
+  .vf-quote{margin:0; background:var(--paper-2); border:1px solid var(--line); padding:clamp(22px,2.4vw,32px); display:flex; flex-direction:column;}
+  .vf-quote blockquote{margin:0 0 18px; font-family:var(--font-display); font-weight:300; font-size:clamp(17px,1.4vw,20px); line-height:1.45; color:var(--ink);}
+  .vf-quote figcaption{margin-top:auto; display:flex; flex-direction:column; gap:3px; font-size:14px; color:var(--ink-soft);}
+  .vf-quote figcaption b{color:var(--ink); font-weight:600;}
+  .vf-quote .hp-link{margin-top:10px; align-self:flex-start; font-family:var(--font-mono); font-size:12.5px; color:var(--ink); border-bottom:1px solid currentColor;}
+  .vf-customers{margin:28px 0 0; font-size:15px; line-height:1.7; color:var(--ink);}
+  .vf-customers .vf-k{margin-bottom:6px;}
+  .vf-note{margin:12px 0 0; max-width:720px; font-size:14px; line-height:1.6; color:var(--ink-soft);}
+  .vf-not{padding:var(--section-y-sm) 0; border-top:1px solid var(--line); background:var(--paper-2);}
+  .vf-not-list{display:grid; gap:16px;}
+  .vf-not-list > div{background:#fff; border:1px solid var(--line); padding:20px 22px;}
+  .vf-not-list h3{font-size:17px; font-weight:600; color:var(--ink); margin-bottom:6px;}
+  .vf-not-list p{margin:0; font-size:15px; line-height:1.6; color:var(--ink-soft);}
+  @media (max-width:900px){
+    .vf-facts{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .vf-facts > div:nth-child(4n){border-right:1px solid var(--line);}
+    .vf-facts > div:nth-child(2n){border-right:none;}
+    .vf-facts > div:nth-last-child(-n+4){border-bottom:1px solid var(--line);}
+    .vf-facts > div:nth-last-child(-n+2){border-bottom:none;}
+    .vf-quotes{grid-template-columns:1fr;}
+  }
+  .vf-result{display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; margin:0 0 32px; padding-top:14px; border-top:2px solid var(--ink);}
+  .vf-result b{font-family:var(--font-display); font-weight:300; font-size:clamp(30px,3vw,44px); letter-spacing:-0.03em; line-height:1; color:var(--ink);}
+  .vf-result span{font-size:15.5px; line-height:1.5; color:var(--ink-soft);}
+  .vf-result a{color:var(--ink); border-bottom:1px solid currentColor;}
+  .vf-compare{padding:var(--section-y-sm) 0; border-top:1px solid var(--line); background:var(--paper-2); scroll-margin-top:76px;}
+  .vf-compare h2{font-family:var(--font-display); font-weight:300; font-size:clamp(28px,2.8vw,40px); letter-spacing:-0.02em; line-height:1.1; color:var(--ink); margin-bottom:10px;}
+  .vf-sides{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px;}
+  .vf-side{background:#fff; border:1px solid var(--line); padding:clamp(22px,2.4vw,32px);}
+  .vf-side h3{font-family:var(--font-display); font-weight:300; font-size:clamp(22px,2vw,28px); letter-spacing:-0.015em; line-height:1.15; color:var(--ink); margin-bottom:16px;}
+  .vf-pm{list-style:none; margin:0 0 18px; padding:0;}
+  .vf-pm li{position:relative; padding:7px 0 7px 22px; border-top:1px solid var(--line); font-size:15px; line-height:1.5; color:var(--ink);}
+  .vf-pm li::before{position:absolute; left:0; top:7px; font-family:var(--font-mono); font-size:14px; color:var(--ink-soft);}
+  .vf-plus li::before{content:'+';}
+  .vf-minus li::before{content:'−';}
+  @media (max-width:900px){ .vf-sides{grid-template-columns:1fr;} }
+  .vf-year{padding:var(--section-y-sm) 0; border-top:1px solid var(--line); scroll-margin-top:76px;}
+  .vf-year h2{font-family:var(--font-display); font-weight:300; font-size:clamp(28px,2.8vw,40px); letter-spacing:-0.02em; line-height:1.1; color:var(--ink); margin-bottom:10px;}
+  .vf-year-list{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px;}
+  .vf-year-list > li{background:var(--paper-2); border:1px solid var(--line); padding:clamp(20px,2.2vw,28px);}
+  .vf-year-list h3{font-family:var(--font-display); font-weight:300; font-size:clamp(21px,1.9vw,26px); letter-spacing:-0.015em; line-height:1.15; color:var(--ink); margin-bottom:4px;}
+  .vf-sub{font-family:var(--font-display); font-weight:300; font-size:clamp(22px,2vw,28px); letter-spacing:-0.015em; color:var(--ink); margin:40px 0 16px;}
+  .vf-users{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px;}
+  .vf-users > div{border:1px solid var(--line); padding:18px 20px; background:#fff;}
+  .vf-users h4{font-size:16px; font-weight:600; color:var(--ink); margin-bottom:6px;}
+  .vf-users p{margin:0; font-size:14.5px; line-height:1.55; color:var(--ink-soft);}
+  @media (max-width:900px){ .vf-year-list{grid-template-columns:1fr;} .vf-users{grid-template-columns:1fr;} }
+  .vf-end{padding:var(--section-y-sm) 0 var(--section-y); border-top:1px solid var(--line);}
+  .vf-end p{font-size:16.5px; color:var(--ink-soft); max-width:62ch; margin-bottom:22px;}
+  .vf-end .vf-actions{display:flex; flex-wrap:wrap; gap:14px;}
+  @media (max-width:900px){
+    .vf-grid{grid-template-columns:1fr; gap:20px;}
+    .vf-toc{columns:1;}
+  }
+</style>
+
+<section class="vf-hero">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Brødsmuler" style="padding:0 0 22px;">
+      <a routerLink="/">Forside</a><span class="sep">/</span><span>Velge forvaltningssystem</span>
+    </nav>
+    <h1>Slik velger dere forvaltningssystem for næringseiendom</h1>
+    <p class="vf-lead">Et forvaltningssystem for næringseiendom skal holde orden på kontrakter, leietakere og økonomi i mange år. Her er spørsmålene som skiller systemene fra hverandre, hva dere bør spørre enhver leverandør om, og hvordan Fenistra svarer på hvert av dem. Fenistra kan eiendom: systemet er utviklet for norsk næringseiendom siden 1994 og dekker hele forvaltningen, fra første henvendelse til avregning og årsoppgjør.</p>
+    <p class="vf-updated">Sist oppdatert <time [attr.datetime]="sistOppdatertIso">{{ sistOppdatert }}</time></p>
+    <dl class="vf-facts" aria-label="Fakta om Fenistra">
+      @for (f of fakta; track f.k) {
+        <div><dt>{{ f.k }}</dt><dd>{{ f.v }}</dd></div>
+      }
+    </dl>
+    <p style="margin-top:22px;"><a [routerLink]="[]" fragment="hvorfor-fenistra" class="hp-link" style="font-family:var(--font-mono);font-size:12.5px;color:var(--ink);border-bottom:1px solid currentColor;">Hvorfor velge Fenistra ↓</a> &nbsp; <a [routerLink]="[]" fragment="hele-aret" class="hp-link" style="font-family:var(--font-mono);font-size:12.5px;color:var(--ink);border-bottom:1px solid currentColor;">Hele året i Fenistra ↓</a></p>
+    <ol class="vf-toc" aria-label="Innhold">
+      @for (k of kriterier; track k.id) {
+        <li><a [routerLink]="[]" [fragment]="k.id">{{ k.title }}</a></li>
+      }
+    </ol>
+  </div>
+</section>
+
+<section class="vf-why-f" id="hvorfor-fenistra" aria-labelledby="hvorfor-tittel">
+  <div class="wrap">
+    <h2 id="hvorfor-tittel">Hvorfor velge Fenistra</h2>
+    <p class="vf-why-lead">Seks ting som skiller Fenistra fra et rent økonomisystem.</p>
+    <div class="vf-reasons">
+      @for (g of grunner; track g.title; let i = $index) {
+        <article class="vf-reason" [class.vf-wide]="i === grunner.length - 1 && grunner.length % 2 === 1">
+          <span class="vf-num">{{ (i + 1).toString().padStart(2, '0') }}</span>
+          <h3>{{ g.title }}</h3>
+          <p>{{ g.text }}</p>
+          @if (g.points) {
+            <ul class="vf-points">
+              @for (t of g.points; track t) { <li>{{ t }}</li> }
+            </ul>
+          }
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="vf-year" id="hele-aret" aria-labelledby="aret-tittel">
+  <div class="wrap">
+    <h2 id="aret-tittel">Hele året i Fenistra</h2>
+    <p class="vf-why-lead">Arbeidet en eiendomsforvalter gjør dag for dag og år for år, og hva Fenistra gjør på hvert punkt.</p>
+    <ol class="vf-year-list">
+      @for (a of aaret; track a.title) {
+        <li>
+          <span class="vf-k">{{ a.when }}</span>
+          <h3>{{ a.title }}</h3>
+          <ul class="vf-points">@for (t of a.items; track t) { <li>{{ t }}</li> }</ul>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
+
+<section class="vf-proof" id="kunder-og-resultater" aria-labelledby="bevis-tittel">
+  <div class="wrap">
+    <h2 id="bevis-tittel">Kunder og resultater</h2>
+    <p class="vf-result"><b>50–60 %</b><span>mindre tid på fakturering hos Höegh Eiendom, kunde i over 20 år. <a routerLink="/media-hoegh-eiendom">Les historien</a></span></p>
+    <div class="vf-quotes">
+      @for (q of sitater; track q.who) {
+        <figure class="vf-quote">
+          <blockquote>{{ q.quote }}</blockquote>
+          <figcaption><b>{{ q.who }}</b><span>{{ q.role }}</span><a [routerLink]="q.route" [fragment]="q.fragment" class="hp-link">Les historien →</a></figcaption>
+        </figure>
+      }
+    </div>
+    <h3 class="vf-sub">Hvem bruker Fenistra</h3>
+    <div class="vf-users">
+      @for (b of brukere; track b.title) {
+        <div><h4>{{ b.title }}</h4><p>{{ b.text }}</p></div>
+      }
+    </div>
+    <p class="vf-customers"><span class="vf-k">Blant kundene</span>{{ kunder.join(' · ') }}</p>
+    <p class="vf-note">Aspelin Reitan (tidligere Aspelin Ramm) er selv Fenistra-kunde og forvalter kontraktene og leietakerne sine i Fenistra. Det gjelder Aspelin Reitan som selskap, uavhengig av hvilke systemer andre selskaper i Reitan-konsernet bruker.</p>
+  </div>
+</section>
+
+<section class="vf-compare" id="fakturering-hvor" aria-labelledby="fakt-tittel">
+  <div class="wrap">
+    <h2 id="fakt-tittel">Fakturere i forvaltningssystemet eller i regnskapssystemet?</h2>
+    <p class="vf-why-lead">Det er et av de viktigste skillene mellom systemene. Begge måter fungerer, men de passer for ulike porteføljer.</p>
+    <div class="vf-sides">
+      @for (f of fakturering; track f.title) {
+        <article class="vf-side">
+          <h3>{{ f.title }}</h3>
+          <span class="vf-k">Fordeler</span>
+          <ul class="vf-pm vf-plus">@for (t of f.plus; track t) { <li>{{ t }}</li> }</ul>
+          <span class="vf-k">Ulemper</span>
+          <ul class="vf-pm vf-minus">@for (t of f.minus; track t) { <li>{{ t }}</li> }</ul>
+        </article>
+      }
+    </div>
+    <div class="vf-answer" style="margin-top:20px;"><p><b>Slik gjør Fenistra det:</b> {{ faktureringFenistra }}</p></div>
+  </div>
+</section>
+
+<section class="vf-intro-criteria">
+  <div class="wrap">
+    <h2>Spørsmålene som skiller systemene</h2>
+  </div>
+</section>
+
+@for (k of kriterier; track k.id; let i = $index) {
+  <section class="vf-item" [id]="k.id" [attr.aria-labelledby]="k.id + '-tittel'">
+    <div class="wrap vf-grid">
+      <div>
+        <span class="vf-num">{{ (i + 1).toString().padStart(2, '0') }}</span>
+        <h2 [id]="k.id + '-tittel'">{{ k.title }}</h2>
+        <p class="vf-why">{{ k.why }}</p>
+      </div>
+      <div>
+        <span class="vf-k">Spør leverandøren</span>
+        <ul class="vf-ask">
+          @for (q of k.ask; track q) { <li>{{ q }}</li> }
+        </ul>
+        <span class="vf-k">Slik gjør Fenistra det</span>
+        <div class="vf-answer">
+          <p>{{ k.fenistra }}</p>
+          @if (k.steps) {
+            <ol class="vf-steps">
+              @for (t of k.steps; track t) { <li>{{ t }}</li> }
+            </ol>
+          }
+          @if (k.points) {
+            <ul class="vf-points">
+              @for (t of k.points; track t) { <li>{{ t }}</li> }
+            </ul>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+}
+
+<section class="vf-not" id="hva-fenistra-ikke-er" aria-labelledby="ikke-tittel">
+  <div class="wrap vf-grid">
+    <div>
+      <h2 id="ikke-tittel">Hva Fenistra ikke er, og når det passer mindre godt</h2>
+      <p class="vf-why">Fenistra er forvaltningssystemet for næringseiendom. Det kobles til systemene dere allerede bruker for regnskap og drift. Noen ganger passer en annen type system bedre.</p>
+    </div>
+    <div class="vf-not-list">
+      @for (x of ikkeEr; track x.title) {
+        <div><h3>{{ x.title }}</h3><p>{{ x.text }}</p></div>
+      }
+      @for (x of passerMindre; track x.title) {
+        <div><h3>{{ x.title }}</h3><p>{{ x.text }}</p></div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="vf-end">
+  <div class="wrap">
+    <p>Vil dere se hvordan Fenistra svarer på disse spørsmålene for deres portefølje? Book et møte, så går vi gjennom det med utgangspunkt i deres kontrakter og prosesser.</p>
+    <div class="vf-actions">
+      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
+      <a routerLink="/alt-i-fenistra" class="btn btn-light">Se alt som er bygget inn</a>
+    </div>
+  </div>
+</section>

@@ -1,3 +1,4 @@
+import type { ConceptKind } from '../../shared/concept-card/concept-card.component';
 // Innhold for landingssidene per «jobb» under Løsninger. Malen ligger i jobbside.component.
 // Ikonene er Font Awesome Classic Light, innebygd som SVG (samme som resten av nettstedet).
 
@@ -26,7 +27,8 @@ export interface Jobbside {
   why: string;
   /** small print under the why text, e.g. where the work is done */
   whyNote?: string;
-  image: { src: string; w: number; h: number; alt: string } | null;
+  /** konseptuell illustrasjon i stedet for skjermbilde */
+  concept: ConceptKind | null;
   modules: JobbModul[];
 }
 
@@ -43,12 +45,7 @@ const SIDER: Jobbside[] = [
     "whyEyebrow": "For ledelsen",
     "whyTitle": "Risiko dere ser i tide, er risiko dere kan styre",
     "why": "Utløpte garantier, glemte reguleringer og frister som passerer, fanges opp før de koster penger. Ledelsen ser hvilke kontrakter som trenger oppfølging, og hvilke muligheter som åpner seg, på tvers av hele porteføljen.",
-    "image": {
-      "src": "images/kontrakter-oversikt.webp",
-      "w": 1200,
-      "h": 977,
-      "alt": "Kontraktsoversikten i Fenistra: søkbar liste over alle kontrakter med leietaker, selskap, eiendom og startdato, med summerte nøkkeltall øverst."
-    },
+    "concept": "kontrakter",
     "modules": [
       {
         "route": "/losning-kontrakter",
@@ -93,12 +90,7 @@ const SIDER: Jobbside[] = [
     "whyEyebrow": "For ledelsen",
     "whyTitle": "Hver krone kan spores tilbake til kontrakten",
     "why": "Når systemet beregner leie, regulering og avregning, blir faktureringen forutsigbar for dere og leietakerne, og enkel å forklare for revisor. Fakturaene overføres til regnskapet, så tallene stemmer begge steder.",
-    "image": {
-      "src": "images/felleskost-skjevfordeling.webp",
-      "w": 1200,
-      "h": 977,
-      "alt": "Skjevfordeling i Fenistra Felleskost: tabell der kostnadskontoer ligger som kolonner og leietakere som rader, med faste beløp per celle."
-    },
+    "concept": "felleskost",
     "flow": {
       "id": "steg-for-steg",
       "title": "Fra SSB-indeks til riktig faktura",
@@ -149,7 +141,7 @@ const SIDER: Jobbside[] = [
     "whyEyebrow": "For økonomiledelsen",
     "whyTitle": "Feil som oppdages sent, er de dyreste",
     "why": "MVA og justering er der feil kan koste lenge etter at de ble gjort. Når systemet følger opp hele perioden og dokumenterer underveis, står dere trygt når regnskapsfører, revisor eller Skatteetaten spør.",
-    "image": null,
+    "concept": null,
     "modules": [
       {
         "route": "/losning-mva-erklaring",
@@ -183,12 +175,7 @@ const SIDER: Jobbside[] = [
     "whyEyebrow": "For ledelsen",
     "whyTitle": "Samme tall i ledermøtet som i regnskapet",
     "why": "Når rapportene bygger på de samme dataene som faktureringen og regnskapet, slipper dere å avstemme flere versjoner av tallene. Med markedsleien ved siden av ser ledelsen og styret både hvordan porteføljen går, og hvor mulighetene ligger.",
-    "image": {
-      "src": "images/rapportering-leietakerliste.webp",
-      "w": 1200,
-      "h": 977,
-      "alt": "Rapportmodulen i Fenistra: leietakerliste med filtre for selskap, portefølje og eiendom, søylediagram over månedlig leieomsetning og en detaljert tabell med areal, arealleie, felleskost og årsbeløp per eiendom."
-    },
+    "concept": "rapport",
     "modules": [
       {
         "route": "/losning-rapportering",
@@ -270,7 +257,7 @@ const LEAD_TIL_INNFLYTTING: Jobbside = {
   whyTitle: 'Kortere vei fra ledig lokale til ny leietaker',
   why: 'Når behov, lokaler, markedsleie og kontrakt henger sammen, bruker teamet tiden på leietakerne i stedet for på overleveringer. Ledelsen ser hvilke muligheter som er i løp, og hva de betyr for inntektene.',
   whyNote: 'Utleiearbeidet henger sammen med resten av Fenistra, så kontrakten går rett over til forvaltning og fakturering når den er signert.',
-  image: null,
+  concept: null,
   modules: ['/losning-kontrakter', '/losning-digital-signering', '/losning-protokoller', '/losning-dokument', '/losning-arealberegning'].map(modul),
 };
 

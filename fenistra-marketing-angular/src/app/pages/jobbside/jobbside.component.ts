@@ -1,3 +1,4 @@
+import { ConceptCardComponent } from '../../shared/concept-card/concept-card.component';
 import { ProofCtaComponent } from '../../shared/proof-cta/proof-cta.component';
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -8,7 +9,7 @@ import { JOBBSIDER, Jobbside } from './jobbsider';
 @Component({
   selector: 'app-jobbside',
   standalone: true,
-  imports: [RouterLink, ProofCtaComponent],
+  imports: [RouterLink, ProofCtaComponent, ConceptCardComponent],
   templateUrl: './jobbside.component.html',
   styleUrl: './jobbside.component.scss'
 })

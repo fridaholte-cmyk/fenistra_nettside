@@ -325,7 +325,7 @@
   .kj-report-box h2{font-size:19px; font-weight:600; letter-spacing:-0.01em; margin-bottom:4px;}
   .kj-report-box p{color:var(--ink-soft); font-size:15.5px; max-width:62ch;}
   .kj-report-box p a{color:var(--ink); font-weight:600; text-decoration:underline; text-underline-offset:3px;}
-  .kj-roles{padding:88px 0;}
+  .kj-roles{padding:var(--section-y-sm) 0;}
   .kj-roles-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px;}
   .kj-role{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:32px 28px;}
   .kj-role-for{font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); margin-bottom:14px;}
@@ -338,8 +338,14 @@
   .kj-logo-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid var(--line); border-left:1px solid var(--line);}
   .kj-logo-grid li{display:flex; align-items:center; justify-content:center; height:120px; padding:16px; border-right:1px solid var(--line); border-bottom:1px solid var(--line);}
   .kj-logo-grid img{width:auto; max-width:80%; object-fit:contain;}
-  .kj-logo-name{font-weight:500; font-size:16px; color:var(--plum);}
-  @media (max-width:900px){ .kj-roles-grid{grid-template-columns:1fr;} .kj-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr));} }
+  .kj-dark{filter:brightness(0);}
+  .kj-big{display:grid; grid-template-columns:1fr 1fr; gap:20px; list-style:none; margin:0 0 48px; padding:0;}
+  .kj-big li{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; height:220px; background:#fff; border:1px solid var(--line); border-radius:var(--radius);}
+  .kj-big img{width:auto; max-width:70%; object-fit:contain;}
+  .kj-big span{font-family:var(--font-mono); font-size:12px; color:var(--ink-soft);}
+  .kj-sub{font-family:var(--font-mono); font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:14px;}
+  @media (max-width:900px){ .kj-roles-grid{grid-template-columns:1fr;} .kj-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr));} .kj-big li{height:160px;} }
+  @media (max-width:560px){ .kj-big{grid-template-columns:1fr;} }
 </style>
 <div class="wrap">
   <div class="breadcrumb">
@@ -366,9 +372,9 @@
     <div class="kj-report-box">
       <div>
         <h2 id="kj-report-title">Skal du rapportere omsetning?</h2>
-        <p>Er du medlem av Norsk Retail Hub og skal rapportere omsetning, logg deg inn <a href="http://Fenistra.net">her</a>.</p>
+        <p>Er du medlem av Norsk Retail Hub og skal rapportere omsetning, logg deg inn <a href="https://www.fenistra.net">her</a>.</p>
       </div>
-      <a href="http://Fenistra.net" class="btn btn-ghost">Logg inn i Fenistra.net →</a>
+      <a href="https://www.fenistra.net" class="btn btn-ghost">Logg inn i Fenistra.net →</a>
     </div>
   </div>
 </section>
@@ -422,16 +428,25 @@
   </div>
 </section>
 
-<!-- Logovegg for kjøpesenterkunder: legg til flere i listen etter hvert som logoene er klare -->
+<!-- Kjøpesenterkunder: de store eierne først, så kjente sentre -->
 <section class="kj-logos" aria-labelledby="kj-logos-title">
   <div class="wrap">
     <div class="section-head reveal">
       <h2 id="kj-logos-title">Sentre som driftes med Fenistra</h2>
+      <p>Store kjøpesenteraktører som Scala Eiendom og Alti følger omsetning, leietakere og drift i Fenistra.</p>
     </div>
-    <ul class="kj-logo-grid reveal">
-      <li><img src="images/kunder/alti.svg" alt="Alti" style="height:45px" loading="lazy"></li>
+    <ul class="kj-big reveal" aria-label="Store kjøpesenterkunder">
+      <li><img src="images/kunder/scala-eiendom.svg" alt="Scala Eiendom" style="height:52px" loading="lazy"><span>Scala Eiendom</span></li>
+      <li><img src="images/kunder/alti.svg" alt="Alti" style="height:72px" loading="lazy"><span>Alti</span></li>
+    </ul>
+    <p class="kj-sub reveal">Blant sentrene</p>
+    <ul class="kj-logo-grid reveal" aria-label="Kjente sentre">
       <li><img src="images/kunder/lagunen.png" alt="Lagunen" style="height:40px" loading="lazy"></li>
-      <li><span class="kj-logo-name">CC Gjøvik</span></li>
+      <li><img src="images/kunder/cc-vest-white.svg" alt="CC Vest" class="kj-dark" style="height:26px" loading="lazy"></li>
+      <li><img src="images/kunder/promenaden.svg" alt="Promenaden" style="height:18px" loading="lazy"></li>
+      <li><img src="images/kunder/cc-gjovik.webp" alt="CC Gjøvik" style="height:40px" loading="lazy"></li>
+      <li><img src="images/kunder/cc-strandtorget.svg" alt="CC Strandtorget" style="height:54px" loading="lazy"></li>
+      <li><img src="images/kunder/bryn-senter.png" alt="Bryn Senter" style="height:50px" loading="lazy"></li>
     </ul>
   </div>
 </section>
@@ -458,13 +473,11 @@
 <p>Fenistra automatiserer rutineoppgavene og gir senterledere verktøyene de trenger for å lykkes: detaljerte rapporter viser omsetningsendringer år for år, grafer for omsetningsutvikling, antall kunder som gjør kjøp og besøkstall, samt analyse av hvilken effekt aktiviteter har på omsetningen. Bransjespesifikke analyser hjelper deg med å finne trender og utviklingstrekk, og både uke- og månedsrapporter er nedlastbare som PDF, klare til deling.</p>
         </div>
         <figure class="module-shot">
-          <img src="images/kjopesenter-senterdashbord.webp" width="1200" height="977" loading="lazy" decoding="async"
-               alt="Senterdashbordet i Fenistra: ukentlige nøkkeltall for besøkende, handlende og omsetning, søylediagram over omsetning per dag sammenlignet med fjoråret, omsetning per bransje og ukens aktiviteter.">
+          <app-concept-card kind="senter"></app-concept-card>
           <figcaption>Senterdashbordet samler ukens besøks- og omsetningstall, utvikling mot fjoråret, omsetning per bransje og aktiviteter i én oversikt.</figcaption>
         </figure>
         <figure class="module-shot">
-          <img src="images/kjopesenter-ukesrapport.png" width="1200" height="977" loading="lazy" decoding="async"
-               alt="Ukesrapport for kjøpesenter i Fenistra: omsetning og besøkende med endring mot fjoråret, etasjefordeling og en tabell med omsetning, avvik, handlende og omsetning per kvm gruppert per bransje og butikk.">
+          <app-concept-card kind="ukesrapport"></app-concept-card>
           <figcaption>Ukesrapporten viser omsetning og besøk mot fjoråret, og kan grupperes per bransje, etasje eller tilhørighet, helt ned på hver enkelt butikk.</figcaption>
         </figure>
 

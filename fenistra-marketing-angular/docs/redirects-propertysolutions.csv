@@ -20,18 +20,18 @@ https://propertysolutions.no/fenistra-standard;https://www.fenistra.no/pakke-res
 https://propertysolutions.no/fenistra-tilleggsprodukter;https://www.fenistra.no/losninger;KLAR;
 https://propertysolutions.no/fenistra-transaksjoner;https://www.fenistra.no/losninger;KLAR;
 https://propertysolutions.no/forvaltningssystem;https://www.fenistra.no/;KLAR;
-https://propertysolutions.no/forvaltningssystem/areal;https://www.fenistra.no/losning-arealberegning;KLAR;
+https://propertysolutions.no/forvaltningssystem/areal;https://www.fenistra.no/kontroll-pa-portefoljen;KLAR;
 https://propertysolutions.no/forvaltningssystem/erp/fenistra/business-nxt/;https://www.fenistra.no/integrasjoner#regnskap;KLAR;
-https://propertysolutions.no/forvaltningssystem/felleskostnader;https://www.fenistra.no/losning-felleskostnader;KLAR;
-https://propertysolutions.no/forvaltningssystem/justeringsforpliktelse;https://www.fenistra.no/losning-justering;KLAR;
-https://propertysolutions.no/forvaltningssystem/kontraktforvaltning;https://www.fenistra.no/losning-kontrakter;KLAR;
-https://propertysolutions.no/forvaltningssystem/mva-erklaering;https://www.fenistra.no/losning-mva-erklaring;KLAR;
-https://propertysolutions.no/forvaltningssystem/omsetningsavregning;https://www.fenistra.no/losning-omsetningsavregning;KLAR;
-https://propertysolutions.no/forvaltningssystem/omsetningsleie;https://www.fenistra.no/losning-omsetningsavregning;KLAR;
+https://propertysolutions.no/forvaltningssystem/felleskostnader;https://www.fenistra.no/fakturering-og-avregning;KLAR;
+https://propertysolutions.no/forvaltningssystem/justeringsforpliktelse;https://www.fenistra.no/mva-og-regelverk;KLAR;
+https://propertysolutions.no/forvaltningssystem/kontraktforvaltning;https://www.fenistra.no/kontroll-pa-portefoljen;KLAR;
+https://propertysolutions.no/forvaltningssystem/mva-erklaering;https://www.fenistra.no/mva-og-regelverk;KLAR;
+https://propertysolutions.no/forvaltningssystem/omsetningsavregning;https://www.fenistra.no/fakturering-og-avregning;KLAR;
+https://propertysolutions.no/forvaltningssystem/omsetningsleie;https://www.fenistra.no/fakturering-og-avregning;KLAR;
 https://propertysolutions.no/forvaltningssystem/priser;https://www.fenistra.no/pakke-resultat;KLAR;
 https://propertysolutions.no/forvaltningssystem/priser-0;https://www.fenistra.no/pakke-resultat;KLAR;
-https://propertysolutions.no/forvaltningssystem/rapporter;https://www.fenistra.no/losning-rapportering;KLAR;
-https://propertysolutions.no/forvaltningssystem/revisorsbekreftet-omsetning;https://www.fenistra.no/losning-rbo;KLAR;
+https://propertysolutions.no/forvaltningssystem/rapporter;https://www.fenistra.no/rapport-og-analyse;KLAR;
+https://propertysolutions.no/forvaltningssystem/revisorsbekreftet-omsetning;https://www.fenistra.no/fakturering-og-avregning;KLAR;
 https://propertysolutions.no/integrasjoner-api;https://www.fenistra.no/integrasjoner;KLAR;
 https://propertysolutions.no/kontaktoss/salg;https://www.fenistra.no/kontakt-oss;KLAR;
 https://propertysolutions.no/aapenhetsloven;;AVKLAR;Ikke Fenistra-spesifikk (VPS/andre produkter/segmentside) – bestem om den skal bli eller flyttes
@@ -64,7 +64,7 @@ https://propertysolutions.no/personvernerklaering;;AVKLAR;Ikke Fenistra-spesifik
 https://propertysolutions.no/portefoljeinnsikt;;AVKLAR;Ikke Fenistra-spesifikk (VPS/andre produkter/segmentside) – bestem om den skal bli eller flyttes
 https://propertysolutions.no/produktinnspill;;AVKLAR;Footer-lenken «Produktinnspill» peker nå til HubSpot-skjemaet (share-eu1.hsforms.com/1LSfbG_8vT26C8X3y6yZRow2b231t) – kan videresendes dit
 https://propertysolutions.no/raadgivende-ingeniorer;;AVKLAR;Ikke Fenistra-spesifikk (VPS/andre produkter/segmentside) – bestem om den skal bli eller flyttes
-https://propertysolutions.no/support;https://www.fenistra.no/kundeteam;AVKLAR;Gjelder support for alle VPS-produkter? – bekreft
+https://propertysolutions.no/support;https://www.fenistra.no/ansatte#kundeteam;AVKLAR;Gjelder support for alle VPS-produkter? – bekreft
 https://propertysolutions.no;;BEHOLD;VPS-forside – avhenger av om propertysolutions.no legges ned
 https://propertysolutions.no/arealstatistikk;;BEHOLD;Ikke Fenistra-markedsinnhold (kunnskapsbase/andre produkter/innlogging) – blir på propertysolutions.no
 https://propertysolutions.no/arealstatistikk-rapporter;;BEHOLD;Ikke Fenistra-markedsinnhold (kunnskapsbase/andre produkter/innlogging) – blir på propertysolutions.no

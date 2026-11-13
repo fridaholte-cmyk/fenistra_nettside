@@ -1,4 +1,5 @@
 <style>
+  .int-anchor{display:block; scroll-margin-top:96px;}
 
   :root{
     --paper:      #F8FAFC;
@@ -435,6 +436,8 @@
 
 <section class="int-cat" id="systemer" aria-labelledby="int-systems-title">
   <div class="wrap">
+    <!-- old category anchors (#regnskap etc.) from articles and redirects land on the shared list -->
+    @for (k of ['regnskap', 'arsoppgjor', 'rapportering', 'drift', 'kjopesenter']; track k) { <span [id]="k" class="int-anchor"></span> }
     <h2 id="int-systems-title" class="sr-only">Integrerte systemer</h2>
     <ul class="erp-grid">
       @for (s of systems; track s.name) {

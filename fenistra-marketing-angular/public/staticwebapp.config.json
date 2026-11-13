@@ -49,7 +49,7 @@
     },
     {
       "route": "/losning-regnskap",
-      "redirect": "/integrasjon-regnskap-erp",
+      "redirect": "/integrasjoner#regnskap",
       "statusCode": 301
     },
     {

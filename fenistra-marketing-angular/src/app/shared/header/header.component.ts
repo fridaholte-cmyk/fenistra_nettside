@@ -117,12 +117,4 @@ export class HeaderComponent {
     this.closeMobileDrawer();
     this.closeSearch();
   }
-
-  @HostListener('document:keydown', ['$event'])
-  onKeydown(e: KeyboardEvent) {
-    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
-      e.preventDefault();
-      this.openSearch();
-    }
-  }
 }

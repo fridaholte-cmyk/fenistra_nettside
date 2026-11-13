@@ -1,33 +1,67 @@
 <style>
   .pt-hero{padding:72px 0 56px; color:var(--ink);}
-  .pt-hero h1{font-family:var(--font-display); font-weight:400; font-size:clamp(40px,5vw,64px); line-height:1.05; letter-spacing:-0.03em; max-width:16ch; margin-bottom:24px;}
+  .pt-hero h1{font-family:var(--font-display); font-weight:400; font-size:clamp(36px,4.2vw,58px); line-height:1.05; letter-spacing:-0.03em; max-width:16ch; margin-bottom:24px;}
   .pt-lead{font-size:clamp(18px,1.6vw,21px); line-height:1.55; color:var(--ink-soft); max-width:58ch;}
   .pt-list-section{padding:0 0 88px;}
   .pt-list-title{font-size:15px; font-weight:600; letter-spacing:.02em; color:var(--ink-soft); margin-bottom:16px;}
-  .pt-list{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); list-style:none; margin:0; padding:0; border-top:1px solid var(--line); border-left:1px solid var(--line);}
-  .pt-list li{display:flex; align-items:center; justify-content:center; min-height:120px; padding:20px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); font-family:var(--font-display); font-weight:500; font-size:18px; letter-spacing:-0.01em; color:var(--ink); text-align:center;}
+  .pt-list-title-2{margin-top:48px;}
+  .pt-list{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; list-style:none; margin:0; padding:0;}
+  .pt-card{display:flex; flex-direction:column; height:100%; background:#fff; border:1px solid var(--line); border-radius:var(--radius, 14px); overflow:hidden; transition:border-color .2s ease, transform .2s ease;}
+  .pt-card:hover{border-color:var(--berry-mid); transform:translateY(-2px);}
+  .pt-logo{display:flex; align-items:center; justify-content:center; gap:12px; height:132px; padding:20px; border-bottom:1px solid var(--line);}
+  .pt-logo img{width:auto; max-width:80%; object-fit:contain;}
+  .pt-list-5{grid-template-columns:repeat(5,minmax(0,1fr));}
+  .pt-white{filter:brightness(0);}
+  .pt-wordmark{font-weight:600; font-size:17px; color:var(--ink);}
+  .pt-meta{padding:16px 20px 18px;}
+  .pt-meta b{display:block; font-size:15.5px; font-weight:600; color:var(--ink);}
+  .pt-meta span{display:block; margin-top:4px; font-size:13.5px; line-height:1.5; color:var(--ink-soft);}
   .pt-why{padding:0 0 88px;}
   .pt-why-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px;}
   .pt-why-grid article{background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius, 14px); padding:28px;}
   .pt-why-grid h3{font-size:19px; letter-spacing:-0.01em; margin-bottom:10px; color:var(--ink);}
   .pt-why-grid p{color:var(--ink-soft); font-size:15.5px; line-height:1.55;}
   .pt-h2{font-family:var(--font-display); font-weight:400; font-size:clamp(26px,2.6vw,36px); letter-spacing:-0.02em; color:var(--ink); margin-bottom:28px;}
-  @media (max-width:900px){ .pt-why-grid{grid-template-columns:1fr;} .pt-hero{padding:48px 0 40px;} }
+  @media (max-width:1080px){ .pt-list, .pt-list-5{grid-template-columns:repeat(3,minmax(0,1fr));} }
+  @media (max-width:900px){ .pt-list, .pt-list-5{grid-template-columns:repeat(2,minmax(0,1fr));} .pt-why-grid{grid-template-columns:1fr;} .pt-hero{padding:48px 0 40px;} }
+  @media (max-width:560px){ .pt-list, .pt-list-5{grid-template-columns:1fr;} }
 </style>
 
 <section class="pt-hero">
   <div class="wrap">
     <h1>Samarbeidspartnere som kan forvaltning</h1>
-    <p class="pt-lead">Hvis man ikke sitter på kunnskap om eiendomsforvaltning kan det være lurt å bruke en av våre samarbeidspartnere. De kjenner Fenistra godt, og kan ta seg av forvaltningen for dere. Se listen her:</p>
+    <p class="pt-lead">Vi har både nasjonale og regionale samarbeidspartnere med solid kompetanse på eiendomsforvaltning og regnskapsførsel. De kjenner Fenistra godt, og kan ta seg av forvaltningen og regnskapet for dere.</p>
   </div>
 </section>
 
-<section class="pt-list-section" aria-labelledby="pt-list-title">
+<section class="pt-list-section" aria-labelledby="pt-nat-title">
   <div class="wrap">
-    <h2 id="pt-list-title" class="pt-list-title">Våre samarbeidspartnere</h2>
+    <h2 id="pt-nat-title" class="pt-list-title">Nasjonale partnere</h2>
     <ul class="pt-list">
-      @for (p of partners; track p) {
-        <li>{{ p }}</li>
+      @for (p of national; track p.name) {
+        <li>
+          <a class="pt-card" [href]="p.url" target="_blank" rel="noopener" [attr.aria-label]="p.name + ' (åpner nettsiden deres)'">
+            <span class="pt-logo">
+              <img [src]="p.logo" [alt]="p.name" [style.height.px]="p.h" [class.pt-white]="p.white" loading="lazy">
+              @if (p.withName) { <span class="pt-wordmark">{{ p.name }}</span> }
+            </span>
+            <span class="pt-meta"><b>{{ p.name }}</b><span>{{ p.does }} · {{ p.area }}</span></span>
+          </a>
+        </li>
+      }
+    </ul>
+    <h2 id="pt-reg-title" class="pt-list-title pt-list-title-2">Regionale partnere</h2>
+    <ul class="pt-list pt-list-5">
+      @for (p of regional; track p.name) {
+        <li>
+          <a class="pt-card" [href]="p.url" target="_blank" rel="noopener" [attr.aria-label]="p.name + ' (åpner nettsiden deres)'">
+            <span class="pt-logo">
+              <img [src]="p.logo" [alt]="p.name" [style.height.px]="p.h" [class.pt-white]="p.white" loading="lazy">
+              @if (p.withName) { <span class="pt-wordmark">{{ p.name }}</span> }
+            </span>
+            <span class="pt-meta"><b>{{ p.name }}</b><span>{{ p.does }} · {{ p.area }}</span></span>
+          </a>
+        </li>
       }
     </ul>
   </div>

@@ -1,10 +1,11 @@
+import { ConceptCardComponent } from '../../shared/concept-card/concept-card.component';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-losning-fakturering',
   standalone: true,
-  imports: [RouterLink],
+  imports: [ConceptCardComponent, RouterLink],
   templateUrl: './losning-fakturering.component.html',
   encapsulation: ViewEncapsulation.None
 })

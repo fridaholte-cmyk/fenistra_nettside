@@ -2,7 +2,7 @@
 
 > Fenistra kan eiendom. Fenistra leverer programvare for norsk næringseiendom og kombinerer fagkunnskap (løsninger utviklet siden 1994), markedsdata fra Arealstatistikk integrert i løsningene og AI som gjør kunnskapen anvendelig. Fenistra svarer når kunden spør, sier ifra når noe krever oppmerksomhet, og gjør jobben i arbeidsprosessene, og brukes av over 170 eiendomsforvaltere i Norge. Levert av Visma Property Solutions AS (del av Visma-konsernet).
 
-Utviklingen av Fenistra startet i 1994, og Fenistra har vært en del av Visma siden 2020. Nye kunder bruker den skybaserte plattformen Fenistra.net, som alltid er oppdatert. Fenistra er bygget for eiendomsselskaper med store og mellomstore porteføljer: flere selskaper, mange kontraktstyper og ekte kompleksitet. Systemet selges i to pakker, Fenistra Standard og Fenistra Premium, og prises etter porteføljens leieomsetning med ubegrenset antall brukere. Konkret pris gis i et tilbud tilpasset porteføljen.
+Utviklingen av Fenistra startet i 1994, og Fenistra har vært en del av Visma siden 2020. Nye kunder får Fenistra som skytjeneste, som oppdateres fortløpende. Fenistra er bygget for eiendomsselskaper med store og mellomstore porteføljer: flere selskaper, mange kontraktstyper og ekte kompleksitet. Fenistra passer også mindre porteføljer: systemet tilpasses kunden, ikke omvendt, og etter over 30 år er de fleste varianter av kontraktsvilkår, også uvanlige, løst i systemet. Oppstarten skjer i tre steg (AI leser inn kontraktene, Fenistra kobles til regnskapet, og kunden fakturerer), uten betalte konsulenttimer og uten skjulte kostnader. Kontakt Fenistra for pris.
 
 ## Hvorfor Fenistra
 
@@ -11,6 +11,61 @@ Utviklingen av Fenistra startet i 1994, og Fenistra har vært en del av Visma si
 - **Svarer («Bare spør»):** Kunden kan spørre, for eksempel «Hvilke kontrakter utløper i 2027?», og får et svar med forklaring og kilder. Når markedsleie er relevant, brukes Arealstatistikk for riktig sone og leietype.
 - **Sier ifra:** Fenistra varsler før frister, utløp og manglende sikkerhet, og fanger opp muligheter, som en leietaker som trenger mer plass og et ledig lokale som passer.
 - **Gjør jobben:** Prosesser fra A til Å med kundens kontroll og godkjenning, uten dobbeltregistrering. Eksempler: fra lead til signering og innflytting, og fra kontrakt til regulering, felleskostnader, MVA og faktura.
+
+### Hva som skiller Fenistra
+
+- **Fakturering i Fenistra:** fakturaene lages og sendes fra Fenistra, og bokføringen overføres til regnskapet. Faktureringen skjer der kontrakten ligger, ikke i regnskapssystemet.
+- **Både økonomisk og kommersiell forvaltning:** i tillegg til fakturering, regulering, felleskostnader, omsetningsleie og MVA har Fenistra innebygd CRM koblet til kontraktene, oppfølging av leads og leietakere, kontraktsutkast, digital signering og protokoller, fra første henvendelse til innflytting.
+- **Data, analyser og rapporter:** rapporter rett fra kildedataene, skreddersydd etter kundens behov, også med AI, og analyser og prognoser for inntekter og kostnader.
+- **Markedsdata fra Arealstatistikk integrert:** hver kontrakt kan sammenlignes med snittleie og markedsleie for riktig sone og leietype, så kunden ser om det er mer å hente før en reforhandling.
+- **Tegninger koblet til arealene:** tekniske tegninger og 3D-tegninger koblet til kontrakt og leietaker, arealberegning med kobling mot AutoCAD og simulering av endringer i omriss.
+- **AI-agenter i bakgrunnen:** spørsmål til egne data med kilder, porteføljeoversikt, sammenstilling, analyser og prognoser, kontroll av at dataene er riktige, og varsel før frister.
+
+### Hele året i Fenistra
+
+- Hver dag: kontrakter, leietakere, dokumenter og tegninger samlet; varsel før utløp og frister, og når bankgaranti eller depositum mangler, er for lav eller utløper; KI-assistent og AI-agenter som kontrollerer dataene.
+- Når en leietaker kommer: leads i CRM, leie vurdert mot markedsleie fra Arealstatistikk, kontraktsutkast fra maler, digital signering, protokoll ved overtakelse, MVA-erklæring, og faktureringen starter.
+- Hver måned og hvert kvartal: fast leie, akonto for felleskostnader og omsetningsbasert leie faktureres og sendes fra Fenistra; bokføringen overføres til regnskapet.
+- Ved regulering: KPI fra SSB, ny leie etter hver kontrakt, automatiske reguleringsbrev.
+- Etter årsskiftet: revisorbekreftet omsetning hentes inn med standarddokumenter og purringer; omsetningsavregning (også midlertidige avregninger); felleskostnadsavregning med MVA; energikostnader fordelt etter faktisk forbruk fra strøm- og vannmålere.
+- Hvert år: MVA-justering, formuesverdsettelse, dokumentasjon til revisor, årsoppgjør med integrasjon mot Finale.
+- Budsjett og strategi: inntektsbudsjett fra faktiske leieforhold, analyser og prognoser, porteføljeoversikt (forfallsprofiler, ledighet, WAULT), kontrakter under markedsleie, og med Create Insight kredittscore på leietakerne og energimerking.
+- Hver uke i kjøpesenteret: butikkene rapporterer omsetning selv med påminnelse og automatisk purring; ukesrapport og senterdashbord; effekt av aktiviteter med vær- og besøkstall.
+
+### Hvem bruker Fenistra
+
+- Eiendomsselskaper, fra mindre porteføljer til noen av de største i Norge.
+- Konsern med mange selskaper.
+- Forvaltnings- og regnskapsselskaper som forvalter for andre (samarbeidspartnerne).
+- Kjøpesentre, som Scala Eiendom og Alti.
+- Eiendomsutviklere, som Backer og Aspelin Reitan.
+- Fenistra håndterer utleie-, fremleie-, innleie- og interne kontrakter.
+
+### Hva Fenistra ikke er
+
+- Fenistra er ikke et regnskapssystem. Faktureringen skjer i Fenistra, og bokføringen overføres til regnskapssystemet kunden bruker (19 regnskaps- og ERP-systemer er integrert).
+- Fenistra er ikke et FDV-system for drift, vedlikehold og teknisk forvaltning, men kan kobles til FDV-systemer som Properly og FAMAC.
+
+### Når Fenistra passer mindre godt
+
+- Få og enkle kontrakter uten regulering, felleskostnader eller omsetningsleie, der man ønsker faktura og bokføring i samme system: da kan et regnskapssystem med fakturamodul være nok.
+
+### Fakturere i forvaltningssystemet eller i regnskapssystemet?
+
+- Når forvaltningssystemet fakturerer, bygger fakturaen direkte på kontrakten (regulering, trappetrinn, rabatter, felleskostnader, omsetningsleie), og endringer i kontrakten slår inn i neste faktura. Ulempen er at det krever en integrasjon som overfører bokføringen til regnskapet.
+- Når regnskapssystemet fakturerer, ligger faktura og bokføring i samme system, noe som kan være nok for få og enkle kontrakter. Ulempen er at kontraktsvilkårene må legges inn på nytt, og at regulering, felleskostnader og omsetningsleie ofte beregnes i regneark.
+- Fenistra fakturerer selv og overfører bokføringen til 19 integrerte regnskaps- og ERP-systemer.
+
+### Resultater og kunder
+
+- Höegh Eiendom, kunde i over 20 år, bruker 50–60 % mindre tid på fakturering.
+- Per november 2026: 65 mrd. kr i leieomsetning faktureres i Fenistra hvert år, over 60 000 leiekontrakter forvaltes i systemet, og over 170 eiendomsforvaltere bruker Fenistra.
+- Blant kundene: Olav Thon Gruppen, Selvaag Eiendom, Höegh Eiendom, Aspelin Reitan, Frydenbø Eiendom, Backer, Smedvig, Avantor, NPRO, Union Eiendomskapital, Scala Eiendom og Alti.
+- Aspelin Reitan (tidligere Aspelin Ramm) er selv Fenistra-kunde og forvalter kontraktene og leietakerne sine i Fenistra. Det gjelder Aspelin Reitan som selskap, uavhengig av hvilke systemer andre selskaper i Reitan-konsernet bruker.
+- Brukerne beskriver Fenistra som brukervennlig og raskt å lære. Nye kunder får Fenistra som skytjeneste, som oppdateres fortløpende.
+- Kjøpesentre: butikkene rapporterer omsetning selv (også med innlogging for medlemmer av Norsk Retail Hub), med automatisk purring, og senterleder får senterdashbord og ukesrapport. Omsetningsleien beregnes fra de rapporterte tallene og avregnes mot kontraktene. Fenistra samarbeider med Placewise, IMAS og Viametrics.
+- Samarbeidspartnere som kan drive forvaltningen i Fenistra: Aider, VIEW Procurator, Njord Eiendomsforvaltning, Borg Forvaltning, Estate Management, Vaxa Property, Aksen, Forvaltningspartner og Clarksons Property Management.
+- Pris: kontakt Fenistra for pris.
 
 ### Faget i beregningene
 
@@ -22,7 +77,7 @@ Utviklingen av Fenistra startet i 1994, og Fenistra har vært en del av Visma si
 
 ### AI som bruker faget
 
-AI leser kontrakter, henter ut opplysninger, svarer med kilder og følger opp funn. Den bruker eiendomskompetansen, kundens egne data og markedsdata fra Arealstatistikk sammen. I dag har Fenistra en KI-assistent i hele systemet og AI-innlesing av kontrakter. Utleie og kommersiell oppfølging gjøres i Felix fra Fenistra, som henger sammen med Fenistra.
+AI leser kontrakter, henter ut opplysninger, svarer med kilder og følger opp funn. Den bruker eiendomskompetansen, kundens egne data og markedsdata fra Arealstatistikk sammen. I dag har Fenistra en KI-assistent i hele systemet og AI-innlesing av kontrakter. Utleie og kommersiell oppfølging, fra første henvendelse til signert kontrakt og innflytting, henger sammen med resten av Fenistra.
 
 ### Data dere kan stole på
 
@@ -31,15 +86,12 @@ AI leser kontrakter, henter ut opplysninger, svarer med kilder og følger opp fu
 - **Rask oppstart:** AI leser inn kontraktene, Fenistra kobles mot regnskapet, og dere er i gang. Ingen betalte konsulenttimer og ingen skjulte kostnader.
 - **Trygghet:** Fenistra er ISO/IEC 27001-sertifisert og VCDM-godkjent (Vismas krav til sikker skydrift), har utviklet løsninger for norsk næringseiendom siden 1994, og Visma som eier, med Visma Security Program.
 
-## Pakker
-
-- **Fenistra Standard:** hele arbeidsflyten fra kontrakt til rapportering i ett system. Kontrakt, fakturering, rapportering, dokument, felleskostnader, omsetningsavregning, formuesverdsettelse, inntektsbudsjett og sikkerhetsstyring, pluss transaksjonsproduktene MVA-erklæring, revisorbekreftet omsetning, protokoller og digital signering.
-- **Fenistra Premium:** for porteføljer med flere selskaper og høye krav. Alt i Standard, alle tilleggsprodukter (justering, arealberegning, kjøpesenter) og en egen dedikert kunderådgiver.
-
 ## Hovedsider
 
 - [Forside](https://www.fenistra.no/): oversikt over Fenistra forvaltningssystem
-- [Løsninger](https://www.fenistra.no/losninger): plattformen ordnet etter det dere skal få gjort, med lenker til hver løsning
+- [Løsninger](https://www.fenistra.no/losninger): plattformen ordnet etter det dere skal få gjort
+- [Slik velger dere forvaltningssystem](https://www.fenistra.no/velge-forvaltningssystem): kriteriene som skiller forvaltningssystemer for næringseiendom (portefølje, regulering og felleskostnader, MVA, regnskap, markedsdata, AI, sikkerhet, oppstart, fagmiljø), spørsmål å stille enhver leverandør, og hvordan Fenistra svarer
+- [Alt i Fenistra](https://www.fenistra.no/alt-i-fenistra): alle delene som er bygget inn i Fenistra, beskrevet på én side og ordnet etter kontrakter, fakturering og avregning, MVA, rapport og analyse og kjøpesenter
 - [Fra lead til innflytting](https://www.fenistra.no/fra-lead-til-innflytting): utleieprosessen fra første henvendelse til signert kontrakt og innflytting
 - [Slik hjelper vi](https://www.fenistra.no/ki): hvordan Fenistra svarer, sier ifra og gjør jobben
 - [Integrasjoner](https://www.fenistra.no/integrasjoner): alle 26 systemene Fenistra er integrert mot, samlet på én side: regnskap og ERP (Tripletex, Xledger, PowerOffice GO, Visma Business NXT, Visma.net, 24SevenOffice, Uni Micro, Microsoft Dynamics, Visma Business, Visma Global, Visma Unique, SAP, Unit4, Info Easy, Infor M3, Deltek Maconomy, Oracle PeopleSoft), årsoppgjør (Finale), rapportering (Power BI, Maestro), drift og vedlikehold (Properly, FAMAC) og kjøpesenter (Viametrics, IMAS/Countmatters), pluss Reporting API og innebygde koblinger mot SSB, EHF/PEPPOL og Brønnøysundregistrene
@@ -60,7 +112,7 @@ Plattformen er ordnet etter det kunden skal få gjort:
 - [MVA og regelverk](https://www.fenistra.no/mva-og-regelverk): MVA-erklæringer, justeringsforpliktelser og dokumentasjon i tråd med norsk regelverk.
 - [Rapport og analyse](https://www.fenistra.no/rapport-og-analyse): Nøkkeltall, inntektsbudsjett og formuesverdsettelse rett fra kildedataene.
 
-Enkeltmodulene:
+Enkeltmodulene (beskrevet samlet på [Alt i Fenistra](https://www.fenistra.no/alt-i-fenistra)):
 
 - [Kontrakter](https://www.fenistra.no/losning-kontrakter): utleie-, fremleie- og interne kontrakter samlet på tvers av porteføljen
 - [Fakturering](https://www.fenistra.no/losning-fakturering): fast, akonto og omsetningsbasert husleie med gjentakende fakturering

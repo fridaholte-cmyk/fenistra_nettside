@@ -25,27 +25,28 @@ interface Customer {
 export class HomeComponent implements OnDestroy {
   // Logo wall: only customers that have approved being shown. Add `logo` as the files arrive.
   customers: Customer[] = [
-    { name: 'Thon Gruppen', logo: 'images/kunder/thon-gruppen.svg', logoHeight: 40 },
-    { name: 'Coop', logo: 'images/kunder/coop.svg', logoHeight: 26 },
-    { name: 'Aspelin Reitan', logo: 'images/kunder/aspelin-reitan.svg', logoHeight: 23 },
-    { name: 'Frydenbø Eiendom', logo: 'images/kunder/frydenbo-eiendom.svg', logoHeight: 22 },
-    { name: 'Höegh Eiendom', logo: 'images/kunder/hoegh-eiendom.svg', logoHeight: 18, story: '/media-hoegh-eiendom' },
-    { name: 'Spabo Eiendom', logo: 'images/kunder/spabo-eiendom-white.png', logoHeight: 38, whiteLogo: true },
-    { name: 'Selvaag Eiendom', logo: 'images/kunder/selvaag-eiendom-white.svg', logoHeight: 31, whiteLogo: true },
+    { name: 'Olav Thon Gruppen', logo: 'images/kunder/thon-gruppen.svg', logoHeight: 40 },
     { name: 'Mosvold', logo: 'images/kunder/mosvold.svg', logoHeight: 24 },
-    { name: 'Alti', logo: 'images/kunder/alti.svg', logoHeight: 45 },
-    { name: 'Backer AS', logo: 'images/kunder/backer.png', logoHeight: 32, story: '/media-backer' },
-    { name: 'Scala', logo: 'images/kunder/scala-eiendom.svg', logoHeight: 27 },
-    { name: 'Norgesgruppen', logo: 'images/kunder/norgesgruppen.png', logoHeight: 34 },
-    { name: 'Smedvik Eiendom' },
+    { name: 'Smedvig', logo: 'images/kunder/smedvig.jpg', logoHeight: 26 },
+    { name: 'Caiano', logo: 'images/kunder/caiano-white.svg', logoHeight: 22, whiteLogo: true },
+    { name: 'Pellerin', logo: 'images/kunder/pellerin-white.png', logoHeight: 26, whiteLogo: true },
+    { name: 'Hundholmen Byutvikling', logo: 'images/kunder/hundholmen-byutvikling.svg', logoHeight: 22 },
+    { name: 'Frydenbø Eiendom', logo: 'images/kunder/frydenbo-eiendom.svg', logoHeight: 22 },
+    { name: 'Br. Jangaard' },
+    { name: 'Koteng', logo: 'images/kunder/koteng.png', logoHeight: 52 },
+    { name: 'Aspelin Reitan', logo: 'images/kunder/aspelin-reitan.svg', logoHeight: 23 },
+    { name: 'Selvaag Eiendom', logo: 'images/kunder/selvaag-eiendom-white.svg', logoHeight: 31, whiteLogo: true },
     { name: 'Avantor', logo: 'images/kunder/avantor.svg', logoHeight: 19 },
-    { name: 'Ragde', logo: 'images/kunder/ragde-eiendom.svg', logoHeight: 28 },
-    { name: 'Møller', logo: 'images/kunder/moller-eiendom.png', logoHeight: 40 },
-    { name: 'Lagunen', logo: 'images/kunder/lagunen.png', logoHeight: 27 },
-    { name: 'Stiftelsen Anker', logo: 'images/kunder/stiftelsen-anker.png', logoHeight: 30 },
-    { name: 'H.I.Giørtz sønner', logo: 'images/kunder/hi-giortz.svg', logoHeight: 24 },
-    { name: 'AKA', logo: 'images/kunder/aka.svg', logoHeight: 33 },
-    { name: 'SKB', logo: 'images/kunder/skb-eiendom.png', logoHeight: 46 },
+    { name: 'Stor-Oslo Eiendom' },
+    { name: 'Höegh Eiendom', logo: 'images/kunder/hoegh-eiendom.svg', logoHeight: 18, story: '/media-hoegh-eiendom' },
+    { name: 'NPRO', logo: 'images/kunder/npro.svg', logoHeight: 36 },
+    { name: 'Union', logo: 'images/kunder/union.webp', logoHeight: 46 },
+    { name: 'Tema Eiendom', logo: 'images/kunder/tema-eiendom.svg', logoHeight: 44 },
+    // Fra «flere merkevarer»-listen, så veggen holder 3 rader à 7
+    { name: 'Backer AS', logo: 'images/kunder/backer.png', logoHeight: 32, story: '/media-backer' },
+    { name: 'Spabo Eiendom', logo: 'images/kunder/spabo-eiendom-white.png', logoHeight: 38, whiteLogo: true },
+    { name: 'NIAM', logo: 'images/kunder/niam-white.svg', logoHeight: 24, whiteLogo: true },
+    { name: 'Pareto', logo: 'images/kunder/pareto.svg', logoHeight: 34 },
   ];
 
   // Maren's quote box: hidden in the browser until it scrolls into view, then it fades in (CSS)
@@ -61,6 +62,11 @@ export class HomeComponent implements OnDestroy {
   quoteRead = signal(0);
   private quoteTimer?: ReturnType<typeof setInterval>;
 
+  // «Bare spør»-illustrasjonen: spørsmålet skrives tegn for tegn når den kommer i bildet (forhåndsrendret: hele teksten)
+  askQuestion = 'Hvilke kontrakter har omsetningsleie, og hvilke satser gjelder?';
+  askTyped = signal(this.askQuestion.length);
+  private askTimer?: ReturnType<typeof setInterval>;
+
   private frames: number[] = [];
   private onScroll?: () => void;
   private onResize = () => document.documentElement.style.setProperty('--screen-h', innerHeight + 'px');
@@ -72,6 +78,13 @@ export class HomeComponent implements OnDestroy {
       if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       this.quoteArmed.set(true);
       this.midCount.set(10);
+      // Prinsipp-illustrasjonene: skjul innholdet til de er i bildet, og spill dem én gang
+      host.nativeElement.querySelectorAll('.pr-anim').forEach((el) => el.classList.add('armed'));
+      this.askTyped.set(0);
+      const play = (kind: string) => () => {
+        host.nativeElement.querySelector(`.pr-anim[data-pr="${kind}"]`)?.classList.add('armed', 'play');
+        if (kind === 'ask') this.typeQuestion();
+      };
 
       const watchers: { selector: string; scrolled?: boolean; start: () => void }[] = [
         {
@@ -81,6 +94,9 @@ export class HomeComponent implements OnDestroy {
             this.readQuote();
           },
         },
+        { selector: '.pr-anim[data-pr="ask"]', start: play('ask') },
+        { selector: '.pr-anim[data-pr="alert"]', start: play('alert') },
+        { selector: '.pr-anim[data-pr="job"]', start: play('job') },
         {
           selector: '.hp-numbers',
           // only once the visitor has scrolled, never straight on load
@@ -129,6 +145,18 @@ export class HomeComponent implements OnDestroy {
     this.frames.push(requestAnimationFrame(step));
   }
 
+  /** Skriver spørsmålet i «Bare spør»-illustrasjonen, ca. 2 s totalt (CSS venter 2,2 s før svaret) */
+  private typeQuestion() {
+    clearInterval(this.askTimer);
+    this.askTyped.set(0);
+    setTimeout(() => {
+      this.askTimer = setInterval(() => {
+        this.askTyped.update((n) => n + 1);
+        if (this.askTyped() >= this.askQuestion.length) clearInterval(this.askTimer);
+      }, 28);
+    }, 300);
+  }
+
   /** Starts after the quote box has faded in (CSS: 0.8 s) plus a short pause */
   private readQuote() {
     setTimeout(() => {
@@ -152,5 +180,6 @@ export class HomeComponent implements OnDestroy {
     this.stopWatching();
     this.frames.forEach((f) => cancelAnimationFrame(f));
     clearInterval(this.quoteTimer);
+    clearInterval(this.askTimer);
   }
 }

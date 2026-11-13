@@ -1,5 +1,7 @@
 # Lansering av www.fenistra.no – sjekkliste
 
+Den fullstendige sjekklisten, med ansvar per person, ligger i dokumentet «Lansering av fenistra.no – sjekkliste» (https://claude.ai/artifact/4GxF2Jtc7NynUKd9yKewAS). Denne filen er et sammendrag for utvikleren.
+
 Rekkefølgen betyr noe. Punktene under «På lanseringsdagen» bør tas i den rekkefølgen de står.
 
 ## Før lanseringsdagen
@@ -24,10 +26,10 @@ trafikk tapt i statistikken, og de er ofte de mest interessante.
 3. **Aktiver redirectene i HubSpot.** Ta 5–10 stikkprøver fra listen og se at de lander riktig sted,
    og at de gir 301 (permanent), ikke 302.
 4. **Send inn sitemap.xml i Search Console** (`https://www.fenistra.no/sitemap.xml`).
-5. **Be om indeksering** av forsiden og de viktigste sidene: Løsninger, Priser, Spørsmål, Integrasjoner.
+5. **Be om indeksering** av forsiden og de viktigste sidene: Alt i Fenistra, Integrasjoner, Spørsmål.
 6. **Byrået** oppdaterer destinasjons-URL-er i annonser og sitelinks, og kjører domeneverifisering.
-7. **Test sporingen:** åpne siden, bytt side, send inn skjemaet og still et spørsmål i chatten.
-   Alle fire skal dukke opp i GA4 sanntid. Gjør det etter at cookie-banneret er godtatt, ellers
+7. **Test sporingen:** åpne siden, bytt side og send inn skjemaet.
+   Alle tre skal dukke opp i GA4 sanntid. Gjør det etter at cookie-banneret er godtatt, ellers
    sendes ingenting, og det er meningen.
 
 ## De første fire ukene

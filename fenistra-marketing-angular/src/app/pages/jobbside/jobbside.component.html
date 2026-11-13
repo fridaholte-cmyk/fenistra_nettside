@@ -98,7 +98,7 @@
 }
 
 <!-- ================= HVORFOR DET BETYR NOE ================= -->
-<section class="jb-why" [class.jb-why-noimg]="!page.image">
+<section class="jb-why" [class.jb-why-noimg]="!page.concept">
   <div class="wrap jb-why-grid">
     <div class="jb-why-copy reveal">
       <h2>{{ page.whyTitle }}</h2>
@@ -107,9 +107,9 @@
         <p class="jb-why-note">{{ page.whyNote }}</p>
       }
     </div>
-    @if (page.image) {
+    @if (page.concept) {
       <div class="jb-why-visual reveal">
-        <img [src]="page.image.src" [width]="page.image.w" [height]="page.image.h" [alt]="page.image.alt" loading="lazy" decoding="async">
+        <app-concept-card [kind]="page.concept"></app-concept-card>
       </div>
     }
   </div>
@@ -120,16 +120,15 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Bygget inn i Fenistra</h2>
-      <p>Dette er delene som gjør jobben. Les mer om hver av dem, eller book et møte, så viser vi hvordan de henger sammen for deres portefølje.</p>
+      <p>Dette er delene som gjør jobben. Book et møte, så viser vi hvordan de henger sammen for deres portefølje.</p>
     </div>
     <div class="jb-module-grid">
       @for (m of page.modules; track m.route; let i = $index) {
-        <a [routerLink]="m.route" class="jb-module">
+        <div class="jb-module">
           <span class="jb-module-icon" [innerHTML]="icons[i]"></span>
           <h3>{{ m.title }}</h3>
           <p>{{ m.desc }}</p>
-          <span class="go">Les mer →</span>
-        </a>
+        </div>
       }
     </div>
   </div>

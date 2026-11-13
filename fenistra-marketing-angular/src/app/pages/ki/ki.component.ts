@@ -1,3 +1,4 @@
+import { ConceptCardComponent } from '../../shared/concept-card/concept-card.component';
 import { ProofCtaComponent } from '../../shared/proof-cta/proof-cta.component';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterLink } from '@angular/router';
@@ -6,7 +7,7 @@ import { KiChatDemoComponent } from '../../shared/ki-chat-demo/ki-chat-demo.comp
 @Component({
   selector: 'app-ki',
   standalone: true,
-  imports: [RouterLink, ProofCtaComponent, KiChatDemoComponent],
+  imports: [ConceptCardComponent, RouterLink, ProofCtaComponent, KiChatDemoComponent],
   templateUrl: './ki.component.html',
   encapsulation: ViewEncapsulation.None
 })

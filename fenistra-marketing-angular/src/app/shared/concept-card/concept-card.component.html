@@ -1,0 +1,123 @@
+<div class="cc-stage">
+  <div class="cc-card">
+    @switch (kind()) {
+
+      <!-- Alle kontrakter samlet -->
+      @case ('kontrakter') {
+        <div class="cc-head"><span class="cc-k">Porteføljen</span><span class="cc-tag">412 kontrakter</span></div>
+        <div class="cc-stats r1">
+          <div><small>Leietakere</small><b>286</b></div>
+          <div><small>Årlig leie</small><b>184 mill.</b></div>
+          <div><small>Ledig areal</small><b>4,2 %</b></div>
+        </div>
+        <ul class="cc-list">
+          <li class="r2"><div><b>Nordlys Handel AS</b><span>Storgata 12 · 1 450 m²</span></div><em class="cc-pill dark">Utløper 2027</em></li>
+          <li class="r3"><div><b>Sentrum Butikk AS</b><span>Torget 3 · 620 m²</span></div><em class="cc-pill">Regulering i mars</em></li>
+          <li class="r4"><div><b>Fjordkontor AS</b><span>Kaiveien 8 · 2 300 m²</span></div><em class="cc-pill">Løpende</em></li>
+          <li class="r5"><div><b>Kafé Hjørnet AS</b><span>Storgata 12 · 180 m²</span></div><em class="cc-pill">Løpende</em></li>
+        </ul>
+      }
+
+      <!-- Ett leieforhold -->
+      @case ('kontrakt') {
+        <div class="cc-head"><span class="cc-k">Leieforhold · Nordlys Handel AS</span></div>
+        <dl class="cc-fields r1">
+          <div><dt>Eiendom</dt><dd>Storgata 12</dd></div>
+          <div><dt>Areal</dt><dd>1 450 m²</dd></div>
+          <div><dt>Årlig leie</dt><dd>2,9 mill.</dd></div>
+          <div><dt>Utløper</dt><dd>31.12.2027</dd></div>
+        </dl>
+        <ul class="cc-list">
+          <li class="r2"><div><b>Sikkerhet</b><span>Bankgaranti, 6 mnd. leie</span></div><em class="cc-ok">I orden</em></li>
+          <li class="r3"><div><b>Opsjon på forlengelse</b><span>5 år, frist 30.06.2027</span></div><em class="cc-pill dark">Frist om 7 mnd.</em></li>
+          <li class="r4"><div><b>Regulering</b><span>KPI, 100 %, hvert år 1. januar</span></div><em class="cc-pill">Neste: jan.</em></li>
+          <li class="r5"><div><b>Dokumenter</b><span>Kontrakt, protokoll, tegning</span></div><em class="cc-pill">3 filer</em></li>
+        </ul>
+      }
+
+      <!-- Fordeling av felleskostnader -->
+      @case ('felleskost') {
+        <div class="cc-head"><span class="cc-k">Felleskostnader · Storgata 12</span><span class="cc-tag">Fordeling</span></div>
+        <div class="cc-split">
+          @for (row of [
+            { n: 'Nordlys Handel AS', s: 'Etter areal', w: 46, fixed: false },
+            { n: 'Sentrum Butikk AS', s: 'Etter areal', w: 22, fixed: false },
+            { n: 'Kafé Hjørnet AS', s: 'Fast beløp, kr 18 000', w: 9, fixed: true },
+            { n: 'Fjordkontor AS', s: 'Etter areal', w: 23, fixed: false }
+          ]; track row.n; let i = $index) {
+            <div class="cc-split-row" [class]="'r' + (i + 1)">
+              <div class="cc-split-top"><b>{{ row.n }}</b><span>{{ row.w }} %</span></div>
+              <div class="cc-bar"><i [style.width.%]="row.w * 2" [class.alt]="row.fixed"></i></div>
+              <small>{{ row.s }}</small>
+            </div>
+          }
+        </div>
+        <p class="cc-note r5"><b>Overstyrt for én leietaker</b>Resten fordeles automatisk på de øvrige.</p>
+      }
+
+      <!-- Klar til fakturering -->
+      @case ('fakturering') {
+        <div class="cc-head"><span class="cc-k">Klar til fakturering · mars</span><span class="cc-tag">4 utkast</span></div>
+        <ul class="cc-list">
+          <li class="r1"><div><b>Nordlys Handel AS</b><span>Leie og akonto felleskost</span></div><em class="cc-amt">241 600</em></li>
+          <li class="r2"><div><b>Sentrum Butikk AS</b><span>Leie og omsetningsleie</span></div><em class="cc-amt">98 400</em></li>
+          <li class="r3"><div><b>Fjordkontor AS</b><span>Leie, regulert etter KPI</span></div><em class="cc-amt">312 900</em></li>
+          <li class="r4"><div><b>Kafé Hjørnet AS</b><span>Leie og akonto felleskost</span></div><em class="cc-amt">27 300</em></li>
+        </ul>
+        <div class="cc-approve r5"><span>Du kontrollerer og godkjenner</span><em class="cc-ok">Klar til sending</em></div>
+      }
+
+      <!-- Rapport og analyse -->
+      @case ('rapport') {
+        <div class="cc-head"><span class="cc-k">Leieinntekter per måned</span><span class="cc-tag">2026</span></div>
+        <div class="cc-cols r1">
+          @for (m of months; track $index) {
+            <i [style.height.%]="m"></i>
+          }
+        </div>
+        <ul class="cc-list">
+          <li class="r2"><div><b>Kontor</b><span>18 eiendommer</span></div><em class="cc-amt">112,4 mill.</em></li>
+          <li class="r3"><div><b>Handel</b><span>9 eiendommer</span></div><em class="cc-amt">54,1 mill.</em></li>
+          <li class="r4"><div><b>Lager og logistikk</b><span>5 eiendommer</span></div><em class="cc-amt">17,5 mill.</em></li>
+        </ul>
+      }
+
+      <!-- Senterdashbord -->
+      @case ('senter') {
+        <div class="cc-head"><span class="cc-k">Senteret · uke 37</span><span class="cc-legend"><i></i>I år <i class="alt"></i>I fjor</span></div>
+        <div class="cc-stats r1">
+          <div><small>Besøkende</small><b>18 420</b><em>+6 %</em></div>
+          <div><small>Handlende</small><b>7 964</b><em>+4 %</em></div>
+          <div><small>Omsetning</small><b>4,6 mill.</b><em>+9 %</em></div>
+        </div>
+        <div class="cc-days r2">
+          @for (x of days; track x.d) {
+            <div class="cc-day">
+              <div class="cc-day-bars"><i [style.height.%]="x.a"></i><i class="alt" [style.height.%]="x.b"></i></div>
+              <small>{{ x.d }}</small>
+            </div>
+          }
+        </div>
+      }
+
+      <!-- Ukesrapport per bransje -->
+      @case ('ukesrapport') {
+        <div class="cc-head"><span class="cc-k">Omsetning per bransje · uke 37</span><span class="cc-tag">Mot i fjor</span></div>
+        <div class="cc-split">
+          @for (row of [
+            { n: 'Dagligvare', v: '1,84 mill.', w: 100, d: '+8 %', up: true },
+            { n: 'Klær og sko', v: '1,12 mill.', w: 61, d: '+6 %', up: true },
+            { n: 'Servering', v: '0,85 mill.', w: 46, d: '+30 %', up: true },
+            { n: 'Hus og hjem', v: '0,80 mill.', w: 43, d: '−2 %', up: false }
+          ]; track row.n; let i = $index) {
+            <div class="cc-split-row" [class]="'r' + (i + 1)">
+              <div class="cc-split-top"><b>{{ row.n }}</b><span>{{ row.v }} <em [class.down]="!row.up">{{ row.d }}</em></span></div>
+              <div class="cc-bar"><i [style.width.%]="row.w"></i></div>
+            </div>
+          }
+        </div>
+        <p class="cc-note r5"><b>Grupper som dere vil</b>Per bransje, etasje eller tilhørighet, helt ned på hver butikk.</p>
+      }
+    }
+  </div>
+</div>

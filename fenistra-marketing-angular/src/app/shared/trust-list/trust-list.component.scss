@@ -37,10 +37,10 @@
 .tl-row.tl-shown .tl-line { transform: scaleX(1); }
 .tl-prog { position: absolute; left: 0; top: 0; height: 1px; width: 0; background: var(--berry); }
 
-.tl-n { font-family: var(--font-mono); font-size: 13px; padding-top: 6px; color: #8A808C; transition: color .4s; }
+.tl-n { font-family: var(--font-mono); font-size: 13px; padding-top: 6px; color: #64748B; transition: color .4s; }
 .tl-body { display: flex; flex-direction: column; gap: 8px; }
-.tl-body h3 { margin: 0; font-size: clamp(22px, 2.2vw, 30px); font-weight: 500; letter-spacing: -.015em; color: #8A808C; transition: color .4s; }
-.tl-body p { margin: 0; font-size: 16px; line-height: 1.6; color: #A39AA4; transition: color .4s; text-wrap: pretty; }
+.tl-body h3 { margin: 0; font-size: clamp(22px, 2.2vw, 30px); font-weight: 500; letter-spacing: -.015em; color: #64748B; transition: color .4s; }
+.tl-body p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--ink-soft); transition: color .4s; text-wrap: pretty; }
 
 .tl-row.tl-active .tl-n { color: var(--berry); }
 .tl-row.tl-active h3, .tl-row.tl-idle h3 { color: var(--ink); }

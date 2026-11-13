@@ -8,7 +8,6 @@
     <div class="page-loader"><app-loader></app-loader></div>
   }
   <app-footer></app-footer>
-  <app-chat-widget></app-chat-widget>
   <app-cookie-banner></app-cookie-banner>
 } @else {
   <div class="gate">
@@ -19,6 +18,7 @@
       <input
         type="password"
         name="password"
+        aria-label="Passord"
         placeholder="Passord"
         [(ngModel)]="passwordInput"
         autocomplete="off"

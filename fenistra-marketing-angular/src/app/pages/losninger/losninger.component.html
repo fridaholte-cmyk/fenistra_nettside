@@ -138,6 +138,7 @@
   .related-chips{display:flex;flex-wrap:wrap;gap:8px;}
   .related-chips a{font-family:var(--font-mono);font-size:12.5px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:6px 12px;color:var(--ink);transition:border-color .2s ease, color .2s ease;}
   .related-chips a:hover{border-color:var(--berry);color:var(--berry-deep);}
+  .related-chips span{font-family:var(--font-mono);font-size:12.5px;background:var(--paper-2);border:1px solid var(--line);border-radius:20px;padding:6px 12px;color:var(--ink-soft);}
 
   .related-section{border-top:1px solid var(--line);padding:70px 0;}
 
@@ -339,7 +340,7 @@
   .catalog-head p{font-size:15.5px;color:var(--ink-soft);}
 
   /* ---- dybde ---- */
-  .depth-section{background:var(--plum-deep);color:#fff;padding:90px 0;}
+  .depth-section{background:var(--plum-deep);color:#fff;padding:var(--section-y) 0;}
   .depth-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center;}
   .depth-section h2{font-family:var(--font-display);font-weight:300;font-size:clamp(26px,3vw,38px);letter-spacing:-0.02em;line-height:1.2;margin-bottom:18px;}
   .depth-section h2 strong{font-weight:600;color:var(--berry-mid);}
@@ -384,32 +385,32 @@
       <div class="job-card">
         <h2><a routerLink="/fra-lead-til-innflytting" class="job-link">Fra lead til innflytting <span aria-hidden="true">→</span></a></h2>
         <p>Fra første henvendelse via signert kontrakt til innflytting, uten dobbeltregistrering.</p>
-        <div class="related-chips"><a routerLink="/losning-digital-signering">Digital signering</a><a routerLink="/losning-protokoller">Protokoller</a></div>
+        <div class="related-chips"><span>Digital signering</span><span>Protokoller</span></div>
       </div>
       <div class="job-card">
         <h2><a routerLink="/kontroll-pa-portefoljen" class="job-link">Følge opp kontrakter og leietakere <span aria-hidden="true">→</span></a></h2>
         <p>Hver kontrakt, hver sikkerhet og hver frist samlet, med varsel før noe glipper.</p>
-        <div class="related-chips"><a routerLink="/losning-kontrakter">Kontrakter</a><a routerLink="/losning-sikkerhetsstyring">Sikkerhetsstyring</a><a routerLink="/losning-dokument">Dokument</a><a routerLink="/losning-digital-signering">Digital signering</a><a routerLink="/losning-protokoller">Protokoller</a></div>
+        <div class="related-chips"><span>Kontrakter</span><span>Sikkerhetsstyring</span><span>Dokument</span><span>Digital signering</span><span>Protokoller</span></div>
       </div>
       <div class="job-card">
         <h2><a routerLink="/fakturering-og-avregning" class="job-link">Fakturering og avregning <span aria-hidden="true">→</span></a></h2>
         <p>Registrer én gang, og la systemet regulere, fakturere og avregne gjennom hele leieforholdet.</p>
-        <div class="related-chips"><a routerLink="/losning-fakturering">Fakturering</a><a routerLink="/losning-felleskostnader">Felleskostnader</a><a routerLink="/losning-omsetningsavregning">Omsetningsavregning</a></div>
+        <div class="related-chips"><span>Fakturering</span><span>Felleskostnader</span><span>Omsetningsavregning</span></div>
       </div>
       <div class="job-card">
         <h2><a routerLink="/mva-og-regelverk" class="job-link">MVA og regelverk <span aria-hidden="true">→</span></a></h2>
         <p>MVA-erklæringer, justeringsforpliktelser og dokumentasjonen revisor spør etter.</p>
-        <div class="related-chips"><a routerLink="/losning-mva-erklaring">MVA-erklæring</a><a routerLink="/losning-justering">Justering</a></div>
+        <div class="related-chips"><span>MVA-erklæring</span><span>Justering</span></div>
       </div>
       <div class="job-card">
         <h2><a routerLink="/rapport-og-analyse" class="job-link">Se mulighetene i porteføljen <span aria-hidden="true">→</span></a></h2>
         <p>Nøkkeltall, budsjett og verdier rett fra kildedataene, klare for ledelse og styre.</p>
-        <div class="related-chips"><a routerLink="/losning-rapportering">Rapportering</a><a routerLink="/losning-inntektsbudsjett">Inntektsbudsjett</a><a routerLink="/losning-formuesverdsettelse">Formuesverdsettelse</a><a routerLink="/losning-arealberegning">Arealberegning</a></div>
+        <div class="related-chips"><span>Rapportering</span><span>Inntektsbudsjett</span><span>Formuesverdsettelse</span><span>Arealberegning</span></div>
       </div>
       <div class="job-card">
         <h2><a routerLink="/losning-kjopesenter" class="job-link">Drive kjøpesenter <span aria-hidden="true">→</span></a></h2>
         <p>Omsetning, besøk og oppfølging av butikkene, samlet i senterleders viktigste verktøy.</p>
-        <div class="related-chips"><a routerLink="/losning-kjopesenter">Kjøpesenter</a><a routerLink="/losning-rbo">Revisorbekreftet omsetning</a></div>
+        <div class="related-chips"><a routerLink="/losning-kjopesenter">Kjøpesenter</a><span>Revisorbekreftet omsetning</span></div>
       </div>
       <div class="job-card">
         <h2><a routerLink="/integrasjoner" class="job-link">Integrasjoner <span aria-hidden="true">→</span></a></h2>

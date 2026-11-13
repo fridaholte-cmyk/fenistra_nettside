@@ -298,20 +298,33 @@
   }
 
   /* ===== Om oss, ny layout (samme språk som forsiden) ===== */
-  section.ao-hero{padding:72px 0 88px;}
-  .ao-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(36px,4.6vw,60px);line-height:1.07;letter-spacing:-0.025em;color:var(--ink);max-width:900px;margin-bottom:24px;text-wrap:balance;}
-  .ao-hero h1 strong{display:block;font-weight:600;color:var(--berry-deep);}
-  .ao-lead{font-size:18px;color:var(--ink-soft);max-width:640px;line-height:1.6;}
+  section.ao-hero{padding:28px 0 96px;}
+  .ao-crumb{display:flex; gap:10px; font-size:12px; color:var(--ink-soft); margin-bottom:64px;}
+  .ao-crumb a:hover{color:var(--ink);}
+  .ao-crumb [aria-current]{color:var(--ink); font-weight:500;}
+  .ao-hero-grid{display:grid; grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr); gap:56px; align-items:center;}
+  .ao-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.015em;color:var(--ink);margin-bottom:24px;text-wrap:balance;}
+  .ao-sub{font-size:clamp(19px,1.7vw,22px);font-weight:500;line-height:1.4;color:var(--ink);margin-bottom:18px;max-width:28ch;}
+  .ao-lead{font-size:16px;color:var(--ink-soft);max-width:46ch;line-height:1.65;}
   .ao-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
+  .ao-photo{margin:0;}
+  .ao-photo img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;}
+  .ao-photo figcaption{margin-top:12px;font-size:12px;color:var(--ink-soft);}
+  section.ao-since{padding:0 0 112px;}
+  .ao-since-panel{display:grid; grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr); gap:56px; align-items:center; background:var(--paper-2); padding:var(--section-y) 56px;}
+  .ao-since .ao-year{max-width:none;font-size:clamp(88px,11vw,150px);font-weight:600;letter-spacing:-0.04em;line-height:1;color:var(--ink);}
+  .ao-since h2{font-family:var(--font-display);font-weight:300;font-size:clamp(32px,3.4vw,44px);line-height:1.12;color:var(--ink);margin-bottom:24px;text-wrap:balance;}
+  .ao-since p{font-size:15.5px;line-height:1.75;color:var(--ink);max-width:56ch;}
+  .ao-since p + p{margin-top:18px;}
   .ao-stats{background:var(--plum-900);color:#fff;padding:64px 0;position:relative;overflow:hidden;}
   .ao-stats::before{display:none;content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:34px 34px;}
-  .ao-stats-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .ao-stats-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   .ao-stat .num{font-family:var(--font-mono);font-weight:700;font-size:clamp(30px,3.4vw,44px);color:var(--berry-mid);}
   .ao-stat .lbl{margin-top:8px;font-size:14px;color:rgba(255,255,255,.85);max-width:220px;}
-  section.ao-section{padding:112px 0;}
+  section.ao-section{padding:var(--section-y) 0;}
   section.ao-alt{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .ao-section .section-head{max-width:720px;margin-bottom:48px;}
-  .ao-section .section-head h2{font-family:var(--font-display);font-weight:300;font-size:clamp(28px,3.2vw,42px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:14px;text-wrap:balance;}
+  .ao-section .section-head h2{font-family:var(--font-display);font-weight:300;font-size:clamp(30px,3.4vw,44px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:14px;text-wrap:balance;}
   .ao-section .section-head h2 strong{font-weight:600;color:var(--berry-deep);}
   .ao-section .section-head p{font-size:16.5px;color:var(--ink-soft);line-height:1.6;}
   .ao-values{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
@@ -331,23 +344,53 @@
   .ao-contact{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:20px;font-size:14.5px;color:rgba(255,255,255,.8);}
   .ao-contact a{color:#fff;font-weight:600;}
   @media (max-width:980px){
-    .ao-stats-grid{grid-template-columns:1fr 1fr;row-gap:36px;}
+    .ao-stats-grid{row-gap:36px;}
     .ao-values{grid-template-columns:1fr;}
     .ao-team-cards{grid-template-columns:1fr;}
+    .ao-hero-grid, .ao-since-panel{grid-template-columns:1fr; gap:32px;}
+    .ao-stats-grid{grid-template-columns:1fr 1fr 1fr;}
   }
   @media (max-width:760px){
-    section.ao-hero{padding:40px 0 56px;}
+    section.ao-hero{padding:20px 0 56px;}
+    .ao-crumb{margin-bottom:32px;}
+    .ao-since-panel{padding:48px 24px;}
+    section.ao-since{padding-bottom:72px;}
+    .ao-stats-grid{grid-template-columns:1fr;}
     section.ao-section{padding:72px 0;}
   }
 </style>
-<!-- ================= HERO ================= -->
+<!-- ================= HERO: Møt teamet ================= -->
 <section class="ao-hero">
   <div class="wrap">
-    <h1>Fenistra kan eiendom</h1>
-    <p class="ao-lead">Eiendom krever kunnskap. Om kontraktene, reglene, markedet og menneskene som bruker byggene. Fenistra har utviklet løsninger for eiendom siden 1994, og vi bruker erfaringen sammen med kundens kontrakter, markedsinnsikt fra <a href="https://arealstatistikk.no/" target="_blank" rel="noopener">Arealstatistikk</a> og AI, så kundene kan vurdere muligheter, følge opp leietakere og få arbeidet gjort. Over 170 eiendomsforvaltere bruker Fenistra, og vi er en del av Visma Group.</p>
-    <div class="ao-actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
-      <a routerLink="/kunder" class="btn btn-ghost">Se kundehistorier</a>
+    <nav class="ao-crumb" aria-label="Brødsmuler"><a routerLink="/">Forside</a><span aria-hidden="true">/</span><span aria-current="page">Om oss</span></nav>
+    <div class="ao-hero-grid">
+      <div class="ao-hero-copy">
+        <h1>Møt teamet bak Fenistra</h1>
+        <p class="ao-sub">Vi kan eiendom. Og vi er glade for at du er her.</p>
+        <p class="ao-lead">Bak Fenistra står vi i Visma Property Solutions: mennesker som kombinerer eiendomsfag, teknologi og engasjement for en enklere arbeidsdag. Over 170 eiendomsforvaltere bruker Fenistra.</p>
+        <div class="ao-actions">
+          <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
+          <a routerLink="/kunder" class="btn btn-ghost">Se kundehistorier</a>
+        </div>
+      </div>
+      <figure class="ao-photo">
+        <img src="images/teamet-fenistra.webp" width="2000" height="1333" alt="Teamet bak Fenistra samlet utendørs under et stort tre, høst" fetchpriority="high">
+        <figcaption>Teamet bak Fenistra.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 1994 ================= -->
+<section class="ao-since">
+  <div class="wrap">
+    <div class="ao-since-panel reveal">
+      <p class="ao-year" aria-hidden="true">1994</p>
+      <div>
+        <h2>Erfaring som går tilbake til 1994</h2>
+        <p>Historien vår innen eiendomsprogramvare går tilbake til 1994. Vi har fulgt bransjen gjennom mange endringer, og vet at gode verktøy må fungere i det daglige arbeidet med kontrakter, leietakere, lokaler og eiendommer.</p>
+        <p>Den erfaringen tar vi med oss når vi utvikler Fenistra videre. Vi vil kombinere det vi kan om eiendom, med nye måter å gjøre arbeidet enklere på.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -355,33 +398,9 @@
 <!-- ================= NØKKELTALL ================= -->
 <section class="ao-stats" aria-label="Fenistra i tall">
   <div class="wrap ao-stats-grid">
-    <div class="ao-stat reveal"><div class="num">1994</div><div class="lbl">Året utviklingen av Fenistra startet</div></div>
     <div class="ao-stat reveal"><div class="num">170+</div><div class="lbl">Eiendomsforvaltere i Norge bruker Fenistra</div></div>
     <div class="ao-stat reveal"><div class="num">60 000+</div><div class="lbl">Kontrakter forvaltet gjennom Fenistra-plattformen</div></div>
     <div class="ao-stat reveal"><div class="num">2020</div><div class="lbl">Året Fenistra ble en del av Visma Group</div></div>
-  </div>
-</section>
-
-<!-- ================= HVA VI STÅR FOR ================= -->
-<section class="ao-section">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Det vi står for</h2>
-    </div>
-    <div class="ao-values">
-      <div class="ao-value reveal">
-        <h3>Vår visjon</h3>
-        <p>Å gjøre forvaltning og utvikling av eiendom enklere, for alle som eier, drifter eller forvalter næringsbygg.</p>
-      </div>
-      <div class="ao-value reveal">
-        <h3>Vår misjon</h3>
-        <p>Å gi eiendomsaktører trygg økonomisk forvaltning og god styringsinformasjon gjennom intelligente løsninger.</p>
-      </div>
-      <div class="ao-value reveal">
-        <h3>Vår tilnærming</h3>
-        <p>Nye løsninger kvalitetssikres mot regelverk og reelle behov i bransjen, i tett dialog med kundene våre.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -390,7 +409,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Tre tiår med erfaring, og vi har bare så vidt begynt</h2>
-      <p>Fra et lite norsk fagmiljø i 1994 til den skybaserte plattformen Fenistra.net, med markedsdata fra <a href="https://arealstatistikk.no/" target="_blank" rel="noopener">Arealstatistikk</a> og AI som gjør kunnskapen anvendelig. Fenistra kan eiendom.</p>
+      <p>Fra et lite norsk fagmiljø i 1994 til et skybasert forvaltningssystem, med markedsdata fra <a href="https://arealstatistikk.no/" target="_blank" rel="noopener">Arealstatistikk</a> og AI som gjør kunnskapen anvendelig. Fenistra kan eiendom.</p>
     </div>
     <div class="timeline reveal">
       <div class="timeline-track">
@@ -418,7 +437,7 @@
           <div class="timeline-year">2003</div>
           <div class="timeline-card">
             <h4>Navnet Fenistra etableres</h4>
-            <p>I oktober skifter vi navn til Fenistra AS – et merkenavn som i tiårene etter blir dypt forankret og anerkjent som en bransjestandard i det norske eiendomsmarkedet.</p>
+            <p>I oktober skifter vi navn til Fenistra AS. Navnet blir etter hvert godt kjent i den norske eiendomsbransjen.</p>
           </div>
         </div>
 
@@ -427,7 +446,7 @@
           <div class="timeline-year">2017</div>
           <div class="timeline-card">
             <h4>Starten på skyreisen</h4>
-            <p>Vi tar et viktig teknologisk sprang og lanserer vårt første rene skybaserte (SaaS) produkt: Fenistra MVA-erklæring. Startskuddet for plattformen Fenistra.net går.</p>
+            <p>Vi lanserer vår første skybaserte løsning, MVA-erklæring. Det er starten på Fenistra i skyen.</p>
           </div>
         </div>
 
@@ -436,7 +455,7 @@
           <div class="timeline-year">2020–2021</div>
           <div class="timeline-card">
             <h4>Inn i Visma-familien</h4>
-            <p>Som et kvalitetsstempel på norsk proptech (eiendomsteknologi) blir Fenistra kjøpt opp av Visma i januar 2020. Året etter integreres vi som en sentral del av Visma Property Solutions.</p>
+            <p>Fenistra blir en del av Visma i januar 2020, og året etter en sentral del av Visma Property Solutions.</p>
           </div>
         </div>
 
@@ -444,8 +463,8 @@
           <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
           <div class="timeline-year">2026</div>
           <div class="timeline-card">
-            <h4>Fenistra lanserer Felix</h4>
-            <p>En ny epoke starter der vi tar eiendomsforvaltning fra å være reaktiv til å bli proaktiv. Vi lanserer AI-grensesnittet Felix, et verktøy som kan brukes helt alene eller integrert direkte i Fenistra. <a routerLink="/ki" style="color:var(--berry-deep); font-weight:600;">Les mer →</a></p>
+            <h4>Fenistra får AI som gjør jobben</h4>
+            <p>En ny epoke starter der vi tar eiendomsforvaltning fra å være reaktiv til å bli proaktiv. Fenistra svarer, sier ifra og gjør jobben, med AI bygget direkte inn i systemet. <a routerLink="/ki" style="color:var(--berry-deep); font-weight:600;">Les mer om hvordan Fenistra hjelper →</a></p>
           </div>
         </div>
 
@@ -468,7 +487,6 @@
     <div class="ao-team">
       <div class="ao-team-cards">
         <a routerLink="/ansatte" fragment="kundeteam" class="ao-team-card reveal">
-          <img width="200" height="200" src="images/ansatte-01.jpg" alt="" loading="lazy" decoding="async">
           <div>
             <h3>Kundeteamet</h3>
             <p>Folk som brenner for faget, og som hver dag jobber for at kundene får mest mulig ut av Fenistra.</p>
@@ -476,7 +494,6 @@
           </div>
         </a>
         <a routerLink="/ansatte" fragment="produktteam" class="ao-team-card reveal">
-          <img width="200" height="200" src="images/ansatte-02.jpg" alt="" loading="lazy" decoding="async">
           <div>
             <h3>Produkt og utvikling</h3>
             <p>Proptech-eksperter med over 20 års erfaring, som bygger løsningene i takt med regelverk og bransjebehov.</p>

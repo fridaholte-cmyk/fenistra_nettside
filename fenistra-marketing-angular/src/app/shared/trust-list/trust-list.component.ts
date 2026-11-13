@@ -1,7 +1,7 @@
 import { Component, ElementRef, NgZone, OnDestroy, afterNextRender, computed, inject, signal } from '@angular/core';
 
 /**
- * «Valgt av bransjen. Sikret av Visma.»: the four trust points as a list where one point at a time is
+ * «Et trygt valg for eiendom.»: the trust points as a list where one point at a time is
  * highlighted, with a progress line along its top edge. Recreated from the Claude Design prototype
  * «Trygt valg forslag v2», variant «4 Liste» (same texts and timing), in the site's own colours.
  * Plays while on screen; clicking a point jumps to it.
@@ -10,7 +10,6 @@ const ITEMS = [
   { title: 'En del av Visma Group', text: 'Fenistra er en del av Visma Property Solutions siden 2020.' },
   { title: 'ISO 27001-sertifisert', text: 'Informasjonssikkerheten er sertifisert etter ISO 27001.' },
   { title: '26 integrerte systemer', text: 'Blant dem 19 regnskaps- og ERP-systemer.' },
-  { title: 'Fagfolk som kan faget', text: 'Fagkonsulenter og kunderådgivere følger dere fra oppstart og videre.' },
 ];
 const START = 1.4, PER = 3.6;
 
