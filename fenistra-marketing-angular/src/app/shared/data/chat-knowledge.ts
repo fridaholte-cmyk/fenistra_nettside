@@ -10,7 +10,7 @@ export interface ChatKbEntry {
 export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   {
     keywords: ["menneske", "snakke med", "ekte person", "en person", "kundeservice", "ringe", "telefon", "tlf", "kontakte dere", "kontakt dere", "nå dere", "support"],
-    answer: "Ja, selvfølgelig! Du når oss på telefon <a href=\"tel:+4722229049\">22 22 90 49</a> eller e-post support.fenistra&#64;visma.com. Du kan også fylle ut skjemaet på kontaktsiden, så tar en av oss kontakt. <a href=\"kontakt.html\">Gå til Kontakt oss →</a>"
+    answer: "Ja, selvfølgelig! Du når oss på telefon <a href=\"tel:+4722229049\">22 22 90 49</a> eller e-post <a href=\"mailto:support.fenistra&#64;visma.com\">support.fenistra&#64;visma.com</a>. Du kan også fylle ut skjemaet på kontaktsiden, så tar en av oss kontakt. <a href=\"kontakt.html\">Gå til Kontakt oss →</a>"
   },
   {
     keywords: ["passer fenistra", "passer det for", "passer fenistra for", "er fenistra noe for", "fenistra for meg", "fenistra for oss", "passer dette for", "egner fenistra seg", "kan fenistra brukes av", "passer for min bedrift", "passer for oss"],
@@ -38,7 +38,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["regnskapssystem", "integreres"],
-    answer: "Sannsynligvis ja. Fenistra er integrert med 26 systemer, blant dem 19 regnskaps- og ERP-systemer, i tillegg til systemer for årsoppgjør, rapportering, drift og kjøpesenter. Blant regnskapssystemene er Tripletex, Xledger, PowerOffice GO, Visma Business NXT, Visma.net, SAP, Microsoft Dynamics og 24SevenOffice. Fakturaer og posteringer overføres til regnskapssystemet dere allerede bruker, uten dobbeltregistrering. <a href=\"integrasjoner.html#regnskap\">Les mer om Regnskap og ERP-integrasjoner →</a>"
+    answer: "Sannsynligvis ja. Fenistra er integrert via API med en rekke systemer, blant dem regnskaps- og ERP-systemer, i tillegg til systemer for årsoppgjør, rapportering, drift og kjøpesenter. Blant regnskapssystemene er Tripletex, Xledger, PowerOffice GO, Visma Business NXT, Visma.net, SAP, Microsoft Dynamics og 24SevenOffice. Fakturaer og posteringer overføres til regnskapssystemet dere allerede bruker, uten dobbeltregistrering. <a href=\"integrasjoner.html#regnskap\">Les mer om Regnskap og ERP-integrasjoner →</a>"
   },
   {
     keywords: ["koster", "kostnad", "abonnement"],
@@ -118,7 +118,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kom i gang", "oppstart", "implementering", "migrering", "bytte fra", "flytte data", "onboarding", "hvor lang tid"],
-    answer: "Oppstarten går på tre steg: dere laster opp kontraktene, AI leser dem inn og fyller ut feltene, Fenistra kobles mot regnskapssystemet deres, og så er dere live. Har dere data som ikke ligger i kontraktene, som akontobeløp, fordelingsnøkler eller garantier, går vi gjennom det sammen før oppstart. <a href=\"kom-i-gang.html\">Se hvordan oppstarten fungerer →</a>"
+    answer: "Oppstarten går på tre steg: dere laster opp kontraktene, AI leser dem inn og fyller ut feltene, Fenistra kobles mot regnskapssystemet deres, og så er dere live. Har dere data som ikke ligger i kontraktene, som akontobeløp, fordelingsnøkler eller garantier, går vi gjennom det sammen før oppstart. <a href=\"losninger.html#kom-i-gang\">Se hvordan oppstarten fungerer →</a>"
   },
   {
     keywords: ["konsulenttimer", "skjulte kostnader", "skjult", "oppstart", "oppstartskostnad", "implementering", "komme raskt i gang", "hvor lang tid tar"],
@@ -126,7 +126,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["integrasjonsmotor", "fenistra hub", "dobbeltregistrering", " api", "leieregulering"],
-    answer: "Integrasjonsmotoren (Hub) i Fenistra er et bindeledd mot regnskapssystemene dere bruker, som Tripletex, PowerOffice GO, Xledger og Visma.net. Fenistra er integrert med 26 systemer, blant dem 19 regnskaps- og ERP-systemer, i tillegg til systemer for årsoppgjør, rapportering, drift og kjøpesenter. Det eliminerer dobbeltregistrering, og leiereguleringer og fakturagrunnlag flyter automatisk over til regnskapet. <a href=\"integrasjoner.html\">Se alle integrasjoner →</a>"
+    answer: "Integrasjonsmotoren (Hub) i Fenistra er et bindeledd mot regnskapssystemene dere bruker, som Tripletex, PowerOffice GO, Xledger og Visma.net. Fenistra er integrert via API med en rekke systemer, blant dem regnskaps- og ERP-systemer, i tillegg til systemer for årsoppgjør, rapportering, drift og kjøpesenter. Det eliminerer dobbeltregistrering, og leiereguleringer og fakturagrunnlag flyter automatisk over til regnskapet. <a href=\"integrasjoner.html\">Se alle integrasjoner →</a>"
   },
   {
     keywords: ["skalerbar", "fleksibel", "vokser", "tilleggsfunksjonalitet", "tilleggsprodukt"],
@@ -134,11 +134,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["ki-assistent", "ai-assistent", "ai-chat", "ki-chat", "ai-opplasting", "last opp kontrakt", "laste opp kontrakter", "ai i fenistra", "ki i fenistra"],
-    answer: "Fenistra har innebygd AI. KI-assistenten følger deg overalt i systemet: still spørsmål om kontrakter, leietakere eller hele porteføljen, be om innsikt og analyse, eller spør hvordan du gjør noe. Med AI-opplasting drar du kontrakten rett inn i Fenistra, AI fyller ut feltene, og du kontrollerer før kontrakten er klar for fakturering og forvaltning. <a href=\"slik-hjelper-fenistra.html#ki-i-fenistra\">Les mer om AI i Fenistra →</a>"
+    answer: "Fenistra har innebygd AI. KI-assistenten følger deg overalt i systemet: still spørsmål om kontrakter, leietakere eller hele porteføljen, be om innsikt og analyse, eller spør hvordan du gjør noe. Med AI-opplasting drar du kontrakten rett inn i Fenistra, AI fyller ut feltene, og du kontrollerer før kontrakten er klar for fakturering og forvaltning. <a href=\"losninger.html#ki-i-fenistra\">Les mer om AI i Fenistra →</a>"
   },
   {
     keywords: ["intelligens", "kunstig", "jobber"],
-    answer: "Ja. AI er en viktig del av hvordan Fenistra gjør eiendomskunnskapen anvendelig. Den leser kontrakter, henter ut opplysninger, svarer med kilder og følger opp funn, og den bruker eiendomskompetansen, deres egne data og markedsdata fra Arealstatistikk sammen. <a href=\"slik-hjelper-fenistra.html\">Se hvordan Fenistra hjelper →</a>"
+    answer: "Ja. AI er en viktig del av hvordan Fenistra gjør eiendomskunnskapen anvendelig. Den leser kontrakter, henter ut opplysninger, svarer med kilder og følger opp funn, og den bruker eiendomskompetansen, deres egne data og markedsdata fra Arealstatistikk sammen. <a href=\"losninger.html#slik-hjelper-fenistra\">Se hvordan Fenistra hjelper →</a>"
   },
   {
     keywords: ["kommer", "gang"],
@@ -206,7 +206,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["regnskap", "regnskapssystem", "kundereskontro", "fenistra regnskap"],
-    answer: "Fenistra har ikke en egen regnskapsløsning. Fenistra overfører fakturaer og posteringer til regnskapssystemet dere allerede bruker, gjennom integrasjoner. Fenistra er integrert med 19 regnskaps- og ERP-systemer, blant annet Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net. <a href=\"integrasjoner.html#regnskap\">Se regnskaps- og ERP-integrasjonene →</a>"
+    answer: "Fenistra har ikke en egen regnskapsløsning. Fenistra overfører fakturaer og posteringer til regnskapssystemet dere allerede bruker, gjennom integrasjoner. Fenistra er integrert via API med en rekke regnskaps- og ERP-systemer, blant annet Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net. <a href=\"integrasjoner.html#regnskap\">Se regnskaps- og ERP-integrasjonene →</a>"
   },
   {
     keywords: ["sikkerhetsstyring", "bankgaranti", "depositum", "sikkerhet", "fenistra sikkerhetsstyring"],
@@ -220,7 +220,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["regnskap integrasjon", "erp", "tripletex", "xledger", "poweroffice", "visma business nxt", "visma.net", "sap", "24sevenoffice", "unimicro", "microsoft dynamics", "regnskap", "integrasjon", "visma", "business", "microsoft", "dynamics"],
-    answer: "Fenistra er integrert med 26 systemer, blant dem 19 regnskaps- og ERP-systemer, i tillegg til systemer for årsoppgjør, rapportering, drift og kjøpesenter. Blant regnskaps- og ERP-systemene er Tripletex, Xledger, PowerOffice GO, Visma Business NXT, Visma.net, 24SevenOffice, UniMicro, Microsoft Dynamics, Visma Business, Visma Global, SAP, PowerOffice, Unit4 ERP, Infor M3 og flere. Bruker dere noe annet, ta kontakt, så ser vi på løsningen. <a href=\"integrasjoner.html#regnskap\">Les mer om Regnskap og ERP-integrasjoner →</a>"
+    answer: "Fenistra er integrert via API med en rekke systemer, blant dem regnskaps- og ERP-systemer, i tillegg til systemer for årsoppgjør, rapportering, drift og kjøpesenter. Blant regnskaps- og ERP-systemene er Tripletex, Xledger, PowerOffice GO, Visma Business NXT, Visma.net, 24SevenOffice, UniMicro, Microsoft Dynamics, Visma Business, Visma Global, SAP, PowerOffice, Unit4 ERP, Infor M3 og flere. Bruker dere noe annet, ta kontakt, så ser vi på løsningen. <a href=\"integrasjoner.html#regnskap\">Les mer om Regnskap og ERP-integrasjoner →</a>"
   },
   {
     keywords: ["årsoppgjør", "finale"],
@@ -228,7 +228,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["drift og vedlikehold", "properly", "famac", "vedlikeholdssystem", "drift", "vedlikehold"],
-    answer: "For drift og vedlikehold integreres Fenistra med Properly og FAMAC, slik at informasjon flyter mellom forvaltning og drift. <a href=\"integrasjoner.html#drift\">Les mer om Drift og vedlikehold-integrasjoner →</a>"
+    answer: "For drift og vedlikehold integreres Fenistra med Propely og FAMAC, slik at informasjon flyter mellom forvaltning og drift. <a href=\"integrasjoner.html#drift\">Les mer om Drift og vedlikehold-integrasjoner →</a>"
   },
   {
     keywords: ["kjøpesenterløsninger integrasjon", "viametrics", "imas", "ferdselstelling", "besøkstall", "kjøpesenterløsninger", "integrasjon"],
@@ -240,7 +240,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["hvor mange systemer", "alle integrasjoner", "integrasjoner oversikt", "integrasjoner"],
-    answer: "Fenistra er integrert med 26 systemer: 19 regnskaps- og ERP-systemer, i tillegg til systemer for årsoppgjør, rapportering og analyse, drift og vedlikehold og kjøpesenter. Se full oversikt på Integrasjoner-siden. <a href=\"integrasjoner.html\">Les mer om Integrasjoner →</a>"
+    answer: "Fenistra er integrert via API med en rekke systemer: regnskaps- og ERP-systemer, i tillegg til systemer for årsoppgjør, rapportering og analyse, drift og vedlikehold og kjøpesenter. Se full oversikt på Integrasjoner-siden. <a href=\"integrasjoner.html\">Les mer om Integrasjoner →</a>"
   },
   {
     keywords: ["kundehistorier", "referansekunder", "kundecase"],
@@ -252,7 +252,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["felix", "kunstig intelligens ki", "ai-satsing", "ki i eiendomsforvaltning", "kunstig", "intelligens", "eiendomsforvaltning"],
-    answer: "Eiendomsforvaltning handler om store mengder data på tvers av kontrakter, arealer og økonomi. Det er nettopp den typen data AI er godt egnet til å strukturere, tolke og varsle på, når det gjøres riktig. <a href=\"slik-hjelper-fenistra.html\">Les mer om AI hos Fenistra →</a>"
+    answer: "Eiendomsforvaltning handler om store mengder data på tvers av kontrakter, arealer og økonomi. Det er nettopp den typen data AI er godt egnet til å strukturere, tolke og varsle på, når det gjøres riktig. <a href=\"losninger.html#slik-hjelper-fenistra\">Les mer om AI hos Fenistra →</a>"
   },
   {
     keywords: ["om fenistra historie", "hvem er fenistra", "selskapet fenistra", "historie", "selskapet"],
@@ -260,7 +260,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["ansatte", "teamet", "menneskene bak fenistra", "kundeteam", "produktteam", "menneskene"],
-    answer: "Fenistra har egne team for kundesuksess og produktutvikling. Se menneskene bak Fenistra, med lenker til kundeteamet og produktteamet, på Ansatte-siden. <a href=\"om-oss/ansatte.html\">Les mer om Ansatte →</a>"
+    answer: "Fenistra har egne team for kundesuksess og produktutvikling. Ta gjerne kontakt, så setter vi dere i forbindelse med riktig person. <a href=\"kontakt.html\">Kontakt oss →</a>"
   },
   {
     keywords: ["høegh eiendom", "høegh"],
@@ -344,11 +344,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kundeteamet kontakt", "hvem kan jeg kontakte kunde", "brukerstøtte kontakt person", "head of customer success"],
-    answer: "Kundeteamet ledes av Trygve Vardenær, Head of Customers and Growth (trygve.vardenar@visma.com). I teamet finner du også Kristian Lien (Sales Director), kundekontaktene Frida Holte, Beate Paulsen og Patrick Eriksen, brukerstøtte ved Henning Aas, og konsulentene Marius Sømme, Kristin Falch og Rokhsar Zendehbizadeh. <a href=\"om-oss/ansatte.html#kundeteam\">Les mer om Kundeteamet →</a>"
+    answer: "Kundeteamet ledes av Trygve Vardenær, Head of Customers and Growth (trygve.vardenar@visma.com). I teamet finner du også Kristian Lien (Sales Director), kundekontaktene Frida Holte, Beate Paulsen og Patrick Eriksen, brukerstøtte ved Henning Aas, og konsulentene Marius Sømme, Kristin Falch og Rokhsar Zendehbizadeh. <a href=\"kontakt.html\">Les mer om Kundeteamet →</a>"
   },
   {
     keywords: ["produktteamet kontakt", "hvem lager fenistra", "joakim howlid", "daglig leder fenistra"],
-    answer: "Produktteamet ledes av Joakim Howlid, daglig leder i Fenistra. Teamet består ellers av produktledelse, UX-designere og et utviklingsteam på rundt ti personer som bygger og videreutvikler løsningene. <a href=\"om-oss/ansatte.html#produktteam\">Les mer om Produktteamet →</a>"
+    answer: "Produktteamet ledes av Joakim Howlid, daglig leder i Fenistra. Teamet består ellers av produktledelse, UX-designere og et utviklingsteam på rundt ti personer som bygger og videreutvikler løsningene. <a href=\"kontakt.html\">Les mer om Produktteamet →</a>"
   },
   {
     keywords: ["personvern", "personopplysninger", "gdpr", "personvernerklæring"],
@@ -380,7 +380,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["integrer", "integrasjon", "regnskapssystem", "tripletex", "visma", "xledger", "poweroffice", "sap", "erp", "24sevenoffice"],
-    answer: "Sannsynligvis ja! Fenistra er integrert med 26 systemer, blant dem 19 regnskaps- og ERP-systemer, i tillegg til systemer for årsoppgjør, rapportering, drift og kjøpesenter. Blant regnskapssystemene er Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net. <a href=\"integrasjoner.html#regnskap\">Les mer om Regnskap og ERP-integrasjoner →</a>"
+    answer: "Sannsynligvis ja! Fenistra er integrert via API med en rekke systemer, blant dem regnskaps- og ERP-systemer, i tillegg til systemer for årsoppgjør, rapportering, drift og kjøpesenter. Blant regnskapssystemene er Tripletex, Xledger, PowerOffice GO, Visma Business NXT og Visma.net. <a href=\"integrasjoner.html#regnskap\">Les mer om Regnskap og ERP-integrasjoner →</a>"
   },
   {
     keywords: ["løsning", "løsninger", "hva kan fenistra"],
@@ -412,7 +412,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kunstig intelligens", "felix", " ai ", "ai-", " ki ", "ki-"],
-    answer: "Fenistra bruker AI til å svare med kilder, si ifra om det som krever oppmerksomhet og gjøre jobben i prosesser som utleie fra lead til innflytting. Det kommersielle arbeidet gjøres i Felix fra Fenistra, applikasjonen for utleie og oppfølging, som henger sammen med Fenistra. <a href=\"slik-hjelper-fenistra.html\">Se hvordan Fenistra hjelper →</a>"
+    answer: "Fenistra bruker AI til å svare med kilder, si ifra om det som krever oppmerksomhet og gjøre jobben i prosesser som utleie fra lead til innflytting. Det kommersielle arbeidet gjøres i Felix fra Fenistra, applikasjonen for utleie og oppfølging, som henger sammen med Fenistra. <a href=\"losninger.html#slik-hjelper-fenistra\">Se hvordan Fenistra hjelper →</a>"
   },
   {
     keywords: ["kunder", "referanse", "case", "hvem bruker"],

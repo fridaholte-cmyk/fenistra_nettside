@@ -159,7 +159,7 @@
   .mini-card{background:var(--paper);padding:26px;transition:background .2s ease;}
   .mini-card:hover{background:var(--paper-2);}
   .mini-card .badge{margin-bottom:12px;}
-  .mini-card h3{font-size:15.5px;font-weight:600;color:var(--ink);margin-bottom:6px;}
+  .mini-card h3, .mini-card h4{font-size:15.5px;font-weight:600;color:var(--ink);margin-bottom:6px;}
   .mini-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
 
   .cta-band{background:var(--berry);background-image:radial-gradient(circle at 15% 20%, rgba(255,255,255,0.14), transparent 40%), radial-gradient(circle at 85% 80%, rgba(0,0,0,0.12), transparent 45%);border-radius:24px;padding:64px 56px;display:flex;align-items:center;justify-content:space-between;gap:32px;color:#fff;}
@@ -361,6 +361,80 @@
     .jobs-grid{grid-template-columns:1fr;}
     .depth-section{padding:64px 0;}
   }
+
+  /* ---- samlet fra Alt i Fenistra, Slik hjelper vi og Kom i gang (nov. 2026) ---- */
+  .af-hero{padding:clamp(48px, calc(2.25rem + 2.5vw), 72px) 0 clamp(32px, calc(1.575rem + 1.75vw), 48px); color:var(--ink);}
+  .af-hero h1{font-family:var(--font-display); font-weight:300; font-size:clamp(36px, calc(1.89rem + 2.1vw), 58px); line-height:1.05; letter-spacing:-0.03em; max-width:18ch; margin-bottom:22px;}
+  .af-lead{font-size:clamp(17px, calc(0.585rem + 0.65vw), 20px); line-height:1.55; color:var(--ink-soft); max-width:60ch;}
+  .af-toc{display:flex; flex-wrap:wrap; gap:8px; margin-top:28px; list-style:none; padding:0;}
+  .af-toc a{display:inline-block; font-family:var(--font-mono); font-size:12.5px; border:1px solid var(--line); background:#fff; padding:6px 12px; color:var(--ink); transition:border-color .2s ease;}
+  .af-toc a:hover{border-color:var(--ink);}
+  .af-group{padding:var(--section-y-sm) 0; border-top:1px solid var(--line); scroll-margin-top:76px;}
+  .af-grid{display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr); gap:clamp(32px, calc(2.25rem + 2.5vw), 72px);}
+  .af-h{font-family:var(--font-display); font-weight:300; font-size:clamp(26px, calc(1.08rem + 1.2vw), 36px); letter-spacing:-0.02em; line-height:1.1; color:var(--ink); margin-bottom:12px;}
+  .af-intro{font-size:16px; line-height:1.6; color:var(--ink-soft); margin-bottom:18px; max-width:36ch;}
+  .af-link{display:inline-block; font-family:var(--font-mono); font-size:12.5px; color:var(--berry-deep); border-bottom:1px solid currentColor; padding-bottom:2px;}
+  .af-parts{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 32px; margin:0;}
+  .af-part{padding:18px 0; border-top:1px solid var(--line);}
+  .af-part:nth-child(-n+2){border-top:none; padding-top:0;}
+  .af-part dt{font-size:16.5px; font-weight:600; color:var(--ink); margin-bottom:6px;}
+  .af-part dd{margin:0; font-size:15px; line-height:1.6; color:var(--ink-soft);}
+  .af-end{padding:var(--section-y-sm) 0 var(--section-y); border-top:1px solid var(--line);}
+  .af-end p{font-size:16.5px; color:var(--ink-soft); max-width:60ch; margin-bottom:22px;}
+  .af-end .hp-actions{display:flex; flex-wrap:wrap; gap:14px;}
+  @media (max-width:900px){
+    .af-grid{grid-template-columns:1fr; gap:20px;}
+    .af-parts{grid-template-columns:1fr;}
+    .af-part:nth-child(2){border-top:1px solid var(--line); padding-top:18px;}
+  }
+  .ki-fenistra{padding:20px 0 90px;border-top:1px solid var(--line);}
+  .ki-fenistra > .wrap > .section-head{padding-top:70px;margin-bottom:0;}
+  .ki-fenistra .feature-copy .ki-h{font-family:var(--font-display);font-weight:300;font-size:clamp(24px, calc(1.17rem + 1.3vw), 32px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:16px;}
+  .ki-fenistra .feature-copy > p{color:var(--ink-soft);font-size:16px;margin-bottom:18px;max-width:520px;}
+  .ki-fenistra .feature-list{margin-bottom:0;}
+  .ki-num{display:block;font-family:var(--font-mono);font-size:13px;color:var(--berry);margin-bottom:10px;}
+  .ki-steps{background:var(--paper-2);padding:32px;min-height:0;}
+  .ki-steps ol{list-style:none;display:flex;flex-direction:column;gap:18px;}
+  .ki-steps li{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;}
+  .ki-steps li > span{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--berry);color:#fff;font-family:var(--font-mono);font-size:13px;display:flex;align-items:center;justify-content:center;}
+  .ki-steps strong{display:block;font-size:15px;color:var(--ink);margin-bottom:2px;}
+  .ki-steps p{font-size:13.5px;color:var(--ink-soft);line-height:1.45;}
+  @media (max-width:980px){
+    .ki-steps-road{grid-template-columns:1fr 1fr;row-gap:32px;}
+  }
+  @media (max-width:600px){
+    .ki-steps-road{grid-template-columns:1fr;}
+    .ki-shot{padding:20px;}
+    .ki-steps{padding:18px;}
+  }
+  .legal-content .lc-h{font-family:var(--font-display);font-weight:300;font-size:24px;letter-spacing:-0.01em;color:var(--ink);margin:36px 0 14px;}
+  .legal-content .lc-h:first-child{margin-top:0;}
+  .legal-content h3{font-size:17px;font-weight:600;color:var(--ink);margin:28px 0 10px;}
+  .legal-content p{color:var(--ink-soft);font-size:15.5px;line-height:1.65;margin-bottom:14px;max-width:680px;}
+  .legal-content ul{margin:0 0 16px;padding-left:20px;max-width:680px;}
+  .legal-content li{color:var(--ink-soft);font-size:15.5px;line-height:1.6;margin-bottom:6px;}
+  .legal-content .updated{font-family:var(--font-mono);font-size:12.5px;color:var(--ink-soft);margin-top:32px;padding-top:20px;border-top:1px solid var(--line);}
+  .legal-content a:not(.btn){color:var(--berry-deep);font-weight:600;}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 20px;}
+  .step-card{background:var(--paper-2);border:1px solid var(--line);border-radius:16px;padding:28px 26px;}
+  .step-num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--berry);color:#fff;font-family:var(--font-mono);font-size:14px;margin-bottom:14px;}
+  .step-card h3{font-size:17px;font-weight:600;color:var(--ink);margin:0 0 8px;}
+  .step-card p{font-size:14.5px;color:var(--ink-soft);line-height:1.55;margin:0;}
+  @media (max-width:860px){ .steps{grid-template-columns:1fr;} }
+  /* Én side: innholdsliste og seksjoner */
+  .lo-toc{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:28px 0 0;padding:0;}
+  .lo-toc a{display:inline-block;font-family:var(--font-mono);font-size:12.5px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;transition:border-color .2s ease, background .2s ease;}
+  .lo-toc a:hover{border-color:var(--plum);background:var(--paper-2);}
+  .lo-sec{scroll-margin-top:84px;}
+  .lo-sec-head{padding:72px 0 8px;}
+  .lo-sec-head .lo-kicker{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--plum);margin:0 0 12px;}
+  .lo-sec-head h2{font-family:var(--font-display);font-weight:300;font-size:clamp(28px, calc(1.4rem + 1.6vw), 42px);letter-spacing:-0.02em;color:var(--ink);margin:0 0 12px;max-width:820px;}
+  .lo-sec-head p{font-size:17px;color:var(--ink-soft);line-height:1.6;max-width:760px;margin:0;}
+  .lo-cards{gap:16px;background:none;border:0;border-radius:0;overflow:visible;}
+  .lo-cards .mini-card{border:1px solid var(--line);border-radius:var(--radius);}
+  .lo-int{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;padding:32px 36px;border:1px solid var(--line);border-radius:16px;background:#fff;}
+  .lo-int p{margin:0;font-size:16px;color:var(--ink-soft);max-width:620px;line-height:1.6;}
+  .section-head .af-h{margin-bottom:10px;}
 </style>
 <div class="wrap">
   <div class="breadcrumb">
@@ -372,110 +446,278 @@
 <section class="mp-hero">
   <div class="wrap">
     <h1>Én plattform for hele forvaltningen</h1>
-    <p class="mp-lead">Kontrakt, økonomi, utleie og rapportering i ett system, for porteføljer med mange selskaper, kontraktstyper og regler. Fenistra svarer, sier ifra og gjør jobben.</p>
+    <p class="mp-lead">Kontrakt, økonomi, utleie og rapportering i ett system, for porteføljer med mange selskaper, kontraktstyper og regler. Fenistra svarer, sier ifra og gjør jobben. Her finner du alt på ett sted: hva Fenistra gjør, hva som er bygget inn, og hvordan dere kommer i gang.</p>
     <div class="mp-actions">
       <a routerLink="/book-et-mote" fragment="skjema" class="btn btn-primary">Book et møte</a>
     </div>
+    <ul class="lo-toc" aria-label="Innhold på siden">
+      <li><a routerLink="/losninger" fragment="prosessene">Prosessene</a></li>
+      <li><a routerLink="/losninger" fragment="alt-i-fenistra">Alt som er bygget inn</a></li>
+      <li><a routerLink="/losninger" fragment="slik-hjelper-fenistra">Slik hjelper Fenistra</a></li>
+      <li><a routerLink="/losninger" fragment="integrasjoner">Integrasjoner</a></li>
+      <li><a routerLink="/losninger" fragment="kom-i-gang">Kom i gang</a></li>
+    </ul>
   </div>
 </section>
 
-<section class="jobs-section">
+<!-- ================= PROSESSENE ================= -->
+<section class="jobs-section lo-sec" id="prosessene" aria-labelledby="prosessene-tittel">
   <div class="wrap">
+    <h2 id="prosessene-tittel" class="sr-only">Prosessene</h2>
     <div class="jobs-grid">
       <div class="job-card">
-        <h2><a routerLink="/losninger/fra-lead-til-innflytting" class="job-link">Fra lead til innflytting <span aria-hidden="true">→</span></a></h2>
+        <h3 aria-level="2"><a routerLink="/losninger/fra-lead-til-innflytting" class="job-link">Fra ledig lokale til signert kontrakt <span aria-hidden="true">→</span></a></h3>
         <p>Fra første henvendelse via signert kontrakt til innflytting, uten dobbeltregistrering.</p>
         <div class="related-chips"><span>Digital signering</span><span>Protokoller</span></div>
       </div>
       <div class="job-card">
-        <h2><a routerLink="/losninger/kontroll-pa-portefoljen" class="job-link">Følge opp kontrakter og leietakere <span aria-hidden="true">→</span></a></h2>
+        <h3><a routerLink="/losninger/kontroll-pa-portefoljen" class="job-link">Følge opp kontrakter og leietakere <span aria-hidden="true">→</span></a></h3>
         <p>Hver kontrakt, hver sikkerhet og hver frist samlet, med varsel før noe glipper.</p>
         <div class="related-chips"><span>Kontrakter</span><span>Sikkerhetsstyring</span><span>Dokument</span><span>Digital signering</span><span>Protokoller</span></div>
       </div>
       <div class="job-card">
-        <h2><a routerLink="/losninger/fakturering-og-avregning" class="job-link">Fakturering og avregning <span aria-hidden="true">→</span></a></h2>
+        <h3><a routerLink="/losninger/fakturering-og-avregning" class="job-link">Fra kontrakt til regnskap <span aria-hidden="true">→</span></a></h3>
         <p>Registrer én gang, og la systemet regulere, fakturere og avregne gjennom hele leieforholdet.</p>
         <div class="related-chips"><span>Fakturering</span><span>Felleskostnader</span><span>Omsetningsavregning</span></div>
       </div>
       <div class="job-card">
-        <h2><a routerLink="/losninger/mva-og-regelverk" class="job-link">MVA og regelverk <span aria-hidden="true">→</span></a></h2>
+        <h3><a routerLink="/losninger/mva-og-regelverk" class="job-link">MVA og regelverk <span aria-hidden="true">→</span></a></h3>
         <p>MVA-erklæringer, justeringsforpliktelser og dokumentasjonen revisor spør etter.</p>
         <div class="related-chips"><span>MVA-erklæring</span><span>Justering</span></div>
       </div>
       <div class="job-card">
-        <h2><a routerLink="/losninger/rapport-og-analyse" class="job-link">Se mulighetene i porteføljen <span aria-hidden="true">→</span></a></h2>
+        <h3><a routerLink="/losninger/rapport-og-analyse" class="job-link">Se mulighetene i porteføljen <span aria-hidden="true">→</span></a></h3>
         <p>Nøkkeltall, budsjett og verdier rett fra kildedataene, klare for ledelse og styre.</p>
         <div class="related-chips"><span>Rapportering</span><span>Inntektsbudsjett</span><span>Formuesverdsettelse</span><span>Arealberegning</span></div>
       </div>
       <div class="job-card">
-        <h2><a routerLink="/losninger/kjopesenter" class="job-link">Drive kjøpesenter <span aria-hidden="true">→</span></a></h2>
+        <h3><a routerLink="/losninger/kjopesenter" class="job-link">Drive kjøpesenter <span aria-hidden="true">→</span></a></h3>
         <p>Omsetning, besøk og oppfølging av butikkene, samlet i senterleders viktigste verktøy.</p>
-        <div class="related-chips"><a routerLink="/losninger/kjopesenter">Kjøpesenter</a><span>Revisorbekreftet omsetning</span></div>
-      </div>
-      <div class="job-card">
-        <h2><a routerLink="/integrasjoner" class="job-link">Integrasjoner <span aria-hidden="true">→</span></a></h2>
-        <p>26 integrerte systemer, blant dem 19 regnskaps- og ERP-systemer, og et åpent API.</p>
-        <div class="related-chips"><a routerLink="/integrasjoner" fragment="regnskap">Regnskap og ERP</a><a routerLink="/integrasjoner">Alle integrasjoner</a></div>
+        <div class="related-chips"><span>Kjøpesenter</span><span>Revisorbekreftet omsetning</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="related-section" style="background:var(--paper-2);">
-  <div class="wrap">
-    <div class="feature-row" style="padding-top:0;">
+<!-- ================= ALT SOM ER BYGGET INN ================= -->
+<section class="lo-sec" id="alt-i-fenistra" aria-labelledby="alt-tittel" style="padding:0;">
+  <div class="wrap lo-sec-head">
+    <p class="lo-kicker">Alt i Fenistra</p>
+    <h2 id="alt-tittel">Alt som er bygget inn i Fenistra</h2>
+    <p>Fenistra er ett forvaltningssystem for næringseiendom, ikke en samling løse moduler. Her er delene samlet på ett sted, ordnet etter det dere skal få gjort. Alt bygger på de samme dataene, så det dere registrerer én gang, følger med i kontrakt, fakturering, regnskap og rapportering.</p>
+  </div>
+  @for (g of grupper; track g.id) {
+    <div class="af-group" [id]="g.id" [attr.aria-labelledby]="g.id + '-tittel'">
+      <div class="wrap af-grid">
+        <div>
+          <h3 [id]="g.id + '-tittel'" class="af-h">{{ g.title }}</h3>
+          <p class="af-intro">{{ g.intro }}</p>
+          <a [routerLink]="g.route" class="af-link">{{ g.linkText }} →</a>
+        </div>
+        <dl class="af-parts">
+          @for (d of g.deler; track d.title) {
+            <div class="af-part">
+              <dt>{{ d.title }}</dt>
+              <dd>{{ d.text }}</dd>
+            </div>
+          }
+        </dl>
+      </div>
+    </div>
+  }
+</section>
+
+<!-- ================= SLIK HJELPER FENISTRA ================= -->
+<section class="lo-sec" id="slik-hjelper-fenistra" aria-labelledby="hjelper-tittel" style="padding:0;">
+  <div class="wrap lo-sec-head">
+    <p class="lo-kicker">Slik hjelper Fenistra</p>
+    <h2 id="hjelper-tittel">Fenistra svarer, sier ifra og gjør jobben</h2>
+    <p>Fenistra kan eiendom. Kunnskapen ligger i fagmiljøet, i markedsdata fra <a href="https://arealstatistikk.no/" target="_blank" rel="noopener">Arealstatistikk</a> og i AI som bruker begge deler sammen med kontraktene deres. Slik blir den nyttig i hverdagen.</p>
+  </div>
+  <div class="module-body" style="padding-top:32px;">
+    <div class="wrap">
+      <div class="section-head">
+        <h3 class="af-h">Tre ting som virker sammen</h3>
+        <p>Programvare blir enklere å lage. Det som tar tid å bygge, er kunnskapen om faget og markedet. Den er det vi gjør anvendelig.</p>
+      </div>
+      <div class="mini-grid lo-cards">
+        <div class="mini-card">
+          <h4>Faget</h4>
+          <p>Fenistras løsninger har vært utviklet siden 1994. Vi kjenner felleskostnader, MVA, leieregulering og kjøpesentermodeller, og vi gjør forutsetningene tydelige, så dere kan følge vurderingen.</p>
+        </div>
+        <div class="mini-card">
+          <h4>Markedet</h4>
+          <p>Markedsdata fra <a href="https://arealstatistikk.no/" target="_blank" rel="noopener">Arealstatistikk</a>, som har bygget databasen sin siden 2004, er integrert i løsningene. Dere vurderer leien mot relevant sone og leietype der arbeidet skjer. Dataene erstatter ikke en faglig vurdering, men gir den et bedre utgangspunkt.</p>
+        </div>
+        <div class="mini-card">
+          <h4>AI som bruker faget</h4>
+          <p>AI leser kontrakter, henter ut opplysninger, svarer med kilder og følger opp funn. Fordi kontrakt, areal og økonomi allerede er koblet sammen i Fenistra, har den strukturerte data å bygge på.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ki-fenistra" id="ki-i-fenistra">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h3 class="af-h">Bygget inn i Fenistra i dag</h3>
+        <p>To eksempler på hvordan kunnskapen blir nyttig: svar når dere spør, og kontrakter som leses inn for dere.</p>
+      </div>
+      <div class="feature-row reveal">
       <div class="feature-copy">
-        <h2 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px, calc(1.26rem + 1.4vw), 32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);">Fenistra Kjøpesenter</h2>
-        <p style="color:var(--ink-soft); font-size:16px; margin-bottom:16px; max-width:520px;">Kjøpesenter er en stor del av det Fenistra leverer, senterleders viktigste verktøy, med fokus på butikk, aktiviteter og løpende omsetningsrapportering. Løsningen er tilgjengelig uansett hvor senterleder befinner seg.</p>
-        <ul class="feature-list" style="margin-bottom:28px;">
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Oversiktlig dashboard for omsetning og utvikling</li>
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Automatisk purring på manglende omsetningsrapportering</li>
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Bransjetilpassede rapporter, inkludert Kvarud Analyse</li>
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Besøksregistrering, salgsaktiviteter og værdata</li>
+        <span class="ki-num">01</span>
+        <h4 class="ki-h">Svarer: bare spør</h4>
+        <p>KI-assistenten er med deg uansett hvor du er i Fenistra. Still spørsmål med vanlige ord, og få svar med forklaring, basert på deres egne data.</p>
+        <ul class="feature-list">
+          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="var(--berry-light)"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="var(--berry)" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Spør direkte om en kontrakt, en leietaker eller porteføljen som helhet</li>
+          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="var(--berry-light)"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="var(--berry)" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Be om oppsummeringer, innsikt, analyse og råd</li>
+          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="var(--berry-light)"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="var(--berry)" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Få hjelp til å finne frem i systemet, eller spør «hvordan gjør jeg dette?»</li>
         </ul>
-        <a routerLink="/losninger/kjopesenter" class="btn btn-primary">Se løsningen →</a>
       </div>
-      <div class="feature-visual" style="background:#fff; padding:32px; display:flex; flex-direction:column; gap:18px; justify-content:center;">
-        <div style="display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid var(--line); padding-bottom:14px;">
-          <span style="font-family:var(--font-mono); font-size:12.5px; color:var(--ink-soft);">Omsetningsutvikling</span>
-          <span style="font-family:var(--font-display); font-size:22px; font-weight:300; color:var(--berry-deep);">+4,2 %</span>
-        </div>
-        <div style="display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid var(--line); padding-bottom:14px;">
-          <span style="font-family:var(--font-mono); font-size:12.5px; color:var(--ink-soft);">Besøkstall</span>
-          <span style="font-family:var(--font-display); font-size:22px; font-weight:300; color:var(--ink);">Live</span>
-        </div>
-        <div style="display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid var(--line); padding-bottom:14px;">
-          <span style="font-family:var(--font-mono); font-size:12.5px; color:var(--ink-soft);">Manglende rapportering</span>
-          <span style="font-family:var(--font-display); font-size:22px; font-weight:300; color:var(--ink);">Auto-purring</span>
-        </div>
-        <div style="display:flex; justify-content:space-between; align-items:baseline;">
-          <span style="font-family:var(--font-mono); font-size:12.5px; color:var(--ink-soft);">Rapportformat</span>
-          <span style="font-family:var(--font-display); font-size:22px; font-weight:300; color:var(--ink);">PDF / Excel</span>
-        </div>
+      <app-ki-chat-demo></app-ki-chat-demo>
+    </div>
+
+    <div class="feature-row reverse reveal">
+      <div class="feature-copy">
+        <span class="ki-num">02</span>
+        <h4 class="ki-h">Gjør jobben: kontrakter som leses inn for dere</h4>
+        <p>Dra og slipp kontrakten rett inn i Fenistra. AI leser dokumentet og fyller ut alle feltene for deg. Du ser over og kontrollerer, og så er kontrakten klar for fakturering og forvaltning.</p>
+        <p>Det gjør det raskt å komme i gang med Fenistra fra start, og enkelt å få nye kontrakter inn i systemet når de signeres.</p>
       </div>
+      <div class="feature-visual ki-steps" aria-label="Slik fungerer AI-opplasting">
+        <ol>
+          <li><span>1</span><div><strong>Last opp kontrakten</strong><p>Dra og slipp PDF-en rett inn i Fenistra.</p></div></li>
+          <li><span>2</span><div><strong>AI fyller ut feltene</strong><p>AI leser kontrakten og fyller ut feltene for deg.</p></div></li>
+          <li><span>3</span><div><strong>Du kontrollerer</strong><p>Se over forslaget og gjør eventuelle endringer før du lagrer.</p></div></li>
+          <li><span>4</span><div><strong>Klar til bruk</strong><p>Kontrakten er klar for fakturering og forvaltning.</p></div></li>
+        </ol>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="related-section" id="gjor-jobben" style="scroll-margin-top:76px;background:var(--plum-deep);border-top:none;margin-top:-1px;">
+  <div class="wrap" style="color:#fff;">
+    <div class="feature-row" style="padding:0;">
+      <div class="feature-copy">
+        <h3 style="font-family:var(--font-display);font-weight:300;font-size:clamp(26px, calc(1.35rem + 1.5vw), 38px);letter-spacing:-0.02em;margin-bottom:18px;color:#fff;">Sier ifra og gjør jobben, også i det kommersielle arbeidet</h3>
+        <p style="font-size:16.5px;color:rgba(255,255,255,.75);margin-bottom:24px;">Fenistra følger kontraktene, leietakerne og leadsene deres, sier ifra når noe krever oppmerksomhet, og fører arbeidet videre fra første henvendelse til signert kontrakt og innflytting.</p>
+        <ul class="feature-list" style="margin-bottom:28px;">
+          <li style="color:rgba(255,255,255,.85);"><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="rgba(255,255,255,.12)"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#fff" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Frister som følges opp: reguleringer, oppsigelser og opsjoner sjekkes hver natt, og dere får påminnelser til fristen er håndtert</li>
+          <li style="color:rgba(255,255,255,.85);"><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="rgba(255,255,255,.12)"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#fff" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Helsescore fra 0 til 100 på hver kontrakt, med oversikt over hva som mangler, som depositum eller utløpt sikkerhet</li>
+          <li style="color:rgba(255,255,255,.85);"><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="rgba(255,255,255,.12)"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#fff" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>CRM og protokoller på mobilen: logg møter, ta bilder og fyll ut befaringer, også uten nett</li>
+          <li style="color:rgba(255,255,255,.85);"><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="rgba(255,255,255,.12)"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#fff" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Spør med vanlige ord, og få svar med grafer, tabeller og kildehenvisninger</li>
+        </ul>
+        <p style="font-size:14.5px;color:rgba(255,255,255,.6);margin-bottom:32px;max-width:480px;">Utleiearbeidet, oppfølgingen og det mobile arbeidet henger sammen med resten av Fenistra, så det som registreres, følger saken videre til forvaltning og fakturering.</p>
+        <a routerLink="/losninger/fra-lead-til-innflytting" class="btn btn-on-dark">Se prosessen fra ledig lokale til signert kontrakt →</a>
+      </div>
+      <div class="feature-visual cc-on-dark" style="background:transparent;padding:0;box-shadow:none;">
+        <app-concept-card kind="kontrakt"></app-concept-card>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ================= INTEGRASJONER ================= -->
+<section class="lo-sec" id="integrasjoner" aria-labelledby="int-tittel" style="padding:0;">
+  <div class="wrap lo-sec-head">
+    <p class="lo-kicker">Integrasjoner</p>
+    <h2 id="int-tittel">Integrert i deres økosystem</h2>
+  </div>
+  <div class="wrap" style="padding-top:24px;">
+    <div class="lo-int">
+      <p>Vi kobler oss via API på systemene dere allerede bruker, fra regnskap og ERP til årsoppgjør, rapportering, drift og kjøpesenter. Fakturaer og posteringer overføres til regnskapssystemet dere bruker. Bruker dere et system som ikke står på listen, finnes det som regel en løsning.</p>
+      <a routerLink="/integrasjoner" class="btn btn-primary">Se alle integrasjoner</a>
     </div>
   </div>
 </section>
 
-<section class="depth-section">
-  <div class="wrap depth-grid">
-    <div>
-      <h2>Fenistra kan eiendom, også når porteføljen er krevende</h2>
-      <p>Flere selskaper, mange kontraktstyper, omsetningsleie, felleskostnader og MVA i samme portefølje. Det er her fagkunnskapen gjør forskjellen, og den har vi bygget inn i løsningene siden 1994.</p>
-    </div>
-    <div class="price-card">
-      <h3>Bygget på faget</h3>
-      <ul>
-        <li>Utviklet siden 1994</li>
-        <li>170+ eiendomsforvaltere forvalter med Fenistra</li>
-        <li>26 integrerte systemer, blant dem 19 regnskaps- og ERP-systemer</li>
-      </ul>
-      <div class="price-actions">
-        <a routerLink="/book-et-mote" fragment="skjema" class="btn btn-on-dark">Book et møte</a>
-        <a routerLink="/kunder" class="price-link">Se kundehistoriene →</a>
+<!-- ================= KOM I GANG ================= -->
+<section class="lo-sec" id="kom-i-gang" aria-labelledby="start-tittel" style="padding:0;">
+  <div class="wrap lo-sec-head">
+    <p class="lo-kicker">Kom i gang</p>
+    <h2 id="start-tittel">Et dypt system som er raskt å komme i gang med</h2>
+    <p>Fenistra er bygget for komplekse porteføljer, men oppstarten er enkel. Den går på tre steg: du laster opp kontraktene, vi kobler Fenistra til regnskapsprogrammet deres, og så er dere i gang.</p>
+  </div>
+  <div class="module-body" style="padding-top:32px;">
+  <div class="wrap">
+    <div class="steps reveal">
+      <div class="step-card">
+        <span class="step-num">1</span>
+        <h3>Last opp kontraktene</h3>
+        <p>Dra og slipp kontraktene rett inn i Fenistra. AI leser dokumentene og fyller ut feltene, slik at hele porteføljen kan registreres raskt.</p>
       </div>
+      <div class="step-card">
+        <span class="step-num">2</span>
+        <h3>Koble til regnskapet</h3>
+        <p>Fenistra kobles mot regnskapsprogrammet dere allerede bruker, slik at fakturering og bokføring henger sammen uten dobbeltregistrering.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-num">3</span>
+        <h3>Dere er live</h3>
+        <p>Porteføljen er på plass, og dere kan forvalte, fakturere, avregne og rapportere i Fenistra.</p>
+      </div>
+    </div>
+
+    <div class="module-grid-layout">
+      <div class="module-main reveal legal-content">
+        <h3 class="lc-h">Slik kommer kontraktene inn</h3>
+        <p>Den tyngste jobben ved et systembytte er vanligvis å få kontraktene registrert. I Fenistra gjøres det med AI-opplasting:</p>
+        <ul>
+          <li>Du drar og slipper kontrakten inn i Fenistra, én eller mange om gangen.</li>
+          <li>AI leser dokumentet og fyller ut feltene for deg.</li>
+          <li>Du ser over forslaget og retter det som eventuelt er feil.</li>
+          <li>Kontrakten er klar for fakturering og forvaltning.</li>
+        </ul>
+        <p>Det samme gjelder senere: når nye kontrakter signeres, er de raskt på plass i systemet. <a routerLink="/losninger" fragment="ki-i-fenistra" style="color:var(--berry-deep); font-weight:600;">Les mer om AI i Fenistra</a>.</p>
+        <p>Har dere data som ikke ligger i kontraktene, for eksempel akontobeløp, fordelingsnøkler for felleskostnader, depositum og garantier eller historikk fra dagens system, tar vi en gjennomgang av det sammen før oppstart. <a routerLink="/kontakt" style="color:var(--berry-deep); font-weight:600;">Ta kontakt</a>, så ser vi på hva dere har.</p>
+
+        <h3 class="lc-h">Kobling mot regnskapssystemet</h3>
+        <p>Fenistra er integrert via API med en rekke systemer, blant dem regnskaps- og ERP-systemer. Fakturaer og posteringer overføres til regnskapssystemet dere allerede bruker.</p>
+        <p>Bruker dere et system som ikke står på listen, finnes det som regel en løsning. <a routerLink="/integrasjoner" style="color:var(--berry-deep); font-weight:600;">Se alle integrasjoner</a>.</p>
+
+
+        <h3 class="lc-h">Hvem hjelper dere</h3>
+        <p>Kundeteamet følger dere opp fra første møte og videre i hele kundeforholdet. Teamet består av kundekontakter, brukerstøtte og fagkonsulenter med lang erfaring fra eiendomsforvaltning.</p>
+
+        <h3 class="lc-h">Vanlige spørsmål før oppstart</h3>
+        <ul>
+          <li><a routerLink="/integrasjoner" style="color:var(--berry-deep); font-weight:600;">Kan Fenistra integreres med vårt regnskapssystem?</a></li>
+          <li><a routerLink="/losninger/kontroll-pa-portefoljen" style="color:var(--berry-deep); font-weight:600;">Kan Fenistra håndtere spesielle kontrakter og behov?</a></li>
+          <li><a routerLink="/datasikkerhet" style="color:var(--berry-deep); font-weight:600;">Hvordan ivaretas datasikkerheten?</a></li>
+        </ul>
+      </div>
+      <aside class="side-card reveal">
+        <div class="field">
+          <h4 aria-level="2">Kort fortalt</h4>
+          <p>Tre steg: last opp kontraktene, koble til regnskapet, og dere er live.</p>
+        </div>
+        <div class="field">
+          <h4 aria-level="2">Oppstart</h4>
+          <p>Ingen betalte konsulenttimer.</p>
+        </div>
+        <div class="field">
+          <h4 aria-level="2">Relaterte sider</h4>
+          <div class="related-chips">
+            <a routerLink="/integrasjoner">Integrasjoner</a>
+            <a routerLink="/losninger" fragment="slik-hjelper-fenistra">AI i Fenistra</a>
+          </div>
+        </div>
+        <div class="field">
+          <h4 aria-level="2">Spørsmål om oppstart?</h4>
+          <p><a href="mailto:support.fenistra&#64;visma.com" style="color:var(--berry-deep); font-weight:600;">support.fenistra&#64;visma.com</a></p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="cta-wrap">
+  <div class="cta-band reveal">
+    <h2>Klare for å komme i gang?</h2>
+    <div class="actions">
+      <a routerLink="/book-et-mote" fragment="skjema" class="btn btn-on-dark">Book et møte</a>
+      <a routerLink="/kontakt" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Kontakt oss</a>
     </div>
   </div>
 </section>
-
-<app-proof-cta text="Usikker på hva dere trenger? Vi viser hvordan Fenistra passer deres portefølje."></app-proof-cta>

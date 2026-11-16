@@ -444,7 +444,7 @@
         <li class="erp-card">
           <div class="erp-logo">
             @if (s.logo) {
-              <img [src]="s.logo" alt="" loading="lazy" decoding="async">
+              <img [src]="s.logo" alt="" loading="lazy" decoding="async" [style.max-height.px]="s.h">
             } @else {
               <span class="erp-wordmark">{{ s.name }}</span>
             }

@@ -358,6 +358,45 @@
     .ao-stats-grid{grid-template-columns:1fr;}
     section.ao-section{padding:72px 0;}
   }
+  /* ===== Tidslinjen «Tre tiår med erfaring»: en enkel utgave av forsidens prosess ===== */
+  .tl{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:40px 36px 24px;box-shadow:0 24px 48px -36px rgba(15,23,42,.35);}
+  .tl-track{list-style:none;margin:0;padding:0;position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px;}
+  .tl-line{position:absolute;left:7px;right:0;top:7px;height:2px;background:var(--line);}
+  .tl-fill{position:absolute;left:0;top:0;height:100%;background:var(--ink);width:calc(max(var(--step) - 1, 0) * (100% + 20px) / 6);transition:width 1s cubic-bezier(.45,0,.25,1);}
+  .tl-done .tl-fill{width:100%;}
+  .tl-item{position:relative;min-width:0;}
+  .tl-node{position:relative;z-index:1;display:block;width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid var(--line);transition:background .4s ease, border-color .4s ease, transform .4s ease;}
+  .tl-year{font-family:var(--font-mono);font-size:12px;font-weight:700;color:var(--plum);margin:0 0 8px;transition:color .4s ease;}
+  .tl-node + .tl-card{margin-top:16px;}
+  .tl-card{overflow:hidden;}
+  .tl-card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px;transition:opacity .5s ease, transform .5s cubic-bezier(.2,.8,.2,1), border-color .3s ease, background .3s ease, box-shadow .3s ease;}
+  .tl-card h3{hyphens:auto;overflow-wrap:break-word;font-size:14.5px;font-weight:600;color:var(--ink);margin:0 0 8px;line-height:1.3;}
+  .tl-card p{font-size:13px;color:var(--ink-soft);line-height:1.5;margin:0;}
+  .tl-card a{color:var(--berry-deep);font-weight:600;}
+  .tl-item.on .tl-node{background:var(--ink);border-color:var(--ink);}
+  .tl-item.on .tl-year{color:var(--ink);}
+  .tl-item.now .tl-node{transform:scale(1.25);box-shadow:0 0 0 6px rgba(15,23,42,.10);animation:tlPing 1.4s ease-out infinite;}
+  .tl-item.now .tl-card{background:#fff;border-color:var(--ink);box-shadow:0 14px 30px -20px rgba(15,23,42,.45);}
+  /* before it plays (only in the browser, with motion allowed), the steps not reached are faint */
+  .tl-armed .tl-item:not(.on) .tl-card{opacity:0;transform:translateY(10px);}
+  .tl-armed .tl-item:not(.on) .tl-year{opacity:.45;}
+  @keyframes tlPing{0%{box-shadow:0 0 0 0 rgba(15,23,42,.22);}100%{box-shadow:0 0 0 12px rgba(15,23,42,0);}}
+  .tl-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:22px;padding-top:16px;border-top:1px solid var(--line);}
+  .tl-next{font-family:var(--font-mono);font-size:12px;color:var(--plum);opacity:.35;transition:opacity .5s ease;}
+  .tl-done .tl-next{opacity:1;}
+  .tl-btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:12px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;transition:border-color .2s ease;}
+  .tl-btn:hover{border-color:var(--plum);}
+  @media (max-width:1200px){
+    .tl{padding:28px 22px 20px;}
+    .tl-track{grid-template-columns:1fr;gap:18px;}
+    .tl-line{left:7px;right:auto;top:8px;bottom:8px;width:2px;height:auto;}
+    .tl-fill{width:100%;height:calc(max(var(--step) - 1, 0) * 100% / 5);transition:height 1s cubic-bezier(.45,0,.25,1);}
+    .tl-done .tl-fill{width:100%;height:100%;}
+    .tl-item{padding-left:34px;}
+    .tl-node{position:absolute;left:0;top:0;}
+    .tl-node + .tl-card{margin-top:0;}
+  }
+  @media (prefers-reduced-motion: reduce){ .tl-item.now .tl-node{animation:none;} }
 </style>
 <!-- ================= HERO: Møt teamet ================= -->
 <section class="ao-hero">
@@ -411,67 +450,64 @@
       <h2>Tre tiår med erfaring, og vi har bare så vidt begynt</h2>
       <p>Fra et lite norsk fagmiljø i 1994 til et skybasert forvaltningssystem, med markedsdata fra <a href="https://arealstatistikk.no/" target="_blank" rel="noopener">Arealstatistikk</a> og AI som gjør kunnskapen anvendelig. Fenistra kan eiendom.</p>
     </div>
-    <div class="timeline reveal">
-      <div class="timeline-track">
-
-        <div class="timeline-item">
-          <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
-          <div class="timeline-year">1994–1995</div>
-          <div class="timeline-card">
-            <h4 aria-level="3">Et norsk teknologieventyr starter</h4>
+    <div class="tl" [class.tl-armed]="armed()" [class.tl-done]="step() >= 6" [style.--step]="step()">
+      <ol class="tl-track">
+        <span class="tl-line" aria-hidden="true"><span class="tl-fill"></span></span>
+        <li class="tl-item" [class.on]="step() > 0" [class.now]="step() === 1">
+          <span class="tl-node" aria-hidden="true"></span>
+          <div class="tl-card">
+            <p class="tl-year">1994–1995</p>
+            <h3>Et norsk teknologieventyr starter</h3>
             <p>Utviklingen av våre skreddersydde løsninger for den norske eiendomsbransjen begynner i 1994. I februar 1995 blir selskapet formelt stiftet under navnet BRA Consult AS.</p>
           </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
-          <div class="timeline-year">1996</div>
-          <div class="timeline-card">
-            <h4>BRA Informasjonssystemer AS</h4>
+        </li>
+        <li class="tl-item" [class.on]="step() > 1" [class.now]="step() === 2">
+          <span class="tl-node" aria-hidden="true"></span>
+          <div class="tl-card">
+            <p class="tl-year">1996</p>
+            <h3>BRA Informasjonssystemer AS</h3>
             <p>Selskapet endrer navn til BRA Informasjonssystemer AS, og rigger seg for å levere solid, norskutviklet programvare.</p>
           </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
-          <div class="timeline-year">2003</div>
-          <div class="timeline-card">
-            <h4>Navnet Fenistra etableres</h4>
+        </li>
+        <li class="tl-item" [class.on]="step() > 2" [class.now]="step() === 3">
+          <span class="tl-node" aria-hidden="true"></span>
+          <div class="tl-card">
+            <p class="tl-year">2003</p>
+            <h3>Navnet Fenistra etableres</h3>
             <p>I oktober skifter vi navn til Fenistra AS. Navnet blir etter hvert godt kjent i den norske eiendomsbransjen.</p>
           </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
-          <div class="timeline-year">2017</div>
-          <div class="timeline-card">
-            <h4>Starten på skyreisen</h4>
+        </li>
+        <li class="tl-item" [class.on]="step() > 3" [class.now]="step() === 4">
+          <span class="tl-node" aria-hidden="true"></span>
+          <div class="tl-card">
+            <p class="tl-year">2017</p>
+            <h3>Starten på skyreisen</h3>
             <p>Vi lanserer vår første skybaserte løsning, MVA-erklæring. Det er starten på Fenistra i skyen.</p>
           </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
-          <div class="timeline-year">2020–2021</div>
-          <div class="timeline-card">
-            <h4>Inn i Visma-familien</h4>
+        </li>
+        <li class="tl-item" [class.on]="step() > 4" [class.now]="step() === 5">
+          <span class="tl-node" aria-hidden="true"></span>
+          <div class="tl-card">
+            <p class="tl-year">2020–2021</p>
+            <h3>Inn i Visma-familien</h3>
             <p>Fenistra blir en del av Visma i januar 2020, og året etter en sentral del av Visma Property Solutions.</p>
           </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
-          <div class="timeline-year">2026</div>
-          <div class="timeline-card">
-            <h4>Fenistra får AI som gjør jobben</h4>
-            <p>En ny epoke starter der vi tar eiendomsforvaltning fra å være reaktiv til å bli proaktiv. Fenistra svarer, sier ifra og gjør jobben, med AI bygget direkte inn i systemet. <a routerLink="/slik-hjelper-fenistra" style="color:var(--berry-deep); font-weight:600;">Les mer om hvordan Fenistra hjelper →</a></p>
+        </li>
+        <li class="tl-item" [class.on]="step() > 5" [class.now]="step() === 6">
+          <span class="tl-node" aria-hidden="true"></span>
+          <div class="tl-card">
+            <p class="tl-year">2026</p>
+            <h3>Fenistra får AI som gjør jobben</h3>
+            <p>En ny epoke starter der vi tar eiendomsforvaltning fra å være reaktiv til å bli proaktiv. Fenistra svarer, sier ifra og gjør jobben, med AI bygget direkte inn i systemet.</p>
           </div>
-        </div>
-
-        <div class="timeline-item timeline-item-future">
-          <div class="timeline-dot-wrap"><div class="timeline-arrow"></div></div>
-        </div>
-
+        </li>
+      </ol>
+      <div class="tl-foot">
+        <span class="tl-next" aria-hidden="true">Og videre →</span>
+        <button type="button" class="tl-btn" (click)="replay()" aria-label="Se tidslinjen fra start">
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M1 1h2v10H1zM11 1v10L4 6z" fill="currentColor"/></svg>
+          <span>Se fra start</span>
+        </button>
       </div>
     </div>
   </div>
@@ -483,24 +519,6 @@
     <div class="section-head">
       <h2>Bygget av folk som kan faget</h2>
       <p>Fra utvikling og produkt til kundesuksess og support står et fagmiljø med lang bransjeerfaring bak systemet. Vi sitter på Skøyen i Oslo og jobber tett på tvers av fagområder, så Fenistra henger sammen som ett system.</p>
-    </div>
-    <div class="ao-team">
-      <div class="ao-team-cards">
-        <a routerLink="/om-oss/ansatte" fragment="kundeteam" class="ao-team-card reveal">
-          <div>
-            <h3>Kundeteamet</h3>
-            <p>Folk som brenner for faget, og som hver dag jobber for at kundene får mest mulig ut av Fenistra.</p>
-            <span class="go">Møt kundeteamet →</span>
-          </div>
-        </a>
-        <a routerLink="/om-oss/ansatte" fragment="produktteam" class="ao-team-card reveal">
-          <div>
-            <h3>Produkt og utvikling</h3>
-            <p>Proptech-eksperter med over 20 års erfaring, som bygger løsningene i takt med regelverk og bransjebehov.</p>
-            <span class="go">Møt produktteamet →</span>
-          </div>
-        </a>
-      </div>
     </div>
   </div>
 </section>

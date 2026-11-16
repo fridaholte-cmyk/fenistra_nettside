@@ -3,18 +3,23 @@
   "trailingSlash": "never",
   "routes": [
     {
+      "route": "/om-oss/ansatte",
+      "redirect": "/om-oss",
+      "statusCode": 301
+    },
+    {
       "route": "/priser",
       "redirect": "/book-et-mote",
       "statusCode": 301
     },
     {
       "route": "/kundeteam",
-      "redirect": "/om-oss/ansatte#kundeteam",
+      "redirect": "/om-oss",
       "statusCode": 301
     },
     {
       "route": "/produktteam",
-      "redirect": "/om-oss/ansatte#produktteam",
+      "redirect": "/om-oss",
       "statusCode": 301
     },
     {
@@ -79,77 +84,77 @@
     },
     {
       "route": "/losning-kontrakter",
-      "redirect": "/losninger/kontrakter",
+      "redirect": "/losninger#kontrakter",
       "statusCode": 301
     },
     {
       "route": "/losning-fakturering",
-      "redirect": "/losninger/fakturering",
+      "redirect": "/losninger#fakturering",
       "statusCode": 301
     },
     {
       "route": "/losning-felleskostnader",
-      "redirect": "/losninger/felleskostnader",
+      "redirect": "/losninger#fakturering",
       "statusCode": 301
     },
     {
       "route": "/losning-rapportering",
-      "redirect": "/losninger/rapportering",
+      "redirect": "/losninger#rapport",
       "statusCode": 301
     },
     {
       "route": "/losning-omsetningsavregning",
-      "redirect": "/losninger/omsetningsavregning",
+      "redirect": "/losninger#fakturering",
       "statusCode": 301
     },
     {
       "route": "/losning-formuesverdsettelse",
-      "redirect": "/losninger/formuesverdsettelse",
+      "redirect": "/losninger#rapport",
       "statusCode": 301
     },
     {
       "route": "/losning-inntektsbudsjett",
-      "redirect": "/losninger/inntektsbudsjett",
+      "redirect": "/losninger#rapport",
       "statusCode": 301
     },
     {
       "route": "/losning-sikkerhetsstyring",
-      "redirect": "/losninger/sikkerhetsstyring",
+      "redirect": "/losninger#kontrakter",
       "statusCode": 301
     },
     {
       "route": "/losning-dokument",
-      "redirect": "/losninger/dokumenter",
+      "redirect": "/losninger#kontrakter",
       "statusCode": 301
     },
     {
       "route": "/losning-mva-erklaring",
-      "redirect": "/losninger/mva-erklaring",
+      "redirect": "/losninger#mva",
       "statusCode": 301
     },
     {
       "route": "/losning-rbo",
-      "redirect": "/losninger/revisorbekreftet-omsetning",
+      "redirect": "/losninger#fakturering",
       "statusCode": 301
     },
     {
       "route": "/losning-protokoller",
-      "redirect": "/losninger/protokoller",
+      "redirect": "/losninger#kontrakter",
       "statusCode": 301
     },
     {
       "route": "/losning-digital-signering",
-      "redirect": "/losninger/digital-signering",
+      "redirect": "/losninger#kontrakter",
       "statusCode": 301
     },
     {
       "route": "/losning-justering",
-      "redirect": "/losninger/mva-justering",
+      "redirect": "/losninger#mva",
       "statusCode": 301
     },
     {
       "route": "/losning-arealberegning",
-      "redirect": "/losninger/arealberegning",
+      "redirect": "/losninger#kontrakter",
       "statusCode": 301
     },
     {
@@ -159,12 +164,107 @@
     },
     {
       "route": "/losning-tegning",
-      "redirect": "/losninger/tegning",
+      "redirect": "/losninger#kontrakter",
       "statusCode": 301
     },
     {
       "route": "/ki",
-      "redirect": "/slik-hjelper-fenistra",
+      "redirect": "/losninger#slik-hjelper-fenistra",
+      "statusCode": 301
+    },
+    {
+      "route": "/alt-i-fenistra",
+      "redirect": "/losninger#alt-i-fenistra",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/tegning",
+      "redirect": "/losninger#kontrakter",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/sikkerhetsstyring",
+      "redirect": "/losninger#kontrakter",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/revisorbekreftet-omsetning",
+      "redirect": "/losninger#fakturering",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/rapportering",
+      "redirect": "/losninger#rapport",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/protokoller",
+      "redirect": "/losninger#kontrakter",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/omsetningsavregning",
+      "redirect": "/losninger#fakturering",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/mva-justering",
+      "redirect": "/losninger#mva",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/mva-erklaring",
+      "redirect": "/losninger#mva",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/kontrakter",
+      "redirect": "/losninger#kontrakter",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/inntektsbudsjett",
+      "redirect": "/losninger#rapport",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/formuesverdsettelse",
+      "redirect": "/losninger#rapport",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/felleskostnader",
+      "redirect": "/losninger#fakturering",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/fakturering",
+      "redirect": "/losninger#fakturering",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/dokumenter",
+      "redirect": "/losninger#kontrakter",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/digital-signering",
+      "redirect": "/losninger#kontrakter",
+      "statusCode": 301
+    },
+    {
+      "route": "/losninger/arealberegning",
+      "redirect": "/losninger#kontrakter",
+      "statusCode": 301
+    },
+    {
+      "route": "/kom-i-gang",
+      "redirect": "/losninger#kom-i-gang",
+      "statusCode": 301
+    },
+    {
+      "route": "/slik-hjelper-fenistra",
+      "redirect": "/losninger#slik-hjelper-fenistra",
       "statusCode": 301
     },
     {
@@ -234,7 +334,7 @@
     },
     {
       "route": "/ansatte",
-      "redirect": "/om-oss/ansatte",
+      "redirect": "/om-oss",
       "statusCode": 301
     },
     {

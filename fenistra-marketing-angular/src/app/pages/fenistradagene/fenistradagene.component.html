@@ -477,6 +477,12 @@
     .fd-johaug div{padding:28px 24px;}
   }
   @media (prefers-reduced-motion:reduce){.fd-hero-bg{animation:none;transform:none;}}
+  /* Interesseskjema: teksten til venstre, HubSpot-skjemaet i en hvit boks til høyre */
+  .fd-interest{align-items:flex-start;}
+  .fd-interest-copy{flex:1 1 0;max-width:460px;}
+  .fd-interest-copy p{margin:14px 0 0;font-size:16px;line-height:1.6;color:rgba(255,255,255,.8);}
+  .fd-interest-form{flex:1 1 0;max-width:520px;width:100%;background:#fff;border-radius:16px;padding:24px 26px;color:var(--ink);min-height:200px;}
+  @media (max-width:980px){ .fd-interest{align-items:stretch;text-align:left;} .fd-interest-copy{max-width:none;} .fd-interest-form{max-width:none;} }
 </style>
 <!-- ================= HERO ================= -->
 <section class="fd-hero">
@@ -485,7 +491,7 @@
     <h1>Fenistradagene: to dager med fag og folk</h1>
     <p>Hvert år samler vi Fenistra-kundene til to dager med faglig påfyll, nettverksbygging og sosialt samvær. Det som startet som Fenistra Brukerforum i 1999, er i dag bransjens egen møteplass.</p>
     <div class="fd-actions">
-      <a routerLink="/kontakt" class="btn btn-primary">Meld interesse for 2027</a>
+      <a routerLink="/fenistradagene" fragment="meld-interesse" class="btn btn-primary">Meld interesse for 2027</a>
       <a routerLink="/fenistradagene" fragment="2026" class="btn btn-ghost">Se bilder fra 2026 ↓</a>
     </div>
   </div>
@@ -621,12 +627,15 @@
   </div>
 </section>
 
-<section class="cta-wrap" style="padding-top:0;padding-bottom:20px;">
-  <div class="cta-band reveal">
-    <h2>Vil du være med på Fenistradagene 2027?</h2>
-    <div class="actions">
-      <a routerLink="/kontakt" class="btn btn-on-dark">Meld interesse</a>
-      <a routerLink="/om-oss/ansatte" fragment="kundeteam" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Snakk med kundeteamet</a>
+<section class="cta-wrap" id="meld-interesse" style="padding-top:0;padding-bottom:20px;scroll-margin-top:76px;">
+  <div class="cta-band fd-interest">
+    <div class="fd-interest-copy">
+      <h2>Vil du være med på Fenistradagene 2027?</h2>
+      <p>Meld interesse, så sender vi deg invitasjonen så snart datoen og programmet er klart.</p>
+    </div>
+    <div class="fd-interest-form">
+      <!-- HubSpot-skjemaet «Interesseskjema Fenistradagene», HubSpots egen innbygging -->
+      <div class="hs-form-frame" data-region="eu1" data-form-id="774d383b-bc0d-49b6-89d0-bb8cb72642d2" data-portal-id="139505393"></div>
     </div>
   </div>
 </section>

@@ -95,7 +95,7 @@ const SIDER: Jobbside[] = [
   },
   {
     "slug": "fakturering-og-avregning",
-    "name": "Fakturering og avregning",
+    "name": "Fra kontrakt til regnskap",
     "audience": "For forvaltning og økonomi",
     "h1": "Stemmer fakturaen med det kontrakten sier?",
     "lead": "Regulering, felleskostnader og omsetningsleie er der små feil blir dyre. Fenistra regner etter kontrakten og regelverket, viser forutsetningene og overfører fakturaene til regnskapssystemet dere allerede bruker.",
@@ -238,7 +238,7 @@ const modul = (route: string): JobbModul => ALLE_MODULER.find((m) => m.route ===
 /** Utleieprosessen, fra lead til innflytting. Arbeidet gjøres i Felix fra Fenistra, men vises som en del av Fenistra. */
 const LEAD_TIL_INNFLYTTING: Jobbside = {
   slug: 'fra-lead-til-innflytting',
-  name: 'Fra lead til innflytting',
+  name: 'Fra ledig lokale til signert kontrakt',
   audience: 'For utleie og kommersielle team',
   h1: 'Et ledig lokale koster penger hver måned det står tomt',
   problemVisuals: ['innboks', 'marked', 'dobbelt'],

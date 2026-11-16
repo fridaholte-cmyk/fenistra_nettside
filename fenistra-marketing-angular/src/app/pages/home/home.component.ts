@@ -13,6 +13,8 @@ interface Customer {
   logoHeight?: number;
   /** The only available logo is white; it is darkened so it shows on the light background */
   whiteLogo?: boolean;
+  /** No logo exists: the name is set as a clear wordmark instead, one line per entry */
+  wordmark?: string[];
 }
 
 @Component({
@@ -32,12 +34,12 @@ export class HomeComponent implements OnDestroy {
     { name: 'Pellerin', logo: 'images/kunder/pellerin-white.png', logoHeight: 26, whiteLogo: true },
     { name: 'Hundholmen Byutvikling', logo: 'images/kunder/hundholmen-byutvikling.svg', logoHeight: 22 },
     { name: 'Frydenbø Eiendom', logo: 'images/kunder/frydenbo-eiendom.svg', logoHeight: 22 },
-    { name: 'Br. Jangaard' },
+    { name: 'Brødrene Jangaard AS', wordmark: ['Brødrene', 'Jangaard'] },
     { name: 'Koteng', logo: 'images/kunder/koteng.png', logoHeight: 52 },
     { name: 'Aspelin Reitan', logo: 'images/kunder/aspelin-reitan.svg', logoHeight: 23 },
     { name: 'Selvaag Eiendom', logo: 'images/kunder/selvaag-eiendom-white.svg', logoHeight: 31, whiteLogo: true },
     { name: 'Avantor', logo: 'images/kunder/avantor.svg', logoHeight: 19 },
-    { name: 'Stor-Oslo Eiendom' },
+    { name: 'Stor-Oslo Eiendom', logo: 'images/kunder/stor-oslo-eiendom.png', logoHeight: 36 },
     { name: 'Höegh Eiendom', logo: 'images/kunder/hoegh-eiendom.svg', logoHeight: 18, story: '/blogg/hoegh-eiendom-over-to-tiar' },
     { name: 'NPRO', logo: 'images/kunder/npro.svg', logoHeight: 36 },
     { name: 'Union', logo: 'images/kunder/union.webp', logoHeight: 46 },
@@ -56,6 +58,11 @@ export class HomeComponent implements OnDestroy {
   // 60 000 contracts: the prerendered page shows the final number; in the browser
   // it drops to 10 and counts up through every number once the section is in view.
   midCount = signal(60);
+  // the other two numbers count up together with it: users (whole hundreds) and square metres (millions)
+  usersCount = signal(7000);
+  sqmCount = signal(26);
+  /** 7000 -> '7 000' (narrow no-break space, as in the rest of the page) */
+  thousands = (n: number) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0');
 
   // Maren's quote (verbatim): once its box has faded in, one word at a time lights up purple, as if read along
   quoteWords = '«Det er en trygghet i å møte en samarbeidspartner som forstår vår særbransje og de utfordringene vi har i hverdagen. Hos Fenistra blir vi møtt med forståelse, og det er godt å jobbe med fagfolk som virkelig kan faget sitt.»'.split(' ');
@@ -78,6 +85,8 @@ export class HomeComponent implements OnDestroy {
       if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       this.quoteArmed.set(true);
       this.midCount.set(10);
+      this.usersCount.set(1000);
+      this.sqmCount.set(4);
       // Prinsipp-illustrasjonene: skjul innholdet til de er i bildet, og spill dem én gang
       host.nativeElement.querySelectorAll('.pr-anim').forEach((el) => el.classList.add('armed'));
       this.askTyped.set(0);
@@ -102,7 +111,9 @@ export class HomeComponent implements OnDestroy {
           // only once the visitor has scrolled, never straight on load
           scrolled: true,
           start: () => {
-            this.countUp(this.midCount, 60);
+            this.countUp(this.midCount, 10, 60);
+            this.countUp(this.usersCount, 1000, 7000, 100);
+            this.countUp(this.sqmCount, 4, 26);
           },
         },
       ];
@@ -130,19 +141,18 @@ export class HomeComponent implements OnDestroy {
     });
   }
 
-  /** One step per frame, so every number is shown, with a short slow-down over the last few */
-  private countUp(count: ReturnType<typeof signal<number>>, target: number) {
-    let last = 0;
-    const step = (t: number) => {
-      const left = target - count();
-      if (left <= 0) return;
-      if (t - last >= (left <= 6 ? 30 + (6 - left) * 15 : 0)) {
-        count.update((n) => n + 1);
-        last = t;
-      }
-      this.frames.push(requestAnimationFrame(step));
+  /** Counts from `from` to `to` in 1.8 s, slowing down at the end; all three numbers land together */
+  private countUp(count: ReturnType<typeof signal<number>>, from: number, to: number, stepSize = 1) {
+    const duration = 1800;
+    let start = 0;
+    const tick = (t: number) => {
+      if (!start) start = t;
+      const p = Math.min(1, (t - start) / duration);
+      const eased = 1 - Math.pow(1 - p, 3);
+      count.set(Math.round((from + (to - from) * eased) / stepSize) * stepSize);
+      if (p < 1) this.frames.push(requestAnimationFrame(tick));
     };
-    this.frames.push(requestAnimationFrame(step));
+    this.frames.push(requestAnimationFrame(tick));
   }
 
   /** Skriver spørsmålet i «Bare spør»-illustrasjonen, ca. 2 s totalt (CSS venter 2,2 s før svaret) */

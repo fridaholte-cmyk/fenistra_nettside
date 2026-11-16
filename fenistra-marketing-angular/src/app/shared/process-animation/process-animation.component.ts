@@ -51,6 +51,7 @@ export const LEIEFORHOLD: ProcessConfig = {
     { key: 'Faktura', title: 'Fakturering', desc: 'Leieforholdet faktureres etter kontrakten fra første dag.', chip: 'Faktura #1001' },
     { key: 'Felleskost', title: 'Avregning av felleskostnader', desc: 'Kostnadene fordeles og avregnes etter fordelingsnøkkelen.', chip: 'Andel 8,4 %' },
     { key: 'Regulering', title: 'Regulering', desc: 'KPI-regulering og reguleringsbrev, år etter år.', chip: 'KPI +3,1 %' },
+    { key: 'Oppfolging', title: 'Leietakeroppfølging og dialog', desc: 'E-post, befaringer, oppgaver og kontraktspunkter samles på leieforholdet, så alle ser hva som er avtalt.', chip: 'Befaring ✓' },
     { key: 'Videre', title: 'Og videre', desc: 'Ny avregning, reforhandling og nye leietakere. Det som er registrert, følger med.', chip: null },
   ],
 };
@@ -61,7 +62,7 @@ export const UTLEIE: ProcessConfig = {
   title: 'Én sammenhengende prosess.',
   sub: 'Hvert steg bygger på det forrige. Det som er registrert, følger saken videre.',
   ledger: 'Sak 2026-0412 →',
-  outro: 'Fra lead til innflytting, i én sak.',
+  outro: 'Fra ledig lokale til signert kontrakt, i én sak.',
   steps: [
     { key: 'Kontakt', title: 'Lead og behov', desc: 'Interessenten og behovet registreres én gang: areal, arbeidsplasser og ønsket innflytting.', chip: 'Nordlys AS · 800 m²' },
     { key: 'Match', title: 'Ledige lokaler', desc: 'Fenistra viser lokalene som passer, med areal, tilgjengelighet og leie.', chip: 'Bryggegata 4' },

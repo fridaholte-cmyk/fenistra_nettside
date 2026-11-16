@@ -1,4 +1,5 @@
-import { Component, HostListener, OnDestroy, ViewEncapsulation, inject, signal } from '@angular/core';
+import { Component, HostListener, OnDestroy, ViewEncapsulation, afterNextRender, inject, signal } from '@angular/core';
+import { embedHubspotFrameForms } from '../../shared/hubspot-form';
 import { DOCUMENT } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -27,6 +28,13 @@ export class FenistradageneComponent implements OnDestroy {
   readonly lightbox = signal<Lightbox | null>(null);
   private swipeStartX: number | null = null;
   private justSwiped = false;
+  /** stops listening to the interest form's events when the page is left */
+  private stopForm: () => void = () => {};
+
+  constructor() {
+    // «Interesseskjema Fenistradagene» (HubSpot)
+    afterNextRender(() => (this.stopForm = embedHubspotFrameForms('fenistradagene_interesse')));
+  }
 
   /** Clicking a gallery photo opens it large in the lightbox instead of opening the file. */
   @HostListener('click', ['$event'])
@@ -80,6 +88,7 @@ export class FenistradageneComponent implements OnDestroy {
 
   ngOnDestroy(): void {
     this.doc.body.classList.remove('lb-open'); // leaving the page with the lightbox open
+    this.stopForm();
   }
 
   swipeStart(event: PointerEvent): void {

@@ -318,70 +318,86 @@
     .chat-panel{width:calc(100vw - 24px);height:min(70vh, 560px);right:12px;bottom:12px;}
     .chat-trigger{right:16px;bottom:16px;}
   }
+  /* ================= FAG OG NYHETER ================= */
+  .bl-top{background:var(--ink); color:#fff; padding:72px 0 0; margin-bottom:120px;}
+  .bl-eyebrow{font-family:var(--font-mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--berry-mid); margin-bottom:18px;}
+  .bl-intro h1{font-family:var(--font-display); font-weight:300; font-size:clamp(36px, calc(1.8rem + 3vw), 68px); line-height:1.04; letter-spacing:-0.03em; color:#fff; margin:0 0 48px;}
+  .bl-intro h1 span{display:block; color:var(--berry-mid);}
+  .bl-feature{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:48px; align-items:start; color:#fff;}
+  .bl-feature-copy{padding:8px 0 56px;}
+  .bl-feature .bl-kind{color:var(--berry-mid);}
+  .bl-feature h2{font-family:var(--font-display); font-weight:400; font-size:clamp(22px, calc(1.1rem + 1vw), 30px); line-height:1.28; letter-spacing:-0.015em; margin:0 0 14px;}
+  .bl-feature-ex{font-size:16px; line-height:1.6; color:#CBD5E1; margin:0 0 22px;}
+  .bl-feature-img{margin-bottom:-120px; border-radius:var(--radius); overflow:hidden; aspect-ratio:16/10; background:var(--paper-2); box-shadow:0 30px 60px -30px rgba(15,23,42,.5);}
+  .bl-feature-img img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease;}
+  .bl-feature:hover .bl-feature-img img{transform:scale(1.03);}
+  .bl-feature:hover h2{text-decoration:underline; text-underline-offset:5px; text-decoration-thickness:1px;}
+  .bl-arrow{display:inline-block; font-size:22px; line-height:1; transition:transform .25s ease;}
+  .bl-feature:hover .bl-arrow, .bl-card:hover .bl-arrow{transform:translateX(6px);}
+  .bl-kind{font-family:var(--font-mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--plum); margin:0 0 10px;}
+
+  .bl-list{padding:24px 0 72px;}
+  .bl-list h2{font-family:var(--font-display); font-weight:300; font-size:clamp(26px, calc(1.3rem + 1.2vw), 36px); letter-spacing:-0.02em; color:var(--ink); margin:0 0 32px;}
+  .bl-grid{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:56px 40px;}
+  .bl-card{display:flex; flex-direction:column; height:100%; color:var(--ink);}
+  .bl-card-img{aspect-ratio:16/10; border-radius:var(--radius); overflow:hidden; background:var(--paper-2); margin-bottom:18px;}
+  .bl-card-img img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease;}
+  .bl-card:hover .bl-card-img img{transform:scale(1.04);}
+  .bl-card h3{font-family:var(--font-display); font-weight:400; font-size:clamp(18px, calc(1rem + .3vw), 21px); line-height:1.35; letter-spacing:-0.01em; margin:0 0 14px;}
+  .bl-card:hover h3{text-decoration:underline; text-underline-offset:4px; text-decoration-thickness:1px;}
+  .bl-card .bl-arrow{margin-top:auto;}
+  .bl-feature:focus-visible, .bl-card:focus-visible{outline:2px solid var(--berry-mid); outline-offset:6px; border-radius:6px;}
+
+  @media (max-width:980px){
+    .bl-grid{grid-template-columns:repeat(2, minmax(0,1fr)); gap:44px 28px;}
+    .bl-feature{grid-template-columns:1fr; gap:28px;}
+    .bl-feature-img{order:-1;}
+    .bl-feature-copy{padding:0 0 24px;}
+    .bl-top{margin-bottom:0; padding-bottom:24px;}
+    .bl-feature-img{margin-bottom:0;}
+  }
+  @media (max-width:600px){
+    .bl-top{padding-top:48px;}
+    .bl-intro h1{margin-bottom:32px;}
+    .bl-grid{grid-template-columns:1fr; gap:40px;}
+  }
 </style>
-<section class="index-hero">
-  <div class="wrap">
-    <h1>Innsikt for deg som forvalter næringseiendom</h1>
-    <p>Kundehistorier, produktnyheter og innsikt om Fenistra og økonomisk forvaltning av næringseiendom.</p>
+<!-- Toppen: mørk flate med siste artikkel, bildet stikker ned i den lyse delen -->
+<section class="bl-top" aria-labelledby="bl-title">
+  <div class="wrap bl-top-inner">
+    <div class="bl-intro">
+      <p class="bl-eyebrow">Fag og nyheter</p>
+      <h1 id="bl-title">Siste nytt <span>fra Fenistra</span></h1>
+    </div>
+    <a [routerLink]="featured.url" class="bl-feature">
+      <div class="bl-feature-copy">
+        <p class="bl-kind">{{ featured.kind }}</p>
+        <h2>{{ featured.title }}</h2>
+        <p class="bl-feature-ex">{{ featured.excerpt }}</p>
+        <span class="bl-arrow" aria-hidden="true">→</span>
+      </div>
+      <div class="bl-feature-img">
+        <img [src]="featured.img" alt="" [style.object-position]="featured.pos" fetchpriority="high" decoding="async">
+      </div>
+    </a>
   </div>
 </section>
 
-<section style="padding-top:0;">
+<section class="bl-list" aria-labelledby="bl-list-title">
   <div class="wrap">
-    <div class="mini-grid">
-      <a routerLink="/blogg/hoegh-eiendom-over-to-tiar" class="mini-card">
-        <h3 aria-level="2">Derfor har Höegh Eiendom brukt Fenistra i over to tiår</h3>
-        <p>Senior Controller Maren Elise Dalene Torp forteller hvorfor Höegh Eiendom har vært Fenistra-kunde i over 20 år.</p>
-      </a>
-      <a routerLink="/blogg/backer-velger-fenistra" class="mini-card">
-        <h3>Backer rigger for fremtiden: velger Fenistra for sin eiendomsforvaltning</h3>
-        <p>Backer velger Fenistra som nytt forvaltningssystem for sin eiendomsportefølje.</p>
-      </a>
-      <a routerLink="/blogg/mest-komplette-losningen-for-eiendomsforvaltning" class="mini-card">
-        <h3>Fenistra: mest komplette løsningen for eiendomsforvaltning</h3>
-        <p>Slik henger løsningene i Fenistra sammen, fra kontrakt til rapportering.</p>
-      </a>
-      <a routerLink="/blogg/fenistra-og-visma-business-nxt" class="mini-card">
-        <h3>Fenistra+Business NXT: Full kontroll på økonomi og eiendomsforvaltning</h3>
-        <p>Fenistra integrert med Visma Business NXT gir full kontroll på økonomi og eiendomsforvaltning i én løsning.</p>
-      </a>
-      <a routerLink="/blogg/fra-budsjett-til-faktura" class="mini-card">
-        <h3>Fra budsjett til faktura: en presis og transparent fordeling</h3>
-        <p>Fenistra Felleskostnader-budsjett gir presis og transparent fordeling, fra budsjett til faktura.</p>
-      </a>
-      <a routerLink="/blogg/fenistra-forenkler-felleskostnadene" class="mini-card">
-        <h3>Fenistra forenkler felleskostnadene</h3>
-        <p>Kristin Falch om hvordan Fenistra Felleskostavregning eliminerer manuelle rutiner og reduserer feil.</p>
-      </a>
-      <a routerLink="/blogg/ny-rapport-i-fenistra-kjopesenter" class="mini-card">
-        <h3>Ny rapport i Fenistra Kjøpesenter</h3>
-        <p>Ny rapport lansert i Fenistra Kjøpesenter, for enda bedre innsikt i senterdriften.</p>
-      </a>
-      <a routerLink="/blogg/oppsummering-brukerforum-2024" class="mini-card">
-        <h3>Oppsummering av Fenistra Brukerforum 2024</h3>
-        <p>Innsikt og innovasjon fra bransjens egne foredragsholdere på Fenistra Brukerforum 2024.</p>
-      </a>
-      <a routerLink="/blogg/fenistra-brukerforum-2024" class="mini-card">
-        <h3>Fenistra Brukerforum 2024</h3>
-        <p>Invitasjon til Fenistra Brukerforum 2024, faglig påfyll, nettverksbygging og sosialt samvær.</p>
-      </a>
-      <a routerLink="/blogg/innhenting-av-mva-erklaringer" class="mini-card">
-        <h3>Slik sikrer du effektiv innhenting av MVA-erklæringer fra leietakere</h3>
-        <p>Med Fenistra blir innsamling av MVA-erklæringer en smidig del av driften.</p>
-      </a>
-      <a routerLink="/blogg/brukeropplevelsen-til-neste-niva" class="mini-card">
-        <h3>Fenistra tar brukeropplevelsen til neste nivå</h3>
-        <p>Fenistra flyttes over på ny plattform, med en helt ny og intuitiv brukeropplevelse.</p>
-      </a>
-      <a routerLink="/blogg/kontinuerlig-verdi-for-kundene" class="mini-card">
-        <h3>Skaper kontinuerlig verdi for kundene i et voksende marked</h3>
-        <p>Nye Fenistra gir eiendomsselskaper bedre kombinasjon av fleksibilitet, effektivitet og moderne teknologi.</p>
-      </a>
-      <a routerLink="/blogg/oversikt-i-eiendomsportefoljen" class="mini-card">
-        <h3>Dette må du ha oversikt over i egen eiendomsportefølje</h3>
-        <p>Fenistra kombinert med Create Insight gir full oversikt over egen eiendomsportefølje og markedsdata.</p>
-      </a>
-    </div>
+    <h2 id="bl-list-title">Flere artikler</h2>
+    <ul class="bl-grid">
+      @for (a of rest; track a.url) {
+        <li>
+          <a [routerLink]="a.url" class="bl-card">
+            <div class="bl-card-img"><img [src]="a.img" alt="" [style.object-position]="a.pos" loading="lazy" decoding="async"></div>
+            <p class="bl-kind">{{ a.kind }}</p>
+            <h3>{{ a.title }}</h3>
+            <span class="bl-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+      }
+    </ul>
   </div>
 </section>
 

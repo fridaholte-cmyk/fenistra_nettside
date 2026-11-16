@@ -195,6 +195,8 @@
   .logo-tile{position:relative; display:flex; align-items:center; justify-content:center; height:120px; padding:16px; text-align:center; color:var(--plum); transition:background .25s ease;}
   .logo-tile img{width:auto; max-width:88%; object-fit:contain; mix-blend-mode:multiply;}
   .logo-name{font-family:var(--font-display); font-weight:500; font-size:15.5px; line-height:1.25; letter-spacing:-0.005em; opacity:.8; transition:opacity .25s ease, color .25s ease;}
+  .logo-wordmark{display:flex; flex-direction:column; align-items:center; gap:2px; font-family:var(--font-display); font-weight:700; text-transform:uppercase; letter-spacing:.06em; line-height:1.05; color:var(--ink); font-size:16px;}
+  .logo-wordmark span:last-child{font-size:1.18em; letter-spacing:.04em;}
   .logo-tile:hover{background:var(--paper-2);}
   .logo-tile img.logo-white, .logo-tile:hover img.logo-white{filter:brightness(0);}
   .logo-tile:hover .logo-name{opacity:1; color:var(--ink);}
@@ -205,8 +207,8 @@
   .logo-wall-more a{color:var(--berry-deep); border-bottom:1px solid currentColor; padding-bottom:2px;}
   /* 21 customers: 7 or 3 per row so every row is full */
   @media (max-width:900px){ .logo-grid{grid-template-columns:repeat(3,minmax(0,1fr));} }
-  @media (max-width:760px){ .logo-wall{padding:72px 0;} .logo-grid{grid-template-columns:repeat(3,minmax(0,1fr));} .logo-tile{height:96px; padding:14px;} .logo-name{font-size:14px;} }
-  @media (max-width:440px){ .logo-tile{height:84px; padding:10px;} .logo-name{font-size:13px;} }
+  @media (max-width:760px){ .logo-wall{padding:72px 0;} .logo-grid{grid-template-columns:repeat(3,minmax(0,1fr));} .logo-tile{height:96px; padding:14px;} .logo-name{font-size:14px;} .logo-wordmark{font-size:14px;} }
+  @media (max-width:440px){ .logo-tile{height:84px; padding:10px;} .logo-name{font-size:13px;} .logo-wordmark{font-size:12px;} }
 
   /* ================= SECTION HEADERS ================= */
   section{padding:var(--section-y) 0;}
@@ -518,8 +520,11 @@
   /* Logovegg: overskrift og lenke på én linje */
   .logo-wall{padding:var(--section-y-sm) 0;}
   .hp-logos-head{display:flex; justify-content:space-between; align-items:end; gap:40px; margin-bottom:36px;}
-  .hp-logos-head{flex-direction:column; align-items:flex-start; gap:18px;}
+  .hp-logos-head{flex-direction:column; align-items:flex-start; gap:12px;}
   /* sized so the whole sentence runs on one line across the page */
+  /* text and link side by side, centred on each other (the link is smaller mono text with an underline) */
+  .hp-logos-sub{margin:0; display:flex; flex-wrap:wrap; align-items:center; gap:6px 16px; font-size:17px; color:var(--ink-soft); line-height:1.6;}
+  .hp-logos-sub .hp-link{white-space:nowrap; line-height:1.4;}
   .hp-logos-head h2{max-width:none; margin:0; hyphens:manual; text-wrap:initial; font-size:clamp(24px, calc((100vw - 64px) / 31), 38px);}
 
   /* Höegh: bilde, ordrett sitat og 50–60 % */
@@ -551,10 +556,9 @@
   .pr-k{display:block; font-family:var(--font-mono); font-size:11.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-soft);}
   .pr-copy > .pr-k{margin:26px 0 6px;}
   .pr-copy > .pr-body{margin-top:20px;}
+  .pr-promise{margin:26px 0 24px; padding:4px 0 4px 20px; border-left:2px solid var(--ink); font-size:18px; line-height:1.4; color:var(--ink); max-width:32ch; text-wrap:balance;}
   .pr-copy > p:not(.pr-k):not(.pr-intro){font-size:16px; line-height:1.65; color:var(--ink-soft); max-width:54ch;}
   .pr-copy > p a{color:var(--ink); text-decoration:underline; text-underline-offset:3px;}
-  .pr-promise{margin:26px 0 24px; padding:4px 0 4px 20px; border-left:2px solid var(--ink); font-size:18px; line-height:1.4; color:var(--ink); max-width:32ch; text-wrap:balance;}
-  .pr-promise .pr-k{margin-bottom:8px;}
   .pr-stage{margin:0; background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius); padding:clamp(24px, calc(1.26rem + 1.4vw), 40px) clamp(22px, calc(1.17rem + 1.3vw), 36px);}
   .pr-card{background:#fff; border:1px solid var(--line); border-radius:10px; padding:24px; min-height:340px; box-shadow:0 24px 48px -32px rgba(15,23,42,.35); color:var(--ink);}
 
@@ -689,10 +693,6 @@
   .hp-checks{margin:26px 0 30px; list-style:none; padding:0;}
   .hp-checks li{padding:12px 0; border-top:1px solid var(--line); font-size:15.5px; display:flex; justify-content:space-between; gap:16px;}
   .hp-buyer-dark .hp-checks li{border-color:rgba(255,255,255,.16);}
-  .hp-checks li span{font-family:var(--font-mono); font-size:12px; color:var(--ink-soft); white-space:nowrap;}
-  .hp-buyer-dark .hp-checks li span{color:rgba(255,255,255,.66);}
-  .hp-buyer .hp-link{margin-top:auto; align-self:flex-start;}
-  .hp-buyer-dark .hp-link{color:#fff; border-color:var(--berry-mid);}
 
   /* Kundenes egne ord, med større bilder */
   .hp-voices{padding:var(--section-y) 0;}
@@ -730,7 +730,6 @@
     .hp-hoegh > img{min-height:260px;}
   }
   #prosess{scroll-margin-top:76px;}
-  .hp-prosess-cta{display:flex; justify-content:center; margin-top:32px;}
 </style>
 <!-- ================= HERO ================= -->
 <section class="hp-hero">
@@ -762,11 +761,11 @@
         <p class="hp-stat-label">leiekontrakter i systemet</p>
       </div>
       <div class="hp-stat">
-        <p class="hp-mid"><span class="sr-only">Over 7 000</span><span aria-hidden="true">&gt;7 000</span></p>
+        <p class="hp-mid"><span class="sr-only">Over 7 000</span><span aria-hidden="true">&gt;{{ thousands(usersCount()) }}</span></p>
         <p class="hp-stat-label">brukere</p>
       </div>
       <div class="hp-stat">
-        <p class="hp-mid"><span class="sr-only">Over 26 millioner</span><span aria-hidden="true">&gt;26 millioner</span></p>
+        <p class="hp-mid"><span class="sr-only">Over 26 millioner</span><span aria-hidden="true">&gt;{{ sqmCount() }} millioner</span></p>
         <p class="hp-stat-label">kvadratmeter i systemet</p>
       </div>
     </div>
@@ -783,19 +782,19 @@
   <div class="wrap">
     <div class="logo-wall-head hp-logos-head reveal">
       <h2 id="kunder-tittel">Selskaper som kan eiendom, krever et system som gjør det samme.</h2>
-      <a routerLink="/kunder" class="hp-link">Se kundehistoriene →</a>
+      <p class="hp-logos-sub"><span>Et utvalg av kundene som forvalter i Fenistra.</span> <a routerLink="/kunder" class="hp-link">Se kundehistoriene →</a></p>
     </div>
     <ul class="logo-grid reveal" aria-label="Blant selskapene som forvalter i Fenistra">
       @for (c of customers; track c.name) {
         <li>
           @if (c.story) {
             <a [routerLink]="c.story" class="logo-tile" [attr.aria-label]="c.name + ': les kundehistorien'">
-              @if (c.logo) { <img [src]="c.logo" [alt]="c.name" [class.logo-white]="c.whiteLogo" [style.height.px]="c.logoHeight" loading="lazy"> } @else { <span class="logo-name">{{ c.name }}</span> }
+              @if (c.logo) { <img [src]="c.logo" [alt]="c.name" [class.logo-white]="c.whiteLogo" [style.height.px]="c.logoHeight" loading="lazy"> } @else if (c.wordmark) { <span class="logo-wordmark" role="img" [attr.aria-label]="c.name">@for (line of c.wordmark; track line) { <span>{{ line }}</span> }</span> } @else { <span class="logo-name">{{ c.name }}</span> }
               <span class="logo-story" aria-hidden="true">Les historien →</span>
             </a>
           } @else {
             <div class="logo-tile">
-              @if (c.logo) { <img [src]="c.logo" [alt]="c.name" [class.logo-white]="c.whiteLogo" [style.height.px]="c.logoHeight" loading="lazy"> } @else { <span class="logo-name">{{ c.name }}</span> }
+              @if (c.logo) { <img [src]="c.logo" [alt]="c.name" [class.logo-white]="c.whiteLogo" [style.height.px]="c.logoHeight" loading="lazy"> } @else if (c.wordmark) { <span class="logo-wordmark" role="img" [attr.aria-label]="c.name">@for (line of c.wordmark; track line) { <span>{{ line }}</span> }</span> } @else { <span class="logo-name">{{ c.name }}</span> }
             </div>
           }
         </li>
@@ -817,7 +816,7 @@
         </figcaption>
         <div class="hp-hoegh-fact">
           <strong>50–60 %</strong>
-          <span>mindre tid på fakturering hos Höegh Eiendom, kunde i over 20 år. <a routerLink="/blogg/hoegh-eiendom-over-to-tiar" class="hp-link">Les historien →</a></span>
+          <span>mindre tid på fakturering hos Höegh Eiendom. <a routerLink="/blogg/hoegh-eiendom-over-to-tiar" class="hp-link">Les historien →</a></span>
         </div>
       </div>
     </figure>
@@ -857,9 +856,6 @@
 <section id="prosess">
   <div class="wrap">
     <app-process-animation></app-process-animation>
-    <div class="hp-prosess-cta">
-      <a routerLink="/book-et-mote" fragment="skjema" class="btn btn-primary">Book et møte</a>
-    </div>
   </div>
 </section>
 
@@ -868,7 +864,7 @@
   <div class="wrap">
     <div class="pr-head reveal">
       <h2 id="soyler-tittel" class="hp-title">Bare spør. Fenistra sier ifra og gjør jobben.</h2>
-      <p class="hp-lead">Fenistra skal gjøre mer av jobben, så det blir enklere å forstå, følge opp og handle. Tre prinsipper for en enklere hverdag, og løfter vi skal måles på.</p>
+      <p class="hp-lead">Fenistra skal gjøre mer av jobben, så det blir enklere å forstå, følge opp og handle. Tre prinsipper for en enklere hverdag, og hva du kan forvente av oss.</p>
     </div>
 
     <!-- 01 Bare spør -->
@@ -878,8 +874,7 @@
         <h3 id="pr-spor">Bare spør</h3>
         <p class="pr-intro">Spør om dataene, arbeidsoppgavene eller hvordan Fenistra brukes.</p>
         <p class="pr-body">Bruk egne ord. Be om innsikt, en forklaring eller hjelp til å få noe gjort. Hva bør vi kreve i leie etter tilpasningene? Hvordan påvirker rabatten inntektene? Fenistra bruker opplysningene du har tilgang til, avklarer det som mangler og viser hva svaret bygger på.</p>
-        <blockquote class="pr-promise"><span class="pr-k">Vårt løfte</span>Du skal komme videre uten å lære alle funksjonene først.</blockquote>
-        <a routerLink="/losninger/rapport-og-analyse" class="hp-link">Se mulighetene i porteføljen →</a>
+        <blockquote class="pr-promise">Du skal komme videre uten å lære alle funksjonene først.</blockquote>
       </div>
       <figure class="pr-stage">
         <div class="pr-card pr-anim" data-pr="ask" aria-hidden="true">
@@ -906,8 +901,7 @@
         <h3 id="pr-ifra">Sier ifra</h3>
         <p class="pr-intro">Fenistra varsler i tide, så du rekker å ta gode beslutninger.</p>
         <p class="pr-body">Det som trenger oppfølging, dukker opp før det haster. En opsjonsfrist. En garanti som mangler. En avtale som bør reforhandles fordi leien ligger under markedet i <a href="https://arealstatistikk.no/" target="_blank" rel="noopener">Arealstatistikk</a>. Mangler, usikkerhet og feil i dataene skal frem, og hvert varsel skal kunne forklares.</p>
-        <blockquote class="pr-promise"><span class="pr-k">Vårt løfte</span>Du skal kunne handle i tide, og forstå hvorfor Fenistra sier ifra.</blockquote>
-        <a routerLink="/losninger/kontroll-pa-portefoljen" class="hp-link">Kontroll på porteføljen →</a>
+        <blockquote class="pr-promise">Du skal kunne handle i tide, og forstå hvorfor Fenistra sier ifra.</blockquote>
       </div>
       <figure class="pr-stage">
         <div class="pr-card pr-anim" data-pr="alert" aria-hidden="true">
@@ -930,8 +924,7 @@
         <h3 id="pr-jobben">Gjør jobben</h3>
         <p class="pr-intro">Du bestemmer. Fenistra tar arbeidet helt frem.</p>
         <p class="pr-body">Fenistra gjør mer enn å svare. Kontraktsutkast fra maler, signeringsklare dokumenter, regulering, fakturering og avregning etter kontrakten. Du kontrollerer og godkjenner underveis. Ingenting sendes, signeres eller faktureres uten deg.</p>
-        <blockquote class="pr-promise"><span class="pr-k">Vårt løfte</span>Du skal bruke tiden på vurderingene, ikke på å flytte data mellom steder.</blockquote>
-        <a routerLink="/losninger/fra-lead-til-innflytting" class="hp-link">Fra lead til innflytting →</a>
+        <blockquote class="pr-promise">Du skal bruke tiden på vurderingene, ikke på å flytte data mellom steder.</blockquote>
       </div>
       <figure class="pr-stage">
         <div class="pr-card pr-anim" data-pr="job" aria-hidden="true">
@@ -957,11 +950,12 @@
         <h3>Hva skjer når den ene som forstår regnearket, er syk?</h3>
         <p>Med Fenistra glemmes ingenting, og alle jobber ut fra én felles sannhet. Porteføljen ligger i systemet, ikke i hodet til én person.</p>
         <ul class="hp-checks">
-          <li>Frister og utløp følges opp av systemet <span>Sier ifra</span></li>
-          <li>Rapporter og prognoser fra de faktiske kontraktene <span>Svarer</span></li>
-          <li>Sikret etter ISO/IEC 27001 <span>Trygghet</span></li>
+          <li>Frister og utløp følges opp av systemet</li>
+          <li>Rapporter og prognoser fra de faktiske kontraktene</li>
+          <li>Oversikt over porteføljen uten å be om en rapport</li>
+          <li>Leie sammenlignet med markedet, kontrakt for kontrakt</li>
+          <li>Sikret etter ISO/IEC 27001</li>
         </ul>
-        <a routerLink="/losninger/rapport-og-analyse" class="hp-link">Se mulighetene i porteføljen →</a>
       </article>
       <article class="hp-buyer hp-buyer-light reveal">
         <h3>Også den rare kontrakten.</h3>
@@ -974,7 +968,6 @@
           <li>Skjevfordeling av felleskostnader</li>
           <li>Momsproblematikk: delvis MVA-pliktige lokaler, frivillig registrering og justering</li>
         </ul>
-        <a routerLink="/losninger/kontroll-pa-portefoljen" class="hp-link">Se hvordan kontraktene følges opp →</a>
       </article>
     </div>
   </div>

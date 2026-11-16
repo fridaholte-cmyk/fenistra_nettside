@@ -1,24 +1,9 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { RouterLink } from '@angular/router';
+// «Alt som er bygget inn i Fenistra»: every part of the platform in plain text, ordered by the job it does.
+// Shown in the #alt-i-fenistra section of the Løsninger page. Each group links to its solution page.
+export interface Del { title: string; text: string; }
+export interface Gruppe { id: string; title: string; intro: string; route: string; linkText: string; deler: Del[]; }
 
-interface Del { title: string; text: string; }
-interface Gruppe { id: string; title: string; intro: string; route: string; linkText: string; deler: Del[]; }
-
-/**
- * «Alt som er bygget inn i Fenistra» (november 2026): one readable page with every part of the
- * platform described in plain text, so search engines and AI assistants (ChatGPT, Gemini, Perplexity)
- * find the details without the module pages being linked from the site. Linked from the footer only.
- * Each group links to its solution page, never to the module pages. Texts reuse the site's existing copy.
- */
-@Component({
-  selector: 'app-alt-i-fenistra',
-  standalone: true,
-  imports: [RouterLink],
-  templateUrl: './alt-i-fenistra.component.html',
-  encapsulation: ViewEncapsulation.None,
-})
-export class AltIFenistraComponent {
-  grupper: Gruppe[] = [
+export const GRUPPER: Gruppe[] = [
     {
       id: 'kontrakter',
       title: 'Kontrakter og leieforhold',
@@ -39,7 +24,7 @@ export class AltIFenistraComponent {
       title: 'Utleie og leietakeroppfølging',
       intro: 'Den kommersielle forvaltningen i samme system som økonomien, fra første henvendelse til signert kontrakt og innflytting.',
       route: '/losninger/fra-lead-til-innflytting',
-      linkText: 'Fra lead til innflytting',
+      linkText: 'Fra ledig lokale til signert kontrakt',
       deler: [
         { title: 'CRM og leads', text: 'CRM bygget inn og koblet til kontraktene, med oppfølging av leads, behov og leietakere.' },
         { title: 'Leietakeroppfølging', text: 'Oversikt over hver leietaker og hele leieforholdet, med varsel når noe krever oppmerksomhet.' },
@@ -52,7 +37,7 @@ export class AltIFenistraComponent {
       title: 'Fakturering og avregning',
       intro: 'Registrer én gang, og la systemet regulere, fakturere og avregne gjennom hele leieforholdet.',
       route: '/losninger/fakturering-og-avregning',
-      linkText: 'Fakturering og avregning',
+      linkText: 'Fra kontrakt til regnskap',
       deler: [
         { title: 'Fakturering', text: 'Faktureringen skjer i Fenistra: fakturaene lages og sendes fra systemet, og bokføringen overføres til regnskapet. Fast, akonto og omsetningsbasert husleie i én løsning, med gjentakende fakturering gjennom hele leieforholdet. KPI-regulering med integrasjon mot SSB og automatiske reguleringsbrev.' },
         { title: 'Felleskostnader', text: 'Felleskostnadsavregning etter kontrakten og fordelingsnøkkelen, med oversikt over kostnader, fordeling og MVA-behandling. Enkeltleietakere kan få faste beløp, og resten fordeles på de øvrige.' },
@@ -92,7 +77,9 @@ export class AltIFenistraComponent {
       deler: [
         { title: 'Senterdashbord', text: 'Ukens besøks- og omsetningstall, utvikling mot fjoråret, omsetning per bransje og aktiviteter i én oversikt.' },
         { title: 'Ukesrapport', text: 'Omsetning og besøk mot fjoråret, gruppert per bransje, etasje eller tilhørighet, helt ned på hver enkelt butikk.' },
+        { title: 'Omsetningsrapportering', text: 'Automatisk purring når butikkene mangler omsetningsrapportering.' },
+        { title: 'Rapporter', text: 'Bransjetilpassede rapporter, inkludert Kvarud Analyse, i PDF og Excel.' },
+        { title: 'Besøk og aktiviteter', text: 'Besøksregistrering, salgsaktiviteter og værdata samlet med omsetningen. Løsningen er tilgjengelig uansett hvor senterleder befinner seg.' },
       ],
     },
   ];
-}

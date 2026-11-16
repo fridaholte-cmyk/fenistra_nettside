@@ -11,10 +11,10 @@ type Node = { name: string; logo?: string; h?: number; iconOnly?: boolean; x: nu
 const SYSTEMS: Omit<Node, 'x' | 'y'>[] = [
   { name: 'Visma Business NXT', logo: 'images/integrasjoner/business-nxt.svg', h: 20 },
   { name: 'Tripletex', logo: 'images/integrasjoner/tripletex.svg', h: 24 },
-  { name: 'Properly' }, // no logo file yet: shown as its name
+  { name: 'Propely', logo: 'images/integrasjoner/propely.png', h: 20 },
   { name: 'Xledger', logo: 'images/integrasjoner/xledger.svg', h: 24 },
   { name: 'Visma.net', logo: 'images/integrasjoner/visma-net.svg', h: 22 },
-  { name: 'PowerOffice GO', logo: 'images/integrasjoner/poweroffice.svg', h: 16 },
+  { name: 'PowerOffice GO', logo: 'images/integrasjoner/poweroffice-go.png', h: 26 },
   { name: 'Power BI', logo: 'images/integrasjoner/powerbi.svg', h: 24, iconOnly: true },
 ];
 

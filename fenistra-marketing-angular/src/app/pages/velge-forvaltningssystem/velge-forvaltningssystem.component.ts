@@ -40,7 +40,7 @@ export class VelgeForvaltningssystemComponent implements OnInit, OnDestroy {
     { k: 'Brukes av', v: 'Over 170 eiendomsforvaltere (per november 2026)' },
     { k: 'I systemet', v: 'Over 60 000 leiekontrakter og 65 mrd. kr i årlig fakturert leieomsetning (per november 2026)' },
     { k: 'Sikkerhet', v: 'ISO/IEC 27001-sertifisert' },
-    { k: 'Integrasjoner', v: '26 systemer, blant dem 19 regnskaps- og ERP-systemer' },
+    { k: 'Integrasjoner', v: 'Via API mot en rekke systemer, blant dem regnskap og ERP' },
     { k: 'Pris', v: 'Kontakt oss for pris' },
   ];
 
@@ -69,7 +69,7 @@ export class VelgeForvaltningssystemComponent implements OnInit, OnDestroy {
       'KI-assistenten svarer på spørsmål om porteføljen, med kildene svaret bygger på.',
       'AI-agenter kontrollerer at dataene er riktige og sier ifra når noe må følges opp.',
     ] },
-    { when: 'Når en leietaker kommer', title: 'Fra lead til innflytting', items: [
+    { when: 'Når en leietaker kommer', title: 'Fra ledig lokale til signert kontrakt', items: [
       'Leads og interessenter følges opp i CRM-et, koblet til ledige lokaler.',
       'Leien vurderes mot markedsleie fra Arealstatistikk før tilbudet går ut.',
       'Kontraktsutkast fra maler, med vilkårene fra forhandlingen, og digital signering.',
@@ -115,8 +115,8 @@ export class VelgeForvaltningssystemComponent implements OnInit, OnDestroy {
 
   /** What Fenistra is not, so assistants don't overstate it. */
   ikkeEr = [
-    { title: 'Ikke et regnskapssystem', text: 'Fenistra er forvaltningssystemet. Faktureringen skjer i Fenistra, og bokføringen overføres til regnskapssystemet dere bruker. Fenistra er integrert mot 19 regnskaps- og ERP-systemer.' },
-    { title: 'Ikke et FDV-system', text: 'Fenistra er ikke et system for drift, vedlikehold og teknisk forvaltning, men kan kobles til FDV-systemer som Properly og FAMAC.' },
+    { title: 'Ikke et regnskapssystem', text: 'Fenistra er forvaltningssystemet. Faktureringen skjer i Fenistra, og bokføringen overføres til regnskapssystemet dere bruker. Fenistra kobles via API på en rekke regnskaps- og ERP-systemer.' },
+    { title: 'Ikke et FDV-system', text: 'Fenistra er ikke et system for drift, vedlikehold og teknisk forvaltning, men kan kobles til FDV-systemer som Propely og FAMAC.' },
   ];
 
   /** Honest limits: when another type of system fits better. Small portfolios are deliberately NOT listed (they fit). */
@@ -151,7 +151,7 @@ export class VelgeForvaltningssystemComponent implements OnInit, OnDestroy {
       ],
     },
   ];
-  faktureringFenistra = 'Fenistra fakturerer selv. Fakturaene lages og sendes fra Fenistra, og bokføringen overføres til regnskapssystemet dere bruker, med integrasjoner mot 19 regnskaps- og ERP-systemer.';
+  faktureringFenistra = 'Fenistra fakturerer selv. Fakturaene lages og sendes fra Fenistra, og bokføringen overføres til regnskapssystemet dere bruker, med integrasjoner via API mot en rekke regnskaps- og ERP-systemer.';
 
   /** «Hvorfor velge Fenistra»: what sets Fenistra apart, stated as facts about Fenistra (no claims about named competitors). */
   grunner: Grunn[] = [
@@ -259,7 +259,7 @@ export class VelgeForvaltningssystemComponent implements OnInit, OnDestroy {
       title: 'Henger systemet sammen med regnskapet?',
       why: 'Dobbeltregistrering mellom forvaltning og regnskap er en av de vanligste kildene til feil og ekstraarbeid.',
       ask: ['Fakturerer forvaltningssystemet selv, eller sendes bare bilag over til regnskapssystemet som fakturerer?', 'Hvilke regnskaps- og ERP-systemer er integrert, og hvem vedlikeholder integrasjonen?', 'Finnes det et API for egne rapporter og systemer?'],
-      fenistra: 'Fenistra er integrert mot 26 systemer, blant dem 19 regnskaps- og ERP-systemer som Tripletex, PowerOffice GO, Xledger, Visma Business NXT og Visma.net. Faktureringen skjer i Fenistra, og bokføringen overføres til regnskapet. Data registreres én gang og flyter videre til regnskap og rapportering. Fenistra er også integrert mot Power BI og Maestro for rapportering og Finale for årsoppgjør, og det finnes et API for egne rapporter.',
+      fenistra: 'Fenistra er integrert via API med en rekke systemer, blant dem regnskaps- og ERP-systemer som Tripletex, PowerOffice GO, Xledger, Visma Business NXT og Visma.net. Faktureringen skjer i Fenistra, og bokføringen overføres til regnskapet. Data registreres én gang og flyter videre til regnskap og rapportering. Fenistra er også integrert mot Power BI og Maestro for rapportering og Finale for årsoppgjør, og det finnes et API for egne rapporter.',
     },
     {
       id: 'marked',

@@ -365,59 +365,30 @@
     .split-section{padding:30px 0 44px;}
   }
   @media (max-width:600px){.split .form-box{padding:24px 20px;}}
-  /* HubSpot-skjemaet tegnes rett i siden (ikke i iframe), slik at autofyll fyller alle feltene; stilen er vår */
-  #hubspotMeetingForm .hs-form{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;align-items:start;}
-  #hubspotMeetingForm .hs-form fieldset{max-width:none !important;width:auto;border:0;margin:0;padding:0;min-width:0;grid-column:1 / -1;}
-  #hubspotMeetingForm .hs-form fieldset.form-columns-2{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;}
-  #hubspotMeetingForm .hs-form fieldset.form-columns-2 .hs-form-field{width:auto !important;float:none !important;}
-  #hubspotMeetingForm .hs-form fieldset.form-columns-1:has(.hs_email),
-  #hubspotMeetingForm .hs-form fieldset.form-columns-1:has(.hs_company){grid-column:auto;}
-  #hubspotMeetingForm .hs-form fieldset .input{margin-right:0 !important;}
-  #hubspotMeetingForm .hs-form-field{display:flex;flex-direction:column;gap:5px;min-width:0;float:none !important;width:auto !important;}
-  #hubspotMeetingForm .hs-form-field > label{font-size:13.5px;font-weight:500;color:var(--ink);}
-  #hubspotMeetingForm .hs-form-required{color:var(--ink-soft);margin-left:1px;}
-  #hubspotMeetingForm .hs-input:not([type="checkbox"]){width:100% !important;padding:11px 13px;border:1.5px solid var(--line);border-radius:10px;font-size:15px;font-family:var(--font-body);color:var(--ink);background:#fff;outline:none;transition:border-color .15s ease, box-shadow .15s ease;}
-  #hubspotMeetingForm textarea.hs-input{min-height:64px;resize:vertical;display:block;}
-  #hubspotMeetingForm .hs-input:not([type="checkbox"]):focus{border-color:var(--berry);box-shadow:0 0 0 3px rgba(30,41,59,.12);}
-  #hubspotMeetingForm .hs-input.invalid.error{border-color:#B42318;}
-  #hubspotMeetingForm .hs-error-msgs{list-style:none;margin:2px 0 0;padding:0;}
-  #hubspotMeetingForm .hs-error-msg, #hubspotMeetingForm .hs-main-font-element{font-size:13px;color:#B42318;}
-  #hubspotMeetingForm .hs_error_rollup{display:none;}
-  #hubspotMeetingForm .legal-consent-container, #hubspotMeetingForm .legal-consent-container p{font-size:12.5px;line-height:1.45;color:var(--ink-soft);margin:0;}
-  #hubspotMeetingForm .legal-consent-container a{color:var(--ink);text-decoration:underline;}
-  #hubspotMeetingForm .legal-consent-container .hs-form-field{margin-top:8px;}
-  #hubspotMeetingForm .inputs-list{list-style:none;margin:0;padding:0;}
-  #hubspotMeetingForm .hs-form-booleancheckbox-display{display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-weight:400;}
-  #hubspotMeetingForm .hs-form-booleancheckbox-display input{width:17px;height:17px;margin-top:1px;flex-shrink:0;accent-color:var(--berry);}
-  #hubspotMeetingForm .hs-form-booleancheckbox-display span{margin:0 !important;font-size:12.5px;line-height:1.45;color:var(--ink-soft);}
-  #hubspotMeetingForm .hs_submit, #hubspotMeetingForm .hs-form > div{grid-column:1 / -1;}
-  #hubspotMeetingForm .hs-button{display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-body);font-weight:600;font-size:14.5px;padding:12px 26px;border-radius:9px;border:0;background:var(--berry);color:#fff;cursor:pointer;transition:background .25s ease, transform .25s ease;-webkit-appearance:none;}
-  #hubspotMeetingForm .hs-button:hover{background:var(--berry-deep);transform:translateY(-1px);}
-  #hubspotMeetingForm .submitted-message p{font-size:15px;color:var(--ink);line-height:1.55;margin:0 0 10px;}
-  @media (max-width:420px){
-    #hubspotMeetingForm .hs-form, #hubspotMeetingForm .hs-form fieldset.form-columns-2{grid-template-columns:1fr;}
-    #hubspotMeetingForm .hs-form fieldset.form-columns-1{grid-column:1 / -1 !important;}
-  }
 </style>
 
 <section class="split-section">
   <div class="wrap split">
     <div class="split-left">
-      <h1>Se Fenistra, tilpasset porteføljen deres</h1>
-      <p class="lead">Fyll ut skjemaet, så tar en av rådgiverne våre kontakt. I møtet viser vi hvordan Fenistra fungerer for akkurat deres kontrakter, selskaper og regler.</p>
+      <h1>{{ page.h1 }}</h1>
+      <p class="lead">{{ page.lead }}</p>
     </div>
 
     <div class="split-right">
       <div class="form-box" id="skjema" style="scroll-margin-top:100px;">
-        <h2>Book et møte</h2>
-        <p class="form-intro">Fyll ut skjemaet, så tar en av rådgiverne våre kontakt for å avtale tid.</p>
+        <h2>{{ page.h2 }}</h2>
+        <p class="form-intro">{{ page.intro }}</p>
         @if (formState === 'loading') {
           <div class="form-loading"><app-loader size="sm" label="Laster skjema"></app-loader></div>
         }
         @if (formState === 'failed') {
-          <p class="form-failed">Skjemaet kunne ikke lastes. Send oss en e-post på <a href="mailto:support.fenistra&#64;visma.com">support.fenistra&#64;visma.com</a>, så tar vi kontakt.</p>
+          <p class="form-failed">@if (page.formId) {Skjemaet kunne ikke lastes. }Send oss en e-post på <a href="mailto:support.fenistra&#64;visma.com">support.fenistra&#64;visma.com</a>, så tar vi kontakt.</p>
         }
-        <div id="hubspotMeetingForm"></div>
+        @if (page.frameForm) {
+          <div class="hs-form-frame" data-region="eu1" [attr.data-form-id]="page.formId" data-portal-id="139505393"></div>
+        } @else {
+          <div id="hubspotMeetingForm"></div>
+        }
       </div>
     </div>
   </div>

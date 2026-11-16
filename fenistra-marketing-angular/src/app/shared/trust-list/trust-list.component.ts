@@ -9,7 +9,7 @@ import { Component, ElementRef, NgZone, OnDestroy, afterNextRender, computed, in
 const ITEMS = [
   { title: 'En del av Visma Group', text: 'Fenistra er en del av Visma Property Solutions siden 2020.' },
   { title: 'ISO 27001-sertifisert', text: 'Informasjonssikkerheten er sertifisert etter ISO 27001.' },
-  { title: '26 integrerte systemer', text: 'Blant dem 19 regnskaps- og ERP-systemer.' },
+  { title: 'Integrert i deres økosystem', text: 'Vi kobler oss via API på systemene dere allerede bruker, fra regnskap og ERP til rapportering.' },
 ];
 const START = 1.4, PER = 3.6;
 
