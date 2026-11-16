@@ -730,6 +730,16 @@
     .hp-hoegh > img{min-height:260px;}
   }
   #prosess{scroll-margin-top:76px;}
+  /* Telefon: tallene og fakta på én rad hver, i mindre skrift */
+  @media (max-width:760px){
+    body .hp-numbers{padding:48px 0;}
+    body .hp-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+    body .hp-mid{font-size:clamp(20px, 6.2vw, 28px);letter-spacing:-0.02em;}
+    body .hp-unit{display:block;font-size:.5em;letter-spacing:0;margin-top:4px;}
+    body .hp-stat-label{font-size:12.5px;margin-top:8px;line-height:1.35;}
+    body .hp-facts{flex-direction:row;justify-content:space-between;gap:12px;margin-top:32px;padding-top:18px;font-size:12.5px;line-height:1.35;}
+    body .hp-facts li{flex:1 1 0;min-width:0;border:none;padding:0;margin:0;}
+  }
 </style>
 <!-- ================= HERO ================= -->
 <section class="hp-hero">
@@ -765,7 +775,7 @@
         <p class="hp-stat-label">brukere</p>
       </div>
       <div class="hp-stat">
-        <p class="hp-mid"><span class="sr-only">Over 26 millioner</span><span aria-hidden="true">&gt;{{ sqmCount() }} millioner</span></p>
+        <p class="hp-mid"><span class="sr-only">Over 26 millioner</span><span aria-hidden="true">&gt;{{ sqmCount() }}<span class="hp-unit"> millioner</span></span></p>
         <p class="hp-stat-label">kvadratmeter i systemet</p>
       </div>
     </div>

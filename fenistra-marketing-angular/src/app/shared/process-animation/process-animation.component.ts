@@ -12,6 +12,8 @@ const INK = 'var(--plum-deep)', BODY = 'var(--ink-soft)', MUTED = '#94A3B8', LIN
 const MONO = 'var(--font-mono)';
 /** playback speed: 1 = the prototype's tempo (31.9 s per loop) */
 const SPEED = 1.5;
+/** Phones: a tall window on the stage that follows one step at a time (left edge, top, width, height in stage units) */
+const MOBILE = { pad: 40, top: 300, w: 460, h: 620 };
 const W = 1920, H = 1080, DEFAULT_X0 = 160, GAP = 440, LINE_Y = 590, CARD_W = 380, CARD_H = 224, CARD_Y = 326;
 
 type Ease = (t: number) => number;
@@ -378,20 +380,38 @@ export class ProcessAnimationComponent implements OnDestroy {
     const stage = host.querySelector<HTMLElement>('.pa-stage');
     if (!stage) return;
     const cfg = this.config;
-    const overview = INTRO + cfg.steps.length * STEP, TOTAL = overview + OVERVIEW;
-    const render = this.createScene(stage, cfg);
+    const phone = matchMedia('(max-width: 759px)');
+    const mobile = phone.matches;
+    const overview = INTRO + cfg.steps.length * STEP;
+    // phones skip the zoomed-out overview: the window shows one step at a time
+    const TOTAL = mobile ? overview + 1.2 : overview + OVERVIEW;
+    const render = this.createScene(stage, cfg, mobile);
     host.classList.add('pa-ready');
+    host.classList.toggle('pa-mobile', mobile);
 
-    // Fit the 1920×1080 canvas to the stage's width
+    // Fit the 1920×1080 canvas to the stage's width (on phones: the window that follows the steps)
     const canvas = stage.firstElementChild as HTMLElement;
-    const fit = () => (canvas.style.transform = `scale(${stage.clientWidth / W})`);
+    const x0 = (cfg.inset ?? DEFAULT_X0) - MOBILE.pad;
+    const fit = () => (canvas.style.transform = mobile
+      ? `scale(${stage.clientWidth / MOBILE.w}) translate(${-x0}px, ${-MOBILE.top}px)`
+      : `scale(${stage.clientWidth / W})`);
+    // crossing the phone/tablet width (turning the phone, resizing) builds the stage again for the other layout
+    const onChange = () => {
+      this.cleanup.forEach((f) => f());
+      this.cleanup = [];
+      if (this.frame) cancelAnimationFrame(this.frame);
+      stage.replaceChildren();
+      this.build(host);
+    };
+    phone.addEventListener('change', onChange);
+    this.cleanup.push(() => phone.removeEventListener('change', onChange));
     fit();
     const ro = new ResizeObserver(fit);
     ro.observe(stage);
     this.cleanup.push(() => ro.disconnect());
 
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      render(overview + 2.6); // the zoomed-out overview, held still
+      render(mobile ? overview - 0.5 : overview + 2.6); // held still: the overview, or on phones the last step
       return;
     }
 
@@ -429,7 +449,7 @@ export class ProcessAnimationComponent implements OnDestroy {
   }
 
   /** Builds the stage DOM once and returns a function that poses it at time T (seconds). */
-  private createScene(stage: HTMLElement, cfg: ProcessConfig): (T: number) => void {
+  private createScene(stage: HTMLElement, cfg: ProcessConfig, mobile = false): (T: number) => void {
     const STEPS = cfg.steps, N = STEPS.length;
     const X0 = cfg.inset ?? DEFAULT_X0;
     const nodeX = (i: number) => X0 + i * GAP;
@@ -438,7 +458,8 @@ export class ProcessAnimationComponent implements OnDestroy {
     const worldW = nodeX(N - 1) + CARD_W + 160;
     const solidEnd = nodeX(N - 2), dashEnd = nodeX(N - 1) + 300;
     const cue = (i: number) => INTRO + i * STEP;
-    const camTarget = (i: number) => Math.max(0, Math.min(MAXX, (i - 1) * GAP));
+    // desktop keeps the step before in view; phones put the active step at the window's left edge
+    const camTarget = (i: number) => mobile ? Math.min(nodeX(N - 1) - X0, i * GAP) : Math.max(0, Math.min(MAXX, (i - 1) * GAP));
 
     const canvas = el('div', { position: 'absolute', left: 0, top: 0, width: W, height: H, transformOrigin: '0 0' });
     const layer = el('div', { position: 'absolute', inset: 0 });
@@ -475,7 +496,8 @@ export class ProcessAnimationComponent implements OnDestroy {
       el('span', { fontFamily: MONO, fontSize: 17, color: BODY, letterSpacing: '0.02em', whiteSpace: 'nowrap', marginRight: 10 }, cfg.ledger), ...chips.map((c) => c.chip));
     const outro = el('div', { position: 'absolute', left: X0, top: 860, fontSize: 40, fontWeight: 500, letterSpacing: '-0.02em', color: INK }, cfg.outro);
 
-    layer.append(header, world, ledger, outro);
+    // on phones the title and lead are the page's own text above the stage, and the overview is left out
+    if (mobile) layer.append(world); else layer.append(header, world, ledger, outro);
     canvas.append(layer);
     stage.append(canvas);
 
@@ -483,12 +505,13 @@ export class ProcessAnimationComponent implements OnDestroy {
       // camera follows the active step, then zooms out to the whole process
       let camX = 0;
       for (let i = 1; i < N; i++) camX += (camTarget(i) - camTarget(i - 1)) * M.draw(cue(i) - 0.35, 0.9)(T);
-      const zoom = M.draw(OV + 0.2, 1.4)(T);
+      const zoom = mobile ? 0 : M.draw(OV + 0.2, 1.4)(T);
       const s = lerp(1, W / worldW, zoom);
       const wx = lerp(-camX, 0, zoom), wy = lerp(0, 560 - 600 * (W / worldW) + 40, zoom);
       world.style.transform = `translate(${wx}px, ${wy}px) scale(${s})`;
 
-      layer.style.opacity = String(M.enter(0, 0.8)(T) * (1 - M.enter(TOTAL - 0.7, 0.6)(T)));
+      const end = mobile ? OV + 1.2 : TOTAL;
+      layer.style.opacity = String(M.enter(0, 0.8)(T) * (1 - M.enter(end - 0.7, 0.6)(T)));
       const h = M.enter(0.1, 0.8)(T), sb = M.enter(0.4, 0.8)(T);
       css(head, { opacity: h, transform: `translateY(${(1 - h) * 20}px)` });
       css(sub, { opacity: sb, transform: `translateY(${(1 - sb) * 14}px)` });

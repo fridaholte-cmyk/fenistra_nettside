@@ -57,3 +57,15 @@
   :host(.pa-ready.pa-motion) .pa-controls { display: flex; }
   :host(.pa-ready) .pa-fallback { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 }
+
+/* Phones: the stage is a tall window that follows one step at a time. The heading and lead above it
+   are the text version's own; its list is kept for screen readers only. */
+@media (max-width: 759px) {
+  :host(.pa-ready.pa-mobile) .pa-stage { display: block; aspect-ratio: 460 / 620; border: 1px solid var(--line); border-radius: 14px; }
+  :host(.pa-ready.pa-mobile.pa-motion) .pa-controls { display: flex; position: static; justify-content: flex-end; margin-top: 12px; }
+  :host(.pa-ready.pa-mobile) .pa-fallback { display: flex; flex-direction: column; }
+  :host(.pa-ready.pa-mobile) .pa-fallback .pa-lead { margin-bottom: 20px; }
+  :host(.pa-ready.pa-mobile) .pa-list { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+  :host(.pa-ready.pa-mobile) { display: flex; flex-direction: column; }
+  :host(.pa-ready.pa-mobile) .pa-fallback { order: -1; }
+}
