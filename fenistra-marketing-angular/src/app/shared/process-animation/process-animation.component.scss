@@ -39,7 +39,7 @@
   color: var(--plum-deep);
 }
 
-.pa-fallback h2 { font-family: var(--font-display); font-weight: 300; font-size: clamp(30px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 14px; }
+.pa-fallback h2 { font-family: var(--font-display); font-weight: 300; font-size: clamp(30px, calc(1.8rem + 2vw), 48px); line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 14px; }
 .pa-lead { font-size: 17px; color: var(--ink-soft); line-height: 1.6; max-width: 640px; margin-bottom: 32px; }
 .pa-list { list-style: none; margin: 0; padding: 0; }
 .pa-list li { position: relative; padding: 0 0 26px 34px; }

@@ -23,7 +23,7 @@ export class AltIFenistraComponent {
       id: 'kontrakter',
       title: 'Kontrakter og leieforhold',
       intro: 'Hver kontrakt, hver sikkerhet og hver frist samlet, med varsel før noe glipper.',
-      route: '/kontroll-pa-portefoljen',
+      route: '/losninger/kontroll-pa-portefoljen',
       linkText: 'Følge opp kontrakter og leietakere',
       deler: [
         { title: 'Kontrakter', text: 'Utleie-, fremleie- og interne kontrakter samlet på tvers av hele porteføljen, fra signering til utløp. Trappetrinnsleie, leierabatter, omsetningsbasert leie og egne faktureringsvilkår settes opp direkte i kontrakten.' },
@@ -38,7 +38,7 @@ export class AltIFenistraComponent {
       id: 'utleie',
       title: 'Utleie og leietakeroppfølging',
       intro: 'Den kommersielle forvaltningen i samme system som økonomien, fra første henvendelse til signert kontrakt og innflytting.',
-      route: '/fra-lead-til-innflytting',
+      route: '/losninger/fra-lead-til-innflytting',
       linkText: 'Fra lead til innflytting',
       deler: [
         { title: 'CRM og leads', text: 'CRM bygget inn og koblet til kontraktene, med oppfølging av leads, behov og leietakere.' },
@@ -51,7 +51,7 @@ export class AltIFenistraComponent {
       id: 'fakturering',
       title: 'Fakturering og avregning',
       intro: 'Registrer én gang, og la systemet regulere, fakturere og avregne gjennom hele leieforholdet.',
-      route: '/fakturering-og-avregning',
+      route: '/losninger/fakturering-og-avregning',
       linkText: 'Fakturering og avregning',
       deler: [
         { title: 'Fakturering', text: 'Faktureringen skjer i Fenistra: fakturaene lages og sendes fra systemet, og bokføringen overføres til regnskapet. Fast, akonto og omsetningsbasert husleie i én løsning, med gjentakende fakturering gjennom hele leieforholdet. KPI-regulering med integrasjon mot SSB og automatiske reguleringsbrev.' },
@@ -64,7 +64,7 @@ export class AltIFenistraComponent {
       id: 'mva',
       title: 'MVA og regelverk',
       intro: 'MVA-erklæringer, justeringsforpliktelser og dokumentasjonen revisor spør etter.',
-      route: '/mva-og-regelverk',
+      route: '/losninger/mva-og-regelverk',
       linkText: 'MVA og regelverk',
       deler: [
         { title: 'MVA-erklæring', text: 'Automatisk innhenting av nødvendig informasjon ved utleie til MVA-registrerte leietakere.' },
@@ -75,7 +75,7 @@ export class AltIFenistraComponent {
       id: 'rapport',
       title: 'Rapport og analyse',
       intro: 'Nøkkeltall, budsjett og verdier rett fra kildedataene, klare for ledelse og styre.',
-      route: '/rapport-og-analyse',
+      route: '/losninger/rapport-og-analyse',
       linkText: 'Se mulighetene i porteføljen',
       deler: [
         { title: 'Rapportering', text: 'Standardrapporter og interaktive visualiseringer av porteføljens data og nøkkeltall, bygget på de samme dataene som kontrakt, fakturering og regnskap.' },
@@ -87,7 +87,7 @@ export class AltIFenistraComponent {
       id: 'kjopesenter',
       title: 'Kjøpesenter',
       intro: 'Ett system for hele senteret, der eiendomsselskapet, butikkene og senterleder jobber ut fra de samme tallene.',
-      route: '/losning-kjopesenter',
+      route: '/losninger/kjopesenter',
       linkText: 'Fenistra Kjøpesenter',
       deler: [
         { title: 'Senterdashbord', text: 'Ukens besøks- og omsetningstall, utvikling mot fjoråret, omsetning per bransje og aktiviteter i én oversikt.' },

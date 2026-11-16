@@ -10,11 +10,11 @@ export interface ChatKbEntry {
 export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   {
     keywords: ["menneske", "snakke med", "ekte person", "en person", "kundeservice", "ringe", "telefon", "tlf", "kontakte dere", "kontakt dere", "nå dere", "support"],
-    answer: "Ja, selvfølgelig! Du når oss på telefon <a href=\"tel:+4722229049\">22 22 90 49</a> eller e-post support.fenistra&#64;visma.com. Du kan også fylle ut skjemaet på kontaktsiden, så tar en av oss kontakt. <a href=\"kontakt-oss.html\">Gå til Kontakt oss →</a>"
+    answer: "Ja, selvfølgelig! Du når oss på telefon <a href=\"tel:+4722229049\">22 22 90 49</a> eller e-post support.fenistra&#64;visma.com. Du kan også fylle ut skjemaet på kontaktsiden, så tar en av oss kontakt. <a href=\"kontakt.html\">Gå til Kontakt oss →</a>"
   },
   {
     keywords: ["passer fenistra", "passer det for", "passer fenistra for", "er fenistra noe for", "fenistra for meg", "fenistra for oss", "passer dette for", "egner fenistra seg", "kan fenistra brukes av", "passer for min bedrift", "passer for oss"],
-    answer: "Fenistra er bygget for eiendomsselskaper som tar forvaltningen på alvor, særlig porteføljer med flere selskaper, mange kontraktstyper, felleskostnader, MVA eller omsetningsleie. Book et møte, så viser vi hvilke løsninger som passer akkurat for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
+    answer: "Fenistra er bygget for eiendomsselskaper som tar forvaltningen på alvor, særlig porteføljer med flere selskaper, mange kontraktstyper, felleskostnader, MVA eller omsetningsleie. Book et møte, så viser vi hvilke løsninger som passer akkurat for dere. <a href=\"book-et-mote.html\">Book et møte →</a>"
   },
   {
     keywords: ["datasikkerhet", "sikker data", "dataene trygge", "sikrer dere dataene", "sikkerhet program", "visma security program", "iso", "iso 27001", "27001", "sertifisert", "sertifisering", "vcdm", "kryptering", "hosting", "trust centre", "informasjonssikkerhet", "trygge data", "sikre data", "lagrer dere dataene", "hvor lagres dataene", "databeskyttelse", "cybersikkerhet", "dataene", "trygge"],
@@ -26,15 +26,15 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["standard"],
-    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"book-et-mote.html\">Book et møte →</a>"
   },
   {
     keywords: ["premium"],
-    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"book-et-mote.html\">Book et møte →</a>"
   },
   {
     keywords: ["kjøpesenter"],
-    answer: "Fenistra Kjøpesenter er senterleders verktøy, og gir full oversikt over status på senteret og oppgavene som hører til rollen. Fokuset ligger på butikk, aktiviteter og løpende omsetningsrapportering. <a href=\"losning-kjopesenter.html\">Les mer om Fenistra Kjøpesenter →</a>"
+    answer: "Fenistra Kjøpesenter er senterleders verktøy, og gir full oversikt over status på senteret og oppgavene som hører til rollen. Fokuset ligger på butikk, aktiviteter og løpende omsetningsrapportering. <a href=\"losninger/kjopesenter.html\">Les mer om Fenistra Kjøpesenter →</a>"
   },
   {
     keywords: ["regnskapssystem", "integreres"],
@@ -42,11 +42,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["koster", "kostnad", "abonnement"],
-    answer: "Vi gir et tilbud tilpasset porteføljen deres. Book et møte, så ser vi på hva som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
+    answer: "Vi gir et tilbud tilpasset porteføljen deres. Book et møte, så ser vi på hva som passer for dere. <a href=\"book-et-mote.html\">Book et møte →</a>"
   },
   {
     keywords: ["forskjellen", "standard", "premium"],
-    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"book-et-mote.html\">Book et møte →</a>"
   },
   {
     keywords: ["eier"],
@@ -62,35 +62,35 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["felleskostnadsavregning", "hjelper"],
-    answer: "Felleskostnadsavregning er fordelingen av driftskostnader (som strøm i fellesareal, vaktmestertjenester og renhold) mellom leietakerne i en eiendom, avregnet mot akontobeløp gjennom året. Fenistra Felleskostnader automatiserer MVA-behandling, beregning og avregning, og kobler fordelingsnøkler direkte til kontraktsdataene. Les mer i bloggartikkelen om felleskostnadsavregning. <a href=\"losning-felleskostnader.html\">Les mer om Fenistra Felleskostnader →</a>"
+    answer: "Felleskostnadsavregning er fordelingen av driftskostnader (som strøm i fellesareal, vaktmestertjenester og renhold) mellom leietakerne i en eiendom, avregnet mot akontobeløp gjennom året. Fenistra Felleskostnader automatiserer MVA-behandling, beregning og avregning, og kobler fordelingsnøkler direkte til kontraktsdataene. Les mer i bloggartikkelen om felleskostnadsavregning. <a href=\"losninger/felleskostnader.html\">Les mer om Fenistra Felleskostnader →</a>"
   },
   {
     keywords: ["omsetningsbasert", "omsetningsleie", "leie"],
-    answer: "Omsetningsbasert leie er en leiemodell der deler av leien er knyttet til leietakers faktiske omsetning, vanlig i kjøpesentre og handelseiendom. Fenistra henter inn og avregner omsetningstall automatisk, med automatisk purring på manglende rapportering. Les mer om omsetningsleie i kjøpesenter. <a href=\"losning-omsetningsavregning.html\">Les mer om Fenistra Omsetningsavregning →</a>"
+    answer: "Omsetningsbasert leie er en leiemodell der deler av leien er knyttet til leietakers faktiske omsetning, vanlig i kjøpesentre og handelseiendom. Fenistra henter inn og avregner omsetningstall automatisk, med automatisk purring på manglende rapportering. Les mer om omsetningsleie i kjøpesenter. <a href=\"losninger/omsetningsavregning.html\">Les mer om Fenistra Omsetningsavregning →</a>"
   },
   {
     keywords: ["revisorbekreftet", "omsetning", "rbo"],
-    answer: "Revisorbekreftet omsetning er innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata, informasjon utleier trenger for å avregne omsetningsbasert leie korrekt. <a href=\"losning-rbo.html\">Les mer om Revisorbekreftet omsetning →</a>"
+    answer: "Revisorbekreftet omsetning er innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata, informasjon utleier trenger for å avregne omsetningsbasert leie korrekt. <a href=\"losninger/revisorbekreftet-omsetning.html\">Les mer om Revisorbekreftet omsetning →</a>"
   },
   {
     keywords: ["formuesverdsettelse", "trenger"],
-    answer: "Formuesverdsettelse er beregning og dokumentasjon av formuesverdien til næringseiendom. Formuesverdien utgjør ofte en stor del av selskapets verdier og påvirker verdien på aksjene. Fenistra Formuesverdsettelse beregner den ut fra faktisk fakturert leieinntekt og ledighet, hentet direkte fra porteføljedataene deres. <a href=\"losning-formuesverdsettelse.html\">Les mer om Fenistra Formuesverdsettelse →</a>"
+    answer: "Formuesverdsettelse er beregning og dokumentasjon av formuesverdien til næringseiendom. Formuesverdien utgjør ofte en stor del av selskapets verdier og påvirker verdien på aksjene. Fenistra Formuesverdsettelse beregner den ut fra faktisk fakturert leieinntekt og ledighet, hentet direkte fra porteføljedataene deres. <a href=\"losninger/formuesverdsettelse.html\">Les mer om Fenistra Formuesverdsettelse →</a>"
   },
   {
     keywords: ["mva-erklæring"],
-    answer: "Fenistra MVA-erklæring automatiserer innhentingen av MVA-erklæringer fra MVA-registrerte leietakere, og gir oversikt over bruken av lokalene gjennom året. Det var Fenistras første rene skyprodukt (SaaS), lansert i 2017. Fenistra selv har røtter tilbake til 1994. <a href=\"losning-mva-erklaring.html\">Les mer om Fenistra MVA-erklæring →</a>"
+    answer: "Fenistra MVA-erklæring automatiserer innhentingen av MVA-erklæringer fra MVA-registrerte leietakere, og gir oversikt over bruken av lokalene gjennom året. Det var Fenistras første rene skyprodukt (SaaS), lansert i 2017. Fenistra selv har røtter tilbake til 1994. <a href=\"losninger/mva-erklaring.html\">Les mer om Fenistra MVA-erklæring →</a>"
   },
   {
     keywords: ["transaksjonsprodukter"],
-    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"book-et-mote.html\">Book et møte →</a>"
   },
   {
     keywords: ["kontrakter", "digitalt", "signere"],
-    answer: "Ja. Fenistra Digital signering lar dere signere kontrakter og dokumenter digitalt, direkte i Fenistra, uten å måtte gå via e-post eller eksterne verktøy. <a href=\"losning-digital-signering.html\">Les mer om Fenistra Digital signering →</a>"
+    answer: "Ja. Fenistra Digital signering lar dere signere kontrakter og dokumenter digitalt, direkte i Fenistra, uten å måtte gå via e-post eller eksterne verktøy. <a href=\"losninger/digital-signering.html\">Les mer om Fenistra Digital signering →</a>"
   },
   {
     keywords: ["arealberegning"],
-    answer: "Fenistra Arealberegning kobler areal direkte til tegning og kontrakt, og gir nøyaktige arealberegninger som reduserer risikoen for feil i leiekostnader og kvadratmeterpriser. <a href=\"losning-arealberegning.html\">Les mer om Fenistra Arealberegning →</a>"
+    answer: "Fenistra Arealberegning kobler areal direkte til tegning og kontrakt, og gir nøyaktige arealberegninger som reduserer risikoen for feil i leiekostnader og kvadratmeterpriser. <a href=\"losninger/arealberegning.html\">Les mer om Fenistra Arealberegning →</a>"
   },
   {
     keywords: ["fenistradagene"],
@@ -110,11 +110,11 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["spesielle kontrakter", "spesielle behov", "spesiell", "særskilt", "skreddersy", "tilpasse seg", "kompleks", "uvanlig", "våre behov"],
-    answer: "Fenistra gir et hav av muligheter. Har dere spesielle kontrakter eller spesielle behov, finner vi en løsning i Fenistra. Fenistra brukes i dag av over 170 eiendomsforvaltere i Norge, også porteføljer med mange selskaper og kontraktstyper. Fenistra tilpasser seg dere, ikke omvendt. <a href=\"kontakt-oss.html\">Snakk med oss om deres behov →</a>"
+    answer: "Fenistra gir et hav av muligheter. Har dere spesielle kontrakter eller spesielle behov, finner vi en løsning i Fenistra. Fenistra brukes i dag av over 170 eiendomsforvaltere i Norge, også porteføljer med mange selskaper og kontraktstyper. Fenistra tilpasser seg dere, ikke omvendt. <a href=\"kontakt.html\">Snakk med oss om deres behov →</a>"
   },
   {
     keywords: ["avregningsbrev", "reguleringsbrev", "regulering", "avregning", "avstemme", "avstemming"],
-    answer: "Fakturering skjer fra Fenistra, med full kontroll og avstemming mot regnskapet. Avregningen skjer på deres premisser, og avregningsbrevet følger med faktureringen til leietaker. Reguleringen kan tilpasses etter deres behov, og leietaker får reguleringsbrev. <a href=\"losning-fakturering.html\">Se Fakturering →</a>"
+    answer: "Fakturering skjer fra Fenistra, med full kontroll og avstemming mot regnskapet. Avregningen skjer på deres premisser, og avregningsbrevet følger med faktureringen til leietaker. Reguleringen kan tilpasses etter deres behov, og leietaker får reguleringsbrev. <a href=\"losninger/fakturering.html\">Se Fakturering →</a>"
   },
   {
     keywords: ["kom i gang", "oppstart", "implementering", "migrering", "bytte fra", "flytte data", "onboarding", "hvor lang tid"],
@@ -134,75 +134,75 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["ki-assistent", "ai-assistent", "ai-chat", "ki-chat", "ai-opplasting", "last opp kontrakt", "laste opp kontrakter", "ai i fenistra", "ki i fenistra"],
-    answer: "Fenistra har innebygd AI. KI-assistenten følger deg overalt i systemet: still spørsmål om kontrakter, leietakere eller hele porteføljen, be om innsikt og analyse, eller spør hvordan du gjør noe. Med AI-opplasting drar du kontrakten rett inn i Fenistra, AI fyller ut feltene, og du kontrollerer før kontrakten er klar for fakturering og forvaltning. <a href=\"ki.html#ki-i-fenistra\">Les mer om AI i Fenistra →</a>"
+    answer: "Fenistra har innebygd AI. KI-assistenten følger deg overalt i systemet: still spørsmål om kontrakter, leietakere eller hele porteføljen, be om innsikt og analyse, eller spør hvordan du gjør noe. Med AI-opplasting drar du kontrakten rett inn i Fenistra, AI fyller ut feltene, og du kontrollerer før kontrakten er klar for fakturering og forvaltning. <a href=\"slik-hjelper-fenistra.html#ki-i-fenistra\">Les mer om AI i Fenistra →</a>"
   },
   {
     keywords: ["intelligens", "kunstig", "jobber"],
-    answer: "Ja. AI er en viktig del av hvordan Fenistra gjør eiendomskunnskapen anvendelig. Den leser kontrakter, henter ut opplysninger, svarer med kilder og følger opp funn, og den bruker eiendomskompetansen, deres egne data og markedsdata fra Arealstatistikk sammen. <a href=\"ki.html\">Se hvordan Fenistra hjelper →</a>"
+    answer: "Ja. AI er en viktig del av hvordan Fenistra gjør eiendomskunnskapen anvendelig. Den leser kontrakter, henter ut opplysninger, svarer med kilder og følger opp funn, og den bruker eiendomskompetansen, deres egne data og markedsdata fra Arealstatistikk sammen. <a href=\"slik-hjelper-fenistra.html\">Se hvordan Fenistra hjelper →</a>"
   },
   {
     keywords: ["kommer", "gang"],
-    answer: "Snakk med oss, eller be om et møte for å se hvilke løsninger som passer for akkurat deres portefølje. En av rådgiverne våre tar deretter kontakt for å finne riktig oppsett. <a href=\"pakke-resultat.html\">Book et møte →</a>"
+    answer: "Snakk med oss, eller be om et møte for å se hvilke løsninger som passer for akkurat deres portefølje. En av rådgiverne våre tar deretter kontakt for å finne riktig oppsett. <a href=\"book-et-mote.html\">Book et møte →</a>"
   },
   {
     keywords: ["arealberegning", "areal", "kvadratmeter", "tegning", "fenistra arealberegning"],
-    answer: "Fenistra Arealberegning: Nøyaktige arealberegninger som reduserer risikoen for feil i leiekostnader og kvadratmeterpriser, med kobling mot AutoCAD-tegninger. Blant annet: Kobling via Viewer mot AutoCAD-tegningsfiler; Automatisk beregning av MVA-grad på tegning; Historikk bevares ved endring av tegninger. <a href=\"losning-arealberegning.html\">Les mer om Fenistra Arealberegning →</a>"
+    answer: "Fenistra Arealberegning: Nøyaktige arealberegninger som reduserer risikoen for feil i leiekostnader og kvadratmeterpriser, med kobling mot AutoCAD-tegninger. Blant annet: Kobling via Viewer mot AutoCAD-tegningsfiler; Automatisk beregning av MVA-grad på tegning; Historikk bevares ved endring av tegninger. <a href=\"losninger/arealberegning.html\">Les mer om Fenistra Arealberegning →</a>"
   },
   {
     keywords: ["digital signering", "signering", "signere", "e-signatur", "fenistra digital signering", "digital"],
-    answer: "Fenistra Digital signering: Signer kontrakter og dokumenter digitalt, direkte i Fenistra, uten å måtte gå via e-post eller eksterne verktøy. Blant annet: Digital signering direkte i kontraktsflyten; Full sporbarhet på hvem som har signert og når; Juridisk bindende signaturer. <a href=\"losning-digital-signering.html\">Les mer om Fenistra Digital signering →</a>"
+    answer: "Fenistra Digital signering: Signer kontrakter og dokumenter digitalt, direkte i Fenistra, uten å måtte gå via e-post eller eksterne verktøy. Blant annet: Digital signering direkte i kontraktsflyten; Full sporbarhet på hvem som har signert og når; Juridisk bindende signaturer. <a href=\"losninger/digital-signering.html\">Les mer om Fenistra Digital signering →</a>"
   },
   {
     keywords: ["dokument", "dokumenthåndtering", "dokumenter", "fenistra dokument"],
-    answer: "Fenistra Dokument: Samle kontrakter, tegninger og annen dokumentasjon direkte koblet til riktig eiendom og leieforhold. Blant annet: Dokumenter koblet direkte til kontrakt og eiendom; Enkel tilgang for hele organisasjonen; Historikk og sporbarhet over tid. <a href=\"losning-dokument.html\">Les mer om Fenistra Dokument →</a>"
+    answer: "Fenistra Dokument: Samle kontrakter, tegninger og annen dokumentasjon direkte koblet til riktig eiendom og leieforhold. Blant annet: Dokumenter koblet direkte til kontrakt og eiendom; Enkel tilgang for hele organisasjonen; Historikk og sporbarhet over tid. <a href=\"losninger/dokumenter.html\">Les mer om Fenistra Dokument →</a>"
   },
   {
     keywords: ["fakturering", "faktura", "fakturere", "fenistra fakturering"],
-    answer: "Fenistra Fakturering: Fast, akonto og omsetningsbasert husleie samlet i én løsning, med gjentakende fakturering gjennom hele leieforholdet. Blant annet: Gjentakende fakturering gjennom hele leieforholdet; Støtter fast, akonto og omsetningsbasert husleie; Avstemming mot regnskapssystemet dere bruker. <a href=\"losning-fakturering.html\">Les mer om Fenistra Fakturering →</a>"
+    answer: "Fenistra Fakturering: Fast, akonto og omsetningsbasert husleie samlet i én løsning, med gjentakende fakturering gjennom hele leieforholdet. Blant annet: Gjentakende fakturering gjennom hele leieforholdet; Støtter fast, akonto og omsetningsbasert husleie; Avstemming mot regnskapssystemet dere bruker. <a href=\"losninger/fakturering.html\">Les mer om Fenistra Fakturering →</a>"
   },
   {
     keywords: ["felleskostnader", "felleskost", "felleskostavregning", "avregning", "fenistra felleskostnader"],
-    answer: "Fenistra Felleskostnader: Automatisert felleskostnadsavregning med full oversikt over kostnader, fordeling og MVA-behandling. Blant annet: Automatisert MVA-behandling; Fleksible avregningssykluser; Avanserte beregninger sikrer rettferdig kostnadsfordeling. <a href=\"losning-felleskostnader.html\">Les mer om Fenistra Felleskostnader →</a>"
+    answer: "Fenistra Felleskostnader: Automatisert felleskostnadsavregning med full oversikt over kostnader, fordeling og MVA-behandling. Blant annet: Automatisert MVA-behandling; Fleksible avregningssykluser; Avanserte beregninger sikrer rettferdig kostnadsfordeling. <a href=\"losninger/felleskostnader.html\">Les mer om Fenistra Felleskostnader →</a>"
   },
   {
     keywords: ["formuesverdsettelse", "formuesverdi", "skattemelding", "fenistra formuesverdsettelse"],
-    answer: "Fenistra Formuesverdsettelse: Beregning og dokumentasjon av formuesverdi for næringseiendom, basert på faktiske leieinntekter og ledighet. Blant annet: Beregner formuesverdi ut fra fakturert leieinntekt; Fanger opp ledighet, både deler av året og hele året; Korrigerer for kreditnotaer, rabatter og leiefritak; Rapport med kontroll- og beregningsfelt. <a href=\"losning-formuesverdsettelse.html\">Les mer om Fenistra Formuesverdsettelse →</a>"
+    answer: "Fenistra Formuesverdsettelse: Beregning og dokumentasjon av formuesverdi for næringseiendom, basert på faktiske leieinntekter og ledighet. Blant annet: Beregner formuesverdi ut fra fakturert leieinntekt; Fanger opp ledighet, både deler av året og hele året; Korrigerer for kreditnotaer, rabatter og leiefritak; Rapport med kontroll- og beregningsfelt. <a href=\"losninger/formuesverdsettelse.html\">Les mer om Fenistra Formuesverdsettelse →</a>"
   },
   {
     keywords: ["inntektsbudsjett", "budsjett", "budsjettering", "fenistra inntektsbudsjett"],
-    answer: "Fenistra Inntektsbudsjett: Bygg inntektsbudsjett direkte fra de faktiske leieforholdene i porteføljen, ikke fra separate regneark. Blant annet: Budsjettering basert på faktiske kontraktsdata; Oppdateres automatisk ved endringer i leieforhold; Avstemming mot faktisk fakturert leie. <a href=\"losning-inntektsbudsjett.html\">Les mer om Fenistra Inntektsbudsjett →</a>"
+    answer: "Fenistra Inntektsbudsjett: Bygg inntektsbudsjett direkte fra de faktiske leieforholdene i porteføljen, ikke fra separate regneark. Blant annet: Budsjettering basert på faktiske kontraktsdata; Oppdateres automatisk ved endringer i leieforhold; Avstemming mot faktisk fakturert leie. <a href=\"losninger/inntektsbudsjett.html\">Les mer om Fenistra Inntektsbudsjett →</a>"
   },
   {
     keywords: ["justering", "justeringsforpliktelser", "mva-fradrag", "fenistra justering"],
-    answer: "Fenistra Justering: Et effektivt verktøy for å håndtere MVA og justeringsforpliktelser for utleiere av fast eiendom, i samsvar med lover, forskrifter og uttalelser. Blant annet: Kontroll på justeringsforpliktelser for eiendommene; Beregner MVA-fradragsprosent per prosjekt; Oversikt over MVA-status i bygge- og tiltaksperioden. <a href=\"losning-justering.html\">Les mer om Fenistra Justering →</a>"
+    answer: "Fenistra Justering: Et effektivt verktøy for å håndtere MVA og justeringsforpliktelser for utleiere av fast eiendom, i samsvar med lover, forskrifter og uttalelser. Blant annet: Kontroll på justeringsforpliktelser for eiendommene; Beregner MVA-fradragsprosent per prosjekt; Oversikt over MVA-status i bygge- og tiltaksperioden. <a href=\"losninger/mva-justering.html\">Les mer om Fenistra Justering →</a>"
   },
   {
     keywords: ["kjøpesenter", "senterdrift", "senterleder", "butikkoversikt", "fenistra kjøpesenter"],
-    answer: "Fenistra Kjøpesenter: Full oversikt over senterdrift for senterleder, med fokus på butikk, aktiviteter og omsetningsrapportering. Blant annet: Oversiktlig dashboard for omsetning og utvikling på senteret; Automatisk purring på manglende omsetningsrapportering, med ønsket antall repetisjoner; Bransjetilpassede rapporter, inkludert Kvarud Analyse. <a href=\"losning-kjopesenter.html\">Les mer om Fenistra Kjøpesenter →</a>"
+    answer: "Fenistra Kjøpesenter: Full oversikt over senterdrift for senterleder, med fokus på butikk, aktiviteter og omsetningsrapportering. Blant annet: Oversiktlig dashboard for omsetning og utvikling på senteret; Automatisk purring på manglende omsetningsrapportering, med ønsket antall repetisjoner; Bransjetilpassede rapporter, inkludert Kvarud Analyse. <a href=\"losninger/kjopesenter.html\">Les mer om Fenistra Kjøpesenter →</a>"
   },
   {
     keywords: ["kontrakter", "kontrakt", "leiekontrakt", "leiekontrakter", "fenistra kontrakter"],
-    answer: "Fenistra Kontrakter: Effektiv overvåkning og håndtering av utleie-, fremleie- og interne kontrakter, samlet på tvers av hele porteføljen. Blant annet: Håndtering av utleie-, fremleie- og interne kontrakter; Varsling før kontraktsutløp og viktige frister; Direkte kobling mot leietaker, areal og fakturering. <a href=\"losning-kontrakter.html\">Les mer om Fenistra Kontrakter →</a>"
+    answer: "Fenistra Kontrakter: Effektiv overvåkning og håndtering av utleie-, fremleie- og interne kontrakter, samlet på tvers av hele porteføljen. Blant annet: Håndtering av utleie-, fremleie- og interne kontrakter; Varsling før kontraktsutløp og viktige frister; Direkte kobling mot leietaker, areal og fakturering. <a href=\"losninger/kontrakter.html\">Les mer om Fenistra Kontrakter →</a>"
   },
   {
     keywords: ["mva-erklæring", "mva", "merverdiavgift", "erklæring", "fenistra mva-erklæring"],
-    answer: "Fenistra MVA-erklæring: Automatisert innhenting av nødvendig informasjon ved utleie til MVA-registrerte leietakere. Blant annet: Automatisert innhenting av MVA-erklæringer fra leietakere; Oversikt over bruken av lokalene gjennom året; Reduserer manuelt oppfølgingsarbeid. <a href=\"losning-mva-erklaring.html\">Les mer om Fenistra MVA-erklæring →</a>"
+    answer: "Fenistra MVA-erklæring: Automatisert innhenting av nødvendig informasjon ved utleie til MVA-registrerte leietakere. Blant annet: Automatisert innhenting av MVA-erklæringer fra leietakere; Oversikt over bruken av lokalene gjennom året; Reduserer manuelt oppfølgingsarbeid. <a href=\"losninger/mva-erklaring.html\">Les mer om Fenistra MVA-erklæring →</a>"
   },
   {
     keywords: ["omsetningsavregning", "omsetningsleie", "omsetningsbasert leie", "fenistra omsetningsavregning", "omsetningsbasert", "leie"],
-    answer: "Fenistra Omsetningsavregning: Forenkler og effektiviserer avregningen av omsetningsbasert leie, basert på revisorbekreftet omsetning. Blant annet: Beregner korrekt leie basert på revisorbekreftet omsetning; Sammenholder løpende fakturert leie med faktisk omsetning; Differanse legges automatisk opp til fakturering. <a href=\"losning-omsetningsavregning.html\">Les mer om Fenistra Omsetningsavregning →</a>"
+    answer: "Fenistra Omsetningsavregning: Forenkler og effektiviserer avregningen av omsetningsbasert leie, basert på revisorbekreftet omsetning. Blant annet: Beregner korrekt leie basert på revisorbekreftet omsetning; Sammenholder løpende fakturert leie med faktisk omsetning; Differanse legges automatisk opp til fakturering. <a href=\"losninger/omsetningsavregning.html\">Les mer om Fenistra Omsetningsavregning →</a>"
   },
   {
     keywords: ["protokoller", "overtakelsesprotokoll", "tilbakelevering", "fenistra protokoller"],
-    answer: "Fenistra Protokoller: Verktøy for overtakelse og tilbakelevering av lokaler, med protokoller koblet direkte til riktig kontrakt. Blant annet: Protokoller for overtakelse av lokaler; Protokoller for tilbakelevering ved utflytting; Direkte kobling til kontrakt og dokumentasjon. <a href=\"losning-protokoller.html\">Les mer om Fenistra Protokoller →</a>"
+    answer: "Fenistra Protokoller: Verktøy for overtakelse og tilbakelevering av lokaler, med protokoller koblet direkte til riktig kontrakt. Blant annet: Protokoller for overtakelse av lokaler; Protokoller for tilbakelevering ved utflytting; Direkte kobling til kontrakt og dokumentasjon. <a href=\"losninger/protokoller.html\">Les mer om Fenistra Protokoller →</a>"
   },
   {
     keywords: ["rapportering", "rapport", "rapporter", "nøkkeltall", "fenistra rapportering"],
-    answer: "Fenistra Rapportering: Fenistras rapporter gir deg innsikten du trenger, når du trenger den. Blant annet: Enkle rapporter som gir deg og teamet et godt beslutningsgrunnlag; Hent ut per selskap, eiendom, portefølje eller egendefinerte tags og bransje; Alle rapporter kan hentes ut og lastes ned direkte fra løsningen. <a href=\"losning-rapportering.html\">Les mer om Fenistra Rapportering →</a>"
+    answer: "Fenistra Rapportering: Fenistras rapporter gir deg innsikten du trenger, når du trenger den. Blant annet: Enkle rapporter som gir deg og teamet et godt beslutningsgrunnlag; Hent ut per selskap, eiendom, portefølje eller egendefinerte tags og bransje; Alle rapporter kan hentes ut og lastes ned direkte fra løsningen. <a href=\"losninger/rapportering.html\">Les mer om Fenistra Rapportering →</a>"
   },
   {
     keywords: ["rbo", "revisorbekreftet omsetning", "fenistra rbo", "revisorbekreftet", "omsetning"],
-    answer: "Fenistra Revisorbekreftet omsetning: Enkel innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata. Blant annet: Innhenting av revisorbekreftet omsetning fra leietakere; Samlet administrasjon per leietaker og eiendom; Grunnlag for omsetningsbasert avregning. <a href=\"losning-rbo.html\">Les mer om Revisorbekreftet omsetning →</a>"
+    answer: "Fenistra Revisorbekreftet omsetning: Enkel innhenting og administrasjon av leietakers årlige, revisorbekreftede omsetningsdata. Blant annet: Innhenting av revisorbekreftet omsetning fra leietakere; Samlet administrasjon per leietaker og eiendom; Grunnlag for omsetningsbasert avregning. <a href=\"losninger/revisorbekreftet-omsetning.html\">Les mer om Revisorbekreftet omsetning →</a>"
   },
   {
     keywords: ["regnskap", "regnskapssystem", "kundereskontro", "fenistra regnskap"],
@@ -210,7 +210,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["sikkerhetsstyring", "bankgaranti", "depositum", "sikkerhet", "fenistra sikkerhetsstyring"],
-    answer: "Fenistra Sikkerhetsstyring: Full oversikt over bankgaranti og depositum i porteføljen, med varsel når sikkerhet mangler eller utløper. Blant annet: Bankgaranti og depositum samlet per kontrakt og på tvers av porteføljen; Varsel når sikkerhet mangler, er for lav eller nærmer seg utløp; Aggregert risikooversikt for hele porteføljen, ikke bare kontrakt for kontrakt. <a href=\"losning-sikkerhetsstyring.html\">Les mer om Fenistra Sikkerhetsstyring →</a>"
+    answer: "Fenistra Sikkerhetsstyring: Full oversikt over bankgaranti og depositum i porteføljen, med varsel når sikkerhet mangler eller utløper. Blant annet: Bankgaranti og depositum samlet per kontrakt og på tvers av porteføljen; Varsel når sikkerhet mangler, er for lav eller nærmer seg utløp; Aggregert risikooversikt for hele porteføljen, ikke bare kontrakt for kontrakt. <a href=\"losninger/sikkerhetsstyring.html\">Les mer om Fenistra Sikkerhetsstyring →</a>"
   },
   /* Skjult fra nettsiden:
   */
@@ -252,7 +252,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["felix", "kunstig intelligens ki", "ai-satsing", "ki i eiendomsforvaltning", "kunstig", "intelligens", "eiendomsforvaltning"],
-    answer: "Eiendomsforvaltning handler om store mengder data på tvers av kontrakter, arealer og økonomi. Det er nettopp den typen data AI er godt egnet til å strukturere, tolke og varsle på, når det gjøres riktig. <a href=\"ki.html\">Les mer om AI hos Fenistra →</a>"
+    answer: "Eiendomsforvaltning handler om store mengder data på tvers av kontrakter, arealer og økonomi. Det er nettopp den typen data AI er godt egnet til å strukturere, tolke og varsle på, når det gjøres riktig. <a href=\"slik-hjelper-fenistra.html\">Les mer om AI hos Fenistra →</a>"
   },
   {
     keywords: ["om fenistra historie", "hvem er fenistra", "selskapet fenistra", "historie", "selskapet"],
@@ -260,63 +260,63 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["ansatte", "teamet", "menneskene bak fenistra", "kundeteam", "produktteam", "menneskene"],
-    answer: "Fenistra har egne team for kundesuksess og produktutvikling. Se menneskene bak Fenistra, med lenker til kundeteamet og produktteamet, på Ansatte-siden. <a href=\"ansatte.html\">Les mer om Ansatte →</a>"
+    answer: "Fenistra har egne team for kundesuksess og produktutvikling. Se menneskene bak Fenistra, med lenker til kundeteamet og produktteamet, på Ansatte-siden. <a href=\"om-oss/ansatte.html\">Les mer om Ansatte →</a>"
   },
   {
     keywords: ["høegh eiendom", "høegh"],
-    answer: "Derfor har Höegh Eiendom brukt Fenistra i over to tiår Maren Elise Dalene Torp, som Senior Controller Eiendomsforvaltning i Höegh Eiendom, setter stor pris på tryggheten det gir å jobbe med en partner som har bransjekunnskapen. <a href=\"media-hoegh-eiendom.html\">Les mer om Derfor har Höegh Eiendom brukt Fenistra i over to tiår →</a>"
+    answer: "Derfor har Höegh Eiendom brukt Fenistra i over to tiår Maren Elise Dalene Torp, som Senior Controller Eiendomsforvaltning i Höegh Eiendom, setter stor pris på tryggheten det gir å jobbe med en partner som har bransjekunnskapen. <a href=\"blogg/hoegh-eiendom-over-to-tiar.html\">Les mer om Derfor har Höegh Eiendom brukt Fenistra i over to tiår →</a>"
   },
   {
     keywords: ["backer", "rigger", "fremtiden", "velger"],
-    answer: "Backer rigger for fremtiden – velger Fenistra for sin eiendomsforvaltning Backer har tatt et viktig steg for å rigge seg for videre vekst. Valget av ny systempartner falt på Fenistra – ikke bare på grunn av løsningen, men for menneskene og visjonen bak. <a href=\"media-backer.html\">Les mer om Backer rigger for fremtiden – velger Fenistra for sin eiendomsforvaltning →</a>"
+    answer: "Backer rigger for fremtiden – velger Fenistra for sin eiendomsforvaltning Backer har tatt et viktig steg for å rigge seg for videre vekst. Valget av ny systempartner falt på Fenistra – ikke bare på grunn av løsningen, men for menneskene og visjonen bak. <a href=\"blogg/backer-velger-fenistra.html\">Les mer om Backer rigger for fremtiden – velger Fenistra for sin eiendomsforvaltning →</a>"
   },
   {
     keywords: ["mest", "komplette", "løsningen", "eiendomsforvaltning"],
-    answer: "Fenistra: mest komplette løsningen for eiendomsforvaltning Eiendomsselskaper benytter et økende antall spesialiserte IT-løsninger for å håndtere sine behov. Med kundens tilbakemeldinger i sentrum har vi derfor tatt grep og fornyet Fenistra. <a href=\"media-mest-komplette-losningen.html\">Les mer om Fenistra: mest komplette løsningen for eiendomsforvaltning →</a>"
+    answer: "Fenistra: mest komplette løsningen for eiendomsforvaltning Eiendomsselskaper benytter et økende antall spesialiserte IT-løsninger for å håndtere sine behov. Med kundens tilbakemeldinger i sentrum har vi derfor tatt grep og fornyet Fenistra. <a href=\"blogg/mest-komplette-losningen-for-eiendomsforvaltning.html\">Les mer om Fenistra: mest komplette løsningen for eiendomsforvaltning →</a>"
   },
   {
     keywords: ["business", "nxt", "full", "business nxt"],
-    answer: "Fenistra+Business NXT: Full kontroll på økonomi og eiendomsforvaltning Eiendomsselskaper står overfor et raskt skiftende marked med økende krav til effektiv drift, økonomisk kontroll og digitale løsninger. Med Fenistra og Business NXT får du en komplett skybasert plattform som automatiserer økonomistyring og eiendomsforvaltning. På den måten reduserer du risiko samtidig som du jobber smartere og sikrer lønnsom vekst. <a href=\"media-business-nxt.html\">Les mer om Fenistra+Business NXT: Full kontroll på økonomi og eiendomsforvaltning →</a>"
+    answer: "Fenistra+Business NXT: Full kontroll på økonomi og eiendomsforvaltning Eiendomsselskaper står overfor et raskt skiftende marked med økende krav til effektiv drift, økonomisk kontroll og digitale løsninger. Med Fenistra og Business NXT får du en komplett skybasert plattform som automatiserer økonomistyring og eiendomsforvaltning. På den måten reduserer du risiko samtidig som du jobber smartere og sikrer lønnsom vekst. <a href=\"blogg/fenistra-og-visma-business-nxt.html\">Les mer om Fenistra+Business NXT: Full kontroll på økonomi og eiendomsforvaltning →</a>"
   },
   {
     keywords: ["budsjett", "faktura", "presis", "transparent", "fordeling", "felleskost budsjett", "felleskost"],
-    answer: "Fra budsjett til faktura – en presis og transparent fordeling Få en slutt på leietakerklager, store likviditetshull og timer med feilsøking i Excel. Fenistra Felleskost-budsjett tar seg av en av de vanskeligste delene av eiendomsforvaltningen: den presise, avtalemessige fordelingen av felleskostnader. <a href=\"media-budsjett-til-faktura.html\">Les mer om Fra budsjett til faktura – en presis og transparent fordeling →</a>"
+    answer: "Fra budsjett til faktura – en presis og transparent fordeling Få en slutt på leietakerklager, store likviditetshull og timer med feilsøking i Excel. Fenistra Felleskost-budsjett tar seg av en av de vanskeligste delene av eiendomsforvaltningen: den presise, avtalemessige fordelingen av felleskostnader. <a href=\"blogg/fra-budsjett-til-faktura.html\">Les mer om Fra budsjett til faktura – en presis og transparent fordeling →</a>"
   },
   {
     keywords: ["forenkler", "felleskostnadene"],
-    answer: "Fenistra forenkler felleskostnadene Som eiendomsforvalter vet du at felleskostavregningen er en sentral, men ofte tidkrevende og kompleks oppgave. Manuell datainntasting, komplekse beregninger og risiko for feil kan spise opp verdifull tid og gå utover inntektsmuligheter, tid som heller burde brukes på mer verdiskapende oppgaver. <a href=\"media-forenkler-felleskostnadene.html\">Les mer om Fenistra forenkler felleskostnadene →</a>"
+    answer: "Fenistra forenkler felleskostnadene Som eiendomsforvalter vet du at felleskostavregningen er en sentral, men ofte tidkrevende og kompleks oppgave. Manuell datainntasting, komplekse beregninger og risiko for feil kan spise opp verdifull tid og gå utover inntektsmuligheter, tid som heller burde brukes på mer verdiskapende oppgaver. <a href=\"blogg/fenistra-forenkler-felleskostnadene.html\">Les mer om Fenistra forenkler felleskostnadene →</a>"
   },
   {
     keywords: ["rapport", "kjøpesenter", "kjøpesenterrapport"],
-    answer: "Ny rapport i Fenistra Kjøpesenter Ny rapport for innsikt og vekst: Månedsoversikt for Fenistra Kjøpesenter. <a href=\"media-ny-rapport-kjopesenter.html\">Les mer om Ny rapport i Fenistra Kjøpesenter →</a>"
+    answer: "Ny rapport i Fenistra Kjøpesenter Ny rapport for innsikt og vekst: Månedsoversikt for Fenistra Kjøpesenter. <a href=\"blogg/ny-rapport-i-fenistra-kjopesenter.html\">Les mer om Ny rapport i Fenistra Kjøpesenter →</a>"
   },
   {
     keywords: ["oppsummering", "brukerforum", "2024", "innsikt", "brukerforum 2024"],
-    answer: "Oppsummering av Fenistra Brukerforum 2024: Innsikt og innovasjon i eiendomsbransjen Fenistra Brukerforum 2024 vekket entusiastisk engasjement og ettertanke blant deltakerne, delvis takket være innsiktsfulle og inspirerende bidrag fra våre anerkjente foredragsholdere. Over to actionfylte dager på Scandic Holmenkollen Park Hotel koste deltakerne seg med en miks av faglig dybdelæring, innsikt og nettverksmuligheter. <a href=\"media-brukerforum-2024-oppsummering.html\">Les mer om Oppsummering av Fenistra Brukerforum 2024: Innsikt og innovasjon i eiendomsbransjen →</a>"
+    answer: "Oppsummering av Fenistra Brukerforum 2024: Innsikt og innovasjon i eiendomsbransjen Fenistra Brukerforum 2024 vekket entusiastisk engasjement og ettertanke blant deltakerne, delvis takket være innsiktsfulle og inspirerende bidrag fra våre anerkjente foredragsholdere. Over to actionfylte dager på Scandic Holmenkollen Park Hotel koste deltakerne seg med en miks av faglig dybdelæring, innsikt og nettverksmuligheter. <a href=\"blogg/oppsummering-brukerforum-2024.html\">Les mer om Oppsummering av Fenistra Brukerforum 2024: Innsikt og innovasjon i eiendomsbransjen →</a>"
   },
   {
     keywords: ["brukerforum", "2024", "brukerforum 2024"],
-    answer: "Fenistra Brukerforum 2024 En viktig arena for deg som benytter Fenistra! <a href=\"media-brukerforum-2024-invitasjon.html\">Les mer om Fenistra Brukerforum 2024 →</a>"
+    answer: "Fenistra Brukerforum 2024 En viktig arena for deg som benytter Fenistra! <a href=\"blogg/fenistra-brukerforum-2024.html\">Les mer om Fenistra Brukerforum 2024 →</a>"
   },
   {
     keywords: ["effektiv", "innhenting", "mva-erklæringer", "leietakere", "mva-erklæringer innhenting"],
-    answer: "Slik sikrer du effektiv innhenting av MVA-erklæringer fra leietakere Som eier av utleieeiendom eller -lokaler er det viktig å ha full kontroll på merverdiavgift (MVA). For deg som leier ut til MVA-registrerte virksomheter, er det å samle inn MVA-erklæringer fra leietakerne en viktig del av skattehåndteringen. Denne prosessen er ikke bare avgjørende for å oppfylle dine egne forpliktelser, men den hjelper også leietakerne med å holde seg innenfor lovens krav. Her ser vi på hvorfor dette er viktig, og hvordan du kan gjøre innsamlingen så enkel som mulig. <a href=\"media-mva-erklaringer.html\">Les mer om Slik sikrer du effektiv innhenting av MVA-erklæringer fra leietakere →</a>"
+    answer: "Slik sikrer du effektiv innhenting av MVA-erklæringer fra leietakere Som eier av utleieeiendom eller -lokaler er det viktig å ha full kontroll på merverdiavgift (MVA). For deg som leier ut til MVA-registrerte virksomheter, er det å samle inn MVA-erklæringer fra leietakerne en viktig del av skattehåndteringen. Denne prosessen er ikke bare avgjørende for å oppfylle dine egne forpliktelser, men den hjelper også leietakerne med å holde seg innenfor lovens krav. Her ser vi på hvorfor dette er viktig, og hvordan du kan gjøre innsamlingen så enkel som mulig. <a href=\"blogg/innhenting-av-mva-erklaringer.html\">Les mer om Slik sikrer du effektiv innhenting av MVA-erklæringer fra leietakere →</a>"
   },
   {
     keywords: ["brukeropplevelsen", "neste", "nivå", "ny brukeropplevelse", "nytt grensesnitt", "brukeropplevelse", "nytt", "grensesnitt"],
-    answer: "Fenistra tar brukeropplevelsen til neste nivå! Visma Property Solutions flytter forvaltningssystemet Fenistra over på ny plattform, med en helt ny og intuitiv brukeropplevelse. Flere ansatte får nå god tilgang til informasjonen de trenger. <a href=\"media-brukeropplevelse-neste-niva.html\">Les mer om Fenistra tar brukeropplevelsen til neste nivå! →</a>"
+    answer: "Fenistra tar brukeropplevelsen til neste nivå! Visma Property Solutions flytter forvaltningssystemet Fenistra over på ny plattform, med en helt ny og intuitiv brukeropplevelse. Flere ansatte får nå god tilgang til informasjonen de trenger. <a href=\"blogg/brukeropplevelsen-til-neste-niva.html\">Les mer om Fenistra tar brukeropplevelsen til neste nivå! →</a>"
   },
   {
     keywords: ["skaper", "kontinuerlig", "verdi", "kundene", "voksende"],
-    answer: "Skaper kontinuerlig verdi for kundene i et voksende marked Nye Fenistra gir eiendomsselskapene den beste kombinasjonen av fleksibilitet og effektivitet kombinert med moderne teknologi og brukergrensesnitt. Den nyeste versjonen representerer et betydelig fremskritt ved å tilby tilpassede verktøy som møter dagens forvaltningskrav. <a href=\"media-kontinuerlig-verdi.html\">Les mer om Skaper kontinuerlig verdi for kundene i et voksende marked →</a>"
+    answer: "Skaper kontinuerlig verdi for kundene i et voksende marked Nye Fenistra gir eiendomsselskapene den beste kombinasjonen av fleksibilitet og effektivitet kombinert med moderne teknologi og brukergrensesnitt. Den nyeste versjonen representerer et betydelig fremskritt ved å tilby tilpassede verktøy som møter dagens forvaltningskrav. <a href=\"blogg/kontinuerlig-verdi-for-kundene.html\">Les mer om Skaper kontinuerlig verdi for kundene i et voksende marked →</a>"
   },
   {
     keywords: ["egen", "eiendomsportefølje", "create insight", "create", "insight"],
-    answer: "Dette må du ha oversikt over i egen eiendomsportefølje! Har du fullstendig oversikt over din eiendomsportefølje? <a href=\"media-eiendomsportefolje-oversikt.html\">Les mer om Dette må du ha oversikt over i egen eiendomsportefølje! →</a>"
+    answer: "Dette må du ha oversikt over i egen eiendomsportefølje! Har du fullstendig oversikt over din eiendomsportefølje? <a href=\"blogg/oversikt-i-eiendomsportefoljen.html\">Les mer om Dette må du ha oversikt over i egen eiendomsportefølje! →</a>"
   },
   {
     keywords: ["test hvilken pakke", "hvilken pakke passer", "pakketest", "test", "hvilken", "pakke"],
-    answer: "Snakk med oss for å se hvilke løsninger som passer akkurat deres portefølje. <a href=\"pakke-resultat.html\">Book et møte →</a>"
+    answer: "Snakk med oss for å se hvilke løsninger som passer akkurat deres portefølje. <a href=\"book-et-mote.html\">Book et møte →</a>"
   },
   {
     keywords: ["høegh eiendom", "20 år som kunde", "maren elise"],
@@ -340,15 +340,15 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["tilleggsprodukter", "selvstendige produkter", "hva er inkludert"],
-    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"book-et-mote.html\">Book et møte →</a>"
   },
   {
     keywords: ["kundeteamet kontakt", "hvem kan jeg kontakte kunde", "brukerstøtte kontakt person", "head of customer success"],
-    answer: "Kundeteamet ledes av Trygve Vardenær, Head of Customers and Growth (trygve.vardenar@visma.com). I teamet finner du også Kristian Lien (Sales Director), kundekontaktene Frida Holte, Beate Paulsen og Patrick Eriksen, brukerstøtte ved Henning Aas, og konsulentene Marius Sømme, Kristin Falch og Rokhsar Zendehbizadeh. <a href=\"ansatte.html#kundeteam\">Les mer om Kundeteamet →</a>"
+    answer: "Kundeteamet ledes av Trygve Vardenær, Head of Customers and Growth (trygve.vardenar@visma.com). I teamet finner du også Kristian Lien (Sales Director), kundekontaktene Frida Holte, Beate Paulsen og Patrick Eriksen, brukerstøtte ved Henning Aas, og konsulentene Marius Sømme, Kristin Falch og Rokhsar Zendehbizadeh. <a href=\"om-oss/ansatte.html#kundeteam\">Les mer om Kundeteamet →</a>"
   },
   {
     keywords: ["produktteamet kontakt", "hvem lager fenistra", "joakim howlid", "daglig leder fenistra"],
-    answer: "Produktteamet ledes av Joakim Howlid, daglig leder i Fenistra. Teamet består ellers av produktledelse, UX-designere og et utviklingsteam på rundt ti personer som bygger og videreutvikler løsningene. <a href=\"ansatte.html#produktteam\">Les mer om Produktteamet →</a>"
+    answer: "Produktteamet ledes av Joakim Howlid, daglig leder i Fenistra. Teamet består ellers av produktledelse, UX-designere og et utviklingsteam på rundt ti personer som bygger og videreutvikler løsningene. <a href=\"om-oss/ansatte.html#produktteam\">Les mer om Produktteamet →</a>"
   },
   {
     keywords: ["personvern", "personopplysninger", "gdpr", "personvernerklæring"],
@@ -368,15 +368,15 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["fenistra standard", "hva inneholder standard"],
-    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"book-et-mote.html\">Book et møte →</a>"
   },
   {
     keywords: ["premium"],
-    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"book-et-mote.html\">Book et møte →</a>"
   },
   {
     keywords: ["kjøpesenter", "senterdrift", "senterleder"],
-    answer: "Fenistra Kjøpesenter er senterleders viktigste verktøy: dashboard for omsetning og utvikling, automatisk purring på manglende omsetningsrapportering, bransjetilpassede rapporter (inkl. Kvarud Analyse) og besøksregistrering. <a href=\"losning-kjopesenter.html\">Les mer om Fenistra Kjøpesenter →</a>"
+    answer: "Fenistra Kjøpesenter er senterleders viktigste verktøy: dashboard for omsetning og utvikling, automatisk purring på manglende omsetningsrapportering, bransjetilpassede rapporter (inkl. Kvarud Analyse) og besøksregistrering. <a href=\"losninger/kjopesenter.html\">Les mer om Fenistra Kjøpesenter →</a>"
   },
   {
     keywords: ["integrer", "integrasjon", "regnskapssystem", "tripletex", "visma", "xledger", "poweroffice", "sap", "erp", "24sevenoffice"],
@@ -388,19 +388,19 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["digital signering", "signering", "signere"],
-    answer: "Fenistra Digital signering lar dere signere kontrakter og dokumenter digitalt, direkte i Fenistra – uten å måtte gå via e-post eller eksterne verktøy., så dere betaler kun for signeringene dere faktisk bruker. <a href=\"losning-digital-signering.html\">Les mer om Fenistra Digital signering →</a>"
+    answer: "Fenistra Digital signering lar dere signere kontrakter og dokumenter digitalt, direkte i Fenistra – uten å måtte gå via e-post eller eksterne verktøy., så dere betaler kun for signeringene dere faktisk bruker. <a href=\"losninger/digital-signering.html\">Les mer om Fenistra Digital signering →</a>"
   },
   {
     keywords: ["transaksjonsprodukt", "transaksjon"],
-    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
+    answer: "Vi setter sammen Fenistra etter hva porteføljen deres trenger. Book et møte, så viser vi hvilke løsninger som passer for dere. <a href=\"book-et-mote.html\">Book et møte →</a>"
   },
   {
     keywords: ["pris", "koster", "kostnad", "abonnement"],
-    answer: "Vi gir et tilbud tilpasset porteføljen deres. Book et møte, så ser vi på hva som passer for dere. <a href=\"pakke-resultat.html\">Book et møte →</a>"
+    answer: "Vi gir et tilbud tilpasset porteføljen deres. Book et møte, så ser vi på hva som passer for dere. <a href=\"book-et-mote.html\">Book et møte →</a>"
   },
   {
     keywords: ["demo", "book demo", "snakk med oss", "prøve"],
-    answer: "Du kan avtale en demo via «Ta kontakt» øverst på siden og velge «Book et møte», så tar en av våre rådgivere kontakt. <a href=\"pakke-resultat.html\">Book et møte →</a>"
+    answer: "Du kan avtale en demo via «Ta kontakt» øverst på siden og velge «Book et møte», så tar en av våre rådgivere kontakt. <a href=\"book-et-mote.html\">Book et møte →</a>"
   },
   {
     keywords: ["hei", "hallo", "yo", "morn"],
@@ -412,7 +412,7 @@ export const FENISTRA_CHAT_KB: ChatKbEntry[] = [
   },
   {
     keywords: ["kunstig intelligens", "felix", " ai ", "ai-", " ki ", "ki-"],
-    answer: "Fenistra bruker AI til å svare med kilder, si ifra om det som krever oppmerksomhet og gjøre jobben i prosesser som utleie fra lead til innflytting. Det kommersielle arbeidet gjøres i Felix fra Fenistra, applikasjonen for utleie og oppfølging, som henger sammen med Fenistra. <a href=\"ki.html\">Se hvordan Fenistra hjelper →</a>"
+    answer: "Fenistra bruker AI til å svare med kilder, si ifra om det som krever oppmerksomhet og gjøre jobben i prosesser som utleie fra lead til innflytting. Det kommersielle arbeidet gjøres i Felix fra Fenistra, applikasjonen for utleie og oppfølging, som henger sammen med Fenistra. <a href=\"slik-hjelper-fenistra.html\">Se hvordan Fenistra hjelper →</a>"
   },
   {
     keywords: ["kunder", "referanse", "case", "hvem bruker"],

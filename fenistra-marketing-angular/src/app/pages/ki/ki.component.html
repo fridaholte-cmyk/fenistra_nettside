@@ -118,7 +118,7 @@
   .badge-standard{background:var(--berry-light);color:var(--berry-deep);}
   .badge-tillegg{background:var(--mist);color:var(--plum);}
   .badge-transaksjon{background:#fff;color:var(--plum);border:1px solid var(--line);}
-  .module-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(34px,4.4vw,54px);line-height:1.08;letter-spacing:-0.025em;color:var(--ink);margin-bottom:18px;max-width:820px;}
+  .module-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(34px, calc(1.98rem + 2.2vw), 54px);line-height:1.08;letter-spacing:-0.025em;color:var(--ink);margin-bottom:18px;max-width:820px;}
   .module-hero .lead{font-size:18px;color:var(--ink-soft);max-width:640px;margin-bottom:32px;}
   .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
 
@@ -152,7 +152,7 @@
     .feature-row.reverse .feature-visual{order:2;}
   }
   .section-head{max-width:640px;margin-bottom:44px;}
-  .section-head h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px,2.8vw,32px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:12px;}
+  .section-head h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px, calc(1.26rem + 1.4vw), 32px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:12px;}
   .section-head p{font-size:15.5px;color:var(--ink-soft);}
   .mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
   .mini-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:background .2s ease, border-color .2s ease;}
@@ -162,7 +162,7 @@
   .mini-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
 
   .cta-band{background:var(--berry);background-image:radial-gradient(circle at 15% 20%, rgba(255,255,255,0.14), transparent 40%), radial-gradient(circle at 85% 80%, rgba(0,0,0,0.12), transparent 45%);border-radius:24px;padding:64px 56px;display:flex;align-items:center;justify-content:space-between;gap:32px;color:#fff;}
-  .cta-band h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px,2.8vw,34px);letter-spacing:-0.02em;max-width:460px;}
+  .cta-band h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px, calc(1.26rem + 1.4vw), 34px);letter-spacing:-0.02em;max-width:460px;}
   .cta-band .actions{display:flex;gap:14px;flex-shrink:0;}
   .cta-wrap{padding:0 32px 20px;}
 
@@ -217,7 +217,7 @@
   .index-card:hover .go{color:var(--berry-deep);}
   .index-hero{padding:50px 0 20px;}
   .index-hero .eyebrow{margin-bottom:16px;}
-  .index-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(32px,4vw,48px);letter-spacing:-0.02em;margin-bottom:16px;max-width:700px;}
+  .index-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(32px, calc(1.8rem + 2vw), 48px);letter-spacing:-0.02em;margin-bottom:16px;max-width:700px;}
   .index-hero p{font-size:17px;color:var(--ink-soft);max-width:600px;margin-bottom:8px;}
   .filter-row{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 40px;}
   .filter-row button{font-family:var(--font-mono);font-size:12.5px;padding:8px 16px;border-radius:20px;border:1px solid var(--line);color:var(--ink-soft);transition:all .2s ease;}
@@ -326,7 +326,7 @@
   /* ================= AI I FENISTRA ================= */
   .ki-fenistra{padding:20px 0 90px;border-top:1px solid var(--line);}
   .ki-fenistra > .wrap > .section-head{padding-top:70px;margin-bottom:0;}
-  .ki-fenistra .feature-copy h3{font-family:var(--font-display);font-weight:300;font-size:clamp(24px,2.6vw,32px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:16px;}
+  .ki-fenistra .feature-copy h3{font-family:var(--font-display);font-weight:300;font-size:clamp(24px, calc(1.17rem + 1.3vw), 32px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:16px;}
   .ki-fenistra .feature-copy > p{color:var(--ink-soft);font-size:16px;margin-bottom:18px;max-width:520px;}
   .ki-fenistra .feature-list{margin-bottom:0;}
   .ki-num{display:block;font-family:var(--font-mono);font-size:13px;color:var(--berry);margin-bottom:10px;}
@@ -371,8 +371,8 @@
     <h1>Fenistra svarer, sier ifra og gjør jobben</h1>
     <p class="mp-lead">Fenistra kan eiendom. Kunnskapen ligger i fagmiljøet, i markedsdata fra <a href="https://arealstatistikk.no/" target="_blank" rel="noopener">Arealstatistikk</a> og i AI som bruker begge deler sammen med kontraktene deres. Slik blir den nyttig i hverdagen.</p>
     <div class="mp-actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
-      <a href="ki#gjor-jobben" class="btn btn-ghost" (click)="scrollToProcess($event)">Se hvordan Fenistra gjør jobben ↓</a>
+      <a routerLink="/book-et-mote" fragment="skjema" class="btn btn-primary">Book et møte</a>
+      <a href="slik-hjelper-fenistra#gjor-jobben" class="btn btn-ghost" (click)="scrollToProcess($event)">Se hvordan Fenistra gjør jobben ↓</a>
     </div>
   </div>
 </section>
@@ -445,7 +445,7 @@
   <div class="wrap" style="color:#fff;">
     <div class="feature-row" style="padding:0;">
       <div class="feature-copy">
-        <h2 style="font-family:var(--font-display);font-weight:300;font-size:clamp(26px,3vw,38px);letter-spacing:-0.02em;margin-bottom:18px;">Sier ifra og gjør jobben, også i det kommersielle arbeidet</h2>
+        <h2 style="font-family:var(--font-display);font-weight:300;font-size:clamp(26px, calc(1.35rem + 1.5vw), 38px);letter-spacing:-0.02em;margin-bottom:18px;">Sier ifra og gjør jobben, også i det kommersielle arbeidet</h2>
         <p style="font-size:16.5px;color:rgba(255,255,255,.75);margin-bottom:24px;">Fenistra følger kontraktene, leietakerne og leadsene deres, sier ifra når noe krever oppmerksomhet, og fører arbeidet videre fra første henvendelse til signert kontrakt og innflytting.</p>
         <ul class="feature-list" style="margin-bottom:28px;">
           <li style="color:rgba(255,255,255,.85);"><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="rgba(255,255,255,.12)"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#fff" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Frister som følges opp: reguleringer, oppsigelser og opsjoner sjekkes hver natt, og dere får påminnelser til fristen er håndtert</li>
@@ -454,7 +454,7 @@
           <li style="color:rgba(255,255,255,.85);"><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="rgba(255,255,255,.12)"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#fff" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Spør med vanlige ord, og få svar med grafer, tabeller og kildehenvisninger</li>
         </ul>
         <p style="font-size:14.5px;color:rgba(255,255,255,.6);margin-bottom:32px;max-width:480px;">Utleiearbeidet, oppfølgingen og det mobile arbeidet henger sammen med resten av Fenistra, så det som registreres, følger saken videre til forvaltning og fakturering.</p>
-        <a routerLink="/fra-lead-til-innflytting" class="btn btn-on-dark">Se prosessen fra lead til innflytting →</a>
+        <a routerLink="/losninger/fra-lead-til-innflytting" class="btn btn-on-dark">Se prosessen fra lead til innflytting →</a>
       </div>
       <div class="feature-visual cc-on-dark" style="background:transparent;padding:0;box-shadow:none;">
         <app-concept-card kind="kontrakt"></app-concept-card>

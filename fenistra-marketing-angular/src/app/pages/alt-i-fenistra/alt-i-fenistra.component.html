@@ -1,13 +1,13 @@
 <style>
-  .af-hero{padding:clamp(48px,5vw,72px) 0 clamp(32px,3.5vw,48px); color:var(--ink);}
-  .af-hero h1{font-family:var(--font-display); font-weight:300; font-size:clamp(36px,4.2vw,58px); line-height:1.05; letter-spacing:-0.03em; max-width:18ch; margin-bottom:22px;}
-  .af-lead{font-size:clamp(17px,1.3vw,20px); line-height:1.55; color:var(--ink-soft); max-width:60ch;}
+  .af-hero{padding:clamp(48px, calc(2.25rem + 2.5vw), 72px) 0 clamp(32px, calc(1.575rem + 1.75vw), 48px); color:var(--ink);}
+  .af-hero h1{font-family:var(--font-display); font-weight:300; font-size:clamp(36px, calc(1.89rem + 2.1vw), 58px); line-height:1.05; letter-spacing:-0.03em; max-width:18ch; margin-bottom:22px;}
+  .af-lead{font-size:clamp(17px, calc(0.585rem + 0.65vw), 20px); line-height:1.55; color:var(--ink-soft); max-width:60ch;}
   .af-toc{display:flex; flex-wrap:wrap; gap:8px; margin-top:28px; list-style:none; padding:0;}
   .af-toc a{display:inline-block; font-family:var(--font-mono); font-size:12.5px; border:1px solid var(--line); background:#fff; padding:6px 12px; color:var(--ink); transition:border-color .2s ease;}
   .af-toc a:hover{border-color:var(--ink);}
   .af-group{padding:var(--section-y-sm) 0; border-top:1px solid var(--line); scroll-margin-top:76px;}
-  .af-grid{display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr); gap:clamp(32px,5vw,72px);}
-  .af-group h2{font-family:var(--font-display); font-weight:300; font-size:clamp(26px,2.4vw,36px); letter-spacing:-0.02em; line-height:1.1; color:var(--ink); margin-bottom:12px;}
+  .af-grid{display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr); gap:clamp(32px, calc(2.25rem + 2.5vw), 72px);}
+  .af-group h2{font-family:var(--font-display); font-weight:300; font-size:clamp(26px, calc(1.08rem + 1.2vw), 36px); letter-spacing:-0.02em; line-height:1.1; color:var(--ink); margin-bottom:12px;}
   .af-intro{font-size:16px; line-height:1.6; color:var(--ink-soft); margin-bottom:18px; max-width:36ch;}
   .af-link{display:inline-block; font-family:var(--font-mono); font-size:12.5px; color:var(--berry-deep); border-bottom:1px solid currentColor; padding-bottom:2px;}
   .af-parts{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 32px; margin:0;}
@@ -64,7 +64,7 @@
   <div class="wrap">
     <p>Fenistra er integrert mot 26 systemer, blant dem 19 regnskaps- og ERP-systemer. Book et møte, så viser vi hvordan delene henger sammen for deres portefølje.</p>
     <div class="hp-actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
+      <a routerLink="/book-et-mote" fragment="skjema" class="btn btn-primary">Book et møte</a>
       <a routerLink="/integrasjoner" class="btn btn-light">Se integrasjonene</a>
     </div>
   </div>

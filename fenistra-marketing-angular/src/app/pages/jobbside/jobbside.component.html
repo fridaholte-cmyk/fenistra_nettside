@@ -13,7 +13,7 @@
     <h1>{{ page.h1 }}</h1>
     <p class="jb-lead">{{ page.lead }}</p>
     <div class="jb-actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
+      <a routerLink="/book-et-mote" fragment="skjema" class="btn btn-primary">Book et møte</a>
       <a [routerLink]="[]" [fragment]="page.flow ? page.flow.id : 'slik'" class="btn btn-ghost">{{ page.flow ? 'Se steg for steg ↓' : 'Se hvordan ↓' }}</a>
     </div>
   </div>
@@ -24,8 +24,77 @@
   <div class="wrap">
     <h2 class="jb-kicker">Der det stopper opp</h2>
     <div class="jb-outcome-grid">
-      @for (o of page.problems; track o[0]) {
+      @for (o of page.problems; track o[0]; let i = $index) {
         <div class="jb-outcome reveal">
+          @switch (page.problemVisuals?.[i]) {
+            @case ('regneark') {
+              <!-- KPI typed by hand: one wrong index, and the error follows the rent every year after -->
+              <div class="pv pv-sheet" aria-hidden="true">
+                <div class="pv-row pv-th"><span>År</span><span>KPI</span><span>Leie kr/m²</span></div>
+                <div class="pv-row pv-r1"><span>2025</span><span>2,8 %</span><span>1 548</span></div>
+                <div class="pv-row pv-r2"><span>2026</span><span class="pv-bad">3,9 %</span><span class="pv-bad2">1 608</span></div>
+                <div class="pv-row pv-r3"><span>2027</span><span>2,9 %</span><span class="pv-bad3">1 655</span></div>
+                <span class="pv-flag">Skulle vært 3,1 %</span>
+              </div>
+            }
+            @case ('sporsmal') {
+              <!-- the tenant asks, and the answer is spread over several files -->
+              <div class="pv pv-ask" aria-hidden="true">
+                <p class="pv-bubble">Hvorfor økte felleskostnadene våre?</p>
+                <div class="pv-files">
+                  <span class="pv-file pv-f1">Budsjett.xlsx</span>
+                  <span class="pv-file pv-f2">Fordeling.xlsx</span>
+                  <span class="pv-file pv-f3">Faktura.pdf</span>
+                </div>
+                <span class="pv-dots"><i></i><i></i><i></i></span>
+              </div>
+            }
+            @case ('mellomregning') {
+              <!-- turnover goes through several manual steps before the invoice -->
+              <div class="pv pv-chain" aria-hidden="true">
+                <span class="pv-step pv-s1">12,4 mill.</span>
+                <span class="pv-arrow pv-a1">→</span>
+                <span class="pv-step pv-s2">× 6 %</span>
+                <span class="pv-arrow pv-a2">→</span>
+                <span class="pv-step pv-s3">− minsteleie</span>
+                <span class="pv-arrow pv-a3">→</span>
+                <span class="pv-step pv-s4">= ?</span>
+                <span class="pv-note">Avstemt for hånd før fakturaen kan sendes</span>
+              </div>
+            }
+            @case ('innboks') {
+              <!-- the need arrives by e-mail, and new mail pushes it out of sight -->
+              <div class="pv pv-inbox" aria-hidden="true">
+                <span class="pv-k">Innboks</span>
+                <ul>
+                  <li class="pv-new pv-n3"><b>Nyhetsbrev</b><span>Markedet i november</span></li>
+                  <li class="pv-new pv-n2"><b>Re: Faktura 1001</b><span>Spørsmål om akonto</span></li>
+                  <li class="pv-new pv-n1"><b>Møte torsdag</b><span>Flyttet til 14.00</span></li>
+                  <li class="pv-need"><b>Nordlys AS</b><span>Trenger 800 m² i Oslo sentrum</span></li>
+                </ul>
+              </div>
+            }
+            @case ('marked') {
+              <!-- the rent is set from old deals and a private spreadsheet; the market figure is missing -->
+              <div class="pv pv-market" aria-hidden="true">
+                <span class="pv-k">Ny leie · Bryggegata 4</span>
+                <div class="pv-row2 pv-m1"><span>Tidligere avtale, 2019</span><b>1 380 kr/m²</b></div>
+                <div class="pv-row2 pv-m2"><span>Eget regneark</span><b>1 450 kr/m²</b></div>
+                <div class="pv-row2 pv-m3"><span>Markedsleie i sonen</span><b class="pv-q">?</b></div>
+                <span class="pv-flag2">Uten markedstall</span>
+              </div>
+            }
+            @case ('dobbelt') {
+              <!-- the same tenant typed into four places, and one of them gets it wrong -->
+              <div class="pv pv-twice" aria-hidden="true">
+                <div class="pv-sys pv-t1"><span>Kundeliste</span><b>Nordlys AS</b></div>
+                <div class="pv-sys pv-t2"><span>Kontraktsutkast</span><b>Nordlys AS</b></div>
+                <div class="pv-sys pv-t3"><span>Forvaltning</span><b>Nordlys AS</b></div>
+                <div class="pv-sys pv-t4 pv-typo"><span>Faktura</span><b>Nordlys A/S</b></div>
+                <span class="pv-flag2 pv-flag-late">Fire ganger, én skrivefeil</span>
+              </div>
+            }
+          }
           <h3>{{ o[0] }}</h3>
           <p>{{ o[1] }}</p>
         </div>
@@ -35,6 +104,87 @@
 </section>
 
 <!-- ================= SLIK LØSER FENISTRA DET: svarer, sier ifra, gjør jobben ================= -->
+@if (deep; as d) {
+<section class="jb-deep" id="slik" aria-labelledby="jb-deep-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 id="jb-deep-title">Bare spør. Fenistra sier ifra og gjør jobben.</h2>
+      <p>Fenistra skal gjøre mer av jobben, så det blir enklere å forstå, følge opp og handle. Slik ser de tre prinsippene ut i den økonomiske forvaltningen.</p>
+    </div>
+    @for (r of d; track r.label; let i = $index) {
+      <article class="jb-deep-row" [class.jb-deep-flip]="i % 2 === 1">
+        <div class="jb-deep-copy reveal">
+          <span class="jb-deep-num">0{{ i + 1 }}</span>
+          <h3>{{ r.label }}</h3>
+          <p class="jb-deep-intro">{{ r.p.intro }}</p>
+          <p class="jb-deep-body">{{ r.p.means }} {{ r.p.how }} <strong>{{ r.p.promise }}</strong></p>
+        </div>
+        <figure class="jb-deep-stage reveal" aria-hidden="true">
+          @switch (r.p.card.kind) {
+            @case ('ask') {
+              @if (asAsk(r.p.card); as c) {
+                <!-- 01: the question is typed, Fenistra thinks, the answer builds up (same as the front page) -->
+                <div class="jb-card jb-anim" data-anim="ask">
+                  <div class="jb-ask-q">
+                    <span class="jb-deep-k">Du spør</span>
+                    <p>{{ c.q.slice(0, typed()) }}<span class="jb-caret"></span></p>
+                  </div>
+                  <div class="jb-dots"><i></i><i></i><i></i></div>
+                  <div class="jb-ask-a">
+                    <span class="jb-deep-k">Fenistra svarer</span>
+                    <p class="jb-card-lead">{{ c.lead }}</p>
+                    @for (row of c.rows; track row[0]; let j = $index) {
+                      <div class="jb-card-row jb-a" [style.--d]="(3.4 + j * 0.5) + 's'"><span>{{ row[0] }}</span><b>{{ row[1] }}</b></div>
+                    }
+                    <p class="jb-card-src jb-a" [style.--d]="(3.4 + c.rows.length * 0.5 + 0.2) + 's'"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3.5 7.2 6 9.6l4.8-5.2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>{{ c.src }}</p>
+                  </div>
+                </div>
+              }
+            }
+            @case ('alert') {
+              @if (asAlert(r.p.card); as c) {
+                <!-- 02: the alerts come in one by one, each with a short pulse -->
+                <div class="jb-card jb-anim" data-anim="alert">
+                  <div class="jb-card-head"><span class="jb-deep-k">{{ c.head }}</span><span class="jb-card-count">{{ c.items.length }} nye</span></div>
+                  <ul class="jb-card-alerts">
+                    @for (it of c.items; track it[0]; let j = $index) {
+                      <li class="jb-a" [style.--d]="(0.3 + j * 0.8) + 's'"><i></i><div><b>{{ it[0] }}</b><span>{{ it[1] }}</span></div></li>
+                    }
+                  </ul>
+                  <p class="jb-card-tip jb-a" [style.--d]="(0.5 + c.items.length * 0.8) + 's'"><b>{{ c.tip[0] }}</b>{{ c.tip[1] }}</p>
+                </div>
+              }
+            }
+            @case ('job') {
+              @if (asJob(r.p.card); as c) {
+                <!-- 03: Fenistra works, waits for you, and carries on -->
+                <div class="jb-card jb-anim" data-anim="job">
+                  <div class="jb-card-head"><span class="jb-deep-k">{{ c.head }}</span></div>
+                  <ol class="jb-card-job">
+                    @for (st of c.steps; track st[1]; let j = $index) {
+                      <li [class.jb-card-you]="st[0] === 'Du'" [style.--s]="jobTimes(c.steps)[j][0] + 's'" [style.--e]="jobTimes(c.steps)[j][1] + 's'">
+                        <span class="jb-card-ic"><i class="jb-spin"></i><svg viewBox="0 0 14 14"><path d="M3.5 7.2 6 9.6l4.8-5.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                        <div>
+                          <small>{{ st[0] }}</small><b>{{ st[1] }}</b>
+                          @if (st[0] === 'Du') {
+                            <span class="jb-wait">Venter på din godkjenning</span><span class="jb-ok">{{ st[2] }}</span>
+                          } @else {
+                            <span>{{ st[2] }}</span>
+                          }
+                        </div>
+                      </li>
+                    }
+                  </ol>
+                </div>
+              }
+            }
+          }
+        </figure>
+      </article>
+    }
+  </div>
+</section>
+} @else {
 <section class="jb-pillars" id="slik">
   <div class="wrap">
     <div class="section-head">
@@ -51,11 +201,15 @@
     </div>
   </div>
 </section>
+}
 
 @if (page.flow; as f) {
 <!-- ================= GJØR JOBBEN: prosessen steg for steg ================= -->
 <section class="jb-spot" [id]="f.id">
   <div class="wrap">
+    @if (f.animation) {
+      <app-process-animation [variant]="f.animation"></app-process-animation>
+    } @else {
     <div class="section-head">
       <h2>{{ f.title }}</h2>
       <p>{{ f.intro }}</p>
@@ -69,6 +223,7 @@
         </li>
       }
     </ol>
+    }
     @if (f.history) {
       <p class="jb-history"><strong>Én historikk:</strong> {{ f.history }}</p>
     }
@@ -115,6 +270,7 @@
   </div>
 </section>
 
+@if (page.modules.length) {
 <!-- ================= MODULENE ================= -->
 <section class="jb-modules" id="moduler">
   <div class="wrap">
@@ -133,20 +289,7 @@
     </div>
   </div>
 </section>
-
-<!-- ================= RESTEN AV PLATTFORMEN ================= -->
-<section class="jb-more">
-  <div class="wrap">
-    <h2>Mer dere kan oppnå</h2>
-    <div class="jb-more-links">
-      @for (o of others; track o.slug) {
-        <a [routerLink]="'/' + o.slug">{{ o.name }} →</a>
-      }
-      <a routerLink="/losning-kjopesenter">Kjøpesenter →</a>
-      <a routerLink="/integrasjoner">Integrasjoner →</a>
-    </div>
-  </div>
-</section>
+}
 
 <!-- ================= CTA ================= -->
 <app-proof-cta text="Se hvordan Fenistra gjør dette med deres egen portefølje."></app-proof-cta>

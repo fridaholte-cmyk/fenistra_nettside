@@ -1,327 +1,634 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.fenistra.no/alt-i-fenistra</loc>
-    <lastmod>2026-11-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.fenistra.no/</loc>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/hero-fenistradagene-2026.jpg</image:loc>
+      <image:caption>Fagsesjon på Fenistradagene 2026</image:caption>
+      <image:title>Fagsesjon på Fenistradagene 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kunder-01.jpg</image:loc>
+      <image:caption>Maren Elise Dalene Torp, Senior Controller Eiendomsforvaltning, Höegh Eiendom</image:caption>
+      <image:title>Maren Elise Dalene Torp, Senior Controller Eiendomsforvaltning, Höegh Eiendom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kunder-04.jpg</image:loc>
+      <image:caption>Tine Wergeland Johannessen, utleie- og markedssjef i Backer AS</image:caption>
+      <image:title>Tine Wergeland Johannessen, utleie- og markedssjef i Backer AS</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kunder-03.jpg</image:loc>
+      <image:caption>Ninette Jurs, kontraktsforvalter i Aspelin Ramm, og Kristin Støfringsdal, eiendomsforvalter på Vulkan</image:caption>
+      <image:title>Ninette Jurs, kontraktsforvalter i Aspelin Ramm, og Kristin Støfringsdal, eiendomsforvalter på Vulkan</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kunder-02.jpg</image:loc>
+      <image:caption>Bente Haugsdal, tidligere utviklingssjef, Frydenbø Eiendom</image:caption>
+      <image:title>Bente Haugsdal, tidligere utviklingssjef, Frydenbø Eiendom</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/velge-forvaltningssystem</loc>
-    <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.fenistra.no/ansatte</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.fenistra.no/om-oss/ansatte</loc>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kundeteam-01.png</image:loc>
+      <image:caption>Trygve Vardenær, Head of Customers and Growth hos Fenistra</image:caption>
+      <image:title>Trygve Vardenær, Head of Customers and Growth hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kundeteam-02.png</image:loc>
+      <image:caption>Kristian Lien, Sales Director hos Fenistra</image:caption>
+      <image:title>Kristian Lien, Sales Director hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kundeteam-03.png</image:loc>
+      <image:caption>Frida Holte, Customer Success Manager hos Fenistra</image:caption>
+      <image:title>Frida Holte, Customer Success Manager hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kundeteam-04.png</image:loc>
+      <image:caption>Beate Paulsen, Customer Advisor og Customer Success Manager hos Fenistra</image:caption>
+      <image:title>Beate Paulsen, Customer Advisor og Customer Success Manager hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kundeteam-05.png</image:loc>
+      <image:caption>Patrick Eriksen, Customer Success Manager hos Fenistra</image:caption>
+      <image:title>Patrick Eriksen, Customer Success Manager hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kundeteam-06.png</image:loc>
+      <image:caption>Marius Sømme, Product Expert, fagkonsulent hos Fenistra</image:caption>
+      <image:title>Marius Sømme, Product Expert, fagkonsulent hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kundeteam-07.png</image:loc>
+      <image:caption>Kristin Falch, seniorkonsulent hos Fenistra</image:caption>
+      <image:title>Kristin Falch, seniorkonsulent hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kundeteam-08.png</image:loc>
+      <image:caption>Rokhsar Zendehbizadeh, fagkonsulent og byggingeniør/BIM-tekniker hos Fenistra</image:caption>
+      <image:title>Rokhsar Zendehbizadeh, fagkonsulent og byggingeniør/BIM-tekniker hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kundeteam-09.webp</image:loc>
+      <image:caption>Espen Kløfta, Technical Account Manager hos Fenistra</image:caption>
+      <image:title>Espen Kløfta, Technical Account Manager hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/produktteam-01.png</image:loc>
+      <image:caption>Joakim Howlid, daglig leder i Fenistra</image:caption>
+      <image:title>Joakim Howlid, daglig leder i Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/produktteam-02.png</image:loc>
+      <image:caption>Veslemøy Ylva Maria Sandbæk, Service- and Product Owner og Data Protection Manager hos Fenistra</image:caption>
+      <image:title>Veslemøy Ylva Maria Sandbæk, Service- and Product Owner og Data Protection Manager hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/produktteam-03.webp</image:loc>
+      <image:caption>Vilja Pettersen, UX-designer hos Fenistra</image:caption>
+      <image:title>Vilja Pettersen, UX-designer hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/produktteam-04.webp</image:loc>
+      <image:caption>Lill Reyes, UX-designer hos Fenistra</image:caption>
+      <image:title>Lill Reyes, UX-designer hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/produktteam-05.jpg</image:loc>
+      <image:caption>Ilham Jillani, AI Product Engineer hos Fenistra</image:caption>
+      <image:title>Ilham Jillani, AI Product Engineer hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/produktteam-06.jpg</image:loc>
+      <image:caption>Seif Fadel, Software Developer hos Fenistra</image:caption>
+      <image:title>Seif Fadel, Software Developer hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/produktteam-07.jpg</image:loc>
+      <image:caption>Øyvind Taugland, Tech Lead hos Fenistra</image:caption>
+      <image:title>Øyvind Taugland, Tech Lead hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/produktteam-08.jpg</image:loc>
+      <image:caption>Kenneth Bjørnvoll, Senior Developer hos Fenistra</image:caption>
+      <image:title>Kenneth Bjørnvoll, Senior Developer hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/produktteam-09.jpg</image:loc>
+      <image:caption>Kristian Marheim Abrahamsen, seniorutvikler hos Fenistra</image:caption>
+      <image:title>Kristian Marheim Abrahamsen, seniorutvikler hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/produktteam-11.jpg</image:loc>
+      <image:caption>Douglas Modena, Software Developer hos Fenistra</image:caption>
+      <image:title>Douglas Modena, Software Developer hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/produktteam-12.jpg</image:loc>
+      <image:caption>André Pinto, Software Developer hos Fenistra</image:caption>
+      <image:title>André Pinto, Software Developer hos Fenistra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/produktteam-13.jpg</image:loc>
+      <image:caption>Adilet Ivadliyev, Software Developer hos Fenistra</image:caption>
+      <image:title>Adilet Ivadliyev, Software Developer hos Fenistra</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
     <loc>https://www.fenistra.no/apenhetsloven</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
     <loc>https://www.fenistra.no/blogg</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
     <loc>https://www.fenistra.no/cookies</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
     <loc>https://www.fenistra.no/tilgjengelighet</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
     <loc>https://www.fenistra.no/datasikkerhet</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.fenistra.no/partnere</loc>
     <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.fenistra.no/fenistradagene</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.fenistra.no/</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-13.jpg</image:loc>
+      <image:caption>Plenumssalen på Thon Hotel Snø under Fenistradagene 2026</image:caption>
+      <image:title>Plenumssalen på Thon Hotel Snø under Fenistradagene 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-15.jpg</image:loc>
+      <image:caption>Lansering fra scenen under Fenistradagene 2026</image:caption>
+      <image:title>Lansering fra scenen under Fenistradagene 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-06.jpg</image:loc>
+      <image:caption>Engasjerte deltakere i en fagsesjon på Fenistradagene 2026</image:caption>
+      <image:title>Engasjerte deltakere i en fagsesjon på Fenistradagene 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-18.jpg</image:loc>
+      <image:caption>Foredragsholder på scenen under Fenistradagene 2026</image:caption>
+      <image:title>Foredragsholder på scenen under Fenistradagene 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-03.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-08.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-17.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-11.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-14.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-04.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-05.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-09.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-10.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-12.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-19.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-20.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-21.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-01.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-02.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-07.jpg</image:loc>
+      <image:caption>Fenistradagene 2026 på Thon Hotel Snø</image:caption>
+      <image:title>Fenistradagene 2026 på Thon Hotel Snø</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2026-skikurs-johaug.jpg</image:loc>
+      <image:caption>Skikurs med Therese Johaug på SNØ under Fenistradagene 2026</image:caption>
+      <image:title>Skikurs med Therese Johaug på SNØ under Fenistradagene 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2025-holmen-ribb-01.jpg</image:loc>
+      <image:caption>RIB-tur i Oslofjorden, Fenistra Brukerforum 2025</image:caption>
+      <image:title>RIB-tur i Oslofjorden, Fenistra Brukerforum 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2025-holmen-ribb-02.jpg</image:loc>
+      <image:caption>RIB-tur i Oslofjorden, Fenistra Brukerforum 2025</image:caption>
+      <image:title>RIB-tur i Oslofjorden, Fenistra Brukerforum 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/fenistradagene-2025-holmen-ribb-03.jpg</image:loc>
+      <image:caption>RIB-tur i Oslofjorden, Fenistra Brukerforum 2025</image:caption>
+      <image:title>RIB-tur i Oslofjorden, Fenistra Brukerforum 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-brukerforum-2024-oppsummering-01.jpg</image:loc>
+      <image:caption>Plenumssalen på Fenistra Brukerforum 2024, Holmenkollen Park</image:caption>
+      <image:title>Plenumssalen på Fenistra Brukerforum 2024, Holmenkollen Park</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-brukerforum-2024-oppsummering-02.jpg</image:loc>
+      <image:caption>Foredrag på Fenistra Brukerforum 2024</image:caption>
+      <image:title>Foredrag på Fenistra Brukerforum 2024</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-brukerforum-2024-oppsummering-03.jpg</image:loc>
+      <image:caption>Foredrag på Fenistra Brukerforum 2024</image:caption>
+      <image:title>Foredrag på Fenistra Brukerforum 2024</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
     <loc>https://www.fenistra.no/integrasjoner</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/ki</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.fenistra.no/slik-hjelper-fenistra</loc>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
     <loc>https://www.fenistra.no/kom-i-gang</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/kontakt-oss</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.fenistra.no/kontakt</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
     <loc>https://www.fenistra.no/kunder</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kunder-01.jpg</image:loc>
+      <image:caption>Maren Elise Dalene Torp, Senior Controller Eiendomsforvaltning, Höegh Eiendom</image:caption>
+      <image:title>Maren Elise Dalene Torp, Senior Controller Eiendomsforvaltning, Höegh Eiendom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/hoegh-eiendom.jpg</image:loc>
+      <image:caption>Lene Hansen, Servicekoordinator avd. Moss hos Höegh Eiendom</image:caption>
+      <image:title>Lene Hansen, Servicekoordinator avd. Moss hos Höegh Eiendom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kunder-02.jpg</image:loc>
+      <image:caption>Bente Haugsdal, tidligere utviklingssjef, Frydenbø Eiendom</image:caption>
+      <image:title>Bente Haugsdal, tidligere utviklingssjef, Frydenbø Eiendom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kunder-03.jpg</image:loc>
+      <image:caption>Ninette Jurs, kontraktsforvalter i Aspelin Ramm, og Kristin Støfringsdal, eiendomsforvalter på Vulkan</image:caption>
+      <image:title>Ninette Jurs, kontraktsforvalter i Aspelin Ramm, og Kristin Støfringsdal, eiendomsforvalter på Vulkan</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kunder-04.jpg</image:loc>
+      <image:caption>Tine Wergeland Johannessen, utleie- og markedssjef i Backer AS</image:caption>
+      <image:title>Tine Wergeland Johannessen, utleie- og markedssjef i Backer AS</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-arealberegning</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/arealberegning</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-digital-signering</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/digital-signering</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-dokument</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/dokumenter</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-formuesverdsettelse</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/fakturering</loc>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-fakturering</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/felleskostnader</loc>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-felleskostnader</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/inntektsbudsjett</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-inntektsbudsjett</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/mva-justering</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-justering</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/kjopesenter</loc>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kunder/lagunen.png</image:loc>
+      <image:caption>Lagunen</image:caption>
+      <image:title>Lagunen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kunder/cc-gjovik.webp</image:loc>
+      <image:caption>CC Gjøvik</image:caption>
+      <image:title>CC Gjøvik</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/kunder/bryn-senter.png</image:loc>
+      <image:caption>Bryn Senter</image:caption>
+      <image:title>Bryn Senter</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-kjopesenter</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/kontrakter</loc>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-kontrakter</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/mva-erklaring</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-mva-erklaring</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/omsetningsavregning</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-omsetningsavregning</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/formuesverdsettelse</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-protokoller</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/protokoller</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-rapportering</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/rapportering</loc>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-rbo</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/revisorbekreftet-omsetning</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/losning-sikkerhetsstyring</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.fenistra.no/losninger/sikkerhetsstyring</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
     <loc>https://www.fenistra.no/losninger</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/fra-lead-til-innflytting</loc>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.fenistra.no/losninger/fra-lead-til-innflytting</loc>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/kontroll-pa-portefoljen</loc>
-    <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.fenistra.no/losninger/kontroll-pa-portefoljen</loc>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/fakturering-og-avregning</loc>
-    <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.fenistra.no/losninger/fakturering-og-avregning</loc>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/mva-og-regelverk</loc>
-    <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.fenistra.no/losninger/mva-og-regelverk</loc>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/rapport-og-analyse</loc>
-    <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.fenistra.no/losninger/rapport-og-analyse</loc>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/media-backer</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.fenistra.no/blogg/backer-velger-fenistra</loc>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-backer-01.jpg</image:loc>
+      <image:caption>Frida Holte, Customer Success Manager i Fenistra.</image:caption>
+      <image:title>Frida Holte, Customer Success Manager i Fenistra.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-backer-02.jpg</image:loc>
+      <image:caption>Tine Wergeland Johannessen, Backer AS.</image:caption>
+      <image:title>Tine Wergeland Johannessen, Backer AS.</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/media-brukerforum-2024-invitasjon</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.fenistra.no/blogg/fenistra-brukerforum-2024</loc>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/media-brukerforum-2024-oppsummering</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.fenistra.no/blogg/oppsummering-brukerforum-2024</loc>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-brukerforum-2024-oppsummering-01.jpg</image:loc>
+      <image:caption>Fra Fenistra Brukerforum 2024.</image:caption>
+      <image:title>Fra Fenistra Brukerforum 2024.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-brukerforum-2024-oppsummering-02.jpg</image:loc>
+      <image:caption>Fra Fenistra Brukerforum 2024.</image:caption>
+      <image:title>Fra Fenistra Brukerforum 2024.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-brukerforum-2024-oppsummering-03.jpg</image:loc>
+      <image:caption>Fra Fenistra Brukerforum 2024.</image:caption>
+      <image:title>Fra Fenistra Brukerforum 2024.</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/media-brukeropplevelse-neste-niva</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.fenistra.no/blogg/brukeropplevelsen-til-neste-niva</loc>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-brukeropplevelse-neste-niva-01.jpg</image:loc>
+      <image:caption>Skjermbilde av kontraktsvisning i nye Fenistra.</image:caption>
+      <image:title>Skjermbilde av kontraktsvisning i nye Fenistra.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-brukeropplevelse-neste-niva-02.jpg</image:loc>
+      <image:caption>Kjartan Nielsen Friis, daglig leder i Visma Property Solutions AS. Foto: Visma.</image:caption>
+      <image:title>Kjartan Nielsen Friis, daglig leder i Visma Property Solutions AS. Foto: Visma.</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/media-budsjett-til-faktura</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.fenistra.no/blogg/fra-budsjett-til-faktura</loc>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-budsjett-til-faktura-01.jpg</image:loc>
+      <image:caption>Andreas Caspari, leder for salg og marked i Visma Property Solutions AS.</image:caption>
+      <image:title>Andreas Caspari, leder for salg og marked i Visma Property Solutions AS.</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/media-business-nxt</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.fenistra.no/blogg/fenistra-og-visma-business-nxt</loc>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-business-nxt-01.jpg</image:loc>
+      <image:caption>David Aarstein, Product Marketing Manager Visma Business NXT.</image:caption>
+      <image:title>David Aarstein, Product Marketing Manager Visma Business NXT.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-business-nxt-02.jpg</image:loc>
+      <image:caption>Andreas Caspari, salgssjef i Visma Property Solutions.</image:caption>
+      <image:title>Andreas Caspari, salgssjef i Visma Property Solutions.</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/media-eiendomsportefolje-oversikt</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.fenistra.no/blogg/oversikt-i-eiendomsportefoljen</loc>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-eiendomsportefolje-oversikt-01.jpg</image:loc>
+      <image:caption>Skjermbilde: Create Insight i Fenistra.</image:caption>
+      <image:title>Skjermbilde: Create Insight i Fenistra.</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/media-forenkler-felleskostnadene</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.fenistra.no/blogg/fenistra-forenkler-felleskostnadene</loc>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-forenkler-felleskostnadene-01.jpg</image:loc>
+      <image:caption>Kristin Falch, Team lead Konsulent i Fenistra.</image:caption>
+      <image:title>Kristin Falch, Team lead Konsulent i Fenistra.</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/media-hoegh-eiendom</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.fenistra.no/blogg/hoegh-eiendom-over-to-tiar</loc>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-hoegh-eiendom-01.jpg</image:loc>
+      <image:caption>Maren Elise Dalene Torp, Senior Controller Eiendomsforvaltning i Höegh Eiendom.</image:caption>
+      <image:title>Maren Elise Dalene Torp, Senior Controller Eiendomsforvaltning i Höegh Eiendom.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-forenkler-felleskostnadene-01.jpg</image:loc>
+      <image:caption>Kristin Falch, Team lead Konsulent i Fenistra.</image:caption>
+      <image:title>Kristin Falch, Team lead Konsulent i Fenistra.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-hoegh-eiendom-02.jpg</image:loc>
+      <image:caption>Maren til venstre og Beate til høyre på bildet.</image:caption>
+      <image:title>Maren til venstre og Beate til høyre på bildet.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-hoegh-eiendom-03.jpg</image:loc>
+      <image:caption>Lene Hansen, Servicekoordinator avd. Moss hos Höegh Eiendom. Hun trekker frem det intuitive brukergrensesnittet i Fenistra som en av nøkkelfaktorene for en mer effektiv og tidsbesparende arbeidsdag som også gjør terskelen for å lære seg systemet veldig lav.</image:caption>
+      <image:title>Lene Hansen, Servicekoordinator avd. Moss hos Höegh Eiendom. Hun trekker frem det intuitive brukergrensesnittet i Fenistra som en av nøkkelfaktorene for en mer effektiv og tidsbesparende arbeidsdag som også gjør terskelen for å lære seg systemet veldig lav.</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/media-kontinuerlig-verdi</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.fenistra.no/blogg/kontinuerlig-verdi-for-kundene</loc>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-kontinuerlig-verdi-01.jpg</image:loc>
+      <image:caption>Andreas Caspari, Sales Manager i Visma Property Solutions AS.</image:caption>
+      <image:title>Andreas Caspari, Sales Manager i Visma Property Solutions AS.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-kontinuerlig-verdi-02.jpg</image:loc>
+      <image:caption>Joakim Howlid, Head of Research and Development, og Frida Arnesen Aamot, Product Manager i Visma Property Solutions AS.</image:caption>
+      <image:title>Joakim Howlid, Head of Research and Development, og Frida Arnesen Aamot, Product Manager i Visma Property Solutions AS.</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/media-mest-komplette-losningen</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.fenistra.no/blogg/mest-komplette-losningen-for-eiendomsforvaltning</loc>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-mest-komplette-losningen-01.jpg</image:loc>
+      <image:caption>Fenistra-plattformen.</image:caption>
+      <image:title>Fenistra-plattformen.</image:title>
+    </image:image>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/media-mva-erklaringer</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.fenistra.no/blogg/innhenting-av-mva-erklaringer</loc>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-mva-erklaringer-01.jpg</image:loc>
+      <image:caption>Illustrasjon: MVA-erklæring i Fenistra.</image:caption>
+      <image:title>Illustrasjon: MVA-erklæring i Fenistra.</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/media-ny-rapport-kjopesenter</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.fenistra.no/blogg/ny-rapport-i-fenistra-kjopesenter</loc>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/media-ny-rapport-kjopesenter-01.jpg</image:loc>
+      <image:caption>Illustrasjon: Fenistra Kjøpesenter.</image:caption>
+      <image:title>Illustrasjon: Fenistra Kjøpesenter.</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
     <loc>https://www.fenistra.no/om-oss</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.fenistra.no/images/teamet-fenistra.webp</image:loc>
+      <image:caption>Teamet bak Fenistra samlet utendørs under et stort tre, høst</image:caption>
+      <image:title>Teamet bak Fenistra samlet utendørs under et stort tre, høst</image:title>
+    </image:image>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
-    <loc>https://www.fenistra.no/pakke-resultat</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.fenistra.no/book-et-mote</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.fenistra.no/alt-i-fenistra</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.fenistra.no/velge-forvaltningssystem</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.fenistra.no/samarbeidspartnere</loc>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
     <loc>https://www.fenistra.no/personvern</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-11-13</lastmod>
   </url>
 </urlset>

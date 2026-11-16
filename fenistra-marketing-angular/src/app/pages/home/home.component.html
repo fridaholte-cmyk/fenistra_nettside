@@ -175,12 +175,12 @@
   /* Integrasjoner: tekst til venstre, animert økosystem til høyre */
 
   /* ================= TRYGGHET ================= */
-  .trust{padding:clamp(72px,9vw,140px) 0;}
+  .trust{padding:clamp(72px, calc(4.05rem + 4.5vw), 140px) 0;}
 
   /* ================= BARE SPØR (avslutning) ================= */
   .ask-band{background:var(--plum-deep); color:#fff; padding:var(--section-y-sm) 0;}
   .ask-inner{display:flex; align-items:center; justify-content:space-between; gap:40px;}
-  .ask-band h2{font-family:var(--font-display); font-weight:300; font-size:clamp(40px,5.4vw,72px); line-height:1; letter-spacing:-0.03em; margin-bottom:16px;}
+  .ask-band h2{font-family:var(--font-display); font-weight:300; font-size:clamp(40px, calc(2.43rem + 2.7vw), 72px); line-height:1; letter-spacing:-0.03em; margin-bottom:16px;}
   .ask-band p{font-size:18px; color:rgba(255,255,255,.8); line-height:1.55; max-width:560px;}
   .ask-band .btn{flex-shrink:0;}
   @media (max-width:760px){ .ask-band{padding:64px 0;} .ask-inner{flex-direction:column; align-items:flex-start;} }
@@ -189,7 +189,7 @@
   .logo-wall{padding:var(--section-y) 0;}
   .logo-wall-head{margin-bottom:40px;}
   .logo-wall-head p{font-size:17px; color:var(--ink-soft); line-height:1.6;}
-  .logo-wall-head h2{font-family:var(--font-display); font-weight:300; font-size:clamp(30px,3.6vw,48px); line-height:1.1; letter-spacing:-0.02em; color:var(--ink); margin:14px 0 16px; text-wrap:pretty;}
+  .logo-wall-head h2{font-family:var(--font-display); font-weight:300; font-size:clamp(30px, calc(1.62rem + 1.8vw), 48px); line-height:1.1; letter-spacing:-0.02em; color:var(--ink); margin:14px 0 16px; text-wrap:pretty;}
   .logo-grid{display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); list-style:none; margin:0; padding:0; border-top:1px solid var(--line); border-left:1px solid var(--line);}
   .logo-grid li{border-right:1px solid var(--line); border-bottom:1px solid var(--line);}
   .logo-tile{position:relative; display:flex; align-items:center; justify-content:center; height:120px; padding:16px; text-align:center; color:var(--plum); transition:background .25s ease;}
@@ -215,7 +215,7 @@
   }
   .section-head.center{margin-left:auto; margin-right:auto; text-align:center;}
   .section-head h2{
-    font-family:var(--font-display); font-weight:300; font-size:clamp(28px,3.2vw,42px);
+    font-family:var(--font-display); font-weight:300; font-size:clamp(28px, calc(1.44rem + 1.6vw), 42px);
     letter-spacing:-0.02em; color:var(--ink); margin-bottom:16px;
   }
   .section-head h2 strong{font-weight:600; color:var(--berry-deep);}
@@ -474,7 +474,7 @@
   }
   /* ================= FORSIDE «Fenistra kan eiendom» (budskapshuset, okt. 2026) ================= */
   .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
-  .hp-title{font-family:var(--font-display); font-weight:300; font-size:clamp(30px,3vw,46px); line-height:1.08; letter-spacing:-0.025em; color:inherit; text-wrap:balance;}
+  .hp-title{font-family:var(--font-display); font-weight:300; font-size:clamp(30px, calc(1.35rem + 1.5vw), 46px); line-height:1.08; letter-spacing:-0.025em; color:inherit; text-wrap:balance;}
   .hp-lead{font-size:18px; line-height:1.6; color:var(--ink-soft); max-width:60ch; text-wrap:pretty;}
   .hp-link{display:inline-block; font-family:var(--font-mono); font-size:12.5px; color:var(--berry-deep); border-bottom:1px solid currentColor; padding-bottom:2px;}
   .hp-actions{display:flex; flex-wrap:wrap; align-items:center; gap:14px 24px;}
@@ -485,11 +485,11 @@
   /* The hero fills the first screen (minus the 76px header), so only the top edge of the dark numbers box
      shows on load and the numbers themselves need a scroll. --screen-h is the window height measured in the
      browser: vh units are inflated by the large-screen zoom, px are not. */
-  .hp-hero{padding:clamp(40px,4vw,72px) 0 0; min-height:calc(var(--screen-h, 100svh) / var(--page-zoom, 1) - 76px - 56px); display:flex; align-items:center;}
+  .hp-hero{padding:clamp(40px, calc(1.8rem + 2vw), 72px) 0 0; min-height:calc(var(--screen-h, 100svh) - 76px - 56px); display:flex; align-items:center;}
   .hp-hero > .wrap{width:100%;}
   .hp-hero-grid{display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:56px; align-items:stretch;}
-  .hp-hero-copy{display:flex; flex-direction:column; justify-content:center; padding-bottom:clamp(40px,4vw,72px);}
-  .hp-hero h1{font-family:var(--font-display); font-weight:300; font-size:clamp(44px,4.5vw,76px); line-height:1; letter-spacing:-0.035em; color:var(--ink); margin-bottom:24px;}
+  .hp-hero-copy{display:flex; flex-direction:column; justify-content:center; padding-bottom:clamp(40px, calc(1.8rem + 2vw), 72px);}
+  .hp-hero h1{font-family:var(--font-display); font-weight:300; font-size:clamp(44px, calc(2.025rem + 2.25vw), 76px); line-height:1; letter-spacing:-0.035em; color:var(--ink); margin-bottom:24px;}
   .hp-hero h1 em{font-style:normal; font-weight:600;}
   /* Entrance: «Fenistra» first, then «kan eiendom.», then the text and the buttons */
   .hp-in{display:inline-block; animation:hp-in .8s cubic-bezier(.16,1,.3,1) both;}
@@ -500,19 +500,19 @@
   .hp-in-4{animation-delay:1.4s;}
   @keyframes hp-in{from{opacity:0; transform:translateY(.35em);}}
   @media (prefers-reduced-motion:reduce){ .hp-in{animation:none;} }
-  .hp-hero .hp-lead{font-size:clamp(17px,1.3vw,20px); max-width:36ch; margin-bottom:30px;}
-  .hp-hero-visual{position:relative; min-height:clamp(380px,34vw,560px);}
-  .hp-hero-photo{position:absolute; inset:0 0 clamp(40px,4vw,72px); border-radius:var(--radius); overflow:hidden; margin:0;}
+  .hp-hero .hp-lead{font-size:clamp(17px, calc(0.75rem + 0.75vw), 23px); max-width:40ch; margin-bottom:30px;}
+  .hp-hero-visual{position:relative; min-height:clamp(380px, calc(15.3rem + 17vw), 560px);}
+  .hp-hero-photo{position:absolute; inset:0 0 clamp(40px, calc(1.8rem + 2vw), 72px); border-radius:var(--radius); overflow:hidden; margin:0;}
   .hp-hero-photo img{width:100%; height:100%; object-fit:cover; object-position:54% 40%;}
   .hp-hero-photo figcaption{position:absolute; right:16px; bottom:14px; font-size:12.5px; color:#fff; background:rgba(15,23,42,.72); padding:5px 10px;}
 
   /* Store tall: 65 og 60 teller opp fra 10 når seksjonen kommer i syne */
   .hp-numbers{background:var(--plum-900); color:#fff; padding:var(--section-y) 0;}
   .hp-stats{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:48px;}
-  .hp-stat-label{margin-top:12px; font-size:clamp(16px,calc(1.2vw / var(--page-zoom, 1)),19px); line-height:1.45; color:rgba(255,255,255,.82);}
-  .hp-mid{font-family:var(--font-display); font-weight:300; font-size:clamp(40px,calc(4vw / var(--page-zoom, 1)),72px); white-space:nowrap; line-height:1; letter-spacing:-0.035em; font-variant-numeric:tabular-nums;}
+  .hp-stat-label{margin-top:12px; font-size:clamp(16px, calc(0.54rem + 0.6vw), 19px); line-height:1.45; color:rgba(255,255,255,.82);}
+  .hp-mid{font-family:var(--font-display); font-weight:300; font-size:clamp(40px, calc(1.8rem + 2vw), 72px); white-space:nowrap; line-height:1; letter-spacing:-0.035em; font-variant-numeric:tabular-nums;}
   /* pushed to the right edge so the pair spans the whole width */
-  .hp-facts{display:flex; justify-content:space-between; gap:24px; list-style:none; margin:var(--section-y-sm) 0 0; padding:28px 0 0; border-top:1px solid rgba(255,255,255,.18); font-family:var(--font-display); font-weight:300; font-size:clamp(20px,calc(1.8vw / var(--page-zoom, 1)),28px); line-height:1.15; letter-spacing:-0.02em; color:#fff;}
+  .hp-facts{display:flex; justify-content:space-between; gap:24px; list-style:none; margin:var(--section-y-sm) 0 0; padding:28px 0 0; border-top:1px solid rgba(255,255,255,.18); font-family:var(--font-display); font-weight:300; font-size:clamp(20px, calc(0.81rem + 0.9vw), 28px); line-height:1.15; letter-spacing:-0.02em; color:#fff;}
   @media (max-width:760px){ .hp-facts{flex-direction:column; gap:14px;} }
 
   /* Logovegg: overskrift og lenke på én linje */
@@ -526,11 +526,11 @@
   .proof-quote{padding:0 0 var(--section-y);}
   .hp-hoegh{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:#fff; margin:0; transition:opacity .8s ease, transform .8s ease;}
   .hp-hoegh > img{width:100%; height:100%; object-fit:cover; min-height:380px;}
-  .hp-hoegh-copy{padding:clamp(32px,3.5vw,56px) clamp(32px,3.5vw,56px) clamp(28px,3vw,48px); display:flex; flex-direction:column;}
-  .hp-hoegh-copy blockquote{font-family:var(--font-display); font-weight:300; font-size:clamp(19px,1.6vw,24px); line-height:1.42; letter-spacing:-0.012em; color:var(--ink); text-wrap:pretty;}
+  .hp-hoegh-copy{padding:clamp(32px, calc(1.575rem + 1.75vw), 56px) clamp(32px, calc(1.575rem + 1.75vw), 56px) clamp(28px, calc(1.35rem + 1.5vw), 48px); display:flex; flex-direction:column;}
+  .hp-hoegh-copy blockquote{font-family:var(--font-display); font-weight:300; font-size:clamp(19px, calc(0.72rem + 0.8vw), 24px); line-height:1.42; letter-spacing:-0.012em; color:var(--ink); text-wrap:pretty;}
   .hp-hoegh-copy figcaption{margin-top:22px; display:flex; flex-direction:column; gap:3px;}
   .hp-hoegh-fact{margin-top:auto; padding-top:28px; border-top:1px solid var(--line); display:flex; align-items:baseline; gap:20px; flex-wrap:wrap;}
-  .hp-hoegh-fact strong{font-family:var(--font-display); font-weight:300; font-size:clamp(52px,5vw,84px); letter-spacing:-0.03em; color:var(--berry-deep); line-height:1;}
+  .hp-hoegh-fact strong{font-family:var(--font-display); font-weight:300; font-size:clamp(52px, calc(2.25rem + 2.5vw), 84px); letter-spacing:-0.03em; color:var(--berry-deep); line-height:1;}
   .hp-hoegh-fact span{font-size:16px; color:var(--ink-soft); max-width:34ch;}
   .hp-hoegh-fact .hp-link{margin-top:10px;}
   /* the word being read switches to purple at once and fades back to dark after; a fade-in this short would never reach the colour */
@@ -542,19 +542,20 @@
      (klassene .armed og .play settes fra home.component.ts); uten JS eller med redusert bevegelse vises sluttbildet. */
   .pr{padding:var(--section-y) 0 32px; border-top:1px solid var(--line);}
   .pr-head{display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:56px; align-items:end; margin-bottom:24px; color:var(--ink);}
-  .pr-row{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:clamp(40px,5vw,72px); align-items:center; padding:var(--section-y-sm) 0; border-top:1px solid var(--line);}
+  .pr-row{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:clamp(40px, calc(2.25rem + 2.5vw), 72px); align-items:center; padding:var(--section-y-sm) 0; border-top:1px solid var(--line);}
   .pr-row:first-of-type{border-top:none;}
   .pr-flip .pr-stage{order:-1;}
   .pr-num{display:block; font-family:var(--font-mono); font-size:12.5px; color:var(--ink-soft); margin-bottom:14px;}
-  .pr-copy h3{font-family:var(--font-display); font-weight:300; font-size:clamp(28px,2.5vw,40px); letter-spacing:-0.025em; line-height:1.08; color:var(--ink);}
+  .pr-copy h3{font-family:var(--font-display); font-weight:300; font-size:clamp(28px, calc(1.125rem + 1.25vw), 40px); letter-spacing:-0.025em; line-height:1.08; color:var(--ink);}
   .pr-intro{margin-top:12px; font-size:18px; line-height:1.45; color:var(--ink); font-weight:500; max-width:34ch;}
   .pr-k{display:block; font-family:var(--font-mono); font-size:11.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-soft);}
   .pr-copy > .pr-k{margin:26px 0 6px;}
+  .pr-copy > .pr-body{margin-top:20px;}
   .pr-copy > p:not(.pr-k):not(.pr-intro){font-size:16px; line-height:1.65; color:var(--ink-soft); max-width:54ch;}
   .pr-copy > p a{color:var(--ink); text-decoration:underline; text-underline-offset:3px;}
   .pr-promise{margin:26px 0 24px; padding:4px 0 4px 20px; border-left:2px solid var(--ink); font-size:18px; line-height:1.4; color:var(--ink); max-width:32ch; text-wrap:balance;}
   .pr-promise .pr-k{margin-bottom:8px;}
-  .pr-stage{margin:0; background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius); padding:clamp(24px,2.8vw,40px) clamp(22px,2.6vw,36px);}
+  .pr-stage{margin:0; background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius); padding:clamp(24px, calc(1.26rem + 1.4vw), 40px) clamp(22px, calc(1.17rem + 1.3vw), 36px);}
   .pr-card{background:#fff; border:1px solid var(--line); border-radius:10px; padding:24px; min-height:340px; box-shadow:0 24px 48px -32px rgba(15,23,42,.35); color:var(--ink);}
 
   /* 01: spørsmål skrives, Fenistra tenker, svaret bygges opp */
@@ -678,10 +679,10 @@
   .hp-buyers{padding:var(--section-y) 0;}
   .hp-buyers .hp-title{margin-bottom:36px; max-width:20ch; color:var(--ink);}
   .hp-buyers-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
-  .hp-buyer{border-radius:var(--radius); padding:clamp(32px,3.4vw,48px) clamp(28px,3.4vw,48px) clamp(30px,3vw,44px); display:flex; flex-direction:column;}
+  .hp-buyer{border-radius:var(--radius); padding:clamp(32px, calc(1.53rem + 1.7vw), 48px) clamp(28px, calc(1.53rem + 1.7vw), 48px) clamp(30px, calc(1.35rem + 1.5vw), 44px); display:flex; flex-direction:column;}
   .hp-buyer-dark{background:var(--plum-deep); color:#fff;}
   .hp-buyer-light{background:#fff; border:1px solid var(--line);}
-  .hp-buyer h3{font-family:var(--font-display); font-weight:300; font-size:clamp(24px,2.2vw,34px); line-height:1.14; letter-spacing:-0.02em; margin-bottom:18px; text-wrap:balance;}
+  .hp-buyer h3{font-family:var(--font-display); font-weight:300; font-size:clamp(24px, calc(0.99rem + 1.1vw), 34px); line-height:1.14; letter-spacing:-0.02em; margin-bottom:18px; text-wrap:balance;}
   .hp-buyer > p{font-size:16.5px; line-height:1.6;}
   .hp-buyer-dark > p{color:rgba(255,255,255,.82);}
   .hp-buyer-light > p{color:var(--ink-soft);}
@@ -738,7 +739,7 @@
       <h1><span class="hp-in hp-in-1">Fenistra</span>{{ " " }}<em class="hp-in hp-in-2">kan eiendom.</em></h1>
       <p class="hp-lead hp-in hp-in-3">Forvaltningssystem for næringseiendom, med over 30 år med faget bygget inn. Fenistra svarer, sier ifra og gjør jobben, fra første henvendelse til ferdig avregnet.</p>
       <div class="hp-actions hp-in hp-in-4">
-        <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
+        <a routerLink="/book-et-mote" fragment="skjema" class="btn btn-primary">Book et møte</a>
         <a routerLink="/" fragment="prosess" class="btn btn-ghost">Se Fenistra i bruk</a>
       </div>
     </div>
@@ -816,7 +817,7 @@
         </figcaption>
         <div class="hp-hoegh-fact">
           <strong>50–60 %</strong>
-          <span>mindre tid på fakturering hos Höegh Eiendom, kunde i over 20 år. <a routerLink="/media-hoegh-eiendom" class="hp-link">Les historien →</a></span>
+          <span>mindre tid på fakturering hos Höegh Eiendom, kunde i over 20 år. <a routerLink="/blogg/hoegh-eiendom-over-to-tiar" class="hp-link">Les historien →</a></span>
         </div>
       </div>
     </figure>
@@ -832,7 +833,7 @@
         <img src="images/kunder-04.jpg" width="900" height="802" alt="Tine Wergeland Johannessen, utleie- og markedssjef i Backer AS" loading="lazy">
         <blockquote>«For oss i Backer var det avgjørende å velge en løsning som er både moderne og intuitiv. Vi valgte Fenistra fordi de kombinerer dyp bransjekunnskap med et verktøy som forenkler hverdagen vår og gir oss den innsikten vi trenger for å vokse videre. Gjennom dette samarbeidet får vi et solid fundament for profesjonell eiendomsforvaltning i mange år fremover.»</blockquote>
         <figcaption><span class="hp-who">Tine Wergeland Johannessen</span><span class="hp-role">Utleie- og markedssjef, Backer AS</span></figcaption>
-        <a routerLink="/media-backer" class="hp-link">Les historien →</a>
+        <a routerLink="/blogg/backer-velger-fenistra" class="hp-link">Les historien →</a>
       </figure>
       <figure class="hp-voice reveal">
         <img src="images/kunder-03.jpg" width="1412" height="806" alt="Ninette Jurs, kontraktsforvalter i Aspelin Ramm, og Kristin Støfringsdal, eiendomsforvalter på Vulkan" loading="lazy">
@@ -845,7 +846,7 @@
         <img src="images/kunder-02.jpg" width="960" height="1280" alt="Bente Haugsdal, tidligere utviklingssjef, Frydenbø Eiendom" loading="lazy">
         <blockquote>«Fenistra har utviklet seg i takt med krav og regelverk i tett samarbeid med eiendomsbesittere. Vår erfaring har vært at når det rulles ut nye moduler, så er dette kvalitetssikret både mot regelverk og et behov i bransjen. Det er gjort mye forarbeid og grundig erfaringsutveksling før en iverksetter nye løsninger, noe som gir oss trygghet for kvalitet og behov.»</blockquote>
         <figcaption><span class="hp-who">Bente Haugsdal</span><span class="hp-role">Tidligere utviklingssjef, Frydenbø Eiendom</span></figcaption>
-        <a routerLink="/media-kontinuerlig-verdi" class="hp-link">Les historien →</a>
+        <a routerLink="/blogg/kontinuerlig-verdi-for-kundene" class="hp-link">Les historien →</a>
       </figure>
     </div>
     <p class="hp-more reveal"><a routerLink="/kunder" class="hp-link">Les flere kundehistorier →</a></p>
@@ -857,7 +858,7 @@
   <div class="wrap">
     <app-process-animation></app-process-animation>
     <div class="hp-prosess-cta">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
+      <a routerLink="/book-et-mote" fragment="skjema" class="btn btn-primary">Book et møte</a>
     </div>
   </div>
 </section>
@@ -876,12 +877,9 @@
         <span class="pr-num">01</span>
         <h3 id="pr-spor">Bare spør</h3>
         <p class="pr-intro">Spør om dataene, arbeidsoppgavene eller hvordan Fenistra brukes.</p>
-        <p class="pr-k">Dette betyr det</p>
-        <p>Bruk egne ord. Be om innsikt, en forklaring eller hjelp til å få noe gjort. Hva bør vi kreve i leie etter tilpasningene? Hvordan påvirker rabatten inntektene?</p>
-        <p class="pr-k">Slik gjør vi det</p>
-        <p>Fenistra bruker opplysningene du har tilgang til, avklarer det som mangler og viser hva svaret bygger på.</p>
+        <p class="pr-body">Bruk egne ord. Be om innsikt, en forklaring eller hjelp til å få noe gjort. Hva bør vi kreve i leie etter tilpasningene? Hvordan påvirker rabatten inntektene? Fenistra bruker opplysningene du har tilgang til, avklarer det som mangler og viser hva svaret bygger på.</p>
         <blockquote class="pr-promise"><span class="pr-k">Vårt løfte</span>Du skal komme videre uten å lære alle funksjonene først.</blockquote>
-        <a routerLink="/rapport-og-analyse" class="hp-link">Se mulighetene i porteføljen →</a>
+        <a routerLink="/losninger/rapport-og-analyse" class="hp-link">Se mulighetene i porteføljen →</a>
       </div>
       <figure class="pr-stage">
         <div class="pr-card pr-anim" data-pr="ask" aria-hidden="true">
@@ -907,12 +905,9 @@
         <span class="pr-num">02</span>
         <h3 id="pr-ifra">Sier ifra</h3>
         <p class="pr-intro">Fenistra varsler i tide, så du rekker å ta gode beslutninger.</p>
-        <p class="pr-k">Dette betyr det</p>
-        <p>Det som trenger oppfølging, dukker opp før det haster. En opsjonsfrist. En garanti som mangler. En avtale som bør reforhandles fordi leien ligger under markedet i <a href="https://arealstatistikk.no/" target="_blank" rel="noopener">Arealstatistikk</a>.</p>
-        <p class="pr-k">Slik gjør vi det</p>
-        <p>Mangler, usikkerhet og feil i dataene skal frem, og hvert varsel skal kunne forklares.</p>
+        <p class="pr-body">Det som trenger oppfølging, dukker opp før det haster. En opsjonsfrist. En garanti som mangler. En avtale som bør reforhandles fordi leien ligger under markedet i <a href="https://arealstatistikk.no/" target="_blank" rel="noopener">Arealstatistikk</a>. Mangler, usikkerhet og feil i dataene skal frem, og hvert varsel skal kunne forklares.</p>
         <blockquote class="pr-promise"><span class="pr-k">Vårt løfte</span>Du skal kunne handle i tide, og forstå hvorfor Fenistra sier ifra.</blockquote>
-        <a routerLink="/kontroll-pa-portefoljen" class="hp-link">Kontroll på porteføljen →</a>
+        <a routerLink="/losninger/kontroll-pa-portefoljen" class="hp-link">Kontroll på porteføljen →</a>
       </div>
       <figure class="pr-stage">
         <div class="pr-card pr-anim" data-pr="alert" aria-hidden="true">
@@ -934,12 +929,9 @@
         <span class="pr-num">03</span>
         <h3 id="pr-jobben">Gjør jobben</h3>
         <p class="pr-intro">Du bestemmer. Fenistra tar arbeidet helt frem.</p>
-        <p class="pr-k">Dette betyr det</p>
-        <p>Fenistra gjør mer enn å svare. Kontraktsutkast fra maler, signeringsklare dokumenter, regulering, fakturering og avregning etter kontrakten.</p>
-        <p class="pr-k">Slik gjør vi det</p>
-        <p>Du kontrollerer og godkjenner underveis. Ingenting sendes, signeres eller faktureres uten deg.</p>
+        <p class="pr-body">Fenistra gjør mer enn å svare. Kontraktsutkast fra maler, signeringsklare dokumenter, regulering, fakturering og avregning etter kontrakten. Du kontrollerer og godkjenner underveis. Ingenting sendes, signeres eller faktureres uten deg.</p>
         <blockquote class="pr-promise"><span class="pr-k">Vårt løfte</span>Du skal bruke tiden på vurderingene, ikke på å flytte data mellom steder.</blockquote>
-        <a routerLink="/fra-lead-til-innflytting" class="hp-link">Fra lead til innflytting →</a>
+        <a routerLink="/losninger/fra-lead-til-innflytting" class="hp-link">Fra lead til innflytting →</a>
       </div>
       <figure class="pr-stage">
         <div class="pr-card pr-anim" data-pr="job" aria-hidden="true">
@@ -969,7 +961,7 @@
           <li>Rapporter og prognoser fra de faktiske kontraktene <span>Svarer</span></li>
           <li>Sikret etter ISO/IEC 27001 <span>Trygghet</span></li>
         </ul>
-        <a routerLink="/rapport-og-analyse" class="hp-link">Se mulighetene i porteføljen →</a>
+        <a routerLink="/losninger/rapport-og-analyse" class="hp-link">Se mulighetene i porteføljen →</a>
       </article>
       <article class="hp-buyer hp-buyer-light reveal">
         <h3>Også den rare kontrakten.</h3>
@@ -982,7 +974,7 @@
           <li>Skjevfordeling av felleskostnader</li>
           <li>Momsproblematikk: delvis MVA-pliktige lokaler, frivillig registrering og justering</li>
         </ul>
-        <a routerLink="/kontroll-pa-portefoljen" class="hp-link">Se hvordan kontraktene følges opp →</a>
+        <a routerLink="/losninger/kontroll-pa-portefoljen" class="hp-link">Se hvordan kontraktene følges opp →</a>
       </article>
     </div>
   </div>
@@ -1002,7 +994,7 @@
       <h2 id="ask-title">Bare spør.</h2>
       <p>Om porteføljen, om avregningen, om hva Fenistra kan gjøre for dere.</p>
     </div>
-    <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book et møte</a>
+    <a routerLink="/book-et-mote" fragment="skjema" class="btn btn-on-dark">Book et møte</a>
   </div>
 </section>
 

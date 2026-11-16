@@ -21,10 +21,10 @@
 
 <!-- Text version: shown on small screens and before the stage is built, read by screen readers and search engines -->
 <div class="pa-fallback">
-  <h2>Hele leieforholdet i ett system.</h2>
-  <p class="pa-lead">Fra lead og visning til kontrakt, fakturering, regulering og avregning.</p>
+  <h2>{{ config.title }}</h2>
+  <p class="pa-lead">{{ config.sub }}</p>
   <ol class="pa-list">
-    @for (s of steps; track s.key) {
+    @for (s of config.steps; track s.key) {
       <li><h3>{{ s.title }}</h3><p>{{ s.desc }}</p></li>
     }
   </ol>

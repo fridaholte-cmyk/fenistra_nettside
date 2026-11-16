@@ -64,7 +64,17 @@ export class HeaderComponent {
   onSearchInput(value: string) {
     this.searchQuery = value;
     this.searchResults = searchSite(value);
+    // site_search for GTM: once the visitor has paused typing for 1.5 s, and only for 3+ characters
+    clearTimeout(this.searchTimer);
+    const term = value.trim().toLowerCase();
+    if (term.length < 3 || term === this.lastTrackedSearch) return;
+    this.searchTimer = setTimeout(() => {
+      this.lastTrackedSearch = term;
+      window.dataLayer?.push({ event: 'site_search', search_term: term.slice(0, 100), results_count: this.searchResults.length });
+    }, 1500);
   }
+  private searchTimer?: ReturnType<typeof setTimeout>;
+  private lastTrackedSearch = '';
 
   toRoute(url: string): string {
     const slug = url.replace(/\.html$/, '');

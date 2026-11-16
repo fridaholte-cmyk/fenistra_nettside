@@ -2,6 +2,16 @@
 
 > Fenistra kan eiendom. Fenistra leverer programvare for norsk næringseiendom og kombinerer fagkunnskap (løsninger utviklet siden 1994), markedsdata fra Arealstatistikk integrert i løsningene og AI som gjør kunnskapen anvendelig. Fenistra svarer når kunden spør, sier ifra når noe krever oppmerksomhet, og gjør jobben i arbeidsprosessene, og brukes av over 170 eiendomsforvaltere i Norge. Levert av Visma Property Solutions AS (del av Visma-konsernet).
 
+Sist oppdatert: 2026-11-16
+
+## Om dette dokumentet
+
+- Dette dokumentet gjelder www.fenistra.no, markedsnettstedet til Fenistra, levert av Visma Property Solutions AS (del av Visma-konsernet).
+- www.fenistra.no er et B2B-nettsted for eiendomsselskaper. Selve Fenistra brukes av kundene som en innlogget skytjeneste, ikke på dette nettstedet.
+- Tall og kundenavn gjelder per november 2026.
+
+## Om Fenistra
+
 Utviklingen av Fenistra startet i 1994, og Fenistra har vært en del av Visma siden 2020. Nye kunder får Fenistra som skytjeneste, som oppdateres fortløpende. Fenistra er bygget for eiendomsselskaper med store og mellomstore porteføljer: flere selskaper, mange kontraktstyper og ekte kompleksitet. Fenistra passer også mindre porteføljer: systemet tilpasses kunden, ikke omvendt, og etter over 30 år er de fleste varianter av kontraktsvilkår, også uvanlige, løst i systemet. Oppstarten skjer i tre steg (AI leser inn kontraktene, Fenistra kobles til regnskapet, og kunden fakturerer), uten betalte konsulenttimer og uten skjulte kostnader. Kontakt Fenistra for pris.
 
 ## Hvorfor Fenistra
@@ -88,49 +98,98 @@ AI leser kontrakter, henter ut opplysninger, svarer med kilder og følger opp fu
 
 ## Hovedsider
 
-- [Forside](https://www.fenistra.no/): oversikt over Fenistra forvaltningssystem
-- [Løsninger](https://www.fenistra.no/losninger): plattformen ordnet etter det dere skal få gjort
-- [Slik velger dere forvaltningssystem](https://www.fenistra.no/velge-forvaltningssystem): kriteriene som skiller forvaltningssystemer for næringseiendom (portefølje, regulering og felleskostnader, MVA, regnskap, markedsdata, AI, sikkerhet, oppstart, fagmiljø), spørsmål å stille enhver leverandør, og hvordan Fenistra svarer
-- [Alt i Fenistra](https://www.fenistra.no/alt-i-fenistra): alle delene som er bygget inn i Fenistra, beskrevet på én side og ordnet etter kontrakter, fakturering og avregning, MVA, rapport og analyse og kjøpesenter
-- [Fra lead til innflytting](https://www.fenistra.no/fra-lead-til-innflytting): utleieprosessen fra første henvendelse til signert kontrakt og innflytting
-- [Slik hjelper vi](https://www.fenistra.no/ki): hvordan Fenistra svarer, sier ifra og gjør jobben
-- [Integrasjoner](https://www.fenistra.no/integrasjoner): alle 26 systemene Fenistra er integrert mot, samlet på én side: regnskap og ERP (Tripletex, Xledger, PowerOffice GO, Visma Business NXT, Visma.net, 24SevenOffice, Uni Micro, Microsoft Dynamics, Visma Business, Visma Global, Visma Unique, SAP, Unit4, Info Easy, Infor M3, Deltek Maconomy, Oracle PeopleSoft), årsoppgjør (Finale), rapportering (Power BI, Maestro), drift og vedlikehold (Properly, FAMAC) og kjøpesenter (Viametrics, IMAS/Countmatters), pluss Reporting API og innebygde koblinger mot SSB, EHF/PEPPOL og Brønnøysundregistrene
-- [AI i Fenistra](https://www.fenistra.no/ki): KI-assistenten, AI-opplasting av kontrakter og hvorfor datagrunnlaget er avgjørende
-- [Kundehistorier](https://www.fenistra.no/kunder): Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm (nå Aspelin Reitan) og Backer AS
-- [Om oss](https://www.fenistra.no/om-oss): historien bak Fenistra og Visma Property Solutions
-- [Datasikkerhet](https://www.fenistra.no/datasikkerhet): ISO 27001-sertifisering, VCDM-godkjenning, Visma Security Program og GDPR
-- [Kom i gang](https://www.fenistra.no/kom-i-gang): oppstart steg for steg, AI-opplasting av kontrakter, kobling mot regnskap og hva oppstarten koster
-- [Kontakt oss](https://www.fenistra.no/kontakt-oss): brukerstøtte, adresse og møtebooking
-- [Tilgjengelighetserklæring](https://www.fenistra.no/tilgjengelighet): universell utforming (WCAG 2.1 AA), tastatur, 400 % zoom og klage til Uutilsynet
+- [Forside](https://www.fenistra.no/): oversikt over Fenistra forvaltningssystem.
+- [Løsninger](https://www.fenistra.no/losninger): plattformen ordnet etter det dere skal få gjort.
+- [Slik velger dere forvaltningssystem](https://www.fenistra.no/velge-forvaltningssystem): kriteriene som skiller forvaltningssystemer for næringseiendom (portefølje, regulering og felleskostnader, MVA, regnskap, markedsdata, AI, sikkerhet, oppstart, fagmiljø), spørsmål å stille enhver leverandør, og hvordan Fenistra svarer.
+- [Alt i Fenistra](https://www.fenistra.no/alt-i-fenistra): alle delene som er bygget inn i Fenistra, beskrevet på én side og ordnet etter kontrakter, fakturering og avregning, MVA, rapport og analyse og kjøpesenter.
+- [Fra lead til innflytting](https://www.fenistra.no/losninger/fra-lead-til-innflytting): utleieprosessen fra første henvendelse til signert kontrakt og innflytting.
+- [Slik hjelper vi](https://www.fenistra.no/slik-hjelper-fenistra): hvordan Fenistra svarer, sier ifra og gjør jobben.
+- [Integrasjoner](https://www.fenistra.no/integrasjoner): alle 26 systemene Fenistra er integrert mot, samlet på én side: regnskap og ERP (Tripletex, Xledger, PowerOffice GO, Visma Business NXT, Visma.net, 24SevenOffice, Uni Micro, Microsoft Dynamics, Visma Business, Visma Global, Visma Unique, SAP, Unit4, Info Easy, Infor M3, Deltek Maconomy, Oracle PeopleSoft), årsoppgjør (Finale), rapportering (Power BI, Maestro), drift og vedlikehold (Properly, FAMAC) og kjøpesenter (Viametrics, IMAS/Countmatters), pluss Reporting API og innebygde koblinger mot SSB, EHF/PEPPOL og Brønnøysundregistrene.
+- [AI i Fenistra](https://www.fenistra.no/slik-hjelper-fenistra): KI-assistenten, AI-opplasting av kontrakter og hvorfor datagrunnlaget er avgjørende.
+- [Kundehistorier](https://www.fenistra.no/kunder): Höegh Eiendom, Frydenbø Eiendom, Aspelin Ramm (nå Aspelin Reitan) og Backer AS.
+- [Om oss](https://www.fenistra.no/om-oss): historien bak Fenistra og Visma Property Solutions.
+- [Datasikkerhet](https://www.fenistra.no/datasikkerhet): ISO 27001-sertifisering, VCDM-godkjenning, Visma Security Program og GDPR.
+- [Kom i gang](https://www.fenistra.no/kom-i-gang): oppstart steg for steg, AI-opplasting av kontrakter, kobling mot regnskap og hva oppstarten koster.
+- [Kontakt oss](https://www.fenistra.no/kontakt): brukerstøtte, adresse og møtebooking.
+- [Tilgjengelighetserklæring](https://www.fenistra.no/tilgjengelighet): universell utforming (WCAG 2.1 AA), tastatur, 400 % zoom og klage til Uutilsynet.
 
 ## Løsninger
 
 Plattformen er ordnet etter det kunden skal få gjort:
 
-- [Kontroll på porteføljen](https://www.fenistra.no/kontroll-pa-portefoljen): Kontrakter, sikkerheter, frister og dokumenter samlet i ett system, med varsel før noe glipper.
-- [Fakturering og avregning](https://www.fenistra.no/fakturering-og-avregning): Regulering, fakturering, felleskostnader og omsetningsleie i én flyt, beregnet automatisk og overført til regnskapet.
-- [MVA og regelverk](https://www.fenistra.no/mva-og-regelverk): MVA-erklæringer, justeringsforpliktelser og dokumentasjon i tråd med norsk regelverk.
-- [Rapport og analyse](https://www.fenistra.no/rapport-og-analyse): Nøkkeltall, inntektsbudsjett og formuesverdsettelse rett fra kildedataene.
+- [Kontroll på porteføljen](https://www.fenistra.no/losninger/kontroll-pa-portefoljen): Kontrakter, sikkerheter, frister og dokumenter samlet i ett system, med varsel før noe glipper.
+- [Fakturering og avregning](https://www.fenistra.no/losninger/fakturering-og-avregning): Regulering, fakturering, felleskostnader og omsetningsleie i én flyt, beregnet automatisk og overført til regnskapet.
+- [MVA og regelverk](https://www.fenistra.no/losninger/mva-og-regelverk): MVA-erklæringer, justeringsforpliktelser og dokumentasjon i tråd med norsk regelverk.
+- [Rapport og analyse](https://www.fenistra.no/losninger/rapport-og-analyse): Nøkkeltall, inntektsbudsjett og formuesverdsettelse rett fra kildedataene.
 
 Enkeltmodulene (beskrevet samlet på [Alt i Fenistra](https://www.fenistra.no/alt-i-fenistra)):
 
-- [Kontrakter](https://www.fenistra.no/losning-kontrakter): utleie-, fremleie- og interne kontrakter samlet på tvers av porteføljen
-- [Fakturering](https://www.fenistra.no/losning-fakturering): fast, akonto og omsetningsbasert husleie med gjentakende fakturering
-- [Felleskostnader](https://www.fenistra.no/losning-felleskostnader): automatisert felleskostnadsavregning med fordeling og MVA-behandling
-- [Rapportering](https://www.fenistra.no/losning-rapportering): standardrapporter og interaktive visualiseringer
-- [Omsetningsavregning](https://www.fenistra.no/losning-omsetningsavregning): avregning av omsetningsbasert leie
-- [Formuesverdsettelse](https://www.fenistra.no/losning-formuesverdsettelse): beregning og dokumentasjon av formuesverdi
-- [Inntektsbudsjett](https://www.fenistra.no/losning-inntektsbudsjett): budsjett fra faktiske leieforhold
-- [Sikkerhetsstyring](https://www.fenistra.no/losning-sikkerhetsstyring): bankgaranti og depositum med varsling
-- [Dokument](https://www.fenistra.no/losning-dokument): dokumentasjon koblet til eiendom og leieforhold
-- [MVA-erklæring](https://www.fenistra.no/losning-mva-erklaring): innhenting fra MVA-registrerte leietakere
-- [Revisorbekreftet omsetning](https://www.fenistra.no/losning-rbo): leietakernes reviderte omsetningstall
-- [Protokoller](https://www.fenistra.no/losning-protokoller): overtakelse og tilbakelevering av lokaler
-- [Digital signering](https://www.fenistra.no/losning-digital-signering): signering direkte i Fenistra
-- [Justering](https://www.fenistra.no/losning-justering): MVA og justeringsforpliktelser
-- [Arealberegning](https://www.fenistra.no/losning-arealberegning): arealer koblet til tegning og kontrakt
-- [Kjøpesenter](https://www.fenistra.no/losning-kjopesenter): senterleders verktøy for omsetning og drift
+- [Kontrakter](https://www.fenistra.no/losninger/kontrakter): utleie-, fremleie- og interne kontrakter samlet på tvers av porteføljen.
+- [Fakturering](https://www.fenistra.no/losninger/fakturering): fast, akonto og omsetningsbasert husleie med gjentakende fakturering.
+- [Felleskostnader](https://www.fenistra.no/losninger/felleskostnader): automatisert felleskostnadsavregning med fordeling og MVA-behandling.
+- [Rapportering](https://www.fenistra.no/losninger/rapportering): standardrapporter og interaktive visualiseringer.
+- [Omsetningsavregning](https://www.fenistra.no/losninger/omsetningsavregning): avregning av omsetningsbasert leie.
+- [Formuesverdsettelse](https://www.fenistra.no/losninger/formuesverdsettelse): beregning og dokumentasjon av formuesverdi.
+- [Inntektsbudsjett](https://www.fenistra.no/losninger/inntektsbudsjett): budsjett fra faktiske leieforhold.
+- [Sikkerhetsstyring](https://www.fenistra.no/losninger/sikkerhetsstyring): bankgaranti og depositum med varsling.
+- [Dokument](https://www.fenistra.no/losninger/dokumenter): dokumentasjon koblet til eiendom og leieforhold.
+- [MVA-erklæring](https://www.fenistra.no/losninger/mva-erklaring): innhenting fra MVA-registrerte leietakere.
+- [Revisorbekreftet omsetning](https://www.fenistra.no/losninger/revisorbekreftet-omsetning): leietakernes reviderte omsetningstall.
+- [Protokoller](https://www.fenistra.no/losninger/protokoller): overtakelse og tilbakelevering av lokaler.
+- [Digital signering](https://www.fenistra.no/losninger/digital-signering): signering direkte i Fenistra.
+- [Justering](https://www.fenistra.no/losninger/mva-justering): MVA og justeringsforpliktelser.
+- [Arealberegning](https://www.fenistra.no/losninger/arealberegning): arealer koblet til tegning og kontrakt.
+- [Kjøpesenter](https://www.fenistra.no/losninger/kjopesenter): senterleders verktøy for omsetning og drift.
 
-## Kontakt
+## Kundehistorier og artikler
 
-Visma Property Solutions AS (org.nr. 921 074 352), Karenslyst allé 56, 0277 Oslo. E-post: support.fenistra@visma.com
+Kundehistoriene er samlet på [Kundehistorier](https://www.fenistra.no/kunder), og alle artikler på [Blogg](https://www.fenistra.no/blogg). Nyeste først:
+
+- [Derfor har Höegh Eiendom brukt Fenistra i over to tiår](https://www.fenistra.no/blogg/hoegh-eiendom-over-to-tiar): Senior Controller Maren Elise Dalene Torp forteller hvorfor Höegh Eiendom har vært Fenistra-kunde i over 20 år. (2026-04-23)
+- [Backer rigger for fremtiden](https://www.fenistra.no/blogg/backer-velger-fenistra): Backer velger Fenistra som nytt forvaltningssystem for sin eiendomsportefølje. (2026-03-09)
+- [Fra budsjett til faktura](https://www.fenistra.no/blogg/fra-budsjett-til-faktura): Fenistra Felleskostnader-budsjett gir presis og transparent fordeling, fra budsjett til faktura. (2025-10-23)
+- [Fenistra forenkler felleskostnadene](https://www.fenistra.no/blogg/fenistra-forenkler-felleskostnadene): Kristin Falch om hvordan Fenistra Felleskostavregning eliminerer manuelle rutiner og reduserer feil. (2025-07-02)
+- [Fenistra: mest komplette løsningen for eiendomsforvaltning](https://www.fenistra.no/blogg/mest-komplette-losningen-for-eiendomsforvaltning): Slik henger løsningene i Fenistra sammen, fra kontrakt til rapportering. (2025-04-14)
+- [Fenistra+Business NXT](https://www.fenistra.no/blogg/fenistra-og-visma-business-nxt): Fenistra integrert med Visma Business NXT gir full kontroll på økonomi og eiendomsforvaltning. (2025-03-01)
+- [Slik sikrer du effektiv innhenting av MVA-erklæringer](https://www.fenistra.no/blogg/innhenting-av-mva-erklaringer): Effektive metoder for å samle inn MVA-erklæringer fra leietakere. (2024-12-02)
+- [Skaper kontinuerlig verdi for kundene](https://www.fenistra.no/blogg/kontinuerlig-verdi-for-kundene): Nye Fenistra gir eiendomsselskaper bedre kombinasjon av fleksibilitet, effektivitet og moderne teknologi. (2024-09-16)
+- [Ny rapport i Fenistra Kjøpesenter](https://www.fenistra.no/blogg/ny-rapport-i-fenistra-kjopesenter): Ny rapport lansert i Fenistra Kjøpesenter, for enda bedre innsikt i senterdriften. (2024-09-02)
+- [Oppsummering av Fenistra Brukerforum 2024](https://www.fenistra.no/blogg/oppsummering-brukerforum-2024): Innsikt og innovasjon fra bransjens egne foredragsholdere på Fenistra Brukerforum 2024. (2024-06-17)
+- [Dette må du ha oversikt over i egen eiendomsportefølje](https://www.fenistra.no/blogg/oversikt-i-eiendomsportefoljen): Med Fenistra og Create Insight får du oversikt over egen eiendomsportefølje i kombinasjon med markedsdata. (2024-06-03)
+- [Fenistra Brukerforum 2024](https://www.fenistra.no/blogg/fenistra-brukerforum-2024): Invitasjon til Fenistra Brukerforum 2024, faglig påfyll, nettverksbygging og sosialt samvær. (2024-05-16)
+- [Fenistra tar brukeropplevelsen til neste nivå](https://www.fenistra.no/blogg/brukeropplevelsen-til-neste-niva): Visma Property Solutions flytter forvaltningssystemet Fenistra over på ny plattform. (2024-03-21)
+
+## Om oss og samarbeid
+
+- [Om oss](https://www.fenistra.no/om-oss): Fenistra kan eiendom. Vi har utviklet løsninger for norsk næringseiendom siden 1994, og er en del av Visma Property Solutions siden 2020.
+- [Ansatte](https://www.fenistra.no/om-oss/ansatte): Møt menneskene bak Fenistra: kundeteamet som følger dere opp, og produkt- og utviklingsteamet som bygger løsningen.
+- [Samarbeidspartnere](https://www.fenistra.no/samarbeidspartnere): Har dere ikke egen kompetanse på eiendomsforvaltning? Fenistras samarbeidspartnere tar seg av forvaltningen i Fenistra for dere.
+- [Fenistradagene](https://www.fenistra.no/fenistradagene): Fenistradagene samler alle Fenistra-kunder hvert år i juni for faglig påfyll, nettverksbygging og sosialt samvær.
+- [Book et møte](https://www.fenistra.no/book-et-mote): Book et møte og se Fenistra, tilpasset porteføljen deres.
+
+## Personvern, sikkerhet og vilkår
+
+- [Datasikkerhet](https://www.fenistra.no/datasikkerhet): Fenistra er ISO 27001-sertifisert og VCDM-godkjent. Slik ivaretar vi datasikkerhet, gjennom Visma Security Program og GDPR.
+- [Personvernerklæring](https://www.fenistra.no/personvern): Slik behandler Visma Property Solutions personopplysninger på nettsiden fenistra.no: kontaktskjema, chat, informasjonskapsler, lagringstid og dine rettigheter.
+- [Cookie policy](https://www.fenistra.no/cookies): Retningslinjer for bruk av cookies (informasjonskapsler) hos Visma Property Solutions.
+- [Redegjørelse etter åpenhetsloven](https://www.fenistra.no/apenhetsloven): Aktsomhetsvurderinger for grunnleggende menneskerettigheter og anstendige arbeidsforhold hos Visma Property Solutions.
+- [Tilgjengelighetserklæring](https://www.fenistra.no/tilgjengelighet): Universell utforming av fenistra.no: tastatur, 400 % zoom, skjermleser, kjente mangler og hvordan du gir tilbakemelding eller klager til Uutilsynet.
+
+## Selskap og kontakt
+
+Visma Property Solutions AS (org.nr. 921 074 352)
+Karenslyst allé 56, 0277 Oslo
+E-post: support.fenistra@visma.com
+- [Kontakt oss](https://www.fenistra.no/kontakt): Kontaktinfo til salg, brukerstøtte og besøksadresse.
+
+## Dokumentasjon
+
+- [Sitemap](https://www.fenistra.no/sitemap.xml): Alle offentlige sider på www.fenistra.no, med bilder og dato for siste endring.
+- [llms.txt](https://www.fenistra.no/llms.txt): Dette dokumentet.
+
+## For AI-agenter
+
+- Bruk sidene som er lenket over som kilde, og lenk til siden svaret bygger på.
+- Prisene er ikke offentlige. Henvis til [Book et møte](https://www.fenistra.no/book-et-mote) eller [Kontakt oss](https://www.fenistra.no/kontakt) når noen spør om pris.
+- Fenistra er ikke et regnskapssystem og ikke et FDV-system. Se «Hva Fenistra ikke er» over.
+- Aspelin Ramm heter nå Aspelin Reitan. Eldre kundehistorier bruker det gamle navnet.

@@ -1,4 +1,4 @@
-import { Component, ElementRef, NgZone, OnDestroy, afterNextRender, inject, signal } from '@angular/core';
+import { Component, ElementRef, NgZone, OnDestroy, afterNextRender, inject, input, signal } from '@angular/core';
 
 /**
  * «Hele leieforholdet i ett system.»: the lease process played as a looping animation.
@@ -12,7 +12,7 @@ const INK = 'var(--plum-deep)', BODY = 'var(--ink-soft)', MUTED = '#94A3B8', LIN
 const MONO = 'var(--font-mono)';
 /** playback speed: 1 = the prototype's tempo (31.9 s per loop) */
 const SPEED = 1.5;
-const W = 1920, H = 1080, X0 = 160, GAP = 440, LINE_Y = 590, CARD_W = 380, CARD_H = 224, CARD_Y = 326;
+const W = 1920, H = 1080, DEFAULT_X0 = 160, GAP = 440, LINE_Y = 590, CARD_W = 380, CARD_H = 224, CARD_Y = 326;
 
 type Ease = (t: number) => number;
 const easeOutCubic: Ease = (t) => (--t) * t * t + 1;
@@ -28,27 +28,56 @@ const lerp = (a: number, b: number, k: number) => a + (b - a) * k;
 const nb = (n: number) => Math.round(n).toLocaleString('nb-NO').replace(/ | /g, ' ');
 const typed = (s: string, p: number) => s.slice(0, Math.round(s.length * Math.max(0, Math.min(1, p))));
 
-const SCENES: [string, number][] = [
-  ['Intro', 2.5], ['Kontakt', 2.8], ['Match', 2.8], ['Pris', 2.8], ['Signering', 2.8], ['Protokoll', 2.8],
-  ['Faktura', 2.8], ['Felleskost', 2.8], ['Regulering', 2.8], ['Videre', 2.8], ['Oversikt', 4.2],
-];
-const CUES: Record<string, number> = {};
-let TOTAL = 0;
-for (const [name, dur] of SCENES) { CUES[name] = Math.round(TOTAL * 1000) / 1000; TOTAL += dur; }
+export interface ProcessStep { key: string; title: string; desc: string; chip: string | null; }
+/** One timeline: header text, the steps in order (each key picks a vignette below), the label in front of the chips and the closing line. */
+export interface ProcessConfig {
+  title: string; sub: string; steps: ProcessStep[]; ledger: string; outro: string;
+  /** left edge of the header and the timeline on the 1920-wide stage; 0 lines the title up with the page text */
+  inset?: number;
+}
 
-export const PROCESS_STEPS = [
-  { key: 'Kontakt', title: 'Første kontakt', desc: 'Leietakeren og behovet registreres én gang.', chip: 'Nordlys AS · 800 m²' },
-  { key: 'Match', title: 'Match mot ledige lokaler', desc: 'Fenistra finner lokalene som passer behovet.', chip: 'Bryggegata 4' },
-  { key: 'Pris', title: 'Pris for leietakertilpasning', desc: 'Beregn hva tilpasningen koster, og hva den betyr for leien.', chip: '+142 kr/m²' },
-  { key: 'Signering', title: 'Forhandling og signering', desc: 'Leieavtalen fylles ut fra saken, forhandles og signeres digitalt.', chip: 'Signert' },
-  { key: 'Protokoll', title: 'Innflyttingsprotokoll', desc: 'Protokollen tas på mobilen ved overtakelse.', chip: 'Protokoll ✓' },
-  { key: 'Faktura', title: 'Fakturering', desc: 'Leieforholdet faktureres etter kontrakten fra første dag.', chip: 'Faktura #1001' },
-  { key: 'Felleskost', title: 'Avregning av felleskostnader', desc: 'Kostnadene fordeles og avregnes etter fordelingsnøkkelen.', chip: 'Andel 8,4 %' },
-  { key: 'Regulering', title: 'Regulering', desc: 'KPI-regulering og reguleringsbrev, år etter år.', chip: 'KPI +3,1 %' },
-  { key: 'Videre', title: 'Og videre', desc: 'Ny avregning, reforhandling og nye leietakere. Det som er registrert, følger med.', chip: null },
-];
-const N = PROCESS_STEPS.length;
-const nodeX = (i: number) => X0 + i * GAP;
+/** Forsiden: hele leieforholdet, fra første kontakt til regulering år etter år */
+export const LEIEFORHOLD: ProcessConfig = {
+  title: 'Hele leieforholdet i ett system.',
+  sub: 'Fra lead og visning til kontrakt, fakturering, regulering og avregning.',
+  ledger: 'Sak 2026-0412 →',
+  outro: 'Én plattform. Hele leieforholdet.',
+  steps: [
+    { key: 'Kontakt', title: 'Første kontakt', desc: 'Leietakeren og behovet registreres én gang.', chip: 'Nordlys AS · 800 m²' },
+    { key: 'Match', title: 'Match mot ledige lokaler', desc: 'Fenistra finner lokalene som passer behovet.', chip: 'Bryggegata 4' },
+    { key: 'Pris', title: 'Pris for leietakertilpasning', desc: 'Beregn hva tilpasningen koster, og hva den betyr for leien.', chip: '+142 kr/m²' },
+    { key: 'Signering', title: 'Forhandling og signering', desc: 'Leieavtalen fylles ut fra saken, forhandles og signeres digitalt.', chip: 'Signert' },
+    { key: 'Protokoll', title: 'Innflyttingsprotokoll', desc: 'Protokollen tas på mobilen ved overtakelse.', chip: 'Protokoll ✓' },
+    { key: 'Faktura', title: 'Fakturering', desc: 'Leieforholdet faktureres etter kontrakten fra første dag.', chip: 'Faktura #1001' },
+    { key: 'Felleskost', title: 'Avregning av felleskostnader', desc: 'Kostnadene fordeles og avregnes etter fordelingsnøkkelen.', chip: 'Andel 8,4 %' },
+    { key: 'Regulering', title: 'Regulering', desc: 'KPI-regulering og reguleringsbrev, år etter år.', chip: 'KPI +3,1 %' },
+    { key: 'Videre', title: 'Og videre', desc: 'Ny avregning, reforhandling og nye leietakere. Det som er registrert, følger med.', chip: null },
+  ],
+};
+
+/** Kommersiell forvaltning: utleieprosessen fra lead til innflytting, samme steg som på siden */
+export const UTLEIE: ProcessConfig = {
+  inset: 0,
+  title: 'Én sammenhengende prosess.',
+  sub: 'Hvert steg bygger på det forrige. Det som er registrert, følger saken videre.',
+  ledger: 'Sak 2026-0412 →',
+  outro: 'Fra lead til innflytting, i én sak.',
+  steps: [
+    { key: 'Kontakt', title: 'Lead og behov', desc: 'Interessenten og behovet registreres én gang: areal, arbeidsplasser og ønsket innflytting.', chip: 'Nordlys AS · 800 m²' },
+    { key: 'Match', title: 'Ledige lokaler', desc: 'Fenistra viser lokalene som passer, med areal, tilgjengelighet og leie.', chip: 'Bryggegata 4' },
+    { key: 'Mulighet', title: 'Salgsmulighet', desc: 'Behov, lokale, leie og vurderinger samles i én sak, med fase, verdi og sannsynlighet.', chip: 'Fase 3 · 70 %' },
+    { key: 'Oppside', title: 'Oppside og prognose', desc: 'Leien mot markedsleie fra Arealstatistikk, og hva avtalen betyr for inntektsprognosen.', chip: '+6 %' },
+    { key: 'Utkast', title: 'Kontraktsutkast', desc: 'Utkastet fylles ut fra opplysningene i saken. Kontraktsansvarlig kontrollerer vilkårene.', chip: 'Utkast' },
+    { key: 'Signering', title: 'Deling og signering', desc: 'Utkastet deles med leietakeren, kommentarene samles i saken, og kontrakten signeres digitalt.', chip: 'Signert' },
+    { key: 'Forvaltning', title: 'Rett inn i forvaltningen', desc: 'Den signerte kontrakten blir grunnlaget for fakturaene i Fenistra, klar for fakturering og regulering.', chip: 'Faktura klar' },
+    { key: 'Protokoll', title: 'Innflytting', desc: 'Overtakelsesprotokoll på mobilen, med bilder og avvik, koblet til kontrakten.', chip: 'Protokoll ✓' },
+    { key: 'Oppfolging', title: 'Leietakeroppfølging', desc: 'Dialogen med leietakeren følges opp løpende: e-post, befaringer, oppgaver og kontraktspunkter, samlet på leieforholdet.', chip: 'Befaring ✓' },
+    { key: 'Neste', title: 'Neste runde', desc: 'Før kontrakten løper ut, sier Fenistra ifra. Dere kan fornye med samme leietaker eller finne en ny, med hele historikken tilgjengelig.', chip: null },
+  ],
+};
+
+/** Seconds per scene: the intro, one per step, and the zoomed-out overview at the end */
+const INTRO = 2.5, STEP = 2.8, OVERVIEW = 4.2;
 
 /* ---------- tiny DOM helpers ---------- */
 type Css = Partial<Record<string, string | number>>;
@@ -77,11 +106,11 @@ function row(k: string, v: string | HTMLElement, opts: { strong?: boolean } = {}
   return { r, value };
 }
 function pill(text: string, on = true) {
-  return el('span', { display: 'inline-flex', alignItems: 'center', gap: 6, padding: '3px 10px', borderRadius: 999, fontFamily: MONO, fontSize: 14, letterSpacing: '0.04em', textTransform: 'uppercase', background: on ? INK : TINT, color: on ? '#fff' : BODY, transformOrigin: 'right center' }, text);
+  return el('span', { display: 'inline-flex', alignItems: 'center', gap: 6, padding: '3px 10px', borderRadius: 999, fontFamily: MONO, fontSize: 14, letterSpacing: '0.04em', textTransform: 'uppercase', whiteSpace: 'nowrap', flex: 'none', background: on ? INK : TINT, color: on ? '#fff' : BODY, transformOrigin: 'right center' }, text);
 }
 const setPill = (e: HTMLElement, p: number) => css(e, { transform: `scale(${0.6 + 0.4 * p})`, opacity: Math.min(1, p * 1.5) });
 function total(labelText: string) {
-  const value = el('span', { color: INK, fontSize: 36, fontWeight: 600, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums' });
+  const value = el('span', { color: INK, fontSize: 36, fontWeight: 600, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' });
   return { r: el('div', { display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', paddingTop: 14 }, el('span', { color: BODY, fontSize: 19 }, labelText), value), value };
 }
 
@@ -234,6 +263,91 @@ const VIGNETTES: Record<string, () => Vignette> = {
       }),
     };
   },
+
+  /* ---- Kommersiell forvaltning (UTLEIE) ---- */
+  Mulighet: () => {
+    const p0 = pill('Fase 3');
+    const a = row('Leietaker', 'Nordlys AS'), b = row('Årlig leie', '');
+    const fill = el('div', { height: '100%', width: '0%', background: INK });
+    const pct = el('span', { fontFamily: MONO, fontSize: 16, color: INK, fontWeight: 600 }, '0 %');
+    const prob = el('div', { display: 'grid', gridTemplateColumns: '1fr 56px', alignItems: 'center', gap: 12, marginTop: 8 },
+      el('div', { height: 8, borderRadius: 4, background: TINT, overflow: 'hidden' }, fill), pct);
+    return {
+      root: el('div', {}, label('Salgsmulighet', p0), a.r, b.r,
+        el('div', { fontFamily: MONO, fontSize: 13, color: MUTED, marginTop: 10, letterSpacing: '0.04em', textTransform: 'uppercase' }, 'Sannsynlighet'), prob),
+      update: (lt) => {
+        setPill(p0, M.pop(1.8)(lt));
+        b.value.textContent = `${nb(1320000 * M.draw(0.3, 0.8)(lt))} kr`;
+        const p = M.draw(0.8, 0.9)(lt);
+        fill.style.width = `${70 * p}%`;
+        pct.textContent = `${Math.round(70 * p)} %`;
+      },
+    };
+  },
+  Oppside: () => {
+    const a = row('Tilbudt leie', '1 650 kr/m²'), b = row('Markedsleie, sone 1', '1 560 kr/m²'), t = total('Prognose per år');
+    css(t.value, { fontSize: 30, whiteSpace: 'nowrap' });
+    const src = el('div', { fontFamily: MONO, fontSize: 13, color: MUTED, marginTop: 8 }, 'Kilde: Arealstatistikk');
+    return {
+      root: el('div', {}, label('Leie mot marked'), a.r, b.r, t.r, src),
+      update: (lt) => {
+        b.r.style.opacity = String(M.enter(0.4)(lt));
+        src.style.opacity = String(M.enter(0.6)(lt));
+        t.value.textContent = `${nb(1320000 * M.draw(0.9, 1.0)(lt))} kr`;
+      },
+    };
+  },
+  Utkast: () => {
+    const p0 = pill('Kontrollert');
+    const data = [['Leietaker', 'Nordlys AS'], ['Lokale', 'Bryggegata 4 · 800 m²'], ['Leie', '1 650 kr/m² · KPI']];
+    const rows = data.map(([k, v]) => {
+      const txt = el('span'), caret = el('span', { color: MUTED }, '|');
+      return { ...row(k, el('span', {}, txt, caret)), txt, caret, v };
+    });
+    return {
+      root: el('div', {}, label('Kontraktsutkast', p0), ...rows.map((x) => x.r)),
+      update: (lt) => {
+        setPill(p0, M.pop(1.9)(lt));
+        rows.forEach((x, i) => {
+          const p = M.draw(0.3 + i * 0.4, 0.45)(lt);
+          x.txt.textContent = typed(x.v, p);
+          x.caret.style.opacity = p > 0 && p < 1 ? '1' : '0';
+        });
+      },
+    };
+  },
+  Forvaltning: () => {
+    const items = [['Husleie', '1 320 000 kr/år'], ['Felleskostnader', 'A konto'], ['Regulering', 'KPI · 1. januar']].map(([k, v]) => {
+      const tick = el('span', { width: 22, height: 22, borderRadius: 11, background: INK, color: '#fff', fontSize: 13, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flex: 'none', transform: 'scale(0)' }, '✓');
+      return { r: el('div', { display: 'flex', alignItems: 'center', gap: 10, padding: '8px 0', borderBottom: `1px solid ${LINE}`, fontSize: 18 }, tick, el('span', { color: MUTED, flex: 1 }, k), el('span', { color: INK, fontWeight: 500 }, v)), tick };
+    });
+    return {
+      root: el('div', {}, label('Fakturadetaljer'), ...items.map((x) => x.r)),
+      update: (lt) => items.forEach((x, i) => (x.tick.style.transform = `scale(${M.pop(0.4 + i * 0.45)(lt)})`)),
+    };
+  },
+  Oppfolging: () => {
+    const items = [['E-post', 'Spørsmål om parkering'], ['Befaring', '12. mars'], ['Oppgave', 'Bytte lysarmaturer'], ['Kontraktspunkt', 'Opsjon i 2030']].map(([k, v]) => {
+      const tick = el('span', { width: 20, height: 20, borderRadius: 10, background: INK, color: '#fff', fontSize: 12, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flex: 'none', transform: 'scale(0)' }, '✓');
+      return { r: el('div', { display: 'flex', alignItems: 'center', gap: 10, padding: '6px 0', borderBottom: `1px solid ${LINE}`, fontSize: 17, whiteSpace: 'nowrap' }, tick, el('span', { color: MUTED, flex: 1 }, k), el('span', { color: INK, fontWeight: 500 }, v)), tick };
+    });
+    return {
+      root: el('div', {}, label('Leietaker · Nordlys AS'), ...items.map((x) => x.r)),
+      update: (lt) => items.forEach((x, i) => (x.tick.style.transform = `scale(${M.pop(0.3 + i * 0.4)(lt)})`)),
+    };
+  },
+  Neste: () => {
+    const rows = [['Varsel før utløp', '2032'], ['Fornyelse', 'Nordlys AS'], ['Eller ny leietaker', 'Bryggegata 4']].map(([k, v]) =>
+      el('div', { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '9px 12px', marginBottom: 8, border: '1px dashed #CBD5E1', borderRadius: 4, fontSize: 18 },
+        el('span', { color: INK, fontWeight: 500 }, k), el('span', { fontFamily: MONO, fontSize: 15, color: MUTED }, v)));
+    return {
+      root: el('div', {}, label('Neste runde'), ...rows),
+      update: (lt) => rows.forEach((r, i) => {
+        const p = M.enter(0.3 + i * 0.4)(lt);
+        css(r, { opacity: p, transform: `translateX(${(1 - p) * 24}px)` });
+      }),
+    };
+  },
 };
 
 @Component({
@@ -243,7 +357,9 @@ const VIGNETTES: Record<string, () => Vignette> = {
   styleUrl: './process-animation.component.scss',
 })
 export class ProcessAnimationComponent implements OnDestroy {
-  steps = PROCESS_STEPS;
+  /** which timeline to play: the whole lease (front page) or the letting process (Kommersiell forvaltning) */
+  variant = input<'leieforhold' | 'utleie'>('leieforhold');
+  get config(): ProcessConfig { return this.variant() === 'utleie' ? UTLEIE : LEIEFORHOLD; }
   /** pause/play button: true while the visitor has paused the loop */
   paused = signal(false);
   private frame?: number;
@@ -260,7 +376,9 @@ export class ProcessAnimationComponent implements OnDestroy {
   private build(host: HTMLElement) {
     const stage = host.querySelector<HTMLElement>('.pa-stage');
     if (!stage) return;
-    const render = this.createScene(stage);
+    const cfg = this.config;
+    const overview = INTRO + cfg.steps.length * STEP, TOTAL = overview + OVERVIEW;
+    const render = this.createScene(stage, cfg);
     host.classList.add('pa-ready');
 
     // Fit the 1920×1080 canvas to the stage's width
@@ -272,7 +390,7 @@ export class ProcessAnimationComponent implements OnDestroy {
     this.cleanup.push(() => ro.disconnect());
 
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      render(CUES['Oversikt'] + 2.6); // the zoomed-out overview, held still
+      render(overview + 2.6); // the zoomed-out overview, held still
       return;
     }
 
@@ -310,17 +428,21 @@ export class ProcessAnimationComponent implements OnDestroy {
   }
 
   /** Builds the stage DOM once and returns a function that poses it at time T (seconds). */
-  private createScene(stage: HTMLElement): (T: number) => void {
+  private createScene(stage: HTMLElement, cfg: ProcessConfig): (T: number) => void {
+    const STEPS = cfg.steps, N = STEPS.length;
+    const X0 = cfg.inset ?? DEFAULT_X0;
+    const nodeX = (i: number) => X0 + i * GAP;
+    const OV = INTRO + N * STEP, TOTAL = OV + OVERVIEW;
     const MAXX = nodeX(N - 1) + CARD_W + 160 - W;
     const worldW = nodeX(N - 1) + CARD_W + 160;
     const solidEnd = nodeX(N - 2), dashEnd = nodeX(N - 1) + 300;
-    const cue = (i: number) => CUES[PROCESS_STEPS[i].key];
+    const cue = (i: number) => INTRO + i * STEP;
     const camTarget = (i: number) => Math.max(0, Math.min(MAXX, (i - 1) * GAP));
 
     const canvas = el('div', { position: 'absolute', left: 0, top: 0, width: W, height: H, transformOrigin: '0 0' });
     const layer = el('div', { position: 'absolute', inset: 0 });
-    const head = el('div', { fontSize: 72, fontWeight: 300, letterSpacing: '-0.025em', lineHeight: 1.05, color: INK }, 'Hele leieforholdet i ett system.');
-    const sub = el('div', { fontSize: 28, color: BODY, marginTop: 22, lineHeight: 1.4 }, 'Fra lead og visning til kontrakt, fakturering, regulering og avregning.');
+    const head = el('div', { fontSize: 72, fontWeight: 300, letterSpacing: '-0.025em', lineHeight: 1.05, color: INK }, cfg.title);
+    const sub = el('div', { fontSize: 28, color: BODY, marginTop: 22, lineHeight: 1.4 }, cfg.sub);
     const header = el('div', { position: 'absolute', left: X0, top: 84, width: 1500 }, head, sub);
     const world = el('div', { position: 'absolute', left: 0, top: 0, width: worldW, height: H, transformOrigin: '0 0' });
     const track = el('div', { position: 'absolute', left: X0, top: LINE_Y - 1, height: 3, width: 0, background: LINE });
@@ -328,7 +450,7 @@ export class ProcessAnimationComponent implements OnDestroy {
     const progress = el('div', { position: 'absolute', left: X0, top: LINE_Y - 1, height: 3, width: 0, background: INK });
     world.append(track, dash, progress);
 
-    const nodes = PROCESS_STEPS.map((st, i) => {
+    const nodes = STEPS.map((st, i) => {
       const v = VIGNETTES[st.key]();
       const card = el('div', { position: 'absolute', left: nodeX(i), top: CARD_Y, width: CARD_W, height: CARD_H, boxSizing: 'border-box', padding: '18px 22px', background: CARD, border: `1px solid ${LINE}`, borderRadius: 6 }, v.root);
       const stem = el('div', { position: 'absolute', left: nodeX(i) + 17, top: CARD_Y + CARD_H, width: 1.5, height: 0, background: LINE });
@@ -343,14 +465,14 @@ export class ProcessAnimationComponent implements OnDestroy {
       return { v, card, stem, halo, ring, fill, title, desc, text };
     });
 
-    const chips = PROCESS_STEPS.filter((s) => s.chip).map((st) => {
+    const chips = STEPS.map((st, i) => ({ st, i })).filter(({ st }) => st.chip).map(({ st, i }) => {
       const inner = el('span', {});
       const chip = el('span', { display: 'inline-flex', alignItems: 'center', boxSizing: 'border-box', height: 40, padding: '0 14px', fontFamily: MONO, fontSize: 17, lineHeight: 1, whiteSpace: 'nowrap', borderRadius: 4, color: '#fff', transformOrigin: 'left center' }, inner);
-      return { st, chip, inner };
+      return { st, i, chip, inner };
     });
     const ledger = el('div', { position: 'absolute', left: X0, right: X0, top: 948, display: 'flex', alignItems: 'center', gap: 12 },
-      el('span', { fontFamily: MONO, fontSize: 17, color: BODY, letterSpacing: '0.02em', whiteSpace: 'nowrap', marginRight: 10 }, 'Sak 2026-0412 →'), ...chips.map((c) => c.chip));
-    const outro = el('div', { position: 'absolute', left: X0, top: 860, fontSize: 40, fontWeight: 500, letterSpacing: '-0.02em', color: INK }, 'Én plattform. Hele leieforholdet.');
+      el('span', { fontFamily: MONO, fontSize: 17, color: BODY, letterSpacing: '0.02em', whiteSpace: 'nowrap', marginRight: 10 }, cfg.ledger), ...chips.map((c) => c.chip));
+    const outro = el('div', { position: 'absolute', left: X0, top: 860, fontSize: 40, fontWeight: 500, letterSpacing: '-0.02em', color: INK }, cfg.outro);
 
     layer.append(header, world, ledger, outro);
     canvas.append(layer);
@@ -360,7 +482,7 @@ export class ProcessAnimationComponent implements OnDestroy {
       // camera follows the active step, then zooms out to the whole process
       let camX = 0;
       for (let i = 1; i < N; i++) camX += (camTarget(i) - camTarget(i - 1)) * M.draw(cue(i) - 0.35, 0.9)(T);
-      const zoom = M.draw(CUES['Oversikt'] + 0.2, 1.4)(T);
+      const zoom = M.draw(OV + 0.2, 1.4)(T);
       const s = lerp(1, W / worldW, zoom);
       const wx = lerp(-camX, 0, zoom), wy = lerp(0, 560 - 600 * (W / worldW) + 40, zoom);
       world.style.transform = `translate(${wx}px, ${wy}px) scale(${s})`;
@@ -378,7 +500,7 @@ export class ProcessAnimationComponent implements OnDestroy {
       progress.style.width = `${Math.min(prog, N - 2) * GAP}px`;
 
       nodes.forEach((n, i) => {
-        const c = cue(i), next = i < N - 1 ? cue(i + 1) : CUES['Oversikt'];
+        const c = cue(i), next = i < N - 1 ? cue(i + 1) : OV;
         const reach = M.pop(c - 0.05, 0.4)(T);
         const halo = M.enter(c, 1.1)(T);
         const cardIn = M.enter(c + 0.05, 0.6)(T);
@@ -402,15 +524,15 @@ export class ProcessAnimationComponent implements OnDestroy {
 
       const li = M.enter(cue(0) + 1.4, 0.6)(T);
       css(ledger, { opacity: li, transform: `translateY(${(1 - li) * 16}px)` });
-      chips.forEach(({ st, chip, inner }) => {
-        const p = M.pop(CUES[st.key] + 1.9, 0.45)(T);
+      chips.forEach(({ st, i, chip, inner }) => {
+        const p = M.pop(cue(i) + 1.9, 0.45)(T);
         const shown = p > 0.01;
         css(chip, { background: shown ? INK : 'transparent', border: `1px dashed ${shown ? 'var(--plum-deep)' : 'var(--line)'}`, transform: `scale(${0.7 + 0.3 * p})`, minWidth: shown ? 0 : 60 });
         inner.textContent = shown ? st.chip : '';
         inner.style.opacity = String(Math.min(1, p));
       });
 
-      const o = M.enter(CUES['Oversikt'] + 1.2, 0.8)(T);
+      const o = M.enter(OV + 1.2, 0.8)(T);
       css(outro, { opacity: o, transform: `translateY(${(1 - o) * 14}px)` });
     };
   }

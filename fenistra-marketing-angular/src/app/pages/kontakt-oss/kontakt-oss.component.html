@@ -118,7 +118,7 @@
   .badge-standard{background:var(--berry-light);color:var(--berry-deep);}
   .badge-tillegg{background:var(--mist);color:var(--plum);}
   .badge-transaksjon{background:#fff;color:var(--plum);border:1px solid var(--line);}
-  .module-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(34px,4.4vw,54px);line-height:1.08;letter-spacing:-0.025em;color:var(--ink);margin-bottom:18px;max-width:820px;}
+  .module-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(34px, calc(1.98rem + 2.2vw), 54px);line-height:1.08;letter-spacing:-0.025em;color:var(--ink);margin-bottom:18px;max-width:820px;}
   .module-hero .lead{font-size:18px;color:var(--ink-soft);max-width:640px;margin-bottom:32px;}
   .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
 
@@ -152,7 +152,7 @@
     .feature-row.reverse .feature-visual{order:2;}
   }
   .section-head{max-width:640px;margin-bottom:44px;}
-  .section-head h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px,2.8vw,32px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:12px;}
+  .section-head h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px, calc(1.26rem + 1.4vw), 32px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:12px;}
   .section-head p{font-size:15.5px;color:var(--ink-soft);}
   .mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
   .mini-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:background .2s ease, border-color .2s ease;}
@@ -164,7 +164,7 @@
   .mini-card a.contact-link:hover{text-decoration:underline;}
 
   .cta-band{background:var(--berry);background-image:radial-gradient(circle at 15% 20%, rgba(255,255,255,0.14), transparent 40%), radial-gradient(circle at 85% 80%, rgba(0,0,0,0.12), transparent 45%);border-radius:24px;padding:64px 56px;display:flex;align-items:center;justify-content:space-between;gap:32px;color:#fff;}
-  .cta-band h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px,2.8vw,34px);letter-spacing:-0.02em;max-width:460px;}
+  .cta-band h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px, calc(1.26rem + 1.4vw), 34px);letter-spacing:-0.02em;max-width:460px;}
   .cta-band .actions{display:flex;gap:14px;flex-shrink:0;}
   .cta-wrap{padding:0 32px 20px;}
 
@@ -219,7 +219,7 @@
   .index-card:hover .go{color:var(--berry-deep);}
   .index-hero{padding:50px 0 20px;}
   .index-hero .eyebrow{margin-bottom:16px;}
-  .index-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(32px,4vw,48px);letter-spacing:-0.02em;margin-bottom:16px;max-width:700px;}
+  .index-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(32px, calc(1.8rem + 2vw), 48px);letter-spacing:-0.02em;margin-bottom:16px;max-width:700px;}
   .index-hero p{font-size:17px;color:var(--ink-soft);max-width:600px;margin-bottom:8px;}
   .filter-row{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 40px;}
   .filter-row button{font-family:var(--font-mono);font-size:12.5px;padding:8px 16px;border-radius:20px;border:1px solid var(--line);color:var(--ink-soft);transition:all .2s ease;}
@@ -324,7 +324,7 @@
   .article-gate-row{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;}
   .article-gate-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:40px;box-shadow:0 24px 48px -30px rgba(15,23,42,.2);}
   .article-gate-card .kicker{font-family:var(--font-mono);font-size:12px;color:var(--berry-deep);font-weight:700;margin-bottom:14px;}
-  .article-gate-card h3{font-family:var(--font-display);font-weight:300;font-size:clamp(20px,2.1vw,24px);letter-spacing:-0.01em;color:var(--ink);margin-bottom:26px;line-height:1.35;}
+  .article-gate-card h3{font-family:var(--font-display);font-weight:300;font-size:clamp(20px, calc(0.945rem + 1.05vw), 24px);letter-spacing:-0.01em;color:var(--ink);margin-bottom:26px;line-height:1.35;}
   @media (max-width:900px){.article-gate-row{grid-template-columns:1fr;}}
 
   .gate-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.5);z-index:399;opacity:0;pointer-events:none;transition:opacity .25s ease;}
@@ -370,7 +370,7 @@
       <p>Salg, brukerstøtte eller et besøk på Skøyen: her er kontaktinfoen.</p>
     </div>
     <div class="mini-grid kt-grid">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="mini-card kt-sales">
+      <a routerLink="/book-et-mote" fragment="skjema" class="mini-card kt-sales">
         <h3>Salg og tilbud</h3>
         <p>Vil dere se Fenistra, eller få et tilbud tilpasset porteføljen? Ta kontakt, så avtaler salgsteamet en tid som passer.</p>
         <span class="contact-link">Ta kontakt med salg →</span>
@@ -385,7 +385,7 @@
         <h3>Besøksadresse</h3>
         <p>Karenslyst allé 56<br>0277 Oslo, Norge</p>
       </div>
-      <a routerLink="/ansatte" fragment="kundeteam" class="mini-card">
+      <a routerLink="/om-oss/ansatte" fragment="kundeteam" class="mini-card">
         <h3>Møt kundeteamet</h3>
         <p>Se hvem som følger dere opp, fra onboarding til daglig brukerstøtte →</p>
       </a>
@@ -397,8 +397,8 @@
   <div class="cta-band reveal">
     <h2>Klare for å komme i gang med Fenistra?</h2>
     <div class="actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book et møte</a>
-      <a routerLink="/ansatte" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Møt teamet</a>
+      <a routerLink="/book-et-mote" fragment="skjema" class="btn btn-on-dark">Book et møte</a>
+      <a routerLink="/om-oss/ansatte" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Møt teamet</a>
     </div>
   </div>
 </section>

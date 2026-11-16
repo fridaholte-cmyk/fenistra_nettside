@@ -118,7 +118,7 @@
   .badge-standard{background:var(--berry-light);color:var(--berry-deep);}
   .badge-tillegg{background:var(--mist);color:var(--plum);}
   .badge-transaksjon{background:#fff;color:var(--plum);border:1px solid var(--line);}
-  .module-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(34px,4.4vw,54px);line-height:1.08;letter-spacing:-0.025em;color:var(--ink);margin-bottom:18px;max-width:820px;}
+  .module-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(34px, calc(1.98rem + 2.2vw), 54px);line-height:1.08;letter-spacing:-0.025em;color:var(--ink);margin-bottom:18px;max-width:820px;}
   .module-hero .lead{font-size:18px;color:var(--ink-soft);max-width:640px;margin-bottom:32px;}
   .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
 
@@ -152,7 +152,7 @@
     .feature-row.reverse .feature-visual{order:2;}
   }
   .section-head{max-width:640px;margin-bottom:44px;}
-  .section-head h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px,2.8vw,32px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:12px;}
+  .section-head h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px, calc(1.26rem + 1.4vw), 32px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:12px;}
   .section-head p{font-size:15.5px;color:var(--ink-soft);}
   .mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
   .mini-card{background:var(--paper);padding:26px;transition:background .2s ease;}
@@ -162,7 +162,7 @@
   .mini-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
 
   .cta-band{background:var(--berry);background-image:radial-gradient(circle at 15% 20%, rgba(255,255,255,0.14), transparent 40%), radial-gradient(circle at 85% 80%, rgba(0,0,0,0.12), transparent 45%);border-radius:24px;padding:64px 56px;display:flex;align-items:center;justify-content:space-between;gap:32px;color:#fff;}
-  .cta-band h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px,2.8vw,34px);letter-spacing:-0.02em;max-width:460px;}
+  .cta-band h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px, calc(1.26rem + 1.4vw), 34px);letter-spacing:-0.02em;max-width:460px;}
   .cta-band .actions{display:flex;gap:14px;flex-shrink:0;}
   .cta-wrap{padding:0 32px 20px;}
 
@@ -195,7 +195,7 @@
   .index-card:hover .go{color:var(--berry-deep);}
   .index-hero{padding:50px 0 20px;}
   .index-hero .eyebrow{margin-bottom:16px;}
-  .index-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(32px,4vw,48px);letter-spacing:-0.02em;margin-bottom:16px;max-width:700px;}
+  .index-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(32px, calc(1.8rem + 2vw), 48px);letter-spacing:-0.02em;margin-bottom:16px;max-width:700px;}
   .index-hero p{font-size:17px;color:var(--ink-soft);max-width:600px;margin-bottom:8px;}
   .filter-row{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 40px;}
   .filter-row button{font-family:var(--font-mono);font-size:12.5px;padding:8px 16px;border-radius:20px;border:1px solid var(--line);color:var(--ink-soft);transition:all .2s ease;}
@@ -307,8 +307,8 @@
     <h1>Eiendomsaktørene som forvalter med Fenistra</h1>
     <p class="mp-lead">Over 170 eiendomsforvaltere i Norge bruker Fenistra. Her er noen av historiene bak tallene, hentet fra Estate Nyheter og våre egne kunder.</p>
     <div class="mp-actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
-      <a routerLink="/kontakt-oss" class="btn btn-ghost">Kontakt oss</a>
+      <a routerLink="/book-et-mote" fragment="skjema" class="btn btn-primary">Book et møte</a>
+      <a routerLink="/kontakt" class="btn btn-ghost">Kontakt oss</a>
     </div>
   </div>
 </section>
@@ -318,12 +318,12 @@
 
     <div class="feature-row reveal" style="padding-top:56px;">
       <div class="feature-copy">
-        <h3 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px,2.6vw,32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);" aria-level="2">Höegh Eiendom</h3>
+        <h3 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px, calc(1.17rem + 1.3vw), 32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);" aria-level="2">Höegh Eiendom</h3>
         <p style="color:var(--ink-soft); font-size:16px; margin-bottom:18px; max-width:520px;">Höegh Eiendom er et familieeid eiendomsselskap som eier, utvikler og forvalter eiendommer i Oslo og det sentrale Østlandsområdet, med prosjekter som Verket i Moss og Hasle Linje. Samarbeidet med Fenistra går tilbake til 2004.</p>
         <p style="color:var(--ink-soft); font-size:16px; margin-bottom:18px; max-width:520px;">Etter overgangen til den nye Fenistra-plattformen har faktureringsprosesser som tidligere krevde betydelige ressurser gått ned med 50–60 % i tidsbruk. Selskapet trekker også frem det intuitive grensesnittet og tett integrasjon mot regnskapssystemet som gir en stabil dataflyt uten manuelle mellomledd.</p>
         <blockquote style="font-family:var(--font-display); font-weight:300; font-size:19px; line-height:1.5; color:var(--ink); border-left:3px solid var(--berry); padding-left:20px; margin:24px 0;">«Det er en trygghet i å møte en samarbeidspartner som forstår vår særbransje og de utfordringene vi har i hverdagen. Hos Fenistra blir vi møtt med forståelse, og det er godt å jobbe med fagfolk som virkelig kan faget sitt.»</blockquote>
         <p style="font-family:var(--font-mono); font-size:13px; color:var(--plum);">Maren Elise Dalene Torp, Senior Controller Eiendomsforvaltning, Höegh Eiendom</p>
-        <a routerLink="/media-hoegh-eiendom" style="display:inline-block; margin-top:8px; font-family:var(--font-mono); font-size:13px; color:var(--berry-deep); font-weight:600;">Les hele saken her →</a>
+        <a routerLink="/blogg/hoegh-eiendom-over-to-tiar" style="display:inline-block; margin-top:8px; font-family:var(--font-mono); font-size:13px; color:var(--berry-deep); font-weight:600;">Les hele saken her →</a>
       </div>
       <div class="feature-visual">
         <img width="1000" height="570" src="images/kunder-01.jpg" alt="Maren Elise Dalene Torp, Senior Controller Eiendomsforvaltning, Höegh Eiendom" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -346,23 +346,23 @@
         <img width="960" height="1280" src="images/kunder-02.jpg" alt="Bente Haugsdal, tidligere utviklingssjef, Frydenbø Eiendom" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="feature-copy">
-        <h3 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px,2.6vw,32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);">Frydenbø Eiendom</h3>
+        <h3 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px, calc(1.17rem + 1.3vw), 32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);">Frydenbø Eiendom</h3>
         <p style="color:var(--ink-soft); font-size:16px; margin-bottom:18px; max-width:520px;">Frydenbø Eiendom bruker Fenistra som forvaltningssystem, kombinert med Create Insight for markedsinnsikt og analyse. Utviklingssjef Bente Haugsdal trekker frem Fenistras faglige tyngde og brukerbase i eiendomsbransjen i Norge.</p>
         <p style="color:var(--ink-soft); font-size:16px; margin-bottom:18px; max-width:520px;">Selskapet setter pris på det årlige Fenistra Brukerforum som arena for faglig påfyll og erfaringsutveksling med andre eiendomsforvaltere, og opplever god dialog og oppfølging fra Fenistra som leverandør.</p>
         <blockquote style="font-family:var(--font-display); font-weight:300; font-size:19px; line-height:1.5; color:var(--ink); border-left:3px solid var(--berry); padding-left:20px; margin:24px 0;">«Fenistra har utviklet seg i takt med krav og regelverk i tett samarbeid med eiendomsbesittere. Vår erfaring har vært at når det rulles ut nye moduler, så er dette kvalitetssikret både mot regelverk og et behov i bransjen. Det er gjort mye forarbeid og grundig erfaringsutveksling før en iverksetter nye løsninger, noe som gir oss trygghet for kvalitet og behov.»</blockquote>
         <p style="font-family:var(--font-mono); font-size:13px; color:var(--plum);">Bente Haugsdal, tidligere utviklingssjef, Frydenbø Eiendom</p>
-        <a routerLink="/media-kontinuerlig-verdi" style="display:inline-block; margin-top:8px; font-family:var(--font-mono); font-size:13px; color:var(--berry-deep); font-weight:600;">Les hele saken her →</a>
+        <a routerLink="/blogg/kontinuerlig-verdi-for-kundene" style="display:inline-block; margin-top:8px; font-family:var(--font-mono); font-size:13px; color:var(--berry-deep); font-weight:600;">Les hele saken her →</a>
       </div>
     </div>
 
     <div class="feature-row reveal" id="aspelin-reitan" style="scroll-margin-top:96px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
       <div class="feature-copy">
-        <h3 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px,2.6vw,32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);">Aspelin Ramm (nå Aspelin Reitan)</h3>
+        <h3 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px, calc(1.17rem + 1.3vw), 32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);">Aspelin Ramm (nå Aspelin Reitan)</h3>
         <p style="color:var(--ink-soft); font-size:16px; margin-bottom:18px; max-width:520px;">Aspelin Reitan, tidligere Aspelin Ramm, er et eiendomsselskap som jobber med kompleks byutvikling, med Vulkan i Oslo som et av de mest kjente prosjektene. Kontraktsforvalter Ninette Jurs og eiendomsforvalter Kristin Støfringsdal bruker Fenistra.net i det daglige. Aspelin Reitan er selv Fenistra-kunde og forvalter kontraktene sine i Fenistra.</p>
         <p style="color:var(--ink-soft); font-size:16px; margin-bottom:18px; max-width:520px;">De trekker frem at løsningen er mer brukervennlig enn den forrige, og gir god oversikt over både leietakere og ledige lokaler gjennom egne rapporter. Rapportene i Fenistra.net er dessuten enkle å tilpasse etter eget behov, noe de setter pris på.</p>
         <blockquote style="font-family:var(--font-display); font-weight:300; font-size:19px; line-height:1.5; color:var(--ink); border-left:3px solid var(--berry); padding-left:20px; margin:24px 0;">«Dette fungerer veldig bra. Det er mye mer brukervennlig enn den gamle løsningen og gir full oversikt over alle leietakere på en enkel og oversiktlig måte.»</blockquote>
         <p style="font-family:var(--font-mono); font-size:13px; color:var(--plum);">Ninette Jurs, Kontraktsforvalter &amp; Kristin Støfringsdal, Eiendomsforvalter, Aspelin Ramm</p>
-        <a routerLink="/media-brukeropplevelse-neste-niva" style="display:inline-block; margin-top:8px; font-family:var(--font-mono); font-size:13px; color:var(--berry-deep); font-weight:600;">Les hele saken her →</a>
+        <a routerLink="/blogg/brukeropplevelsen-til-neste-niva" style="display:inline-block; margin-top:8px; font-family:var(--font-mono); font-size:13px; color:var(--berry-deep); font-weight:600;">Les hele saken her →</a>
       </div>
       <div class="feature-visual">
         <img width="1412" height="806" src="images/kunder-03.jpg" alt="Ninette Jurs, kontraktsforvalter i Aspelin Ramm, og Kristin Støfringsdal, eiendomsforvalter på Vulkan" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -374,12 +374,12 @@
         <img width="900" height="802" src="images/kunder-04.jpg" alt="Tine Wergeland Johannessen, utleie- og markedssjef i Backer AS" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="feature-copy">
-        <h3 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px,2.6vw,32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);">Backer AS</h3>
+        <h3 style="font-family:var(--font-display); font-weight:300; font-size:clamp(24px, calc(1.17rem + 1.3vw), 32px); letter-spacing:-0.02em; margin-bottom:16px; color:var(--ink);">Backer AS</h3>
         <p style="color:var(--ink-soft); font-size:16px; margin-bottom:18px; max-width:520px;">Backer er et eiendomsselskap som utvikler, forvalter og leier ut nærings- og boligeiendom. I jakten på en ny plattform var det avgjørende å finne en samarbeidspartner med solid faglig dybde og et system som støtter hele bredden av deres eiendomsrelaterte prosesser.</p>
         <p style="color:var(--ink-soft); font-size:16px; margin-bottom:18px; max-width:520px;">Backer trekker frem 35 års bransjeerfaring, Vismas sikkerhetsstandarder og en samlet dataplattform med brukervennlig funksjonalitet som avgjørende faktorer for valget av Fenistra.</p>
         <blockquote style="font-family:var(--font-display); font-weight:300; font-size:19px; line-height:1.5; color:var(--ink); border-left:3px solid var(--berry); padding-left:20px; margin:24px 0;">«For oss i Backer var det avgjørende å velge en løsning som er både moderne og intuitiv. Vi valgte Fenistra fordi de kombinerer dyp bransjekunnskap med et verktøy som forenkler hverdagen vår og gir oss den innsikten vi trenger for å vokse videre. Gjennom dette samarbeidet får vi et solid fundament for profesjonell eiendomsforvaltning i mange år fremover.»</blockquote>
         <p style="font-family:var(--font-mono); font-size:13px; color:var(--plum);">Tine Wergeland Johannessen, Utleie- og markedssjef, Backer AS</p>
-        <a routerLink="/media-backer" style="display:inline-block; margin-top:8px; font-family:var(--font-mono); font-size:13px; color:var(--berry-deep); font-weight:600;">Les hele saken her →</a>
+        <a routerLink="/blogg/backer-velger-fenistra" style="display:inline-block; margin-top:8px; font-family:var(--font-mono); font-size:13px; color:var(--berry-deep); font-weight:600;">Les hele saken her →</a>
       </div>
     </div>
 
@@ -390,9 +390,9 @@
   <div class="wrap">
     <div class="section-head">
       <p>Kundehistoriene over er basert på omtale i Estate Nyheter og Property Solutions. Les de fullstendige sakene:
-      <a routerLink="/media-hoegh-eiendom" style="color:var(--berry-deep);">Höegh Eiendom</a>,
-      <a routerLink="/media-brukeropplevelse-neste-niva" style="color:var(--berry-deep);">Aspelin Ramm</a> og
-      <a routerLink="/media-backer" style="color:var(--berry-deep);">Backer AS</a>.</p>
+      <a routerLink="/blogg/hoegh-eiendom-over-to-tiar" style="color:var(--berry-deep);">Höegh Eiendom</a>,
+      <a routerLink="/blogg/brukeropplevelsen-til-neste-niva" style="color:var(--berry-deep);">Aspelin Ramm</a> og
+      <a routerLink="/blogg/backer-velger-fenistra" style="color:var(--berry-deep);">Backer AS</a>.</p>
     </div>
   </div>
 </section>
@@ -401,8 +401,8 @@
   <div class="cta-band reveal">
     <h2>Vil dere bli neste kundehistorie?</h2>
     <div class="actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book et møte</a>
-      <a routerLink="/kontakt-oss" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Kontakt oss</a>
+      <a routerLink="/book-et-mote" fragment="skjema" class="btn btn-on-dark">Book et møte</a>
+      <a routerLink="/kontakt" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4); color:#fff;">Kontakt oss</a>
     </div>
   </div>
 </section>

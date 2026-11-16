@@ -14,7 +14,7 @@ export function isChunkLoadError(error: unknown): boolean {
 const RELOAD_KEY = 'fenistra_chunk_reload';
 let reloading = false;
 
-/** Full page load of `url` (a router URL such as /pakke-resultat), at most once per minute to avoid loops. */
+/** Full page load of `url` (a router URL such as /book-et-mote), at most once per minute to avoid loops. */
 export function reloadForNewVersion(url: string): boolean {
   if (reloading) return true; // the router and the error handler can both report the same failure
   try {

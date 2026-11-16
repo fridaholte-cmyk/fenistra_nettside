@@ -9,15 +9,15 @@
         <div class="nav-panel" id="nav-panel-losninger">
           <div class="nav-panel-inner nav-panel-mega">
             <div class="nav-mega-grid">
-            <a routerLink="/losning-kjopesenter" class="nav-mega-item">
+            <a routerLink="/losninger/kjopesenter" class="nav-mega-item">
               <div class="nav-mega-icon"><svg width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 4.6 4h14.8L21 9.5"/><path d="M3 9.5a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M5 12.4V20h14v-7.6"/><path d="M10 20v-4.5h4V20"/></svg></div>
               <div class="nav-mega-text"><h4 role="presentation">Kjøpesenter</h4><p>Omsetning, leietakere og drift for hele senteret.</p></div>
             </a>
-            <a routerLink="/fakturering-og-avregning" class="nav-mega-item">
+            <a routerLink="/losninger/fakturering-og-avregning" class="nav-mega-item">
               <div class="nav-mega-icon"><svg width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3h-8A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5v-12z"/><path d="M14.5 3v4.5H19"/><path d="M8.5 11h7M8.5 14.5h7M12 18h3.5"/></svg></div>
               <div class="nav-mega-text"><h4 role="presentation">Økonomisk forvaltning</h4><p>Fakturering, felleskostnader, regulering og avregning.</p></div>
             </a>
-            <a routerLink="/fra-lead-til-innflytting" class="nav-mega-item">
+            <a routerLink="/losninger/fra-lead-til-innflytting" class="nav-mega-item">
               <div class="nav-mega-icon"><svg width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="16" r="4.5"/><path d="M11.2 12.8 20 4M16.5 7.5l2.5 2.5M14 10l2 2"/></svg></div>
               <div class="nav-mega-text"><h4 role="presentation">Kommersiell forvaltning</h4><p>Fra første henvendelse til signert kontrakt og innflytting.</p></div>
             </a>
@@ -25,7 +25,7 @@
           </div>
         </div>
       </li>
-      <li><a routerLink="/partnere">Samarbeidspartnere</a></li>
+      <li><a routerLink="/samarbeidspartnere">Samarbeidspartnere</a></li>
       <li><a routerLink="/integrasjoner">Integrasjoner</a></li>
       <li><a routerLink="/kunder">Kunder</a></li>
       <li class="nav-item-dropdown" [class.dismissed]="dismissedMenu === 'selskapet'" (mouseenter)="menuEnter('selskapet')" (mouseleave)="menuLeave('selskapet')" (focusin)="menuEnter('selskapet')" (focusout)="menuFocusOut('selskapet', $event)">
@@ -60,8 +60,8 @@
         <button type="button" class="btn btn-primary nav-contact-trigger" id="nav-trigger-kontakt" aria-controls="nav-panel-kontakt" [attr.aria-expanded]="openMenu === 'kontakt'" (click)="menuToggle('kontakt')">Ta kontakt<svg width="10" height="10" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M235.3 411.3c-6.2 6.2-16.4 6.2-22.6 0l-208-208c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L224 377.4 420.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-208 208z"/></svg></button>
         <div class="nav-panel" id="nav-panel-kontakt">
           <div class="nav-panel-inner nav-panel-contact">
-            <a routerLink="/pakke-resultat" fragment="skjema" class="nav-mega-item"><div class="nav-mega-text"><h4 role="presentation">Book et møte</h4><p>Se Fenistra med en rådgiver, tilpasset porteføljen deres.</p></div></a>
-            <a routerLink="/kontakt-oss" class="nav-mega-item"><div class="nav-mega-text"><h4 role="presentation">Kontakt oss</h4><p>Support, salg og besøksadresse.</p></div></a>
+            <a routerLink="/book-et-mote" fragment="skjema" class="nav-mega-item"><div class="nav-mega-text"><h4 role="presentation">Book et møte</h4><p>Se Fenistra med en rådgiver, tilpasset porteføljen deres.</p></div></a>
+            <a routerLink="/kontakt" class="nav-mega-item"><div class="nav-mega-text"><h4 role="presentation">Kontakt oss</h4><p>Support, salg og besøksadresse.</p></div></a>
           </div>
         </div>
       </div>
@@ -78,14 +78,14 @@
   </div>
   <button type="button" class="m-acc-trigger" [class.open]="openSection === 'losninger'" [attr.aria-expanded]="openSection === 'losninger'" aria-controls="drawerLosninger" (click)="toggleSection('losninger')">Løsninger<svg width="14" height="14" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M235.3 411.3c-6.2 6.2-16.4 6.2-22.6 0l-208-208c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L224 377.4 420.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-208 208z"/></svg></button>
   <div class="m-acc-panel" id="drawerLosninger" [class.open]="openSection === 'losninger'"><div class="m-acc-inner">
-    <a routerLink="/losning-kjopesenter" (click)="closeMobileDrawer()">Kjøpesenter</a>
-    <a routerLink="/fakturering-og-avregning" (click)="closeMobileDrawer()">Økonomisk forvaltning</a>
-    <a routerLink="/fra-lead-til-innflytting" (click)="closeMobileDrawer()">Kommersiell forvaltning</a>
+    <a routerLink="/losninger/kjopesenter" (click)="closeMobileDrawer()">Kjøpesenter</a>
+    <a routerLink="/losninger/fakturering-og-avregning" (click)="closeMobileDrawer()">Økonomisk forvaltning</a>
+    <a routerLink="/losninger/fra-lead-til-innflytting" (click)="closeMobileDrawer()">Kommersiell forvaltning</a>
   </div></div>
-  <a routerLink="/partnere" (click)="closeMobileDrawer()">Samarbeidspartnere</a>
+  <a routerLink="/samarbeidspartnere" (click)="closeMobileDrawer()">Samarbeidspartnere</a>
   <a routerLink="/integrasjoner" (click)="closeMobileDrawer()">Integrasjoner</a>
   <a routerLink="/kunder" (click)="closeMobileDrawer()">Kunder</a>
-  <a routerLink="/kontakt-oss" (click)="closeMobileDrawer()">Kontakt oss</a>
+  <a routerLink="/kontakt" (click)="closeMobileDrawer()">Kontakt oss</a>
   <button type="button" class="m-acc-trigger" [class.open]="openSection === 'selskapet'" [attr.aria-expanded]="openSection === 'selskapet'" aria-controls="drawerSelskapet" (click)="toggleSection('selskapet')">Om oss<svg width="14" height="14" aria-hidden="true" focusable="false" viewBox="0 0 448 512" fill="currentColor"><path d="M235.3 411.3c-6.2 6.2-16.4 6.2-22.6 0l-208-208c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L224 377.4 420.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-208 208z"/></svg></button>
   <div class="m-acc-panel" id="drawerSelskapet" [class.open]="openSection === 'selskapet'"><div class="m-acc-inner">
     <a routerLink="/om-oss" (click)="closeMobileDrawer()">Om Fenistra</a>
@@ -94,5 +94,5 @@
     <a href="https://propertysolutions.no/knowledge-base" target="_blank" rel="noopener">Brukerveiledning</a>
   </div></div>
   <a href="https://www.fenistra.net" class="m-login">Logg inn</a>
-  <a routerLink="/pakke-resultat" fragment="skjema" (click)="closeMobileDrawer()" class="btn btn-primary m-cta">Book et møte</a>
+  <a routerLink="/book-et-mote" fragment="skjema" (click)="closeMobileDrawer()" class="btn btn-primary m-cta">Book et møte</a>
 </div>

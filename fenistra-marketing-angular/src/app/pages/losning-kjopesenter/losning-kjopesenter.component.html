@@ -118,7 +118,7 @@
   .badge-standard{background:var(--berry-light);color:var(--berry-deep);}
   .badge-tillegg{background:var(--mist);color:var(--plum);}
   .badge-transaksjon{background:#fff;color:var(--plum);border:1px solid var(--line);}
-  .module-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(34px,4.4vw,54px);line-height:1.08;letter-spacing:-0.025em;color:var(--ink);margin-bottom:18px;max-width:820px;}
+  .module-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(34px, calc(1.98rem + 2.2vw), 54px);line-height:1.08;letter-spacing:-0.025em;color:var(--ink);margin-bottom:18px;max-width:820px;}
   .module-hero .lead{font-size:18px;color:var(--ink-soft);max-width:640px;margin-bottom:32px;}
   .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
 
@@ -155,7 +155,7 @@
     .feature-row.reverse .feature-visual{order:2;}
   }
   .section-head{max-width:640px;margin-bottom:44px;}
-  .section-head h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px,2.8vw,32px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:12px;}
+  .section-head h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px, calc(1.26rem + 1.4vw), 32px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:12px;}
   .section-head p{font-size:15.5px;color:var(--ink-soft);}
   .mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
   .mini-card{background:var(--paper);padding:26px;transition:background .2s ease;}
@@ -165,7 +165,7 @@
   .mini-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
 
   .cta-band{background:var(--berry);background-image:radial-gradient(circle at 15% 20%, rgba(255,255,255,0.14), transparent 40%), radial-gradient(circle at 85% 80%, rgba(0,0,0,0.12), transparent 45%);border-radius:24px;padding:64px 56px;display:flex;align-items:center;justify-content:space-between;gap:32px;color:#fff;}
-  .cta-band h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px,2.8vw,34px);letter-spacing:-0.02em;max-width:460px;}
+  .cta-band h2{font-family:var(--font-display);font-weight:300;font-size:clamp(24px, calc(1.26rem + 1.4vw), 34px);letter-spacing:-0.02em;max-width:460px;}
   .cta-band .actions{display:flex;gap:14px;flex-shrink:0;}
   .cta-wrap{padding:0 32px 20px;}
 
@@ -220,7 +220,7 @@
   .index-card:hover .go{color:var(--berry-deep);}
   .index-hero{padding:50px 0 20px;}
   .index-hero .eyebrow{margin-bottom:16px;}
-  .index-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(32px,4vw,48px);letter-spacing:-0.02em;margin-bottom:16px;max-width:700px;}
+  .index-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(32px, calc(1.8rem + 2vw), 48px);letter-spacing:-0.02em;margin-bottom:16px;max-width:700px;}
   .index-hero p{font-size:17px;color:var(--ink-soft);max-width:600px;margin-bottom:8px;}
   .filter-row{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 40px;}
   .filter-row button{font-family:var(--font-mono);font-size:12.5px;padding:8px 16px;border-radius:20px;border:1px solid var(--line);color:var(--ink-soft);transition:all .2s ease;}
@@ -346,6 +346,29 @@
   .kj-sub{font-family:var(--font-mono); font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:14px;}
   @media (max-width:900px){ .kj-roles-grid{grid-template-columns:1fr;} .kj-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr));} .kj-big li{height:160px;} }
   @media (max-width:560px){ .kj-big{grid-template-columns:1fr;} }
+  /* «Dette får du», rapportene og spørsmålene i samme stil som resten av siden (november 2026) */
+  .kj-features{padding:var(--section-y-sm) 0;}
+  .kj-feature-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; list-style:none; margin:0; padding:0;}
+  .kj-feature{display:flex; align-items:flex-start; gap:14px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:22px 22px; font-size:16px; line-height:1.5; color:var(--ink);}
+  .kj-check{flex-shrink:0; margin-top:1px; color:var(--berry);}
+  .kj-features-note{margin-top:24px; color:var(--ink-soft); font-size:15.5px;}
+  .kj-shots{padding:var(--section-y-sm) 0;}
+  /* title on one line, intro across the page; both illustrations the same height so the captions line up */
+  body .kj-shots .section-head, body .kj-features .section-head{max-width:none;}
+  body .kj-shots .section-head p, body .kj-features .section-head p{max-width:none;}
+  @media (min-width:980px){ body .kj-shots .section-head h2{white-space:nowrap;} }
+  .kj-shot-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; align-items:stretch;}
+  .kj-shot{margin:0; display:flex; flex-direction:column;}
+  .kj-shot app-concept-card{flex:1;}
+  .kj-shot .cc-stage{height:100%; box-sizing:border-box; display:flex; flex-direction:column; justify-content:center;}
+  .kj-shot figcaption{margin-top:14px; font-size:14.5px; line-height:1.55; color:var(--ink-soft);}
+  .kj-faq{padding:var(--section-y-sm) 0 var(--section-y);}
+  .kj-faq-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px;}
+  .kj-faq-item{background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius); padding:28px 26px;}
+  .kj-faq-item h3{font-size:17px; font-weight:600; line-height:1.4; letter-spacing:-0.01em; color:var(--ink); margin-bottom:10px;}
+  .kj-faq-item p{font-size:15px; line-height:1.6; color:var(--ink-soft);}
+  @media (max-width:980px){ .kj-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr));} }
+  @media (max-width:760px){ .kj-feature-grid, .kj-shot-grid, .kj-faq-grid{grid-template-columns:1fr;} }
 </style>
 <div class="wrap">
   <div class="breadcrumb">
@@ -361,7 +384,7 @@
     <p class="mp-lead">Ett system for hele senteret. Omsetning, leietakere og drift ligger samlet, så eiendomsselskapet, butikkene og senterleder jobber ut fra de samme tallene. Vi samarbeider med Norsk Retail Hub.</p>
 
     <div class="mp-actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-primary">Book et møte</a>
+      <a routerLink="/book-et-mote" fragment="skjema" class="btn btn-primary">Book et møte</a>
       <a routerLink="/losninger" class="btn btn-ghost">Se hele plattformen →</a>
     </div>
   </div>
@@ -451,55 +474,70 @@
   </div>
 </section>
 
-<section class="module-body mp-body">
+<!-- ================= DETTE FÅR DU ================= -->
+<section class="kj-features" aria-labelledby="kj-features-title">
   <div class="wrap">
-    <div class="module-grid-layout">
-      <div class="module-main reveal">
-        <h2>Dette får du</h2>
-        <ul class="feature-list">
-          <li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Oversiktlig dashboard for omsetning og utvikling på senteret</li>
-<li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Automatisk purring på manglende omsetningsrapportering, med ønsket antall repetisjoner</li>
-<li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Bransjetilpassede rapporter, inkludert Kvarud Analyse</li>
-<li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Detaljert butikkoversikt og -kontroll, med besøksregistrering og analyse</li>
-<li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Innebygd løsning for kommunikasjon med butikkene</li>
-<li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Automatisk innhenting av tellerdata og værdata</li>
-<li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Eksport til Excel, Word og PDF, med statistikk tilpasset Kvarud og SSB</li>
-<li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Tilgjengelig og oppdatert, uansett hvor senterleder er</li>
-<li><svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><rect width="16" height="16" rx="4" fill="#F1F5F9"/><svg x="3.5" y="3.5" width="9" height="9" viewBox="0 0 448 512"><path fill="#1E293B" d="M441.4 67.1c7.1 5.2 8.7 15.2 3.5 22.4l-280 384c-2.8 3.8-7 6.2-11.7 6.5s-9.2-1.3-12.6-4.6l-136-136c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l122.8 122.8 269-368.9c5.2-7.1 15.2-8.7 22.4-3.5z"/></svg></svg>Samarbeid med Placewise, IMAS og Viametrics</li>
-        </ul>
-        <div class="body-copy">
-          <p>Fenistra Kjøpesenter er i hovedsak senterleders verktøy, og gir full oversikt over status på senteret og oppgavene som hører til rollen. Fokuset ligger på butikk, aktiviteter og løpende rapportering av omsetning på senteret.</p>
-<p>Løsningen er tilgjengelig og oppdatert med siste versjon, uansett hvor senterleder befinner seg. Vi samarbeider blant annet med Placewise, IMAS og Viametrics.</p>
-<p>Fenistra automatiserer rutineoppgavene og gir senterledere verktøyene de trenger for å lykkes: detaljerte rapporter viser omsetningsendringer år for år, grafer for omsetningsutvikling, antall kunder som gjør kjøp og besøkstall, samt analyse av hvilken effekt aktiviteter har på omsetningen. Bransjespesifikke analyser hjelper deg med å finne trender og utviklingstrekk, og både uke- og månedsrapporter er nedlastbare som PDF, klare til deling.</p>
-        </div>
-        <figure class="module-shot">
-          <app-concept-card kind="senter"></app-concept-card>
-          <figcaption>Senterdashbordet samler ukens besøks- og omsetningstall, utvikling mot fjoråret, omsetning per bransje og aktiviteter i én oversikt.</figcaption>
-        </figure>
-        <figure class="module-shot">
-          <app-concept-card kind="ukesrapport"></app-concept-card>
-          <figcaption>Ukesrapporten viser omsetning og besøk mot fjoråret, og kan grupperes per bransje, etasje eller tilhørighet, helt ned på hver enkelt butikk.</figcaption>
-        </figure>
+    <div class="section-head reveal">
+      <h2 id="kj-features-title">Dette får du</h2>
+      <p>Fenistra Kjøpesenter er i hovedsak senterleders verktøy, og gir full oversikt over status på senteret og oppgavene som hører til rollen. Fokuset ligger på butikk, aktiviteter og løpende rapportering av omsetning på senteret.</p>
+    </div>
+    <ul class="kj-feature-grid">
+      <li class="kj-feature reveal"><svg class="kj-check" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".12"/><path d="M6 10.4l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Oversiktlig dashboard for omsetning og utvikling på senteret</span></li>
+      <li class="kj-feature reveal"><svg class="kj-check" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".12"/><path d="M6 10.4l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Automatisk purring på manglende omsetningsrapportering, med ønsket antall repetisjoner</span></li>
+      <li class="kj-feature reveal"><svg class="kj-check" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".12"/><path d="M6 10.4l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Bransjetilpassede rapporter, inkludert Kvarud Analyse</span></li>
+      <li class="kj-feature reveal"><svg class="kj-check" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".12"/><path d="M6 10.4l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Detaljert butikkoversikt og -kontroll, med besøksregistrering og analyse</span></li>
+      <li class="kj-feature reveal"><svg class="kj-check" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".12"/><path d="M6 10.4l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Innebygd løsning for kommunikasjon med butikkene</span></li>
+      <li class="kj-feature reveal"><svg class="kj-check" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".12"/><path d="M6 10.4l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Automatisk innhenting av tellerdata og værdata</span></li>
+      <li class="kj-feature reveal"><svg class="kj-check" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".12"/><path d="M6 10.4l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Eksport til Excel, Word og PDF, med statistikk tilpasset Kvarud og SSB</span></li>
+      <li class="kj-feature reveal"><svg class="kj-check" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".12"/><path d="M6 10.4l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Tilgjengelig og oppdatert, uansett hvor senterleder er</span></li>
+      <li class="kj-feature reveal"><svg class="kj-check" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".12"/><path d="M6 10.4l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Samarbeid med Placewise, IMAS og Viametrics</span></li>
+    </ul>
+    <p class="kj-features-note reveal">Løsningen er tilgjengelig og oppdatert med siste versjon, uansett hvor senterleder befinner seg. Vi samarbeider blant annet med Placewise, IMAS og Viametrics.</p>
+  </div>
+</section>
 
-        <h2 style="margin-top:48px;">Ofte stilte spørsmål</h2>
-        <div style="display:flex;flex-direction:column;gap:24px;margin-top:20px;">
-          <div>
-            <h4 style="font-size:15.5px;font-weight:600;color:var(--ink);margin-bottom:6px;" aria-level="3">Hvordan gir Fenistra innsikt i senterets og leietakernes resultater, inkludert omsetningsleie?</h4>
-            <p style="color:var(--ink-soft);font-size:15px;">Systemet gir senterleder full oversikt over senterets omsetning og hver enkelt leietakers resultater. Du kan enkelt generere rapporter og analyser som hjelper deg med å identifisere trender og muligheter for forbedring.</p>
-          </div>
-          <div>
-            <h4 style="font-size:15.5px;font-weight:600;color:var(--ink);margin-bottom:6px;">Kan jeg administrere og analysere aktiviteter og deres effekt på omsetningen?</h4>
-            <p style="color:var(--ink-soft);font-size:15px;">Ja, systemet lar deg opprette, følge opp og analysere aktiviteter, og se effekten på omsetningen, sammen med værdata og besøkstall.</p>
-          </div>
-          <div>
-            <h4 style="font-size:15.5px;font-weight:600;color:var(--ink);margin-bottom:6px;">Er det mulig å lage tilpassede rapporter i systemet?</h4>
-            <p style="color:var(--ink-soft);font-size:15px;">Ja, systemet har fleksible standardrapporter som kan tilpasses med ulike filtre og gi rask oversikt over en valgt periode. Rapportene inneholder også grafer for å gi et visuelt inntrykk av situasjonen.</p>
-          </div>
-          <div>
-            <h4 style="font-size:15.5px;font-weight:600;color:var(--ink);margin-bottom:6px;">Hvordan fungerer oppfølging av manglende omsetningsrapportering?</h4>
-            <p style="color:var(--ink-soft);font-size:15px;">Systemet automatiserer purringer for manglende rapportering, med mulighet for tilpassede purretekster og funksjoner som sikrer korrekt rapportering av omsetningsleie.</p>
-          </div>
-        </div>
+<!-- ================= SLIK SER DET UT ================= -->
+<section class="kj-shots" aria-labelledby="kj-shots-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 id="kj-shots-title">Rapportene senterleder jobber med</h2>
+      <p>Fenistra automatiserer rutineoppgavene og gir senterledere verktøyene de trenger for å lykkes: detaljerte rapporter viser omsetningsendringer år for år, grafer for omsetningsutvikling, antall kunder som gjør kjøp og besøkstall, samt analyse av hvilken effekt aktiviteter har på omsetningen. Bransjespesifikke analyser hjelper deg med å finne trender og utviklingstrekk, og både uke- og månedsrapporter er nedlastbare som PDF, klare til deling.</p>
+    </div>
+    <div class="kj-shot-grid">
+      <figure class="kj-shot reveal">
+        <app-concept-card kind="senter"></app-concept-card>
+        <figcaption>Senterdashbordet samler ukens besøks- og omsetningstall, utvikling mot fjoråret, omsetning per bransje og aktiviteter i én oversikt.</figcaption>
+      </figure>
+      <figure class="kj-shot reveal">
+        <app-concept-card kind="ukesrapport"></app-concept-card>
+        <figcaption>Ukesrapporten viser omsetning og besøk mot fjoråret, og kan grupperes per bransje, etasje eller tilhørighet, helt ned på hver enkelt butikk.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SPØRSMÅL ================= -->
+<section class="kj-faq" aria-labelledby="kj-faq-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 id="kj-faq-title">Ofte stilte spørsmål</h2>
+    </div>
+    <div class="kj-faq-grid">
+      <div class="kj-faq-item reveal">
+        <h3>Hvordan gir Fenistra innsikt i senterets og leietakernes resultater, inkludert omsetningsleie?</h3>
+        <p>Systemet gir senterleder full oversikt over senterets omsetning og hver enkelt leietakers resultater. Du kan enkelt generere rapporter og analyser som hjelper deg med å identifisere trender og muligheter for forbedring.</p>
+      </div>
+      <div class="kj-faq-item reveal">
+        <h3>Kan jeg administrere og analysere aktiviteter og deres effekt på omsetningen?</h3>
+        <p>Ja, systemet lar deg opprette, følge opp og analysere aktiviteter, og se effekten på omsetningen, sammen med værdata og besøkstall.</p>
+      </div>
+      <div class="kj-faq-item reveal">
+        <h3>Er det mulig å lage tilpassede rapporter i systemet?</h3>
+        <p>Ja, systemet har fleksible standardrapporter som kan tilpasses med ulike filtre og gi rask oversikt over en valgt periode. Rapportene inneholder også grafer for å gi et visuelt inntrykk av situasjonen.</p>
+      </div>
+      <div class="kj-faq-item reveal">
+        <h3>Hvordan fungerer oppfølging av manglende omsetningsrapportering?</h3>
+        <p>Systemet automatiserer purringer for manglende rapportering, med mulighet for tilpassede purretekster og funksjoner som sikrer korrekt rapportering av omsetningsleie.</p>
       </div>
     </div>
   </div>

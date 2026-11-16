@@ -1,6 +1,7 @@
 import { Injectable, PLATFORM_ID, effect, inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { ConsentService, ConsentState } from './consent.service';
+import { startSiteEvents } from './site-events';
 
 declare global {
   interface Window {
@@ -11,7 +12,7 @@ declare global {
 
 // Google Tag Manager container (GTM-XXXXXXX), owned by the ads/analytics agency. Empty = no Google tags at all.
 // GA4, Google Ads conversions etc. are configured inside GTM, not here.
-const GTM_ID = '';
+const GTM_ID = 'GTM-P9894S36';
 
 /**
  * Google Consent Mode v2, "basic" mode: GTM is not loaded at all until the visitor has
@@ -21,6 +22,10 @@ const GTM_ID = '';
  *   virtual_page_view  { page_path, page_title }   on every route change (SPA)
  *   generate_lead      { form_name }                HubSpot form submitted
  *   chat_question      { answered, page_path }      question asked in the chat
+ *   chat_open          { page_path }                the chat window is opened
+ *   form_start         { form_name }                first field of a HubSpot form is touched
+ *   site_search        { search_term, results_count }  search in the menu, after a pause in typing
+ *   cta_click, contact_click, outbound_click, file_download   see site-events.ts
  */
 @Injectable({ providedIn: 'root' })
 export class GoogleTagsService {
@@ -45,6 +50,8 @@ export class GoogleTagsService {
       security_storage: 'granted',
       wait_for_update: 500,
     });
+
+    startSiteEvents((event, params) => this.push(event, params));
 
     effect(() => {
       const s = this.consent.state();

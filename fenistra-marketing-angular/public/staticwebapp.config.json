@@ -4,17 +4,17 @@
   "routes": [
     {
       "route": "/priser",
-      "redirect": "/pakke-resultat",
+      "redirect": "/book-et-mote",
       "statusCode": 301
     },
     {
       "route": "/kundeteam",
-      "redirect": "/ansatte#kundeteam",
+      "redirect": "/om-oss/ansatte#kundeteam",
       "statusCode": 301
     },
     {
       "route": "/produktteam",
-      "redirect": "/ansatte#produktteam",
+      "redirect": "/om-oss/ansatte#produktteam",
       "statusCode": 301
     },
     {
@@ -50,6 +50,206 @@
     {
       "route": "/losning-regnskap",
       "redirect": "/integrasjoner#regnskap",
+      "statusCode": 301
+    },
+    {
+      "route": "/fra-lead-til-innflytting",
+      "redirect": "/losninger/fra-lead-til-innflytting",
+      "statusCode": 301
+    },
+    {
+      "route": "/kontroll-pa-portefoljen",
+      "redirect": "/losninger/kontroll-pa-portefoljen",
+      "statusCode": 301
+    },
+    {
+      "route": "/fakturering-og-avregning",
+      "redirect": "/losninger/fakturering-og-avregning",
+      "statusCode": 301
+    },
+    {
+      "route": "/mva-og-regelverk",
+      "redirect": "/losninger/mva-og-regelverk",
+      "statusCode": 301
+    },
+    {
+      "route": "/rapport-og-analyse",
+      "redirect": "/losninger/rapport-og-analyse",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-kontrakter",
+      "redirect": "/losninger/kontrakter",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-fakturering",
+      "redirect": "/losninger/fakturering",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-felleskostnader",
+      "redirect": "/losninger/felleskostnader",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-rapportering",
+      "redirect": "/losninger/rapportering",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-omsetningsavregning",
+      "redirect": "/losninger/omsetningsavregning",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-formuesverdsettelse",
+      "redirect": "/losninger/formuesverdsettelse",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-inntektsbudsjett",
+      "redirect": "/losninger/inntektsbudsjett",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-sikkerhetsstyring",
+      "redirect": "/losninger/sikkerhetsstyring",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-dokument",
+      "redirect": "/losninger/dokumenter",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-mva-erklaring",
+      "redirect": "/losninger/mva-erklaring",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-rbo",
+      "redirect": "/losninger/revisorbekreftet-omsetning",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-protokoller",
+      "redirect": "/losninger/protokoller",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-digital-signering",
+      "redirect": "/losninger/digital-signering",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-justering",
+      "redirect": "/losninger/mva-justering",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-arealberegning",
+      "redirect": "/losninger/arealberegning",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-kjopesenter",
+      "redirect": "/losninger/kjopesenter",
+      "statusCode": 301
+    },
+    {
+      "route": "/losning-tegning",
+      "redirect": "/losninger/tegning",
+      "statusCode": 301
+    },
+    {
+      "route": "/ki",
+      "redirect": "/slik-hjelper-fenistra",
+      "statusCode": 301
+    },
+    {
+      "route": "/media-backer",
+      "redirect": "/blogg/backer-velger-fenistra",
+      "statusCode": 301
+    },
+    {
+      "route": "/media-hoegh-eiendom",
+      "redirect": "/blogg/hoegh-eiendom-over-to-tiar",
+      "statusCode": 301
+    },
+    {
+      "route": "/media-eiendomsportefolje-oversikt",
+      "redirect": "/blogg/oversikt-i-eiendomsportefoljen",
+      "statusCode": 301
+    },
+    {
+      "route": "/media-brukerforum-2024-invitasjon",
+      "redirect": "/blogg/fenistra-brukerforum-2024",
+      "statusCode": 301
+    },
+    {
+      "route": "/media-brukerforum-2024-oppsummering",
+      "redirect": "/blogg/oppsummering-brukerforum-2024",
+      "statusCode": 301
+    },
+    {
+      "route": "/media-brukeropplevelse-neste-niva",
+      "redirect": "/blogg/brukeropplevelsen-til-neste-niva",
+      "statusCode": 301
+    },
+    {
+      "route": "/media-budsjett-til-faktura",
+      "redirect": "/blogg/fra-budsjett-til-faktura",
+      "statusCode": 301
+    },
+    {
+      "route": "/media-business-nxt",
+      "redirect": "/blogg/fenistra-og-visma-business-nxt",
+      "statusCode": 301
+    },
+    {
+      "route": "/media-forenkler-felleskostnadene",
+      "redirect": "/blogg/fenistra-forenkler-felleskostnadene",
+      "statusCode": 301
+    },
+    {
+      "route": "/media-kontinuerlig-verdi",
+      "redirect": "/blogg/kontinuerlig-verdi-for-kundene",
+      "statusCode": 301
+    },
+    {
+      "route": "/media-mest-komplette-losningen",
+      "redirect": "/blogg/mest-komplette-losningen-for-eiendomsforvaltning",
+      "statusCode": 301
+    },
+    {
+      "route": "/media-mva-erklaringer",
+      "redirect": "/blogg/innhenting-av-mva-erklaringer",
+      "statusCode": 301
+    },
+    {
+      "route": "/media-ny-rapport-kjopesenter",
+      "redirect": "/blogg/ny-rapport-i-fenistra-kjopesenter",
+      "statusCode": 301
+    },
+    {
+      "route": "/ansatte",
+      "redirect": "/om-oss/ansatte",
+      "statusCode": 301
+    },
+    {
+      "route": "/partnere",
+      "redirect": "/samarbeidspartnere",
+      "statusCode": 301
+    },
+    {
+      "route": "/kontakt-oss",
+      "redirect": "/kontakt",
+      "statusCode": 301
+    },
+    {
+      "route": "/pakke-resultat",
+      "redirect": "/book-et-mote",
       "statusCode": 301
     },
     {

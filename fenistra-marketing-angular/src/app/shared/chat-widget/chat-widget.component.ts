@@ -47,6 +47,7 @@ export class ChatWidgetComponent {
 
   openChat() {
     this.restoreFocus = rememberFocus();
+    if (!this.open) window.dataLayer?.push({ event: 'chat_open', page_path: this.router.url.split(/[?#]/)[0] });
     this.open = true;
     if (!this.greeted) {
       this.addMessage(
@@ -80,7 +81,7 @@ export class ChatWidgetComponent {
       const waitSeconds = Math.ceil((WINDOW_MS - (now - this.sentAt[0])) / 1000);
       this.addMessage(
         `Du kan stille ${MAX_QUESTIONS} spørsmål i minuttet. Prøv igjen om ${waitSeconds} sekunder.` +
-        '<br><br>Haster det, ta kontakt med <a href="ansatte#kundeteam" data-internal>kundeteamet</a>.',
+        '<br><br>Haster det, ta kontakt med <a href="om-oss/ansatte#kundeteam" data-internal>kundeteamet</a>.',
         'bot'
       );
       return;
@@ -96,7 +97,7 @@ export class ChatWidgetComponent {
       } else {
         this.addMessage(
           'Jeg fant dessverre ikke et godt svar på det her. Ta gjerne kontakt med oss, så hjelper vi deg videre:' +
-          '<br><br>Se kontaktinfo til <a href="ansatte#kundeteam" data-internal>kundeteamet</a>, eller <a href="pakke-resultat#skjema" data-internal>book et møte</a>.',
+          '<br><br>Se kontaktinfo til <a href="om-oss/ansatte#kundeteam" data-internal>kundeteamet</a>, eller <a href="book-et-mote#skjema" data-internal>book et møte</a>.',
           'bot'
         );
       }

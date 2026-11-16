@@ -14,9 +14,9 @@ er tilfellet, så gjør jeg listen på nytt.
 |---|---|---|
 | `/aktuelt/-dette-er-det-systemet-som-har-mest-tyngde-i-norge` | `/kunder` | Handler om Fenistra hos en kunde. Kundehistoriene er nærmeste innhold. |
 | `/aktuelt/-fenistras-skybaserte-løsning-gir-full-oversikt-over-alle-leietakere-på-en-enkel-og-oversiktlig-måte` | `/` | Ren Fenistra-omtale. Ikke flyttet, så forsiden er nærmeste. |
-| `/aktuelt/visma-lanserer-ny-brukeropplevelse-på-fenistra` | `/media-brukeropplevelse-neste-niva` | Samme sak, og den ligger på fenistra.no. |
+| `/aktuelt/visma-lanserer-ny-brukeropplevelse-på-fenistra` | `/blogg/brukeropplevelsen-til-neste-niva` | Samme sak, og den ligger på fenistra.no. |
 | `/eiendomsforvatning/innleie` | `/losninger` | Innleie er ikke egen side på fenistra.no. Løsningsoversikten er nærmeste. |
-| `/fenistra-fornyes` | `/media-brukeropplevelse-neste-niva` | Antatt samme sak. BEKREFT at det stemmer. |
+| `/fenistra-fornyes` | `/blogg/brukeropplevelsen-til-neste-niva` | Antatt samme sak. BEKREFT at det stemmer. |
 | `/forvaltningssystem/eiendomsutvikling` | `/losninger` | Fenistra-innhold uten egen side. Løsningsoversikten er nærmeste. |
 | `/produktinnspill` | `https://share-eu1.hsforms.com/1LSfbG_8vT26C8X3y6yZRow2b231t` | Samme skjema som footeren på fenistra.no bruker. |
 

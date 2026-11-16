@@ -18,6 +18,6 @@ export class KiComponent {
     if (event.ctrlKey || event.metaKey || event.shiftKey || event.button !== 0) return; // open in new tab etc.
     event.preventDefault();
     document.getElementById('gjor-jobben')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    history.replaceState(history.state, '', 'ki#gjor-jobben'); // relativ, så base-href følges
+    history.replaceState(history.state, '', 'slik-hjelper-fenistra#gjor-jobben'); // relativ, så base-href følges
   }
 }

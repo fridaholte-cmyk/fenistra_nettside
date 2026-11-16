@@ -1,7 +1,7 @@
 <style>
   .pt-hero{padding:72px 0 56px; color:var(--ink);}
-  .pt-hero h1{font-family:var(--font-display); font-weight:400; font-size:clamp(36px,4.2vw,58px); line-height:1.05; letter-spacing:-0.03em; max-width:16ch; margin-bottom:24px;}
-  .pt-lead{font-size:clamp(18px,1.6vw,21px); line-height:1.55; color:var(--ink-soft); max-width:58ch;}
+  .pt-hero h1{font-family:var(--font-display); font-weight:400; font-size:clamp(36px, calc(1.89rem + 2.1vw), 58px); line-height:1.05; letter-spacing:-0.03em; max-width:16ch; margin-bottom:24px;}
+  .pt-lead{font-size:clamp(18px, calc(0.72rem + 0.8vw), 21px); line-height:1.55; color:var(--ink-soft); max-width:58ch;}
   .pt-list-section{padding:0 0 88px;}
   .pt-list-title{font-size:15px; font-weight:600; letter-spacing:.02em; color:var(--ink-soft); margin-bottom:16px;}
   .pt-list-title-2{margin-top:48px;}
@@ -21,7 +21,7 @@
   .pt-why-grid article{background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius, 14px); padding:28px;}
   .pt-why-grid h3{font-size:19px; letter-spacing:-0.01em; margin-bottom:10px; color:var(--ink);}
   .pt-why-grid p{color:var(--ink-soft); font-size:15.5px; line-height:1.55;}
-  .pt-h2{font-family:var(--font-display); font-weight:400; font-size:clamp(26px,2.6vw,36px); letter-spacing:-0.02em; color:var(--ink); margin-bottom:28px;}
+  .pt-h2{font-family:var(--font-display); font-weight:400; font-size:clamp(26px, calc(1.17rem + 1.3vw), 36px); letter-spacing:-0.02em; color:var(--ink); margin-bottom:28px;}
   @media (max-width:1080px){ .pt-list, .pt-list-5{grid-template-columns:repeat(3,minmax(0,1fr));} }
   @media (max-width:900px){ .pt-list, .pt-list-5{grid-template-columns:repeat(2,minmax(0,1fr));} .pt-why-grid{grid-template-columns:1fr;} .pt-hero{padding:48px 0 40px;} }
   @media (max-width:560px){ .pt-list, .pt-list-5{grid-template-columns:1fr;} }
@@ -91,7 +91,7 @@
   <div class="cta-band reveal">
     <h2>Usikker på hvilken samarbeidspartner som passer?</h2>
     <div class="actions">
-      <a routerLink="/pakke-resultat" fragment="skjema" class="btn btn-on-dark">Book et møte</a>
+      <a routerLink="/book-et-mote" fragment="skjema" class="btn btn-on-dark">Book et møte</a>
     </div>
   </div>
 </section>
