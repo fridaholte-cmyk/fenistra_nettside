@@ -186,6 +186,7 @@ export class HomeComponent implements OnDestroy {
   }
 
   ngOnDestroy() {
+    if (typeof window === 'undefined') return; // prerendering: nothing was started
     removeEventListener('resize', this.onResize);
     this.stopWatching();
     this.frames.forEach((f) => cancelAnimationFrame(f));

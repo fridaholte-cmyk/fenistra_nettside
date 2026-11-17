@@ -352,3 +352,15 @@ section.jb-cta { padding-top: 0; padding-bottom: 20px; }
   .jb-module-grid, .jb-module-grid:has(> :nth-child(4):last-child) { grid-template-columns: 1fr; }
   .jb-module-grid > .jb-module:last-child:nth-child(odd) { grid-column: auto; }
 }
+
+/* Telefon: én kolonne som aldri blir bredere enn skjermen, og litt mindre luft i kortene */
+@media (max-width: 980px) {
+  .jb-deep-row, .jb-outcome-grid { grid-template-columns: minmax(0, 1fr); }
+  .jb-deep-row > *, .jb-outcome-grid > * { min-width: 0; }
+}
+@media (max-width: 400px) {
+  .jb-outcome { padding: 24px 18px; }
+  .jb-deep-stage { padding: 18px 14px; }
+  .jb-card { padding: 18px; }
+  .jb-card-row { gap: 10px; }
+}
